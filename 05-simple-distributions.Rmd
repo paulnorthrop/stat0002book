@@ -2,7 +2,7 @@
 
 ## The Bernoulli distribution
 
-## The binomial distribution
+## The binomial distribution {#binomial}
 
 ## The geometric distribution
 

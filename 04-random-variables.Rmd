@@ -1,8 +1,133 @@
+```{r, figsetup4, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = 'center',
+  out.width = '80%'
+)
+```
+
+```{r, echo = FALSE}
+include_cropped_graphics <- function(x) {
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
+}
+```
+
 # Random variables {#rvs}
+
+**Example**. We return to the space shuttle example.  
+
+Consider what happens to the O-rings on a particular test flight, at a particular temperature.  A given O-ring either is damaged (shows signs of thermal distress) or it is not damaged. Let $D$ denote the event that an O-ring is damaged and $\bar{D}$ the event that it is not damaged. If we consider all 6 O-rings, there are many possible outcomes in the sample space, $2^6=64$, in fact:
+\[ S= \{DDDDDD\}, \{DDDDD\bar{D}\}, \ldots, \{D\bar{D}\bar{D}\bar{D}\bar{D}\bar{D}\}, 
+\{\bar{D}\bar{D}\bar{D}\bar{D}\bar{D}\bar{D}\}. \]
+Suppose that we are not interested in which particular O-rings were damaged, just the total number $N$ of damaged O-rings. The possible values for $N$ are 0,1,2,3,4,5,6. 
+
+Each outcome in $S$ gives a value for $N$ in \{0,1,2,3,4,5,6\}:
+
+$\{DDDDDD\}$ gives $N=6$, 
+
+$\{DDDDD\bar{D}\}$ gives $N=5$, 
+
+$\{DDDD\bar{D}D\}$ gives $N=5$, 
+
+$\vdots$ 
+
+$\{\bar{D}\bar{D}\bar{D}\bar{D}\bar{D}\bar{D}\}$ gives $N=0$.
+
+By defining $N$ to be the total number of damaged O-rings, we have moved from considering outcomes to considering a variable with a numerical value.  $N$ is a real-valued function on the sample space $S$, that is, $N$ maps each outcome in $S$ to a real number.  $N$ is a rule that assigns a real number to every outcome $s$ in $S$.  Since the outcomes in $S$ are random the variable $N$ is also random, and we can assign probabilities to its possible values, that is, $P(N=0), P(N=1)$ and so on.
+
+$N$ is a **random variable**.  In fact, if we assume that O-rings are damaged independently of each other and each O-ring has the same probability $p$ of being damaged, $N$ is a random variable with a special name.  It is a binomial random variable with parameters 6 and $p$.  We will consider binomial random variables in more detail in Section \@ref(binomial).
+
+**Notation**. We denote random variables by upper case letters, for example, $N, X, Y, Z$.  Once we have observed the value of a random variable it is no longer random: it is equal to a particular value.  To make this clear we denote sample values of r.v.s. by lower case letters, for example, $n, x, y, z$ and write $N=n, X=x$ and so on.  Thus, $P(X=x)$ is the probability that the random variable $X$ has the value $x$.
 
 ## Discrete random variables {#discrete}
 
+**Definition**. A discrete random variable is a random variable that can take only a finite, or countably infinite, number of values.  
+
+An example of a countably infinite set of values is \{0,1,2,3,\ldots\}. The random variable $N$ in the space shuttle example takes a finite number of values: 0,1,2,3,4,5,6. Therefore $N$ is a discrete random variable.
+
+**Definition**. Let $X$ be a discrete random variable.  The **probability mass function (p.m.f.)** $p_X(x)$, or simply $p(x)$, of $X$ is
+\[ p_X(x) = P(X=x), \qquad \mbox{for $x$ in the support of $X$}.  \]
+
+The p.m.f. of $X$ tells us the probability with which $X$ takes any particular value $x$.  The **support** of $X$ is the set of values that it is possible for $X$ to take.  It is very important to write this down every time you write down a p.m.f.. A discrete random variable is completely specified by its probability mass function.
+
+**Properties of p.m.f.s**
+
+Let $X$ take values $x_1, x_2,\ldots.$  Then
+
+1. $p_X(x_i) \geq 0$, for all $i$,
+2. $\displaystyle\sum_i p_X(x_i) = 1$.
+
+Note: 1. is true because the $p_X(x_i)$s are probabilities; 2. is true because summing over the $x_i$s is equivalent to summing over the sample space of outcomes.
+
+**Definition**. The cumulative distribution function (c.d.f.) of a random variable $X$ is
+\[ F_X(x) = P(X \leq x), \qquad \mbox{for} -\infty < x < \infty. \]
+
+**Relationship between the c.d.f. and p.m.f. of a discrete random variable**. For a discrete random variable:
+\[ F_X(x) = P(X \leq x) = \sum_{x_i \leq x} P(X = x_i). \]
+Therefore, assuming for the moment that the random variable takes only integer values,
+\[ P(X=x) = P(X \leq x) - P(X \leq x-1) = F_X(x) - F_X(x-1) \] 
+for any integer $x$
+
 ## Continuous random variables {#continuous}
+
+**Example**. We return to the Oxford birth times example. 
+
+The top plot in Figure \@ref(fig:oxcontvar) shows a histogram of the 95 birth times.  The variable of interest in this example is a time.  Time is a continuous variable: in principle, the times in this dataset could take any positive real value, uncountably many values. In practice, these times have been recorded discretely, in units of 1/10 of an hour or 1/4 of an hour.
+
+```{r echo=FALSE, oxcontvar, fig.show='hold', fig.cap='Top: histogram of the Oxford birth durations. Second from top: histogram of 1,000 values simulated from a distribution fitted to the data. Second from bottom: similarly for 10,000 simulated values. Bottom: p.d.f. of the distribution fitted to the Oxford birth times data.'}
+include_cropped_graphics("images/ox_cont_var.png")
+```
+
+Suppose that we continue to collect data on birth duration from this hospital, and, as new observations arrive, we add them to the top histogram in Figure \@ref(fig:oxcontvar).  We imagine that the times are recorded continuously.  As the number of observations $n$ increases we decrease the bin width of the histogram. As $n$ increases to infinity the bin width shrinks to zero and the histogram tends to a smooth continuous curve.
+
+This is shown in the bottom 3 plots in Figure \@ref(fig:oxcontvar).  The extra data are not real.  They are data I have simulated, using a computer, to have a distribution with a similar shape to the histogram of the real data.  
+
+Let $T$ denote the time, in hours, that a woman arriving at the hospital takes to give birth. The smooth continuous curve at the bottom of Figure \@ref(fig:oxcontvar) is called the **probability density function (p.d.f.)** $f_T(t)$ of the random variable $T$. Since the total area of the rectangles in a histogram is equal to 1, the area  $\int_{-\infty}^{\infty} f_T(t) {\rm ~d}t$ under the p.d.f. $f_T(t)$ is equal to 1.   
+
+**Definition**.  A **probability density function (p.d.f.)** is a function $f_{X}(x)$, or simply $f(x)$, such that 
+
+1. $f_X(x) \geq 0$, for $-\infty < x < \infty$;
+2. $\displaystyle\int_{-\infty}^{\infty} f_X(x) {\rm ~d}x = 1$. 
+
+Therefore, p.d.f.s are always non-negative and integrate to 1. The support of a continuous random variable is the set of values for which the p.d.f. is positive. Suppose that we wish to find $P(4 < T \leq 12)$.  To find the proportion of times between 4 and 12 using a histogram, we sum the areas of all bins between 4 and 12, that is, we find the area shaded in the histogram in Figure \@ref(fig:oxshady). To do this using the p.d.f. we do effectively the same thing: we find the area under the p.d.f. $f_T(t)$ between 4 and 12.  Since $f_T(t)$ is a smooth continuous curve, (that is, the bin widths are zero) we integrate $f_T(t)$ between 4 and 12.
+
+```{r echo=FALSE, oxshady, fig.show='hold', fig.cap='Top: histogram of the Oxford birth durations. Bottom: p.d.f. of the distribution fitted to the Oxford birth duration data.'}
+include_cropped_graphics("images/ox_shady.png")
+```
+
+Therefore
+\[ P(4 < T \leq 12) = \displaystyle\int_4^{12} f_T(t) {\rm ~d}t = F_T(12)-F_T(4). \]
+
+More generally,
+\[ P(a < T \leq b) = \displaystyle\int_a^b f_T(t) {\rm ~d}t = F_T(b)-F_T(a). \]
+
+**Definition**. A random variable $X$ is a **continuous random variable** if there exists a p.d.f. $f_X(x)$ such that 
+$$
+P(a < X \leq b) = \int_{a}^{b} f_X(x) {\rm ~d}x,
+$$
+for all $a$ and $b$ such that $a < b$.
+
+Figure \@ref(fig:pdfshady) illustrates the properties of a p.d.f..
+
+```{r echo=FALSE, pdfshady, fig.show='hold', fig.cap='Properties of a p.d.f.. The areas that correspond to the probability that a random variable takes a value in a given interval are shaded.'}
+include_cropped_graphics("images/pdf_shady.png")
+```
+
+Notes
+
+* It is very important to appreciate that $f_X(x)$ is **not** a probability: it does **not** give $P(X=x)$.  In fact $P(X=x)=0$: the probability that a continuous random variable $X$ takes the value $x$ is zero.
+* Indeed, it is possible for a p.d.f. to be greater than 1.  Consider a continuous random variable $X$ with p.d.f.
+\[ f_X(x) = \left\{ \begin{array}{ll} 2\,(1-x) & \,0 \leq x \leq 1, \\ 0 & \,\mbox{otherwise}.\end{array}\right. \]
+For this random variable $f_X(x)>1$ for any $x \in [0, 1/2)$ .
+* Since $P(X=x)=0$ 
+\[ P(a < X \leq b) = P(a \leq X \leq b) = P(a \leq X < b) = P(a < X < b). \]
+* $f_X(x)$ is a probability **density**.  The probability that $X$ lies in a very small interval of length $\delta$ near $x$ is approximately $f_X(x) \delta$.  For the p.d.f. at the bottom of figure \@ref(fig:oxcontvar), $f_T(6) > f_T(12)$, indicating that a randomly chosen woman is more likely to spend approximately 6 hours giving birth than approximately 
+12 hours.
+
+**Relationship between the c.d.f. and p.d.f. of a continuous random variable**.  For a continuous random variable
+\[ F_X(x) = P(X \leq x) = \int_{-\infty}^x f_X(u) {\rm ~d}u. \] 
+Therefore,
+\[ f_X(x) = \frac{{\rm d}}{{\rm d}x} F_X(x). \]
 
 ## Expectation
 
