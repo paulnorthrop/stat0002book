@@ -118,11 +118,14 @@
 <li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#relative-frequency-definition-of-probability"><i class="fa fa-check"></i><b>3.2</b> Relative frequency definition of probability</a></li>
 <li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#basic-properties-of-probability"><i class="fa fa-check"></i><b>3.3</b> Basic properties of probability</a></li>
 <li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>3.4</b> Conditional probability</a></li>
-<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a></li>
+<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>3.5.1</b> Mutually exclusive events</a></li>
+</ul></li>
 <li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multiplication-rule-of-probability"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
-<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.7</b> Law of total probability</a></li>
-<li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.8</b> Bayes’ theorem</a><ul>
-<li class="chapter" data-level="3.8.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.8.1</b> An example of independence</a></li>
+<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a></li>
+<li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.8</b> Law of total probability</a></li>
+<li class="chapter" data-level="3.9" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.9</b> Bayes’ theorem</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.9.1</b> An example of independence</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a><ul>
@@ -151,7 +154,12 @@
 <li class="chapter" data-level="6.5" data-path="statistical-inference.html"><a href="statistical-inference.html#good"><i class="fa fa-check"></i><b>6.5</b> What makes an estimator good?</a></li>
 <li class="chapter" data-level="6.6" data-path="statistical-inference.html"><a href="statistical-inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>6.6</b> Assessing goodness-of-fit</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a></li>
+<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a><ul>
+<li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#comparing-probabilities"><i class="fa fa-check"></i><b>7.1.1</b> Comparing probabilities</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a></li>
 <li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking-at-scatter-plots"><i class="fa fa-check"></i><b>8.2</b> Looking at Scatter plots</a></li>
@@ -215,7 +223,7 @@
 <strong>random experiment</strong>.</p>
 <p>Nevertheless, if the coin is fair (equally balanced), and it is tossed fairly, we might expect the long run <strong>proportion</strong>, or <strong>relative frequency</strong>, of <span class="math inline">\(H\)</span>s to settle down to 1/2. However, the only way to find out whether this is true is to toss a coin repeatedly, forever, and calculate the proportion of tosses on which <span class="math inline">\(H\)</span> is the outcome. It is not possible, in practice, for any experiment to be repeated forever.</p>
 <p>However, a South African statistician Jon Kerrich managed to toss a coin
-10,000 times while imprisioned in Denmark during World War II. At the end of his
+10,000 times while imprisoned in Denmark during World War II. At the end of his
 effort he had recorded 5067 Heads and 4933 Tails. Figure <a href="probability.html#fig:coin">3.1</a> shows
 how the proportion of heads Kerrich threw changed as the number of tosses increased.</p>
 <div class="figure" style="text-align: center"><span id="fig:coin"></span>
@@ -260,7 +268,7 @@ supposing that this limit exists. (Note: I have written ‘limit’ and not ‘l
 </div>
 <div id="example-graduate-admissioins-at-berkeley" class="section level4 unnumbered">
 <h4>Example: Graduate Admissioins at Berkeley</h4>
-<p>Table <a href="probability.html#tab:berk0">3.1</a> contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university. These data are discussed in <span class="citation">Bickel, Hammel, and O’Connell (<a href="#ref-berkeley" role="doc-biblioref">1975</a>)</span>. We use the following notation: <span class="math inline">\(A\)</span> for an accepted applicant, <span class="math inline">\(R\)</span> for a rejected applicant. Table <a href="probability.html#tab:berk0n">3.2</a> sumarises the notation used for the frequencies in Table <a href="probability.html#tab:berk0">3.1</a>. For example, <span class="math inline">\(n(A)\)</span> denotes the number of applicants who were accepted. We will look at this example in more detail later.</p>
+<p>Table <a href="probability.html#tab:berk0">3.1</a> contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university. These data are discussed in <span class="citation">Bickel, Hammel, and O’Connell (<a href="#ref-berkeley" role="doc-biblioref">1975</a>)</span>. We use the following notation: <span class="math inline">\(A\)</span> for an accepted applicant, <span class="math inline">\(R\)</span> for a rejected applicant. Table <a href="probability.html#tab:berk0n">3.2</a> summarises the notation used for the frequencies in Table <a href="probability.html#tab:berk0">3.1</a>. For example, <span class="math inline">\(n(A)\)</span> denotes the number of applicants who were accepted. We will look at this example in more detail later.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 60%; margin-left: auto; margin-right: auto;  " id="tab:berk0">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk0">Table 3.1: </span> Numbers of graduate applicants by outcome.</caption><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">A</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th></tr>
@@ -301,8 +309,7 @@ Similarly, the probability <span class="math inline">\(P(R)\)</span> that a rand
 </div>
 <div id="conditional-probability" class="section level2">
 <h2><span class="header-section-number">3.4</span> Conditional probability</h2>
-<p>In Section @ref(sids} (the cot death example) the statistical evidence
-presented to the court was based on the estimate that “the probability of one cot death <strong>in a family like Sally Clark’s</strong> is 1 in 8543”. What does this mean?</p>
+<p>In Section <a href="probability.html#sids">3.1</a> the statistical evidence presented to the court was based on the estimate that “the probability of one cot death <strong>in a family like Sally Clark’s</strong> is 1 in 8543”. What does this mean?</p>
 <p>The study from which this statistic was taken estimated the <strong>overall</strong> probability of cot death to be 1 in 1303. That is, cot death occurs in approximately 1 in every 1303 families.</p>
 <p>However, the study also found that the probability of cot death depended on various characteristics such as, income, smoking status and the age of the mother. For example, the probability of cot death was found to be much greater in families containing one or more smokers than in non-smoking families.</p>
 <p>The study estimated the probability of cot death for each possible combination of these characteristics. For the combination which is relevant to Sally Clark, whose family was affluent, non-smoking and she was aged over 26, the probability of cot death was estimated to be smaller: 1 in 8543.</p>
@@ -320,10 +327,10 @@ The `<span class="math inline">\(\mid\)</span>’ sign means <strong>“conditio
 <p>In fact <strong>all</strong> probabilities are conditional probabilities, because a probability is conditioned on the sample space <span class="math inline">\(S\)</span>. When we define <span class="math inline">\(S\)</span> we rule out anything that is not in <span class="math inline">\(S\)</span>. So instead of <span class="math inline">\(P(C)\)</span> we could write <span class="math inline">\(P(C \mid S)\)</span>. We do not tend to do this because it takes more time and it tends to make things more difficult to read. However, we should always try to bear in mind the sample space when we think about a probability.</p>
 <p>We return to the Berkeley admissions example to illustrate conditional probability, independence and the rules of probability.</p>
 </div>
-<div id="example-graduate-admissioins-at-berkeley-continued" class="section level4 unnumbered">
-<h4>Example: Graduate Admissioins at Berkeley (continued)</h4>
+<div id="example-graduate-admissions-at-berkeley-continued" class="section level4 unnumbered">
+<h4>Example: Graduate Admissions at Berkeley (continued)</h4>
 <p>Table <a href="probability.html#tab:berk1">3.3</a> contains more information on data relating to graduate admissions in 1973 at Berkeley in the six largest (in terms of numbers of admissions) departments of the university.</p>
-<p>We use the following notation: <span class="math inline">\(M\)</span> for a male applicant, <span class="math inline">\(F\)</span> for a female applicant, <span class="math inline">\(A\)</span> for an accepted applicant, <span class="math inline">\(R\)</span> for a rejected applicant. This is an example of a 2-way contingency table; see Section <a href="contingency.html#contingency">7</a>.</p>
+<p>We use the following notation: <span class="math inline">\(M\)</span> for a male applicant, <span class="math inline">\(F\)</span> for a female applicant, <span class="math inline">\(A\)</span> for an accepted applicant, <span class="math inline">\(R\)</span> for a rejected applicant. This is an example of a 2-way contingency table (see Section <a href="contingency.html#contingency">7</a>).</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk1">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk1">Table 3.3: </span> Numbers of graduate applicants by sex and outcome.</caption><col><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
@@ -335,7 +342,7 @@ The `<span class="math inline">\(\mid\)</span>’ sign means <strong>“conditio
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1755</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2771</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">4526</td></tr>
 </table>
 
-<p>Table <a href="probability.html#tab:berk1n">3.4</a> summarises the notation used for the frequencies in Table <a href="probability.html#tab:berk1">3.3</a>. For example, <span class="math inline">\(n(M, A)\)</span> denotes the number of applicants who were both male and accepted.</p>
+<p>Table <a href="probability.html#tab:berk1n">3.4</a> summarises the notation used for the frequencies in Table <a href="probability.html#tab:berk1">3.3</a>. For example, <span class="math inline">\(n(M, A)\)</span> denotes the number of applicants who were both male and accepted. Of course, <span class="math inline">\(n(M, A)=n(A, M)\)</span>.</p>
 
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk1n">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk1n">Table 3.4: </span> Notation for Table <a href="probability.html#tab:berk1">3.3</a>.</caption><col><col><col><col><tr>
@@ -377,23 +384,20 @@ The `<span class="math inline">\(\mid\)</span>’ sign means <strong>“conditio
 <p>For example, the</p>
 <ul>
 <li>probability <span class="math inline">\(P(M)\)</span> that a randomly chosen applicant is male is 0.595; and</li>
-<li>probability <span class="math inline">\(P(M, A)\)</span>, or <span class="math inline">\(P(M\)</span> and <span class="math inline">\(A)\)</span>, or <span class="math inline">\(P(M \cap A)\)</span>, that a randomly chosen applicant is both male and accepted is 0.265.</li>
+<li>probability <span class="math inline">\(P(M, A)\)</span>, or <span class="math inline">\(P(M \mbox{ and } A)\)</span>, or <span class="math inline">\(P(M \cap A)\)</span>, or even <span class="math inline">\(P(MA)\)</span>, that a randomly chosen applicant is both male and accepted is 0.265.</li>
 </ul>
-<p>In the second bullet point three different forms of notation are used to denote the same probability. In these notes I may (deliberately, of course!) use more than one form of notation, to get you used to the fact that different texts may use different notation.</p>
-<p>The following explains in detail how these probabilities are calculated.</p>
+<p>In the second bullet point four different forms of notation are used to denote the same probability. In these notes I may (deliberately, of course) use more than one form of notation, to get you used to the fact that different texts may use different notation. Of course, <span class="math inline">\(P(M, A) = P(A, M)\)</span> and so on.</p>
+<p>The following explains how these probabilities are calculated.</p>
 <p><span class="math display">\[P(M) = \frac{n(M)}{n} = \frac{2,691}{4,526} = 0.595.\]</span>
 The sample space is <span class="math inline">\(\{M,F\}\)</span>.</p>
 <p><span class="math display">\[P(M , A) = \frac{n(M , A)}{n} = \frac{1,198}{4,526} = 0.265.\]</span>
 The sample space is <span class="math inline">\(\{(M , A),(M , R),(F , A),(F , R)\}\)</span>.</p>
-<p>Suppose that we wish to investigate whether there appears to be any sexual discrimination in
-the graduate admissions process at Berkeley in 1973.<br />
-To do this we might compare</p>
+<p>Suppose that we wish to investigate whether there appears to be any sexual discrimination in the graduate admissions process at Berkeley in 1973. To do this we might compare</p>
 <ul>
 <li>the probability of acceptance for males, that is, <span class="math inline">\(P(A \mid M)\)</span>; and</li>
 <li>the probability of acceptance for females, that is, <span class="math inline">\(P(A \mid F)\)</span>.</li>
 </ul>
-<p>These are <strong>conditional</strong> probabilities. Firstly, we calculate <span class="math inline">\(P(A \mid M)\)</span>.<br />
-Look at Table <a href="probability.html#tab:berk3n">3.7</a>. We are considering only male applicants (<span class="math inline">\(M\)</span>) so we have shaded the <span class="math inline">\(M\)</span> row. Since we are conditioning on <span class="math inline">\(M\)</span>, female applicants are not relevant. We are only concerned with the <span class="math inline">\(n(M)=2691\)</span> male applicants in the <span class="math inline">\(M\)</span> row.</p>
+<p>These are <strong>conditional</strong> probabilities. Firstly, we calculate <span class="math inline">\(P(A \mid M)\)</span>. Look at Table <a href="probability.html#tab:berk3n">3.7</a>. We are considering only male applicants (<span class="math inline">\(M\)</span>) so we have shaded the <span class="math inline">\(M\)</span> row. Since we are conditioning on <span class="math inline">\(M\)</span>, female applicants are not relevant. We are only concerned with the <span class="math inline">\(n(M)=2691\)</span> male applicants in the <span class="math inline">\(M\)</span> row.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk3n">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk3n">Table 3.7: </span> Conditioning on applicant being male (frequencies).</caption><col><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
@@ -405,17 +409,12 @@ Look at Table <a href="probability.html#tab:berk3n">3.7</a>. We are considering 
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1755</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2771</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">4526</td></tr>
 </table>
 
-<p>Of these,</p>
-<ul>
-<li><span class="math inline">\(n(M , A) = 1198\)</span> are accepted, and</li>
-<li><span class="math inline">\(n(M , R) = 1493\)</span> are rejected.</li>
-</ul>
+<p>Of these, <span class="math inline">\(n(M , A) = 1198\)</span> are accepted and <span class="math inline">\(n(M , R) = 1493\)</span> are rejected.</p>
 <p>The information that the applicant is male (that is, event <span class="math inline">\(M\)</span> has occurred) has reduced the sample space to <span class="math inline">\(\{(M , A),(M , R)\}\)</span>, or, since we <strong>know</strong> that
-<span class="math inline">\(M\)</span> has occurred, the sample space is effectively <span class="math inline">\(\{A,R\}\)</span>.</p>
-<p>The conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(M\)</span> is the probability that event <span class="math inline">\(A\)</span> occurs when we consider only those occasions on which event <span class="math inline">\(M\)</span> occurs.</p>
+<span class="math inline">\(M\)</span> has occurred, the sample space is effectively <span class="math inline">\(\{A,R\}\)</span>. The conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(M\)</span> is the probability that event <span class="math inline">\(A\)</span> occurs when we consider only those occasions on which event <span class="math inline">\(M\)</span> occurs.</p>
 <p>Therefore,
 <span class="math display" id="eq:freqs">\[\begin{equation}
-P(A \mid M) = \frac{n(M , A)}{n(M)} = \frac{1198}{2691} = 0.445,
+P(A \mid M) = \frac{n(A, M)}{n(M)} = \frac{1198}{2691} = 0.445,
 \tag{3.2}
 \end{equation}\]</span>
 that is, the proportion of male applicants who are accepted is 0.445.</p>
@@ -433,11 +432,11 @@ that is, the proportion of male applicants who are accepted is 0.445.</p>
 
 <p>An equivalent way to calculate <span class="math inline">\(P(A~|~M)\)</span> is</p>
 <p><span class="math display" id="eq:probs">\[\begin{equation}
-P(A \mid M) = \frac{P(M , A)}{P(M)} = \frac{1198/4526}{2691/4526} = 0.445. \tag{3.3}
+P(A \mid M) = \frac{P(A, M)}{P(M)} = \frac{1198/4526}{2691/4526} = 0.445. \tag{3.3}
 \end{equation}\]</span>
 Instead of using the frequencies in the shaded <span class="math inline">\(M\)</span> row, we have used the probabilities. We get exactly the same answer because the probabilities are simply the frequencies divided by 4526.</p>
-<p><strong>Exercise</strong>: show that <span class="math inline">\(P(A \mid F)=0.304\)</span>.</p>
-<p><strong>Exercise</strong>: find <span class="math inline">\(P(R \mid M)\)</span> and <span class="math inline">\(P(R \mid F)\)</span>. What do you notice about <span class="math inline">\(P(A \mid M)\)</span> and <span class="math inline">\(P(R \mid M)\)</span>?}</p>
+<p><strong>Exercise</strong>. Show that <span class="math inline">\(P(A \mid F)=0.304\)</span>.</p>
+<p><strong>Exercise</strong>. Find <span class="math inline">\(P(R \mid M)\)</span> and <span class="math inline">\(P(R \mid F)\)</span>. What do you notice about <span class="math inline">\(P(A \mid M)\)</span> and <span class="math inline">\(P(R \mid M)\)</span>?}</p>
 <p>The calculation of <span class="math inline">\(P(A~|~M)\)</span> in equation <a href="probability.html#eq:freqs">(3.2)</a> based on the frequencies in table <a href="probability.html#tab:berk3n">3.7</a> should make sense to you. From the equivalent calculation in equation <a href="probability.html#eq:probs">(3.3)</a> we can see that the following definition of conditional probability makes sense.</p>
 <p><strong>Definition</strong>: If <span class="math inline">\(B\)</span> is an event with <span class="math inline">\(P(B) &gt; 0\)</span>, then for each event <span class="math inline">\(A\)</span>, the <strong>conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span></strong> is
 <span class="math display" id="eq:conditional">\[\begin{equation}
@@ -459,8 +458,23 @@ From Table <a href="probability.html#tab:berk2p">3.5</a> we find that
 <span class="math display">\[ P(A) = 0.388. \]</span>
 Therefore, the probability of acceptance depends on the sex of the applicant:
 <span class="math display">\[ P(A \mid M) &gt; P(A) \qquad \mbox{and} \qquad P(A \mid F) &lt; P(A). \]</span>
-The probability <span class="math inline">\(P(A \mid M)\)</span> of being accepted for a randomly selected male is greater than the unconditional probability <span class="math inline">\(P(A)\)</span>. Therefore, the occurrence of event <span class="math inline">\(M\)</span> has affected the probability that event <span class="math inline">\(A\)</span> occurs. This means that the events <span class="math inline">\(A\)</span> and <span class="math inline">\(M\)</span> are <strong>dependent</strong>.</p>
-<p>Similarly, <span class="math inline">\(P(A \mid F) &lt; P(A)\)</span> means that the events <span class="math inline">\(A\)</span> and <span class="math inline">\(F\)</span> are <strong>dependent</strong>.</p>
+The probability <span class="math inline">\(P(A \mid M)\)</span> of being accepted for a randomly selected male is greater than the unconditional probability <span class="math inline">\(P(A)\)</span>. Therefore, the occurrence of event <span class="math inline">\(M\)</span> has affected the probability that event <span class="math inline">\(A\)</span> occurs. This means that the events <span class="math inline">\(A\)</span> and <span class="math inline">\(M\)</span> are <strong>dependent</strong>. Similarly, <span class="math inline">\(P(A \mid F) &lt; P(A)\)</span> means that the events <span class="math inline">\(A\)</span> and <span class="math inline">\(F\)</span> are <strong>dependent</strong>.</p>
+<p>We consider independent and dependent events in more detail in Section <a href="probability.html#indepevents">3.7</a>.</p>
+<p>The fact that <span class="math inline">\(P(A~|~M) &gt; P(A~|~F)\)</span> might suggest to us that there is gender bias in the admissions process. However, as we shall see in Section <a href="contingency.html#way3">7.2</a>, this may be a very misleading conclusion to draw from these data. There is an innocent explanation of why <span class="math inline">\(P(A \mid M) &gt; P(A \mid F)\)</span>.</p>
+<p><strong>Exercise</strong>. Can you think what this innocent explanation it might be?</p>
+</div>
+</div>
+<div id="addition-rule-of-probability" class="section level2">
+<h2><span class="header-section-number">3.5</span> Addition rule of probability</h2>
+<p>We continue with the Berkeley admissions data. Suppose that we wish to calculate the probability that an applicant chosen at random from the 4526 applicants is either male (event <span class="math inline">\(M\)</span>) or accepted (event <span class="math inline">\(A\)</span>), or both male and accepted. We denote this probability <span class="math inline">\(P(M \mbox{ or } A)\)</span> or <span class="math inline">\(P(M \cup A)\)</span>.</p>
+<p>Look at Table <a href="probability.html#tab:berk4n">3.9</a>. The cells that satisfy either <span class="math inline">\(M\)</span> or <span class="math inline">\(A\)</span>, or both, have been shaded grey. To calculate <span class="math inline">\(P(M \mbox{ or } A)\)</span> we simply sum the numbers of applicants for which either <span class="math inline">\(M\)</span> or <span class="math inline">\(A\)</span>, or both, is satisfied and then divide by <span class="math inline">\(n=4526\)</span>, that is,</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+P(M \mbox{ or } A) &amp;=&amp; \frac{n(M \mbox{ or } A)}{n} \nonumber \\
+          &amp;=&amp; \frac{n(M , A)+n(M , R)+n(F , A)}{n} \nonumber \\
+          &amp;=&amp; \frac{1198+1493+557}{4526} = \frac{3248}{4526} = 0.718. 
+\end{eqnarray}
+\]</span></p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk4n">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk4n">Table 3.9: </span> Cells with M or A are shaded (frequencies).</caption><col><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
@@ -472,6 +486,13 @@ The probability <span class="math inline">\(P(A \mid M)\)</span> of being accept
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1755</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2771</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">4526</td></tr>
 </table>
 
+<p>An equivalent way to calculate <span class="math inline">\(P(M \mbox{ or } A)\)</span> is to sum probabilities in Table <a href="probability.html#tab:berk4p">3.10</a>, that is,</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+P(M \mbox{ or } A) &amp;=&amp; P(M \mbox{ and } A) + P(M \mbox{ and }R) + P(F \mbox{ and } A) \\
+&amp;=&amp; 0.265+0.330+0.123 = 0.718. 
+\end{eqnarray}
+\]</span></p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk4p">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk4p">Table 3.10: </span> Cells with M or A are shaded (probabilities).</caption><col><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
@@ -483,6 +504,34 @@ The probability <span class="math inline">\(P(A \mid M)\)</span> of being accept
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.388</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.612</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1.000</td></tr>
 </table>
 
+<p><strong>Exercise</strong>. Can you see why these two calculations are equivalent?</p>
+<p><strong>Exercise</strong>. Can you see a (slightly) quicker way to calculate <span class="math inline">\(P(M \mbox{ or } A)\)</span>?</p>
+<p>Now consider a slightly different way to show that <span class="math inline">\(n(M \mbox{ or } A)=3248\)</span>:
+<span class="math display">\[ n(M \mbox{ or } A) = n(M) + n(A) - n(M, A) = 2691 + 1755 - 1198 = 3248. \]</span></p>
+<p>Can you see from Table <a href="probability.html#tab:berk4n">3.9</a> why this works?</p>
+<p>Similarly,
+<span class="math display">\[ P(M \mbox{ or } A) = P(M) + P(A) - P(M \mbox{ and } A) = 0.595 + 0.388 - 0.265 = 0.718. \]</span></p>
+<p>From this example we can see that following rule makes sense.</p>
+<p><strong>Definition</strong>: For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
+<span class="math display" id="eq:ordef">\[\begin{equation}
+P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B). 
+\tag{3.5}
+\end{equation}\]</span></p>
+<div id="mutually-exclusive-events" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Mutually exclusive events</h3>
+<p>Two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>mutually exclusive</strong> (or <strong>disjoint</strong>) if they cannot occur together. For example, in the Berkeley example the events <span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span> are mutually exclusive: it is not possible for an applicant to be both accepted and rejected.</p>
+<p>If two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive then <span class="math inline">\(P(A \mbox{ and } B)=0\)</span>. Substituting this into equation <a href="probability.html#eq:ordef">(3.5)</a> we find that, <strong>if events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive</strong>
+<span class="math display" id="eq:mut">\[\begin{equation}
+P(A \mbox{ or } B) = P(A) + P(B). 
+\tag{3.6}
+\end{equation}\]</span>
+You can only use this equation in the <strong>special case</strong> where events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive. Otherwise, you must use the general rule in equation <a href="probability.html#eq:ordef">(3.5)</a>.</p>
+<div id="the-complement-of-an-event-a" class="section level4 unnumbered">
+<h4>The complement of an event <span class="math inline">\(A\)</span></h4>
+<p>The <strong>complement</strong> of an event <span class="math inline">\(A\)</span> is the event that <span class="math inline">\(A\)</span> does not occur. This can be denoted <span class="math inline">\(\mbox{not}A\)</span> or <span class="math inline">\(\bar{A}\)</span> or <span class="math inline">\(A^c\)</span>. The events <span class="math inline">\(A\)</span> and <span class="math inline">\(\mbox{not}A\)</span> are mutually exclusive and <span class="math inline">\(S=\{A, \mbox{not}A\}\)</span>. We have already seen that <span class="math inline">\(P(S) = 1\)</span>. Therefore,
+<span class="math display">\[ P(S)=P(A \mbox{ or } \mbox{not}A) = P(A) + P(\mbox{not}A) = 1. \]</span>
+and therefore
+<span class="math display">\[ P(\mbox{not}A) = 1 - P(A). \]</span></p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:bloodABO">
 <caption style="caption-side: top; text-align: center;"><span id="tab:bloodABO">Table 3.11: </span> Distribution of ABO blood groups in the UK.</caption><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">ABO group</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">percentage</th></tr>
@@ -540,19 +589,20 @@ The probability <span class="math inline">\(P(A \mid M)\)</span> of being accept
 
 </div>
 </div>
-<div id="addition-rule-of-probability" class="section level2">
-<h2><span class="header-section-number">3.5</span> Addition rule of probability</h2>
 </div>
 <div id="multiplication-rule-of-probability" class="section level2">
 <h2><span class="header-section-number">3.6</span> Multiplication rule of probability</h2>
 </div>
+<div id="indepevents" class="section level2">
+<h2><span class="header-section-number">3.7</span> Independence of events</h2>
+</div>
 <div id="law-of-total-probability" class="section level2">
-<h2><span class="header-section-number">3.7</span> Law of total probability</h2>
+<h2><span class="header-section-number">3.8</span> Law of total probability</h2>
 </div>
 <div id="bayes-theorem" class="section level2">
-<h2><span class="header-section-number">3.8</span> Bayes’ theorem</h2>
+<h2><span class="header-section-number">3.9</span> Bayes’ theorem</h2>
 <div id="bloodindep" class="section level3">
-<h3><span class="header-section-number">3.8.1</span> An example of independence</h3>
+<h3><span class="header-section-number">3.9.1</span> An example of independence</h3>
 
 </div>
 </div>

@@ -172,7 +172,7 @@ For $p=1/2$ this is like using a computer to flip an unbiased coin.
 
 To simulate a fake space shuttle dataset we do the following for each of the 23 flights:
 
-1. set $p$ to be the value of the fitted curve in Figure \ref{fig:shuttle3} corresponding to the flight temperature;
+1. set $p$ to be the value of the fitted curve in Figure \@ref(fig:shuttle3) corresponding to the flight temperature;
 2. generate 6 random numbers $u_1, \ldots, u_6$ between 0 and 1;
 3. calculate $x_1, \ldots, x_6$ using equation \@ref(eq:xbin);
 4. calculate $y=x_1+\cdots+x_6$, the total number of distressed O-rings.

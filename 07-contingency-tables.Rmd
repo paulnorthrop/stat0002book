@@ -1,3 +1,9 @@
 # Contingency tables {#contingency}
 
-Add stuff
+## 2-way contingency tables {#way2}
+
+### Comparing probabilities
+
+Note that in Ross, S. (2010) A First Course in Probability the odds ratio of an event $A$ is defined (misleadingly, in my opinion) as $P(A) / (1 - P(A))$.  This is a ratio of probabilities.  The conventional use of the term **odds ratio** is for a ratio of odds,   
+
+## 3-way contingency tables {#way3}

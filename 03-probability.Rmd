@@ -66,7 +66,7 @@ If you toss a coin, the outcome (the side on top when the coin falls to the grou
 Nevertheless, if the coin is fair (equally balanced), and it is tossed fairly, we might expect the long run **proportion**, or **relative frequency**, of $H$s to settle down to 1/2. However, the only way to find out whether this is true is to toss a coin repeatedly, forever, and calculate the proportion of tosses on which $H$ is the outcome. It is not possible, in practice, for any experiment to be repeated forever. 
 
 However, a South African statistician Jon Kerrich managed to toss a coin 
-10,000 times while imprisioned in Denmark during World War II.  At the end of his
+10,000 times while imprisoned in Denmark during World War II.  At the end of his
 effort he had recorded 5067 Heads and 4933 Tails.  Figure \@ref(fig:coin) shows 
 how the proportion of heads Kerrich threw changed as the number of tosses increased.
 
@@ -115,7 +115,7 @@ We now look at the coin-tossing example in a slightly different way. If we toss 
 
 #### Example: Graduate Admissioins at Berkeley {-}
 
-Table \@ref(tab:berk0) contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university.  These data are discussed in @berkeley. We use the following notation: $A$ for an accepted applicant, $R$ for a rejected applicant. Table \@ref(tab:berk0n) sumarises the notation used for the frequencies in Table \@ref(tab:berk0). For example, $n(A)$ denotes the number of applicants who were accepted. We will look at this example in more detail later.
+Table \@ref(tab:berk0) contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university.  These data are discussed in @berkeley. We use the following notation: $A$ for an accepted applicant, $R$ for a rejected applicant. Table \@ref(tab:berk0n) summarises the notation used for the frequencies in Table \@ref(tab:berk0). For example, $n(A)$ denotes the number of applicants who were accepted. We will look at this example in more detail later.
 
 ```{r, echo=FALSE}
 # 2-way table: sex and outcome
@@ -202,8 +202,7 @@ Since we have defined probability as a proportion, basic properties of proportio
 
 ## Conditional probability
 
-In Section \@ref(sids} (the cot death example) the statistical evidence
-presented to the court was based on the estimate that "the probability of one cot death **in a family like Sally Clark's** is 1 in 8543".  What does this mean?
+In Section \@ref(sids) the statistical evidence presented to the court was based on the estimate that "the probability of one cot death **in a family like Sally Clark's** is 1 in 8543".  What does this mean?
 
 The study from which this statistic was taken estimated the **overall** probability of cot death to be 1 in 1303.  That is, cot death occurs in approximately 1 in every 1303 families.
 
@@ -232,11 +231,11 @@ In fact **all** probabilities are conditional probabilities, because a probabili
 
 We return to the Berkeley admissions example to illustrate conditional probability, independence and the rules of probability.
 
-#### Example: Graduate Admissioins at Berkeley (continued) {-}
+#### Example: Graduate Admissions at Berkeley (continued) {-}
 
 Table \@ref(tab:berk1) contains more information on data relating to graduate admissions in 1973 at Berkeley in the six largest (in terms of numbers of admissions) departments of the university.  
 
-We use the following notation: $M$ for a male applicant, $F$ for a female applicant, $A$ for an accepted applicant, $R$ for a rejected applicant. This is an example of a 2-way contingency table; see Section \@ref(contingency).
+We use the following notation: $M$ for a male applicant, $F$ for a female applicant, $A$ for an accepted applicant, $R$ for a rejected applicant. This is an example of a 2-way contingency table (see Section \@ref(contingency)).
 
 ```{r, echo=FALSE}
 sex_outcome_hux <- sex_outcome %>% 
@@ -264,7 +263,7 @@ n_sex_outcome[2, ] <- c("n(F, A)", "n(F, R)", "n(F)")
 n_sex_outcome[3, ] <- c("n(A)", "n(R)", "n")
 ```
 
-Table \@ref(tab:berk1n) summarises the notation used for the frequencies in Table \@ref(tab:berk1).  For example, $n(M, A)$ denotes the number of applicants who were both male and accepted.
+Table \@ref(tab:berk1n) summarises the notation used for the frequencies in Table \@ref(tab:berk1).  For example, $n(M, A)$ denotes the number of applicants who were both male and accepted.  Of course, $n(M, A)=n(A, M)$. 
 
 (ref:berk1n-caption) Notation for Table \@ref(tab:berk1).
 
@@ -350,11 +349,11 @@ pn_sex_outcome_hux
 For example, the
 
 * probability $P(M)$ that a randomly chosen applicant is male is 0.595; and 
-* probability $P(M, A)$, or $P(M$ and $A)$, or $P(M \cap A)$, that a randomly chosen applicant is both male and accepted is 0.265.
+* probability $P(M, A)$, or $P(M \mbox{ and } A)$, or $P(M \cap A)$, or even $P(MA)$, that a randomly chosen applicant is both male and accepted is 0.265.
 
-In the second bullet point three different forms of notation are used to denote the same probability.  In these notes I may (deliberately, of course!) use more than one form of notation, to get you used to the fact that different texts may use different notation.
+In the second bullet point four different forms of notation are used to denote the same probability.  In these notes I may (deliberately, of course) use more than one form of notation, to get you used to the fact that different texts may use different notation.  Of course, $P(M, A) = P(A, M)$ and so on.
 
-The following explains in detail how these probabilities are calculated.
+The following explains how these probabilities are calculated.
 
 $$P(M) = \frac{n(M)}{n} = \frac{2,691}{4,526} = 0.595.$$
 The sample space is $\{M,F\}$.
@@ -362,15 +361,12 @@ The sample space is $\{M,F\}$.
 $$P(M , A) = \frac{n(M , A)}{n} = \frac{1,198}{4,526} = 0.265.$$
 The sample space is $\{(M , A),(M , R),(F , A),(F , R)\}$.
 
-Suppose that we wish to investigate whether there appears to be any sexual discrimination in
-the graduate admissions process at Berkeley in 1973.  
-To do this we might compare
+Suppose that we wish to investigate whether there appears to be any sexual discrimination in the graduate admissions process at Berkeley in 1973. To do this we might compare
 
 * the probability of acceptance for males, that is, $P(A \mid M)$; and
 * the probability of acceptance for females, that is, $P(A \mid F)$.
 
-These are **conditional** probabilities.  Firstly,  we calculate $P(A \mid M)$.  
-Look at Table \@ref(tab:berk3n). We are considering only male applicants ($M$) so we have shaded the $M$ row.  Since we are conditioning on $M$, female applicants are not relevant.  We are only concerned with the $n(M)=2691$ male applicants in the $M$ row.  
+These are **conditional** probabilities.  Firstly,  we calculate $P(A \mid M)$. Look at Table \@ref(tab:berk3n). We are considering only male applicants ($M$) so we have shaded the $M$ row.  Since we are conditioning on $M$, female applicants are not relevant.  We are only concerned with the $n(M)=2691$ male applicants in the $M$ row.  
 
 ```{r, echo=FALSE}
 # Shade M row
@@ -393,19 +389,14 @@ sex_outcome_hux <- sex_outcome %>%
 sex_outcome_hux    
 ```
 
-Of these, 
-
-* $n(M , A) = 1198$ are accepted, and 
-* $n(M , R) = 1493$ are rejected.
+Of these, $n(M , A) = 1198$ are accepted and $n(M , R) = 1493$ are rejected.
 
 The information that the applicant is male (that is, event $M$ has occurred) has reduced the sample space to $\{(M , A),(M , R)\}$, or, since we **know** that
-$M$ has occurred, the sample space is effectively $\{A,R\}$.
-
-The conditional probability of $A$ given $M$ is the probability that event $A$ occurs when we consider only those occasions on which event $M$ occurs. 
+$M$ has occurred, the sample space is effectively $\{A,R\}$.  The conditional probability of $A$ given $M$ is the probability that event $A$ occurs when we consider only those occasions on which event $M$ occurs. 
 
 Therefore,
 \begin{equation}
-P(A \mid M) = \frac{n(M , A)}{n(M)} = \frac{1198}{2691} = 0.445,
+P(A \mid M) = \frac{n(A, M)}{n(M)} = \frac{1198}{2691} = 0.445,
 (\#eq:freqs)
 \end{equation}
 that is, the proportion of male applicants who are accepted is 0.445.
@@ -436,13 +427,13 @@ p_sex_outcome_hux
 An equivalent way to calculate $P(A~|~M)$ is
 
 \begin{equation}
-P(A \mid M) = \frac{P(M , A)}{P(M)} = \frac{1198/4526}{2691/4526} = 0.445. (\#eq:probs)
+P(A \mid M) = \frac{P(A, M)}{P(M)} = \frac{1198/4526}{2691/4526} = 0.445. (\#eq:probs)
 \end{equation}
 Instead of using the frequencies in the shaded $M$ row, we have used the probabilities. We get exactly the same answer because the probabilities are simply the frequencies divided by 4526.  
 
-**Exercise**: show that $P(A \mid F)=0.304$.
+**Exercise**. Show that $P(A \mid F)=0.304$.
 
-**Exercise**: find $P(R \mid M)$ and $P(R \mid F)$.  What do you notice about $P(A \mid M)$ and $P(R \mid M)$?}
+**Exercise**. Find $P(R \mid M)$ and $P(R \mid F)$.  What do you notice about $P(A \mid M)$ and $P(R \mid M)$?}
 
 The calculation of $P(A~|~M)$ in equation \@ref(eq:freqs) based on the frequencies in table \@ref(tab:berk3n) should make sense to you. From the equivalent calculation in equation \@ref(eq:probs) we can see that the following definition of conditional probability makes sense.
 
@@ -465,9 +456,27 @@ From Table \@ref(tab:berk2p) we find that
 \[ P(A) = 0.388. \]
 Therefore, the probability of acceptance depends on the sex of the applicant:
 \[ P(A \mid M) > P(A) \qquad \mbox{and} \qquad P(A \mid F) < P(A). \]
-The probability $P(A \mid M)$ of being accepted for a randomly selected male is greater than the unconditional probability $P(A)$.  Therefore, the occurrence of event $M$ has affected the probability that event $A$ occurs. This means that the events $A$ and $M$ are **dependent**.
+The probability $P(A \mid M)$ of being accepted for a randomly selected male is greater than the unconditional probability $P(A)$.  Therefore, the occurrence of event $M$ has affected the probability that event $A$ occurs. This means that the events $A$ and $M$ are **dependent**.  Similarly, $P(A \mid F) < P(A)$ means that the events $A$ and $F$ are **dependent**.
 
-Similarly, $P(A \mid F) < P(A)$ means that the events $A$ and $F$ are **dependent**.
+We consider independent and dependent events in more detail in Section \@ref(indepevents).
+
+The fact that $P(A~|~M) > P(A~|~F)$ might suggest to us that there is gender bias in the admissions process. However, as we shall see in Section \@ref(way3), this may be a very misleading conclusion to draw from these data.  There is an innocent explanation of why $P(A \mid M) > P(A \mid F)$. 
+
+**Exercise**. Can you think what this innocent explanation it might be?
+
+## Addition rule of probability
+
+We continue with the Berkeley admissions data. Suppose that we wish to calculate the probability that an applicant chosen at random from the 4526 applicants is either male (event $M$) or accepted (event $A$), or both male and accepted.  We denote this probability $P(M \mbox{ or } A)$ or $P(M \cup A)$. 
+
+Look at Table \@ref(tab:berk4n).  The cells that satisfy either $M$ or $A$, or both, have been shaded grey.  To calculate $P(M \mbox{ or } A)$ we simply sum the numbers of applicants for which either $M$ or $A$, or both, is satisfied and then divide by $n=4526$, that is,
+
+$$
+\begin{eqnarray}
+P(M \mbox{ or } A) &=& \frac{n(M \mbox{ or } A)}{n} \nonumber \\
+          &=& \frac{n(M , A)+n(M , R)+n(F , A)}{n} \nonumber \\
+          &=& \frac{1198+1493+557}{4526} = \frac{3248}{4526} = 0.718. 
+\end{eqnarray}
+$$
 
 ```{r, echo=FALSE}
 # Shade all but (R, F)
@@ -491,6 +500,15 @@ sex_outcome_hux <- sex_outcome %>%
 sex_outcome_hux    
 ```
 
+An equivalent way to calculate $P(M \mbox{ or } A)$ is to sum probabilities in Table \@ref(tab:berk4p), that is,
+
+$$
+\begin{eqnarray}
+P(M \mbox{ or } A) &=& P(M \mbox{ and } A) + P(M \mbox{ and }R) + P(F \mbox{ and } A) \\
+&=& 0.265+0.330+0.123 = 0.718. 
+\end{eqnarray}
+$$
+
 ```{r, echo=FALSE}
 # Shade all but (R, F)
 p_sex_outcome_hux <- p_sex_outcome %>% 
@@ -512,6 +530,47 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   p_sex_outcome_hux[1, 1] <- ""
 p_sex_outcome_hux    
 ```
+
+**Exercise**. Can you see why these two calculations are equivalent?
+
+**Exercise**. Can you see a (slightly) quicker way to calculate $P(M \mbox{ or } A)$?
+
+Now consider a slightly different way to show that $n(M \mbox{ or } A)=3248$: 
+\[ n(M \mbox{ or } A) = n(M) + n(A) - n(M, A) = 2691 + 1755 - 1198 = 3248. \]
+
+Can you see from Table \@ref(tab:berk4n) why this works?
+
+Similarly,
+\[ P(M \mbox{ or } A) = P(M) + P(A) - P(M \mbox{ and } A) = 0.595 + 0.388 - 0.265 = 0.718. \]
+
+From this example we can see that following rule makes sense.
+
+**Definition**: For any two events $A$ and $B$ 
+\begin{equation}
+P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B). 
+(\#eq:ordef)
+\end{equation}
+
+### Mutually exclusive events 
+
+Two events $A$ and $B$ are **mutually exclusive** (or **disjoint**) if they cannot occur together. For example, in the Berkeley example the events $A$ and $R$ are mutually exclusive: it is not possible for an applicant to be both accepted and rejected.
+
+If two events $A$ and $B$ are mutually exclusive then $P(A \mbox{ and } B)=0$. Substituting this into equation \@ref(eq:ordef) we find that, **if events $A$ and $B$ are mutually exclusive**
+\begin{equation}
+P(A \mbox{ or } B) = P(A) + P(B). 
+(\#eq:mut)
+\end{equation}
+You can only use this equation in the **special case** where events $A$ and $B$ are mutually exclusive.  Otherwise, you must use the general rule in equation \@ref(eq:ordef).
+
+#### The complement of an event $A$ {-}
+
+The **complement** of an event $A$ is the event that $A$ does not occur.  This can be denoted $\mbox{not}A$ or $\bar{A}$ or $A^c$. The events $A$ and $\mbox{not}A$ are mutually exclusive and $S=\{A, \mbox{not}A\}$.  We have already seen that $P(S) = 1$. Therefore,
+\[ P(S)=P(A \mbox{ or } \mbox{not}A) = P(A) + P(\mbox{not}A) = 1. \]
+and therefore
+\[ P(\mbox{not}A) = 1 - P(A). \]
+
+## Multiplication rule of probability
+
 
 ```{r, echo=FALSE}
 temp <- stat0002::blood_types
@@ -632,9 +691,10 @@ p_sex_outcome_hux
 ```
 
 
-## Addition rule of probability
 
-## Multiplication rule of probability
+
+
+## Independence of events {#indepevents}
 
 ## Law of total probability
 
