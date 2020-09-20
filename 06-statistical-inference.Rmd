@@ -1,0 +1,13 @@
+# Statistical Inference
+
+## Sample and populations
+
+## Probability models
+
+## Fitting models
+
+## Uncertainty in estimation
+
+## What makes an estimator good? {#good}
+
+## Assessing goodness-of-fit

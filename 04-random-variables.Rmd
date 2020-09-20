@@ -1,0 +1,13 @@
+# Random variables {#rvs}
+
+## Discrete random variables {#discrete}
+
+## Continuous random variables {#continuous}
+
+## Expectation
+
+## Variance
+
+## Other measures of location {#locations}
+
+## Quantiles 

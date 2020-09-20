@@ -1,0 +1,18 @@
+# Linear regression {#linreg}
+
+## Simple linear regression
+
+## Looking at Scatter plots
+
+## Model checking
+
+### Outliers and influential observations {#outliers}
+
+## Use of transformations {#linregtrans}
+
+## Over-fitting
+
+## Other aspects of regression
+
+## Uncertainty in parameter estimates
+

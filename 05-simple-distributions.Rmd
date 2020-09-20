@@ -1,0 +1,17 @@
+# Simple distributions {#simple}
+
+## The Bernoulli distribution
+
+## The binomial distribution
+
+## The geometric distribution
+
+## The Poisson distribution
+
+## The uniform distribution
+
+## The exponential distribution
+
+## The normal distribution {#normal}
+
+## QQ plots

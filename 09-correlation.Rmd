@@ -1,0 +1,7 @@
+# Correlation {#correlationchapter}
+
+## Correlation: a measure of linear association
+
+## Covariance and correlation
+
+## Use and misuse of correlation
