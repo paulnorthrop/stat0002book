@@ -115,7 +115,7 @@ We now look at the coin-tossing example in a slightly different way. If we toss 
 
 #### Example: Graduate Admissioins at Berkeley {-}
 
-Table \@ref(tab:berk0) contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university.  These data are discussed in @berkeley. We use the following notation: $A$ for an accepted applicant, $R$ for a rejected applicant. Table \@ref(tab:berk0n) sumarises the notation used for the frequencies in table \@ref(tab:berk0). We will look at this example in more detail later.
+Table \@ref(tab:berk0) contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university.  These data are discussed in @berkeley. We use the following notation: $A$ for an accepted applicant, $R$ for a rejected applicant. Table \@ref(tab:berk0n) sumarises the notation used for the frequencies in Table \@ref(tab:berk0). For example, $n(A)$ denotes the number of applicants who were accepted. We will look at this example in more detail later.
 
 ```{r, echo=FALSE}
 # 2-way table: sex and outcome
@@ -177,9 +177,9 @@ n_outcome_hux
 ```
 
 The population of interest now is the population of graduate applicants to the six largest departments of the Berkeley.  If we choose an applicant at random from this population the probability $P(A)$ that they are accepted is given by 
-\[ P(A) = \frac{n(A)}{n} = \frac{1,755}{4,526} = 0.388. \]
+$$ P(A) = \frac{n(A)}{n} = \frac{1,755}{4,526} = 0.388.$$
 Similarly, the probability $P(R)$ that a randomly chosen applicant is rejected is given by
-\[ P(R) = \frac{n(R)}{n} = \frac{2,771}{4,526} = 0.612. \]
+$$ P(R) = \frac{n(R)}{n} = \frac{2,771}{4,526} = 0.612.$$
 
 In both the coin-tossing and Berkeley admissions examples we have imagined choosing an individual from a population in such a way that all individuals are equally likely to be chosen.  The probability of the individual having a particular property, for example, that an applicant is accepted, is given by the proportion of individuals in the population which have this property.
 
@@ -230,8 +230,13 @@ In section \@ref(sids) I did not use the $~\mid~$ sign in my notation (because w
 
 In fact **all** probabilities are conditional probabilities, because a probability is conditioned on the sample space $S$.  When we define $S$ we rule out anything that is not in $S$.  So instead of $P(C)$ we could write $P(C \mid S)$.  We do not tend to do this because it takes more time and it tends to make things more difficult to read.  However, we should always try to bear in mind the sample space when we think about a probability.
 
-We use the following example to illustrate 
-conditional probability, independence and the rules of probability.
+We return to the Berkeley admissions example to illustrate conditional probability, independence and the rules of probability.
+
+#### Example: Graduate Admissioins at Berkeley (continued) {-}
+
+Table \@ref(tab:berk1) contains more information on data relating to graduate admissions in 1973 at Berkeley in the six largest (in terms of numbers of admissions) departments of the university.  
+
+We use the following notation: $M$ for a male applicant, $F$ for a female applicant, $A$ for an accepted applicant, $R$ for a rejected applicant. This is an example of a 2-way contingency table; see Section \@ref(contingency).
 
 ```{r, echo=FALSE}
 sex_outcome_hux <- sex_outcome %>% 
@@ -259,6 +264,8 @@ n_sex_outcome[2, ] <- c("n(F, A)", "n(F, R)", "n(F)")
 n_sex_outcome[3, ] <- c("n(A)", "n(R)", "n")
 ```
 
+Table \@ref(tab:berk1n) summarises the notation used for the frequencies in Table \@ref(tab:berk1).  For example, $n(M, A)$ denotes the number of applicants who were both male and accepted.
+
 (ref:berk1n-caption) Notation for Table \@ref(tab:berk1).
 
 ```{r, echo=FALSE}
@@ -280,6 +287,8 @@ n_sex_outcome_hux <- n_sex_outcome %>%
   n_sex_outcome_hux[1, 1] <- ""
 n_sex_outcome_hux    
 ```
+
+If we divide each of the numbers in table \@ref(tab:berk1) by the total number of applications ($n$ = 4526) then we obtain the proportions of applicants in each of the four categories.  These proportions are given (to 3 decimal places) in Table \@ref(tab:berk2p). 
 
 ```{r, echo=FALSE}
 # Convert frequencies to probabilities
@@ -314,6 +323,8 @@ pn_sex_outcome[2, ] <- c("P(F, A)", "P(F, R)", "P(F)")
 pn_sex_outcome[3, ] <- c("P(A)", "P(R)", 1)
 ```
 
+Table \@ref(tab:berk2pn) summarises the notation used for the probabilities in Table \@ref(tab:berk2p).
+
 (ref:berk2np-caption) Notation for Table \@ref(tab:berk2p).
 
 ```{r, echo=FALSE}
@@ -336,6 +347,31 @@ pn_sex_outcome_hux <- pn_sex_outcome %>%
 pn_sex_outcome_hux    
 ```
 
+For example, the
+
+* probability $P(M)$ that a randomly chosen applicant is male is 0.595; and 
+* probability $P(M, A)$, or $P(M$ and $A)$, or $P(M \cap A)$, that a randomly chosen applicant is both male and accepted is 0.265.
+
+In the second bullet point three different forms of notation are used to denote the same probability.  In these notes I may (deliberately, of course!) use more than one form of notation, to get you used to the fact that different texts may use different notation.
+
+The following explains in detail how these probabilities are calculated.
+
+$$P(M) = \frac{n(M)}{n} = \frac{2,691}{4,526} = 0.595.$$
+The sample space is $\{M,F\}$.
+
+$$P(M , A) = \frac{n(M , A)}{n} = \frac{1,198}{4,526} = 0.265.$$
+The sample space is $\{(M , A),(M , R),(F , A),(F , R)\}$.
+
+Suppose that we wish to investigate whether there appears to be any sexual discrimination in
+the graduate admissions process at Berkeley in 1973.  
+To do this we might compare
+
+* the probability of acceptance for males, that is, $P(A \mid M)$; and
+* the probability of acceptance for females, that is, $P(A \mid F)$.
+
+These are **conditional** probabilities.  Firstly,  we calculate $P(A \mid M)$.  
+Look at Table \@ref(tab:berk3n). We are considering only male applicants ($M$) so we have shaded the $M$ row.  Since we are conditioning on $M$, female applicants are not relevant.  We are only concerned with the $n(M)=2691$ male applicants in the $M$ row.  
+
 ```{r, echo=FALSE}
 # Shade M row
 sex_outcome_hux <- sex_outcome %>% 
@@ -357,6 +393,25 @@ sex_outcome_hux <- sex_outcome %>%
 sex_outcome_hux    
 ```
 
+Of these, 
+
+* $n(M , A) = 1198$ are accepted, and 
+* $n(M , R) = 1493$ are rejected.
+
+The information that the applicant is male (that is, event $M$ has occurred) has reduced the sample space to $\{(M , A),(M , R)\}$, or, since we **know** that
+$M$ has occurred, the sample space is effectively $\{A,R\}$.
+
+The conditional probability of $A$ given $M$ is the probability that event $A$ occurs when we consider only those occasions on which event $M$ occurs. 
+
+Therefore,
+\begin{equation}
+P(A \mid M) = \frac{n(M , A)}{n(M)} = \frac{1198}{2691} = 0.445,
+(\#eq:freqs)
+\end{equation}
+that is, the proportion of male applicants who are accepted is 0.445.
+
+Now look at Table \@ref(tab:berk3p). 
+
 ```{r, echo=FALSE}
 # Shade M row
 p_sex_outcome_hux <- p_sex_outcome %>% 
@@ -377,6 +432,31 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   p_sex_outcome_hux[1, 1] <- ""
 p_sex_outcome_hux    
 ```
+
+An equivalent way to calculate $P(A~|~M)$ is
+
+\begin{equation}
+P(A \mid M) = \frac{P(M , A)}{P(M)} = \frac{1198/4526}{2691/4526} = 0.445. (\#eq:probs)
+\end{equation}
+Instead of using the frequencies in the shaded $M$ row, we have used the probabilities. We get exactly the same answer because the probabilities are simply the frequencies divided by 4526.  
+
+**Exercise**: show that $P(A \mid F)=0.304$.
+
+**Exercise**: find $P(R \mid M)$ and $P(R \mid F)$.  What do you notice about $P(A \mid M)$ and $P(R \mid M)$?}
+
+The calculation of $P(A~|~M)$ in equation \@ref(eq:freqs) based on the frequencies in table \@ref(tab:berk3n) should make sense to you. From the equivalent calculation in equation \@ref(eq:probs) we can see that the following definition of conditional probability makes sense.
+
+**Definition**:  If $B$ is an event with $P(B) > 0$, then for each event $A$, the **conditional probability of $A$ given $B$** is
+\begin{equation}
+P(A \mid B)=\frac{P(A , B)}{P(B)}.
+(\#eq:conditional)
+\end{equation}
+Remarks:
+
+* It is necessary that $P(B) > 0$ for $P(A \mid B)$ to be defined. It does not make sense to condition on an event that is impossible.
+* Equation \@ref(eq:conditional) implies that $P(A , B) = P(A \mid B)\,P(B)$.
+* For any event $A$, $P(A \mid B)$ is a probability in which the sample space has been reduced to outcomes containing the event $B$.  Therefore, **all** properties of probabilities also hold for conditional probabilities, e.g. $0 \leq P(A~|~B) \leq 1$.
+
 
 ```{r, echo=FALSE}
 # Shade all but (R, F)
