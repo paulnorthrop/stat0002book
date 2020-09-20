@@ -1,0 +1,231 @@
+%PDF-1.1
+%Å‚Å„ÅœÅ”
+1 0 obj
+<<
+/CreationDate (D:20070928131908)
+/ModDate (D:20070928131908)
+/Title (R Graphics Output)
+/Producer (R 2.0.0)
+/Creator (R)
+>>
+endobj
+2 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /ZapfDingbats
+>>
+endobj
+6 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents 7 0 R
+/Resources 4 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 8 0 R
+>>
+stream
+q
+Q q 0.00 0.00 610.94 432.00 re W n
+BT
+0.000 0.000 0.000 rg
+/F2 1 Tf 18.00 0.00 0.00 18.00 43.13 361.09 Tm (real flights) Tj
+0.000 0.000 0.000 RG
+0.75 w
+[] 0 d
+1 J
+1 j
+10.00 M
+ET
+84.14 353.31 m 84.14 260.74 l S
+75.14 276.33 m
+84.14 260.74 l
+93.14 276.33 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 37.12 242.07 Tm (real dataset) Tj
+ET
+84.14 236.06 m 84.14 143.49 l S
+75.14 159.07 m
+84.14 143.49 l
+93.14 159.07 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 40.08 124.73 Tm (fitted curve) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 48.59 107.89 Tm (\(curve 0\)) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 144.72 361.09 Tm (new flights 1) Tj
+ET
+194.56 353.31 m 194.56 260.74 l S
+185.56 276.33 m
+194.56 260.74 l
+203.56 276.33 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 157.54 242.07 Tm (dataset 1) Tj
+ET
+194.56 236.06 m 194.56 143.49 l S
+185.56 159.07 m
+194.56 143.49 l
+203.56 159.07 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 150.50 124.73 Tm (fitted curve) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 159.01 107.89 Tm (\(curve 1\)) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 255.14 361.09 Tm (new flights 2) Tj
+ET
+304.99 353.31 m 304.99 260.74 l S
+295.99 276.33 m
+304.99 260.74 l
+313.99 276.33 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 267.96 242.07 Tm (dataset 2) Tj
+ET
+304.99 236.06 m 304.99 143.49 l S
+295.99 159.07 m
+304.99 143.49 l
+313.99 159.07 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 260.92 124.73 Tm (fitted curve) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 269.44 107.89 Tm (\(curve 2\)) Tj
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 380.06 363.71 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 424.23 363.71 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 468.40 363.71 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 380.06 246.45 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 424.23 246.45 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 468.40 246.45 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 380.06 129.20 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 424.23 129.20 Tm (l) Tj 0 Tr
+/F1 1 Tf 2 Tr 5.61 0 0 5.61 468.40 129.20 Tm (l) Tj 0 Tr
+/F2 1 Tf 18.00 0.00 0.00 18.00 498.07 361.09 Tm (new flights n) Tj
+ET
+547.91 353.31 m 547.91 260.74 l S
+538.91 276.33 m
+547.91 260.74 l
+556.91 276.33 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 510.89 242.07 Tm (dataset n) Tj
+ET
+547.91 236.06 m 547.91 143.49 l S
+538.91 159.07 m
+547.91 143.49 l
+556.91 159.07 l
+S
+BT
+/F2 1 Tf 18.00 0.00 0.00 18.00 503.85 124.73 Tm (fitted curve) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 512.36 107.89 Tm (\(curve n\)) Tj
+/F2 1 Tf 18.00 0.00 0.00 18.00 52.49 67.78 Tm (How different \(variable\) are curve 0, curve 1, curve 2, ..., curve n?) Tj
+ET
+Q
+endstream
+endobj
+8 0 obj
+2505
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Kids [
+6 0 R
+]
+/Count 1
+/MediaBox [0 0 611 432]
+>>
+endobj
+4 0 obj
+<<
+/ProcSet [/PDF /Text]
+/Font << /F1 5 0 R /F2 10 0 R /F3 11 0 R /F4 12 0 R /F5 13 0 R /F6 14 0 R >>
+/ExtGState << >>
+>>
+endobj
+9 0 obj
+<<
+/Type /Encoding
+/BaseEncoding /WinAnsiEncoding
+/Differences [ 45/minus ]
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Helvetica
+/Encoding 9 0 R
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Helvetica-Bold
+/Encoding 9 0 R
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F4
+/BaseFont /Helvetica-Oblique
+/Encoding 9 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F5
+/BaseFont /Helvetica-BoldOblique
+/Encoding 9 0 R
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F6
+/BaseFont /Symbol
+>>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000020 00000 n 
+0000000162 00000 n 
+0000002952 00000 n 
+0000003035 00000 n 
+0000000211 00000 n 
+0000000294 00000 n 
+0000000374 00000 n 
+0000002932 00000 n 
+0000003172 00000 n 
+0000003266 00000 n 
+0000003363 00000 n 
+0000003465 00000 n 
+0000003570 00000 n 
+0000003679 00000 n 
+trailer
+<<
+/Size 15
+/Info 1 0 R
+/Root 2 0 R
+>>
+startxref
+3757
+%%EOF
