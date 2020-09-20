@@ -625,6 +625,12 @@ For example, if $n = 3$ then we need
 that is, $(A_1, A_2, A_3)$ are pairwise independent, and 
 \[ P(A_{1} , A_{2} , A_{3}) = P(A_{1}) P(A_{2}) P(A_{3}). \]
 
+### An example of independence} {#bloodindep}
+
+The 2 most important systems for classifying human blood are the ABO system, with blood types  A, B, AB and O, and the Rhesus system, with blood types Rh+ and Rh-. In the ABO system an A (and/or B) indicates the presence of antigen A (and/or B) molecules on the red blood cells. These two systems are often combined to form 8 blood types A+, B+, AB+, O+, A--, B--, AB-- and O--. Knowledge of blood type is important when a patient needs a blood transfusion.Giving blood of the wrong type can cause harm: giving Rh+ blood to someone who is Rh-- will make that person ill, as will giving blood with a A or B antigens to someone without those antigens.  An AB+ person can receive blood from anyone, but an O-- person can only receive O- blood.
+
+The proportions of blood types varies between countries. In the UK the percentages for the ABO system are estimated to be equal to those in Table \@ref(tab:bloodABO).  Table \@ref(tab:bloodrhesus) gives the percentages for the Rhesus system.
+
 ```{r, echo=FALSE}
 temp <- stat0002::blood_types
 col1 <- c(as.character(temp[1:4, 1]), "total")
@@ -670,6 +676,12 @@ blood_rhesus_hux <- blood_rhesus %>%
 blood_rhesus_hux    
 ```
 
+These tables tell us that, for the UK, $P(\mbox{O})=0.44, P(\mbox{A})=0.42, P(\mbox{B})=0.1, P(\mbox{AB})=0.04$, $P(\mbox{Rh}+)=0.83$ and $P(\mbox{Rh}-)=0.17$.
+
+Your blood type is genetically inherited from your parents. Since the genetic code responsible for inheritance of ABO blood group and Rhesus blood group are on different chromosomes, ABO and Rhesus blood types are inherited independently of each other. That is, for any person, the blood type in the ABO system is independent of their blood type in the Rhesus system.
+
+Assuming that ABO blood type is independent of Rhesus blood type gives the probabilities in Table \@ref(tab:bloodindep).  Some of these probabilities have been omitted.
+
 ```{r, echo=FALSE}
 # Calculate marginal distributions for ABO and rhesus
 p_ABO <- blood_ct[, 4] / 100
@@ -700,6 +712,8 @@ blood_indep_hux <- blood_indep %>%
   set_caption("Distribution of Rhesus blood groups in the UK.")
 blood_indep_hux    
 ```
+
+**Exercise**. Using equation \@ref(eq:indep), or otherwise, calculate the values that are missing from Table \@ref(tab:bloodindep).
 
 ```{r, echo=FALSE}
 # Shade A column
