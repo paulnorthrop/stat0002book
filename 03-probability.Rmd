@@ -867,3 +867,20 @@ These four expressions give different ways to express the probability $P(A \mid 
 #### Misleading statistical evidence in cot death trials (continued) {-}
 
 We will return to this example and use Bayes' theorem to calculate the probability that Sally Clark was innocent given (only) the statistical evidence presented at her trial.  We will make some assumptions that we know are unrealistic, but the general approach that we take will illustrate the importance of using sound probabilistic reasoning. 
+
+## DNA identification evidence 
+
+DNA evidence is increasingly being used to catch and prosecute suspects of crimes. The following example is based on a real criminal case.
+
+In 1996 Denis John Adams was put on trial for rape. Apart from the fact that he lived in the area local to where the crime was committed, the only evidence against him was that his DNA matched a sample of DNA obtained from the victim.
+In fact, all other evidence was in favour of  Adams.  The victim did not pick him out an identity parade; the victim said he did not look like her attacker, who she said was in his early 20s (Adams was 37); Adams had an alibi. 
+
+At Adam's trial the Prosecution said that the **match probablity**, the probability that Adam's DNA would match the DNA evidence if he was innocent, is 1 in 200 million.  The Defence disagreed with this, saying that 1 in 20 million or even 1 in 2 million was correct.
+
+At the trial it was stated that there were approximately 150,000 males in the local area between 18 and 60 years old who, before any evidence was collected, could have been suspects.
+
+**Questions**  
+
+* Do you think the evidence against Adams is very strong?
+* If you were on the jury would you have voted `guilty'?
+* Would you want to do any calculations first?  If so, what would you  calculate?
