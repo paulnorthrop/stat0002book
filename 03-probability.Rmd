@@ -1,0 +1,500 @@
+```{r setup, echo = FALSE, warning = FALSE, message = FALSE}
+
+library(knitr)
+library(dplyr)
+library(huxtable)
+options(
+        huxtable.knit_print_df       = FALSE, 
+        huxtable.add_colnames        = TRUE,  # needed when run by testthat
+        huxtable.latex_use_fontspec  = TRUE,
+        huxtable.bookdown            = TRUE
+      )
+
+is_latex <- guess_knitr_output_format() == "latex"
+# is_latex <- TRUE
+knitr::knit_hooks$set(
+  barrier = function(before, options, envir) {
+    if (! before && is_latex) knitr::asis_output("\\FloatBarrier")
+  }
+)
+```
+
+```{r, figsetup2, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = 'center',
+  out.width = '80%'
+)
+```
+
+```{r, echo = FALSE}
+include_cropped_graphics <- function(x) {
+#  knitr::include_graphics(knitr::plot_crop(x))
+  knitr::include_graphics(x)
+}
+```
+
+# Probability
+
+Most people have heard the word **probability** used in connection with a random experiment, that is, an experiment whose outcome cannot be predicted with certainty, such as tossing a coin, tossing dice, dealing cards etc. We start by considering a criminal case in which fundamental ideas surrounding the use of probability were hugely important.  Then we study the concept of probability using the traditional simple example of tossing a coin.
+
+## Misleading statistical evidence in cot death trials
+
+In recent years there have been three high-profile criminal cases in which a mother has been put on trial for the murder of a her babies.  In each case the medical evidence against the woman was weak and the prosecution relied heavily on statistical arguments to make their case. However, these arguments were not made by a statistician, but by a medical expert witness: Professor Sir Roy Meadows.   However, there were two problems with Professor Meadows' evidence: firstly, it contained serious statistical errors; and secondly, it was presented in a way which is likely to be misinterpreted by a jury. To illustrate the error we consider the case of Sally Clark.
+
+Sally Clark's first child died unexpectedly in 1996 at the age of 3 months. Sally was the only person in the house at the time. There was evidence of a respiratory infection and the death was recorded as natural; a case of **Sudden Infant Death Syndrome (SIDS)**, or **cot death**.  In 1998 Sally's second child died in similar circumstances at the age of 2 months. Sally was then charged with the murder of both babies. There was some medical evidence to suggest that the second baby could have been smothered, although this could be explained by an attempt at resuscitation.
+
+It appeared that the decision to charge Sally was based partly on the reasoning that cot death is quite rare so having two cot deaths in the same family must be very unlikely indeed.  This is the basis of Professor Meadows' assertion that: "One cot death is a tragedy, two cot deaths is suspicious and, until the contrary is proved, three cot deaths is murder.".  At her trial in 1999 Sally Clark was found guilty of murder and sentenced to life imprisonment.
+
+#### Professor Meadows' statistical evidence {-}
+
+At Sally Clark's trial in 1999 Professor Meadows claimed that, in a family like Sally's (affluent, non-smoking with a mother aged over 26), the chance of two cot deaths is 1 in 73 million, that is, a probability of 1/73,000,000 $\approx$ 0.000000014. Professor Meadows had calculated this value based on a study which had estimated the probability of one cot death in a family like Sally's to be 1 in 8543, that is, 1 cot death occurs for every 8543 of such families.
+
+Professor Meadows had then performed the calculation
+$$\frac{1}{8543}\times\frac{1}{8543}=\frac{1}{72,982,849}\approx\frac{1}{73,000,000}.$$ 
+
+There are problems with this evidence, both with this calculation and with the idea that this apparently small number provides evidence of guilt. 
+
+Can you identify these problems?
+
+## Relative frequency definition of probability
+
+#### Example: tossing a coin {-}
+
+If you toss a coin, the outcome (the side on top when the coin falls to the ground) is either a Head ($H$) or a Tail ($T$).  Suppose that you toss the coin a large number of times. Unless you are very skillful the outcome of each toss depends on chance. Therefore, if you toss the coin repeatedly, the exact sequence of $H$s and $T$s is not predictable with certainty in advance. This is usually the case with any experiment.  Even if we try very hard to repeat an experiment under exactly the same conditions, there is a certain amount of variability in the results which we cannot explain, but we must accept.  The experiment is a 
+**random experiment**.
+ 
+Nevertheless, if the coin is fair (equally balanced), and it is tossed fairly, we might expect the long run **proportion**, or **relative frequency**, of $H$s to settle down to 1/2. However, the only way to find out whether this is true is to toss a coin repeatedly, forever, and calculate the proportion of tosses on which $H$ is the outcome. It is not possible, in practice, for any experiment to be repeated forever. 
+
+However, a South African statistician Jon Kerrich managed to toss a coin 
+10,000 times while imprisioned in Denmark during World War II.  At the end of his
+effort he had recorded 5067 Heads and 4933 Tails.  Figure \@ref(fig:coin) shows 
+how the proportion of heads Kerrich threw changed as the number of tosses increased.
+
+```{r echo=FALSE, coin, fig.show='hold', fig.cap='The proportion of heads in a sequence of 10,000 coin tosses. @coin.'}
+include_cropped_graphics("images/coin.png")
+```
+
+Initially the proportion of heads fluctuates greatly but begins to settle down as the number of tosses increases.  After 10,000 tosses the relative frequency of Head is 5067/10,000=0.5067. We might suppose that if Kerrich were able to continue his experiment forever, the proportion of heads would tend to a limiting value which would be very near, if not exactly, 1/2. This hypothetical limiting value if the probability of heads and is denoted by $P(H)$.
+
+#### Looking at this slightly more formally {-}
+
+The coin-tossing example motivates the **relative frequency** or **frequentist** definition of the probability of an event; namely 
+
+> the relative frequency with which the event occurs in the long run; 
+
+or, in other words, 
+
+>the proportion of times that the event would occur in an infinite number of identical repeated experiments.
+
+Suppose that we toss a coin $n$ times. If the coin is fair, and is tossed fairly, then it is reasonable to suppose that 
+$$\mbox{the relative frequency of $H$} \,\,=\,\, 
+\frac{\mbox{number of times $H$ occurs}}{n},$$
+tends to 1/2 as $n$ gets larger.  We say that the event $H$ has probability 1/2, or $P(H)=1/2$.
+
+More generally, consider some event $E$ based on the outcomes of an experiment. Suppose that the experiment can, in principle, be repeated, under exactly the same conditions, forever. Let $n(E)$ denote the number of times that the event $E$ would occur in $n$ experiments.
+
+We suppose that 
+$$\mbox{the relative frequency of $E$} \,=\,
+\frac{n(E)}{n} \,\longrightarrow\, P(E)\,, \,\, \mbox{~as~}n \longrightarrow \infty.$$
+So, the probability $P(E)$ of the event $E$ is defined as the limiting value of $n(E)/n$ as $n \rightarrow \infty$.  That is,
+\begin{equation}
+P(E) \,\,=\,\, \mathop {\rm limit}\limits_{n \rightarrow \infty}\,\frac{n(E)}{n},
+(\#eq:limit)
+\end{equation}
+supposing that this limit exists.  (Note: I have written 'limit' and not 'lim' because this is not a limit in the usual mathematical sense.)
+
+In order to satisfy ourselves that the probability of an event **exists**, we do not need to repeat an experiment an infinite number of times, or even be able to.  All we need to do is **imagine** the experiment being performed repeatedly.  An event with probability 0.75, say, would be expected to occur 75 times out of 100 in the long run. 
+
+An alternative approach, considered in STAT0003, makes a simple set of basic assumptions about probability, called the **axioms of probability**.  Using these axioms it can be proved that the limiting relative frequency in equation \@ref(eq:limit) does exist and that it is equal to $P(E)$.  In STAT0002 we will not consider these axioms formally. However, they are so basic and intuitive that you will find that we take them for granted.
+
+**An aside**. There is another definition of probability, the **subjective** definition, which is the degree of belief someone has in the occurrence of an event, based on their knowledge and any evidence they have already seen.  For example, you might reasonably believe that the probability that a coin comes up Heads when it is tossed is 1/2 because the coin looks symmetrical. If you are **certain** that $P(H)=1/2$ then no amount of evidence from actually tossing the coin will change your mind.  However, if you just think that $P(H)=1/2$ is more likely that other values of $P(H)$ then observing many more $H$s than $T$s in a long sequence of tosses may lead you to  believe that $P(H)>1/2$. We will not consider this definition of probability again in this course.  However, it forms the basis of the **Bayesian** approach to Statistics.  You may study this in a more advanced courses, for example, STAT0008 Statistical Inference.
+
+#### Example: tossing a coin (continued) {-}
+
+We now look at the coin-tossing example in a slightly different way. If we toss a coin forever we generate an infinite **population** of **outcomes**: \{H,H,T,H,\ldots \}, say.  Think about choosing, or **sampling**, one of these outcomes at random from this population.  The probability that this outcome is $H$ is the proportion of $H$s in the population. If we **assume** that the coin is fair then the infinite population contains 50\% $H$s and 50\% $T$s. In that case $P(H)=1/2$, and $P(T)=1/2$.
+
+#### Example: Graduate Admissioins at Berkeley {-}
+
+Table \@ref(tab:berk0) contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university.  These data are discussed in @berkeley. We use the following notation: $A$ for an accepted applicant, $R$ for a rejected applicant. Table \@ref(tab:berk0n) sumarises the notation used for the frequencies in table \@ref(tab:berk0). We will look at this example in more detail later.
+
+```{r, echo=FALSE}
+# 2-way table: sex and outcome
+sex_outcome <- apply(datasets::UCBAdmissions, 2:1, FUN = sum)
+colnames(sex_outcome) <- c("A", "R")
+rownames(sex_outcome) <- c("M", "F")
+
+# 1-way table: outcome
+outcome <- apply(sex_outcome, 2, FUN = sum)
+outcome <- as.data.frame(t(outcome))
+# Add total
+outcome <- cbind(outcome, total = sum(outcome))
+
+# Return to the 2-way table
+# Add column totals
+sex_outcome <- rbind(sex_outcome, total = colSums(sex_outcome))
+# Add row totals
+sex_outcome <- cbind(sex_outcome, total = rowSums(sex_outcome))
+sex_outcome <- as.data.frame(sex_outcome)
+```
+
+```{r, echo=FALSE}
+outcome_hux <- outcome %>% 
+  as_hux() %>%
+  set_label("tab:berk0") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:2, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.6) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -3, TRUE) %>%
+  set_caption("Numbers of graduate applicants by outcome.")
+outcome_hux    
+```
+
+```{r, echo=FALSE}
+n_outcome <- outcome
+n_outcome[1, ] <- c("n(A)", "n(R)", "n")
+```
+
+(ref:berk0n-caption) Notation for Table \@ref(tab:berk0).
+
+```{r, echo=FALSE}
+n_outcome_hux <- n_outcome %>% 
+  as_hux() %>%
+  set_label("tab:berk0n") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:2, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.6) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(everywhere, -3, TRUE) %>%
+  set_caption("(ref:berk0n-caption)")
+n_outcome_hux    
+```
+
+```{r, echo=FALSE}
+sex_outcome_hux <- sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk1") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Numbers of graduate applicants by sex and outcome.")
+  sex_outcome_hux[1, 1] <- ""
+sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+n_sex_outcome <- sex_outcome
+n_sex_outcome[1, ] <- c("n(M, A)", "n(M, R)", "n(M)")
+n_sex_outcome[2, ] <- c("n(F, A)", "n(F, R)", "n(F)")
+n_sex_outcome[3, ] <- c("n(A)", "n(R)", "n")
+```
+
+(ref:berk1n-caption) Notation for Table \@ref(tab:berk1).
+
+```{r, echo=FALSE}
+n_sex_outcome_hux <- n_sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk1n") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, everywhere, TRUE) %>%
+  set_italic(4, -1, TRUE) %>%
+  set_caption("(ref:berk1n-caption)")
+  n_sex_outcome_hux[1, 1] <- ""
+n_sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+# Convert frequencies to probabilities
+p_sex_outcome <- sex_outcome / sex_outcome[3, 3]
+```
+
+(ref:berk2p-caption) Proportions based on Table \@ref(tab:berk1).
+
+```{r, echo=FALSE}
+p_sex_outcome_hux <- p_sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk2p") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(3) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("(ref:berk2p-caption)")
+  p_sex_outcome_hux[1, 1] <- ""
+p_sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+pn_sex_outcome <- p_sex_outcome
+pn_sex_outcome[1, ] <- c("P(M, A)", "P(M, R)", "P(M)")
+pn_sex_outcome[2, ] <- c("P(F, A)", "P(F, R)", "P(F)")
+pn_sex_outcome[3, ] <- c("P(A)", "P(R)", 1)
+```
+
+(ref:berk2np-caption) Notation for Table \@ref(tab:berk2p).
+
+```{r, echo=FALSE}
+pn_sex_outcome_hux <- pn_sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk2pn") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, everywhere, TRUE) %>%
+  set_italic(4, c(-1, -4), TRUE) %>%
+  set_caption("(ref:berk2np-caption)")
+  pn_sex_outcome_hux[1, 1] <- ""
+pn_sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+# Shade M row
+sex_outcome_hux <- sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk3n") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(2, everywhere, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Conditioning on applicant being male (frequencies).")
+  sex_outcome_hux[1, 1] <- ""
+sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+# Shade M row
+p_sex_outcome_hux <- p_sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk3p") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(2, everywhere, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(3) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Conditioning on applicant being male (probabilities).")
+  p_sex_outcome_hux[1, 1] <- ""
+p_sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+# Shade all but (R, F)
+sex_outcome_hux <- sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk4n") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(2, 2:3, grey(0.85)) %>%
+  set_background_color(3, 2, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Cells with M or A are shaded (frequencies).")
+  sex_outcome_hux[1, 1] <- ""
+sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+# Shade all but (R, F)
+p_sex_outcome_hux <- p_sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk4p") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(2, 2:3, grey(0.85)) %>%
+  set_background_color(3, 2, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(3) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Cells with M or A are shaded (probabilities).")
+  p_sex_outcome_hux[1, 1] <- ""
+p_sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+temp <- stat0002::blood_types
+col1 <- c(as.character(temp[1:4, 1]), "total")
+col2 <- c(temp[1:4, 3], sum(temp[1:4, 3]))
+col3 <- c(temp[5:8, 3], sum(temp[5:8, 3]))
+blood_ct <- data.frame("blood type" = col1, "Rh+" = col2, "Rh-" = col3,
+                       "total" = col2 + col3)
+colnames(blood_ct)[1:3] <- c("blood type", "Rh+", "Rh-") 
+blood_ABO <- blood_ct[-5, c(1, 4)]
+colnames(blood_ABO) <- c("ABO group", "percentage")
+blood_rhesus <- data.frame("Rhesus group" = colnames(blood_ct)[2:3], 
+                           "percentage" = as.numeric(blood_ct[5, 2:3]))
+colnames(blood_rhesus) <- c("Rhesus group", "percentage") 
+```
+
+```{r, echo=FALSE}
+blood_ABO_hux <- blood_ABO %>% 
+  as_hux() %>%
+  set_label("tab:bloodABO") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_caption("Distribution of ABO blood groups in the UK.")
+blood_ABO_hux    
+```
+
+```{r, echo=FALSE}
+blood_rhesus_hux <- blood_rhesus %>% 
+  as_hux() %>%
+  set_label("tab:bloodrhesus") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_caption("Distribution of Rhesus blood groups in the UK.")
+blood_rhesus_hux    
+```
+
+```{r, echo=FALSE}
+# Calculate marginal distributions for ABO and rhesus
+p_ABO <- blood_ct[, 4] / 100
+p_rhesus <- as.numeric(blood_ct[5, 2:3] / 100)
+blood_indep <- outer(p_rhesus, p_ABO)
+# Add column totals 
+blood_indep <- rbind(blood_indep, colSums(blood_indep))
+colnames(blood_indep) <- c(blood_ct[-5, 1], "total")
+rownames(blood_indep) <- c(colnames(blood_ct)[2:3], "total")
+# Remove some of the probabilities for the notes
+blood_indep[1, 1] <- ""
+blood_indep[1:2, 4] <- ""
+```
+
+```{r, echo=FALSE}
+blood_indep_hux <- blood_indep %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  add_colnames("") %>%
+  set_label("tab:bloodindep") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(c(2, 4), everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, c(1, 5), brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(3) %>%
+  set_caption("Distribution of Rhesus blood groups in the UK.")
+blood_indep_hux    
+```
+
+```{r, echo=FALSE}
+# Shade A column
+sex_outcome_hux <- sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk5n") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(everywhere, 2, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Conditioning on applicant being accepted (frequencies).")
+  sex_outcome_hux[1, 1] <- ""
+sex_outcome_hux    
+```
+
+```{r, echo=FALSE}
+# Shade A column
+p_sex_outcome_hux <- p_sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk5p") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(everywhere, 2, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(3) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Conditioning on applicant being accepted (probabilites).")
+  p_sex_outcome_hux[1, 1] <- ""
+p_sex_outcome_hux    
+```
+
+
+## Basic properties of probability
+
+## Conditional probability
+
+## Addition rule of probability
+
+## Multiplication rule of probability
+
+## Law of total probability
+
+## Bayes' theorem
+
+### An example of independence {#bloodindep}
+
