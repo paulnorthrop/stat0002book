@@ -569,7 +569,7 @@ The **complement** of an event $A$ is the event that $A$ does not occur.  This c
 and therefore
 \[ P(\mbox{not}A) = 1 - P(A). \]
 
-## Multiplication rule of probability
+## Multiplication rule of probability {#multrule}
 
 We continue with the Berkeley admissions data.  We have already calculated that $P(M , A)=0.265$.  Now we calculate this in a different way.
 
@@ -592,12 +592,12 @@ P(A , B) = P(B)\,P(A \mid B).
 (\#eq:mult)
 \end{equation}
 
-This can be generalized to the case of $n$ events to give
+This can be generalised to the case of $n$ events to give
 \begin{eqnarray}
 P(A_1, A_2,\ldots, A_{n-1}, A_n) &=&
 P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
 \end{eqnarray}
-provided that all the conditional probabilities are defined.  A sufficient (but not necessary) condition for this is $P(A_1, A_2, \ldots, A_{n-1}, A_n)>0$.
+provided that all the conditional probabilities are defined.  A sufficient (but not necessary) condition for this is $P(A_1, A_2, \ldots, A_{n-1}, A_n)>0$.  For example, $P(A_1, A_2, A_3)$ is the probability that events $A_1$, $A_2$ and $A_3$ all occur. 
 
 ## Independence of events {#indepevents}
 
@@ -625,7 +625,7 @@ For example, if $n = 3$ then we need
 that is, $(A_1, A_2, A_3)$ are pairwise independent, and 
 \[ P(A_{1} , A_{2} , A_{3}) = P(A_{1}) P(A_{2}) P(A_{3}). \]
 
-### An example of independence} {#bloodindep}
+### An example of independence {#bloodindep}
 
 The 2 most important systems for classifying human blood are the ABO system, with blood types  A, B, AB and O, and the Rhesus system, with blood types Rh+ and Rh-. In the ABO system an A (and/or B) indicates the presence of antigen A (and/or B) molecules on the red blood cells. These two systems are often combined to form 8 blood types A+, B+, AB+, O+, A--, B--, AB-- and O--. Knowledge of blood type is important when a patient needs a blood transfusion.Giving blood of the wrong type can cause harm: giving Rh+ blood to someone who is Rh-- will make that person ill, as will giving blood with a A or B antigens to someone without those antigens.  An AB+ person can receive blood from anyone, but an O-- person can only receive O- blood.
 
@@ -715,27 +715,6 @@ blood_indep_hux
 
 **Exercise**. Using equation \@ref(eq:indep), or otherwise, calculate the values that are missing from Table \@ref(tab:bloodindep).
 
-```{r, echo=FALSE}
-# Shade A column
-sex_outcome_hux <- sex_outcome %>% 
-  as_hux() %>%
-  add_rownames("") %>%
-  set_label("tab:berk5n") %>%
-  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
-  set_background_color(everywhere, everywhere, "white") %>%
-  set_background_color(everywhere, 2, grey(0.85)) %>%
-  set_width(0.7) %>% 
-  set_align(everywhere, everywhere, "center") %>% 
-  set_number_format(0) %>%
-  set_italic(1, -4, TRUE) %>%
-  set_italic(2:3, 1, TRUE) %>%
-  set_caption("Conditioning on applicant being accepted (frequencies).")
-  sex_outcome_hux[1, 1] <- ""
-sex_outcome_hux    
-```
-
 ## Law of total probability
 
 We continue with the Berkeley admissions data.  We have already calculated that $P(A)=0.388$. Now we calculate this in a different way.
@@ -765,6 +744,7 @@ P(A) &=& P(A , M) + P(A \, F), \\
 This is an example of the **law of total probability**.  The probability of event $A$ is expressed as a weighted average of the conditional probability of event $A$ given that $M$ has occurred, and the conditional probability of event $A$ given that $F$ has occurred.  Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.
 
 Note that 
+
 * $M$ and $F$ are mutually exclusive events.
 * $P(M \mbox{ or } F) = 1$, that is, together $M$ and $F$ make up the entire sample space of the possible values of sex.  This means that $M$ and $F$ are **exhaustive** events.
 
@@ -783,6 +763,35 @@ P(A) &=& P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
 Some books refer to the law of total probability as the **partition theorem**.  This is because events $B_1, \ldots, B_n$ that are both mutually exclusive and exhasutive are said to **partition** the sample space, that is, they split the sample space into $n$ disjoint parts.
 
 ## Bayes' theorem
+
+We continue with the Berkeley admissions data.  We have already calculated that $P(A \mid M) = 0.445$.  Now we calculate $P(M \mid A)$.  It is important that you understand the difference between these two probabilities.  
+
+$P(A \mid M)$ is the probability of acceptance given that the applicant is male; in other words, the probability that a male applicant is accepted.  We calculated that $P(A \mid M)=0.445$ using the $M$ row of Table \@ref(tab:berk3n) (or Table \@ref(tab:berk3p)), that is, by conditioning on the event $M$.
+
+$P(M \ldots A)$ is the probability that the applicant is male given that they are accepted; in other words, the probability that an accepted applicant is male.
+
+**Exercise**.  Use Table \@ref(tab:berk5n) or Table \@ref(tab:berk5p) to show that $P(M \mid A) = 0.683$.
+
+```{r, echo=FALSE}
+# Shade A column
+sex_outcome_hux <- sex_outcome %>% 
+  as_hux() %>%
+  add_rownames("") %>%
+  set_label("tab:berk5n") %>%
+  set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_background_color(everywhere, everywhere, "white") %>%
+  set_background_color(everywhere, 2, grey(0.85)) %>%
+  set_width(0.7) %>% 
+  set_align(everywhere, everywhere, "center") %>% 
+  set_number_format(0) %>%
+  set_italic(1, -4, TRUE) %>%
+  set_italic(2:3, 1, TRUE) %>%
+  set_caption("Conditioning on applicant being accepted (frequencies).")
+  sex_outcome_hux[1, 1] <- ""
+sex_outcome_hux    
+```
 
 ```{r, echo=FALSE}
 # Shade A column
@@ -804,3 +813,57 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   p_sex_outcome_hux[1, 1] <- ""
 p_sex_outcome_hux    
 ```
+
+Now we calculate $P(M \mid A)$ in a different way. If you used table \@ref(tab:berk5p) to calculate $P(M \mid A)$ you used the equation
+\begin{equation}
+P(M \mid A) = \frac{P(M , A)}{P(A)}. 
+(\#eq:bayes1)
+\end{equation}
+The multiplication rule in Section \@ref(multrule) gives
+\begin{equation}
+P(M , A) = P(A~|~M)\,P(M). 
+(\#eq:bayes2)
+\end{equation}
+Substituting \@ref(eq:bayes1) into \@ref(eq:bayes2) gives
+\begin{equation}
+P(M \mid A) = \frac{P(A \mid M)\,P(M)}{P(A)}. 
+(\#eq:bayes3)
+\end{equation}
+Equation \@ref(eq:bayes3) is an example of Bayes' theorem, which was first derived in a paper presented to the Royal Society in 1763 by Richard Price on behalf of the late Reverend Thomas Bayes.
+
+In this example we can either calculate $P(A)$ using the law of total probability:
+\[ P(A) = P(A \mid M)\,P(M) + P(A \mid F)\,P(F), \]
+or calculate $P(A)$ directly from the table.
+
+**Bayes' theorem**.  Let $B_1, \ldots, B_n$ be mutually exclusive, exhaustive events, with $P(B_i) > 0$ for all $i$.  Let $A$ be an event with $P(A) > 0$.  Then
+\begin{eqnarray}
+P(B_i \mid A) &=& \frac{P(A \mid B_i)\,P(B_i)}{P(A)}, \\ 
+&=& \frac{P(A \mid B_i)\,P(B_i)}{P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n)}, \\
+          &=& \frac{P(A \mid B_i)\,P(B_i)}{\displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i)}.
+\end{eqnarray}
+The proof of Bayes' theorem is a straightforward extension of the case with $n=2$ considered in the Berkeley admissions example above.
+
+#### Conditioning on more than one event {-}
+
+$P(A \mid B)$ is the conditional probability that event $A$ occurs given that event $B$ has occurred. We can extend this idea to condition on more than one event.
+
+For example, $P(A \mid B , C)$, or $P(A \mid B \mbox{ and } C)$, or $P(A \mid B \cap C)$ is the conditional probability that event $A$ occurs given that **both** events $B$ and $C$ have occurred.  The general principle is that we have conditioned on all events that are placed on the right hand side of the conditional $\mid$ symbol. All the results that we have seen can be extended to probabilities conditioned on more than one event.  
+
+For example, for $P(B, C)>0$,
+\[ P(A \mid B, C) = \frac{P(A , B~|~C)}{P(B~|~C)} \qquad \mbox{(definition of conditional probability)}, \]
+
+and if, in addition, $P(A, C)>0$
+\[ P(A \mid B, C) = \frac{P(B \mid A, C)\,P(A \mid C)}{P(B \mid C)} \qquad \mbox{(Bayes' theorem)}. \]
+
+In each of these equations, if you ignore the event $C$ then you will see familiar equations.  The general idea is that definition of conditional probability and Bayes' theorem continue to hold if we condition all probabilities on the event $C$, provided that all the conditional probabilities involved are valid.
+
+Alternatively, noting that we could reverse the roles of $B$ and $C$,
+\[ P(A \mid C, B) = \frac{P(A , C \mid B)}{P(C \mid B)} \qquad \mbox{(definition of conditional probability)}, \]
+\[ P(A \mid C, B) = \frac{P(C \mid A, B)\,P(A \mid B)}{P(C \mid B)} \qquad \mbox{(Bayes' theorem)}. \]
+These four expressions give different ways to express the probability $P(A \mid C, B)$.  You will be able to find other ways to express this probability.  For example,  
+\[ P(A \mid B,C) = \frac{P(A, B, C)}{P(B, C)}. \] 
+**Exercise**.  Why this true?
+
+#### Misleading statistical evidence in cot death trials (continued) {-}
+
+We will return to this example and use Bayes' theorem to calculate the probability that Sally Clark was innocent given (only) the statistical evidence presented at her trial.  We will make some assumptions that we know are unrealistic, but the general approach that we take will illustrate the importance of using sound probabilistic reasoning. 

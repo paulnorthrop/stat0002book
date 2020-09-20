@@ -121,9 +121,9 @@
 <li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a><ul>
 <li class="chapter" data-level="3.5.1" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>3.5.1</b> Mutually exclusive events</a></li>
 </ul></li>
-<li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multiplication-rule-of-probability"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
+<li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multrule"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
 <li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a><ul>
-<li class="chapter" data-level="3.7.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.7.1</b> An example of independence}</a></li>
+<li class="chapter" data-level="3.7.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.7.1</b> An example of independence</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.8</b> Law of total probability</a></li>
 <li class="chapter" data-level="3.9" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.9</b> Bayes’ theorem</a></li>
@@ -535,7 +535,7 @@ and therefore
 </div>
 </div>
 </div>
-<div id="multiplication-rule-of-probability" class="section level2">
+<div id="multrule" class="section level2">
 <h2><span class="header-section-number">3.6</span> Multiplication rule of probability</h2>
 <p>We continue with the Berkeley admissions data. We have already calculated that <span class="math inline">\(P(M , A)=0.265\)</span>. Now we calculate this in a different way.</p>
 <p>Think about the process of applying for a place at university. First an applicant makes an application. Then the university decides whether to accept or reject. To have the event <span class="math inline">\((M, A)\)</span> we first need a male applicant to apply and then for the university to accept them.</p>
@@ -553,12 +553,12 @@ Firstly, we calculate the proportion of applicants who are male, and then the pr
 P(A , B) = P(B)\,P(A \mid B).  
 \tag{3.7}
 \end{equation}\]</span></p>
-<p>This can be generalized to the case of <span class="math inline">\(n\)</span> events to give
+<p>This can be generalised to the case of <span class="math inline">\(n\)</span> events to give
 <span class="math display">\[\begin{eqnarray}
 P(A_1, A_2,\ldots, A_{n-1}, A_n) &amp;=&amp;
 P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
 \end{eqnarray}\]</span>
-provided that all the conditional probabilities are defined. A sufficient (but not necessary) condition for this is <span class="math inline">\(P(A_1, A_2, \ldots, A_{n-1}, A_n)&gt;0\)</span>.</p>
+provided that all the conditional probabilities are defined. A sufficient (but not necessary) condition for this is <span class="math inline">\(P(A_1, A_2, \ldots, A_{n-1}, A_n)&gt;0\)</span>. For example, <span class="math inline">\(P(A_1, A_2, A_3)\)</span> is the probability that events <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> and <span class="math inline">\(A_3\)</span> all occur.</p>
 </div>
 <div id="indepevents" class="section level2">
 <h2><span class="header-section-number">3.7</span> Independence of events</h2>
@@ -586,7 +586,7 @@ that is, <span class="math inline">\((A_1, A_2, A_3)\)</span> are pairwise indep
 <span class="math display">\[ P(A_{1} , A_{2} , A_{3}) = P(A_{1}) P(A_{2}) P(A_{3}). \]</span></li>
 </ol>
 <div id="bloodindep" class="section level3">
-<h3><span class="header-section-number">3.7.1</span> An example of independence}</h3>
+<h3><span class="header-section-number">3.7.1</span> An example of independence</h3>
 <p>The 2 most important systems for classifying human blood are the ABO system, with blood types A, B, AB and O, and the Rhesus system, with blood types Rh+ and Rh-. In the ABO system an A (and/or B) indicates the presence of antigen A (and/or B) molecules on the red blood cells. These two systems are often combined to form 8 blood types A+, B+, AB+, O+, A–, B–, AB– and O–. Knowledge of blood type is important when a patient needs a blood transfusion.Giving blood of the wrong type can cause harm: giving Rh+ blood to someone who is Rh– will make that person ill, as will giving blood with a A or B antigens to someone without those antigens. An AB+ person can receive blood from anyone, but an O– person can only receive O- blood.</p>
 <p>The proportions of blood types varies between countries. In the UK the percentages for the ABO system are estimated to be equal to those in Table <a href="probability.html#tab:bloodABO">3.11</a>. Table <a href="probability.html#tab:bloodrhesus">3.12</a> gives the percentages for the Rhesus system.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:bloodABO">
@@ -626,17 +626,6 @@ that is, <span class="math inline">\((A_1, A_2, A_3)\)</span> are pairwise indep
 </table>
 
 <p><strong>Exercise</strong>. Using equation <a href="probability.html#eq:indep">(3.8)</a>, or otherwise, calculate the values that are missing from Table <a href="probability.html#tab:bloodindep">3.13</a>.</p>
-<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk5n">
-<caption style="caption-side: top; text-align: center;"><span id="tab:berk5n">Table 3.14: </span> Conditioning on applicant being accepted (frequencies).</caption><col><col><col><col><tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
-<tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">M</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">1198</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1493</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 2pt 2pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2691</td></tr>
-<tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">F</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">557</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1278</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 2pt 2pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1835</td></tr>
-<tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">1755</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2771</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">4526</td></tr>
-</table>
-
 </div>
 </div>
 <div id="law-of-total-probability" class="section level2">
@@ -663,9 +652,11 @@ P(A) &amp;=&amp; P(A , M) + P(A \, F), \\
      &amp;=&amp; 0.388.
 \end{eqnarray}\]</span>
 This is an example of the <strong>law of total probability</strong>. The probability of event <span class="math inline">\(A\)</span> is expressed as a weighted average of the conditional probability of event <span class="math inline">\(A\)</span> given that <span class="math inline">\(M\)</span> has occurred, and the conditional probability of event <span class="math inline">\(A\)</span> given that <span class="math inline">\(F\)</span> has occurred. Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.</p>
-<p>Note that
-* <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> are mutually exclusive events.
-* <span class="math inline">\(P(M \mbox{ or } F) = 1\)</span>, that is, together <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> make up the entire sample space of the possible values of sex. This means that <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> are <strong>exhaustive</strong> events.</p>
+<p>Note that</p>
+<ul>
+<li><span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> are mutually exclusive events.</li>
+<li><span class="math inline">\(P(M \mbox{ or } F) = 1\)</span>, that is, together <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> make up the entire sample space of the possible values of sex. This means that <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> are <strong>exhaustive</strong> events.</li>
+</ul>
 <p><strong>Definition</strong>. <strong>The law of total probability</strong>. Let events <span class="math inline">\(B_1,\ldots,B_n\)</span> be</p>
 <ul>
 <li>possible, i.e. <span class="math inline">\(P(B_i) &gt; 0\)</span>, for <span class="math inline">\(i = 1, \ldots, n\)</span>,</li>
@@ -681,6 +672,21 @@ P(A) &amp;=&amp; P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
 </div>
 <div id="bayes-theorem" class="section level2">
 <h2><span class="header-section-number">3.9</span> Bayes’ theorem</h2>
+<p>We continue with the Berkeley admissions data. We have already calculated that <span class="math inline">\(P(A \mid M) = 0.445\)</span>. Now we calculate <span class="math inline">\(P(M \mid A)\)</span>. It is important that you understand the difference between these two probabilities.</p>
+<p><span class="math inline">\(P(A \mid M)\)</span> is the probability of acceptance given that the applicant is male; in other words, the probability that a male applicant is accepted. We calculated that <span class="math inline">\(P(A \mid M)=0.445\)</span> using the <span class="math inline">\(M\)</span> row of Table <a href="probability.html#tab:berk3n">3.7</a> (or Table <a href="probability.html#tab:berk3p">3.8</a>), that is, by conditioning on the event <span class="math inline">\(M\)</span>.</p>
+<p><span class="math inline">\(P(M \ldots A)\)</span> is the probability that the applicant is male given that they are accepted; in other words, the probability that an accepted applicant is male.</p>
+<p><strong>Exercise</strong>. Use Table <a href="probability.html#tab:berk5n">3.14</a> or Table <a href="probability.html#tab:berk5p">3.15</a> to show that <span class="math inline">\(P(M \mid A) = 0.683\)</span>.</p>
+<table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk5n">
+<caption style="caption-side: top; text-align: center;"><span id="tab:berk5n">Table 3.14: </span> Conditioning on applicant being accepted (frequencies).</caption><col><col><col><col><tr>
+<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">M</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">1198</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1493</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 2pt 2pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2691</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">F</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">557</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 2pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1278</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 2pt 2pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1835</td></tr>
+<tr>
+<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">1755</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2771</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">4526</td></tr>
+</table>
+
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk5p">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk5p">Table 3.15: </span> Conditioning on applicant being accepted (probabilites).</caption><col><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
@@ -692,7 +698,53 @@ P(A) &amp;=&amp; P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">0.388</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.612</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1.000</td></tr>
 </table>
 
+<p>Now we calculate <span class="math inline">\(P(M \mid A)\)</span> in a different way. If you used table <a href="probability.html#tab:berk5p">3.15</a> to calculate <span class="math inline">\(P(M \mid A)\)</span> you used the equation
+<span class="math display" id="eq:bayes1">\[\begin{equation}
+P(M \mid A) = \frac{P(M , A)}{P(A)}. 
+\tag{3.10}
+\end{equation}\]</span>
+The multiplication rule in Section <a href="probability.html#multrule">3.6</a> gives
+<span class="math display" id="eq:bayes2">\[\begin{equation}
+P(M , A) = P(A~|~M)\,P(M). 
+\tag{3.11}
+\end{equation}\]</span>
+Substituting <a href="probability.html#eq:bayes1">(3.10)</a> into <a href="probability.html#eq:bayes2">(3.11)</a> gives
+<span class="math display" id="eq:bayes3">\[\begin{equation}
+P(M \mid A) = \frac{P(A \mid M)\,P(M)}{P(A)}. 
+\tag{3.12}
+\end{equation}\]</span>
+Equation <a href="probability.html#eq:bayes3">(3.12)</a> is an example of Bayes’ theorem, which was first derived in a paper presented to the Royal Society in 1763 by Richard Price on behalf of the late Reverend Thomas Bayes.</p>
+<p>In this example we can either calculate <span class="math inline">\(P(A)\)</span> using the law of total probability:
+<span class="math display">\[ P(A) = P(A \mid M)\,P(M) + P(A \mid F)\,P(F), \]</span>
+or calculate <span class="math inline">\(P(A)\)</span> directly from the table.</p>
+<p><strong>Bayes’ theorem</strong>. Let <span class="math inline">\(B_1, \ldots, B_n\)</span> be mutually exclusive, exhaustive events, with <span class="math inline">\(P(B_i) &gt; 0\)</span> for all <span class="math inline">\(i\)</span>. Let <span class="math inline">\(A\)</span> be an event with <span class="math inline">\(P(A) &gt; 0\)</span>. Then
+<span class="math display">\[\begin{eqnarray}
+P(B_i \mid A) &amp;=&amp; \frac{P(A \mid B_i)\,P(B_i)}{P(A)}, \\ 
+&amp;=&amp; \frac{P(A \mid B_i)\,P(B_i)}{P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n)}, \\
+          &amp;=&amp; \frac{P(A \mid B_i)\,P(B_i)}{\displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i)}.
+\end{eqnarray}\]</span>
+The proof of Bayes’ theorem is a straightforward extension of the case with <span class="math inline">\(n=2\)</span> considered in the Berkeley admissions example above.</p>
+<div id="conditioning-on-more-than-one-event" class="section level4 unnumbered">
+<h4>Conditioning on more than one event</h4>
+<p><span class="math inline">\(P(A \mid B)\)</span> is the conditional probability that event <span class="math inline">\(A\)</span> occurs given that event <span class="math inline">\(B\)</span> has occurred. We can extend this idea to condition on more than one event.</p>
+<p>For example, <span class="math inline">\(P(A \mid B , C)\)</span>, or <span class="math inline">\(P(A \mid B \mbox{ and } C)\)</span>, or <span class="math inline">\(P(A \mid B \cap C)\)</span> is the conditional probability that event <span class="math inline">\(A\)</span> occurs given that <strong>both</strong> events <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> have occurred. The general principle is that we have conditioned on all events that are placed on the right hand side of the conditional <span class="math inline">\(\mid\)</span> symbol. All the results that we have seen can be extended to probabilities conditioned on more than one event.</p>
+<p>For example, for <span class="math inline">\(P(B, C)&gt;0\)</span>,
+<span class="math display">\[ P(A \mid B, C) = \frac{P(A , B~|~C)}{P(B~|~C)} \qquad \mbox{(definition of conditional probability)}, \]</span></p>
+<p>and if, in addition, <span class="math inline">\(P(A, C)&gt;0\)</span>
+<span class="math display">\[ P(A \mid B, C) = \frac{P(B \mid A, C)\,P(A \mid C)}{P(B \mid C)} \qquad \mbox{(Bayes&#39; theorem)}. \]</span></p>
+<p>In each of these equations, if you ignore the event <span class="math inline">\(C\)</span> then you will see familiar equations. The general idea is that definition of conditional probability and Bayes’ theorem continue to hold if we condition all probabilities on the event <span class="math inline">\(C\)</span>, provided that all the conditional probabilities involved are valid.</p>
+<p>Alternatively, noting that we could reverse the roles of <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span>,
+<span class="math display">\[ P(A \mid C, B) = \frac{P(A , C \mid B)}{P(C \mid B)} \qquad \mbox{(definition of conditional probability)}, \]</span>
+<span class="math display">\[ P(A \mid C, B) = \frac{P(C \mid A, B)\,P(A \mid B)}{P(C \mid B)} \qquad \mbox{(Bayes&#39; theorem)}. \]</span>
+These four expressions give different ways to express the probability <span class="math inline">\(P(A \mid C, B)\)</span>. You will be able to find other ways to express this probability. For example,<br />
+<span class="math display">\[ P(A \mid B,C) = \frac{P(A, B, C)}{P(B, C)}. \]</span>
+<strong>Exercise</strong>. Why this true?</p>
+</div>
+<div id="misleading-statistical-evidence-in-cot-death-trials-continued" class="section level4 unnumbered">
+<h4>Misleading statistical evidence in cot death trials (continued)</h4>
+<p>We will return to this example and use Bayes’ theorem to calculate the probability that Sally Clark was innocent given (only) the statistical evidence presented at her trial. We will make some assumptions that we know are unrealistic, but the general approach that we take will illustrate the importance of using sound probabilistic reasoning.</p>
 
+</div>
 </div>
 </div>
 <h3>References</h3>
