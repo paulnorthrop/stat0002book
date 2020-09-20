@@ -736,6 +736,11 @@ sex_outcome_hux <- sex_outcome %>%
 sex_outcome_hux    
 ```
 
+## Law of total probability
+
+
+## Bayes' theorem
+
 ```{r, echo=FALSE}
 # Shade A column
 p_sex_outcome_hux <- p_sex_outcome %>% 
@@ -756,16 +761,3 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   p_sex_outcome_hux[1, 1] <- ""
 p_sex_outcome_hux    
 ```
-
-
-
-
-
-
-
-## Law of total probability
-
-## Bayes' theorem
-
-### An example of independence {#bloodindep}
-
