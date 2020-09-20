@@ -457,6 +457,17 @@ Remarks:
 * Equation \@ref(eq:conditional) implies that $P(A , B) = P(A \mid B)\,P(B)$.
 * For any event $A$, $P(A \mid B)$ is a probability in which the sample space has been reduced to outcomes containing the event $B$.  Therefore, **all** properties of probabilities also hold for conditional probabilities, e.g. $0 \leq P(A~|~B) \leq 1$.
 
+#### Dependence and Independence {-}
+
+We return to the Berkeley example.  We have found that
+\[ P(A \mid M) = 0.445 \qquad \mbox{and} \qquad P(A~|~F) = 0.304. \]
+From Table \@ref(tab:berk2p) we find that
+\[ P(A) = 0.388. \]
+Therefore, the probability of acceptance depends on the sex of the applicant:
+\[ P(A \mid M) > P(A) \qquad \mbox{and} \qquad P(A \mid F) < P(A). \]
+The probability $P(A \mid M)$ of being accepted for a randomly selected male is greater than the unconditional probability $P(A)$.  Therefore, the occurrence of event $M$ has affected the probability that event $A$ occurs. This means that the events $A$ and $M$ are **dependent**.
+
+Similarly, $P(A \mid F) < P(A)$ means that the events $A$ and $F$ are **dependent**.
 
 ```{r, echo=FALSE}
 # Shade all but (R, F)
