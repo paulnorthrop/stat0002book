@@ -355,7 +355,7 @@ The `<span class="math inline">\(\mid\)</span>’ sign means <strong>“conditio
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">n(A)</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">n(R)</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">n</td></tr>
 </table>
 
-<p>If we divide each of the numbers in table <a href="probability.html#tab:berk1">3.3</a> by the total number of applications (<span class="math inline">\(n\)</span> = 4526) then we obtain the proportions of applicants in each of the four categories. These proportions are given (to 3 decimal places) in Table <a href="probability.html#tab:berk2p">3.5</a>.</p>
+<p>If we divide each of the numbers in Table <a href="probability.html#tab:berk1">3.3</a> by the total number of applications (<span class="math inline">\(n\)</span> = 4526) then we obtain the proportions of applicants in each of the four categories. These proportions are given (to 3 decimal places) in Table <a href="probability.html#tab:berk2p">3.5</a>.</p>
 
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk2p">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk2p">Table 3.5: </span> Proportions based on Table <a href="probability.html#tab:berk1">3.3</a>.</caption><col><col><col><col><tr>
@@ -437,8 +437,8 @@ P(A \mid M) = \frac{P(A, M)}{P(M)} = \frac{1198/4526}{2691/4526} = 0.445. \tag{3
 Instead of using the frequencies in the shaded <span class="math inline">\(M\)</span> row, we have used the probabilities. We get exactly the same answer because the probabilities are simply the frequencies divided by 4526.</p>
 <p><strong>Exercise</strong>. Show that <span class="math inline">\(P(A \mid F)=0.304\)</span>.</p>
 <p><strong>Exercise</strong>. Find <span class="math inline">\(P(R \mid M)\)</span> and <span class="math inline">\(P(R \mid F)\)</span>. What do you notice about <span class="math inline">\(P(A \mid M)\)</span> and <span class="math inline">\(P(R \mid M)\)</span>?}</p>
-<p>The calculation of <span class="math inline">\(P(A~|~M)\)</span> in equation <a href="probability.html#eq:freqs">(3.2)</a> based on the frequencies in table <a href="probability.html#tab:berk3n">3.7</a> should make sense to you. From the equivalent calculation in equation <a href="probability.html#eq:probs">(3.3)</a> we can see that the following definition of conditional probability makes sense.</p>
-<p><strong>Definition</strong>: If <span class="math inline">\(B\)</span> is an event with <span class="math inline">\(P(B) &gt; 0\)</span>, then for each event <span class="math inline">\(A\)</span>, the <strong>conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span></strong> is
+<p>The calculation of <span class="math inline">\(P(A~|~M)\)</span> in equation <a href="probability.html#eq:freqs">(3.2)</a> based on the frequencies in Table <a href="probability.html#tab:berk3n">3.7</a> should make sense to you. From the equivalent calculation in equation <a href="probability.html#eq:probs">(3.3)</a> we can see that the following definition of conditional probability makes sense.</p>
+<p><strong>Definition</strong>. If <span class="math inline">\(B\)</span> is an event with <span class="math inline">\(P(B) &gt; 0\)</span>, then for each event <span class="math inline">\(A\)</span>, the <strong>conditional probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span></strong> is
 <span class="math display" id="eq:conditional">\[\begin{equation}
 P(A \mid B)=\frac{P(A , B)}{P(B)}.
 \tag{3.4}
@@ -512,7 +512,7 @@ P(M \mbox{ or } A) &amp;=&amp; P(M \mbox{ and } A) + P(M \mbox{ and }R) + P(F \m
 <p>Similarly,
 <span class="math display">\[ P(M \mbox{ or } A) = P(M) + P(A) - P(M \mbox{ and } A) = 0.595 + 0.388 - 0.265 = 0.718. \]</span></p>
 <p>From this example we can see that following rule makes sense.</p>
-<p><strong>Definition</strong>: For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
+<p><strong>Definition</strong>. For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
 <span class="math display" id="eq:ordef">\[\begin{equation}
 P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B). 
 \tag{3.5}
@@ -532,6 +532,59 @@ You can only use this equation in the <strong>special case</strong> where events
 <span class="math display">\[ P(S)=P(A \mbox{ or } \mbox{not}A) = P(A) + P(\mbox{not}A) = 1. \]</span>
 and therefore
 <span class="math display">\[ P(\mbox{not}A) = 1 - P(A). \]</span></p>
+</div>
+</div>
+</div>
+<div id="multiplication-rule-of-probability" class="section level2">
+<h2><span class="header-section-number">3.6</span> Multiplication rule of probability</h2>
+<p>We continue with the Berkeley admissions data. We have already calculated that <span class="math inline">\(P(M , A)=0.265\)</span>. Now we calculate this in a different way.</p>
+<p>Think about the process of applying for a place at university. First an applicant makes an application. Then the university decides whether to accept or reject. To have the event <span class="math inline">\((M, A)\)</span> we first need a male applicant to apply and then for the university to accept them.</p>
+<p>The calculation we performed above was
+<span class="math display">\[ P(M , A) = \frac{n(M , A)}{n}. \]</span>
+Assuming that <span class="math inline">\(n(M)&gt;0\)</span>, that is, <span class="math inline">\(P(M)&gt;0\)</span>, we can rewrite this as
+<span class="math display">\[ P(M , A) = \frac{n(M)}{n} \times \frac{n(M , A)}{n(M)} = \frac{n(M)}{n} \times \frac{n(A , M)}{n(M)}, \]</span>
+or
+<span class="math display">\[ P(M , A) = P(M) \times P(A \mid M). \]</span>
+Firstly, we calculate the proportion of applicants who are male, and then the proportion of those male applicants who are accepted. Multiplying these proportions gives the overall proportion of applicants who are both male and accepted.</p>
+<p>This also follows directly on rearrangement of the definition,
+<span class="math display">\[ P(A \mid M) = \frac{P(M , A)}{P(M)}. \]</span></p>
+<p><strong>Definition</strong>. Consider two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with <span class="math inline">\(P(B)&gt;0\)</span>. Rearranging the definition of conditional probability <a href="probability.html#eq:conditional">(3.4)</a> gives
+<span class="math display" id="eq:mult">\[\begin{equation}
+P(A , B) = P(B)\,P(A \mid B).  
+\tag{3.7}
+\end{equation}\]</span></p>
+<p>This can be generalized to the case of <span class="math inline">\(n\)</span> events to give
+<span class="math display">\[\begin{eqnarray}
+P(A_1, A_2,\ldots, A_{n-1}, A_n) &amp;=&amp;
+P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
+\end{eqnarray}\]</span>
+provided that all the conditional probabilities are defined. A sufficient (but not necessary) condition for this is <span class="math inline">\(P(A_1, A_2, \ldots, A_{n-1}, A_n)&gt;0\)</span>.</p>
+</div>
+<div id="indepevents" class="section level2">
+<h2><span class="header-section-number">3.7</span> Independence of events</h2>
+<p><strong>Definition</strong>. Two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>independent</strong>
+<span class="math display" id="eq:indep">\[\begin{equation}
+P(A , B) = P(A) \,P(B).  
+\tag{3.8}
+\end{equation}\]</span>
+Otherwise <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are dependent events.</p>
+<p>Remarks:</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(P(A) &gt; 0\)</span> and <span class="math inline">\(P(B) &gt; 0\)</span>, then independence of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> implies
+<span class="math display">\[ P(A \mid B) = \frac{P(A , B)}{P(B)} = \frac{P(A)\,P(B)}{P(B)} = P(A) \]</span>
+and similarly <span class="math inline">\(P(B~|~A)=P(B)\)</span>.</li>
+<li>The definition applies for events that have zero probability. For example, suppose that <span class="math inline">\(P(A)&gt;0\)</span> and <span class="math inline">\(P(B)=0\)</span>. Then <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent because
+<span class="math display">\[ P(A , B) = 0 = P(A)\,P(B). \]</span></li>
+<li>The definition is symmetric in <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. If <span class="math inline">\(A\)</span> is independent of <span class="math inline">\(B\)</span>, then <span class="math inline">\(B\)</span> is independent of <span class="math inline">\(A\)</span>.</li>
+<li>Notation: the notation <span class="math inline">\(A \perp \!\!\! \perp B\)</span> can be used for “<span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent”.</li>
+<li>The definition of independence can be extended to more than two events.
+<span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> are (mutually) independent if, for <span class="math inline">\(r \in \{2, \ldots, n\}\)</span>, for any subset <span class="math inline">\(\{ C_1, \ldots, C_r \}\)</span> of <span class="math inline">\(\{ A_1, \ldots, A_n\}\)</span> we have
+<span class="math display">\[ P(C_{1} , C_{2} , \cdots C_{r}) = P(C_{1}) P(C_{2}) \cdots P(C_{r}). \]</span>
+For example, if <span class="math inline">\(n = 3\)</span> then we need
+<span class="math display">\[ P(A_{1} , A_{2}) = P(A_1) P(A_2), \,\, P(A_{1} , A_{3}) = P(A_1) P(A_3), \,\, P(A_{2} , A_{3}) = P(A_2) P(A_3) \]</span>
+that is, <span class="math inline">\((A_1, A_2, A_3)\)</span> are pairwise independent, and
+<span class="math display">\[ P(A_{1} , A_{2} , A_{3}) = P(A_{1}) P(A_{2}) P(A_{3}). \]</span></li>
+</ol>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:bloodABO">
 <caption style="caption-side: top; text-align: center;"><span id="tab:bloodABO">Table 3.11: </span> Distribution of ABO blood groups in the UK.</caption><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">ABO group</th><th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">percentage</th></tr>
@@ -587,14 +640,6 @@ and therefore
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">0.388</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.612</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1.000</td></tr>
 </table>
 
-</div>
-</div>
-</div>
-<div id="multiplication-rule-of-probability" class="section level2">
-<h2><span class="header-section-number">3.6</span> Multiplication rule of probability</h2>
-</div>
-<div id="indepevents" class="section level2">
-<h2><span class="header-section-number">3.7</span> Independence of events</h2>
 </div>
 <div id="law-of-total-probability" class="section level2">
 <h2><span class="header-section-number">3.8</span> Law of total probability</h2>

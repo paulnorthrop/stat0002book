@@ -287,7 +287,7 @@ n_sex_outcome_hux <- n_sex_outcome %>%
 n_sex_outcome_hux    
 ```
 
-If we divide each of the numbers in table \@ref(tab:berk1) by the total number of applications ($n$ = 4526) then we obtain the proportions of applicants in each of the four categories.  These proportions are given (to 3 decimal places) in Table \@ref(tab:berk2p). 
+If we divide each of the numbers in Table \@ref(tab:berk1) by the total number of applications ($n$ = 4526) then we obtain the proportions of applicants in each of the four categories.  These proportions are given (to 3 decimal places) in Table \@ref(tab:berk2p). 
 
 ```{r, echo=FALSE}
 # Convert frequencies to probabilities
@@ -435,9 +435,9 @@ Instead of using the frequencies in the shaded $M$ row, we have used the probabi
 
 **Exercise**. Find $P(R \mid M)$ and $P(R \mid F)$.  What do you notice about $P(A \mid M)$ and $P(R \mid M)$?}
 
-The calculation of $P(A~|~M)$ in equation \@ref(eq:freqs) based on the frequencies in table \@ref(tab:berk3n) should make sense to you. From the equivalent calculation in equation \@ref(eq:probs) we can see that the following definition of conditional probability makes sense.
+The calculation of $P(A~|~M)$ in equation \@ref(eq:freqs) based on the frequencies in Table \@ref(tab:berk3n) should make sense to you. From the equivalent calculation in equation \@ref(eq:probs) we can see that the following definition of conditional probability makes sense.
 
-**Definition**:  If $B$ is an event with $P(B) > 0$, then for each event $A$, the **conditional probability of $A$ given $B$** is
+**Definition**.  If $B$ is an event with $P(B) > 0$, then for each event $A$, the **conditional probability of $A$ given $B$** is
 \begin{equation}
 P(A \mid B)=\frac{P(A , B)}{P(B)}.
 (\#eq:conditional)
@@ -545,7 +545,7 @@ Similarly,
 
 From this example we can see that following rule makes sense.
 
-**Definition**: For any two events $A$ and $B$ 
+**Definition**. For any two events $A$ and $B$ 
 \begin{equation}
 P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B). 
 (\#eq:ordef)
@@ -571,6 +571,59 @@ and therefore
 
 ## Multiplication rule of probability
 
+We continue with the Berkeley admissions data.  We have already calculated that $P(M , A)=0.265$.  Now we calculate this in a different way.
+
+Think about the process of applying for a place at university.  First an applicant makes an application. Then the university decides whether to accept or reject.  To have the event $(M, A)$ we first need a male applicant to apply and then for the university to accept them. 
+
+The calculation we performed above was
+\[ P(M , A) = \frac{n(M , A)}{n}. \]
+Assuming that $n(M)>0$, that is, $P(M)>0$, we can rewrite this as
+\[ P(M , A) = \frac{n(M)}{n} \times \frac{n(M , A)}{n(M)} = \frac{n(M)}{n} \times \frac{n(A , M)}{n(M)}, \]
+or
+\[ P(M , A) = P(M) \times P(A \mid M). \]
+Firstly, we calculate the proportion of applicants who are male, and then the proportion of those male applicants who are accepted.  Multiplying these proportions gives the overall proportion of applicants who are both male and accepted.
+
+This also follows directly on rearrangement of the definition, 
+\[ P(A \mid M) = \frac{P(M , A)}{P(M)}. \]
+
+**Definition**. Consider two events $A$ and $B$ with $P(B)>0$.  Rearranging the definition of conditional probability \@ref(eq:conditional) gives
+\begin{equation}
+P(A , B) = P(B)\,P(A \mid B).  
+(\#eq:mult)
+\end{equation}
+
+This can be generalized to the case of $n$ events to give
+\begin{eqnarray}
+P(A_1, A_2,\ldots, A_{n-1}, A_n) &=&
+P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
+\end{eqnarray}
+provided that all the conditional probabilities are defined.  A sufficient (but not necessary) condition for this is $P(A_1, A_2, \ldots, A_{n-1}, A_n)>0$.
+
+## Independence of events {#indepevents}
+
+**Definition**. Two events $A$ and $B$ are **independent**
+\begin{equation}
+P(A , B) = P(A) \,P(B).  
+(\#eq:indep)
+\end{equation}
+Otherwise $A$ and $B$ are dependent events.
+
+Remarks:
+
+1. If $P(A) > 0$ and $P(B) > 0$, then independence of $A$ and $B$ implies
+\[ P(A \mid B) = \frac{P(A , B)}{P(B)} = \frac{P(A)\,P(B)}{P(B)} = P(A) \]
+and similarly $P(B~|~A)=P(B)$.
+2. The definition applies for events that have zero probability.  For example, suppose that $P(A)>0$ and $P(B)=0$.  Then $A$ and $B$ are independent because
+\[ P(A , B) = 0 = P(A)\,P(B). \]
+3. The definition is symmetric in $A$ and $B$. If $A$ is independent of $B$, then $B$ is independent of $A$.
+4. Notation: the notation $A \perp \!\!\! \perp B$ can be used for "$A$ and $B$ are independent".
+5. The definition of independence can  be extended to more than two events.
+$A_1, A_2, \ldots, A_n$ are (mutually) independent if, for $r \in \{2, \ldots, n\}$, for any subset $\{ C_1, \ldots, C_r \}$ of $\{ A_1, \ldots, A_n\}$ we have
+\[ P(C_{1} , C_{2} , \cdots C_{r}) = P(C_{1}) P(C_{2}) \cdots P(C_{r}). \]
+For example, if $n = 3$ then we need
+\[ P(A_{1} , A_{2}) = P(A_1) P(A_2), \,\, P(A_{1} , A_{3}) = P(A_1) P(A_3), \,\, P(A_{2} , A_{3}) = P(A_2) P(A_3) \]
+that is, $(A_1, A_2, A_3)$ are pairwise independent, and 
+\[ P(A_{1} , A_{2} , A_{3}) = P(A_{1}) P(A_{2}) P(A_{3}). \]
 
 ```{r, echo=FALSE}
 temp <- stat0002::blood_types
@@ -694,7 +747,7 @@ p_sex_outcome_hux
 
 
 
-## Independence of events {#indepevents}
+
 
 ## Law of total probability
 
