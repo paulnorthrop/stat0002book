@@ -641,6 +641,43 @@ that is, <span class="math inline">\((A_1, A_2, A_3)\)</span> are pairwise indep
 </div>
 <div id="law-of-total-probability" class="section level2">
 <h2><span class="header-section-number">3.8</span> Law of total probability</h2>
+<p>We continue with the Berkeley admissions data. We have already calculated that <span class="math inline">\(P(A)=0.388\)</span>. Now we calculate this in a different way.</p>
+<p>From table <a href="probability.html#tab:berk0n">3.2</a> we can see that
+<span class="math display">\[ n(A) = n(A , M) + n(A , F). \]</span>
+From table <a href="probability.html#tab:berk2pn">3.6</a> we can see that
+<span class="math display" id="eq:pa">\[\begin{equation}
+P(A) = P(A , M) + P(A , F). 
+\tag{3.9}
+\end{equation}\]</span></p>
+<p>This also follows from equation <a href="probability.html#eq:mut">(3.6)</a> since the events <span class="math inline">\((A , M)\)</span> and <span class="math inline">\((A , F)\)</span> are mutually exclusive. That is,
+<span class="math display">\[\begin{eqnarray}
+ P(A) &amp;=&amp; P((A , M) \mbox{ or } (A , F) ), \\
+ &amp;=&amp; P(A , M) + P(A , F) - P((A , M) , (A , F)), \\
+ &amp;=&amp; P(A , M) + P(A , F). 
+\end{eqnarray}\]</span></p>
+<p>Applying the multiplication rule <a href="probability.html#eq:mult">(3.7)</a> to <a href="probability.html#eq:pa">(3.9)</a> gives
+<span class="math display">\[\begin{eqnarray}
+P(A) &amp;=&amp; P(A , M) + P(A \, F), \\
+     &amp;=&amp; P(A \mid M)\,P(M) + P(A \mid F)\,P(F)\ \\
+     &amp;=&amp; 0.445 \times 0.595 + 0.304 \times 0.405, \\
+     &amp;=&amp; 0.388.
+\end{eqnarray}\]</span>
+This is an example of the <strong>law of total probability</strong>. The probability of event <span class="math inline">\(A\)</span> is expressed as a weighted average of the conditional probability of event <span class="math inline">\(A\)</span> given that <span class="math inline">\(M\)</span> has occurred, and the conditional probability of event <span class="math inline">\(A\)</span> given that <span class="math inline">\(F\)</span> has occurred. Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.</p>
+<p>Note that
+* <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> are mutually exclusive events.
+* <span class="math inline">\(P(M \mbox{ or } F) = 1\)</span>, that is, together <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> make up the entire sample space of the possible values of sex. This means that <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span> are <strong>exhaustive</strong> events.</p>
+<p><strong>Definition</strong>. <strong>The law of total probability</strong>. Let events <span class="math inline">\(B_1,\ldots,B_n\)</span> be</p>
+<ul>
+<li>possible, i.e. <span class="math inline">\(P(B_i) &gt; 0\)</span>, for <span class="math inline">\(i = 1, \ldots, n\)</span>,</li>
+<li>mutually exclusive, i.e. <span class="math inline">\(P(B_i , B_j)=0\)</span> for <span class="math inline">\(i \neq j\)</span>, and</li>
+<li>exhaustive, that is, <span class="math inline">\(P(B_1 \mbox{ or } B_2 \mbox{ or } \cdots \mbox{ or } B_n) = 1\)</span>.</li>
+</ul>
+<p>Then, for any event <span class="math inline">\(A\)</span>
+<span class="math display">\[\begin{eqnarray}
+P(A) &amp;=&amp; P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
+     &amp;=&amp; \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
+\end{eqnarray}\]</span></p>
+<p>Some books refer to the law of total probability as the <strong>partition theorem</strong>. This is because events <span class="math inline">\(B_1, \ldots, B_n\)</span> that are both mutually exclusive and exhasutive are said to <strong>partition</strong> the sample space, that is, they split the sample space into <span class="math inline">\(n\)</span> disjoint parts.</p>
 </div>
 <div id="bayes-theorem" class="section level2">
 <h2><span class="header-section-number">3.9</span> Bayes’ theorem</h2>

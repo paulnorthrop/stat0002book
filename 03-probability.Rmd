@@ -738,6 +738,49 @@ sex_outcome_hux
 
 ## Law of total probability
 
+We continue with the Berkeley admissions data.  We have already calculated that $P(A)=0.388$. Now we calculate this in a different way.
+
+From table \@ref(tab:berk0n) we can see that 
+\[ n(A) = n(A , M) + n(A , F). \]
+From table \@ref(tab:berk2pn) we can see that 
+\begin{equation}
+P(A) = P(A , M) + P(A , F). 
+(\#eq:pa)
+\end{equation}
+
+This also follows from equation \@ref(eq:mut) since the events $(A , M)$ and $(A , F)$ are mutually exclusive.  That is,
+\begin{eqnarray}
+ P(A) &=& P((A , M) \mbox{ or } (A , F) ), \\
+ &=& P(A , M) + P(A , F) - P((A , M) , (A , F)), \\
+ &=& P(A , M) + P(A , F). 
+\end{eqnarray}
+
+Applying the multiplication rule \@ref(eq:mult) to \@ref(eq:pa) gives
+\begin{eqnarray}
+P(A) &=& P(A , M) + P(A \, F), \\
+     &=& P(A \mid M)\,P(M) + P(A \mid F)\,P(F)\ \\
+     &=& 0.445 \times 0.595 + 0.304 \times 0.405, \\
+     &=& 0.388.
+\end{eqnarray}
+This is an example of the **law of total probability**.  The probability of event $A$ is expressed as a weighted average of the conditional probability of event $A$ given that $M$ has occurred, and the conditional probability of event $A$ given that $F$ has occurred.  Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.
+
+Note that 
+* $M$ and $F$ are mutually exclusive events.
+* $P(M \mbox{ or } F) = 1$, that is, together $M$ and $F$ make up the entire sample space of the possible values of sex.  This means that $M$ and $F$ are **exhaustive** events.
+
+**Definition**. **The law of total probability**. Let events $B_1,\ldots,B_n$ be
+
+* possible, i.e. $P(B_i) > 0$, for $i = 1, \ldots, n$,
+* mutually exclusive, i.e. $P(B_i , B_j)=0$ for $i \neq j$, and 
+* exhaustive, that is, $P(B_1 \mbox{ or } B_2 \mbox{ or } \cdots \mbox{ or } B_n) = 1$.  
+
+Then, for any event $A$
+\begin{eqnarray}
+P(A) &=& P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
+     &=& \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
+\end{eqnarray}
+
+Some books refer to the law of total probability as the **partition theorem**.  This is because events $B_1, \ldots, B_n$ that are both mutually exclusive and exhasutive are said to **partition** the sample space, that is, they split the sample space into $n$ disjoint parts.
 
 ## Bayes' theorem
 
