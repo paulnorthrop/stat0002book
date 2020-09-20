@@ -114,7 +114,7 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> Probability</a><ul>
-<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#misleading-statistical-evidence-in-cot-death-trials"><i class="fa fa-check"></i><b>3.1</b> Misleading statistical evidence in cot death trials</a></li>
+<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#sids"><i class="fa fa-check"></i><b>3.1</b> Misleading statistical evidence in cot death trials</a></li>
 <li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#relative-frequency-definition-of-probability"><i class="fa fa-check"></i><b>3.2</b> Relative frequency definition of probability</a></li>
 <li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#basic-properties-of-probability"><i class="fa fa-check"></i><b>3.3</b> Basic properties of probability</a></li>
 <li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>3.4</b> Conditional probability</a></li>
@@ -193,7 +193,7 @@
 <div id="probability" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Probability</h1>
 <p>Most people have heard the word <strong>probability</strong> used in connection with a random experiment, that is, an experiment whose outcome cannot be predicted with certainty, such as tossing a coin, tossing dice, dealing cards etc. We start by considering a criminal case in which fundamental ideas surrounding the use of probability were hugely important. Then we study the concept of probability using the traditional simple example of tossing a coin.</p>
-<div id="misleading-statistical-evidence-in-cot-death-trials" class="section level2">
+<div id="sids" class="section level2">
 <h2><span class="header-section-number">3.1</span> Misleading statistical evidence in cot death trials</h2>
 <p>In recent years there have been three high-profile criminal cases in which a mother has been put on trial for the murder of a her babies. In each case the medical evidence against the woman was weak and the prosecution relied heavily on statistical arguments to make their case. However, these arguments were not made by a statistician, but by a medical expert witness: Professor Sir Roy Meadows. However, there were two problems with Professor Meadows’ evidence: firstly, it contained serious statistical errors; and secondly, it was presented in a way which is likely to be misinterpreted by a jury. To illustrate the error we consider the case of Sally Clark.</p>
 <p>Sally Clark’s first child died unexpectedly in 1996 at the age of 3 months. Sally was the only person in the house at the time. There was evidence of a respiratory infection and the death was recorded as natural; a case of <strong>Sudden Infant Death Syndrome (SIDS)</strong>, or <strong>cot death</strong>. In 1998 Sally’s second child died in similar circumstances at the age of 2 months. Sally was then charged with the murder of both babies. There was some medical evidence to suggest that the second baby could have been smothered, although this could be explained by an attempt at resuscitation.</p>
@@ -276,6 +276,50 @@ supposing that this limit exists. (Note: I have written ‘limit’ and not ‘l
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">n(A)</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 2pt 0pt 2pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">n(R)</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 2pt 0pt 0pt 2pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">n</td></tr>
 </table>
 
+<p>The population of interest now is the population of graduate applicants to the six largest departments of the Berkeley. If we choose an applicant at random from this population the probability <span class="math inline">\(P(A)\)</span> that they are accepted is given by
+<span class="math display">\[ P(A) = \frac{n(A)}{n} = \frac{1,755}{4,526} = 0.388. \]</span>
+Similarly, the probability <span class="math inline">\(P(R)\)</span> that a randomly chosen applicant is rejected is given by
+<span class="math display">\[ P(R) = \frac{n(R)}{n} = \frac{2,771}{4,526} = 0.612. \]</span></p>
+<p>In both the coin-tossing and Berkeley admissions examples we have imagined choosing an individual from a population in such a way that all individuals are equally likely to be chosen. The probability of the individual having a particular property, for example, that an applicant is accepted, is given by the proportion of individuals in the population which have this property.</p>
+<p>In the coin-tossing example the population is hypothetical, generated by thinking about repeating an experiment an infinite number of times. In the Berkeley admissions example the population is an actual population of people.</p>
+</div>
+<div id="notation-sample-space-outcomes-and-events" class="section level4 unnumbered">
+<h4>Notation: sample space, outcomes and events</h4>
+<p>The set of all possible outcomes of a random experiment is called the <strong>sample space</strong> <span class="math inline">\(S\)</span> of the experiment. We may denote a single <strong>outcome</strong> of an experiment by <span class="math inline">\(s\)</span>. An <strong>event</strong> <span class="math inline">\(E\)</span> is a collection of outcomes, possible just one outcome.</p>
+<p>It is very important to define the sample space <span class="math inline">\(S\)</span> carefully. In the coin-tossing example we have <span class="math inline">\(S=\{H,T\}\)</span>. If the coin is unbiased then the probabilities of the outcomes in <span class="math inline">\(S\)</span> are given by <span class="math inline">\(P(H)=1/2\)</span> and <span class="math inline">\(P(T)=1/2\)</span>.</p>
+</div>
+</div>
+<div id="basic-properties-of-probability" class="section level2">
+<h2><span class="header-section-number">3.3</span> Basic properties of probability</h2>
+<p>Since we have defined probability as a proportion, basic properties of proportions must also hold for a probability. Consider an event <span class="math inline">\(E\)</span>. Then the following must hold</p>
+<ul>
+<li><span class="math inline">\(0 \leq P(E) \leq 1\)</span>;</li>
+<li>if <span class="math inline">\(E\)</span> is impossible then <span class="math inline">\(P(E)=0\)</span>;</li>
+<li>if <span class="math inline">\(E\)</span> is certain then <span class="math inline">\(P(E)=1\)</span>;</li>
+<li><span class="math inline">\(P(S)=1\)</span>. This is true because the outcome must, by definition, be in the sample space.</li>
+</ul>
+</div>
+<div id="conditional-probability" class="section level2">
+<h2><span class="header-section-number">3.4</span> Conditional probability</h2>
+<p>In Section @ref(sids} (the cot death example) the statistical evidence
+presented to the court was based on the estimate that “the probability of one cot death <strong>in a family like Sally Clark’s</strong> is 1 in 8543”. What does this mean?</p>
+<p>The study from which this statistic was taken estimated the <strong>overall</strong> probability of cot death to be 1 in 1303. That is, cot death occurs in approximately 1 in every 1303 families.</p>
+<p>However, the study also found that the probability of cot death depended on various characteristics such as, income, smoking status and the age of the mother. For example, the probability of cot death was found to be much greater in families containing one or more smokers than in non-smoking families.</p>
+<p>The study estimated the probability of cot death for each possible combination of these characteristics. For the combination which is relevant to Sally Clark, whose family was affluent, non-smoking and she was aged over 26, the probability of cot death was estimated to be smaller: 1 in 8543.</p>
+<p>This (1 in 8543) is a <strong>conditional</strong> probability. We have <strong>conditioned</strong> on the event that the family in question is affluent, non-smoking and the mother is aged over 26. The overall probability of cot death (1 in 1303) is often called an <strong>unconditional</strong> probability.</p>
+<p>In this example it is perhaps easiest to think of the conditioning as selecting a specific sub-population of families from the complete population of families. Another way to think about this is in terms of the sample space. We have reduced the original sample space - the outcomes (cot death or no cot death) of all families with children - to a subset of this sample space - the outcomes of all affluent, non-smoking families where the mother is over 26.</p>
+<div id="notation" class="section level4 unnumbered">
+<h4>Notation</h4>
+<p>When we are working with conditional probabilities we need to use a neat notation rather than write out long sentences like the ones above.</p>
+<p>Let <span class="math inline">\(C\)</span> be the event that a family has one cot death. Let <span class="math inline">\(F_1\)</span> be the event that the family in question is affluent, non-smoking, and the mother is over 26. Instead of writing “the probability of one cot death in a family conditional on the type of family is 1 in 8543”" we write
+<span class="math display">\[P(C \mid F_1) = \frac{1}{8543}.\]</span>
+The `<span class="math inline">\(\mid\)</span>’ sign means <strong>“conditional on”</strong>’ or, more simply, <strong>“given”</strong>. Therefore, for <span class="math inline">\(P(C \mid F_1)\)</span> we might say "“the probability of event <span class="math inline">\(C\)</span> conditional on event <span class="math inline">\(F_1\)</span>”, or “the probability of event <span class="math inline">\(C\)</span> given event <span class="math inline">\(F_1\)</span>”.</p>
+<p>The (unconditional) probability of one cot death is given by
+<span class="math display">\[P(C) = \frac{1}{1303}.\]</span></p>
+<p>In section <a href="probability.html#sids">3.1</a> I did not use the <span class="math inline">\(~\mid~\)</span> sign in my notation (because we hadn’t seen it then), but I did make the conditioning clear by saying <strong>for a family like Sally Clark’s</strong>. ]</p>
+<p>In fact <strong>all</strong> probabilities are conditional probabilities, because a probability is conditioned on the sample space <span class="math inline">\(S\)</span>. When we define <span class="math inline">\(S\)</span> we rule out anything that is not in <span class="math inline">\(S\)</span>. So instead of <span class="math inline">\(P(C)\)</span> we could write <span class="math inline">\(P(C \mid S)\)</span>. We do not tend to do this because it takes more time and it tends to make things more difficult to read. However, we should always try to bear in mind the sample space when we think about a probability.</p>
+<p>We use the following example to illustrate
+conditional probability, independence and the rules of probability.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk1">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk1">Table 3.3: </span> Numbers of graduate applicants by sex and outcome.</caption><col><col><col><col><tr>
 <th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 2pt 2pt 2pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 2pt 2pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
@@ -423,12 +467,6 @@ supposing that this limit exists. (Note: I have written ‘limit’ and not ‘l
 </table>
 
 </div>
-</div>
-<div id="basic-properties-of-probability" class="section level2">
-<h2><span class="header-section-number">3.3</span> Basic properties of probability</h2>
-</div>
-<div id="conditional-probability" class="section level2">
-<h2><span class="header-section-number">3.4</span> Conditional probability</h2>
 </div>
 <div id="addition-rule-of-probability" class="section level2">
 <h2><span class="header-section-number">3.5</span> Addition rule of probability</h2>
