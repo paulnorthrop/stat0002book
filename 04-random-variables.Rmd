@@ -183,7 +183,7 @@ p.d.f. $f_X(x)$.
 * The range of integration in equation \@ref(eq:contmean) is over the whole real line but, in practice, integration will be over the range of possible values of $X$.
 * $\mathrm{E}(X)$ exists only if  $\int_{-\infty}^{\infty} |x|\,f_X(x) {\rm ~d}x < \infty$.
 
-**Properties of $\mathrm{E}(X)$**
+### Properties of $\mathrm{E}(X)$
 
 If $a$ and $b$ are constants then
 \[ \mathrm{E}(a\,X+b) = a\,\mathrm{E}(X)+b. \]
@@ -195,7 +195,8 @@ This makes sense.  If we multiply all observations by $a$ their mean will also b
 \[ \mathrm{E}(X_1 + X_2 + \cdots + X_n) = \mathrm{E}(X_1) + \mathrm{E}(X_2) + \cdots + \mathrm{E}(X_n). \]
 
 
-**The expectation of a function $g(X)$ of a random variable $X$**.
+### The expectation of $g(X)$
+
 Suppose that $Y=g(X)$ is a function of of $X$, such as $aX+b$, $X^2$ or $\log X$.  Then $Y$ is also a random variable.  If we find the p.m.f (if $Y$ is discrete) or p.d.f. (if $Y$ is continuous) of $Y$ then we can find the the expectation of $Y$ using equation \@ref(eq:discmean) or \@ref(eq:contmean) as appropriate.
 
 \begin{equation}
@@ -204,7 +205,7 @@ Suppose that $Y=g(X)$ is a function of of $X$, such as $aX+b$, $X^2$ or $\log X$
 \displaystyle\sum_x g(x)\,P(X=x) & \text{if } X \text{ is discrete}, \\
 \int_{-\infty}^{\infty} g(x)\,f_X(x) {\rm ~d}x & \text{if } X \text{ is continuous}.
 \end{cases}
-(\#eq:expfn2)
+(\#eq:expfn)
 \end{equation}
 
 Note, it is usually the case that
@@ -213,6 +214,138 @@ although there are exceptions.
 
 ## Variance
 
+The variance of a random variable is a measure of the spread of its distribution.
+
+### Variance of a discrete random variable
+
+**Example**. We return the space shuttle example.
+
+As before we let $n(x)$ be the number of test flights on which $x$ of the 6 O-rings were damaged.  We saw in Section \@ref(meanstdev) that a measure of the spread of a sample $x_1,\ldots,x_n$ is the sample variance $s_X^2$ which, in this example, can be written as
+
+\begin{eqnarray*}
+s_X^2 &=& \frac{1}{n-1}\,\left\{
+(0-\bar{x})^2\,n(0)+(1-\bar{x})^2\,n(1)+\cdots+(6-\bar{x})^2\,n(6) \right\},
+\\
+      &=& \sum_{x=0}^6 (x-\bar{x})^2\,\frac{n(x)}{n-1}. 
+\end{eqnarray*}
+As the sample size $n$ increases to infinity, $\frac{n(x)}{n-1}$ tends to $P(X=x)$, for $x=0,1,\ldots,6$ and $\bar{x}$ tends to $\mu$=$\mathrm{E}(X)$.  
+
+Therefore, as $n \rightarrow \infty$, $s_X^2$ tends to
+
+\begin{equation}
+\sum_{x=0}^6 (x-\mu)^2\,P(X=x). 
+(\#eq:shuttlevar)
+\end{equation}
+
+This is known as the variance of the probability distribution of $X$.  It is a measure of the spread of the distribution. The quantity in equation \@ref(eq:shuttlevar) is the value of the sample variance $s_X^2$ that we would expect to get from a very large sample.
+
+**Definition**. The variance $\mathrm{var}(X)$ of a discrete random variable $X$ with mean $\mathrm{E}(X)=\mu$ is given by
+
+\begin{equation}
+\mathrm{var}(X) = \sum_x\,(x-\mu)^2\,P(X=x). 
+(\#eq:varidisc)
+\end{equation}
+
+This is a weighted average of the squared differences between the values that $X$ can take and its mean $\mu$, each value being weighted by $P(X=x)$.
+
+Note:
+
+* $\mathrm{var}(X)$ exists only if  $\mu$ exists and $\sum_x (x-\mu)^2\,P(X=x) < \infty$.  If the number of values $X$ can take is finite then $\mathrm{var}(X)$ will always exist.
+* We often write $\sigma^2$ or $\sigma_X^2$ for $\mathrm{var}(X)$.
+
+### Variance of a continuous random variable
+
+We can define the variance of a continuous random variable in a similar way to a discrete random variable, replacing summation with integration.
+
+**Definition**. The variance $\mathrm{var}(X)$ of a continuous random variable $X$ with mean $\mathrm{E}(X)=\mu$ is given by
+
+\begin{equation}
+\mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) {\rm ~d}x. 
+(\#eq:varicont)
+\end{equation}
+
+Note: $\mathrm{var}(X)$ exists only if $\mu$ exists and $\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) {\rm ~d}x < \infty$.
+
+### Variance and standard deviation
+
+**Definition**. Let $X$ be a random variable with $\mathrm{E}(X)=\mu$.  The variance $\mathrm{var}(X)$ is given by
+\[ \mathrm{var}(X) = \mathrm{E}\left[(X-\mu)^2\right]. \]
+This follows from equations \@ref(eq:varidisc) and \@ref(eq:varicont) and the expression in equation \@ref(eq:expfn) for the expectation of a function $g(X)$ of a random variable $X$.
+
+There is an alternative way to calculate $\mathrm{var}(X)$:
+\[ \mathrm{var}(X) = \mathrm{E}\left(X^2\right) - [\mathrm{E}(X)]^2. \]
+
+**Exercise**. Prove this.
+
+**Definition**. The standard deviation sd$(X)$ of $X$ is given by sd($X$)=$+\sqrt{\mathrm{var}(X)}$. 
+
+Notes on $\mathrm{var}(X)$:
+
+* $\mathrm{var}(X) \geq 0$.  A variance cannot be negative.  
+* Units:  the units of $\mathrm{var}(X)$ are the square of those of $X$. For example, if $X$ is measured in hours then $\mathrm{var}(X)$ is measured in hours$^2$ (and sd($X$) is measured in hours).
+
+### Properties of $\mathrm{var}(X)$
+
+* If $a$ and $b$ are constants then
+\[ \mathrm{var}(a\,X+b) = a^2\,\mathrm{var}(X). \]
+This makes sense.  If we multiply all observations by $a$ their variance, which is measured square units, will be multiplied by $a^2$. If we add $b$ to all observations their variance will be unchanged because the distribution simply shifts up by $b$ and its spread is unaffected.
+* If $X$ is a constant $c$, that is, $P(X=c)=1$ then $\mathrm{var}(X)=0$: the distribution of $X$ has zero spread.
+* It can also be shown that **if the random variables $X_1, X_2, \ldots X_n$ are independent** then
+
+\begin{equation}
+\mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n). 
+(\#eq:varsum)
+\end{equation}
+
+**Note**. Independence is sufficient for this result to hold but it is not necessary.  Taking $n=2$ as an example, in generality we have 
+\[ \mathrm{var}(X_1 + X_2) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + 2\,\mathrm{cov}(X_1,X_2), \]
+where ${\rm cov}(X_1,X_2)$ is the **covariance** between the random variables $X_1$ and $X_2$.  Covariance is a measure of the strength of **linear** association. If $X_1$ and $X_2$ are independent (have no association of any kind) then $\mathrm{cov}(X_1,X_2)=0$, because they have no linear association. However, it is possible for $X_1$ and $X_2$ to be dependent but $\mathrm{cov}(X_1,X_2)=0$, because, although they have some kind of association, they have no **linear** association. Thus, independence is a stronger requirement than zero covariance.
+
+Returing to general $n$ we have
+\[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i < j} {\rm cov}(X_i,X_j). \]
+If $\mathrm{cov}(X_i,X_j)=0$ for all $i < j$ then equation \@ref(eq:varsum) holds. We will study covariance, and its standardised form **correlation**, in Section \@ref(correlationchapter).
+
 ## Other measures of location {#locations}
 
-## Quantiles 
+### The median of a random variable
+
+Recall that the sample median of a set of observations is the middle observation when the observations are arranged in order of size. We define the median of a random variable $X$ as the value, median($X$), such that
+
+\[ P(X < \mathrm{median}(X)) \leq \frac12 \leq P(X \leq \mathrm{median}(X)). \]
+
+In other words, $\mathrm{median}(X)$ is the value where a plot of the c.d.f. $F_X(x)=P(X \leq x)$ crosses $1/2$.
+
+For a continuous random variable $X$ we have
+\[  F_X(\mathrm{median}(X)) = P(X \leq \mathrm{median}(X)) =\frac12. \]
+and the median will divide the distribution into two parts, each with probability 1/2:
+\[ P(X < \mathrm{median}(X)) = P(X > \mathrm{median}(X)) = \frac12. \]
+
+This will not necessarily hold for a discrete distribution.  For example, suppose that 
+\[ P(X=0)=\frac16, \qquad  P(X=1)=\frac12, \qquad P(X=2)=\frac13. \]  
+
+Then
+\begin{eqnarray*}
+F_X(x) = P(X \leq x) = \left\{\begin{array}{ll}
+0 & \mbox{for } x <0, \\
+\frac16 & \mbox{for } 0 \leq x < 1, \\
+\frac23 & \mbox{for } 1 \leq x < 2, \\
+1 & \mbox{for } x \geq 2, 
+\end{array}\right.
+\end{eqnarray*}
+Therefore, $\mathrm{median}(X) = 1$. However, $P(X<1)=\frac16$ and $P(X>1)=\frac13$.
+
+### The mode of a random variable
+
+Recall that the sample mode of categorical or discrete data is the value (or values) which occurs most often.  We define the mode, mode($X$), of a random variable as follows.
+
+For a discrete random variable $X$, the mode is the value which has the highest probability of occurring: $P(X=\mathrm{mode}(X))$ will be larger than for any other value $X$ can have. In other words, $\mathrm{mode}(X)$ is the value at which the p.m.f. is maximised.
+
+For a continuous random variable $X$, the mode is the value at which the p.d.f. is maximised.  **If the maximum occurs at a turning point of $f_X(x)$** then it can be found by solving the equation
+\[ \frac{{\rm d}}{{\rm d}x} f_X(x)  = 0, \]
+and checking that you have indeed found a maximum.
+
+## Quantiles
+
+To keep things simple we consider a **continuous** random variable $X$.  The $100p\%$ quantile of $X$ is defined to be the value $x_p$ such that 
+\[ F_X(x_p)=P(X \leq x_p) = p. \]
+Thus, $x_{1/4}$ is the lower quartile of $X$, $x_{1/2}$ is the median of $X$ and $x_{3/4}$ is the upper quartile of $X$.  The inter-quartile range is $x_{3/4}-x_{1/4}$.

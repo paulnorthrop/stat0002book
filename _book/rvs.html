@@ -88,7 +88,7 @@
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Summary Statistics</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#five-number-summary"><i class="fa fa-check"></i><b>2.3.1</b> Five number summary</a></li>
-<li class="chapter" data-level="2.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mean-and-standard-deviation"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
+<li class="chapter" data-level="2.3.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
 <li class="chapter" data-level="2.3.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
 <li class="chapter" data-level="2.3.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
 <li class="chapter" data-level="2.3.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#correlation"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
@@ -135,9 +135,19 @@
 <li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
 <li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
+<li class="chapter" data-level="4.3.3" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmex"><i class="fa fa-check"></i><b>4.3.3</b> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></a></li>
+<li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#the-expectation-of-gx"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a></li>
-<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a></li>
+<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="rvs.html"><a href="rvs.html#variance-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.4.1</b> Variance of a discrete random variable</a></li>
+<li class="chapter" data-level="4.4.2" data-path="rvs.html"><a href="rvs.html#variance-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.4.2</b> Variance of a continuous random variable</a></li>
+<li class="chapter" data-level="4.4.3" data-path="rvs.html"><a href="rvs.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.4.3</b> Variance and standard deviation</a></li>
+<li class="chapter" data-level="4.4.4" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmvarx"><i class="fa fa-check"></i><b>4.4.4</b> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="rvs.html"><a href="rvs.html#the-median-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.1</b> The median of a random variable</a></li>
+<li class="chapter" data-level="4.5.2" data-path="rvs.html"><a href="rvs.html#the-mode-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.2</b> The mode of a random variable</a></li>
+</ul></li>
 <li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a><ul>
@@ -345,7 +355,9 @@ p.d.f. <span class="math inline">\(f_X(x)\)</span>.</li>
 <li>The range of integration in equation <a href="rvs.html#eq:contmean">(4.3)</a> is over the whole real line but, in practice, integration will be over the range of possible values of <span class="math inline">\(X\)</span>.</li>
 <li><span class="math inline">\(\mathrm{E}(X)\)</span> exists only if <span class="math inline">\(\int_{-\infty}^{\infty} |x|\,f_X(x) {\rm ~d}x &lt; \infty\)</span>.</li>
 </ul>
-<p><strong>Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></strong></p>
+</div>
+<div id="properties-of-mathrmex" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></h3>
 <p>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants then
 <span class="math display">\[ \mathrm{E}(a\,X+b) = a\,\mathrm{E}(X)+b. \]</span>
 This makes sense. If we multiply all observations by <span class="math inline">\(a\)</span> their mean will also be multiplied by <span class="math inline">\(a\)</span>. If we add <span class="math inline">\(b\)</span> to all observations their mean will be increased by <span class="math inline">\(b\)</span>, that is, the distribution of <span class="math inline">\(X\)</span> shifts up by <span class="math inline">\(b\)</span>.</p>
@@ -355,9 +367,11 @@ This makes sense. If we multiply all observations by <span class="math inline">\
 <li>It can be shown that
 <span class="math display">\[ \mathrm{E}(X_1 + X_2 + \cdots + X_n) = \mathrm{E}(X_1) + \mathrm{E}(X_2) + \cdots + \mathrm{E}(X_n). \]</span></li>
 </ul>
-<p><strong>The expectation of a function <span class="math inline">\(g(X)\)</span> of a random variable <span class="math inline">\(X\)</span></strong>.
-Suppose that <span class="math inline">\(Y=g(X)\)</span> is a function of of <span class="math inline">\(X\)</span>, such as <span class="math inline">\(aX+b\)</span>, <span class="math inline">\(X^2\)</span> or <span class="math inline">\(\log X\)</span>. Then <span class="math inline">\(Y\)</span> is also a random variable. If we find the p.m.f (if <span class="math inline">\(Y\)</span> is discrete) or p.d.f. (if <span class="math inline">\(Y\)</span> is continuous) of <span class="math inline">\(Y\)</span> then we can find the the expectation of <span class="math inline">\(Y\)</span> using equation <a href="rvs.html#eq:discmean">(4.2)</a> or <a href="rvs.html#eq:contmean">(4.3)</a> as appropriate.</p>
-<p><span class="math display" id="eq:expfn2">\[\begin{equation}
+</div>
+<div id="the-expectation-of-gx" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> The expectation of <span class="math inline">\(g(X)\)</span></h3>
+<p>Suppose that <span class="math inline">\(Y=g(X)\)</span> is a function of of <span class="math inline">\(X\)</span>, such as <span class="math inline">\(aX+b\)</span>, <span class="math inline">\(X^2\)</span> or <span class="math inline">\(\log X\)</span>. Then <span class="math inline">\(Y\)</span> is also a random variable. If we find the p.m.f (if <span class="math inline">\(Y\)</span> is discrete) or p.d.f. (if <span class="math inline">\(Y\)</span> is continuous) of <span class="math inline">\(Y\)</span> then we can find the the expectation of <span class="math inline">\(Y\)</span> using equation <a href="rvs.html#eq:discmean">(4.2)</a> or <a href="rvs.html#eq:contmean">(4.3)</a> as appropriate.</p>
+<p><span class="math display" id="eq:expfn">\[\begin{equation}
 \mathrm{E}(Y) = \mathrm{E}[g(X)] =
 \begin{cases} 
 \displaystyle\sum_x g(x)\,P(X=x) &amp; \text{if } X \text{ is discrete}, \\
@@ -372,12 +386,121 @@ although there are exceptions.</p>
 </div>
 <div id="variance" class="section level2">
 <h2><span class="header-section-number">4.4</span> Variance</h2>
+<p>The variance of a random variable is a measure of the spread of its distribution.</p>
+<div id="variance-of-a-discrete-random-variable" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Variance of a discrete random variable</h3>
+<p><strong>Example</strong>. We return the space shuttle example.</p>
+<p>As before we let <span class="math inline">\(n(x)\)</span> be the number of test flights on which <span class="math inline">\(x\)</span> of the 6 O-rings were damaged. We saw in Section <a href="descriptive-statistics.html#meanstdev">2.3.2</a> that a measure of the spread of a sample <span class="math inline">\(x_1,\ldots,x_n\)</span> is the sample variance <span class="math inline">\(s_X^2\)</span> which, in this example, can be written as</p>
+<p><span class="math display">\[\begin{eqnarray*}
+s_X^2 &amp;=&amp; \frac{1}{n-1}\,\left\{
+(0-\bar{x})^2\,n(0)+(1-\bar{x})^2\,n(1)+\cdots+(6-\bar{x})^2\,n(6) \right\},
+\\
+      &amp;=&amp; \sum_{x=0}^6 (x-\bar{x})^2\,\frac{n(x)}{n-1}. 
+\end{eqnarray*}\]</span>
+As the sample size <span class="math inline">\(n\)</span> increases to infinity, <span class="math inline">\(\frac{n(x)}{n-1}\)</span> tends to <span class="math inline">\(P(X=x)\)</span>, for <span class="math inline">\(x=0,1,\ldots,6\)</span> and <span class="math inline">\(\bar{x}\)</span> tends to <span class="math inline">\(\mu\)</span>=<span class="math inline">\(\mathrm{E}(X)\)</span>.</p>
+<p>Therefore, as <span class="math inline">\(n \rightarrow \infty\)</span>, <span class="math inline">\(s_X^2\)</span> tends to</p>
+<p><span class="math display" id="eq:shuttlevar">\[\begin{equation}
+\sum_{x=0}^6 (x-\mu)^2\,P(X=x). 
+\tag{4.5}
+\end{equation}\]</span></p>
+<p>This is known as the variance of the probability distribution of <span class="math inline">\(X\)</span>. It is a measure of the spread of the distribution. The quantity in equation <a href="rvs.html#eq:shuttlevar">(4.5)</a> is the value of the sample variance <span class="math inline">\(s_X^2\)</span> that we would expect to get from a very large sample.</p>
+<p><strong>Definition</strong>. The variance <span class="math inline">\(\mathrm{var}(X)\)</span> of a discrete random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mathrm{E}(X)=\mu\)</span> is given by</p>
+<p><span class="math display" id="eq:varidisc">\[\begin{equation}
+\mathrm{var}(X) = \sum_x\,(x-\mu)^2\,P(X=x). 
+\tag{4.6}
+\end{equation}\]</span></p>
+<p>This is a weighted average of the squared differences between the values that <span class="math inline">\(X\)</span> can take and its mean <span class="math inline">\(\mu\)</span>, each value being weighted by <span class="math inline">\(P(X=x)\)</span>.</p>
+<p>Note:</p>
+<ul>
+<li><span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists and <span class="math inline">\(\sum_x (x-\mu)^2\,P(X=x) &lt; \infty\)</span>. If the number of values <span class="math inline">\(X\)</span> can take is finite then <span class="math inline">\(\mathrm{var}(X)\)</span> will always exist.</li>
+<li>We often write <span class="math inline">\(\sigma^2\)</span> or <span class="math inline">\(\sigma_X^2\)</span> for <span class="math inline">\(\mathrm{var}(X)\)</span>.</li>
+</ul>
+</div>
+<div id="variance-of-a-continuous-random-variable" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Variance of a continuous random variable</h3>
+<p>We can define the variance of a continuous random variable in a similar way to a discrete random variable, replacing summation with integration.</p>
+<p><strong>Definition</strong>. The variance <span class="math inline">\(\mathrm{var}(X)\)</span> of a continuous random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mathrm{E}(X)=\mu\)</span> is given by</p>
+<p><span class="math display" id="eq:varicont">\[\begin{equation}
+\mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) {\rm ~d}x. 
+\tag{4.7}
+\end{equation}\]</span></p>
+<p>Note: <span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists and <span class="math inline">\(\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) {\rm ~d}x &lt; \infty\)</span>.</p>
+</div>
+<div id="variance-and-standard-deviation" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> Variance and standard deviation</h3>
+<p><strong>Definition</strong>. Let <span class="math inline">\(X\)</span> be a random variable with <span class="math inline">\(\mathrm{E}(X)=\mu\)</span>. The variance <span class="math inline">\(\mathrm{var}(X)\)</span> is given by
+<span class="math display">\[ \mathrm{var}(X) = \mathrm{E}\left[(X-\mu)^2\right]. \]</span>
+This follows from equations <a href="rvs.html#eq:varidisc">(4.6)</a> and <a href="rvs.html#eq:varicont">(4.7)</a> and the expression in equation <a href="rvs.html#eq:expfn">(4.4)</a> for the expectation of a function <span class="math inline">\(g(X)\)</span> of a random variable <span class="math inline">\(X\)</span>.</p>
+<p>There is an alternative way to calculate <span class="math inline">\(\mathrm{var}(X)\)</span>:
+<span class="math display">\[ \mathrm{var}(X) = \mathrm{E}\left(X^2\right) - [\mathrm{E}(X)]^2. \]</span></p>
+<p><strong>Exercise</strong>. Prove this.</p>
+<p><strong>Definition</strong>. The standard deviation sd<span class="math inline">\((X)\)</span> of <span class="math inline">\(X\)</span> is given by sd(<span class="math inline">\(X\)</span>)=<span class="math inline">\(+\sqrt{\mathrm{var}(X)}\)</span>.</p>
+<p>Notes on <span class="math inline">\(\mathrm{var}(X)\)</span>:</p>
+<ul>
+<li><span class="math inline">\(\mathrm{var}(X) \geq 0\)</span>. A variance cannot be negative.<br />
+</li>
+<li>Units: the units of <span class="math inline">\(\mathrm{var}(X)\)</span> are the square of those of <span class="math inline">\(X\)</span>. For example, if <span class="math inline">\(X\)</span> is measured in hours then <span class="math inline">\(\mathrm{var}(X)\)</span> is measured in hours<span class="math inline">\(^2\)</span> (and sd(<span class="math inline">\(X\)</span>) is measured in hours).</li>
+</ul>
+</div>
+<div id="properties-of-mathrmvarx" class="section level3">
+<h3><span class="header-section-number">4.4.4</span> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span></h3>
+<ul>
+<li>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants then
+<span class="math display">\[ \mathrm{var}(a\,X+b) = a^2\,\mathrm{var}(X). \]</span>
+This makes sense. If we multiply all observations by <span class="math inline">\(a\)</span> their variance, which is measured square units, will be multiplied by <span class="math inline">\(a^2\)</span>. If we add <span class="math inline">\(b\)</span> to all observations their variance will be unchanged because the distribution simply shifts up by <span class="math inline">\(b\)</span> and its spread is unaffected.</li>
+<li>If <span class="math inline">\(X\)</span> is a constant <span class="math inline">\(c\)</span>, that is, <span class="math inline">\(P(X=c)=1\)</span> then <span class="math inline">\(\mathrm{var}(X)=0\)</span>: the distribution of <span class="math inline">\(X\)</span> has zero spread.</li>
+<li>It can also be shown that <strong>if the random variables <span class="math inline">\(X_1, X_2, \ldots X_n\)</span> are independent</strong> then</li>
+</ul>
+<p><span class="math display" id="eq:varsum">\[\begin{equation}
+\mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n). 
+\tag{4.8}
+\end{equation}\]</span></p>
+<p><strong>Note</strong>. Independence is sufficient for this result to hold but it is not necessary. Taking <span class="math inline">\(n=2\)</span> as an example, in generality we have
+<span class="math display">\[ \mathrm{var}(X_1 + X_2) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + 2\,\mathrm{cov}(X_1,X_2), \]</span>
+where <span class="math inline">\({\rm cov}(X_1,X_2)\)</span> is the <strong>covariance</strong> between the random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>. Covariance is a measure of the strength of <strong>linear</strong> association. If <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are independent (have no association of any kind) then <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because they have no linear association. However, it is possible for <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> to be dependent but <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because, although they have some kind of association, they have no <strong>linear</strong> association. Thus, independence is a stronger requirement than zero covariance.</p>
+<p>Returing to general <span class="math inline">\(n\)</span> we have
+<span class="math display">\[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i &lt; j} {\rm cov}(X_i,X_j). \]</span>
+If <span class="math inline">\(\mathrm{cov}(X_i,X_j)=0\)</span> for all <span class="math inline">\(i &lt; j\)</span> then equation <a href="rvs.html#eq:varsum">(4.8)</a> holds. We will study covariance, and its standardised form <strong>correlation</strong>, in Section <a href="correlationchapter.html#correlationchapter">9</a>.</p>
+</div>
 </div>
 <div id="locations" class="section level2">
 <h2><span class="header-section-number">4.5</span> Other measures of location</h2>
+<div id="the-median-of-a-random-variable" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> The median of a random variable</h3>
+<p>Recall that the sample median of a set of observations is the middle observation when the observations are arranged in order of size. We define the median of a random variable <span class="math inline">\(X\)</span> as the value, median(<span class="math inline">\(X\)</span>), such that</p>
+<p><span class="math display">\[ P(X &lt; \mathrm{median}(X)) \leq \frac12 \leq P(X \leq \mathrm{median}(X)). \]</span></p>
+<p>In other words, <span class="math inline">\(\mathrm{median}(X)\)</span> is the value where a plot of the c.d.f. <span class="math inline">\(F_X(x)=P(X \leq x)\)</span> crosses <span class="math inline">\(1/2\)</span>.</p>
+<p>For a continuous random variable <span class="math inline">\(X\)</span> we have
+<span class="math display">\[  F_X(\mathrm{median}(X)) = P(X \leq \mathrm{median}(X)) =\frac12. \]</span>
+and the median will divide the distribution into two parts, each with probability 1/2:
+<span class="math display">\[ P(X &lt; \mathrm{median}(X)) = P(X &gt; \mathrm{median}(X)) = \frac12. \]</span></p>
+<p>This will not necessarily hold for a discrete distribution. For example, suppose that
+<span class="math display">\[ P(X=0)=\frac16, \qquad  P(X=1)=\frac12, \qquad P(X=2)=\frac13. \]</span></p>
+<p>Then
+<span class="math display">\[\begin{eqnarray*}
+F_X(x) = P(X \leq x) = \left\{\begin{array}{ll}
+0 &amp; \mbox{for } x &lt;0, \\
+\frac16 &amp; \mbox{for } 0 \leq x &lt; 1, \\
+\frac23 &amp; \mbox{for } 1 \leq x &lt; 2, \\
+1 &amp; \mbox{for } x \geq 2, 
+\end{array}\right.
+\end{eqnarray*}\]</span>
+Therefore, <span class="math inline">\(\mathrm{median}(X) = 1\)</span>. However, <span class="math inline">\(P(X&lt;1)=\frac16\)</span> and <span class="math inline">\(P(X&gt;1)=\frac13\)</span>.</p>
+</div>
+<div id="the-mode-of-a-random-variable" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> The mode of a random variable</h3>
+<p>Recall that the sample mode of categorical or discrete data is the value (or values) which occurs most often. We define the mode, mode(<span class="math inline">\(X\)</span>), of a random variable as follows.</p>
+<p>For a discrete random variable <span class="math inline">\(X\)</span>, the mode is the value which has the highest probability of occurring: <span class="math inline">\(P(X=\mathrm{mode}(X))\)</span> will be larger than for any other value <span class="math inline">\(X\)</span> can have. In other words, <span class="math inline">\(\mathrm{mode}(X)\)</span> is the value at which the p.m.f. is maximised.</p>
+<p>For a continuous random variable <span class="math inline">\(X\)</span>, the mode is the value at which the p.d.f. is maximised. <strong>If the maximum occurs at a turning point of <span class="math inline">\(f_X(x)\)</span></strong> then it can be found by solving the equation
+<span class="math display">\[ \frac{{\rm d}}{{\rm d}x} f_X(x)  = 0, \]</span>
+and checking that you have indeed found a maximum.</p>
+</div>
 </div>
 <div id="quantiles" class="section level2">
 <h2><span class="header-section-number">4.6</span> Quantiles</h2>
+<p>To keep things simple we consider a <strong>continuous</strong> random variable <span class="math inline">\(X\)</span>. The <span class="math inline">\(100p\%\)</span> quantile of <span class="math inline">\(X\)</span> is defined to be the value <span class="math inline">\(x_p\)</span> such that
+<span class="math display">\[ F_X(x_p)=P(X \leq x_p) = p. \]</span>
+Thus, <span class="math inline">\(x_{1/4}\)</span> is the lower quartile of <span class="math inline">\(X\)</span>, <span class="math inline">\(x_{1/2}\)</span> is the median of <span class="math inline">\(X\)</span> and <span class="math inline">\(x_{3/4}\)</span> is the upper quartile of <span class="math inline">\(X\)</span>. The inter-quartile range is <span class="math inline">\(x_{3/4}-x_{1/4}\)</span>.</p>
 
 </div>
 </div>

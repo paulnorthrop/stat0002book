@@ -194,7 +194,7 @@ number of times an event of interest occurs in a fixed period of time,
 for example, the number of births in the delivery suite of the John Radcliffe 
 hospital in Oxford during one week.
 
-### Mean and standard deviation
+### Mean and standard deviation {#meanstdev}
 
 The most well known descriptive measures of **numerical** data are the (arithmetic) mean and the standard deviation.
 
