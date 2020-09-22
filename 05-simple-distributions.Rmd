@@ -1,4 +1,41 @@
+```{r setup, echo = FALSE, warning = FALSE, message = FALSE}
+
+library(knitr)
+library(dplyr)
+library(huxtable)
+options(
+        huxtable.knit_print_df       = FALSE, 
+        huxtable.add_colnames        = TRUE,  # needed when run by testthat
+        huxtable.latex_use_fontspec  = TRUE,
+        huxtable.bookdown            = TRUE
+      )
+
+is_latex <- guess_knitr_output_format() == "latex"
+# is_latex <- TRUE
+knitr::knit_hooks$set(
+  barrier = function(before, options, envir) {
+    if (! before && is_latex) knitr::asis_output("\\FloatBarrier")
+  }
+)
+```
+
+```{r, figsetup5, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = 'center',
+  out.width = '80%'
+)
+```
+
+```{r, echo = FALSE}
+include_cropped_graphics <- function(x) {
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
+}
+```
+
 # Simple distributions {#simple}
+
+In this section we use a dataset to introduce some commonly-used simple distributions. We will study the **discrete** distributions: Bernoulli, binomial, geometric and Poisson. We will also study the **continuous** distributions: uniform, exponential, normal.
 
 ## The Bernoulli distribution
 
