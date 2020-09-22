@@ -24,7 +24,7 @@
 <meta name="author" content="Paul Northrop, Department of Statistical Science, University College London" />
 
 
-<meta name="date" content="2020-09-20" />
+<meta name="date" content="2020-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -132,7 +132,10 @@
 <li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a><ul>
 <li class="chapter" data-level="4.1" data-path="rvs.html"><a href="rvs.html#discrete"><i class="fa fa-check"></i><b>4.1</b> Discrete random variables</a></li>
 <li class="chapter" data-level="4.2" data-path="rvs.html"><a href="rvs.html#continuous"><i class="fa fa-check"></i><b>4.2</b> Continuous random variables</a></li>
-<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a></li>
+<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
+<li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
+</ul></li>
 <li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a></li>
 <li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a></li>
 <li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
@@ -296,6 +299,76 @@ Therefore,
 </div>
 <div id="expectation" class="section level2">
 <h2><span class="header-section-number">4.3</span> Expectation</h2>
+<p>The expectation of a random variable is a measure of the location of its distribution.</p>
+<div id="expectation-of-a-discrete-random-variable" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Expectation of a discrete random variable</h3>
+<p><strong>Example</strong>. We return to the space shuttle example.</p>
+<p>Again we consider test flights conducted at a particular temperature, say 53<span class="math inline">\(^\circ\)</span>F. Suppose that NASA are able to conduct a very large number <span class="math inline">\(n\)</span> of test flights at 53<span class="math inline">\(^\circ\)</span>F, producing a sample <span class="math inline">\(x_1,\ldots,x_n\)</span> of numbers of damaged O-rings.</p>
+<p>Let <span class="math inline">\(n(x)\)</span> be the number of test flights on which <span class="math inline">\(x\)</span> of the 6 O-rings were damaged. We can write the sample mean <span class="math inline">\(\bar{x}\)</span> of <span class="math inline">\(x_1,\ldots,x_n\)</span> as
+<span class="math display">\[\begin{eqnarray*}
+\bar{x} &amp;=&amp; \frac{0 \times n(0) + 1 \times n(1) + \cdots + 6 \times n(6)}{n}, \\
+&amp;=&amp; \sum_{x=0}^6 x\,\frac{n(x)}{n}.
+\end{eqnarray*}\]</span>
+As the sample size <span class="math inline">\(n\)</span> increases to infinity, the sample proportion <span class="math inline">\(n(x)/n\)</span> tends to <span class="math inline">\(P(X=x)\)</span>, for <span class="math inline">\(x=0,1,\ldots,6\)</span>. Therefore, in the limit as <span class="math inline">\(n \rightarrow \infty\)</span>, <span class="math inline">\(\bar{x}\)</span> tends to
+<span class="math display" id="eq:shuttlemean">\[\begin{eqnarray}
+\sum_{x=0}^6 x\,P(X=x). 
+\tag{4.1}
+\end{eqnarray}\]</span>
+This is known as the mean of the probability distribution of <span class="math inline">\(X\)</span>. It is a measure of the location of the distribution.</p>
+<p>The quantity in equation <a href="rvs.html#eq:shuttlemean">(4.1)</a> is the value of the sample mean <span class="math inline">\(\bar{x}\)</span> that we would expect to get from a very large sample. Therefore it is often called the <strong>expectation</strong> or <strong>expected value</strong> of the random variable <span class="math inline">\(X\)</span> and it is denoted <span class="math inline">\(\mathrm{E}(X)\)</span>.</p>
+<p><strong>Definition</strong>. The <strong>expectation</strong> (or <strong>expected value</strong> or <strong>mean</strong>) <span class="math inline">\(\mathrm{E}(X)\)</span> of a discrete random variable <span class="math inline">\(X\)</span> is given by
+<span class="math display" id="eq:discmean">\[\begin{eqnarray}
+\mathrm{E}(X) &amp;=&amp; \sum_x x\,P(X=x). 
+\tag{4.2}
+\end{eqnarray}\]</span>
+This is a weighted average of the values that <span class="math inline">\(X\)</span> can take, each value being weighted by <span class="math inline">\(P(X=x)\)</span>.</p>
+<p>Note:</p>
+<ul>
+<li>We often write <span class="math inline">\(\mu\)</span> or <span class="math inline">\(\mu_X\)</span> for <span class="math inline">\(\mathrm{E}(X)\)</span>.</li>
+<li>Units: the units of <span class="math inline">\(\mathrm{E}(X)\)</span> are the same as those of <span class="math inline">\(X\)</span>. For example, if <span class="math inline">\(X\)</span> is measured in hours then <span class="math inline">\(\mathrm{E}(X)\)</span> is measured in hours.</li>
+<li><span class="math inline">\(\mathrm{E}(X)\)</span> exists only if <span class="math inline">\(\sum_x |x|\,P(X=x) &lt; \infty\)</span>. If the number of values <span class="math inline">\(X\)</span> can take is finite then <span class="math inline">\(\mathrm{E}(X)\)</span> will always exist.</li>
+</ul>
+</div>
+<div id="expectation-of-a-continuous-random-variable" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Expectation of a continuous random variable</h3>
+<p>We can define the expectation of a continuous random variable in a similar way to a discrete random variable, replacing summation with integration.</p>
+<p><strong>Definition</strong>.
+The expectation <span class="math inline">\(\mathrm{E}(X)\)</span> of a continuous random variable <span class="math inline">\(X\)</span> is given by
+<span class="math display" id="eq:contmean">\[\begin{eqnarray}
+\mathrm{E}(X) = \int_{-\infty}^{\infty} x\,f_X(x) {\rm ~d}x. 
+\tag{4.3}
+\end{eqnarray}\]</span>
+Note:</p>
+<ul>
+<li>Like the discrete case, this is a weighted average of the values that <span class="math inline">\(X\)</span> can take, but now each value is weighted by the
+p.d.f. <span class="math inline">\(f_X(x)\)</span>.</li>
+<li>The range of integration in equation <a href="rvs.html#eq:contmean">(4.3)</a> is over the whole real line but, in practice, integration will be over the range of possible values of <span class="math inline">\(X\)</span>.</li>
+<li><span class="math inline">\(\mathrm{E}(X)\)</span> exists only if <span class="math inline">\(\int_{-\infty}^{\infty} |x|\,f_X(x) {\rm ~d}x &lt; \infty\)</span>.</li>
+</ul>
+<p><strong>Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></strong></p>
+<p>If <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are constants then
+<span class="math display">\[ \mathrm{E}(a\,X+b) = a\,\mathrm{E}(X)+b. \]</span>
+This makes sense. If we multiply all observations by <span class="math inline">\(a\)</span> their mean will also be multiplied by <span class="math inline">\(a\)</span>. If we add <span class="math inline">\(b\)</span> to all observations their mean will be increased by <span class="math inline">\(b\)</span>, that is, the distribution of <span class="math inline">\(X\)</span> shifts up by <span class="math inline">\(b\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(X \geq 0\)</span> then <span class="math inline">\(\mathrm{E}(X) \geq 0\)</span>.</li>
+<li>If <span class="math inline">\(X\)</span> is a constant <span class="math inline">\(c\)</span>, that is, <span class="math inline">\(P(X=c)=1\)</span> then <span class="math inline">\(\mathrm{E}(X)=c\)</span>.</li>
+<li>It can be shown that
+<span class="math display">\[ \mathrm{E}(X_1 + X_2 + \cdots + X_n) = \mathrm{E}(X_1) + \mathrm{E}(X_2) + \cdots + \mathrm{E}(X_n). \]</span></li>
+</ul>
+<p><strong>The expectation of a function <span class="math inline">\(g(X)\)</span> of a random variable <span class="math inline">\(X\)</span></strong>.
+Suppose that <span class="math inline">\(Y=g(X)\)</span> is a function of of <span class="math inline">\(X\)</span>, such as <span class="math inline">\(aX+b\)</span>, <span class="math inline">\(X^2\)</span> or <span class="math inline">\(\log X\)</span>. Then <span class="math inline">\(Y\)</span> is also a random variable. If we find the p.m.f (if <span class="math inline">\(Y\)</span> is discrete) or p.d.f. (if <span class="math inline">\(Y\)</span> is continuous) of <span class="math inline">\(Y\)</span> then we can find the the expectation of <span class="math inline">\(Y\)</span> using equation <a href="rvs.html#eq:discmean">(4.2)</a> or <a href="rvs.html#eq:contmean">(4.3)</a> as appropriate.</p>
+<p><span class="math display" id="eq:expfn2">\[\begin{equation}
+\mathrm{E}(Y) = \mathrm{E}[g(X)] =
+\begin{cases} 
+\displaystyle\sum_x g(x)\,P(X=x) &amp; \text{if } X \text{ is discrete}, \\
+\int_{-\infty}^{\infty} g(x)\,f_X(x) {\rm ~d}x &amp; \text{if } X \text{ is continuous}.
+\end{cases}
+\tag{4.4}
+\end{equation}\]</span></p>
+<p>Note, it is usually the case that
+<span class="math display">\[ \mathrm{E}[g(X)] \neq g[\mathrm{E}(X)] \]</span>
+although there are exceptions.</p>
+</div>
 </div>
 <div id="variance" class="section level2">
 <h2><span class="header-section-number">4.4</span> Variance</h2>
