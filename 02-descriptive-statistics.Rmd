@@ -409,7 +409,7 @@ oxtabecdf <- rbind(oxtabecdf,c("total", nn, 1, "", ""))
 colnames(oxtabecdf) <- c("time (hours)", "frequency", "relative frequency", "cumulative frequency", "cumulative relative frequency")
 ```
 
-(ref:oxfreqecdf-caption) Frequency table of the Oxford birth times, with one observation in each class.
+(ref:oxfreqecdf-caption) Frequency table of the Oxford birth times, with one observation per class.
 
 ```{r, echo=FALSE}
 oxtabecdf_hux <- oxtabecdf %>% 
