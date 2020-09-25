@@ -394,16 +394,16 @@ Column 4 of Table \@ref(tab:oxfreq) contains the total number of observations wi
 include_cropped_graphics("images/ox_cum_freq.png")
 ```
 
-The shape of this plot depends on the choice of the classes.  We could increase the detail in the plot by increasing the number of classes, that is, by decreasing the class width. In an extreme case we could choose the classes so that there is only one observation in each class. Table \@ref(tab:oxfreqecdf) shows how this could be done.
+The shape of this plot depends on the choice of the classes.  We could increase the detail in the plot by increasing the number of classes, that is, by decreasing the class width. In an extreme case we could choose the classes so that there is a class for every unique value in the data. Table \@ref(tab:oxfreqecdf) shows how this could be done.
 
 ```{r, echo=FALSE}
 stimes <- sort(stat0002::ox_births$time)
 col1 <- paste(c(0, stimes[1:(nn - 1)]), stimes[1:nn], sep = "-")
-col1 <- c(col1[1:3], "...", col1[(nn - 1):nn])
-col2 <- c(rep(1, 3), "...", rep(1, 2))
-col3 <- c(rep("1/95", 3), "...", rep("1/95", 2))
-col4 <- c(1:3, "...", (nn - 1):nn)
-col5 <- c("1/95", "2/95", "3/95", "...", "94/95", "1")
+col1 <- c(col1[1:4], "...", col1[(nn - 1):nn])
+col2 <- c(rep(1, 3), 2, "...", rep(1, 2))
+col3 <- c(rep("1/95", 3), "2/95", "...", rep("1/95", 2))
+col4 <- c(c(1:3, 5), "...", (nn - 1):nn)
+col5 <- c("1/95", "2/95", "3/95", "5/95", "...", "94/95", "1")
 oxtabecdf <- as.data.frame(cbind(col1, col2, col3, col4,col5))
 oxtabecdf <- rbind(oxtabecdf,c("total", nn, 1, "", ""))
 colnames(oxtabecdf) <- c("time (hours)", "frequency", "relative frequency", "cumulative frequency", "cumulative relative frequency")
@@ -416,14 +416,14 @@ oxtabecdf_hux <- oxtabecdf %>%
   as_hux() %>%
   set_label("tab:oxfreqecdf") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(c(1:2, 8), everywhere, brdr(1, "solid", "black")) %>%
+  set_top_border(c(1:2, 9), everywhere, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.8) %>% 
   set_align(everywhere, everywhere, "center") %>% 
   set_number_format(everywhere, 1, 1) %>%
   set_number_format(everywhere, -1, 0) %>%
-  set_number_format(8, 3, 0) %>%
-  set_number_format(7, 5, 0) %>%
+  set_number_format(9, 3, 0) %>%
+  set_number_format(8, 5, 0) %>%
   set_bottom_padding(0) %>%
   set_top_padding(0) %>%
   set_caption("(ref:oxfreqecdf-caption)")
