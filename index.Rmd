@@ -1,14 +1,16 @@
 --- 
 title: "STAT0002 Introduction to Probability and Statistics"
-author: "Paul Northrop, Department of Statistical Science, University College London"
+author: "Dr Paul Northrop"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
+classoption: openany, a4paper
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 description: "Produces STAT0002 notes in an accessible format"
 lang: "en-gb"
+fontsize: 11pt
 ---
 
 # The purpose of these notes {-}
@@ -31,6 +33,6 @@ options(knit.graphics.auto_pdf = TRUE)
 ```{r, figsetup, include=FALSE}
 knitr::opts_chunk$set(
   fig.align = 'center',
-  out.width = '80%'
+  out.width = '75%'
 )
 ```

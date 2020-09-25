@@ -2,7 +2,7 @@
 
 ## Simple linear regression
 
-## Looking at Scatter plots
+## Looking at scatter plots
 
 ## Model checking
 

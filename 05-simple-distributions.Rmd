@@ -10,19 +10,19 @@ options(
         huxtable.bookdown            = TRUE
       )
 
-is_latex <- guess_knitr_output_format() == "latex"
-# is_latex <- TRUE
-knitr::knit_hooks$set(
-  barrier = function(before, options, envir) {
-    if (! before && is_latex) knitr::asis_output("\\FloatBarrier")
-  }
-)
+#is_latex <- guess_knitr_output_format() == "latex"
+## is_latex <- TRUE
+#knitr::knit_hooks$set(
+#  barrier = function(before, options, envir) {
+#    if (! before && is_latex) knitr::asis_output("\\FloatBarrier")
+#  }
+#)
 ```
 
 ```{r, figsetup5, include=FALSE}
 knitr::opts_chunk$set(
   fig.align = 'center',
-  out.width = '80%'
+  out.width = '75%'
 )
 ```
 

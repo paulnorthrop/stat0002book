@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 4 Random variables | STAT0002 Introduction to Probability and Statistics</title>
+  <title>Chapter 4 Random variables | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 4 Random variables | STAT0002 Introduction to Probability and Statistics" />
+  <meta property="og:title" content="Chapter 4 Random variables | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,12 +16,12 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 4 Random variables | STAT0002 Introduction to Probability and Statistics" />
+  <meta name="twitter:title" content="Chapter 4 Random variables | STAT0002 Introduction to Probability and Statistics" />
   
   <meta name="twitter:description" content="Produces STAT0002 notes in an accessible format" />
   
 
-<meta name="author" content="Paul Northrop, Department of Statistical Science, University College London" />
+<meta name="author" content="Dr Paul Northrop" />
 
 
 <meta name="date" content="2020-09-25" />
@@ -176,7 +176,7 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a></li>
-<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking-at-scatter-plots"><i class="fa fa-check"></i><b>8.2</b> Looking at Scatter plots</a></li>
+<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking-at-scatter-plots"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
 <li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.1</b> Outliers and influential observations</a></li>
 </ul></li>
@@ -213,7 +213,7 @@
 
             <section class="normal" id="section-">
 <div id="rvs" class="section level1">
-<h1><span class="header-section-number">Section 4</span> Random variables</h1>
+<h1><span class="header-section-number">Chapter 4</span> Random variables</h1>
 <p><strong>Example</strong>. We return to the space shuttle example.</p>
 <p>Consider what happens to the O-rings on a particular test flight, at a particular temperature. A given O-ring either is damaged (shows signs of thermal distress) or it is not damaged. Let <span class="math inline">\(D\)</span> denote the event that an O-ring is damaged and <span class="math inline">\(\bar{D}\)</span> the event that it is not damaged. If we consider all 6 O-rings, there are many possible outcomes in the sample space, <span class="math inline">\(2^6=64\)</span>, in fact:
 <span class="math display">\[ S= \{DDDDDD\}, \{DDDDD\bar{D}\}, \ldots, \{D\bar{D}\bar{D}\bar{D}\bar{D}\bar{D}\}, 
@@ -255,7 +255,7 @@ for any integer <span class="math inline">\(x\)</span></p>
 <p><strong>Example</strong>. We return to the Oxford birth times example.</p>
 <p>The top plot in Figure <a href="rvs.html#fig:oxcontvar">4.1</a> shows a histogram of the 95 birth times. The variable of interest in this example is a time. Time is a continuous variable: in principle, the times in this dataset could take any positive real value, uncountably many values. In practice, these times have been recorded discretely, in units of 1/10 of an hour or 1/4 of an hour.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxcontvar"></span>
-<img src="images/ox_cont_var.png" alt="Top: histogram of the Oxford birth durations. Second from top: histogram of 1,000 values simulated from a distribution fitted to the data. Second from bottom: similarly for 10,000 simulated values. Bottom: p.d.f. of the distribution fitted to the Oxford birth times data." width="80%" />
+<img src="images/ox_cont_var.png" alt="Top: histogram of the Oxford birth durations. Second from top: histogram of 1,000 values simulated from a distribution fitted to the data. Second from bottom: similarly for 10,000 simulated values. Bottom: p.d.f. of the distribution fitted to the Oxford birth times data." width="75%" />
 <p class="caption">
 Figure 4.1: Top: histogram of the Oxford birth durations. Second from top: histogram of 1,000 values simulated from a distribution fitted to the data. Second from bottom: similarly for 10,000 simulated values. Bottom: p.d.f. of the distribution fitted to the Oxford birth times data.
 </p>
@@ -270,7 +270,7 @@ Figure 4.1: Top: histogram of the Oxford birth durations. Second from top: histo
 </ol>
 <p>Therefore, p.d.f.s are always non-negative and integrate to 1. The support of a continuous random variable is the set of values for which the p.d.f. is positive. Suppose that we wish to find <span class="math inline">\(P(4 &lt; T \leq 12)\)</span>. To find the proportion of times between 4 and 12 using a histogram, we sum the areas of all bins between 4 and 12, that is, we find the area shaded in the histogram in Figure <a href="rvs.html#fig:oxshady">4.2</a>. To do this using the p.d.f. we do effectively the same thing: we find the area under the p.d.f. <span class="math inline">\(f_T(t)\)</span> between 4 and 12. Since <span class="math inline">\(f_T(t)\)</span> is a smooth continuous curve, (that is, the bin widths are zero) we integrate <span class="math inline">\(f_T(t)\)</span> between 4 and 12.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxshady"></span>
-<img src="images/ox_shady.png" alt="Top: histogram of the Oxford birth durations. Bottom: p.d.f. of the distribution fitted to the Oxford birth duration data." width="80%" />
+<img src="images/ox_shady.png" alt="Top: histogram of the Oxford birth durations. Bottom: p.d.f. of the distribution fitted to the Oxford birth duration data." width="75%" />
 <p class="caption">
 Figure 4.2: Top: histogram of the Oxford birth durations. Bottom: p.d.f. of the distribution fitted to the Oxford birth duration data.
 </p>
@@ -286,7 +286,7 @@ P(a &lt; X \leq b) = \int_{a}^{b} f_X(x) \,\mathrm{d}x,
 for all <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(a &lt; b\)</span>.</p>
 <p>Figure <a href="rvs.html#fig:pdfshady">4.3</a> illustrates the properties of a p.d.f..</p>
 <div class="figure" style="text-align: center"><span id="fig:pdfshady"></span>
-<img src="images/pdf_shady.png" alt="Properties of a p.d.f.. The areas that correspond to the probability that a random variable takes a value in a given interval are shaded." width="80%" />
+<img src="images/pdf_shady.png" alt="Properties of a p.d.f.. The areas that correspond to the probability that a random variable takes a value in a given interval are shaded." width="75%" />
 <p class="caption">
 Figure 4.3: Properties of a p.d.f.. The areas that correspond to the probability that a random variable takes a value in a given interval are shaded.
 </p>
@@ -460,7 +460,7 @@ This makes sense. If we multiply all observations by <span class="math inline">\
 where <span class="math inline">\(\mathrm{cov}(X_1,X_2)\)</span> is the <strong>covariance</strong> between the random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>. Covariance is a measure of the strength of <strong>linear</strong> association. If <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are independent (have no association of any kind) then <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because they have no linear association. However, it is possible for <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> to be dependent but <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because, although they have some kind of association, they have no <strong>linear</strong> association. Thus, independence is a stronger requirement than zero covariance.</p>
 <p>Returing to general <span class="math inline">\(n\)</span> we have
 <span class="math display">\[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i &lt; j} \mathrm{cov}(X_i,X_j). \]</span>
-If <span class="math inline">\(\mathrm{cov}(X_i,X_j)=0\)</span> for all <span class="math inline">\(i &lt; j\)</span> then equation <a href="rvs.html#eq:varsum">(4.8)</a> holds. We will study covariance, and its standardised form <strong>correlation</strong>, in Section <a href="correlationchapter.html#correlationchapter">9</a>.</p>
+If <span class="math inline">\(\mathrm{cov}(X_i,X_j)=0\)</span> for all <span class="math inline">\(i &lt; j\)</span> then equation <a href="rvs.html#eq:varsum">(4.8)</a> holds. We will study covariance, and its standardised form <strong>correlation</strong>, in Chapter <a href="correlationchapter.html#correlationchapter">9</a>.</p>
 </div>
 </div>
 <div id="locations" class="section level2">

@@ -10,26 +10,26 @@ options(
         huxtable.bookdown            = TRUE
       )
 
-is_latex <- guess_knitr_output_format() == "latex"
-# is_latex <- TRUE
-knitr::knit_hooks$set(
-  barrier = function(before, options, envir) {
-    if (! before && is_latex) knitr::asis_output("\\FloatBarrier")
-  }
-)
+#is_latex <- guess_knitr_output_format() == "latex"
+## is_latex <- TRUE
+#knitr::knit_hooks$set(
+#  barrier = function(before, options, envir) {
+#    if (! before && is_latex) knitr::asis_output("\\FloatBarrier")
+#  }
+#)
 ```
 
 ```{r, figsetup3, include=FALSE}
 knitr::opts_chunk$set(
   fig.align = 'center',
-  out.width = '80%'
+  out.width = '75%'
 )
 ```
 
 ```{r, echo = FALSE}
 include_cropped_graphics <- function(x) {
-#  knitr::include_graphics(knitr::plot_crop(x))
-  knitr::include_graphics(x)
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
 }
 ```
 
@@ -95,10 +95,10 @@ More generally, consider some event $E$ based on the outcomes of an experiment. 
 
 We suppose that 
 $$\mbox{the relative frequency of $E$} \,=\,
-\frac{n(E)}{n} \,\longrightarrow\, P(E)\,, \,\, \mbox{~as~}n \longrightarrow \infty.$$
+\frac{n(E)}{n} \,\longrightarrow\, P(E)\,, \,\, \mbox{as }n \longrightarrow \infty.$$
 So, the probability $P(E)$ of the event $E$ is defined as the limiting value of $n(E)/n$ as $n \rightarrow \infty$.  That is,
 \begin{equation}
-P(E) \,\,=\,\, \mathop \mathrm{limit}\limits_{n \rightarrow \infty}\,\frac{n(E)}{n},
+P(E) \,\,=\,\, \mathop {\mathrm{limit}}\limits_{n \rightarrow \infty}\,\frac{n(E)}{n},
 (\#eq:limit)
 \end{equation}
 supposing that this limit exists.  (Note: I have written 'limit' and not 'lim' because this is not a limit in the usual mathematical sense.)
@@ -142,8 +142,8 @@ outcome_hux <- outcome %>%
   as_hux() %>%
   set_label("tab:berk0") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:2, brdr(2, "solid", "black")) %>%
+  set_top_border(2, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:2, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.6) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -165,8 +165,8 @@ n_outcome_hux <- n_outcome %>%
   as_hux() %>%
   set_label("tab:berk0n") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:2, brdr(2, "solid", "black")) %>%
+  set_top_border(2, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:2, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.6) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -235,7 +235,7 @@ We return to the Berkeley admissions example to illustrate conditional probabili
 
 Table \@ref(tab:berk1) contains more information on data relating to graduate admissions in 1973 at Berkeley in the six largest (in terms of numbers of admissions) departments of the university.  
 
-We use the following notation: $M$ for a male applicant, $F$ for a female applicant, $A$ for an accepted applicant, $R$ for a rejected applicant. This is an example of a 2-way contingency table (see Section \@ref(contingency)).
+We use the following notation: $M$ for a male applicant, $F$ for a female applicant, $A$ for an accepted applicant, $R$ for a rejected applicant. This is an example of a 2-way contingency table (see Chapter \@ref(contingency)).
 
 ```{r, echo=FALSE}
 sex_outcome_hux <- sex_outcome %>% 
@@ -243,8 +243,8 @@ sex_outcome_hux <- sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk1") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -273,8 +273,8 @@ n_sex_outcome_hux <- n_sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk1n") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -302,8 +302,8 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk2p") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -332,8 +332,8 @@ pn_sex_outcome_hux <- pn_sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk2pn") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -375,8 +375,8 @@ sex_outcome_hux <- sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk3n") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_background_color(2, everywhere, grey(0.85)) %>%
   set_width(0.7) %>% 
@@ -410,8 +410,8 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk3p") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_background_color(2, everywhere, grey(0.85)) %>%
   set_width(0.7) %>% 
@@ -483,8 +483,8 @@ sex_outcome_hux <- sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk4n") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_background_color(2, 2:3, grey(0.85)) %>%
   set_background_color(3, 2, grey(0.85)) %>%
@@ -512,8 +512,8 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk4p") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_background_color(2, 2:3, grey(0.85)) %>%
   set_background_color(3, 2, grey(0.85)) %>%
@@ -647,8 +647,8 @@ blood_ABO_hux <- blood_ABO %>%
   as_hux() %>%
   set_label("tab:bloodABO") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1, brdr(2, "solid", "black")) %>%
+  set_top_border(2, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -662,8 +662,8 @@ blood_rhesus_hux <- blood_rhesus %>%
   as_hux() %>%
   set_label("tab:bloodrhesus") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1, brdr(2, "solid", "black")) %>%
+  set_top_border(2, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -699,8 +699,8 @@ blood_indep_hux <- blood_indep %>%
   add_colnames("") %>%
   set_label("tab:bloodindep") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(c(2, 4), everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, c(1, 5), brdr(2, "solid", "black")) %>%
+  set_top_border(c(2, 4), everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, c(1, 5), brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.7) %>% 
   set_align(everywhere, everywhere, "center") %>% 
@@ -775,8 +775,8 @@ sex_outcome_hux <- sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk5n") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_background_color(everywhere, 2, grey(0.85)) %>%
   set_width(0.7) %>% 
@@ -796,8 +796,8 @@ p_sex_outcome_hux <- p_sex_outcome %>%
   add_rownames("") %>%
   set_label("tab:berk5p") %>%
   set_top_border(everywhere, everywhere, brdr(0.1, "solid", "white")) %>%
-  set_top_border(2:4, everywhere, brdr(2, "solid", "black")) %>%
-  set_right_border(everywhere, 1:3, brdr(2, "solid", "black")) %>%
+  set_top_border(2:4, everywhere, brdr(1, "solid", "black")) %>%
+  set_right_border(everywhere, 1:3, brdr(1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_background_color(everywhere, 2, grey(0.85)) %>%
   set_width(0.7) %>% 

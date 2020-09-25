@@ -1,14 +1,14 @@
 ```{r, figsetup1, include=FALSE}
 knitr::opts_chunk$set(
   fig.align = 'center',
-  out.width = '80%'
+  out.width = '75%'
 )
 ```
 
 ```{r, echo = FALSE}
 include_cropped_graphics <- function(x) {
-#  knitr::include_graphics(knitr::plot_crop(x))
-  knitr::include_graphics(x)
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
 }
 ```
 
@@ -31,9 +31,7 @@ Before starting a formal statistical analysis it is important to consider carefu
 they have **units** and an **interpretation**. Ask lots of questions of the people who produced the data, clarify the main objectives of the analysis and check for problems with the data.  As we shall see in the in first example on the Space Shuttle, making a careless mistake early in an analysis can have 
 dire consequences.
 
-Many of the real-life problems we will consider required quite complicated data analyses reported in long research papers.  I have summarised and simplified the details where necessary so that they are easier to understand.  However, the main ideas and findings are unchanged. Some examples contain concepts and words which we will not define until later in STAT0002 or STAT0003. However, their meaning should be clear from the context of the problem.
-
-I hope that these investigations will convince you of the importance of the subject of Statistics.
+Many of the real-life problems we will consider required quite complicated data analyses reported in long research papers.  I have summarised and simplified the details where necessary so that they are easier to understand.  However, the main ideas and findings are unchanged. Some examples contain concepts and words which we will not define until later in STAT0002 or STAT0003. However, their meaning should be clear from the context of the problem.  I hope that these investigations will convince you of the importance of the subject of Statistics.
 
 ## Challenger Space Shuttle Catastrophe {#shuttle}
 
@@ -177,6 +175,6 @@ To simulate a fake space shuttle dataset we do the following for each of the 23 
 3. calculate $x_1, \ldots, x_6$ using equation \@ref(eq:xbin);
 4. calculate $y=x_1+\cdots+x_6$, the total number of distressed O-rings.
 
-We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other.   In section \@ref(rvs) we will see that $y$ is a value simulated from a binomial(6, $p$) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.
+We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other.   In Chapter \@ref(rvs) we will see that $y$ is a value simulated from a binomial(6, $p$) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.
 
 

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Section 1 Introduction | STAT0002 Introduction to Probability and Statistics</title>
+  <title>Chapter 1 Introduction | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Section 1 Introduction | STAT0002 Introduction to Probability and Statistics" />
+  <meta property="og:title" content="Chapter 1 Introduction | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,12 +16,12 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Section 1 Introduction | STAT0002 Introduction to Probability and Statistics" />
+  <meta name="twitter:title" content="Chapter 1 Introduction | STAT0002 Introduction to Probability and Statistics" />
   
   <meta name="twitter:description" content="Produces STAT0002 notes in an accessible format" />
   
 
-<meta name="author" content="Paul Northrop, Department of Statistical Science, University College London" />
+<meta name="author" content="Dr Paul Northrop" />
 
 
 <meta name="date" content="2020-09-25" />
@@ -176,7 +176,7 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a></li>
-<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking-at-scatter-plots"><i class="fa fa-check"></i><b>8.2</b> Looking at Scatter plots</a></li>
+<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking-at-scatter-plots"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
 <li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.1</b> Outliers and influential observations</a></li>
 </ul></li>
@@ -213,7 +213,7 @@
 
             <section class="normal" id="section-">
 <div id="introduction" class="section level1">
-<h1><span class="header-section-number">Section 1</span> Introduction</h1>
+<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
 <p>We will introduce core ideas in Probability and Statistics. These ideas will be introduced informally and the mathematical level will be kept as elementary as possible. Examples of real investigations will be used to motivate discussion of the ideas and to illustrate simple statistical methods. In the course STAT0003 the material in STAT0002 will be revisited in a more formal way and more advanced concepts and methods will be introduced.</p>
 <div id="real" class="section level2">
 <h2><span class="header-section-number">1.1</span> Real statistical investigations</h2>
@@ -227,8 +227,7 @@ In practice they are not.</p>
 <p>Before starting a formal statistical analysis it is important to consider carefully the context of the problem. Data are not just numbers. They are recorded values of known <strong>variables</strong>, such as height or weight;
 they have <strong>units</strong> and an <strong>interpretation</strong>. Ask lots of questions of the people who produced the data, clarify the main objectives of the analysis and check for problems with the data. As we shall see in the in first example on the Space Shuttle, making a careless mistake early in an analysis can have
 dire consequences.</p>
-<p>Many of the real-life problems we will consider required quite complicated data analyses reported in long research papers. I have summarised and simplified the details where necessary so that they are easier to understand. However, the main ideas and findings are unchanged. Some examples contain concepts and words which we will not define until later in STAT0002 or STAT0003. However, their meaning should be clear from the context of the problem.</p>
-<p>I hope that these investigations will convince you of the importance of the subject of Statistics.</p>
+<p>Many of the real-life problems we will consider required quite complicated data analyses reported in long research papers. I have summarised and simplified the details where necessary so that they are easier to understand. However, the main ideas and findings are unchanged. Some examples contain concepts and words which we will not define until later in STAT0002 or STAT0003. However, their meaning should be clear from the context of the problem. I hope that these investigations will convince you of the importance of the subject of Statistics.</p>
 </div>
 <div id="shuttle" class="section level2">
 <h2><span class="header-section-number">1.2</span> Challenger Space Shuttle Catastrophe</h2>
@@ -315,7 +314,7 @@ the launch was 31<span class="math inline">\(^\circ\)</span>F (-0.5<span class="
 thermal distress after the flight. What do you notice about these numbers?</p>
 <p>Figure <a href="introduction.html#fig:shuttle1">1.1</a>, which illustrates these data graphically, was examined at the meeting. Despite some of the people present at the meeting suggesting that the launch should be postponed until the temperature reached the lowest temperature experienced in previous launches, the meeting concluded that there was no evidence of a temperature effect on the performance of O-rings and the launch went ahead.</p>
 <div class="figure" style="text-align: center"><span id="fig:shuttle1"></span>
-<img src="images/shuttle1.png" alt="Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been omitted.  No clear association between the number of distressed O-rings and temperature is evident." width="80%" />
+<img src="images/shuttle1.png" alt="Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been omitted.  No clear association between the number of distressed O-rings and temperature is evident." width="75%" />
 <p class="caption">
 Figure 1.1: Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been omitted. No clear association between the number of distressed O-rings and temperature is evident.
 </p>
@@ -479,7 +478,7 @@ Figure 1.1: Number of damaged O-rings plotted against temperature, for flights p
 </tbody>
 </table>
 <div class="figure" style="text-align: center"><span id="fig:shuttle2"></span>
-<img src="images/shuttle2.png" alt="Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been included as hollow circles.  A clear negative association between the number of distress O-rings and temperature is evident." width="80%" />
+<img src="images/shuttle2.png" alt="Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been included as hollow circles.  A clear negative association between the number of distress O-rings and temperature is evident." width="75%" />
 <p class="caption">
 Figure 1.2: Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been included as hollow circles. A clear negative association between the number of distress O-rings and temperature is evident.
 </p>
@@ -496,7 +495,7 @@ Figure 1.2: Number of damaged O-rings plotted against temperature, for flights p
 <p>The plot in Figure <a href="introduction.html#fig:shuttle3">1.3</a> gives you an idea of one of the analyses that <span class="citation">Dalal, Fowlkes, and Hoadley (<a href="#ref-shuttle" role="doc-biblioref">1989</a>)</span> carried out. The sample proportions
 of O-rings showing thermal distress (number of O-rings showing distress divided by 6) are plotted against temperature. Also plotted is a smooth curve fitted to these data. [This analysis is beyond scope of STAT0002/0003. You may study this type of model in STAT0023.]</p>
 <div class="figure" style="text-align: center"><span id="fig:shuttle3"></span>
-<img src="images/shuttle3.png" alt="Proportion of O-rings showing some thermal distress plotted against temperature, with fitted logistic curve.  The fitted curve reflects the apparent negative association between this proportion and temperature." width="80%" />
+<img src="images/shuttle3.png" alt="Proportion of O-rings showing some thermal distress plotted against temperature, with fitted logistic curve.  The fitted curve reflects the apparent negative association between this proportion and temperature." width="75%" />
 <p class="caption">
 Figure 1.3: Proportion of O-rings showing some thermal distress plotted against temperature, with fitted logistic curve. The fitted curve reflects the apparent negative association between this proportion and temperature.
 </p>
@@ -507,7 +506,7 @@ Figure 1.3: Proportion of O-rings showing some thermal distress plotted against 
 <p>If NASA repeated their launches, at exactly the same temperatures, these new data on the number of damaged O-rings would not be the same as the old data and the shape of the new estimated curve would be different from the shape of the old estimated curve. It may be that these 2 curves are quite similar or it could be that they are very different. We could ask them, very politely, repeat this process many times to get a large number of different sets of data. Each set of data produces an estimated curve.</p>
 <p>The dataset (and its estimated curve) we have is just one of many possible datasets that could be produced. We can imagine picking this dataset (and curve) at random from a big bag of possible datasets (and curves). These ideas are summarised in Figure <a href="introduction.html#fig:shuttlediagram">1.4</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:shuttlediagram"></span>
-<img src="images/shuttle_diagram.png" alt="Diagram to illustrate the idea of repeating an experiment many times.  Each simulated set of flights leads to its own dataset and fitted logistic curve." width="80%" />
+<img src="images/shuttle_diagram.png" alt="Diagram to illustrate the idea of repeating an experiment many times.  Each simulated set of flights leads to its own dataset and fitted logistic curve." width="75%" />
 <p class="caption">
 Figure 1.4: Diagram to illustrate the idea of repeating an experiment many times. Each simulated set of flights leads to its own dataset and fitted logistic curve.
 </p>
@@ -523,14 +522,14 @@ Figure 1.4: Diagram to illustrate the idea of repeating an experiment many times
 </ul>
 <p>Figure <a href="introduction.html#fig:shuttlesimcurves">1.5</a> shows 50 simulated curves and the curve estimated from the real data.</p>
 <div class="figure" style="text-align: center"><span id="fig:shuttlesimcurves"></span>
-<img src="images/shuttle_simcurves.png" alt="50 curves fitted to simulated shuttle test flight data. The curves are similar over the range of temperatures observed in the data (53 to 81 degrees F), but vary greatly for lower temperatures, such as 31 degrees F." width="80%" />
+<img src="images/shuttle_simcurves.png" alt="50 curves fitted to simulated shuttle test flight data. The curves are similar over the range of temperatures observed in the data (53 to 81 degrees F), but vary greatly for lower temperatures, such as 31 degrees F." width="75%" />
 <p class="caption">
 Figure 1.5: 50 curves fitted to simulated shuttle test flight data. The curves are similar over the range of temperatures observed in the data (53 to 81 degrees F), but vary greatly for lower temperatures, such as 31 degrees F.
 </p>
 </div>
 <p>There is a lot of variability in these curves. Notice that the curves are quite close to each other for high temperatures - where we have some data - but that they are very spread out for low temperatures - where we have no data. This is confirmed by figure <a href="introduction.html#fig:shuttlesim">1.6</a> which shows how the estimated probability of O-ring damage depends on temperature.</p>
 <div class="figure" style="text-align: center"><span id="fig:shuttlesim"></span>
-<img src="images/shuttle_sim.png" alt="Histograms of estimated probabilities of O-ring damage at different temperatures." width="80%" />
+<img src="images/shuttle_sim.png" alt="Histograms of estimated probabilities of O-ring damage at different temperatures." width="75%" />
 <p class="caption">
 Figure 1.6: Histograms of estimated probabilities of O-ring damage at different temperatures.
 </p>
@@ -538,13 +537,13 @@ Figure 1.6: Histograms of estimated probabilities of O-ring damage at different 
 <p>There is a large amount of uncertainty about the esimatated probabilities, particularly at 31<span class="math inline">\(^\circ\)</span>F, where it really mattered.</p>
 <p>To show the effect of sample size (the size of the dataset) we simulate datasets which are larger than the real dataset and see how much the curves fitted to these data vary between the datasets. Figure <a href="introduction.html#fig:shuttlesimcurves10">1.7</a> shows the estimated curves from 50 datasets, each of which is 10 times the size of the real dataset. Figure <a href="introduction.html#fig:shuttlesimcurves100">1.8</a> shows curves for datasets which are 100 times the size of the original dataset. As the sample size increases the variability decreases and so the uncertainty decreases.</p>
 <div class="figure" style="text-align: center"><span id="fig:shuttlesimcurves10"></span>
-<img src="images/shuttle_simcurves10.png" alt="50 curves fitted to simulated shuttle test flight datasets that are each 10 times the size of the real dataset.  In comparision to the curves based on the real dataset these curves vary less, but are still most variable for low temperatures." width="80%" />
+<img src="images/shuttle_simcurves10.png" alt="50 curves fitted to simulated shuttle test flight datasets that are each 10 times the size of the real dataset.  In comparision to the curves based on the real dataset these curves vary less, but are still most variable for low temperatures." width="75%" />
 <p class="caption">
 Figure 1.7: 50 curves fitted to simulated shuttle test flight datasets that are each 10 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary less, but are still most variable for low temperatures.
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:shuttlesimcurves100"></span>
-<img src="images/shuttle_simcurves100.png" alt="50 curves fitted to simulated shuttle test flight datasets that are each 100 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary much less, but are still most variable for low temperatures." width="80%" />
+<img src="images/shuttle_simcurves100.png" alt="50 curves fitted to simulated shuttle test flight datasets that are each 100 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary much less, but are still most variable for low temperatures." width="75%" />
 <p class="caption">
 Figure 1.8: 50 curves fitted to simulated shuttle test flight datasets that are each 100 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary much less, but are still most variable for low temperatures.
 </p>
@@ -573,7 +572,7 @@ X =
 <li>calculate <span class="math inline">\(x_1, \ldots, x_6\)</span> using equation <a href="introduction.html#eq:xbin">(1.1)</a>;</li>
 <li>calculate <span class="math inline">\(y=x_1+\cdots+x_6\)</span>, the total number of distressed O-rings.</li>
 </ol>
-<p>We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other. In section <a href="rvs.html#rvs">4</a> we will see that <span class="math inline">\(y\)</span> is a value simulated from a binomial(6, <span class="math inline">\(p\)</span>) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.</p>
+<p>We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other. In Chapter <a href="rvs.html#rvs">4</a> we will see that <span class="math inline">\(y\)</span> is a value simulated from a binomial(6, <span class="math inline">\(p\)</span>) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.</p>
 
 </div>
 </div>

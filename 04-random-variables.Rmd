@@ -1,14 +1,14 @@
 ```{r, figsetup4, include=FALSE}
 knitr::opts_chunk$set(
   fig.align = 'center',
-  out.width = '80%'
+  out.width = '75%'
 )
 ```
 
 ```{r, echo = FALSE}
 include_cropped_graphics <- function(x) {
-#  knitr::include_graphics(knitr::plot_crop(x))
-  knitr::include_graphics(x)
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
 }
 ```
 
@@ -303,7 +303,7 @@ where $\mathrm{cov}(X_1,X_2)$ is the **covariance** between the random variables
 
 Returing to general $n$ we have
 \[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i < j} \mathrm{cov}(X_i,X_j). \]
-If $\mathrm{cov}(X_i,X_j)=0$ for all $i < j$ then equation \@ref(eq:varsum) holds. We will study covariance, and its standardised form **correlation**, in Section \@ref(correlationchapter).
+If $\mathrm{cov}(X_i,X_j)=0$ for all $i < j$ then equation \@ref(eq:varsum) holds. We will study covariance, and its standardised form **correlation**, in Chapter \@ref(correlationchapter).
 
 ## Other measures of location {#locations}
 
