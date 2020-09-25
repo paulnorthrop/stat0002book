@@ -433,7 +433,7 @@ oxtabecdf_hux
 Figure \@ref(fig:oxcumfreq2) shows the resulting graph.  Notice that the shape is similar to Figure \@ref(fig:oxcumfreq) but it is less smooth. The function (from time on the horizontal axis to cumulative relative frequency on the vertical axis) is often called the **empirical cumulative distribution function** or **empirical c.d.f**.  The meaning will become clearer when we look at c.d.f.s in Section \@ref(discrete).
 
 ```{r echo=FALSE, oxcumfreq2, fig.show='hold', fig.cap='A cumulative relative frequency distribution of the Oxford birth times, with classes defined so that there is one data value in each class.'}
-include_cropped_graphics("images/ox_cum_freq2.png")
+include_cropped_graphics("images/ox_cum_freq2new.png")
 ```
 
 Sometimes data are given to us in the form of Table \@ref(tab:oxfreq) and the individual data values are not available.  For example, some birth data published by the Office of National Statistics data give mother's age in 5 year age bands.  Data provided in this form are called **grouped data**. We will analyse data from tables in Chapter \@ref(contingency).

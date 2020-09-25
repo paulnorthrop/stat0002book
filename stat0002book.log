@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.9.25)  25 SEP 2020 19:24
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.9.25)  25 SEP 2020 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,10 +1190,10 @@ File: images/shapes.png Graphic file (type bmp)
 File: images/ox_cum_freq.png Graphic file (type bmp)
 <images/ox_cum_freq.png>
 [24]
-File: images/ox_cum_freq2.png Graphic file (type bmp)
-<images/ox_cum_freq2.png>
+File: images/ox_cum_freq2new.png Graphic file (type bmp)
+<images/ox_cum_freq2new.png>
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1168--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1178--1180
 
  []
 
@@ -1214,7 +1214,7 @@ File: images/ox_box_adv.png Graphic file (type bmp)
 File: images/shuttle_barplots.png Graphic file (type bmp)
 <images/shuttle_barplots.png>
 
-Overfull \hbox (1.9928pt too wide) in alignment at lines 1380--1380
+Overfull \hbox (1.9928pt too wide) in alignment at lines 1390--1390
 [][][][] 
  []
 
@@ -1246,7 +1246,7 @@ File: images/election_scatter1a.png Graphic file (type bmp)
 File: images/election_scatter1b.png Graphic file (type bmp)
 <images/election_scatter1b.png>
 [38]
-Overfull \hbox (13.99998pt too wide) in alignment at lines 1787--1787
+Overfull \hbox (13.99998pt too wide) in alignment at lines 1797--1797
 [][][][] 
  []
 
@@ -1280,82 +1280,82 @@ Chapter 3.
 File: images/coin.png Graphic file (type bmp)
 <images/coin.png>
 [48] [49]
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2088--2088
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2098--2098
 [][][] 
  []
 
 
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2129--2129
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2139--2139
 [][][] 
  []
 
 [50] [51]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2264--2264
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2274--2274
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2327--2327
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2337--2337
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2390--2390
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2400--2400
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2453--2453
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2463--2463
 [][][][] 
  []
 
 [52]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2544--2544
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2554--2554
 [][][][] 
  []
 
 [53]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2617--2617
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2627--2627
 [][][][] 
  []
 
 [54]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2737--2737
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2747--2747
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2803--2803
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2813--2813
 [][][][] 
  []
 
 [55] [56] [57]
-Overfull \hbox (1.00714pt too wide) in alignment at lines 2976--2976
+Overfull \hbox (1.00714pt too wide) in alignment at lines 2986--2986
 [][] 
  []
 
 
-Overfull \hbox (1.00714pt too wide) in alignment at lines 3020--3020
+Overfull \hbox (1.00714pt too wide) in alignment at lines 3030--3030
 [][] 
  []
 
 [58]
-Overfull \hbox (2.00711pt too wide) in alignment at lines 3093--3093
+Overfull \hbox (2.00711pt too wide) in alignment at lines 3103--3103
 [][][][][][] 
  []
 
 [59]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3224--3224
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3234--3234
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3283--3283
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3293--3293
 [][][][] 
  []
 
 [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 3336--3338
+Underfull \hbox (badness 10000) in paragraph at lines 3346--3348
 
  []
 
@@ -1373,7 +1373,7 @@ File: images/ox_shady.png Graphic file (type bmp)
 File: images/pdf_shady.png Graphic file (type bmp)
 <images/pdf_shady.png>
 [66] [67] [68] [69]
-Underfull \hbox (badness 10000) in paragraph at lines 3711--3713
+Underfull \hbox (badness 10000) in paragraph at lines 3721--3723
 
  []
 
@@ -1436,11 +1436,11 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3901.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3911.
 [79
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3901.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3911.
 (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
 Package polyglossia Info: Option: english variant=british.
@@ -1448,17 +1448,17 @@ LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3901.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3901.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3911.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3911.
 
 Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: 3C36730512C1E2FBC16E97FE330FC5EE;11347.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3901.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3911.
  ) 
 Here is how much of TeX's memory you used:
  23098 strings out of 481673
- 442669 string characters out of 5931483
- 888069 words of memory out of 5000000
+ 442702 string characters out of 5931483
+ 891064 words of memory out of 5000000
  39830 multiletter control sequences out of 15000+600000
  541771 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

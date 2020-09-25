@@ -1032,7 +1032,7 @@ Column 4 of Table \ref{tab:oxfreq} contains the total number of observations wit
 \caption{A cumulative relative frequency distribution of the Oxford birth times.}\label{fig:oxcumfreq}
 \end{figure}
 
-The shape of this plot depends on the choice of the classes. We could increase the detail in the plot by increasing the number of classes, that is, by decreasing the class width. In an extreme case we could choose the classes so that there is only one observation in each class. Table \ref{tab:oxfreqecdf} shows how this could be done.
+The shape of this plot depends on the choice of the classes. We could increase the detail in the plot by increasing the number of classes, that is, by decreasing the class width. In an extreme case we could choose the classes so that there is a class for every unique value in the data. Table \ref{tab:oxfreqecdf} shows how this could be done.
 
 
 
@@ -1046,7 +1046,7 @@ The shape of this plot depends on the choice of the classes. We could increase t
 \begin{centerbox}
 \begin{threeparttable}
 \captionsetup{justification=centering,singlelinecheck=off}
-\caption{\label{tab:oxfreqecdf} Frequency table of the Oxford birth times, with one observation in each class.}
+\caption{\label{tab:oxfreqecdf} Frequency table of the Oxford birth times, with one observation per class.}
  \setlength{\tabcolsep}{0pt}
 \begin{tabularx}{0.8\textwidth}{p{0.16\textwidth} p{0.16\textwidth} p{0.16\textwidth} p{0.16\textwidth} p{0.16\textwidth}}
 
@@ -1089,6 +1089,16 @@ The shape of this plot depends on the choice of the classes. We could increase t
 \multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1/95\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3/95\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2.1-2.5\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2/95\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 5\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.16\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.16\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 5/95\huxbpad{0pt}}} \tabularnewline[-0.5pt]
 
 
 \hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
@@ -1143,7 +1153,7 @@ Figure \ref{fig:oxcumfreq2} shows the resulting graph. Notice that the shape is 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/ox_cum_freq2} 
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_cum_freq2new} 
 
 }
 
