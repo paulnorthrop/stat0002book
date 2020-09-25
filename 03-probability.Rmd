@@ -98,7 +98,7 @@ $$\mbox{the relative frequency of $E$} \,=\,
 \frac{n(E)}{n} \,\longrightarrow\, P(E)\,, \,\, \mbox{~as~}n \longrightarrow \infty.$$
 So, the probability $P(E)$ of the event $E$ is defined as the limiting value of $n(E)/n$ as $n \rightarrow \infty$.  That is,
 \begin{equation}
-P(E) \,\,=\,\, \mathop {\rm limit}\limits_{n \rightarrow \infty}\,\frac{n(E)}{n},
+P(E) \,\,=\,\, \mathop \mathrm{limit}\limits_{n \rightarrow \infty}\,\frac{n(E)}{n},
 (\#eq:limit)
 \end{equation}
 supposing that this limit exists.  (Note: I have written 'limit' and not 'lim' because this is not a limit in the usual mathematical sense.)
@@ -470,13 +470,11 @@ We continue with the Berkeley admissions data. Suppose that we wish to calculate
 
 Look at Table \@ref(tab:berk4n).  The cells that satisfy either $M$ or $A$, or both, have been shaded grey.  To calculate $P(M \mbox{ or } A)$ we simply sum the numbers of applicants for which either $M$ or $A$, or both, is satisfied and then divide by $n=4526$, that is,
 
-$$
-\begin{eqnarray}
-P(M \mbox{ or } A) &=& \frac{n(M \mbox{ or } A)}{n} \nonumber \\
-          &=& \frac{n(M , A)+n(M , R)+n(F , A)}{n} \nonumber \\
+\begin{eqnarray*}
+P(M \mbox{ or } A) &=& \frac{n(M \mbox{ or } A)}{n} \\
+          &=& \frac{n(M , A)+n(M , R)+n(F , A)}{n} \\
           &=& \frac{1198+1493+557}{4526} = \frac{3248}{4526} = 0.718. 
-\end{eqnarray}
-$$
+\end{eqnarray*}
 
 ```{r, echo=FALSE}
 # Shade all but (R, F)
@@ -502,12 +500,10 @@ sex_outcome_hux
 
 An equivalent way to calculate $P(M \mbox{ or } A)$ is to sum probabilities in Table \@ref(tab:berk4p), that is,
 
-$$
 \begin{eqnarray}
 P(M \mbox{ or } A) &=& P(M \mbox{ and } A) + P(M \mbox{ and }R) + P(F \mbox{ and } A) \\
 &=& 0.265+0.330+0.123 = 0.718. 
 \end{eqnarray}
-$$
 
 ```{r, echo=FALSE}
 # Shade all but (R, F)

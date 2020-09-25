@@ -262,11 +262,11 @@ Figure 4.1: Top: histogram of the Oxford birth durations. Second from top: histo
 </div>
 <p>Suppose that we continue to collect data on birth duration from this hospital, and, as new observations arrive, we add them to the top histogram in Figure <a href="rvs.html#fig:oxcontvar">4.1</a>. We imagine that the times are recorded continuously. As the number of observations <span class="math inline">\(n\)</span> increases we decrease the bin width of the histogram. As <span class="math inline">\(n\)</span> increases to infinity the bin width shrinks to zero and the histogram tends to a smooth continuous curve.</p>
 <p>This is shown in the bottom 3 plots in Figure <a href="rvs.html#fig:oxcontvar">4.1</a>. The extra data are not real. They are data I have simulated, using a computer, to have a distribution with a similar shape to the histogram of the real data.</p>
-<p>Let <span class="math inline">\(T\)</span> denote the time, in hours, that a woman arriving at the hospital takes to give birth. The smooth continuous curve at the bottom of Figure <a href="rvs.html#fig:oxcontvar">4.1</a> is called the <strong>probability density function (p.d.f.)</strong> <span class="math inline">\(f_T(t)\)</span> of the random variable <span class="math inline">\(T\)</span>. Since the total area of the rectangles in a histogram is equal to 1, the area <span class="math inline">\(\int_{-\infty}^{\infty} f_T(t) {\rm ~d}t\)</span> under the p.d.f. <span class="math inline">\(f_T(t)\)</span> is equal to 1.</p>
+<p>Let <span class="math inline">\(T\)</span> denote the time, in hours, that a woman arriving at the hospital takes to give birth. The smooth continuous curve at the bottom of Figure <a href="rvs.html#fig:oxcontvar">4.1</a> is called the <strong>probability density function (p.d.f.)</strong> <span class="math inline">\(f_T(t)\)</span> of the random variable <span class="math inline">\(T\)</span>. Since the total area of the rectangles in a histogram is equal to 1, the area <span class="math inline">\(\int_{-\infty}^{\infty} f_T(t) \, \mathrm{d}t\)</span> under the p.d.f. <span class="math inline">\(f_T(t)\)</span> is equal to 1.</p>
 <p><strong>Definition</strong>. A <strong>probability density function (p.d.f.)</strong> is a function <span class="math inline">\(f_{X}(x)\)</span>, or simply <span class="math inline">\(f(x)\)</span>, such that</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f_X(x) \geq 0\)</span>, for <span class="math inline">\(-\infty &lt; x &lt; \infty\)</span>;</li>
-<li><span class="math inline">\(\displaystyle\int_{-\infty}^{\infty} f_X(x) {\rm ~d}x = 1\)</span>.</li>
+<li><span class="math inline">\(\displaystyle\int_{-\infty}^{\infty} f_X(x) \, \mathrm{d}x = 1\)</span>.</li>
 </ol>
 <p>Therefore, p.d.f.s are always non-negative and integrate to 1. The support of a continuous random variable is the set of values for which the p.d.f. is positive. Suppose that we wish to find <span class="math inline">\(P(4 &lt; T \leq 12)\)</span>. To find the proportion of times between 4 and 12 using a histogram, we sum the areas of all bins between 4 and 12, that is, we find the area shaded in the histogram in Figure <a href="rvs.html#fig:oxshady">4.2</a>. To do this using the p.d.f. we do effectively the same thing: we find the area under the p.d.f. <span class="math inline">\(f_T(t)\)</span> between 4 and 12. Since <span class="math inline">\(f_T(t)\)</span> is a smooth continuous curve, (that is, the bin widths are zero) we integrate <span class="math inline">\(f_T(t)\)</span> between 4 and 12.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxshady"></span>
@@ -276,12 +276,12 @@ Figure 4.2: Top: histogram of the Oxford birth durations. Bottom: p.d.f. of the 
 </p>
 </div>
 <p>Therefore
-<span class="math display">\[ P(4 &lt; T \leq 12) = \displaystyle\int_4^{12} f_T(t) {\rm ~d}t = F_T(12)-F_T(4). \]</span></p>
+<span class="math display">\[ P(4 &lt; T \leq 12) = \displaystyle\int_4^{12} f_T(t) \,\mathrm{d}t = F_T(12)-F_T(4). \]</span></p>
 <p>More generally,
-<span class="math display">\[ P(a &lt; T \leq b) = \displaystyle\int_a^b f_T(t) {\rm ~d}t = F_T(b)-F_T(a). \]</span></p>
+<span class="math display">\[ P(a &lt; T \leq b) = \displaystyle\int_a^b f_T(t) \,\mathrm{d}t = F_T(b)-F_T(a). \]</span></p>
 <p><strong>Definition</strong>. A random variable <span class="math inline">\(X\)</span> is a <strong>continuous random variable</strong> if there exists a p.d.f. <span class="math inline">\(f_X(x)\)</span> such that
 <span class="math display">\[
-P(a &lt; X \leq b) = \int_{a}^{b} f_X(x) {\rm ~d}x,
+P(a &lt; X \leq b) = \int_{a}^{b} f_X(x) \,\mathrm{d}x,
 \]</span>
 for all <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(a &lt; b\)</span>.</p>
 <p>Figure <a href="rvs.html#fig:pdfshady">4.3</a> illustrates the properties of a p.d.f..</p>
@@ -303,9 +303,9 @@ For this random variable <span class="math inline">\(f_X(x)&gt;1\)</span> for an
 12 hours.</li>
 </ul>
 <p><strong>Relationship between the c.d.f. and p.d.f. of a continuous random variable</strong>. For a continuous random variable
-<span class="math display">\[ F_X(x) = P(X \leq x) = \int_{-\infty}^x f_X(u) {\rm ~d}u. \]</span>
+<span class="math display">\[ F_X(x) = P(X \leq x) = \int_{-\infty}^x f_X(u) \,\mathrm{d}u. \]</span>
 Therefore,
-<span class="math display">\[ f_X(x) = \frac{{\rm d}}{{\rm d}x} F_X(x). \]</span></p>
+<span class="math display">\[ f_X(x) = \frac{\mathrm{d}}{\mathrm{d}x} F_X(x). \]</span></p>
 </div>
 <div id="expectation" class="section level2">
 <h2><span class="header-section-number">4.3</span> Expectation</h2>
@@ -345,7 +345,7 @@ This is a weighted average of the values that <span class="math inline">\(X\)</s
 <p><strong>Definition</strong>.
 The expectation <span class="math inline">\(\mathrm{E}(X)\)</span> of a continuous random variable <span class="math inline">\(X\)</span> is given by
 <span class="math display" id="eq:contmean">\[\begin{eqnarray}
-\mathrm{E}(X) = \int_{-\infty}^{\infty} x\,f_X(x) {\rm ~d}x. 
+\mathrm{E}(X) = \int_{-\infty}^{\infty} x\,f_X(x) \,\mathrm{d}x. 
 \tag{4.3}
 \end{eqnarray}\]</span>
 Note:</p>
@@ -353,7 +353,7 @@ Note:</p>
 <li>Like the discrete case, this is a weighted average of the values that <span class="math inline">\(X\)</span> can take, but now each value is weighted by the
 p.d.f. <span class="math inline">\(f_X(x)\)</span>.</li>
 <li>The range of integration in equation <a href="rvs.html#eq:contmean">(4.3)</a> is over the whole real line but, in practice, integration will be over the range of possible values of <span class="math inline">\(X\)</span>.</li>
-<li><span class="math inline">\(\mathrm{E}(X)\)</span> exists only if <span class="math inline">\(\int_{-\infty}^{\infty} |x|\,f_X(x) {\rm ~d}x &lt; \infty\)</span>.</li>
+<li><span class="math inline">\(\mathrm{E}(X)\)</span> exists only if <span class="math inline">\(\int_{-\infty}^{\infty} |x|\,f_X(x) \,\mathrm{d}x &lt; \infty\)</span>.</li>
 </ul>
 </div>
 <div id="properties-of-mathrmex" class="section level3">
@@ -375,7 +375,7 @@ This makes sense. If we multiply all observations by <span class="math inline">\
 \mathrm{E}(Y) = \mathrm{E}[g(X)] =
 \begin{cases} 
 \displaystyle\sum_x g(x)\,P(X=x) &amp; \text{if } X \text{ is discrete}, \\
-\int_{-\infty}^{\infty} g(x)\,f_X(x) {\rm ~d}x &amp; \text{if } X \text{ is continuous}.
+\int_{-\infty}^{\infty} g(x)\,f_X(x) \,\mathrm{d}x &amp; \text{if } X \text{ is continuous}.
 \end{cases}
 \tag{4.4}
 \end{equation}\]</span></p>
@@ -421,10 +421,10 @@ As the sample size <span class="math inline">\(n\)</span> increases to infinity,
 <p>We can define the variance of a continuous random variable in a similar way to a discrete random variable, replacing summation with integration.</p>
 <p><strong>Definition</strong>. The variance <span class="math inline">\(\mathrm{var}(X)\)</span> of a continuous random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mathrm{E}(X)=\mu\)</span> is given by</p>
 <p><span class="math display" id="eq:varicont">\[\begin{equation}
-\mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) {\rm ~d}x. 
+\mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) \,\mathrm{d}x. 
 \tag{4.7}
 \end{equation}\]</span></p>
-<p>Note: <span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists and <span class="math inline">\(\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) {\rm ~d}x &lt; \infty\)</span>.</p>
+<p>Note: <span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists and <span class="math inline">\(\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) \,\mathrm{d}x &lt; \infty\)</span>.</p>
 </div>
 <div id="variance-and-standard-deviation" class="section level3">
 <h3><span class="header-section-number">4.4.3</span> Variance and standard deviation</h3>
@@ -457,9 +457,9 @@ This makes sense. If we multiply all observations by <span class="math inline">\
 \end{equation}\]</span></p>
 <p><strong>Note</strong>. Independence is sufficient for this result to hold but it is not necessary. Taking <span class="math inline">\(n=2\)</span> as an example, in generality we have
 <span class="math display">\[ \mathrm{var}(X_1 + X_2) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + 2\,\mathrm{cov}(X_1,X_2), \]</span>
-where <span class="math inline">\({\rm cov}(X_1,X_2)\)</span> is the <strong>covariance</strong> between the random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>. Covariance is a measure of the strength of <strong>linear</strong> association. If <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are independent (have no association of any kind) then <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because they have no linear association. However, it is possible for <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> to be dependent but <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because, although they have some kind of association, they have no <strong>linear</strong> association. Thus, independence is a stronger requirement than zero covariance.</p>
+where <span class="math inline">\(\mathrm{cov}(X_1,X_2)\)</span> is the <strong>covariance</strong> between the random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>. Covariance is a measure of the strength of <strong>linear</strong> association. If <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are independent (have no association of any kind) then <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because they have no linear association. However, it is possible for <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> to be dependent but <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because, although they have some kind of association, they have no <strong>linear</strong> association. Thus, independence is a stronger requirement than zero covariance.</p>
 <p>Returing to general <span class="math inline">\(n\)</span> we have
-<span class="math display">\[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i &lt; j} {\rm cov}(X_i,X_j). \]</span>
+<span class="math display">\[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i &lt; j} \mathrm{cov}(X_i,X_j). \]</span>
 If <span class="math inline">\(\mathrm{cov}(X_i,X_j)=0\)</span> for all <span class="math inline">\(i &lt; j\)</span> then equation <a href="rvs.html#eq:varsum">(4.8)</a> holds. We will study covariance, and its standardised form <strong>correlation</strong>, in Section <a href="correlationchapter.html#correlationchapter">9</a>.</p>
 </div>
 </div>
@@ -492,7 +492,7 @@ Therefore, <span class="math inline">\(\mathrm{median}(X) = 1\)</span>. However,
 <p>Recall that the sample mode of categorical or discrete data is the value (or values) which occurs most often. We define the mode, mode(<span class="math inline">\(X\)</span>), of a random variable as follows.</p>
 <p>For a discrete random variable <span class="math inline">\(X\)</span>, the mode is the value which has the highest probability of occurring: <span class="math inline">\(P(X=\mathrm{mode}(X))\)</span> will be larger than for any other value <span class="math inline">\(X\)</span> can have. In other words, <span class="math inline">\(\mathrm{mode}(X)\)</span> is the value at which the p.m.f. is maximised.</p>
 <p>For a continuous random variable <span class="math inline">\(X\)</span>, the mode is the value at which the p.d.f. is maximised. <strong>If the maximum occurs at a turning point of <span class="math inline">\(f_X(x)\)</span></strong> then it can be found by solving the equation
-<span class="math display">\[ \frac{{\rm d}}{{\rm d}x} f_X(x)  = 0, \]</span>
+<span class="math display">\[ \frac{\mathrm{d}}{\mathrm{d}x} f_X(x)  = 0, \]</span>
 and checking that you have indeed found a maximum.</p>
 </div>
 </div>
