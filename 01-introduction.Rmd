@@ -35,7 +35,7 @@ Many of the real-life problems we will consider required quite complicated data 
 
 ## Challenger Space Shuttle Catastrophe {#shuttle}
 
-Dalal, S. R., Fowlkes, E. B. and Hoadley, B. (1989) [Risk analysis of the space shuttle: Pre-Challenger prediction of failure.](https://moodle.ucl.ac.uk/mod/resource/view.php?id=84313)
+Dalal, S. R., Fowlkes, E. B. and Hoadley, B. (1989) [Risk analysis of the space shuttle: Pre-Challenger prediction of failure.](https://moodle.ucl.ac.uk/mod/resource/view.php?id=316223)
 *J. Amer. Statist.* Assoc. **84**(408), 945--957.
 
 On 28 January 1986 the space shuttle Challenger exploded shortly after its launch, killing the seven astronauts on board.  
