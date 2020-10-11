@@ -107,7 +107,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-09-25}
+\date{2020-10-11}
 
 \begin{document}
 \maketitle
@@ -122,7 +122,7 @@
 
 These notes supplement the teaching materials available from the \href{https://moodle.ucl.ac.uk/course/view.php?id=8579}{STAT0002 Moodle page}. The teaching events in STAT0002 will follow the general order of the topics covered in these notes.
 
-Please see the \href{https://moodle.ucl.ac.uk/course/view.php?id=8579\&section=1}{Overview} section of the \href{https://moodle.ucl.ac.uk/course/view.php?id=8579}{STAT0002 Moodle page} for important general information about STAT0002.
+Please see the \href{https://moodle.ucl.ac.uk/course/view.php?id=8579\&section=1}{Module overview} section of the \href{https://moodle.ucl.ac.uk/course/view.php?id=8579}{STAT0002 Moodle page} for important general information about STAT0002.
 
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
@@ -152,7 +152,7 @@ Many of the real-life problems we will consider required quite complicated data 
 \hypertarget{shuttle}{%
 \section{Challenger Space Shuttle Catastrophe}\label{shuttle}}
 
-Dalal, S. R., Fowlkes, E. B. and Hoadley, B. (1989) \href{https://moodle.ucl.ac.uk/mod/resource/view.php?id=84313}{Risk analysis of the space shuttle: Pre-Challenger prediction of failure.}
+Dalal, S. R., Fowlkes, E. B. and Hoadley, B. (1989) \href{https://moodle.ucl.ac.uk/mod/resource/view.php?id=316223}{Risk analysis of the space shuttle: Pre-Challenger prediction of failure.}
 \emph{J. Amer. Statist.} Assoc. \textbf{84}(408), 945--957.
 
 On 28 January 1986 the space shuttle Challenger exploded shortly after its launch, killing the seven astronauts on board.
@@ -3798,7 +3798,17 @@ and checking that you have indeed found a maximum.
 
 To keep things simple we consider a \textbf{continuous} random variable \(X\). The \(100p\%\) quantile of \(X\) is defined to be the value \(x_p\) such that
 \[ F_X(x_p)=P(X \leq x_p) = p. \]
-Thus, \(x_{1/4}\) is the lower quartile of \(X\), \(x_{1/2}\) is the median of \(X\) and \(x_{3/4}\) is the upper quartile of \(X\). The inter-quartile range is \(x_{3/4}-x_{1/4}\).
+Thus, \(x_{1/4}\) is the lower quartile of \(X\), \(x_{1/2}\) is the median of \(X\) and \(x_{3/4}\) is the upper quartile of \(X\). The inter-quartile range is \(x_{3/4}-x_{1/4}\), which is a measure of spread.
+
+\hypertarget{measures-of-shape}{%
+\section{Measures of shape}\label{measures-of-shape}}
+
+The \textbf{moment coefficient of skewness} of a random variable \(X\) with mean \(\mu\) and standard deviation \(\sigma\) is given by
+\[ \mathrm{E}\left[\left(\frac{X - \mu}{\sigma}\right)^3\right] = \displaystyle\frac{\mathrm{E}\left[\left(X- \mu\right)^3\right]}{\sigma^3}, \]
+provided that \(\mathrm{E}[\left(X- \mu\right)^3]\) exists.
+
+The \textbf{quartile skewness} of a random variable \(X\) with c.d.f \(F_X(x)\) is given by
+\[ \frac{[F_X(3/4) - F_X(1/2)] - [F_X(1/2) - F_X(1/4)]}{F_X(3/4) - F_X(1/4)}. \]
 
 \hypertarget{simple}{%
 \chapter{Simple distributions}\label{simple}}
