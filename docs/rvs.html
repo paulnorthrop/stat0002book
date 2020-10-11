@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-09-27" />
+<meta name="date" content="2020-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -149,6 +149,7 @@
 <li class="chapter" data-level="4.5.2" data-path="rvs.html"><a href="rvs.html#the-mode-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.2</b> The mode of a random variable</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
+<li class="chapter" data-level="4.7" data-path="rvs.html"><a href="rvs.html#measures-of-shape"><i class="fa fa-check"></i><b>4.7</b> Measures of shape</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a><ul>
 <li class="chapter" data-level="5.1" data-path="simple.html"><a href="simple.html#the-bernoulli-distribution"><i class="fa fa-check"></i><b>5.1</b> The Bernoulli distribution</a></li>
@@ -500,7 +501,15 @@ and checking that you have indeed found a maximum.</p>
 <h2><span class="header-section-number">4.6</span> Quantiles</h2>
 <p>To keep things simple we consider a <strong>continuous</strong> random variable <span class="math inline">\(X\)</span>. The <span class="math inline">\(100p\%\)</span> quantile of <span class="math inline">\(X\)</span> is defined to be the value <span class="math inline">\(x_p\)</span> such that
 <span class="math display">\[ F_X(x_p)=P(X \leq x_p) = p. \]</span>
-Thus, <span class="math inline">\(x_{1/4}\)</span> is the lower quartile of <span class="math inline">\(X\)</span>, <span class="math inline">\(x_{1/2}\)</span> is the median of <span class="math inline">\(X\)</span> and <span class="math inline">\(x_{3/4}\)</span> is the upper quartile of <span class="math inline">\(X\)</span>. The inter-quartile range is <span class="math inline">\(x_{3/4}-x_{1/4}\)</span>.</p>
+Thus, <span class="math inline">\(x_{1/4}\)</span> is the lower quartile of <span class="math inline">\(X\)</span>, <span class="math inline">\(x_{1/2}\)</span> is the median of <span class="math inline">\(X\)</span> and <span class="math inline">\(x_{3/4}\)</span> is the upper quartile of <span class="math inline">\(X\)</span>. The inter-quartile range is <span class="math inline">\(x_{3/4}-x_{1/4}\)</span>, which is a measure of spread.</p>
+</div>
+<div id="measures-of-shape" class="section level2">
+<h2><span class="header-section-number">4.7</span> Measures of shape</h2>
+<p>The <strong>moment coefficient of skewness</strong> of a random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> is given by
+<span class="math display">\[ \mathrm{E}\left[\left(\frac{X - \mu}{\sigma}\right)^3\right] = \displaystyle\frac{\mathrm{E}\left[\left(X- \mu\right)^3\right]}{\sigma^3}, \]</span>
+provided that <span class="math inline">\(\mathrm{E}[\left(X- \mu\right)^3]\)</span> exists.</p>
+<p>The <strong>quartile skewness</strong> of a random variable <span class="math inline">\(X\)</span> with c.d.f <span class="math inline">\(F_X(x)\)</span> is given by
+<span class="math display">\[ \frac{[F_X(3/4) - F_X(1/2)] - [F_X(1/2) - F_X(1/4)]}{F_X(3/4) - F_X(1/4)}. \]</span></p>
 
 </div>
 </div>

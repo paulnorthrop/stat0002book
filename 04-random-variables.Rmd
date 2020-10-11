@@ -348,4 +348,13 @@ and checking that you have indeed found a maximum.
 
 To keep things simple we consider a **continuous** random variable $X$.  The $100p\%$ quantile of $X$ is defined to be the value $x_p$ such that 
 \[ F_X(x_p)=P(X \leq x_p) = p. \]
-Thus, $x_{1/4}$ is the lower quartile of $X$, $x_{1/2}$ is the median of $X$ and $x_{3/4}$ is the upper quartile of $X$.  The inter-quartile range is $x_{3/4}-x_{1/4}$.
+Thus, $x_{1/4}$ is the lower quartile of $X$, $x_{1/2}$ is the median of $X$ and $x_{3/4}$ is the upper quartile of $X$.  The inter-quartile range is $x_{3/4}-x_{1/4}$, which is a measure of spread.
+
+## Measures of shape
+
+The **moment coefficient of skewness** of a random variable $X$ with mean $\mu$ and standard deviation $\sigma$ is given by 
+\[ \mathrm{E}\left[\left(\frac{X - \mu}{\sigma}\right)^3\right] = \displaystyle\frac{\mathrm{E}\left[\left(X- \mu\right)^3\right]}{\sigma^3}, \]
+provided that $\mathrm{E}[\left(X- \mu\right)^3]$ exists.
+
+The **quartile skewness** of a random variable $X$ with c.d.f $F_X(x)$ is given by 
+\[ \frac{[F_X(3/4) - F_X(1/2)] - [F_X(1/2) - F_X(1/4)]}{F_X(3/4) - F_X(1/4)}. \]
