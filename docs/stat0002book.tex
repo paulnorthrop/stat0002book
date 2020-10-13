@@ -107,7 +107,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-10-11}
+\date{2020-10-13}
 
 \begin{document}
 \maketitle
@@ -1826,7 +1826,7 @@ We have used a log transformation make positive skew data more symmetric. Other 
 
 It is possible to transform using \(y^c\) for \textbf{any} real value of \(c\), but it is better to stick to simple powers, such as the ones above, as it is more likely that these will have a sensible interpretation. The further \(c\) is from 1 the more difference the transformation makes.
 
-These rainfall data are positive so there is no problem using a transformation of the form \(y^c\). However, if a dataset contains negative values then there are problems: \(y^c\) is only invertible when \(c\) is an integer. If a dataset contains zeros then we cannot use a log transformation, or \(y^c\) for \(c < 0\). If we wish to transform data with non-positive values it is common to add a suitable constant to all values, to produce positive data, before transformation.
+These rainfall data are positive so there is no problem using a transformation of the form \(y^c\). However, if a dataset contains negative values then there are problems. If \(y<0\) then \(y^c\) can only be calculated in special cases where \(c\) is an integer. We also need to be able to invert the transformation, that is, to infer the value of \(y\) uniquely from the value of \(y^c\). If \(y\) can be both negative and positive then this is only possible in the very special cases where \(c\) is an odd integer. If a dataset contains zeros then we cannot use a log transformation, or \(y^c\) for \(c < 0\). The main point is that we need all the data to be positive in order to use the transformation \(y^c\) (or \((y^c - 1) / c\)). If we wish to transform data with non-positive values it is common to add a suitable constant to all values, to produce positive data, before transformation.
 
 The rainfall data range over several orders of magnitude, that is, from one to well over a thousand. Applying a log transformation is often useful when data range over several orders of magnitude.
 
