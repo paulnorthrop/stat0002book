@@ -434,7 +434,7 @@ Instead of using the frequencies in the shaded $M$ row, we have used the probabi
 
 **Exercise**. Show that $P(A \mid F)=0.304$.
 
-**Exercise**. Find $P(R \mid M)$ and $P(R \mid F)$.  What do you notice about $P(A \mid M)$ and $P(R \mid M)$?}
+**Exercise**. Find $P(R \mid M)$ and $P(R \mid F)$.  What do you notice about $P(A \mid M)$ and $P(R \mid M)$?
 
 The calculation of $P(A~|~M)$ in equation \@ref(eq:freqs) based on the frequencies in Table \@ref(tab:berk3n) should make sense to you. From the equivalent calculation in equation \@ref(eq:probs) we can see that the following definition of conditional probability makes sense.
 
