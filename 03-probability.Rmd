@@ -172,6 +172,7 @@ n_outcome_hux <- n_outcome %>%
   set_align(everywhere, everywhere, "center") %>% 
   set_number_format(0) %>%
   set_italic(everywhere, -3, TRUE) %>%
+  set_italic(2, 3, TRUE) %>%
   set_caption("(ref:berk0n-caption)")
 n_outcome_hux    
 ```
