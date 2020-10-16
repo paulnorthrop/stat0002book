@@ -74,7 +74,7 @@ how the proportion of heads Kerrich threw changed as the number of tosses increa
 include_cropped_graphics("images/coin.png")
 ```
 
-Initially the proportion of heads fluctuates greatly but begins to settle down as the number of tosses increases.  After 10,000 tosses the relative frequency of Head is 5067/10,000=0.5067. We might suppose that if Kerrich were able to continue his experiment forever, the proportion of heads would tend to a limiting value which would be very near, if not exactly, 1/2. This hypothetical limiting value if the probability of heads and is denoted by $P(H)$.
+Initially the proportion of heads fluctuates greatly but begins to settle down as the number of tosses increases.  After 10,000 tosses the relative frequency of Head is 5067/10,000=0.5067. We might suppose that if Kerrich were able to continue his experiment forever, the proportion of heads would tend to a limiting value which would be very near, if not exactly, 1/2. This hypothetical limiting value is the probability of heads and is denoted by $P(H)$.
 
 #### Looking at this slightly more formally {-}
 
