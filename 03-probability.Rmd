@@ -743,7 +743,7 @@ This is an example of the **law of total probability**.  The probability of even
 Note that 
 
 * $M$ and $F$ are mutually exclusive events.
-* $P(M \mbox{ or } F) = 1$, that is, together $M$ and $F$ make up the entire sample space of the possible values of sex.  This means that $M$ and $F$ are **exhaustive** events.
+* $P(M \mbox{ or } F) = 1$, that is, together $M$ and $F$ cover the entire sample space of the possible values of sex.  This means that $M$ and $F$ are **exhaustive** events.  More generally, a set of exhaustive events has the property that at least one of these events must occur.
 
 **Definition**. **The law of total probability**. Let events $B_1, \ldots, B_n$ be
 
