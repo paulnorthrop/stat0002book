@@ -598,7 +598,7 @@ provided that all the conditional probabilities are defined.  A sufficient (but 
 
 ## Independence of events {#indepevents}
 
-**Definition**. Two events $A$ and $B$ are **independent**
+**Definition**. Two events $A$ and $B$ are **independent** if
 \begin{equation}
 P(A , B) = P(A) \,P(B).  
 (\#eq:indep)
