@@ -718,8 +718,8 @@ The data in Table \@ref(tab:clouds) resulted from an experiment (@clouds) to see
 could make it produce more rainfall.  52 clouds were studied.  26 of the clouds were chosen at random and seeded with silver nitrate. The amounts of rainfall, in acre-feet, produced by each cloud is recorded.  (An acre-foot is a unit of volume equal to 43,560 feet$^3$ or, approximately, 1233.5m$^3$.)
 
 ```{r, echo=FALSE}
-clouds2 <- data.frame(stat0002::clouds[1:13, 1], stat0002::clouds[1:13, 2],
-                      stat0002::clouds[14:26, 2], stat0002::clouds[14:26, 2])
+clouds2 <- data.frame(stat0002::clouds[1:13, 1], stat0002::clouds[14:26, 1],
+                      stat0002::clouds[1:13, 2], stat0002::clouds[14:26, 2])
 colnames(clouds2) <- c("unseeded", "", "seeded", "")
 ```
 
