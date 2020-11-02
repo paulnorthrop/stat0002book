@@ -307,15 +307,15 @@ If $\mathrm{cov}(X_i,X_j)=0$ for all $i < j$ then equation \@ref(eq:varsum) hold
 
 ### The median of a random variable
 
-Recall that the sample median of a set of observations is the middle observation when the observations are arranged in order of size. We define the median of a random variable $X$ as the value, median($X$), such that
+Recall that the sample median of a set of observations is the middle observation when the observations are arranged in order of size. We define the median of a random variable $X$ as a value, median($X$), such that
 
 \[ P(X < \mathrm{median}(X)) \leq \frac12 \leq P(X \leq \mathrm{median}(X)). \]
 
-In other words, $\mathrm{median}(X)$ is the value where a plot of the c.d.f. $F_X(x)=P(X \leq x)$ crosses $1/2$.
+In other words, $\mathrm{median}(X)$ is a value where a plot of the c.d.f. $F_X(x)=P(X \leq x)$ hits $1/2$.
 
 For a continuous random variable $X$ we have
 \[  F_X(\mathrm{median}(X)) = P(X \leq \mathrm{median}(X)) =\frac12. \]
-and the median will divide the distribution into two parts, each with probability 1/2:
+and a median will divide the distribution into two parts, each with probability 1/2:
 \[ P(X < \mathrm{median}(X)) = P(X > \mathrm{median}(X)) = \frac12. \]
 
 This will not necessarily hold for a discrete distribution.  For example, suppose that 
