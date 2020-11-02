@@ -107,7 +107,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-10-22}
+\date{2020-11-02}
 
 \begin{document}
 \maketitle
@@ -3675,15 +3675,7 @@ This is known as the variance of the probability distribution of \(X\). It is a 
 
 This is a weighted average of the squared differences between the values that \(X\) can take and its mean \(\mu\), each value being weighted by \(P(X=x)\).
 
-Note:
-
-\begin{itemize}
-\tightlist
-\item
-  \(\mathrm{var}(X)\) exists only if \(\mu\) exists and \(\sum_x (x-\mu)^2\,P(X=x) < \infty\). If the number of values \(X\) can take is finite then \(\mathrm{var}(X)\) will always exist.
-\item
-  We often write \(\sigma^2\) or \(\sigma_X^2\) for \(\mathrm{var}(X)\).
-\end{itemize}
+A variance can be infinite. If the number of values that \(X\) can take is finite then \(\mathrm{var}(X)\) will always be finite.
 
 \hypertarget{variance-of-a-continuous-random-variable}{%
 \subsection{Variance of a continuous random variable}\label{variance-of-a-continuous-random-variable}}
@@ -3696,8 +3688,6 @@ We can define the variance of a continuous random variable in a similar way to a
 \mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) \,\mathrm{d}x. 
 \label{eq:varicont}
 \end{equation}
-
-Note: \(\mathrm{var}(X)\) exists only if \(\mu\) exists and \(\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) \,\mathrm{d}x < \infty\).
 
 \hypertarget{variance-and-standard-deviation}{%
 \subsection{Variance and standard deviation}\label{variance-and-standard-deviation}}
@@ -3713,14 +3703,19 @@ There is an alternative way to calculate \(\mathrm{var}(X)\):
 
 \textbf{Definition}. The standard deviation sd\((X)\) of \(X\) is given by sd(\(X\))=\(+\sqrt{\mathrm{var}(X)}\).
 
-Notes on \(\mathrm{var}(X)\):
+Notes on \(\mathrm{var}(X)\) and sd(\(X\)):
 
 \begin{itemize}
 \tightlist
 \item
-  \(\mathrm{var}(X) \geq 0\). A variance cannot be negative.\\
+  \(\mathrm{var}(X) \geq 0\) and \(\mathrm{sd}(X) \geq 0\). Variances and standard deviations cannot be negative.\\
 \item
-  Units: the units of \(\mathrm{var}(X)\) are the square of those of \(X\). For example, if \(X\) is measured in hours then \(\mathrm{var}(X)\) is measured in hours\(^2\) (and sd(\(X\)) is measured in hours).
+  The units of \(\mathrm{var}(X)\) are the square of those of \(X\). For example, if \(X\) is measured in hours then \(\mathrm{var}(X)\) is measured in hours\(^2\) (and sd(\(X\)) is measured in hours). The units of \(\mathrm{sd}(X)\) are the same as those of \(X\).
+\item
+  We often write \(\sigma^2\) or \(\sigma_X^2\) for \(\mathrm{var}(X)\) and
+  \(\sigma\) or \(\sigma_X\) for \(\mathrm{sd}(X)\).
+\item
+  \(\mathrm{var}(X)\) exists only if \(\mu\) exists.
 \end{itemize}
 
 \hypertarget{properties-of-mathrmvarx}{%

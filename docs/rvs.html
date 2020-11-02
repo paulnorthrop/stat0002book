@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-10-22" />
+<meta name="date" content="2020-11-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -411,11 +411,7 @@ As the sample size <span class="math inline">\(n\)</span> increases to infinity,
 \tag{4.6}
 \end{equation}\]</span></p>
 <p>This is a weighted average of the squared differences between the values that <span class="math inline">\(X\)</span> can take and its mean <span class="math inline">\(\mu\)</span>, each value being weighted by <span class="math inline">\(P(X=x)\)</span>.</p>
-<p>Note:</p>
-<ul>
-<li><span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists and <span class="math inline">\(\sum_x (x-\mu)^2\,P(X=x) &lt; \infty\)</span>. If the number of values <span class="math inline">\(X\)</span> can take is finite then <span class="math inline">\(\mathrm{var}(X)\)</span> will always exist.</li>
-<li>We often write <span class="math inline">\(\sigma^2\)</span> or <span class="math inline">\(\sigma_X^2\)</span> for <span class="math inline">\(\mathrm{var}(X)\)</span>.</li>
-</ul>
+<p>A variance can be infinite. If the number of values that <span class="math inline">\(X\)</span> can take is finite then <span class="math inline">\(\mathrm{var}(X)\)</span> will always be finite.</p>
 </div>
 <div id="variance-of-a-continuous-random-variable" class="section level3">
 <h3><span class="header-section-number">4.4.2</span> Variance of a continuous random variable</h3>
@@ -425,7 +421,6 @@ As the sample size <span class="math inline">\(n\)</span> increases to infinity,
 \mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) \,\mathrm{d}x. 
 \tag{4.7}
 \end{equation}\]</span></p>
-<p>Note: <span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists and <span class="math inline">\(\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) \,\mathrm{d}x &lt; \infty\)</span>.</p>
 </div>
 <div id="variance-and-standard-deviation" class="section level3">
 <h3><span class="header-section-number">4.4.3</span> Variance and standard deviation</h3>
@@ -436,11 +431,14 @@ This follows from equations <a href="rvs.html#eq:varidisc">(4.6)</a> and <a href
 <span class="math display">\[ \mathrm{var}(X) = \mathrm{E}\left(X^2\right) - [\mathrm{E}(X)]^2. \]</span></p>
 <p><strong>Exercise</strong>. Prove this.</p>
 <p><strong>Definition</strong>. The standard deviation sd<span class="math inline">\((X)\)</span> of <span class="math inline">\(X\)</span> is given by sd(<span class="math inline">\(X\)</span>)=<span class="math inline">\(+\sqrt{\mathrm{var}(X)}\)</span>.</p>
-<p>Notes on <span class="math inline">\(\mathrm{var}(X)\)</span>:</p>
+<p>Notes on <span class="math inline">\(\mathrm{var}(X)\)</span> and sd(<span class="math inline">\(X\)</span>):</p>
 <ul>
-<li><span class="math inline">\(\mathrm{var}(X) \geq 0\)</span>. A variance cannot be negative.<br />
+<li><span class="math inline">\(\mathrm{var}(X) \geq 0\)</span> and <span class="math inline">\(\mathrm{sd}(X) \geq 0\)</span>. Variances and standard deviations cannot be negative.<br />
 </li>
-<li>Units: the units of <span class="math inline">\(\mathrm{var}(X)\)</span> are the square of those of <span class="math inline">\(X\)</span>. For example, if <span class="math inline">\(X\)</span> is measured in hours then <span class="math inline">\(\mathrm{var}(X)\)</span> is measured in hours<span class="math inline">\(^2\)</span> (and sd(<span class="math inline">\(X\)</span>) is measured in hours).</li>
+<li>The units of <span class="math inline">\(\mathrm{var}(X)\)</span> are the square of those of <span class="math inline">\(X\)</span>. For example, if <span class="math inline">\(X\)</span> is measured in hours then <span class="math inline">\(\mathrm{var}(X)\)</span> is measured in hours<span class="math inline">\(^2\)</span> (and sd(<span class="math inline">\(X\)</span>) is measured in hours). The units of <span class="math inline">\(\mathrm{sd}(X)\)</span> are the same as those of <span class="math inline">\(X\)</span>.</li>
+<li>We often write <span class="math inline">\(\sigma^2\)</span> or <span class="math inline">\(\sigma_X^2\)</span> for <span class="math inline">\(\mathrm{var}(X)\)</span> and
+<span class="math inline">\(\sigma\)</span> or <span class="math inline">\(\sigma_X\)</span> for <span class="math inline">\(\mathrm{sd}(X)\)</span>.</li>
+<li><span class="math inline">\(\mathrm{var}(X)\)</span> exists only if <span class="math inline">\(\mu\)</span> exists.</li>
 </ul>
 </div>
 <div id="properties-of-mathrmvarx" class="section level3">

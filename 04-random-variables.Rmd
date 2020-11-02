@@ -248,10 +248,7 @@ This is known as the variance of the probability distribution of $X$.  It is a m
 
 This is a weighted average of the squared differences between the values that $X$ can take and its mean $\mu$, each value being weighted by $P(X=x)$.
 
-Note:
-
-* $\mathrm{var}(X)$ exists only if  $\mu$ exists and $\sum_x (x-\mu)^2\,P(X=x) < \infty$.  If the number of values $X$ can take is finite then $\mathrm{var}(X)$ will always exist.
-* We often write $\sigma^2$ or $\sigma_X^2$ for $\mathrm{var}(X)$.
+A variance can be infinite. If the number of values that $X$ can take is finite then $\mathrm{var}(X)$ will always be finite.
 
 ### Variance of a continuous random variable
 
@@ -263,8 +260,6 @@ We can define the variance of a continuous random variable in a similar way to a
 \mathrm{var}(X) = \int_{-\infty}^{\infty} (x-\mu)^2 f_X(x) \,\mathrm{d}x. 
 (\#eq:varicont)
 \end{equation}
-
-Note: $\mathrm{var}(X)$ exists only if $\mu$ exists and $\int_{-\infty}^{\infty} (x-\mu)^2\,f_X(x) \,\mathrm{d}x < \infty$.
 
 ### Variance and standard deviation
 
@@ -279,10 +274,13 @@ There is an alternative way to calculate $\mathrm{var}(X)$:
 
 **Definition**. The standard deviation sd$(X)$ of $X$ is given by sd($X$)=$+\sqrt{\mathrm{var}(X)}$. 
 
-Notes on $\mathrm{var}(X)$:
+Notes on $\mathrm{var}(X)$ and sd($X$):
 
-* $\mathrm{var}(X) \geq 0$.  A variance cannot be negative.  
-* Units:  the units of $\mathrm{var}(X)$ are the square of those of $X$. For example, if $X$ is measured in hours then $\mathrm{var}(X)$ is measured in hours$^2$ (and sd($X$) is measured in hours).
+* $\mathrm{var}(X) \geq 0$ and $\mathrm{sd}(X) \geq 0$.  Variances and standard deviations cannot be negative.  
+* The units of $\mathrm{var}(X)$ are the square of those of $X$. For example, if $X$ is measured in hours then $\mathrm{var}(X)$ is measured in hours$^2$ (and sd($X$) is measured in hours).  The units of $\mathrm{sd}(X)$ are the same as those of $X$.
+* We often write $\sigma^2$ or $\sigma_X^2$ for $\mathrm{var}(X)$ and 
+$\sigma$ or $\sigma_X$ for $\mathrm{sd}(X)$.
+* $\mathrm{var}(X)$ exists only if $\mu$ exists.  
 
 ### Properties of $\mathrm{var}(X)$
 
