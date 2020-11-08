@@ -94,37 +94,39 @@
 \contentsline {section}{\numberline {5.3}The binomial distribution}{74}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}A brief look at statistical inference about \(p\)}{76}{subsection.5.3.1}%
 \contentsline {subsubsection}{1. If \(p=0.5\) then how surprising is \(\hat {p}=0.591\)?}{76}{section*.113}%
-\contentsline {subsubsection}{2. Is \(p=0.5\) plausible based on inferences about \(p\)?}{76}{section*.115}%
+\contentsline {subsubsection}{2. Is \(p=0.5\) plausible based on inferences made about \(p\) using the data?}{76}{section*.115}%
 \contentsline {subsection}{\numberline {5.3.2}Summary of the binomial(\(n,p\)) distribution}{78}{subsection.5.3.2}%
 \contentsline {section}{\numberline {5.4}The geometric distribution}{78}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Summary of the geometric(\(p\)) distribution}{80}{subsection.5.4.1}%
 \contentsline {section}{\numberline {5.5}The Poisson distribution}{81}{section.5.5}%
-\contentsline {section}{\numberline {5.6}The uniform distribution}{81}{section.5.6}%
-\contentsline {section}{\numberline {5.7}The exponential distribution}{81}{section.5.7}%
-\contentsline {section}{\numberline {5.8}The normal distribution}{81}{section.5.8}%
-\contentsline {section}{\numberline {5.9}QQ plots}{81}{section.5.9}%
-\contentsline {chapter}{\numberline {6}Statistical Inference}{82}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Sample and populations}{82}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Probability models}{82}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Fitting models}{82}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{82}{section.6.4}%
-\contentsline {section}{\numberline {6.5}What makes an estimator good?}{82}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{82}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Contingency tables}{83}{chapter.7}%
-\contentsline {section}{\numberline {7.1}2-way contingency tables}{83}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{83}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}3-way contingency tables}{83}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Linear regression}{84}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Simple linear regression}{84}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Looking at scatter plots}{84}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Model checking}{84}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{84}{subsection.8.3.1}%
-\contentsline {section}{\numberline {8.4}Use of transformations}{84}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Over-fitting}{84}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Other aspects of regression}{84}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{84}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Correlation}{85}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{85}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Covariance and correlation}{85}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{85}{section.9.3}%
-\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{86}{chapter.10}%
+\contentsline {subsection}{\numberline {5.5.1}Summary of the Poisson(\(\mitmu \)) distribution}{83}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}Summary of these discrete distributions}{83}{section.5.6}%
+\contentsline {section}{\numberline {5.7}The uniform distribution}{85}{section.5.7}%
+\contentsline {section}{\numberline {5.8}The exponential distribution}{85}{section.5.8}%
+\contentsline {section}{\numberline {5.9}The normal distribution}{85}{section.5.9}%
+\contentsline {section}{\numberline {5.10}QQ plots}{85}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Statistical Inference}{86}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sample and populations}{86}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Probability models}{86}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Fitting models}{86}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{86}{section.6.4}%
+\contentsline {section}{\numberline {6.5}What makes an estimator good?}{86}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{86}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Contingency tables}{87}{chapter.7}%
+\contentsline {section}{\numberline {7.1}2-way contingency tables}{87}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{87}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}3-way contingency tables}{87}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Linear regression}{88}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Simple linear regression}{88}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Looking at scatter plots}{88}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Model checking}{88}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{88}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Use of transformations}{88}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Over-fitting}{88}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Other aspects of regression}{88}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{88}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Correlation}{89}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{89}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Covariance and correlation}{89}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{89}{section.9.3}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{90}{chapter.10}%
