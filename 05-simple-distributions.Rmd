@@ -180,7 +180,7 @@ $Y$ has a binomial distribution with parameters $44$ and $p$, $(0 \leq p \leq 1)
 \[ Y \sim \,\mbox{bin}(44,p). \]
 In this example the sample value of $Y$ is $y=26$.
 
-As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability $p$ that a trial results in a success. Suppose that the 44 babies born on 21st December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability $p$ that a baby chosen randomly from this population is a boy, or equivalently, the proportion $p$ of babies in this population who are boys.
+As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability $p$ that a trial results in a 1. Suppose that the 44 babies born on 21st December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability $p$ that a baby chosen randomly from this population is a boy, or equivalently, the proportion $p$ of babies in this population who are boys.
 
 **Exercise**. What is a sensible estimate $\hat{p}$ of $p$?  
 
@@ -231,8 +231,8 @@ In modern Statistics method 2. (**interval estimation**) is often preferred to 1
 
 ### Summary of the binomial($n,p$) distribution
 
-*  **Situation**: the number of successes in $n$ independent Bernoulli trials, 
-each trial having the same probability $p$ of success.
+*  **Situation**: the number of 1s in $n$ independent Bernoulli trials, 
+each trial having the same probability $p$ of obtaining a 1.
 *  If $Y$ is a discrete random variable with p.m.f.
 \[ P(Y=y) \,=\, {n \choose y} p^y\,(1-p)^{n-y}, \qquad y=0,1,\ldots,n, \]
 for some $p$, $0 \leq p \leq 1$, then $Y \sim \mbox{bin}(n,p)$.
