@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.9.25)  8 NOV 2020 01:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.9.25)  8 NOV 2020 01:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1436,11 +1436,11 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3918.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3920.
 [79
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3918.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3920.
 (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
 Package polyglossia Info: Option: english variant=british.
@@ -1448,12 +1448,12 @@ LaTeX Info: Redefining \rmfamily on input line 20.
 LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 )
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3918.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3918.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3920.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3920.
 
 Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: 36023BF0A618CBE68D2F522022685718;11493.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3918.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3920.
  ) 
 Here is how much of TeX's memory you used:
  23099 strings out of 481673
