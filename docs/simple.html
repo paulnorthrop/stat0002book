@@ -257,23 +257,27 @@
 <div id="the-bernoulli-distribution" class="section level2">
 <h2><span class="header-section-number">5.2</span> The Bernoulli distribution</h2>
 <p>Consider the first birth. The outcome is either a boy <span class="math inline">\(B\)</span> or a girl <span class="math inline">\(G\)</span>. We define a random variable</p>
-<p><span class="math display">\[
-\begin{eqnarray}
-X_1 &amp;=&amp; \left\{ \begin{array}{ll}0&amp;\mbox{  if the first baby is a girl} \\
-                                 1&amp;\mbox{  if the first baby is a boy.}\end{array}\right.
-\end{eqnarray}
-\]</span></p>
+<p><span class="math display">\[\begin{equation}
+X_1 =
+\begin{cases} 
+0 &amp; \text{ if the first baby is a girl} \\
+1 &amp; \text{ if the first baby is a boy}.
+\end{cases}
+\end{equation}\]</span></p>
 <p><span class="math inline">\(X_1\)</span> is the outcome of a <strong>Bernoulli trial</strong>, that is, an experiment which has exactly two possible outcomes. Here, we have mapped the birth of a girl to the value 0 and the birth of a boy to the value 1. This is arbitrary: we could have done this the other way round.</p>
 <p>Let
 <span class="math display">\[\begin{eqnarray*}
 P(X_1=0)&amp;=&amp;1-p \\
 P(X_1=1)&amp;=&amp;p. 
 \end{eqnarray*}\]</span>
-Therefore,
-<span class="math display">\[\begin{eqnarray*}
-X_1 &amp;=&amp; \left\{ \begin{array}{ll}0&amp; \mbox{  with probability (w.p.)}\, \,1-p \\
-                                 1&amp; \mbox{  with probability (w.p.)}\, \,p.\end{array}\right.
-\end{eqnarray*}\]</span></p>
+Therefore,</p>
+<p><span class="math display">\[\begin{equation}
+X_1 =
+\begin{cases} 
+0 &amp; \text{ with probability (w.p.)} \,\,1-p \\
+1 &amp; \text{ with probability (w.p.)} \,\,p.
+\end{cases}
+\end{equation}\]</span></p>
 <p><span class="math inline">\(X_1\)</span> has a Bernoulli distribution with parameter <span class="math inline">\(p\)</span>, <span class="math inline">\((0 \leq p \leq 1)\)</span>, or, for short,
 <span class="math display">\[ X_1 \sim
 \,\mbox{Bernoulli}(p). 
@@ -344,7 +348,7 @@ p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44.
 The combinatorial term <span class="math inline">\({44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}\)</span>
 gives the number of ways in which <span class="math inline">\(y\)</span> boys births can be positioned amongst the 44 births.</p>
 <p><span class="math inline">\(Y\)</span> has a binomial distribution with parameters <span class="math inline">\(44\)</span> and <span class="math inline">\(p\)</span>, <span class="math inline">\((0 \leq p \leq 1)\)</span>, or, for short,
-<span class="math display">\[ Y \sim \,\mbox{bin}(44,p). \]</span>
+<span class="math display">\[ Y \sim \,\mbox{binomial}(44,p). \]</span>
 In this example the sample value of <span class="math inline">\(Y\)</span> is <span class="math inline">\(y=26\)</span>.</p>
 <p>As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability <span class="math inline">\(p\)</span> that a trial results in a 1. Suppose that the 44 babies born on 21st December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability <span class="math inline">\(p\)</span> that a baby chosen randomly from this population is a boy, or equivalently, the proportion <span class="math inline">\(p\)</span> of babies in this population who are boys.</p>
 <p><strong>Exercise</strong>. What is a sensible estimate <span class="math inline">\(\hat{p}\)</span> of <span class="math inline">\(p\)</span>?</p>
@@ -390,11 +394,11 @@ Figure 5.2: A binomial(<span class="math inline">\(44,1/2\)</span>) p.m.f. with 
 each trial having the same probability <span class="math inline">\(p\)</span> of obtaining a 1.</li>
 <li>If <span class="math inline">\(Y\)</span> is a discrete random variable with p.m.f.
 <span class="math display">\[ P(Y=y) \,=\, {n \choose y} p^y\,(1-p)^{n-y}, \qquad y=0,1,\ldots,n, \]</span>
-for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \leq p \leq 1\)</span>, then <span class="math inline">\(Y \sim \mbox{bin}(n,p)\)</span>.</li>
+for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \leq p \leq 1\)</span>, then <span class="math inline">\(Y \sim \mbox{binomial}(n,p)\)</span>.</li>
 <li>Parameters: <span class="math inline">\(n\)</span> (usually known) and <span class="math inline">\(p \in [0,1]\)</span>.</li>
 <li><span class="math inline">\(\mbox{E}(Y)=n\,p\)</span>, <span class="math inline">\(\mbox{var}(Y)=n\,p\,(1-p)\)</span>. (<strong>Exercise</strong>. Note that <span class="math inline">\(Y=X_1 + \cdots + X_n\)</span>, where <span class="math inline">\(X_i, i=1, \ldots, n\)</span> are independent Bernoulli(<span class="math inline">\(p\)</span>) random variables.)</li>
 </ul>
-<p>A binomial(1,,<span class="math inline">\(p\)</span>) distribution is the same as a Bernoulli(<span class="math inline">\(p\)</span>) distribution.</p>
+<p>A binomial(1,<span class="math inline">\(p\)</span>) distribution is the same as a Bernoulli(<span class="math inline">\(p\)</span>) distribution.</p>
 </div>
 </div>
 <div id="the-geometric-distribution" class="section level2">

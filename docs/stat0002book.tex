@@ -3812,13 +3812,445 @@ The \textbf{quartile skewness} of a random variable \(X\) with c.d.f \(F_X(x)\) 
 \hypertarget{simple}{%
 \chapter{Simple distributions}\label{simple}}
 
-In this section we use a dataset to introduce some commonly-used simple distributions. We will study the \textbf{discrete} distributions: Bernoulli, binomial, geometric and Poisson. We will also study the \textbf{continuous} distributions: uniform, exponential, normal.
+We use a simple dataset to introduce some commonly-used simple distributions. We will study the \textbf{discrete} distributions: Bernoulli, binomial, geometric and Poisson. We will also study the \textbf{continuous} distributions: uniform, exponential, normal.
+
+\hypertarget{australian-births-data}{%
+\section{Australian births data}\label{australian-births-data}}
+
+Steele, S. (December 21, 1997), Babies by the Dozen for Christmas: 24-Hour Baby Boom, The Sunday Mail (Brisbane), page 7
+
+According to this article, a record 44 babies (18 girls and 26 boys) were born in one 24-hour period at the Mater Mothers' Hospital, Brisbane, Australia, on December 18, 1997. The article listed the time of birth, the sex, and the weight in grams for each of the 44 babies. These data are given in Table \ref{tab:abirths}
+
+ 
+  \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
+  \providecommand{\huxvb}[2]{\color[RGB]{#1}\vrule width #2pt}
+  \providecommand{\huxtpad}[1]{\rule{0pt}{#1}}
+  \providecommand{\huxbpad}[1]{\rule[-#1]{0pt}{#1}}
+
+\begin{table}[ht]
+\begin{centerbox}
+\begin{threeparttable}
+\captionsetup{justification=centering,singlelinecheck=off}
+\caption{\label{tab:abirths} Australian births data.  Times are minutes since midnight.  Weights are in grams.}
+ \setlength{\tabcolsep}{0pt}
+\begin{tabularx}{0.9\textwidth}{p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth} p{0.075\textwidth}}
+
+
+\hhline{>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering time\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 5\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 64\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 78\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 115\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 177\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 245\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 247\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 262\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 271\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 428\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 455\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering sex\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering weight\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3837\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3334\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3554\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3838\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3625\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2208\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1745\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2846\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3166\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3520\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3380\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering time\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 492\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 494\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 549\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 635\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 649\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 653\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 693\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 729\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 776\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 785\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 846\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering sex\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering weight\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3294\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2576\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3208\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3521\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3746\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3523\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2902\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2635\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3920\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3690\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3430\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering time\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 847\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 873\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 886\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 914\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 991\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1017\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1062\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1087\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1105\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1134\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1149\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering sex\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering weight\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3480\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3116\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3428\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3783\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3345\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3034\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2184\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3300\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2383\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3428\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 4162\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering time\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1187\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1189\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1191\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1210\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1237\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1251\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1264\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1283\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1337\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1407\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1435\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=>{\huxb{0, 0, 0}{3}}=}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering sex\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering weight\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3630\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3406\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3402\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3500\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3736\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3370\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2121\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3150\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3866\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3542\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.075\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.075\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3278\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+\end{tabularx}
+\end{threeparttable}\par\end{centerbox}
+
+\end{table}
+ 
 
 \hypertarget{the-bernoulli-distribution}{%
 \section{The Bernoulli distribution}\label{the-bernoulli-distribution}}
 
+Consider the first birth. The outcome is either a boy \(B\) or a girl \(G\). We define a random variable
+
+\begin{equation}
+X_1 =
+\begin{cases} 
+0 & \text{ if the first baby is a girl} \\
+1 & \text{ if the first baby is a boy}.
+\end{cases}
+\end{equation}
+
+\(X_1\) is the outcome of a \textbf{Bernoulli trial}, that is, an experiment which has exactly two possible outcomes. Here, we have mapped the birth of a girl to the value 0 and the birth of a boy to the value 1. This is arbitrary: we could have done this the other way round.
+
+Let
+\begin{eqnarray*}
+P(X_1=0)&=&1-p \\
+P(X_1=1)&=&p. 
+\end{eqnarray*}
+Therefore,
+
+\begin{equation}
+X_1 =
+\begin{cases} 
+0 & \text{ with probability (w.p.)} \,\,1-p \\
+1 & \text{ with probability (w.p.)} \,\,p.
+\end{cases}
+\end{equation}
+
+\(X_1\) has a Bernoulli distribution with parameter \(p\), \((0 \leq p \leq 1)\), or, for short,
+\[ X_1 \sim
+\,\mbox{Bernoulli}(p). 
+\]
+Here, ``\(\sim\)'' means ``is distributed as''.
+
+Similarly, we define the random variables
+\begin{eqnarray*}
+X_i &=& \left\{ \begin{array}{ll}0&\mbox{  if the $i$th baby is a girl}; \\
+                                 1&\mbox{  if the $i$th baby is a boy,} \quad\mbox{for}\,\,\,i=1,\ldots,44.\end{array}\right.
+\end{eqnarray*}
+If we assume that the probability of a boy is the same for each birth then
+\[ X_i \sim \mbox{Bernoulli}(p), \qquad \mbox{for}\,\,\,i=1,\ldots,44. \]
+
+In this example the sample values \(x_1, \ldots, x_{44}\) of \(X_1,\ldots,X_{44}\) are
+\[ x_1=0, \quad x_2=0, \quad x_3=1, \quad \ldots \quad x_{44}=0. \]
+
+\hypertarget{summary-of-the-bernoullip-distribution}{%
+\subsection{\texorpdfstring{Summary of the Bernoulli(\(p\)) distribution}{Summary of the Bernoulli(p) distribution}}\label{summary-of-the-bernoullip-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Situation}: an experiment with exactly 2 possible outcomes (a Bernoulli trial), mapped to the values 0 and 1.
+\item
+  If \(X\) is a discrete random variable with p.m.f.
+\end{itemize}
+
+\[ P(X=x) \,=\, p^x\,(1-p)^{1-x}, \qquad x=0,1, \]
+for some \(p\), \(0 \leq p \leq 1\), then \(X \sim \mbox{Bernoulli}(p)\).
+
+\begin{itemize}
+\tightlist
+\item
+  Parameter: \(p \in [0,1]\).
+\item
+  \(\mbox{E}(X)=p\), \(\mbox{var}(X)=p\,(1-p)\). (\textbf{Exercise})
+\end{itemize}
+
 \hypertarget{binomial}{%
 \section{The binomial distribution}\label{binomial}}
+
+We have seen that the 44 births are 44 Bernoulli trials.\\
+We define a random variable \(Y\) equal to the total number
+of boys in the 44 births, that is,
+\[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]
+We assume that the outcome of each birth is indepdendent of the outcomes of all the other births, that is,
+the random variables \(X_1, \ldots, X_{44}\) are mutually independent.
+Therefore, we have assumed that \(X_1, \ldots, X_{44}\) are independent and
+identically distributed, or i.i.d. for short. `Identically distributed' means that
+\(X_1, \ldots, X_{44}\) have exactly the same distribution, including the
+values of any unknown parameters.\\
+We will often write
+
+\[ X_i \,\stackrel{{\rm\tiny i.i.d.}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]
+or
+\[ X_i \,\stackrel{{\rm\tiny indep}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]
+
+\(X_1, ... , X_{44}\) are a \textbf{random sample} from a Bernoulli(\(p\)) distribution.
+
+What is \(P(Y=0)\)?
+
+For \(Y=0\) to occur we need all of the 44 births to be girls, that is,
+\[ X_1=X_2=\cdots=X_{44}=0.\]
+
+We have assumed that the events \(X_1=0, X_2=0, \ldots, X_{44}=0\) are independent of each other. Using the multiplication rule for independent events gives
+\begin{eqnarray*}
+P(Y=0)&=&P(X_1=X_2=\cdots=X_{44}=0), \\
+      &=&P(X_1=0) \times P(X_2=0) \times \cdots \times P(X_{44}=0), \\
+      &=&(1-p) \times (1-p) \times \cdots \times (1-p), \\
+      &=&(1-p)^{44}.
+\end{eqnarray*}
+
+What is \(P(Y=1)\)?
+
+For \(Y=1\) to occur we need 43 girls and 1 boy to be born. One way for this to happen is
+\[ X_1=1, X_2=0, X_3=0, \ldots, X_{44}=0. \]
+Under the assumption of independence, this combination of events has probability \(p\,(1-p)^{43}\).
+In fact, there are 44 different ways to get \(Y=1\): the 1 boy could be born 1st, 2nd, 3rd, \ldots, 44th.
+Therefore,
+\[ P(Y=1) = 44\,p\,(1-p)^{43}. \]
+We can continue this argument to find that
+\[ 
+P(Y=y)={44 \choose y} 
+p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44. 
+\]
+The combinatorial term \({44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}\)
+gives the number of ways in which \(y\) boys births can be positioned amongst the 44 births.
+
+\(Y\) has a binomial distribution with parameters \(44\) and \(p\), \((0 \leq p \leq 1)\), or, for short,
+\[ Y \sim \,\mbox{binomial}(44,p). \]
+In this example the sample value of \(Y\) is \(y=26\).
+
+As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability \(p\) that a trial results in a 1. Suppose that the 44 babies born on 21st December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability \(p\) that a baby chosen randomly from this population is a boy, or equivalently, the proportion \(p\) of babies in this population who are boys.
+
+\textbf{Exercise}. What is a sensible estimate \(\hat{p}\) of \(p\)?
+
+Putting a ``hat'' \(\hat{}\) on a quantity indicates that the quantity is being estimated using data. Here, \(\hat{p}\) means ``an estimate of \(p\)''.
+
+Figure \ref{fig:babybinompmfs} shows the p.m.f.s of 4 binomial(44,\(p\)) distributions, for different values of \(p\). One way to think about choosing a good estimate of \(p\) is to see for which value of \(p\) the sample data are most likely. In this case we have only one sample value, \(y=26\). Looking at Figure \ref{fig:babybinompmfs} we can see that \(y=26\) is very unlikely for \(p=0.1\) and \(p=0.9\), more likely for \(p=0.5\) and even more likely for \(p=\hat{p}\). In this particular sense, the value of \(\hat{p}\) we have calculated is the best estimate, in the sense that for this value of \(p\) the data are more likely than for any other value of \(p\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/binom_pmf1} \includegraphics[width=0.75\linewidth]{images/binom_pmf2} \includegraphics[width=0.75\linewidth]{images/binom_pmf3} \includegraphics[width=0.75\linewidth]{images/binom_pmf4} 
+
+}
+
+\caption{Binomial($44,p$) p.m.f.s: $p=0.1$ (top); $p=1/2$ (second from top); $p=0.591$ (second from bottom); $p=0.9$ (bottom).  The sample value $y=26$ has been shaded in black.}\label{fig:babybinompmfs}
+\end{figure}
+
+\hypertarget{a-brief-look-at-statistical-inference-about-p}{%
+\subsection{\texorpdfstring{A brief look at statistical inference about \(p\)}{A brief look at statistical inference about p}}\label{a-brief-look-at-statistical-inference-about-p}}
+
+\textbf{This section of the notes is not part of STAT0002. It introduces ideas surrounding hypothesis testing and confidence intervals. If you take STAT0003 then you will cover these ideas in more detail. This section is included because you may find it interesting to think about these ideas now.}
+
+We have observed more boys than girls. If \(p=1/2\) we would expect roughly equal numbers of boys and girls. Even if it is true that \(p=1/2\), we would only occasionally get equal numbers of boys and girls born on each day. We might like to quantify how unlikely is the event of a 26:18 split in 44 independent Bernoulli(1/2) trials. If this is very unlikely we might think that perhaps \(p \neq 1/2\) after all. This is an example of \textbf{statistical inference}, that is, making an inference about the true value of \(p\). We will study statistical inference in Chapter \ref{inference}.
+
+In this example we might want to infer whether or not \(p=0.5\). We wish to judge whether the estimate \(\hat{p}\) is far enough from 0.5 for us to conclude that \(p \neq 0.5\). We need to take into account how reliable (a term that we will use in Chapter \ref{inference} is how \textbf{precise}) the estimation of \(p\) is. For a given true value of \(p\) the larger the sample size \(n\) (here \(n = 44\)) the greater the precision. If you take STAT0003 then you will study this in some detail. Here we introduce two main ways to look at this problem. They will seem rather similar, but there is a subtle difference.
+
+\hypertarget{if-p0.5-then-how-surprising-is-hatp0.591}{%
+\subsubsection*{\texorpdfstring{1. If \(p=0.5\) then how surprising is \(\hat{p}=0.591\)?}{1. If p=0.5 then how surprising is \textbackslash hat\{p\}=0.591?}}\label{if-p0.5-then-how-surprising-is-hatp0.591}}
+\addcontentsline{toc}{subsubsection}{1. If \(p=0.5\) then how surprising is \(\hat{p}=0.591\)?}
+
+Suppose that the \textbf{null hypothesis} \(H_0: p=0.5\) is true. How unlikely it is that a sample of size \(44\) produces an estimate of \(p\) as far, or further from, 0.5 than \(\hat{p}=0.591\)?
+
+You could think of this as `standing' on the null hypothesis \(H_0\) and looking to see how far away are the data.
+
+If \(p=0.5\), \(P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30\). Figure \ref{fig:binominf} illustrates the calculation of this probability. This (the value 0.30 here) is called a \textbf{\(p\)-value}. A \(p\)-value is a measure of our surprise at seeing data if the null hypothesis is true. The smaller the \(p\)-value the greater our surprise. We could decide to reject the null hypothesis \(H_0\) that \(p=0.5\) if the \(p\)-value is sufficiently small. Otherwise, we do not reject \(H_0\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/binom_inference_1b} 
+
+}
+
+\caption{A binomial($44,1/2$) p.m.f. with the probabilities satisfting $Y$ less than or equal to 18 or greater than or equal to 26 shaded in black.}\label{fig:binominf}
+\end{figure}
+
+A traditional cutoff for ``sufficiently small'' is 0.05, but it is not possible to argue that this is generally better than other choices. Based on this cutoff we would not reject \(H_0\).
+
+\hypertarget{is-p0.5-plausible-based-on-inferences-about-p}{%
+\subsubsection*{\texorpdfstring{2. Is \(p=0.5\) plausible based on inferences about \(p\)?}{2. Is p=0.5 plausible based on inferences about p?}}\label{is-p0.5-plausible-based-on-inferences-about-p}}
+\addcontentsline{toc}{subsubsection}{2. Is \(p=0.5\) plausible based on inferences about \(p\)?}
+
+We estimate \(p\) and then see how close the estimate is to 0.5. In this example \(\hat{p}=26/44=0.591\). To quantify whether this is significantly different from 0.5 we can calculate an interval estimate of \(p\), called a \textbf{confidence interval}, and see whether or not this interval contains 0.5. If it does not contain 0.5 then we could decide to reject the null hypothesis \(H_0\) that \(p=0.5\). Otherwise, we do not reject \(H_0\).
+
+You could think of this as `standing' on the data and looking to see how far away is the null hypothesis \(H_0\).
+
+A confidence interval is a realisation (the observed value) of a random interval that has a certain probability of covering the true value of \(p\). The interval is random because before we collect the data we do not know what the interval will be. For example, A 95\% confidence interval for \(p\) has a probability of 0.95 of covering the rue value of \(p\).
+
+An approximate 95\% confidence interval for \(p\) based on these data is \((0.45,0.74)\) which contains 0.5. Therefore, we would not reject \(H_0\).
+
+In modern Statistics method 2. (\textbf{interval estimation}) is often preferred to 1. (\textbf{hypothesis testing}) because it gives an interval estimate for \(p\) rather than just a decision of whether or not the data suggest that \(p=0.5\).
+
+\hypertarget{summary-of-the-binomialnp-distribution}{%
+\subsection{\texorpdfstring{Summary of the binomial(\(n,p\)) distribution}{Summary of the binomial(n,p) distribution}}\label{summary-of-the-binomialnp-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Situation}: the number of 1s in \(n\) independent Bernoulli trials,
+  each trial having the same probability \(p\) of obtaining a 1.
+\item
+  If \(Y\) is a discrete random variable with p.m.f.
+  \[ P(Y=y) \,=\, {n \choose y} p^y\,(1-p)^{n-y}, \qquad y=0,1,\ldots,n, \]
+  for some \(p\), \(0 \leq p \leq 1\), then \(Y \sim \mbox{binomial}(n,p)\).
+\item
+  Parameters: \(n\) (usually known) and \(p \in [0,1]\).
+\item
+  \(\mbox{E}(Y)=n\,p\), \(\mbox{var}(Y)=n\,p\,(1-p)\). (\textbf{Exercise}. Note that \(Y=X_1 + \cdots + X_n\), where \(X_i, i=1, \ldots, n\) are independent Bernoulli(\(p\)) random variables.)
+\end{itemize}
+
+A binomial(1,\(p\)) distribution is the same as a Bernoulli(\(p\)) distribution.
 
 \hypertarget{the-geometric-distribution}{%
 \section{The geometric distribution}\label{the-geometric-distribution}}
@@ -3838,8 +4270,8 @@ In this section we use a dataset to introduce some commonly-used simple distribu
 \hypertarget{qq-plots}{%
 \section{QQ plots}\label{qq-plots}}
 
-\hypertarget{statistical-inference}{%
-\chapter{Statistical Inference}\label{statistical-inference}}
+\hypertarget{inference}{%
+\chapter{Statistical Inference}\label{inference}}
 
 \hypertarget{sample-and-populations}{%
 \section{Sample and populations}\label{sample-and-populations}}

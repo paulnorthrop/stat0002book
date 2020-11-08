@@ -1,0 +1,129 @@
+\selectlanguage *[variant=british]{english}
+\contentsline {chapter}{The purpose of these notes}{5}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Real statistical investigations}{6}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Challenger Space Shuttle Catastrophe}{7}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Uncertainty}{9}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}A very brief introduction to stochastic simulation}{13}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Descriptive Statistics}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Types of data}{15}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Qualitative or categorical data}{15}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Quantitative or numerical data}{16}{subsection.2.1.2}%
+\contentsline {subsubsection}{Interval data and ratio data}{16}{section*.13}%
+\contentsline {section}{\numberline {2.2}Describing distributions}{17}{section.2.2}%
+\contentsline {subsection}{Example: Oxford births data}{18}{section*.15}%
+\contentsline {section}{\numberline {2.3}Summary Statistics}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Five number summary}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Mean and standard deviation}{19}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Mode}{20}{subsection.2.3.3}%
+\contentsline {subsubsection}{Examples}{20}{section*.17}%
+\contentsline {subsection}{\numberline {2.3.4}Symmetry}{21}{subsection.2.3.4}%
+\contentsline {subsubsection}{Example. Oxford births data}{21}{section*.18}%
+\contentsline {subsubsection}{Measures of skewness}{21}{section*.19}%
+\contentsline {subsection}{\numberline {2.3.5}Correlation}{22}{subsection.2.3.5}%
+\contentsline {subsubsection}{A simple example}{23}{section*.20}%
+\contentsline {section}{\numberline {2.4}Tables}{23}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Frequency distribution}{23}{subsection.2.4.1}%
+\contentsline {subsubsection}{Relative frequency distribution}{23}{section*.23}%
+\contentsline {subsubsection}{Cumulative distribution}{24}{section*.24}%
+\contentsline {section}{\numberline {2.5}Graphs (1 variable)}{25}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Histograms}{26}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Stem-and-leaf plots}{26}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Dotplots}{28}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Boxplots}{28}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}Barplots}{29}{subsection.2.5.5}%
+\contentsline {subsubsection}{Example: numerical discrete data}{29}{section*.34}%
+\contentsline {subsubsection}{Example: categorical data}{29}{section*.37}%
+\contentsline {subsection}{\numberline {2.5.6}Times series plots}{31}{subsection.2.5.6}%
+\contentsline {section}{\numberline {2.6}2000 US Presidential Election}{32}{section.2.6}%
+\contentsline {subsubsection}{Log scales on axes}{36}{section*.47}%
+\contentsline {section}{\numberline {2.7}Graphs (2 variables)}{38}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Scatter plots}{38}{subsection.2.7.1}%
+\contentsline {section}{\numberline {2.8}Transformation of data}{39}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Transformation to approximate symmetry}{39}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Straightening scatter plots}{40}{subsection.2.8.2}%
+\contentsline {subsubsection}{How can we straighten a scatter plot?}{41}{section*.56}%
+\contentsline {subsubsection}{Linearity is not the only consideration}{45}{section*.62}%
+\contentsline {chapter}{\numberline {3}Probability}{47}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Misleading statistical evidence in cot death trials}{47}{section.3.1}%
+\contentsline {subsubsection}{Professor Meadows' statistical evidence}{47}{section*.64}%
+\contentsline {section}{\numberline {3.2}Relative frequency definition of probability}{48}{section.3.2}%
+\contentsline {subsubsection}{Example: tossing a coin}{48}{section*.65}%
+\contentsline {subsubsection}{Looking at this slightly more formally}{49}{section*.67}%
+\contentsline {subsubsection}{Example: tossing a coin (continued)}{50}{section*.68}%
+\contentsline {subsubsection}{Example: Graduate Admissioins at Berkeley}{50}{section*.69}%
+\contentsline {subsubsection}{Notation: sample space, outcomes and events}{50}{section*.74}%
+\contentsline {section}{\numberline {3.3}Basic properties of probability}{51}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Conditional probability}{51}{section.3.4}%
+\contentsline {subsubsection}{Notation}{51}{section*.75}%
+\contentsline {subsubsection}{Example: Graduate Admissions at Berkeley (continued)}{52}{section*.76}%
+\contentsline {subsubsection}{Dependence and Independence}{55}{section*.89}%
+\contentsline {section}{\numberline {3.5}Addition rule of probability}{55}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Mutually exclusive events}{56}{subsection.3.5.1}%
+\contentsline {subsubsection}{The complement of an event \(A\)}{56}{section*.94}%
+\contentsline {section}{\numberline {3.6}Multiplication rule of probability}{57}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Independence of events}{57}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}An example of independence}{58}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}Law of total probability}{59}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Bayes' theorem}{60}{section.3.9}%
+\contentsline {subsubsection}{Conditioning on more than one event}{61}{section*.105}%
+\contentsline {subsubsection}{Misleading statistical evidence in cot death trials (continued)}{62}{section*.106}%
+\contentsline {section}{\numberline {3.10}DNA identification evidence}{62}{section.3.10}%
+\contentsline {chapter}{\numberline {4}Random variables}{63}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Discrete random variables}{63}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Continuous random variables}{64}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Expectation}{67}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Expectation of a discrete random variable}{67}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Expectation of a continuous random variable}{68}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Properties of \(\mathrm {E}(X)\)}{68}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}The expectation of \(g(X)\)}{68}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Variance}{69}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Variance of a discrete random variable}{69}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Variance of a continuous random variable}{70}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Variance and standard deviation}{70}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Properties of \(\mathrm {var}(X)\)}{70}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Other measures of location}{71}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}The median of a random variable}{71}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}The mode of a random variable}{72}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Quantiles}{72}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Measures of shape}{72}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Simple distributions}{73}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Australian births data}{73}{section.5.1}%
+\contentsline {section}{\numberline {5.2}The Bernoulli distribution}{73}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Summary of the Bernoulli(\(p\)) distribution}{74}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}The binomial distribution}{74}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}A brief look at statistical inference about \(p\)}{76}{subsection.5.3.1}%
+\contentsline {subsubsection}{1. If \(p=0.5\) then how surprising is \(\hat {p}=0.591\)?}{76}{section*.113}%
+\contentsline {subsubsection}{2. Is \(p=0.5\) plausible based on inferences about \(p\)?}{76}{section*.115}%
+\contentsline {subsection}{\numberline {5.3.2}Summary of the binomial(\(n,p\)) distribution}{78}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}The geometric distribution}{79}{section.5.4}%
+\contentsline {section}{\numberline {5.5}The Poisson distribution}{79}{section.5.5}%
+\contentsline {section}{\numberline {5.6}The uniform distribution}{79}{section.5.6}%
+\contentsline {section}{\numberline {5.7}The exponential distribution}{79}{section.5.7}%
+\contentsline {section}{\numberline {5.8}The normal distribution}{79}{section.5.8}%
+\contentsline {section}{\numberline {5.9}QQ plots}{79}{section.5.9}%
+\contentsline {chapter}{\numberline {6}Statistical Inference}{80}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sample and populations}{80}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Probability models}{80}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Fitting models}{80}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{80}{section.6.4}%
+\contentsline {section}{\numberline {6.5}What makes an estimator good?}{80}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{80}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Contingency tables}{81}{chapter.7}%
+\contentsline {section}{\numberline {7.1}2-way contingency tables}{81}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{81}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}3-way contingency tables}{81}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Linear regression}{82}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Simple linear regression}{82}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Looking at scatter plots}{82}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Model checking}{82}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{82}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Use of transformations}{82}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Over-fitting}{82}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Other aspects of regression}{82}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{82}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Correlation}{83}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{83}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Covariance and correlation}{83}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{83}{section.9.3}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{84}{chapter.10}%
