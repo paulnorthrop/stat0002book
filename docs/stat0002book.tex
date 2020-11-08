@@ -3819,7 +3819,7 @@ We use a simple dataset to introduce some commonly-used simple distributions. We
 
 Steele, S. (December 21, 1997), Babies by the Dozen for Christmas: 24-Hour Baby Boom, The Sunday Mail (Brisbane), page 7
 
-According to this article, a record 44 babies (18 girls and 26 boys) were born in one 24-hour period at the Mater Mothers' Hospital, Brisbane, Australia, on December 18, 1997. The article listed the time of birth, the sex, and the weight in grams for each of the 44 babies. These data are given in Table \ref{tab:abirths}
+According to this article, a record 44 babies (18 girls and 26 boys) were born in one 24-hour period at the Mater Mothers' Hospital, Brisbane, Australia, on December 18, 1997. The article listed the time of birth, the sex, and the weight in grams for each of the 44 babies. These data are given in Table \ref{tab:abirths}.
 
  
   \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
@@ -4254,6 +4254,205 @@ A binomial(1,\(p\)) distribution is the same as a Bernoulli(\(p\)) distribution.
 
 \hypertarget{the-geometric-distribution}{%
 \section{The geometric distribution}\label{the-geometric-distribution}}
+
+The ordering of the arrivals of the boy and girl babies is
+\[ G G B B B G G B B B B B G G B G G B B B B G G G G B B B G B G B B B B B G B B B B G G G \]
+
+Suppose that are interested in the arrival of the 1st baby boy. We define the random variable \(W_1\) to be the number of births up to and including the birth of the 1st boy. In the current example, the 1st boy is born on the 3rd birth, so the sample value of \(W_1\) is \(w_1=3\).
+
+Now we define \(W_2\) to be the number of births, after the birth of the 1st boy, up to and including the birth of the 2nd boy. In this example the sample value of \(W_2\) is \(w_2=1\).
+
+Similarly, we define \(W_i\) to be the number of births, after the birth of the \((i-1)\)th boy, up to and including the birth of the \(i\)th boy.
+
+This leads to values \(w_1, w_2, \ldots, w_{26}\):
+\[ 3, 1, 1, 3, 1, 1, 1, 1, 3, 3, 1, 1, 1, 5, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1 \]
+The last 3 observations (\(GGG\)) do not contribute here because we do not know when the next boy arrived. The frequencies of these values appear in column 2 of Table \ref{tab:geom}. In column 4 we have divided these \textbf{observed frequencies} by 26 to obtain the \textbf{observed proportions}. We explain the contents of columns 3 and 5 of this table below.
+
+ 
+  \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
+  \providecommand{\huxvb}[2]{\color[RGB]{#1}\vrule width #2pt}
+  \providecommand{\huxtpad}[1]{\rule{0pt}{#1}}
+  \providecommand{\huxbpad}[1]{\rule[-#1]{0pt}{#1}}
+
+\begin{table}[ht]
+\begin{centerbox}
+\begin{threeparttable}
+\captionsetup{justification=centering,singlelinecheck=off}
+\caption{\label{tab:geom} Observed frequencies and proportions (relative frequencies) and their fitted values for a geometric(0.591) distribution.}
+ \setlength{\tabcolsep}{0pt}
+\begin{tabularx}{0.9\textwidth}{p{0.18\textwidth} p{0.18\textwidth} p{0.18\textwidth} p{0.18\textwidth} p{0.18\textwidth}}
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering number of births\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering observed\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering expected\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering observed\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering estimated\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering until boy born\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering frequency\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering frequency\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering proportion\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering probability\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}->{\huxb{0, 0, 0}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 18\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 15.36\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.69\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.59\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 2\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 6.28\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.12\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.24\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 3\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 4\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 2.57\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.15\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.10\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 4\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 1.05\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.00\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.04\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 5\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 0.43\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.04\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.02\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}->{\huxb{255, 255, 255}{0.1}}-}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 6+\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 0.30\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.00\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 0.01\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}|>{\huxb{0, 0, 0}{0.1}}|>{\huxb{0, 0, 0}{0.1}}|>{\huxb{0, 0, 0}{0.1}}|}
+\arrayrulecolor{black}
+
+\multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering total\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 26\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-35pt}{\huxtpad{0pt + 1em}\raggedleft 26~~~\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} \tabularnewline[-0.5pt]
+
+
+\hhline{>{\huxb{0, 0, 0}{0.1}}|>{\huxb{0, 0, 0}{0.1}}|>{\huxb{0, 0, 0}{0.1}}|>{\huxb{0, 0, 0}{0.1}}|}
+\arrayrulecolor{black}
+\end{tabularx}
+\end{threeparttable}\par\end{centerbox}
+
+\end{table}
+ 
+
+\textbf{Question}: Why have I written `\(\geq\) 6' in the first column of Table \ref{tab:geom} rather than `6'?
+
+The observed frequencies are plotted in Figure \ref{fig:geombar}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_geom_bar} 
+
+}
+
+\caption{Bar plot of numbers of births between successive baby boys (including the next baby boy).}\label{fig:geombar}
+\end{figure}
+
+Now we find the probability distribution of \(W_1, W_2, \ldots\). First we consider \(W_1\). Recall that the outcomes \(X_1,\ldots,X_{44}\) of the 44 births are assumed to be independent Bernoulli trials.
+
+What is \(P(W_1=1)\)?.
+
+For \(W_1=1\) to occur we need the next birth to be a boy. Therefore, \(P(W_1=1)=p\).
+
+What is \(P(W_1=2)\)?.
+
+For \(W_1=2\) to occur we need a girl followed by a boy. Therefore, \(P(W_1=2)=(1-p)\,p\).
+
+We can continue this argument to find
+
+\begin{equation}
+P(W_1=w) = (1-p)^{w-1}\,p, \qquad w=1,2,\ldots.  
+\label{eq:geom}
+\end{equation}
+
+\(W_1\) has a geometric distribution with parameter \(p\), \((0 < p \leq 1)\), or, for short,
+\[ W_1 \sim \mbox{geometric}(p). \]
+We exclude \(p=0\) because in this case we would never get a 1 and the \eqref{eq:geom} would sum to zero not one.
+
+Since \(W_2\) relates to exactly the same situation as \(W_1\), that is, the number of births until the next boy is born, \(W_2\) has the same distribution as \(W_1\). (We may write \(W_1 \,\stackrel{{\rm d}}{=}\, W_2\) for ``\(W_1\) has the same distribution as \(W_2\)''.) Similarly \(W_3,W_4,\ldots\) also have the same distribution as \(W_1\).
+
+The outcomes of the births are assumed to be mutually independent.\\
+\[ W_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{geometric}(p), \qquad i=1,\ldots,26. \]
+\(W_1, \ldots, W_{26}\) are a \textbf{random sample} from a geometric(\(p\)) distribution.
+
+We do not know the value of \(p\) but we have an estimate \(\hat{p}=26/44\) of \(p\). We substitute this estimate of \(p\) into equation \eqref{eq:geom} to calculate the \textbf{estimated probabilities} in column 5 of Table \ref{tab:geom}.
+Multiplying the estimated probabilities by 26 gives the \textbf{expected} frequencies in column 3.
+
+Figure \ref{fig:geomfit} shows that the observed and expected frequencies are in reasonably close agreement. We do not expect exact agreement. Formal methods for assessing how closely observed and expected frequencies agree are not part of STAT0002. Figure \ref{fig:geomfit} also shows the general shape of the geometric distribution. It is positively skewed.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_geom_bar} 
+
+}
+
+\caption{Bar plot of numbers of births between successive baby boys (including the next baby boy).}\label{fig:geomfit}
+\end{figure}
+
+\hypertarget{summary-of-the-geometricp-distribution}{%
+\subsection{\texorpdfstring{Summary of the geometric(\(p\)) distribution}{Summary of the geometric(p) distribution}}\label{summary-of-the-geometricp-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Situation}: the number of trials up to and including the first value of 1 in a sequence of independent Bernoulli trials, each trial having the same probability \(p\) of obtaining a 1.
+\item
+  If \(W\) is a discrete random variable with p.m.f.
+  \[ P(W=w) \,=\, (1-p)^{w-1}\,p, \qquad w=1,2,\ldots \]
+  for some \(p\), \(0 < p \leq 1\), then \(W \sim \mbox{geometric}(p)\).
+\item
+  Parameter: \(p \in (0,1]\).
+\item
+  \(\mbox{E}(W)=\displaystyle\frac1p\), \(\mbox{var}(W)=\displaystyle\frac{1-p}{p^2}\). (\textbf{Exercise})
+\end{itemize}
+
+An alternative formulation is where a random variable \(W'\) is defined as the number of trials \textbf{before} the next 1 occurs. Therefore, the support of \(W'\) is \(0, 1, 2, ...\) and \(W' = W - 1\). The \texttt{dgeom()} function in R relates to the variable \(W'\), not \(W\).
 
 \hypertarget{the-poisson-distribution}{%
 \section{The Poisson distribution}\label{the-poisson-distribution}}
