@@ -4461,8 +4461,8 @@ Figure \ref{fig:geomfit} shows that the observed and estimated expected frequenc
 
 An alternative formulation is where a random variable \(V\) is defined as the number of trials performed \textbf{before} the next 1 occurs. Therefore, the support of \(V\) is \(0, 1, 2, ...\) and \(V = W - 1\). The \texttt{dgeom()} function in R relates to a random variable like \(V\), not \(W\).
 
-\hypertarget{the-poisson-distribution}{%
-\section{The Poisson distribution}\label{the-poisson-distribution}}
+\hypertarget{Poisson}{%
+\section{The Poisson distribution}\label{Poisson}}
 
 Now we look at the numbers \(N_1, \ldots, N_{24}\) of births that occur in each hour of the 24 hours on the day December 18, 1997. This produces a \textbf{count} for each hour. We have split the 24-hour period into 24 time periods of the same length. We could equally have chosen to split it into 12 time periods, each of length 2 hours.
 
@@ -4608,7 +4608,7 @@ We make assumptions about the way in which the births occur over time. Suppose t
 
 This is an informal description of a \textbf{Poisson process} of rate \(\lambda\).
 
-It can be shown (STAT0003, STAT0007) that if births arrive in a Poisson process of rate \(\lambda\) per hour then the number of births that occur in a time
+It can be shown (STAT0007) that if births arrive in a Poisson process of rate \(\lambda\) per hour then the number of births that occur in a time
 interval of length \(h\) hours has a particular kind of distribution called a Poisson distribution with mean \(\mu=\lambda h\). In our example, we have \(h=1\), because we have counted the number of births that occur in time periods of length 1 hour.
 
 Consider \(N_1\), the number of births in the first hour. Under the assumptions of the Poisson process, \(N_1\) has a Poisson distribution with mean parameter \(\lambda\), (\(\lambda >0\)), or, for short,
@@ -4625,7 +4625,7 @@ that is, \(N_1,\ldots,N_{24}\) are a random sample from a Poisson (\(\lambda\)) 
 The sample values \(n_1, n_2, \ldots, n_{24}\) of \(N_1, N_2, \ldots, N_{24}\) are
 \[ n_1=1, \quad n_2=3, \quad \ldots, \quad n_{24}=2. \]
 
-We do not know the value of \(\lambda\), but we can estimate it using \(\hat{\lambda} = 44 / 24 \approx 1.83\).
+We do not know the value of \(\lambda\), but we can estimate it using \(\hat{\lambda} = 44 / 24 \approx 1.83\) births per hour.
 
 \textbf{Exercise}. Why is this a sensible estimate of \(\lambda\)?
 
@@ -4664,7 +4664,7 @@ Figure \ref{fig:poispmfs} shows 3 different Poisson p.m.f.s. As \(\lambda\) incr
 \begin{itemize}
 \tightlist
 \item
-  Situation: the number events occuring during a time period of fixed duration.
+  Situation: the number events occurring during a time period of fixed duration.
 \item
   If \(N\) is a discrete random variable with p.m.f.
   \[ P(N=n) = \frac{\mu^n\, e^{-\mu}}{n!}, \qquad n=0,1,2,\ldots, \]
@@ -4703,7 +4703,7 @@ We have studied 4 common discrete distributions:
 
 Now suppose that we are interested in the \textbf{times} at which the babies are born. Previously we assumed that births occur in a Poisson process: singly, independently and randomly at a constant rate.
 
-If, as we have asssumed, births occur in a Poisson process, that is, singly, independently and randomly at a constant rate, we would expect the times of birth to be scattered randomly over the interval (0, 24) hours. We would not expect all the births to be between, for example, 12h and 18h. However, births should not be regularly spaced: there will be periods of time when there are large numbers of births, and other periods of time when there are only small numbers. At first glance, the times of birth in Figure \ref{fig:babyintro} do appear to be approximately consistent with being randomly scattered over (0, 24) hours.
+If, as we have assumed, births occur in a Poisson process, that is, singly, independently and randomly at a constant rate, we would expect the times of birth to be scattered randomly over the interval (0, 24) hours. We would not expect all the births to be between, for example, 12h and 18h. However, births should not be regularly spaced: there will be periods of time when there are large numbers of births, and other periods of time when there are only small numbers. At first glance, the times of birth in Figure \ref{fig:babyintro} do appear to be approximately consistent with being randomly scattered over (0, 24) hours.
 
 Consider a single birth chosen at random from the 44 births. Let \(U_1\) be the time, in hours since midnight, of birth of this baby. We know that this birth occurred somewhere in the time interval (0,24). Therefore, \(0 < U_1 < 24\). All births are assumed to occur at a constant rate over (0,24). Therefore, this birth is no more likely to have occurred at a particular time in (0,24) than at any other time. In other words, the time of this birth is equally likely to lie anywhere in the interval (0,24). Since time is continuous \(U_1\) is a continuous random variable.
 
@@ -4730,7 +4730,7 @@ that is, \(U_1,\ldots,U_{44}\) are a random sample from a \(\mbox{U}(0,24)\) dis
 
 How else (in addition to looking at Figure \ref{fig:babyintro}) can we examine whether the sample times of birth \(u_1, \ldots, u_{44}\) look like a random sample from a \(\mbox{U}(0,24)\) distribution?
 
-One way is to look at a histogram of the times of birth to see whether it is approximately flat. Figure \ref{fig:unifhists} shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a \textbf{QQ plot}. We do this in Section \ref{qq}.
+One way is to look at a histogram of the times of birth to see whether it is approximately flat. Figure \ref{fig:unifhists} shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a \textbf{uniform QQ plot}. We do this in Section \ref{qq}.
 
 \begin{figure}
 
@@ -4741,7 +4741,7 @@ One way is to look at a histogram of the times of birth to see whether it is app
 \caption{Histograms of times of birth, with U(0,24) p.d.f. superimposed.}\label{fig:unifhists}
 \end{figure}
 
-\textbf{Exercise}: Why might births not occur at the same rate throughout the day?
+\textbf{Exercise}. Why might births not occur at the same rate throughout the day?
 
 \hypertarget{summary-of-the-uniformab-distribution}{%
 \subsection{\texorpdfstring{Summary of the uniform(\(a,b\)) distribution}{Summary of the uniform(a,b) distribution}}\label{summary-of-the-uniformab-distribution}}
@@ -4760,8 +4760,90 @@ One way is to look at a histogram of the times of birth to see whether it is app
   \(\mbox{E}(U)=\displaystyle\frac{a+b}{2}\), \(\mbox{var}(U)=\displaystyle\frac{(b-a)^2}{12}\).
 \end{itemize}
 
-\hypertarget{the-exponential-distribution}{%
-\section{The exponential distribution}\label{the-exponential-distribution}}
+\hypertarget{exponential}{%
+\section{The exponential distribution}\label{exponential}}
+
+Now suppose that we are interested in the length of time \(T_1\) until the
+first birth. Look at Table \ref{tab:abirths}. In this example the observed value \(t_1\) of \(T_1\) is 5 minutes.
+
+It can be shown (STAT0007) that if the times of birth form a Poisson process of rate \(\lambda\) per hour then the continuous random variable \(T_1\) has p.d.f.
+\[ f_{T_1}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0. \]
+\(T_1\) has exponential distribution with parameter \(\lambda\), or, for short,
+\[ T_1 \sim \mbox{exp}(\lambda). \]
+Let \(T_2\) be the time between the 1st birth and the 2nd birth; and \(T_3\) be the time between the 2nd birth and the 3rd birth; and so on. Observed values \(t_2\) and \(t_3\) of \(T_2\) and \(T_3\) are \(t_2\)=59 minutes and \(t_3\)=14 minutes.
+
+Figure \ref@(fig:babyexpplots) shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_exp_hist} \includegraphics[width=0.75\linewidth]{images/baby_exp_box} 
+
+}
+
+\caption{Histogram (left) and boxplot (right) of the sample times between births.}\label{fig:babyexpplots}
+\end{figure}
+
+It can be shown (STAT0007) that if the times of birth form a Poisson process
+of rate \(\lambda\) per hour then
+\[ T_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{exponential}(\lambda), \qquad i=1,\ldots,44, \]
+that is, \(T_1,\ldots,T_{44}\) are a random sample from an \(\mbox{exponential}(\lambda)\) distribution.
+
+There is more than one to estimate \(\lambda\). One approach is to note that the parameter \(\lambda\) here is the same as the parameter \(\lambda\) in Section \ref{Poisson}. Therefore, we could the estimate \(\hat{\lambda}=44/24\approx 1.83\) births per hour.
+
+Alternatively, we could use the fact that the mean of an \(\mbox{exponential}(\lambda)\) distribution is \(1/\lambda\). The sample mean of the 44 times \(t_1,\ldots,t_{44}\) between births is
+\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{~minutes} 
+\approx 0.543 \mbox{~hours}. \]
+Rearranging
+\[ \mbox{E}(T) = \frac{1}{\lambda}, \]
+gives
+\[ \lambda = \frac{1}{{\rm E}(T)}. \]
+Therefore a sensible estimate of \(\lambda\) is given by
+\[ \tilde{\lambda} = \frac{1}{0.543} \approx 1.840 \mbox{ births per hour}. \]
+We have used \(\tilde{\lambda}\) to denote the estimate of \(\lambda\) to distinguish it from \(\hat{\lambda}\).
+
+How well does the exponential distribution fit these data? We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential(\(\hat{\lambda}\)) p.d.f. or look at an \textbf{exponential QQ plot} (see Section \ref{qq}). Figure \ref{fig:exppdf} enables us to do the former. This plot suggests that the exponential distribution fits the data well.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_exp_hist_dens} 
+
+}
+
+\caption{Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution.}\label{fig:exppdf}
+\end{figure}
+
+\hypertarget{three-ways-to-check-the-poisson-process-assumption}{%
+\subsubsection*{Three ways to check the Poisson process assumption}\label{three-ways-to-check-the-poisson-process-assumption}}
+\addcontentsline{toc}{subsubsection}{Three ways to check the Poisson process assumption}
+
+We have used the data in three different ways (based on the Poisson, uniform and exponential distributions) to check same assumption: that the births occur in a Poisson process. It is possible that one check suggests that this assumption is reasonable but another suggests that it is not. For example, if the births were regularly spaced (e.g.~one birth exactly every half hour) then a histogram would look flat, or very close to being flat, depending a little on the bin width. However, the times between births are equal and therefore do not look at all like a random sample from an exponential distribution. The numbers of births in each of the 24 hours will not look like a random sample from Poisson distribution: they will be much less variable than they should be. The moral of this story: the fact that the particular way you have chosen to assess the fit of your distribution looks OK does not imply that the distribution is true. Another way to assess the fir might reveal a big problem.
+
+\textbf{Exercise}. Based on the exponential distribution that we fitted to the Australian births data, what is the probability that the time gap between 2 births is longer than 90 minutes?
+
+\hypertarget{summary-of-the-exponentiallambda-distribution}{%
+\subsection{\texorpdfstring{Summary of the exponential(\(\lambda\)) distribution}{Summary of the exponential(\textbackslash lambda) distribution}}\label{summary-of-the-exponentiallambda-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  A situation in which this distribution arises:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    the time until the first event in a Poisson process of rate \(\lambda\)
+  \item
+    and the times between events in a Poisson process of rate \(\lambda\)
+  \end{itemize}
+\item
+  If \(T\) is a continuous random variable with p.d.f.
+  \[ f_{T}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0, \]
+  for \(\lambda > 0\), then \(T \sim \mbox{exponential}(\lambda)\).
+\item
+  Parameters: \(\lambda > 0\).
+\item
+  \(\mbox{E}(T)=\displaystyle\frac{1}{\lambda}\), \(\mbox{var}(T)=\displaystyle\frac{1}{\lambda^2}\).
+\end{itemize}
 
 \hypertarget{normal}{%
 \section{The normal distribution}\label{normal}}
