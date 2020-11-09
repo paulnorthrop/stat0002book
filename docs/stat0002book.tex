@@ -107,7 +107,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-11-08}
+\date{2020-11-09}
 
 \begin{document}
 \maketitle
@@ -4048,6 +4048,17 @@ According to this article, a record 44 babies (18 girls and 26 boys) were born i
 \end{table}
  
 
+Figure \ref{fig:babyintro} summarises the birth times of boy and girl babies.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_intro} 
+
+}
+
+\caption{Birth times of babies on 18th December 1997 by sex.}\label{fig:babyintro}
+\end{figure}
+
 \hypertarget{the-bernoulli-distribution}{%
 \section{The Bernoulli distribution}\label{the-bernoulli-distribution}}
 
@@ -4690,14 +4701,73 @@ We have studied 4 common discrete distributions:
 \hypertarget{the-uniform-distribution}{%
 \section{The uniform distribution}\label{the-uniform-distribution}}
 
+Now suppose that we are interested in the \textbf{times} at which the babies are born. Previously we assumed that births occur in a Poisson process: singly, independently and randomly at a constant rate.
+
+If, as we have asssumed, births occur in a Poisson process, that is, singly, independently and randomly at a constant rate, we would expect the times of birth to be scattered randomly over the interval (0, 24) hours. We would not expect all the births to be between, for example, 12h and 18h. However, births should not be regularly spaced: there will be periods of time when there are large numbers of births, and other periods of time when there are only small numbers. At first glance, the times of birth in Figure \ref{fig:babyintro} do appear to be approximately consistent with being randomly scattered over (0, 24) hours.
+
+Consider a single birth chosen at random from the 44 births. Let \(U_1\) be the time, in hours since midnight, of birth of this baby. We know that this birth occurred somewhere in the time interval (0,24). Therefore, \(0 < U_1 < 24\). All births are assumed to occur at a constant rate over (0,24). Therefore, this birth is no more likely to have occurred at a particular time in (0,24) than at any other time. In other words, the time of this birth is equally likely to lie anywhere in the interval (0,24). Since time is continuous \(U_1\) is a continuous random variable.
+
+The discussion above should make it clear that, if births occur in a Poisson process, the p.d.f. of \(U_1\) is given by
+\[ f_{U_1}(u) = \frac1{24}, \qquad 0 < u < 24. \]
+This p.d.f. is plotted in Figure \ref{fig:unifpdf}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/unif_pdf} 
+
+}
+
+\caption{The p.d.f. of a U(0, 24) distribution.}\label{fig:unifpdf}
+\end{figure}
+
+This is the p.d.f. of a (continuous) uniform distribution over the interval (0,24), or, for short,
+\[ U_1 \sim \mbox{U}(0,24). \]\\
+A uniform distribution is sometimes called a rectangular distribution. The uniform distribution has 2 parameters: the lower and upper end points of the interval over which it is defined. In this example the values of both the parameters are known.
+
+Suppose that we choose another time of birth \(U_2\) from the remaining 43 births. The arguments we made about \(U_1\) apply equally to \(U_2\). Therefore \(U_2 \sim \mbox{U}(0,24)\). Similarly \(U_3, U_4, \ldots, U_{44} \sim \mbox{U}(0,24)\). The assumption that the births occur independently of each other means that
+\[ U_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{U}(0,24), \qquad i=1,\ldots,44, \]
+that is, \(U_1,\ldots,U_{44}\) are a random sample from a \(\mbox{U}(0,24)\) distribution.
+
+How else (in addition to looking at Figure \ref{fig:babyintro}) can we examine whether the sample times of birth \(u_1, \ldots, u_{44}\) look like a random sample from a \(\mbox{U}(0,24)\) distribution?
+
+One way is to look at a histogram of the times of birth to see whether it is approximately flat. Figure \ref{fig:unifhists} shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a \textbf{QQ plot}. We do this in Section \ref{qq}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_unif_hist_freq} 
+
+}
+
+\caption{Histograms of times of birth, with U(0,24) p.d.f. superimposed.}\label{fig:unifhists}
+\end{figure}
+
+\textbf{Exercise}: Why might births not occur at the same rate throughout the day?
+
+\hypertarget{summary-of-the-uniformab-distribution}{%
+\subsection{\texorpdfstring{Summary of the uniform(\(a,b\)) distribution}{Summary of the uniform(a,b) distribution}}\label{summary-of-the-uniformab-distribution}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Situation}: a continuous random variable for which all values between \(a\) and \(b\) are equally likely.
+\item
+  If \(U\) is a continuous random variable with p.d.f.
+  \[ f_{U}(u) \,=\, \frac{1}{b-a}, \qquad a < u < b, \]
+  for \(b > a\), then \(U \sim \mbox{U}(a,b)\).
+\item
+  Parameters: \(-\infty < a < b < \infty\).
+\item
+  \(\mbox{E}(U)=\displaystyle\frac{a+b}{2}\), \(\mbox{var}(U)=\displaystyle\frac{(b-a)^2}{12}\).
+\end{itemize}
+
 \hypertarget{the-exponential-distribution}{%
 \section{The exponential distribution}\label{the-exponential-distribution}}
 
 \hypertarget{normal}{%
 \section{The normal distribution}\label{normal}}
 
-\hypertarget{qq-plots}{%
-\section{QQ plots}\label{qq-plots}}
+\hypertarget{qq}{%
+\section{QQ plots}\label{qq}}
 
 \hypertarget{inference}{%
 \chapter{Statistical Inference}\label{inference}}

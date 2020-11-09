@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  8 NOV 2020 19:51
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  9 NOV 2020 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1411,13 +1411,15 @@ Overfull \hbox (1.0856pt too wide) in alignment at lines 4045--4045
 [][][][][][][][][][][][] 
  []
 
+File: images/baby_intro.png Graphic file (type bmp)
+<images/baby_intro.png>
 [73
 
 ] [74]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4156.
+(amsmath)                 on input line 4167.
 
 [75]
 File: images/binom_pmf1.png Graphic file (type bmp)
@@ -1428,113 +1430,119 @@ File: images/binom_pmf3.png Graphic file (type bmp)
 <images/binom_pmf3.png>
 File: images/binom_pmf4.png Graphic file (type bmp)
 <images/binom_pmf4.png>
+[76] [77]
 File: images/binom_inference_1b.png Graphic file (type bmp)
 <images/binom_inference_1b.png>
-[76] [77] [78]
-Overfull \hbox (6.39165pt too wide) in paragraph at lines 4370--4370
+[78]
+Overfull \hbox (6.39165pt too wide) in paragraph at lines 4381--4381
  [][]\TU/lmss/m/n/10.95 15.36[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4370--4370
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
  [][]\TU/lmss/m/n/10.95 6.28[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4370--4370
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
  [][]\TU/lmss/m/n/10.95 2.57[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4370--4370
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
  [][]\TU/lmss/m/n/10.95 1.05[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4370--4370
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
  [][]\TU/lmss/m/n/10.95 0.43[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4370--4370
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
  [][]\TU/lmss/m/n/10.95 0.30[]
  []
 
 File: images/baby_geom_bar.png Graphic file (type bmp)
 <images/baby_geom_bar.png>
 [79]
-Underfull \hbox (badness 10000) in paragraph at lines 4412--4413
+Underfull \hbox (badness 10000) in paragraph at lines 4423--4424
 
  []
 
+[80]
 File: images/baby_geom_fit.png Graphic file (type bmp)
 <images/baby_geom_fit.png>
-[80]
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4567--4567
+
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 3.84[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4567--4567
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 7.04[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4567--4567
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 6.45[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4567--4567
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 3.94[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4567--4567
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 1.81[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4567--4567
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
 File: images/baby_pois_bar.png Graphic file (type bmp)
 <images/baby_pois_bar.png>
-[81]
+[81] [82]
 File: images/baby_pois_fit.png Graphic file (type bmp)
 <images/baby_pois_fit.png>
-[82]
 File: images/poisson_pmf1.png Graphic file (type bmp)
 <images/poisson_pmf1.png>
 File: images/poisson_pmf2.png Graphic file (type bmp)
 <images/poisson_pmf2.png>
 File: images/poisson_pmf3.png Graphic file (type bmp)
 <images/poisson_pmf3.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 4683--4685
+[83] [84]
+Underfull \hbox (badness 10000) in paragraph at lines 4694--4696
 
  []
 
-[83] [84] [85]
+File: images/unif_pdf.png Graphic file (type bmp)
+<images/unif_pdf.png>
+[85]
+File: images/baby_unif_hist_freq.png Graphic file (type bmp)
+<images/baby_unif_hist_freq.png>
+[86] [87]
 Chapter 6.
-[86
-
-]
-Chapter 7.
-[87
-
-]
-Chapter 8.
 [88
 
 ]
-Chapter 9.
+Chapter 7.
 [89
 
 ]
+Chapter 8.
+[90
+
+]
+Chapter 9.
+[91
+
+]
 Chapter 10.
-(./stat0002book.bbl [90
+(./stat0002book.bbl [92
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1571,7 +1579,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[91
+[93
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1586,12 +1594,12 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: C7D006CD4DF0A1EFE03C6DD3A63C1884;11927.
  ) 
 Here is how much of TeX's memory you used:
- 22915 strings out of 479426
- 437741 string characters out of 5879405
- 1014729 words of memory out of 5000000
- 41878 multiletter control sequences out of 15000+600000
+ 22952 strings out of 479426
+ 438584 string characters out of 5879405
+ 1015112 words of memory out of 5000000
+ 41912 multiletter control sequences out of 15000+600000
  541771 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1011b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (91 pages).
+Output written on stat0002book.pdf (93 pages).
