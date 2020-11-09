@@ -552,11 +552,11 @@ $T_1$ has exponential distribution with parameter $\lambda$, or, for short,
 \[ T_1 \sim \mbox{exp}(\lambda). \]
 Let $T_2$ be the time between the 1st birth and the 2nd birth; and $T_3$ be the time between the 2nd birth and the 3rd birth; and so on.  Observed values $t_2$ and $t_3$ of $T_2$ and $T_3$ are $t_2$=59 minutes and $t_3$=14 minutes.
 
-Figure \ref@(fig:babyexpplots) shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.
+Figure \@ref(fig:babyexpplots) shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.
 
-```{r echo=FALSE, babyexpplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample times between births.'}
-include_cropped_graphics("images/baby_exp_hist.png")
-include_cropped_graphics("images/baby_exp_box.png")
+```{r echo=FALSE, babyexpplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample times between births.', out.width = '50%'}
+knitr::include_graphics("images/baby_exp_hist.png")
+knitr::include_graphics("images/baby_exp_box.png")
 ```
 
 It can be shown (STAT0007) that if the times of birth form a Poisson process

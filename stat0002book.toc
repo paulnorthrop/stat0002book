@@ -104,32 +104,32 @@
 \contentsline {section}{\numberline {5.7}The uniform distribution}{85}{section.5.7}%
 \contentsline {subsection}{\numberline {5.7.1}Summary of the uniform(\(a,b\)) distribution}{86}{subsection.5.7.1}%
 \contentsline {section}{\numberline {5.8}The exponential distribution}{87}{section.5.8}%
-\contentsline {subsubsection}{Three ways to check the Poisson process assumption}{89}{section*.130}%
-\contentsline {subsection}{\numberline {5.8.1}Summary of the exponential(\(\mitlambda \)) distribution}{90}{subsection.5.8.1}%
-\contentsline {section}{\numberline {5.9}The normal distribution}{90}{section.5.9}%
-\contentsline {section}{\numberline {5.10}QQ plots}{90}{section.5.10}%
-\contentsline {chapter}{\numberline {6}Statistical Inference}{91}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Sample and populations}{91}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Probability models}{91}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Fitting models}{91}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{91}{section.6.4}%
-\contentsline {section}{\numberline {6.5}What makes an estimator good?}{91}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{91}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Contingency tables}{92}{chapter.7}%
-\contentsline {section}{\numberline {7.1}2-way contingency tables}{92}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{92}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}3-way contingency tables}{92}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Linear regression}{93}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Simple linear regression}{93}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Looking at scatter plots}{93}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Model checking}{93}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{93}{subsection.8.3.1}%
-\contentsline {section}{\numberline {8.4}Use of transformations}{93}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Over-fitting}{93}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Other aspects of regression}{93}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{93}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Correlation}{94}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{94}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Covariance and correlation}{94}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{94}{section.9.3}%
-\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{95}{chapter.10}%
+\contentsline {subsubsection}{Three ways to check the Poisson process assumption}{88}{section*.130}%
+\contentsline {subsection}{\numberline {5.8.1}Summary of the exponential(\(\mitlambda \)) distribution}{89}{subsection.5.8.1}%
+\contentsline {section}{\numberline {5.9}The normal distribution}{89}{section.5.9}%
+\contentsline {section}{\numberline {5.10}QQ plots}{89}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Statistical Inference}{90}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sample and populations}{90}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Probability models}{90}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Fitting models}{90}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{90}{section.6.4}%
+\contentsline {section}{\numberline {6.5}What makes an estimator good?}{90}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{90}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Contingency tables}{91}{chapter.7}%
+\contentsline {section}{\numberline {7.1}2-way contingency tables}{91}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{91}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}3-way contingency tables}{91}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Linear regression}{92}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Simple linear regression}{92}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Looking at scatter plots}{92}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Model checking}{92}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{92}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Use of transformations}{92}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Over-fitting}{92}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Other aspects of regression}{92}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{92}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Correlation}{93}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{93}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Covariance and correlation}{93}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{93}{section.9.3}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{94}{chapter.10}%

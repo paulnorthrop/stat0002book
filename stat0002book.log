@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  9 NOV 2020 20:44
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  9 NOV 2020 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1525,35 +1525,32 @@ File: images/unif_pdf.png Graphic file (type bmp)
 File: images/baby_unif_hist_freq.png Graphic file (type bmp)
 <images/baby_unif_hist_freq.png>
 [86]
-
-LaTeX Warning: Reference `@' on page 87 undefined on input line 4775.
-
 File: images/baby_exp_hist.png Graphic file (type bmp)
 <images/baby_exp_hist.png>
 File: images/baby_exp_box.png Graphic file (type bmp)
 <images/baby_exp_box.png>
-[87] [88]
+[87]
 File: images/baby_exp_hist_dens.png Graphic file (type bmp)
 <images/baby_exp_hist_dens.png>
-[89] [90]
+[88] [89]
 Chapter 6.
-[91
+[90
 
 ]
 Chapter 7.
-[92
+[91
 
 ]
 Chapter 8.
-[93
+[92
 
 ]
 Chapter 9.
-[94
+[93
 
 ]
 Chapter 10.
-(./stat0002book.bbl [95
+(./stat0002book.bbl [94
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1590,7 +1587,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[96
+[95
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1603,17 +1600,14 @@ Package polyglossia Info: Option: english variant=british.
 )
 Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: C7D006CD4DF0A1EFE03C6DD3A63C1884;11927.
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 22990 strings out of 479426
- 439515 string characters out of 5879405
+ 22989 strings out of 479426
+ 439512 string characters out of 5879405
  1015570 words of memory out of 5000000
- 41947 multiletter control sequences out of 15000+600000
+ 41946 multiletter control sequences out of 15000+600000
  541771 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1016b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (96 pages).
+Output written on stat0002book.pdf (95 pages).
