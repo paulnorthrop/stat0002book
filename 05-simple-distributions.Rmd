@@ -602,4 +602,54 @@ for $\lambda > 0$, then $T \sim \mbox{exponential}(\lambda)$.
 
 ## The normal distribution {#normal}
 
+Suppose now that we are interested in the birth weights $Z_1,\ldots,Z_{44}$ of the babies.  Figure \@ref(fig:babynormalplots) shows a histogram and a boxplot of the of the sample birth weights $z_1,\ldots,z_n$.  I have converted the weights from grams to pounds (1 pound $\approx$ 453.5g).
+
+```{r echo=FALSE, babynormalplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample birth weights.', out.width = '50%'}
+knitr::include_graphics("images/baby_normal_histnew.png")
+knitr::include_graphics("images/baby_normal_box.png")
+```
+
+The most obvious feature of figure \@ref(fig:babynormalplots) is that the empirical distribution of birth weights is not symmetric.  The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be thes result of some babies being born prematurely or with a condition that tends to lower birthweight.
+
+A distribution that is commonly used to model continuous variables such as weight is the normal distribution.  This is also known as the Gaussian distribution.  A continuous random variable $Z$ has a normal distribution with parameters $\mu$ and $\sigma^{2}$ if its probability density function is given by
+\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
+(z-\mu)^{2} \right],
+\qquad \mbox{for}\,\,\,-\infty < z < \infty. \]
+We write 
+\[ Z \sim \mbox{N}(\mu,\sigma^{2}). \]
+One of the key properties of the normal distribution is that its p.d.f. is symmetric about its mean $\mu$. Therefore, the plots in Figure \@ref(fig:babynormalplots) suggest that it may not be reasonable to suppose that the birth weights of these babies behave like a random sample from a normal distribution. 
+
+Nevertheless, we consider how we could to fit a normal distribution to these data - even though it does not appear that a normal distribution is appropriate in this case.
+
+It makes sense to estimate
+
+* the mean of a distribution by the sample mean;
+* the variance of a distribution by the sample variance. 
+
+In this example we get 
+\[ \hat{\mu}=7.22 \mbox{ pounds} \qquad \mbox{and} \qquad \hat{\sigma}^2=1.36 \mbox{ pounds}^2. \]
+
+In Figure \@ref(fig:normalpdf) the fitted normal $\mbox{N}(\hat{\mu},\hat{\sigma}^{2})$ p.d.f. superimposed on the histogram of the sample birth weights. 
+
+```{r echo=FALSE, normalpdf, fig.show='hold', fig.cap='Histogram of sample birth weights, with a fitted normal p.d.f. superimposed.'}
+include_cropped_graphics("images/baby_normal_fitnew.png")
+```
+
+As we expect the fit if not particularly good.  In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution.  In Section \@ref(qq) we will use a **normal QQ plot** to assess the fit of a normal distribution to these data.
+
+### Summary of the $\mbox{N}(\mu,\sigma^2)$ distribution
+
+* Situation: used widely in Statistics 
+    - to model continuous variables, perhaps after transformation;
+    - as a model for measurement error;
+    - (under certain conditions) as an approximation to other random variables;
+    - as a model for data that can be viewed as sums or averages of a large number of random variables (owing to the Central Limit Theorem).
+* If $Z$ is a continuous random variable with p.d.f.
+\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
+(z-\mu)^2 \right],
+\,\, \mbox{for}\,-\infty < z < \infty, \]
+for $\sigma >0$, then $Z \sim \mbox{N}(\mu,\sigma^{2})$.
+* Parameters: $-\infty < \mu < \infty$, $\sigma^2 > 0$.
+* $\mbox{E}(Z)=\mu$, $\mbox{var}(Z)=\sigma^2$.
+
 ## QQ plots {#qq}

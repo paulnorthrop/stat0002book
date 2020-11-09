@@ -173,7 +173,9 @@
 <li class="chapter" data-level="5.8" data-path="simple.html"><a href="simple.html#exponential"><i class="fa fa-check"></i><b>5.8</b> The exponential distribution</a><ul>
 <li class="chapter" data-level="5.8.1" data-path="simple.html"><a href="simple.html#summary-of-the-exponentiallambda-distribution"><i class="fa fa-check"></i><b>5.8.1</b> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a></li>
+<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a><ul>
+<li class="chapter" data-level="5.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>5.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
+</ul></li>
 <li class="chapter" data-level="5.10" data-path="simple.html"><a href="simple.html#qq"><i class="fa fa-check"></i><b>5.10</b> QQ plots</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a><ul>
@@ -690,6 +692,56 @@ for <span class="math inline">\(\lambda &gt; 0\)</span>, then <span class="math 
 </div>
 <div id="normal" class="section level2">
 <h2><span class="header-section-number">5.9</span> The normal distribution</h2>
+<p>Suppose now that we are interested in the birth weights <span class="math inline">\(Z_1,\ldots,Z_{44}\)</span> of the babies. Figure <a href="simple.html#fig:babynormalplots">5.13</a> shows a histogram and a boxplot of the of the sample birth weights <span class="math inline">\(z_1,\ldots,z_n\)</span>. I have converted the weights from grams to pounds (1 pound <span class="math inline">\(\approx\)</span> 453.5g).</p>
+<div class="figure" style="text-align: center"><span id="fig:babynormalplots"></span>
+<img src="images/baby_normal_histnew.png" alt="Histogram (left) and boxplot (right) of the sample birth weights." width="50%" /><img src="images/baby_normal_box.png" alt="Histogram (left) and boxplot (right) of the sample birth weights." width="50%" />
+<p class="caption">
+Figure 5.13: Histogram (left) and boxplot (right) of the sample birth weights.
+</p>
+</div>
+<p>The most obvious feature of figure <a href="simple.html#fig:babynormalplots">5.13</a> is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be thes result of some babies being born prematurely or with a condition that tends to lower birthweight.</p>
+<p>A distribution that is commonly used to model continuous variables such as weight is the normal distribution. This is also known as the Gaussian distribution. A continuous random variable <span class="math inline">\(Z\)</span> has a normal distribution with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> if its probability density function is given by
+<span class="math display">\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
+(z-\mu)^{2} \right],
+\qquad \mbox{for}\,\,\,-\infty &lt; z &lt; \infty. \]</span>
+We write
+<span class="math display">\[ Z \sim \mbox{N}(\mu,\sigma^{2}). \]</span>
+One of the key properties of the normal distribution is that its p.d.f. is symmetric about its mean <span class="math inline">\(\mu\)</span>. Therefore, the plots in Figure <a href="simple.html#fig:babynormalplots">5.13</a> suggest that it may not be reasonable to suppose that the birth weights of these babies behave like a random sample from a normal distribution.</p>
+<p>Nevertheless, we consider how we could to fit a normal distribution to these data - even though it does not appear that a normal distribution is appropriate in this case.</p>
+<p>It makes sense to estimate</p>
+<ul>
+<li>the mean of a distribution by the sample mean;</li>
+<li>the variance of a distribution by the sample variance.</li>
+</ul>
+<p>In this example we get
+<span class="math display">\[ \hat{\mu}=7.22 \mbox{ pounds} \qquad \mbox{and} \qquad \hat{\sigma}^2=1.36 \mbox{ pounds}^2. \]</span></p>
+<p>In Figure <a href="simple.html#fig:normalpdf">5.14</a> the fitted normal <span class="math inline">\(\mbox{N}(\hat{\mu},\hat{\sigma}^{2})\)</span> p.d.f. superimposed on the histogram of the sample birth weights.</p>
+<div class="figure" style="text-align: center"><span id="fig:normalpdf"></span>
+<img src="images/baby_normal_fitnew.png" alt="Histogram of sample birth weights, with a fitted normal p.d.f. superimposed." width="75%" />
+<p class="caption">
+Figure 5.14: Histogram of sample birth weights, with a fitted normal p.d.f. superimposed.
+</p>
+</div>
+<p>As we expect the fit if not particularly good. In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution. In Section <a href="simple.html#qq">5.10</a> we will use a <strong>normal QQ plot</strong> to assess the fit of a normal distribution to these data.</p>
+<div id="summary-of-the-mboxnmusigma2-distribution" class="section level3">
+<h3><span class="header-section-number">5.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</h3>
+<ul>
+<li>Situation: used widely in Statistics
+<ul>
+<li>to model continuous variables, perhaps after transformation;</li>
+<li>as a model for measurement error;</li>
+<li>(under certain conditions) as an approximation to other random variables;</li>
+<li>as a model for data that can be viewed as sums or averages of a large number of random variables (owing to the Central Limit Theorem).</li>
+</ul></li>
+<li>If <span class="math inline">\(Z\)</span> is a continuous random variable with p.d.f.
+<span class="math display">\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
+(z-\mu)^2 \right],
+\,\, \mbox{for}\,-\infty &lt; z &lt; \infty, \]</span>
+for <span class="math inline">\(\sigma &gt;0\)</span>, then <span class="math inline">\(Z \sim \mbox{N}(\mu,\sigma^{2})\)</span>.</li>
+<li>Parameters: <span class="math inline">\(-\infty &lt; \mu &lt; \infty\)</span>, <span class="math inline">\(\sigma^2 &gt; 0\)</span>.</li>
+<li><span class="math inline">\(\mbox{E}(Z)=\mu\)</span>, <span class="math inline">\(\mbox{var}(Z)=\sigma^2\)</span>.</li>
+</ul>
+</div>
 </div>
 <div id="qq" class="section level2">
 <h2><span class="header-section-number">5.10</span> QQ plots</h2>

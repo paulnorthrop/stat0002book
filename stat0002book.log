@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  9 NOV 2020 21:11
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  9 NOV 2020 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1532,25 +1532,33 @@ File: images/baby_exp_box.png Graphic file (type bmp)
 [87]
 File: images/baby_exp_hist_dens.png Graphic file (type bmp)
 <images/baby_exp_hist_dens.png>
-[88] [89]
+[88]
+File: images/baby_normal_histnew.png Graphic file (type bmp)
+<images/baby_normal_histnew.png>
+File: images/baby_normal_box.png Graphic file (type bmp)
+<images/baby_normal_box.png>
+[89]
+File: images/baby_normal_fitnew.png Graphic file (type bmp)
+<images/baby_normal_fitnew.png>
+[90] [91]
 Chapter 6.
-[90
-
-]
-Chapter 7.
-[91
-
-]
-Chapter 8.
 [92
 
 ]
-Chapter 9.
+Chapter 7.
 [93
 
 ]
+Chapter 8.
+[94
+
+]
+Chapter 9.
+[95
+
+]
 Chapter 10.
-(./stat0002book.bbl [94
+(./stat0002book.bbl [96
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1587,7 +1595,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[95
+[97
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1602,12 +1610,12 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: C7D006CD4DF0A1EFE03C6DD3A63C1884;11927.
  ) 
 Here is how much of TeX's memory you used:
- 22989 strings out of 479426
- 439512 string characters out of 5879405
- 1015570 words of memory out of 5000000
- 41946 multiletter control sequences out of 15000+600000
+ 23025 strings out of 479426
+ 440523 string characters out of 5879405
+ 1015918 words of memory out of 5000000
+ 41979 multiletter control sequences out of 15000+600000
  541771 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1016b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (95 pages).
+Output written on stat0002book.pdf (97 pages).
