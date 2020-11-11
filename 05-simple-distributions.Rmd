@@ -97,7 +97,7 @@ X_1 =
 \end{cases}
 \end{equation}
 
-$X_1$ is the outcome of a **Bernoulli trial**, that is, an experiment which has exactly two possible outcomes.  Here, we have mapped the birth of a girl to the value 0 and the birth of a boy to the value 1.  This is arbitrary: we could have done this the other way round.
+$X_1$ is the outcome of a **Bernoulli trial**, that is, an experiment that has two possible outcomes.  Here, we have mapped the birth of a girl to the value 0 and the birth of a boy to the value 1.  This is arbitrary: we could have done this the other way round.
 
 Let 
 \begin{eqnarray*}
@@ -208,7 +208,7 @@ include_cropped_graphics("images/binom_pmf4.png")
 
 We have observed more boys than girls.  If $p=1/2$ we would expect roughly equal numbers of boys and girls. Even if it is true that $p=1/2$, we would only occasionally get equal numbers of boys and girls born on each day. We might like to quantify how unlikely is the event of a 26:18 split in 44 independent Bernoulli(1/2) trials. If this is very unlikely we might think that perhaps $p \neq 1/2$ after all. This is an example of **statistical inference**, that is, making an inference about the true value of $p$.  We will study statistical inference in Chapter \@ref(inference). 
 
-In this example we might want to infer whether or not $p=0.5$.  We wish to judge whether the estimate $\hat{p}$ is far enough from 0.5 for us to conclude that $p \neq 0.5$.  We need to take into account how reliable (a term that we will use in Chapter \@ref(inference) is how **precise**) the estimation of $p$ is.  For a given true value of $p$ the larger the sample size $n$ (here $n = 44$) the greater the precision. If you take STAT0003 then you will study this in some detail.  Here we introduce two main ways to look at this problem.  They will seem rather similar, but there is a subtle difference.
+In this example we might want to infer whether or not $p=0.5$.  We wish to judge whether the estimate $\hat{p}$ is far enough from 0.5 for us to conclude that $p \neq 0.5$.  We need to take into account how reliable (a term that we will use in Chapter \@ref(inference) is how **precise**) the estimation of $p$ is.  For a given true value of $p$ the larger the sample size $n$ (here $n = 44$) the greater the precision. If you take STAT0003 then you will study this in some detail.  Here, we introduce two main approaches to this problem.  They will seem rather similar, but there is a subtle difference.
 
 #### 1. If $p=0.5$ then how surprising is $\hat{p}=0.591$? {-}
 
@@ -216,13 +216,13 @@ Suppose that the **null hypothesis** $H_0: p=0.5$ is true.  How unlikely it is t
 
 You could think of this as 'standing' on the null hypothesis $H_0$ and looking to see how far away are the data.
 
-If $p=0.5$, $P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30$.  Figure \@ref(fig:binominf) illustrates the calculation of this probability. This (the value 0.30 here) is called a **$p$-value**. A $p$-value is a measure of our surprise at seeing data if the null hypothesis is true.  The smaller the $p$-value the greater our surprise.  We could decide to reject the null hypothesis $H_0$ that $p=0.5$ if the $p$-value is sufficiently small.  Otherwise, we do not reject $H_0$. 
+If $p=0.5$, $P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30$.  Figure \@ref(fig:binominf) illustrates the calculation of this probability. This (the value 0.30 here) is called a **$p$-value**. A $p$-value is a measure of our surprise at seeing the data if the null hypothesis is true.  The smaller the $p$-value the greater our surprise.  We could decide to reject the null hypothesis $H_0$ that $p=0.5$ if the $p$-value is sufficiently small.  Otherwise, we do not reject $H_0$. 
 
-```{r echo=FALSE, binominf, fig.show='hold', fig.cap='A binomial($44,1/2$) p.m.f. with the probabilities satisfting $Y$ less than or equal to 18 or greater than or equal to 26 shaded in black.'}
+```{r echo=FALSE, binominf, fig.show='hold', fig.cap='A binomial($44,1/2$) p.m.f. with the probabilities satisfying $Y$ less than or equal to 18 or greater than or equal to 26 shaded in black.'}
 include_cropped_graphics("images/binom_inference_1b.png")
 ```
 
-A traditional cutoff for "sufficiently small" is 0.05, but it is not possible to argue that this is generally better than other choices of cutoff.  Based on this cutoff we would not reject $H_0$.
+A traditional cutoff for "sufficiently small" is 0.05, but it is not possible to argue that this is generally better than other choices of cutoff.  Based on this cutoff we would not reject $H_0$, because $0.3 > 0.05$.
 
 #### 2. Is $p=0.5$ plausible based on inferences made about $p$ using the data? {-}
 
@@ -232,7 +232,7 @@ You could think of this as 'standing' on the data and looking to see how far awa
 
 A confidence interval is a realisation (the observed value) of a random interval that has a certain probability of covering the true value of $p$.  The interval is random because before we collect the data we do not know what the interval will be. For example, A 95\% confidence interval for $p$ has a probability of 0.95 of covering the true value of $p$. 
 
-An approximate 95\% confidence interval for $p$ based on these data is $(0.45,0.74)$ which does contain 0.5.  Therefore, we do not reject $H_0$.
+An approximate 95\% confidence interval for $p$ based on these data is $(0.45,0.74)$ which does contain 0.5.  Therefore, we do not reject $H_0$.  You can think of a 95\% confidence interval as a range of values of $p$ that are consistent with the data, in the sense that we would not reject $H_0: p = p_0$ for any $p_0$ contained in this interval if we used approach 1. above with a cutoff of 0.05.
 
 In modern Statistics method 2. (**interval estimation**) is often preferred to 1. (**hypothesis testing**) because it gives an interval estimate for $p$ rather than just a decision of whether or not the data suggest that $p=0.5$.
 
@@ -371,7 +371,7 @@ for some $p$, $0 < p \leq 1$, then $W \sim \mbox{geometric}(p)$.
 *  Parameter: $p \in (0,1]$.
 *  $\mbox{E}(W)=\displaystyle\frac1p$, $\mbox{var}(W)=\displaystyle\frac{1-p}{p^2}$. (**Exercise**)
 
-An alternative formulation is where a random variable $V$ is defined as the number of trials performed **before** the next 1 occurs.  Therefore, the support of $V$ is $0, 1, 2, ...$ and $V = W - 1$. The `dgeom()` function in R relates to a random variable like $V$, not $W$. 
+An alternative formulation is where a random variable $V$ is defined as the number of trials performed **before** the first 1 occurs.  Therefore, the support of $V$ is $0, 1, 2, ...$ and $V = W - 1$. The `dgeom()` function in R relates to a random variable like $V$, not $W$. 
 
 ## The Poisson distribution {#Poisson}
 
