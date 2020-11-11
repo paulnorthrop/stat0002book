@@ -301,7 +301,7 @@ geom_hux <- geom_df %>%
   set_align(everywhere, everywhere, "center") %>% 
   set_align(-c(1,2), 3, ".") %>%
   set_top_border(3, everywhere, brdr(0.1, "solid", "black")) %>%
-  set_top_border(-3, everywhere, brdr(0.2, "solid", "white")) %>%
+  set_top_border(-3, everywhere, brdr(0.1, "solid", "white")) %>%
   set_left_border(everywhere, -c(1, 6), brdr(0.1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.9) %>% 
