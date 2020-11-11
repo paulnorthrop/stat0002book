@@ -359,7 +359,7 @@ Estimated expected frequencies: $26 \times (1-\hat{p})^{w-1}\,\hat{p}, \quad w=1
 
 Figure \@ref(fig:geomfit) shows that the observed and estimated expected frequencies are in reasonably close agreement. We do not expect exact agreement.  Formal methods for assessing how closely observed and estimated expected frequencies agree are not part of STAT0002.  Figure \@ref(fig:geomfit) also shows the general shape of the geometric distribution.  It is positively skewed.
 
-```{r echo=FALSE, geomfit, fig.show='hold', fig.cap='Bar plot of numbers of births between successive baby boys (including the next baby boy).'}
+```{r echo=FALSE, geomfit, fig.show='hold', fig.cap='Observed frequencies and estimated expected frequencies under a geometric(0.591) distribution.'}
 include_cropped_graphics("images/baby_geom_fit.png")
 ```
 
@@ -467,7 +467,7 @@ Estimated expected frequencies: $24 \times \displaystyle\frac{\hat{\lambda}^n\,e
 Figure \@ref(fig:poisfit) shows that the observed and estimated expected frequencies 
 are in reasonably close agreement.
 
-```{r echo=FALSE, poisfit, fig.show='hold', fig.cap='Plot of observed frequencies and the estimated expected frequencies under a Poisson(1.83) distribution.'}
+```{r echo=FALSE, poisfit, fig.show='hold', fig.cap='Observed frequencies and the estimated expected frequencies under a Poisson(1.83) distribution.'}
 include_cropped_graphics("images/baby_pois_fit.png")
 ```
 
