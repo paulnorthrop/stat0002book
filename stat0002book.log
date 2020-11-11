@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  11 NOV 2020 19:57
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  11 NOV 2020 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1503,9 +1503,10 @@ Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
+[81]
 File: images/baby_pois_bar.png Graphic file (type bmp)
 <images/baby_pois_bar.png>
-[81] [82]
+[82]
 File: images/baby_pois_fit.png Graphic file (type bmp)
 <images/baby_pois_fit.png>
 File: images/poisson_pmf1.png Graphic file (type bmp)
@@ -1612,7 +1613,7 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 Here is how much of TeX's memory you used:
  23025 strings out of 479426
  440523 string characters out of 5879405
- 1015918 words of memory out of 5000000
+ 1015915 words of memory out of 5000000
  41979 multiletter control sequences out of 15000+600000
  541771 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
