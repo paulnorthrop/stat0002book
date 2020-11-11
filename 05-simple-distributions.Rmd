@@ -228,13 +228,13 @@ A traditional cutoff for "sufficiently small" is 0.05, but it is not possible to
 
 We estimate $p$ and then see how close the estimate is to 0.5.  In this example $\hat{p}=26/44=0.591$. To quantify whether this is significantly different from 0.5 we can calculate an interval estimate of $p$, called a **confidence interval**, and see whether or not this interval contains 0.5.  If it does not contain 0.5 then we could decide to reject the null hypothesis $H_0$ that $p=0.5$. Otherwise, we do not reject $H_0$.
 
-You could think of this as 'standing' on the data and looking to see how far away is the null hypothesis $H_0.$
+You could think of this as 'standing' on the data and looking to see how far away is the null hypothesis $H_0$.
 
 A confidence interval is a realisation (the observed value) of a random interval that has a certain probability of covering the true value of $p$.  The interval is random because before we collect the data we do not know what the interval will be. For example, A 95\% confidence interval for $p$ has a probability of 0.95 of covering the true value of $p$. 
 
 An approximate 95\% confidence interval for $p$ based on these data is $(0.45,0.74)$ which does contain 0.5.  Therefore, we do not reject $H_0$.  You can think of a 95\% confidence interval as a range of values of $p$ that are consistent with the data, in the sense that we would not reject $H_0: p = p_0$ for any $p_0$ contained in this interval if we used approach 1. above with a cutoff of 0.05.
 
-In modern Statistics method 2. (**interval estimation**) is often preferred to 1. (**hypothesis testing**) because it gives an interval estimate for $p$ rather than just a decision of whether or not the data suggest that $p=0.5$.
+In modern Statistics method 2. (**interval estimation**) is often preferred to 1. (**hypothesis testing**) because it gives an interval estimate for $p$ rather than just a decision of whether or not to reject $H_0: p=0.5$.
 
 ### Summary of the binomial($n,p$) distribution
 
