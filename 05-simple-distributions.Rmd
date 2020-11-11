@@ -301,7 +301,7 @@ geom_hux <- geom_df %>%
   set_align(everywhere, everywhere, "center") %>% 
   set_align(-c(1,2), 3, ".") %>%
   set_top_border(3, everywhere, brdr(0.1, "solid", "black")) %>%
-  set_top_border(-3, everywhere, brdr(0.1, "solid", "white")) %>%
+  set_top_border(-3, everywhere, brdr(0.2, "solid", "white")) %>%
   set_left_border(everywhere, -c(1, 6), brdr(0.1, "solid", "black")) %>%
   set_background_color(everywhere, everywhere, "white") %>%
   set_width(0.9) %>% 
@@ -309,6 +309,7 @@ geom_hux <- geom_df %>%
   set_bottom_padding(0) %>%
   set_top_padding(0) %>%
   insert_row("total", "26", "26", "1", "1", after = 8) %>%        
+  set_bottom_border(8, everywhere, brdr(0.1, "solid", "black")) %>%
   set_number_format(9, 3:5, 0) %>%
 set_caption("Observed frequencies and relative frequencies and their fitted values under a geometric(0.591) distribution.")
 geom_hux    
@@ -415,6 +416,7 @@ pois_hux <- pois_df %>%
   set_bottom_padding(0) %>%
   set_top_padding(0) %>%
   insert_row("total", "24", "24", "1", "1", after = 8) %>%        
+  set_bottom_border(8, everywhere, brdr(0.1, "solid", "black")) %>%
   set_number_format(9, 3:5, 0) %>%
 set_caption("Observed frequencies and relative frequencies and their fitted values for a Poisson(1.83) distribution.")
 pois_hux    
