@@ -342,7 +342,7 @@ For a continuous random variable $X$, the mode is the value at which the p.d.f. 
 \[ \frac{\mathrm{d}}{\mathrm{d}x} f_X(x)  = 0, \]
 and checking that you have indeed found a maximum.
 
-## Quantiles
+## Quantiles {#quantiles}
 
 To keep things simple we consider a **continuous** random variable $X$.  For $0 < p < 1$, a $100p\%$ quantile of $X$ is defined to be a value $x_p$ such that 
 \[ F_X(x_p)=P(X \leq x_p) = p. \]

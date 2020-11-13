@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  13 NOV 2020 20:10
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  13 NOV 2020 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1560,26 +1560,59 @@ File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
 [90] [91]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5010.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5013.
 [92] [93]
+File: images/qq_picture.png Graphic file (type bmp)
+<images/qq_picture.png>
+File: images/qq_schematic.png Graphic file (type bmp)
+<images/qq_schematic.png>
+[94]
+File: images/ox_qq_sim.png Graphic file (type bmp)
+<images/ox_qq_sim.png>
+File: images/ox_qq_simenv.png Graphic file (type bmp)
+<images/ox_qq_simenv.png>
+[95] [96] [97]
+File: images/ox_hist_trans.png Graphic file (type bmp)
+<images/ox_hist_trans.png>
+File: images/ox_qq_trans.png Graphic file (type bmp)
+<images/ox_qq_trans.png>
+File: images/ox_qq_time_env.png Graphic file (type bmp)
+<images/ox_qq_time_env.png>
+File: images/ox_qq_sqrttime_env.png Graphic file (type bmp)
+<images/ox_qq_sqrttime_env.png>
+[98] [99] [100] [101]
+
+LaTeX Warning: Reference `(' on page 102 undefined on input line 5269.
+
+File: images/QQtypes.png Graphic file (type bmp)
+<images/QQtypes.png>
+[102]
+File: images/baby_normal_qq_env.png Graphic file (type bmp)
+<images/baby_normal_qq_env.png>
+File: images/baby_unif_qq_simenv.png Graphic file (type bmp)
+<images/baby_unif_qq_simenv.png>
+[103] [104]
+File: images/exp_simenv.png Graphic file (type bmp)
+<images/exp_simenv.png>
+[105] [106]
 Chapter 6.
-[94
+[107
 
 ]
 Chapter 7.
-[95
+[108
 
 ]
 Chapter 8.
-[96
+[109
 
 ]
 Chapter 9.
-[97
+[110
 
 ]
 Chapter 10.
-(./stat0002book.bbl [98
+(./stat0002book.bbl [111
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1616,7 +1649,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[99
+[112
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1629,14 +1662,17 @@ Package polyglossia Info: Option: english variant=british.
 )
 Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: C7D006CD4DF0A1EFE03C6DD3A63C1884;11927.
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 23499 strings out of 479426
- 447843 string characters out of 5879405
- 1026258 words of memory out of 5000000
- 42443 multiletter control sequences out of 15000+600000
+ 23652 strings out of 479426
+ 451279 string characters out of 5879405
+ 1028094 words of memory out of 5000000
+ 42584 multiletter control sequences out of 15000+600000
  541779 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1016b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (99 pages).
+Output written on stat0002book.pdf (112 pages).

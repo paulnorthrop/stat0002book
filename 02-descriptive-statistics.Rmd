@@ -153,7 +153,7 @@ Radcliffe hospital in Oxford, UK, during a particular week.',
 
 One way to summarise a dataset is to calculate numerical summaries called **summary statistics**. Summary statistics can be used as indicators of the location, spread and shape of the data (although looking at a plot can be more helpful).
 
-### Five number summary
+### Five number summary {#fivenumber}
 
 A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary.  As we will see later, the five number summary involves quantities called **sample quantiles**. These are estimates of theoretical quantities that we will study in Chapter \@ref(rvs). There is more than one way to calculate sample quantiles.  For example, the R statistical package has 9 options in its `quantile()` function. The particular method given below is just one of these options.
 

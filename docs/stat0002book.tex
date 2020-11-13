@@ -642,8 +642,8 @@ day1 & day2 & day3 & day4 & day5 & day6 & day7\\
 
 One way to summarise a dataset is to calculate numerical summaries called \textbf{summary statistics}. Summary statistics can be used as indicators of the location, spread and shape of the data (although looking at a plot can be more helpful).
 
-\hypertarget{five-number-summary}{%
-\subsection{Five number summary}\label{five-number-summary}}
+\hypertarget{fivenumber}{%
+\subsection{Five number summary}\label{fivenumber}}
 
 A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary. As we will see later, the five number summary involves quantities called \textbf{sample quantiles}. These are estimates of theoretical quantities that we will study in Chapter \ref{rvs}. There is more than one way to calculate sample quantiles. For example, the R statistical package has 9 options in its \texttt{quantile()} function. The particular method given below is just one of these options.
 
@@ -4738,8 +4738,8 @@ We have studied 4 common discrete distributions:
   \textbf{Poisson}: used for counts of events that arrive in a Poisson process.
 \end{itemize}
 
-\hypertarget{the-uniform-distribution}{%
-\section{The uniform distribution}\label{the-uniform-distribution}}
+\hypertarget{uniform}{%
+\section{The uniform distribution}\label{uniform}}
 
 Now suppose that we are interested in the \textbf{times} at which the babies are born. Previously we assumed that births occur in a Poisson process: singly, independently and randomly at a constant rate.
 
@@ -4899,7 +4899,7 @@ Suppose now that we are interested in the birth weights \(Z_1,\ldots,Z_{44}\) of
 \caption{Histogram (left) and boxplot (right) of the sample birth weights.}\label{fig:babynormalplots}
 \end{figure}
 
-The most obvious feature of figure \ref{fig:babynormalplots} is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be thes result of some babies being born prematurely or with a condition that tends to lower birthweight.
+The most obvious feature of figure \ref{fig:babynormalplots} is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.
 
 A distribution that is commonly used to model continuous variables such as weight is the normal distribution. This is also known as the Gaussian distribution. A continuous random variable \(Z\) has a normal distribution with parameters \(\mu\) and \(\sigma^{2}\) if its probability density function is given by
 \[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
@@ -4907,6 +4907,9 @@ A distribution that is commonly used to model continuous variables such as weigh
 \qquad \mbox{for}\,\,\,-\infty < z < \infty. \]
 We write
 \[ Z \sim \mbox{N}(\mu,\sigma^{2}). \]
+
+The p.d.f. of a normal distribution is sometimes described as `bell-shaped' as in the top left plot in Figure \ref{fig:shapes}.
+
 One of the key properties of the normal distribution is that its p.d.f. is symmetric about its mean \(\mu\). Therefore, the plots in Figure \ref{fig:babynormalplots} suggest that it may not be reasonable to suppose that the birth weights of these babies behave like a random sample from a normal distribution.
 
 Nevertheless, we consider how we could to fit a normal distribution to these data - even though it does not appear that a normal distribution is appropriate in this case.
@@ -5059,6 +5062,300 @@ approximately 68\% of observations will fall within 1 standard deviation of the 
 
 \hypertarget{qq}{%
 \section{QQ plots}\label{qq}}
+
+We have seen that we can use a plot, for example, a histogram to examine the shape of the frequency distribution of data. Sometimes we are interested in deciding whether the data appear to have come from a particular distribution, with a particular shape.
+
+For example, many traditional statistical methods are based on an assumption that the data come from a normal distribution. It can be fairly easy to see from a plot whether the data appear to be symmetric or skewed, but judging whether whether a plot of the data has approximately the characteristic bell-shape of a normal distribution may be more difficult.
+
+Another way to compare the distribution of a sample with a particular distribution is to use a \textbf{quantile-quantile plot} or \textbf{QQ plot} for short. This plot is based on comparing sample quantiles (Section \ref{fivenumber}) and theoretical quantiles (Section \ref{quantiles}). The following example is based on a normal distribution, but a QQ plot can be based on any \textbf{continuous} distribution.
+
+\hypertarget{normal-qq-plots}{%
+\subsection{Normal QQ plots}\label{normal-qq-plots}}
+
+Before we describe how to produce a QQ plot we return to the Oxford birth times example. The sample quartiles (\(q_L, m, q_U\)) are 4.95, 7.50, and 9.75 hours. Also, the sample mean is 7.72 hours and the sample standard deviation is 3.57 hours. We suppose that these data have been sampled from a normal distribution with a mean of 7.72 hours and a standard deviation of 3.57 hours. We calculate the (theoretical) quartiles of this normal N(7.72,3.57\(^2\)) distribution and compare them in Table \ref{tab:compareqs} to the sample quartiles of Oxford births data.
+
+\begin{longtable}[]{@{}crrr@{}}
+\caption{\label{tab:compareqs} Comparison of sample and theoretical quantiles.}\tabularnewline
+\toprule
+& \(q_L\) & \(m\) & \(q_U\)\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+& \(q_L\) & \(m\) & \(q_U\)\tabularnewline
+\midrule
+\endhead
+sample & \(4.95\) & \(7.50\) & \(9.75\)\tabularnewline
+\(N(7.72, 3.57^2)\) & \(5.32\) & \(7.72\) & \(10.13\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+If the data have been sampled from \(N(7.72, 3.57^2)\) distribution the values in the first row of Table \ref{tab:compareqs} should be close to the corresponding values in the second row. We can see that they are not very different but that
+the quartiles of the normal distribution are greater than the empirical quartiles. A QQ plot performs exactly the same kind of comparison but
+
+\begin{itemize}
+\tightlist
+\item
+  we use a plot instead of a table
+\item
+  instead of using only the sample quartiles, \(q_L, m, q_U\), we use \textbf{all} the data.
+\end{itemize}
+
+The general idea is to plot \textbf{sample} quantiles against the \textbf{theoretical} quantiles of the distribution from which we think the data may have been sampled. If the data have been sampled from this distribution then the sample empirical and theoretical quantiles should be similar and the points in the plot should lie roughly on the identity line.
+
+\textbf{Which empirical quantiles should we use?}
+
+In section \ref{fivenumber} we said that, for \(0 < p < 1\) the \(100p\%\) sample quantile is \(x_{(p(n+1))}\). If we substitute \(p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}\) in \(x_{(p(n+1))}\) then we obtain \(x_{(1)}, x_{(2)}, ..., x_{(n)}\). Therefore, the \textbf{ordered sampled values} or \textbf{order statistics} \(x_{(1)}, x_{(2)}, ..., x_{(n)}\) are the \(100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%\) sample quantiles.
+
+\textbf{How do we calculate the theoretical quantiles?}
+
+For simplicity we suppose that the sample size \(n=9\). Therefore we want to calculate the \(10\%, 20\%, \ldots, 90\%\) quantiles of a \(N(7.72, 3.57^2)\) distribution. In R we would do the following.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{qnorm}\NormalTok{((}\DecValTok{1}\OperatorTok{:}\DecValTok{9}\NormalTok{) }\OperatorTok{/}\StringTok{ }\DecValTok{10}\NormalTok{, }\DataTypeTok{mean =} \FloatTok{7.72}\NormalTok{, }\DataTypeTok{sd =} \FloatTok{3.57}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  3.144861  4.715412  5.847890  6.815551  7.720000  8.624449  9.592110
+## [8] 10.724588 12.295139
+\end{verbatim}
+
+In Figure @ref\{fig:qqpic\} these quantiles are superimposed on the p.d.f. of a \(N(7.72, 3.57^2)\) distribution.
+
+\textbackslash begin\{figure\}
+
+\{\centering \includegraphics[width=0.75\linewidth]{images/qq_picture}
+
+\}
+
+\textbackslash caption\{A normal p.d.f. with the 10\%, 20\%, \ldots, 90\% quantiles indicated with vertical lines.\}\label{fig:qqpic}
+\textbackslash end\{figure\}
+
+For \(n=9\) the 9 quantiles \(3.14, 4.72, \ldots, 12.30\) split the \(N(7.72, 3.57^2)\) distribution into 10 intervals. The area under the p.d.f. on each of these intervals is equal to 1/10. For the Oxford births data \(n=95\). Therefore the 95 quantiles we will use later to produce a QQ plot split the distribution into 96 intervals. In each interval the area under the p.d.f. is 1/96.
+
+\hypertarget{constructing-a-qq-plot}{%
+\subsubsection*{Constructing a QQ plot}\label{constructing-a-qq-plot}}
+\addcontentsline{toc}{subsubsection}{Constructing a QQ plot}
+
+To produce a QQ plot based on a continuous distribution (not necessarily a normal distribution) we plot, for \(i = 1, \ldots, n\)
+\[ x_{(i)}  \,\,\mbox{ against the }\,\, 100\frac{i}{n+1}\% \, \mbox{ theoretical quantile}, \]
+that is, the order statistics against the corresponding values we might expect
+from a sample from the distribution of interest. If the points on this scatter plot are close to a line of equality then it may be reasonable to suppose that the data have been sampled from the this distribution.
+
+Figure \ref{fig:qqschem} shows an example normal QQ plot based on a sample of size \(n=9\).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/qq_schematic} 
+
+}
+
+\caption{Example normal QQ plot for a sample of size $n = 9$.  The dashed line is a line of equality.}\label{fig:qqschem}
+\end{figure}
+
+We should \textbf{not} expect the points to lie \textbf{exactly} on this straight line. Even if the data are sampled from the suggested distribution, points will lie away from this line owing to random variability. The question we need to ask ourselves is
+
+``Does this plot look like the kind of plot we would get if the data really are sampled from the suggested distribution?''
+
+How can we decide this? Well, we need to know what such QQ plots would look like. If we have a sample that we \textbf{know} is sampled from a normal distribution then we can produce a normal QQ plot and see what it looks like. If we have many different samples of data we can see a whole range of different QQ plots.
+
+We use a computer to \textbf{simulate} 95 values from a \(N(7.72,3.57^2)\) distribution. We do this 9 times and produce a normal QQ plot for each set of simulated data. Figure \ref{fig:oxqqsim} shows these QQ plots.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_sim} 
+
+}
+
+\caption{Normal QQ plots of 9 samples of size 95 simmulated from a $N(7.72, 3.57^2)$ distribution.}\label{fig:oxqqsim}
+\end{figure}
+
+Generally the points on these plots lie quite close to the line of equality. However,
+
+\begin{itemize}
+\tightlist
+\item
+  some plots have points which lie further from the line than others;
+\item
+  the extreme (small and large) points tend to lie further from the line than the points in the middle
+\end{itemize}
+
+When judging whether a QQ plot of real data looks `OK' or not simulated data can be helpful. Look at figure \ref{fig:oxqqsimenv}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_simenv} 
+
+}
+
+\caption{A simulation envelope produced using 19 datasets of size 95 from a $N(7.75,3.57^2)$ distibution.}\label{fig:oxqqsimenv}
+\end{figure}
+
+This plot shows \textbf{simulation envelopes}. We have simulated 19 different samples of size 95 from a \(N(7.75,3.57^2)\) distribution and produced a
+normal QQ plot for each sample. Imagine plotting all these QQ plots on the same plot. For each normal quantile on the horizontal axis there are 19 different values on the vertical axis. We plot only the smallest and largest of these values.
+
+Simulation envelopes give us an appreciation of where we expect the largest departures from the line of equality to be owing only to random variability, that is when the values really are sampled from the distribution of interest. They help us to judge informally whether departures from the line of equality are so large that it is not reasonable to suppose that the values are sampled from this distribution.
+
+We have used 19 simulated datasets. This number is motivated by the idea that the QQ plot will contain information from 20 different datasets: 1 real dataset and 19 simulated datasets. A very approximate justification for using 19 simulated datasets is to consider the question
+
+``Are the values from the real data unusual enough that we wouldn't expect to see them appear in approximately 1 in every 20 datasets simulated from the suggested distribution?''
+
+1 in 20 is the 5\% that crops up often in Statistics.
+
+We have already seen that the Oxford birth times appear to be positively skewed and, therefore, it may not be reasonable to suppose that they have been sampled from might not come from a normal distribution. However, perhaps there is a **transformation* of these data which look more like a sample from a normal distribution.
+
+Figure \ref{fig:oxhisttrans} shows histograms of the original data and 3 different transformations of the data. Which of these histograms looks most symmetric?
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_hist_trans} 
+
+}
+
+\caption{Histograms of the Oxford birth times and transformations of those data.}\label{fig:oxhisttrans}
+\end{figure}
+
+Figure \ref{fig:oxqqtrans} shows QQ plots corresponding to each of the histograms in Figure \ref{fig:oxhisttrans}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_trans} 
+
+}
+
+\caption{Normal QQ plots of the Oxford birth durations and transformations.}\label{fig:oxqqtrans}
+\end{figure}
+
+Do these plots confirm your thoughts about the histograms? Can you work out what the directions of the departures of the points in the QQ plot from the straight line mean in terms of the shape of the distribution. You can use the Figure \ref{fig:oxhisttrans} to help you.
+
+In Figure \ref{fig:oxqqtimeenv} simulation envelopes based on 19 simulated samples have been added to the QQ plot of the Oxford birth times. Although the points mainly lie within the simulation envelopes, the plot is clearly curved. We may refer to the ends of a distribution, from where the relatively small and large values are sampled, as the \textbf{tails}. The relatively small values come from the lower tail, or left tail. The relatively large values come from the upper tail, or right tail. In this plot we can see that the observed birth times are larger in the \textbf{tails} than would be expected if they were sampled from a \(N(7.75,3.57^2)\) distribution.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_time_env} 
+
+}
+
+\caption{Normal QQ plot of the Oxford birth durations with simulation envelopes.}\label{fig:oxqqtimeenv}
+\end{figure}
+
+In Figure \ref{fig:oxqqsqrttimeenv} we see that after a square root transformation the normal QQ plot looks much straighter, suggesting that we might suppose that the square roots of the birth times behave approximately like
+a sample from a normal distribution.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_sqrttime_env} 
+
+}
+
+\caption{Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes.}\label{fig:oxqqsqrttimeenv}
+\end{figure}
+
+Two practical points:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  If we use a N(0,1), a \textbf{standard normal} distribution when plotting the normal QQ plot, that is we plot the order statistics against quantiles from a N(0,1) distribution, the shape of the plot will not change. This is what most statistical computer packages do. The pattern of points in the plot does not depend on the mean and standard deviation of the normal distribution.
+\item
+  In the plots above we have drawn a line of equality to illustrate the idea that we are comparing the values of sample quantiles to corresponding theoretical quantiles. For a normal QQ plot, it is more common to plot a straight line through the points \((Q_L,q_L)\) and \((Q_U,q_U)\), where \(q_L\) and \(q_U\) are the sample lower and upper quartiles and \(Q_L\) and \(Q_U\) are the theoretical lower and upper quartiles. By drawing a line through the points corresponding to the central 50\% of the distribution, we can more easily see any departures in the tails of the distribution, which is where we expect the larger departures in a normal QQ plot.
+\end{enumerate}
+
+\hypertarget{departures-from-normality}{%
+\subsubsection*{Departures from normality}\label{departures-from-normality}}
+\addcontentsline{toc}{subsubsection}{Departures from normality}
+
+The normal distribution provides a useful benchmark against which to assess the shape of a distribution. Figure \ref(fig:QQtypes) includes some normal QQ plots based on data simulated from distributions that are not normal. From a normal QQ plot we can assess whether
+
+\begin{itemize}
+\tightlist
+\item
+  the distribution of the data is approximately symmetric;
+\item
+  the distribution of the data has tails which are heavier (more extreme observations), lighter (fewer extreme observations) or approximately the same as a normal distribution.
+\item
+  if there are any atypical observations.
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/QQtypes} 
+
+}
+
+\caption{Normal QQ plots of normal and non-normal data.}\label{fig:QQtypes}
+\end{figure}
+
+A summary of these plots:
+
+\textbf{(a)} A normal distribution. The points are close to a straight line.
+
+\textbf{(b)} A normal distribution with one unusually large observation added. All but one of the points lie close to the straight line.
+
+\textbf{(c)} A heavy-tailed (symmetric) distribution. The small values are smaller than expected and the large values larger than expected than from a normal distribution, giving points below the straight line on the left of the plot and above the line on the right. (Distribution used : Student's \(t\) distribution with 2 degrees of freedom -- see STAT0003).
+
+\textbf{(d)} A light-tailed (symmetric) distribution. The small values are larger than expected and the large values smaller than expected than from a normal distribution, giving points above the straight line on the left of the plot and below the line on the right. (Distribution used: uniform distribution on the interval (-0.75,0.75)).
+
+\textbf{(e)} A positively skewed distribution. The small values are larger than expected and the large values larger than expected than from a normal distribution, giving points above the straight line on the left of the plot and above the line on the right. (Distribution used: gamma distribution with shape parameter 2 and scale parameter 1).
+
+\textbf{(f)} A negatively skewed distribution. The small values are smaller than expected and the large values smaller than expected than from a normal distribution, giving points below the straight line on the left of the plot and below the line on the right. (Distribution used: \(10-X\), where \(X\) has the distribution used in (e) above).
+
+\hypertarget{the-australian-births-data}{%
+\subsubsection{The Australian births data}\label{the-australian-births-data}}
+
+As a further example consider the QQ plot in Figure \ref{fig:babynormalqqenv}. The points clearly do not lie on a stright line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure \ref{fig:QQtypes}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_normal_qq_env} 
+
+}
+
+\caption{QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality.}\label{fig:babynormalqqenv}
+\end{figure}
+
+\hypertarget{uniform-qq-plots}{%
+\subsection{Uniform QQ plots}\label{uniform-qq-plots}}
+
+Recall that in the Australian births data we wondered whether the time at which a randomly-chosen baby is born might be sampled from a uniform distribution on the interval (0, 24) hours. To examine this we could produce a uniform QQ plot, by plotting the ordered sample values
+\[ u_{(1)},\,  u_{(2)},\, \ldots,\, u_{(43)},\,  u_{(44)} \]
+against the uniform U(0,24) quantiles
+\[  \frac{1}{45} \times 24,\,\, \frac{2}{45} \times 24,\,\, \ldots,\,\, 
+\frac{43}{45} \times 24,\,\, \frac{44}{45} \times 24. \]
+
+This QQ plot is shown in Figure \ref{fig:unifqq}. The dashed line is a line of equality.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/baby_unif_qq_simenv} 
+
+}
+
+\caption{Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets.}\label{fig:unifqq}
+\end{figure}
+
+Like the histogram we saw in Section \ref{uniform} the QQ plot also suggests that babies tend to be born later in the day than would be expected: in the middle of the horizontal axis the times of births are greater than the corresponding quantiles of the \(U(0,24)\) distribution. Notice that the simulation envelopes in this QQ plot show that we expect the largest departures from the straight line in the middle of the distribution than near the ends.
+
+\hypertarget{exponential-qq-plots}{%
+\subsection{Exponential QQ plots}\label{exponential-qq-plots}}
+
+Recall that in the Australian births data we wondered whether the times between the birth might be sampled from an exponential(\(\lambda\)) distribution. We estimated \(\lambda\) using \(\hat{\lambda} = 1.84\).
+
+Here, \(n=44\). For \(i=1, \ldots, n\) we plot the \(i\)th largest observation \(t_{(i)}\) against the \(100\frac{i}{n+1}\%\) theoretical quantile \(q_i\) of
+an exponential(\(\hat{\lambda}\)) distribution. To find the theoretical quantiles we solve \(\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)\) for \(q_i\) to give
+\[ q_i = -\frac{1}{\hat{\lambda}} \ln \left( 1-\frac{i}{n+1} \right). \]
+
+The points in the exponential QQ plot in Figure \ref{fig:expqq} are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values. This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/exp_simenv} 
+
+}
+
+\caption{Exponential QQ plot with simulation envelopes based on 19 simulated datasets.}\label{fig:expqq}
+\end{figure}
 
 \hypertarget{inference}{%
 \chapter{Statistical Inference}\label{inference}}
