@@ -654,4 +654,66 @@ for $\sigma >0$, then $Z \sim \mbox{N}(\mu,\sigma^{2})$.
 * Parameters: $-\infty < \mu < \infty$, $\sigma^2 > 0$.
 * $\mbox{E}(Z)=\mu$, $\mbox{var}(Z)=\sigma^2$.
 
+### The standard normal disribution
+
+The $N(0,1)$ distribution is called the **standard normal** distribution. We write $\phi(x)$ for its p.d.f. and $\Phi(x)$ for its c.d.f., so that 
+\[ \phi(x)=\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,x^{2}}, \quad -\infty < x < \infty, \]
+and 
+\[ \Phi(x) =
+\int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad 
+\quad -\infty < x < \infty. \]
+
+### Evaluating the the normal c.d.f. and quantiles
+
+Suppose that $W \sim N(7.22, 1.36)$, that is, $\mbox{E}(W)=7.22$ and $\mbox{var}(W)=1.36$ and we want to calculate $P(W \leq 10)$.  Then
+
+$$
+\begin{aligned}
+P(W \leq 10) = \int_{-\infty}^{10} \displaystyle\frac{1}{1.36\sqrt{2\pi}} 
+\,\exp\!\left[ -\,\frac{1}{2\times 1.36}(w-7.22)^2 \right] {\rm ~d}w. 
+\end{aligned}
+$$
+
+It is not possible to express this integral in terms of simple functions. Instead, numerical algorithms are used to calculate its value.  In R the function `pnorm()` does this.
+
+Historically, that is, before the advent of modern computing, a probability like this was evaluated by noting that if $W \sim N(\mu, \sigma^2)$ then $Z = \displaystyle\frac{W - \mu}{\sigma} \sim N(0, 1)$.  Then the following calculation was performed.
+
+$$
+\begin{aligned}
+P(W \leq 10)
+&= P\left(\frac{W-7.22}{\sqrt{1.36}} \leq \frac{10-7.22}{\sqrt{1.36}} \right) \\
+&\approx P\left(Z \leq 2.38 \right) \qquad\qquad \mbox{where } Z \sim N(0, 1) \\
+&= \Phi(2.38)
+\end{aligned}
+$$
+
+Then the value of $\Phi(2.38)$ was found in a book of statistical tables.  Now it is easier to use R.
+
+```{r}
+value <- (10 - 7.22) / sqrt(1.36)
+pnorm(value)
+```
+
+We can get even R to do the standardisation to the N(0, 1) case for us.
+
+```{r}
+pnorm(10, mean = 7.22, sd = sqrt(1.36))
+```
+
+Suppose now that we want to find the 95\% quantile of $W$, that is, $w$ for which $P(W \leq w) = 0.95$.  If we standardise $W$ to $Z$ as above then we find that $w = 7.22 + \sqrt{1.36}\,\Phi^{-1}(0.95)$.  The `qnorm()` function calculates the inverse c.d.f. $\Phi^{-1}$ (or quantile function).
+
+```{r}
+value <- (10 - 7.22) / sqrt(1.36)
+7.22 + sqrt(1.36) * qnorm(0.95)
+```
+
+```{r}
+qnorm(0.95, mean = 7.22, sd = sqrt(1.36))
+```
+
+### Interpretation of $\sigma$
+
+Suppose that $X \sim N(\mu,\sigma^{2})$.  Let $p_k = P(|X-\mu| < k\sigma)$, so that $p_k$ is the probability that $X$ lies within $k$ standard deviations of its mean.  We have $p_1 = 0.6826$, $p_2 = 0.9545$ and $p_3 = 0.9973$.  Therefore, for a large sample from a normal distribution 
+approximately 68\% of observations will fall within 1 standard deviation of the mean, and approximately 95\% within 2 standard deviations of the mean. 
+
 ## QQ plots {#qq}

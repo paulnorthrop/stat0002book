@@ -44,6 +44,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -107,7 +147,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-11-11}
+\date{2020-11-13}
 
 \begin{document}
 \maketitle
@@ -3793,7 +3833,7 @@ and checking that you have indeed found a maximum.
 
 To keep things simple we consider a \textbf{continuous} random variable \(X\). For \(0 < p < 1\), a \(100p\%\) quantile of \(X\) is defined to be a value \(x_p\) such that
 \[ F_X(x_p)=P(X \leq x_p) = p. \]
-Another way to express this is to say that \(x_p\) is \(F_X^{-1}(p)\), where \(F_X^{-1}\) is the inverse c.d.f. of \(X\).
+Another way to express this is to say that \(x_p\) is \(F_X^{-1}(p)\), where \(F_X^{-1}\) is the inverse c.d.f. of \(X\). The inverse c.d.f. \(F_X^{-1}\) is also called the quantile function \(Q\) of \(X\), so we could write \(x_p = Q(p)\).
 
 Thus, \(x_{1/4}=F_X^{-1}(1/4)\) is the lower quartile of \(X\), \(x_{1/2}=F_X^{-1}(1/2)\) is the median of \(X\) and \(x_{3/4}=F_X^{-1}(3/4)\) is the upper quartile of \(X\).
 
@@ -4927,6 +4967,95 @@ As we expect the fit if not particularly good. In particular, there are more low
 \item
   \(\mbox{E}(Z)=\mu\), \(\mbox{var}(Z)=\sigma^2\).
 \end{itemize}
+
+\hypertarget{the-standard-normal-disribution}{%
+\subsection{The standard normal disribution}\label{the-standard-normal-disribution}}
+
+The \(N(0,1)\) distribution is called the \textbf{standard normal} distribution. We write \(\phi(x)\) for its p.d.f. and \(\Phi(x)\) for its c.d.f., so that
+\[ \phi(x)=\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,x^{2}}, \quad -\infty < x < \infty, \]
+and
+\[ \Phi(x) =
+\int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad 
+\quad -\infty < x < \infty. \]
+
+\hypertarget{evaluating-the-the-normal-c.d.f.-and-quantiles}{%
+\subsection{Evaluating the the normal c.d.f. and quantiles}\label{evaluating-the-the-normal-c.d.f.-and-quantiles}}
+
+Suppose that \(W \sim N(7.22, 1.36)\), that is, \(\mbox{E}(W)=7.22\) and \(\mbox{var}(W)=1.36\) and we want to calculate \(P(W \leq 10)\). Then
+
+\[
+\begin{aligned}
+P(W \leq 10) = \int_{-\infty}^{10} \displaystyle\frac{1}{1.36\sqrt{2\pi}} 
+\,\exp\!\left[ -\,\frac{1}{2\times 1.36}(w-7.22)^2 \right] {\rm ~d}w. 
+\end{aligned}
+\]
+
+It is not possible to express this integral in terms of simple functions. Instead, numerical algorithms are used to calculate its value. In R the function \texttt{pnorm()} does this.
+
+Historically, that is, before the advent of modern computing, a probability like this was evaluated by noting that if \(W \sim N(\mu, \sigma^2)\) then \(Z = \displaystyle\frac{W - \mu}{\sigma} \sim N(0, 1)\). Then the following calculation was performed.
+
+\[
+\begin{aligned}
+P(W \leq 10)
+&= P\left(\frac{W-7.22}{\sqrt{1.36}} \leq \frac{10-7.22}{\sqrt{1.36}} \right) \\
+&\approx P\left(Z \leq 2.38 \right) \qquad\qquad \mbox{where } Z \sim N(0, 1) \\
+&= \Phi(2.38)
+\end{aligned}
+\]
+
+Then the value of \(\Phi(2.38)\) was found in a book of statistical tables. Now it is easier to use R.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{value <-}\StringTok{ }\NormalTok{(}\DecValTok{10} \OperatorTok{-}\StringTok{ }\FloatTok{7.22}\NormalTok{) }\OperatorTok{/}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{)}
+\KeywordTok{pnorm}\NormalTok{(value)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.9914333
+\end{verbatim}
+
+We can get even R to do the standardisation to the N(0, 1) case for us.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{pnorm}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DataTypeTok{mean =} \FloatTok{7.22}\NormalTok{, }\DataTypeTok{sd =} \KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.9914333
+\end{verbatim}
+
+Suppose now that we want to find the 95\% quantile of \(W\), that is, \(w\) for which \(P(W \leq w) = 0.95\). If we standardise \(W\) to \(Z\) as above then we find that \(w = 7.22 + \sqrt{1.36}\,\Phi^{-1}(0.95)\). The \texttt{qnorm()} function calculates the inverse c.d.f. \(\Phi^{-1}\) (or quantile function).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{value <-}\StringTok{ }\NormalTok{(}\DecValTok{10} \OperatorTok{-}\StringTok{ }\FloatTok{7.22}\NormalTok{) }\OperatorTok{/}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{)}
+\FloatTok{7.22} \OperatorTok{+}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{) }\OperatorTok{*}\StringTok{ }\KeywordTok{qnorm}\NormalTok{(}\FloatTok{0.95}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9.138212
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{qnorm}\NormalTok{(}\FloatTok{0.95}\NormalTok{, }\DataTypeTok{mean =} \FloatTok{7.22}\NormalTok{, }\DataTypeTok{sd =} \KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 9.138212
+\end{verbatim}
+
+\hypertarget{interpretation-of-sigma}{%
+\subsection{\texorpdfstring{Interpretation of \(\sigma\)}{Interpretation of \textbackslash sigma}}\label{interpretation-of-sigma}}
+
+Suppose that \(X \sim N(\mu,\sigma^{2})\). Let \(p_k = P(|X-\mu| < k\sigma)\), so that \(p_k\) is the probability that \(X\) lies within \(k\) standard deviations of its mean. We have \(p_1 = 0.6826\), \(p_2 = 0.9545\) and \(p_3 = 0.9973\). Therefore, for a large sample from a normal distribution
+approximately 68\% of observations will fall within 1 standard deviation of the mean, and approximately 95\% within 2 standard deviations of the mean.
 
 \hypertarget{qq}{%
 \section{QQ plots}\label{qq}}

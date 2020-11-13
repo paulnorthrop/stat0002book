@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  11 NOV 2020 20:36
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  13 NOV 2020 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,55 +382,72 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
+(c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.s
+ty
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count287
+\FV@InFile=\read2
+\FV@TabBox=\box51
+\c@FancyVerbLine=\count288
+\FV@StepNumber=\count289
+\FV@OutFile=\write3
+) (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen155
+\fb@frh=\dimen156
+\FrameRule=\dimen157
+\FrameSep=\dimen158
+)
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip53
-\LTright=\skip54
-\LTpre=\skip55
-\LTpost=\skip56
-\LTchunksize=\count287
-\LTcapwidth=\dimen155
-\LT@head=\box51
-\LT@firsthead=\box52
-\LT@foot=\box53
-\LT@lastfoot=\box54
-\LT@cols=\count288
-\LT@rows=\count289
-\c@LT@tables=\count290
-\c@LT@chunks=\count291
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count290
+\LTcapwidth=\dimen159
+\LT@head=\box52
+\LT@firsthead=\box53
+\LT@foot=\box54
+\LT@lastfoot=\box55
+\LT@cols=\count291
+\LT@rows=\count292
+\c@LT@tables=\count293
+\c@LT@chunks=\count294
 \LT@p@ftn=\toks22
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.s
 ty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen156
-\lightrulewidth=\dimen157
-\cmidrulewidth=\dimen158
-\belowrulesep=\dimen159
-\belowbottomsep=\dimen160
-\aboverulesep=\dimen161
-\abovetopsep=\dimen162
-\cmidrulesep=\dimen163
-\cmidrulekern=\dimen164
-\defaultaddspace=\dimen165
-\@cmidla=\count292
-\@cmidlb=\count293
-\@aboverulesep=\dimen166
-\@belowrulesep=\dimen167
-\@thisruleclass=\count294
-\@lastruleclass=\count295
-\@thisrulewidth=\dimen168
+\heavyrulewidth=\dimen160
+\lightrulewidth=\dimen161
+\cmidrulewidth=\dimen162
+\belowrulesep=\dimen163
+\belowbottomsep=\dimen164
+\aboverulesep=\dimen165
+\abovetopsep=\dimen166
+\cmidrulesep=\dimen167
+\cmidrulekern=\dimen168
+\defaultaddspace=\dimen169
+\@cmidla=\count295
+\@cmidlb=\count296
+\@aboverulesep=\dimen170
+\@belowrulesep=\dimen171
+\@thisruleclass=\count297
+\@lastruleclass=\count298
+\@thisrulewidth=\dimen172
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.s
 ty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count296
+\etb@tempcnta=\count299
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.s
 ty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box55
-\fn@width=\dimen169
+\fn@notes=\box56
+\fn@width=\dimen173
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.s
 ty
@@ -448,8 +465,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 105.
 )
-\Gin@req@height=\dimen170
-\Gin@req@width=\dimen171
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
 Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
@@ -462,13 +479,13 @@ ty
 Package: placeins 2005/04/18  v 2.2
 ) (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen172
-\ar@mcellbox=\box56
-\extrarowheight=\dimen173
+\col@sep=\dimen176
+\ar@mcellbox=\box57
+\extrarowheight=\dimen177
 \NC@list=\toks23
-\extratabsurround=\skip57
-\backup@length=\skip58
-\ar@cellbox=\box57
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box58
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
@@ -476,17 +493,17 @@ Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.st
 y
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen174
-\captionmargin@=\dimen175
-\captionwidth=\dimen176
-\caption@tempdima=\dimen177
-\caption@indent=\dimen178
-\caption@parindent=\dimen179
-\caption@hangindent=\dimen180
+\captionmargin=\dimen178
+\captionmargin@=\dimen179
+\captionwidth=\dimen180
+\caption@tempdima=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count297
-\c@continuedfloat=\count298
+\c@caption@flags=\count300
+\c@continuedfloat=\count301
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -496,106 +513,106 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 ))
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
-\l__siunitx_tmp_box=\box58
-\l__siunitx_tmp_dim=\dimen181
-\l__siunitx_tmp_int=\count299
-\l__siunitx_number_mantissa_length_int=\count300
-\l__siunitx_number_uncert_length_int=\count301
-\l__siunitx_round_int=\count302
-\l__siunitx_process_decimal_int=\count303
-\l__siunitx_process_uncertainty_int=\count304
-\l__siunitx_process_fixed_int=\count305
-\l__siunitx_process_integer_min_int=\count306
-\l__siunitx_process_precision_int=\count307
-\l__siunitx_group_min_int=\count308
-\l__siunitx_angle_marker_box=\box59
-\l__siunitx_angle_unit_box=\box60
-\l__siunitx_angle_marker_dim=\dimen182
-\l__siunitx_angle_unit_dim=\dimen183
-\l__siunitx_unit_int=\count309
-\l__siunitx_unit_denominator_int=\count310
-\l__siunitx_unit_numerator_int=\count311
-\l__siunitx_unit_prefix_int=\count312
-\l__siunitx_unit_prefix_base_int=\count313
-\l__siunitx_unit_prefix_gram_int=\count314
-\l__siunitx_number_product_int=\count315
-\c__siunitx_one_fill_skip=\skip59
-\l__siunitx_table_unit_align_skip=\skip60
-\l__siunitx_table_exponent_dim=\dimen184
-\l__siunitx_table_integer_dim=\dimen185
-\l__siunitx_table_mantissa_dim=\dimen186
-\l__siunitx_table_marker_dim=\dimen187
-\l__siunitx_table_result_dim=\dimen188
-\l__siunitx_table_uncert_dim=\dimen189
-\l__siunitx_table_fill_pre_dim=\dimen190
-\l__siunitx_table_fill_post_dim=\dimen191
-\l__siunitx_table_fill_mid_dim=\dimen192
-\l__siunitx_table_pre_box=\box61
-\l__siunitx_table_post_box=\box62
-\l__siunitx_table_mantissa_box=\box63
-\l__siunitx_table_result_box=\box64
-\l__siunitx_table_number_align_skip=\skip61
-\l__siunitx_table_text_align_skip=\skip62
+\l__siunitx_tmp_box=\box59
+\l__siunitx_tmp_dim=\dimen185
+\l__siunitx_tmp_int=\count302
+\l__siunitx_number_mantissa_length_int=\count303
+\l__siunitx_number_uncert_length_int=\count304
+\l__siunitx_round_int=\count305
+\l__siunitx_process_decimal_int=\count306
+\l__siunitx_process_uncertainty_int=\count307
+\l__siunitx_process_fixed_int=\count308
+\l__siunitx_process_integer_min_int=\count309
+\l__siunitx_process_precision_int=\count310
+\l__siunitx_group_min_int=\count311
+\l__siunitx_angle_marker_box=\box60
+\l__siunitx_angle_unit_box=\box61
+\l__siunitx_angle_marker_dim=\dimen186
+\l__siunitx_angle_unit_dim=\dimen187
+\l__siunitx_unit_int=\count312
+\l__siunitx_unit_denominator_int=\count313
+\l__siunitx_unit_numerator_int=\count314
+\l__siunitx_unit_prefix_int=\count315
+\l__siunitx_unit_prefix_base_int=\count316
+\l__siunitx_unit_prefix_gram_int=\count317
+\l__siunitx_number_product_int=\count318
+\c__siunitx_one_fill_skip=\skip60
+\l__siunitx_table_unit_align_skip=\skip61
+\l__siunitx_table_exponent_dim=\dimen188
+\l__siunitx_table_integer_dim=\dimen189
+\l__siunitx_table_mantissa_dim=\dimen190
+\l__siunitx_table_marker_dim=\dimen191
+\l__siunitx_table_result_dim=\dimen192
+\l__siunitx_table_uncert_dim=\dimen193
+\l__siunitx_table_fill_pre_dim=\dimen194
+\l__siunitx_table_fill_post_dim=\dimen195
+\l__siunitx_table_fill_mid_dim=\dimen196
+\l__siunitx_table_pre_box=\box62
+\l__siunitx_table_post_box=\box63
+\l__siunitx_table_mantissa_box=\box64
+\l__siunitx_table_result_box=\box65
+\l__siunitx_table_number_align_skip=\skip62
+\l__siunitx_table_text_align_skip=\skip63
 ) (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box65
-\UL@hyphenbox=\box66
-\UL@skip=\skip63
+\UL@box=\box66
+\UL@hyphenbox=\box67
+\UL@skip=\skip64
 \UL@hook=\toks24
-\UL@height=\dimen193
-\UL@pe=\count316
-\UL@pixel=\dimen194
-\ULC@box=\box67
+\UL@height=\dimen197
+\UL@pe=\count319
+\UL@pixel=\dimen198
+\ULC@box=\box68
 Package: ulem 2019/11/18
-\ULdepth=\dimen195
+\ULdepth=\dimen199
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.s
 ty
 Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks25
-\minrowclearance=\skip64
+\minrowclearance=\skip65
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/multirow/multirow.s
 ty
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip65
-\multirow@cntb=\count317
-\multirow@dima=\skip66
-\bigstrutjot=\dimen196
+\multirow@colwidth=\skip66
+\multirow@cntb=\count320
+\multirow@dima=\skip67
+\bigstrutjot=\dimen256
 ) (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 ) (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count318
-\calc@Bcount=\count319
-\calc@Adimen=\dimen197
-\calc@Bdimen=\dimen198
-\calc@Askip=\skip67
-\calc@Bskip=\skip68
+\calc@Acount=\count321
+\calc@Bcount=\count322
+\calc@Adimen=\dimen257
+\calc@Bdimen=\dimen258
+\calc@Askip=\skip68
+\calc@Bskip=\skip69
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count320
-\calc@Cskip=\skip69
+\calc@Ccount=\count323
+\calc@Cskip=\skip70
 ) (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.st
 y
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen199
-\TX@old@table=\dimen256
-\TX@old@col=\dimen257
-\TX@target=\dimen258
-\TX@delta=\dimen259
-\TX@cols=\count321
+\TX@col@width=\dimen259
+\TX@old@table=\dimen260
+\TX@old@col=\dimen261
+\TX@target=\dimen262
+\TX@delta=\dimen263
+\TX@cols=\count324
 \TX@ftn=\toks26
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/threeparttable/thre
 eparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box68
+\@tempboxb=\box69
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen260
-\WF@size=\dimen261
-\c@WF@wrappedlines=\count322
-\WF@box=\box69
+\wrapoverhang=\dimen264
+\WF@size=\dimen265
+\c@WF@wrappedlines=\count325
+\WF@box=\box70
 \WF@everypar=\toks27
 Package: wrapfig 2003/01/31  v 3.6
 )
@@ -613,7 +630,7 @@ tex
 \XKV@toks=\toks28
 \XKV@tempa@toks=\toks29
 )
-\XKV@depth=\count323
+\XKV@depth=\count326
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/adjustbox/adjcalc.s
@@ -628,26 +645,26 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/collectbox/collectb
 ox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box70
+\collectedbox=\box71
 )
-\tc@llx=\dimen262
-\tc@lly=\dimen263
-\tc@urx=\dimen264
-\tc@ury=\dimen265
+\tc@llx=\dimen266
+\tc@lly=\dimen267
+\tc@urx=\dimen268
+\tc@ury=\dimen269
 Package trimclip Info: Using driver 'tc-xetex.def'.
 
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/adjustbox/tc-xetex.
 def
 File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
-\adjbox@Width=\dimen266
-\adjbox@Height=\dimen267
-\adjbox@Depth=\dimen268
-\adjbox@Totalheight=\dimen269
-\adjbox@pwidth=\dimen270
-\adjbox@pheight=\dimen271
-\adjbox@pdepth=\dimen272
-\adjbox@ptotalheight=\dimen273
+\adjbox@Width=\dimen270
+\adjbox@Height=\dimen271
+\adjbox@Depth=\dimen272
+\adjbox@Totalheight=\dimen273
+\adjbox@pwidth=\dimen274
+\adjbox@pheight=\dimen275
+\adjbox@pdepth=\dimen276
+\adjbox@ptotalheight=\dimen277
 )
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/polyglossia/polyglo
 ssia.sty
@@ -736,7 +753,7 @@ Package polyglossia Info: Option: english variant=british.
 Package polyglossia Warning: No hyphenation patterns were loaded for British En
 glish
 (polyglossia)                I will use the patterns for US English instead on 
-input line 101.
+input line 141.
 
 \l@ukenglish = a dialect from \language\l@english 
 Package polyglossia Info: Option: english variant=british.
@@ -744,10 +761,10 @@ Package polyglossia Info: Default language is english.
 Package polyglossia Info: Option: english variant=british.
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip70
-\bibsep=\skip71
+\bibhang=\skip71
+\bibsep=\skip72
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count324
+\c@NAT@ctr=\count327
 ) (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
 Package polyglossia Info: Option: english variant=british.
@@ -759,40 +776,40 @@ Package polyglossia Info: Option: english variant=british.
 )
 \openout1 = `stat0002book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 112.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 112.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 112.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 112.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 112.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 112.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 112.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 152.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -821,7 +838,7 @@ allCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 11.28015pt on input line 112.
+(Font)              scaled to size 11.28015pt on input line 152.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -860,18 +877,18 @@ dern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.28015pt on input line 112.
+(Font)              scaled to size 11.28015pt on input line 152.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 112.
+(Font)              `operators' in the math version `normal' on input line 152.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 112.
+ line 152.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 112.
+(Font)              `operators' in the math version `bold' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 112.
+t line 152.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -958,15 +975,15 @@ t=math;language=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 112.
+(Font)              `symbols' in the math version `normal' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 112.
+t line 152.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 112.
+(Font)              `symbols' in the math version `bold' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 112.
+t line 152.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -1036,17 +1053,17 @@ t=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-12.
+52.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 112.
+t line 152.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 112
+(Font)              `largesymbols' in the math version `bold' on input line 152
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 112.
-Package hyperref Info: Link coloring OFF on input line 112.
+t line 152.
+Package hyperref Info: Link coloring OFF on input line 152.
 
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.st
 y
@@ -1060,14 +1077,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count325
+\c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 112.
-LaTeX Info: Redefining \pageref on input line 112.
-LaTeX Info: Redefining \nameref on input line 112.
+LaTeX Info: Redefining \ref on input line 152.
+LaTeX Info: Redefining \pageref on input line 152.
+LaTeX Info: Redefining \nameref on input line 152.
 (./stat0002book.out) (./stat0002book.out)
-\@outlinefile=\write3
-\openout3 = `stat0002book.out'.
+\@outlinefile=\write4
+\openout4 = `stat0002book.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
@@ -1080,60 +1097,60 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 Package polyglossia Info: Option: english variant=british.
 Package polyglossia Info: Option: english variant=british.
-LaTeX Info: Redefining \rmfamily on input line 112.
-LaTeX Info: Redefining \sffamily on input line 112.
-LaTeX Info: Redefining \ttfamily on input line 112.
+LaTeX Info: Redefining \rmfamily on input line 152.
+LaTeX Info: Redefining \sffamily on input line 152.
+LaTeX Info: Redefining \ttfamily on input line 152.
 Package polyglossia Info: Option: english variant=british.
 Package polyglossia Info: Option: english variant=british.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.8961pt on input line 112.
+(Font)              scaled to size 7.8961pt on input line 152.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.64008pt on input line 112.
+(Font)              scaled to size 5.64008pt on input line 152.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-12.
+52.
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 11.28131pt on input line 112.
+(Font)              scaled to size 11.28131pt on input line 152.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.89691pt on input line 112.
+(Font)              scaled to size 7.89691pt on input line 152.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.64066pt on input line 112.
+(Font)              scaled to size 5.64066pt on input line 152.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.27914pt on input line 112.
+(Font)              scaled to size 11.27914pt on input line 152.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.8954pt on input line 112.
+(Font)              scaled to size 7.8954pt on input line 152.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.63957pt on input line 112.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+(Font)              scaled to size 5.63957pt on input line 152.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 152
 .
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+LaTeX Font Info:    Trying to load font information for U+msb on input line 152
 .
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.36182pt on input line 114.
+(Font)              scaled to size 12.36182pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.24121pt on input line 114.
+(Font)              scaled to size 8.24121pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.18091pt on input line 114.
+(Font)              scaled to size 6.18091pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.3631pt on input line 114.
+(Font)              scaled to size 12.3631pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.24207pt on input line 114.
+(Font)              scaled to size 8.24207pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.18155pt on input line 114.
+(Font)              scaled to size 6.18155pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.36072pt on input line 114.
+(Font)              scaled to size 12.36072pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.24048pt on input line 114.
+(Font)              scaled to size 8.24048pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.18036pt on input line 114.
+(Font)              scaled to size 6.18036pt on input line 154.
 [1
 
 
@@ -1148,8 +1165,8 @@ Package polyglossia Info: Option: english variant=british.
 [2
 
 ] [3])
-\tf@toc=\write4
-\openout4 = `stat0002book.toc'.
+\tf@toc=\write5
+\openout5 = `stat0002book.toc'.
 
 [4] [5
 
@@ -1163,7 +1180,7 @@ File: images/shuttle1.png Graphic file (type bmp)
 File: images/shuttle2.png Graphic file (type bmp)
 <images/shuttle2.png>
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
 
  []
 
@@ -1187,7 +1204,7 @@ Chapter 2.
 [15
 
 ] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 539--541
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 
  []
 
@@ -1200,7 +1217,7 @@ File: images/ox_cum_freq.png Graphic file (type bmp)
 File: images/ox_cum_freq2new.png Graphic file (type bmp)
 <images/ox_cum_freq2new.png>
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1178--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1220
 
  []
 
@@ -1221,7 +1238,7 @@ File: images/ox_box_adv.png Graphic file (type bmp)
 File: images/shuttle_barplots.png Graphic file (type bmp)
 <images/shuttle_barplots.png>
 
-Overfull \hbox (1.9928pt too wide) in alignment at lines 1390--1390
+Overfull \hbox (1.9928pt too wide) in alignment at lines 1430--1430
 [][][][] 
  []
 
@@ -1253,7 +1270,7 @@ File: images/election_scatter1a.png Graphic file (type bmp)
 File: images/election_scatter1b.png Graphic file (type bmp)
 <images/election_scatter1b.png>
 [38]
-Overfull \hbox (13.99998pt too wide) in alignment at lines 1797--1797
+Overfull \hbox (13.99998pt too wide) in alignment at lines 1837--1837
 [][][][] 
  []
 
@@ -1287,82 +1304,82 @@ Chapter 3.
 File: images/coin.png Graphic file (type bmp)
 <images/coin.png>
 [48] [49]
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2098--2098
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2138--2138
 [][][] 
  []
 
 
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2139--2139
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2179--2179
 [][][] 
  []
 
 [50] [51]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2274--2274
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2314--2314
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2337--2337
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2377--2377
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2400--2400
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2440--2440
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2463--2463
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2503--2503
 [][][][] 
  []
 
 [52]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2554--2554
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2594--2594
 [][][][] 
  []
 
 [53]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2627--2627
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2667--2667
 [][][][] 
  []
 
 [54]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2747--2747
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2787--2787
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2813--2813
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2853--2853
 [][][][] 
  []
 
 [55] [56] [57]
-Overfull \hbox (1.00714pt too wide) in alignment at lines 2986--2986
+Overfull \hbox (1.00714pt too wide) in alignment at lines 3026--3026
 [][] 
  []
 
 
-Overfull \hbox (1.00714pt too wide) in alignment at lines 3030--3030
+Overfull \hbox (1.00714pt too wide) in alignment at lines 3070--3070
 [][] 
  []
 
 [58]
-Overfull \hbox (2.00711pt too wide) in alignment at lines 3103--3103
+Overfull \hbox (2.00711pt too wide) in alignment at lines 3143--3143
 [][][][][][] 
  []
 
 [59]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3234--3234
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3274--3274
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3293--3293
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3333--3333
 [][][][] 
  []
 
 [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 3346--3348
+Underfull \hbox (badness 10000) in paragraph at lines 3386--3388
 
  []
 
@@ -1380,34 +1397,34 @@ File: images/ox_shady.png Graphic file (type bmp)
 File: images/pdf_shady.png Graphic file (type bmp)
 <images/pdf_shady.png>
 [66] [67] [68] [69]
-Underfull \hbox (badness 10000) in paragraph at lines 3711--3713
+Underfull \hbox (badness 10000) in paragraph at lines 3751--3753
 
  []
 
 [70] [71] [72]
 Chapter 5.
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4045--4045
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4085--4085
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4045--4045
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4085--4085
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4045--4045
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4085--4085
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4045--4045
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4085--4085
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (1.0856pt too wide) in alignment at lines 4045--4045
+Overfull \hbox (1.0856pt too wide) in alignment at lines 4085--4085
 [][][][][][][][][][][][] 
  []
 
@@ -1419,7 +1436,7 @@ File: images/baby_intro.png Graphic file (type bmp)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4167.
+(amsmath)                 on input line 4207.
 
 [75]
 File: images/binom_pmf1.png Graphic file (type bmp)
@@ -1434,39 +1451,39 @@ File: images/binom_pmf4.png Graphic file (type bmp)
 File: images/binom_inference_1b.png Graphic file (type bmp)
 <images/binom_inference_1b.png>
 [78]
-Overfull \hbox (6.39165pt too wide) in paragraph at lines 4381--4381
+Overfull \hbox (6.39165pt too wide) in paragraph at lines 4421--4421
  [][]\TU/lmss/m/n/10.95 15.36[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4421--4421
  [][]\TU/lmss/m/n/10.95 6.28[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4421--4421
  [][]\TU/lmss/m/n/10.95 2.57[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4421--4421
  [][]\TU/lmss/m/n/10.95 1.05[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4421--4421
  [][]\TU/lmss/m/n/10.95 0.43[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4381--4381
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4421--4421
  [][]\TU/lmss/m/n/10.95 0.30[]
  []
 
 File: images/baby_geom_bar.png Graphic file (type bmp)
 <images/baby_geom_bar.png>
 [79]
-Underfull \hbox (badness 10000) in paragraph at lines 4423--4424
+Underfull \hbox (badness 10000) in paragraph at lines 4463--4464
 
  []
 
@@ -1474,32 +1491,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 4423--4424
 File: images/baby_geom_fit.png Graphic file (type bmp)
 <images/baby_geom_fit.png>
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4618--4618
  [][]\TU/lmss/m/n/10.95 3.84[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4618--4618
  [][]\TU/lmss/m/n/10.95 7.04[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4618--4618
  [][]\TU/lmss/m/n/10.95 6.45[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4618--4618
  [][]\TU/lmss/m/n/10.95 3.94[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4618--4618
  [][]\TU/lmss/m/n/10.95 1.81[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4578--4578
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4618--4618
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
@@ -1516,7 +1533,7 @@ File: images/poisson_pmf2.png Graphic file (type bmp)
 File: images/poisson_pmf3.png Graphic file (type bmp)
 <images/poisson_pmf3.png>
 [83] [84]
-Underfull \hbox (badness 10000) in paragraph at lines 4694--4696
+Underfull \hbox (badness 10000) in paragraph at lines 4734--4736
 
  []
 
@@ -1542,24 +1559,27 @@ File: images/baby_normal_box.png Graphic file (type bmp)
 File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
 [90] [91]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5010.
+[92] [93]
 Chapter 6.
-[92
-
-]
-Chapter 7.
-[93
-
-]
-Chapter 8.
 [94
 
 ]
-Chapter 9.
+Chapter 7.
 [95
 
 ]
+Chapter 8.
+[96
+
+]
+Chapter 9.
+[97
+
+]
 Chapter 10.
-(./stat0002book.bbl [96
+(./stat0002book.bbl [98
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1596,7 +1616,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[97
+[99
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1611,12 +1631,12 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: C7D006CD4DF0A1EFE03C6DD3A63C1884;11927.
  ) 
 Here is how much of TeX's memory you used:
- 23025 strings out of 479426
- 440523 string characters out of 5879405
- 1015915 words of memory out of 5000000
- 41979 multiletter control sequences out of 15000+600000
- 541771 words of font info for 99 fonts, out of 8000000 for 9000
+ 23499 strings out of 479426
+ 447843 string characters out of 5879405
+ 1026258 words of memory out of 5000000
+ 42443 multiletter control sequences out of 15000+600000
+ 541779 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1016b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (97 pages).
+Output written on stat0002book.pdf (99 pages).
