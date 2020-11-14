@@ -69,7 +69,7 @@ There is a subtle, but important, difference between the words **estimator** and
 *  An **estimator** is **rule** that, **before** we observe any data, we plan use to estimate a parameter.  For example, if we will observe $X_1, \ldots, X_n$ from a distribution with mean $\mu$ then an estimator of $\mu$ is 
 \[ \hat{\mu}=\displaystyle\frac1n\sum_{i=1}^n X_i = \overline{X}. \] 
 An estimator is a random variable: before we observe data we do not know which value the estimator will have.
-*  An **estimate** is the value of an estimator **after** the datahave been observed.  Once we have observed $X_1=x_1, X_2,=x_2, \ldots, X_n=x_n$ the estimate of $\mu$ is
+*  An **estimate** is the value of an estimator **after** the data have been observed.  Once we have observed $X_1=x_1, X_2,=x_2, \ldots, X_n=x_n$ the estimate of $\mu$ is
 \[ \hat{\mu} = \displaystyle\frac1n\sum_{i=1}^n x_i = \overline{X}. \]
 An estimate is not a random variable, it is a constant.
 

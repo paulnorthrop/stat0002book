@@ -785,7 +785,7 @@ for <span class="math inline">\(\lambda &gt; 0\)</span>, then <span class="math 
 Figure 5.13: Histogram (left) and boxplot (right) of the sample birth weights.
 </p>
 </div>
-<p>The most obvious feature of figure <a href="simple.html#fig:babynormalplots">5.13</a> is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.</p>
+<p>The most obvious feature of Figure <a href="simple.html#fig:babynormalplots">5.13</a> is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.</p>
 <p>A distribution that is commonly used to model continuous variables such as weight is the normal distribution. This is also known as the Gaussian distribution. A continuous random variable <span class="math inline">\(Z\)</span> has a normal distribution with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> if its probability density function is given by
 <span class="math display">\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
 (z-\mu)^{2} \right],
@@ -960,9 +960,9 @@ Figure 5.17: Normal QQ plots of 9 samples of size 95 simmulated from a <span cla
 <li>some plots have points which lie further from the line than others;</li>
 <li>the extreme (small and large) points tend to lie further from the line than the points in the middle</li>
 </ul>
-<p>When judging whether a QQ plot of real data looks `OK’ or not simulated data can be helpful. Look at figure <a href="simple.html#fig:oxqqsimenv">5.18</a>.</p>
+<p>When judging whether a QQ plot of real data looks `OK’ or not simulated data can be helpful. Look at Figure <a href="simple.html#fig:oxqqsimenv">5.18</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxqqsimenv"></span>
-<img src="images/ox_qq_simenv.png" alt="A simulation envelope produced using 19 datasets of size 95 from a $N(7.75,3.57^2)$ distibution." width="75%" />
+<img src="images/ox_qq_simenv.png" alt="A simulation envelope produced using 19 datasets of size 95 from a $N(7.75,3.57^2)$ distibution." width="60%" />
 <p class="caption">
 Figure 5.18: A simulation envelope produced using 19 datasets of size 95 from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distibution.
 </p>
@@ -973,7 +973,7 @@ normal QQ plot for each sample. Imagine plotting all these QQ plots on the same 
 <p>We have used 19 simulated datasets. This number is motivated by the idea that the QQ plot will contain information from 20 different datasets: 1 real dataset and 19 simulated datasets. A very approximate justification for using 19 simulated datasets is to consider the question</p>
 <p>“Are the values from the real data unusual enough that we wouldn’t expect to see them appear in approximately 1 in every 20 datasets simulated from the suggested distribution?”</p>
 <p>1 in 20 is the 5% that crops up often in Statistics.</p>
-<p>We have already seen that the Oxford birth times appear to be positively skewed and, therefore, it may not be reasonable to suppose that they have been sampled from might not come from a normal distribution. However, perhaps there is a **transformation* of these data which look more like a sample from a normal distribution.</p>
+<p>We have already seen that the Oxford birth times appear to be positively skewed and, therefore, it may not be reasonable to suppose that they have been sampled from might not come from a normal distribution. However, perhaps there is a <strong>transformation</strong> of these data which look more like a sample from a normal distribution.</p>
 <p>Figure <a href="simple.html#fig:oxhisttrans">5.19</a> shows histograms of the original data and 3 different transformations of the data. Which of these histograms looks most symmetric?</p>
 <div class="figure" style="text-align: center"><span id="fig:oxhisttrans"></span>
 <img src="images/ox_hist_trans.png" alt="Histograms of the Oxford birth times and transformations of those data." width="75%" />
@@ -991,7 +991,7 @@ Figure 5.20: Normal QQ plots of the Oxford birth durations and transformations.
 <p>Do these plots confirm your thoughts about the histograms? Can you work out what the directions of the departures of the points in the QQ plot from the straight line mean in terms of the shape of the distribution. You can use the Figure <a href="simple.html#fig:oxhisttrans">5.19</a> to help you.</p>
 <p>In Figure <a href="simple.html#fig:oxqqtimeenv">5.21</a> simulation envelopes based on 19 simulated samples have been added to the QQ plot of the Oxford birth times. Although the points mainly lie within the simulation envelopes, the plot is clearly curved. We may refer to the ends of a distribution, from where the relatively small and large values are sampled, as the <strong>tails</strong>. The relatively small values come from the lower tail, or left tail. The relatively large values come from the upper tail, or right tail. In this plot we can see that the observed birth times are larger in the <strong>tails</strong> than would be expected if they were sampled from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distribution.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxqqtimeenv"></span>
-<img src="images/ox_qq_time_env.png" alt="Normal QQ plot of the Oxford birth durations with simulation envelopes." width="75%" />
+<img src="images/ox_qq_time_env.png" alt="Normal QQ plot of the Oxford birth durations with simulation envelopes." width="60%" />
 <p class="caption">
 Figure 5.21: Normal QQ plot of the Oxford birth durations with simulation envelopes.
 </p>
@@ -999,7 +999,7 @@ Figure 5.21: Normal QQ plot of the Oxford birth durations with simulation envelo
 <p>In Figure <a href="simple.html#fig:oxqqsqrttimeenv">5.22</a> we see that after a square root transformation the normal QQ plot looks much straighter, suggesting that we might suppose that the square roots of the birth times behave approximately like
 a sample from a normal distribution.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxqqsqrttimeenv"></span>
-<img src="images/ox_qq_sqrttime_env.png" alt="Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes." width="75%" />
+<img src="images/ox_qq_sqrttime_env.png" alt="Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes." width="60%" />
 <p class="caption">
 Figure 5.22: Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes.
 </p>
@@ -1010,9 +1010,9 @@ Figure 5.22: Normal QQ plot of the square roots of the Oxford birth durations wi
 <li><p>In the plots above we have drawn a line of equality to illustrate the idea that we are comparing the values of sample quantiles to corresponding theoretical quantiles. For a normal QQ plot, it is more common to plot a straight line through the points <span class="math inline">\((Q_L,q_L)\)</span> and <span class="math inline">\((Q_U,q_U)\)</span>, where <span class="math inline">\(q_L\)</span> and <span class="math inline">\(q_U\)</span> are the sample lower and upper quartiles and <span class="math inline">\(Q_L\)</span> and <span class="math inline">\(Q_U\)</span> are the theoretical lower and upper quartiles. By drawing a line through the points corresponding to the central 50% of the distribution, we can more easily see any departures in the tails of the distribution, which is where we expect the larger departures in a normal QQ plot. This is illustrated in Figure <a href="simple.html#fig:oxqqlinequart">5.23</a>. In this example, the position of this line is not very different from the line of equality. However, for plots (b)-(f) in Figure <a href="simple.html#fig:QQtypes">5.24</a>, where there are clear and large departures from normality, a line drawn through the lower and upper quartiles is more helpful than a line of equality would be.</p></li>
 </ol>
 <div class="figure" style="text-align: center"><span id="fig:oxqqlinequart"></span>
-<img src="images/ox_qq_linequart.png" alt="Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and thereoretical lower and upper quartiles." width="75%" />
+<img src="images/ox_qq_linequart.png" alt="Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles." width="60%" />
 <p class="caption">
-Figure 5.23: Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and thereoretical lower and upper quartiles.
+Figure 5.23: Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles.
 </p>
 </div>
 </div>
@@ -1040,11 +1040,11 @@ Figure 5.24: Normal QQ plots of normal and non-normal data. The dashed lines das
 </div>
 <div id="the-australian-births-data" class="section level4">
 <h4><span class="header-section-number">5.10.1.1</span> The Australian births data</h4>
-<p>As a further example consider the QQ plot in Figure <a href="simple.html#fig:babynormalqqenv">5.25</a>. The points clearly do not lie on a stright line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure <a href="simple.html#fig:QQtypes">5.24</a>).</p>
+<p>As a further example consider the QQ plot in Figure <a href="simple.html#fig:babynormalqqenv">5.25</a>. The points clearly do not lie on a straight line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure <a href="simple.html#fig:QQtypes">5.24</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:babynormalqqenv"></span>
-<img src="images/baby_normal_qq_env.png" alt="QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality." width="75%" />
+<img src="images/baby_normal_qq_env.png" alt="Normal QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality." width="60%" />
 <p class="caption">
-Figure 5.25: QQ plot to compare the Australian birth weights with a <span class="math inline">\(N(7.22,1.36)\)</span> distribution. The dashed line is a line of equality.
+Figure 5.25: Normal QQ plot to compare the Australian birth weights with a <span class="math inline">\(N(7.22,1.36)\)</span> distribution. The dashed line is a line of equality.
 </p>
 </div>
 </div>
@@ -1058,7 +1058,7 @@ against the uniform U(0,24) quantiles
 \frac{43}{45} \times 24,\,\, \frac{44}{45} \times 24. \]</span></p>
 <p>This QQ plot is shown in Figure <a href="simple.html#fig:unifqq">5.26</a>. The dashed line is a line of equality.</p>
 <div class="figure" style="text-align: center"><span id="fig:unifqq"></span>
-<img src="images/baby_unif_qq_simenv.png" alt="Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets." width="75%" />
+<img src="images/baby_unif_qq_simenv.png" alt="Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets." width="60%" />
 <p class="caption">
 Figure 5.26: Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets.
 </p>
@@ -1073,7 +1073,7 @@ an exponential(<span class="math inline">\(\hat{\lambda}\)</span>) distribution.
 <span class="math display">\[ q_i = -\frac{1}{\hat{\lambda}} \ln \left( 1-\frac{i}{n+1} \right). \]</span></p>
 <p>The points in the exponential QQ plot in Figure <a href="simple.html#fig:expqq">5.27</a> are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values. This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.</p>
 <div class="figure" style="text-align: center"><span id="fig:expqq"></span>
-<img src="images/exp_simenv.png" alt="Exponential QQ plot with simulation envelopes based on 19 simulated datasets." width="75%" />
+<img src="images/exp_simenv.png" alt="Exponential QQ plot with simulation envelopes based on 19 simulated datasets." width="60%" />
 <p class="caption">
 Figure 5.27: Exponential QQ plot with simulation envelopes based on 19 simulated datasets.
 </p>

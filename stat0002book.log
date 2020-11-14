@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  14 NOV 2020 22:51
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  14 NOV 2020 23:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1572,7 +1572,7 @@ File: images/ox_qq_sim.png Graphic file (type bmp)
 <images/ox_qq_sim.png>
 File: images/ox_qq_simenv.png Graphic file (type bmp)
 <images/ox_qq_simenv.png>
-[95] [96]
+[95]
 File: images/ox_hist_trans.png Graphic file (type bmp)
 <images/ox_hist_trans.png>
 File: images/ox_qq_trans.png Graphic file (type bmp)
@@ -1581,32 +1581,33 @@ File: images/ox_qq_time_env.png Graphic file (type bmp)
 <images/ox_qq_time_env.png>
 File: images/ox_qq_sqrttime_env.png Graphic file (type bmp)
 <images/ox_qq_sqrttime_env.png>
-[97] [98] [99] [100]
+[96] [97] [98]
 File: images/ox_qq_linequart.png Graphic file (type bmp)
 <images/ox_qq_linequart.png>
 File: images/QQtypes.png Graphic file (type bmp)
 <images/QQtypes.png>
-[101] [102]
+[99] [100]
 File: images/baby_normal_qq_env.png Graphic file (type bmp)
 <images/baby_normal_qq_env.png>
+[101]
 File: images/baby_unif_qq_simenv.png Graphic file (type bmp)
 <images/baby_unif_qq_simenv.png>
-[103] [104]
+[102]
 File: images/exp_simenv.png Graphic file (type bmp)
 <images/exp_simenv.png>
-[105] [106]
+[103]
 Chapter 6.
-[107
+[104
 
 ]
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
-[108]
+[105]
 Underfull \hbox (badness 10000) in paragraph at lines 5442--5444
 
  []
 
-[109]
+[106]
 File: images/coin_sim.png Graphic file (type bmp)
 <images/coin_sim.png>
 File: images/normal_sim_3_mean.png Graphic file (type bmp)
@@ -1625,7 +1626,7 @@ File: images/normal_sim_100_mean.png Graphic file (type bmp)
 <images/normal_sim_100_mean.png>
 File: images/normal_sim_100_var.png Graphic file (type bmp)
 <images/normal_sim_100_var.png>
-[110] [111]
+[107] [108]
 File: images/exponential_sim_3_mean.png Graphic file (type bmp)
 <images/exponential_sim_3_mean.png>
 File: images/exponential_sim_3_var.png Graphic file (type bmp)
@@ -1642,24 +1643,24 @@ File: images/exponential_sim_100_mean.png Graphic file (type bmp)
 <images/exponential_sim_100_mean.png>
 File: images/exponential_sim_100_var.png Graphic file (type bmp)
 <images/exponential_sim_100_var.png>
-[112] [113] [114]
+[109] [110] [111]
 File: images/normal_mean_median.png Graphic file (type bmp)
 <images/normal_mean_median.png>
-[115] [116] [117] [118]
+[112] [113] [114] [115]
 Chapter 7.
-[119
+[116
 
 ]
 Chapter 8.
-[120
+[117
 
 ]
 Chapter 9.
-[121
+[118
 
 ]
 Chapter 10.
-(./stat0002book.bbl [122
+(./stat0002book.bbl [119
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1696,7 +1697,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[123
+[120
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1713,10 +1714,10 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 Here is how much of TeX's memory you used:
  23893 strings out of 479426
  458040 string characters out of 5879405
- 1030598 words of memory out of 5000000
+ 1030600 words of memory out of 5000000
  42805 multiletter control sequences out of 15000+600000
  541779 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 94i,17n,118p,1057b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 94i,17n,118p,1075b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (123 pages).
+Output written on stat0002book.pdf (120 pages).

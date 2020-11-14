@@ -4899,7 +4899,7 @@ Suppose now that we are interested in the birth weights \(Z_1,\ldots,Z_{44}\) of
 \caption{Histogram (left) and boxplot (right) of the sample birth weights.}\label{fig:babynormalplots}
 \end{figure}
 
-The most obvious feature of figure \ref{fig:babynormalplots} is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.
+The most obvious feature of Figure \ref{fig:babynormalplots} is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.
 
 A distribution that is commonly used to model continuous variables such as weight is the normal distribution. This is also known as the Gaussian distribution. A continuous random variable \(Z\) has a normal distribution with parameters \(\mu\) and \(\sigma^{2}\) if its probability density function is given by
 \[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
@@ -5181,11 +5181,11 @@ Generally the points on these plots lie quite close to the line of equality. How
   the extreme (small and large) points tend to lie further from the line than the points in the middle
 \end{itemize}
 
-When judging whether a QQ plot of real data looks `OK' or not simulated data can be helpful. Look at figure \ref{fig:oxqqsimenv}.
+When judging whether a QQ plot of real data looks `OK' or not simulated data can be helpful. Look at Figure \ref{fig:oxqqsimenv}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_simenv} 
+{\centering \includegraphics[width=0.6\linewidth]{images/ox_qq_simenv} 
 
 }
 
@@ -5203,7 +5203,7 @@ We have used 19 simulated datasets. This number is motivated by the idea that th
 
 1 in 20 is the 5\% that crops up often in Statistics.
 
-We have already seen that the Oxford birth times appear to be positively skewed and, therefore, it may not be reasonable to suppose that they have been sampled from might not come from a normal distribution. However, perhaps there is a **transformation* of these data which look more like a sample from a normal distribution.
+We have already seen that the Oxford birth times appear to be positively skewed and, therefore, it may not be reasonable to suppose that they have been sampled from might not come from a normal distribution. However, perhaps there is a \textbf{transformation} of these data which look more like a sample from a normal distribution.
 
 Figure \ref{fig:oxhisttrans} shows histograms of the original data and 3 different transformations of the data. Which of these histograms looks most symmetric?
 
@@ -5233,7 +5233,7 @@ In Figure \ref{fig:oxqqtimeenv} simulation envelopes based on 19 simulated sampl
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_time_env} 
+{\centering \includegraphics[width=0.6\linewidth]{images/ox_qq_time_env} 
 
 }
 
@@ -5245,7 +5245,7 @@ a sample from a normal distribution.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_sqrttime_env} 
+{\centering \includegraphics[width=0.6\linewidth]{images/ox_qq_sqrttime_env} 
 
 }
 
@@ -5264,11 +5264,11 @@ Two practical points:
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/ox_qq_linequart} 
+{\centering \includegraphics[width=0.6\linewidth]{images/ox_qq_linequart} 
 
 }
 
-\caption{Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and thereoretical lower and upper quartiles.}\label{fig:oxqqlinequart}
+\caption{Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles.}\label{fig:oxqqlinequart}
 \end{figure}
 
 \hypertarget{departures-from-normality}{%
@@ -5313,15 +5313,15 @@ A summary of these plots:
 \hypertarget{the-australian-births-data}{%
 \subsubsection{The Australian births data}\label{the-australian-births-data}}
 
-As a further example consider the QQ plot in Figure \ref{fig:babynormalqqenv}. The points clearly do not lie on a stright line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure \ref{fig:QQtypes}).
+As a further example consider the QQ plot in Figure \ref{fig:babynormalqqenv}. The points clearly do not lie on a straight line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure \ref{fig:QQtypes}).
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/baby_normal_qq_env} 
+{\centering \includegraphics[width=0.6\linewidth]{images/baby_normal_qq_env} 
 
 }
 
-\caption{QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality.}\label{fig:babynormalqqenv}
+\caption{Normal QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality.}\label{fig:babynormalqqenv}
 \end{figure}
 
 \hypertarget{uniform-qq-plots}{%
@@ -5337,7 +5337,7 @@ This QQ plot is shown in Figure \ref{fig:unifqq}. The dashed line is a line of e
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/baby_unif_qq_simenv} 
+{\centering \includegraphics[width=0.6\linewidth]{images/baby_unif_qq_simenv} 
 
 }
 
@@ -5359,7 +5359,7 @@ The points in the exponential QQ plot in Figure \ref{fig:expqq} are generally cl
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.75\linewidth]{images/exp_simenv} 
+{\centering \includegraphics[width=0.6\linewidth]{images/exp_simenv} 
 
 }
 
@@ -5456,7 +5456,7 @@ There is a subtle, but important, difference between the words \textbf{estimator
   \[ \hat{\mu}=\displaystyle\frac1n\sum_{i=1}^n X_i = \overline{X}. \]
   An estimator is a random variable: before we observe data we do not know which value the estimator will have.
 \item
-  An \textbf{estimate} is the value of an estimator \textbf{after} the datahave been observed. Once we have observed \(X_1=x_1, X_2,=x_2, \ldots, X_n=x_n\) the estimate of \(\mu\) is
+  An \textbf{estimate} is the value of an estimator \textbf{after} the data have been observed. Once we have observed \(X_1=x_1, X_2,=x_2, \ldots, X_n=x_n\) the estimate of \(\mu\) is
   \[ \hat{\mu} = \displaystyle\frac1n\sum_{i=1}^n x_i = \overline{X}. \]
   An estimate is not a random variable, it is a constant.
 \end{itemize}
