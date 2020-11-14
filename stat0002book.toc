@@ -111,13 +111,14 @@
 \contentsline {subsection}{\numberline {5.9.2}The standard normal disribution}{91}{subsection.5.9.2}%
 \contentsline {subsection}{\numberline {5.9.3}Evaluating the the normal c.d.f. and quantiles}{91}{subsection.5.9.3}%
 \contentsline {subsection}{\numberline {5.9.4}Interpretation of \(\mitsigma \)}{92}{subsection.5.9.4}%
-\contentsline {section}{\numberline {5.10}QQ plots}{92}{section.5.10}%
-\contentsline {subsection}{\numberline {5.10.1}Normal QQ plots}{93}{subsection.5.10.1}%
+\contentsline {section}{\numberline {5.10}Summary of these continuous distributions}{92}{section.5.10}%
+\contentsline {section}{\numberline {5.11}QQ plots}{93}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Normal QQ plots}{93}{subsection.5.11.1}%
 \contentsline {subsubsection}{Constructing a QQ plot}{94}{section*.134}%
 \contentsline {subsubsection}{Departures from normality}{99}{section*.143}%
-\contentsline {subsubsection}{\numberline {5.10.1.1}The Australian births data}{101}{subsubsection.5.10.1.1}%
-\contentsline {subsection}{\numberline {5.10.2}Uniform QQ plots}{102}{subsection.5.10.2}%
-\contentsline {subsection}{\numberline {5.10.3}Exponential QQ plots}{102}{subsection.5.10.3}%
+\contentsline {subsubsection}{\numberline {5.11.1.1}The Australian births data}{100}{subsubsection.5.11.1.1}%
+\contentsline {subsection}{\numberline {5.11.2}Uniform QQ plots}{100}{subsection.5.11.2}%
+\contentsline {subsection}{\numberline {5.11.3}Exponential QQ plots}{103}{subsection.5.11.3}%
 \contentsline {chapter}{\numberline {6}Statistical Inference}{104}{chapter.6}%
 \contentsline {section}{\numberline {6.1}The story so far}{104}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Sample and populations}{104}{section.6.2}%

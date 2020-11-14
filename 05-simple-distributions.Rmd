@@ -719,6 +719,14 @@ qnorm(0.95, mean = 7.22, sd = sqrt(1.36))
 Suppose that $X \sim N(\mu,\sigma^{2})$.  Let $p_k = P(|X-\mu| < k\sigma)$, so that $p_k$ is the probability that $X$ lies within $k$ standard deviations of its mean.  We have $p_1 = 0.6826$, $p_2 = 0.9545$ and $p_3 = 0.9973$.  Therefore, for a large sample from a normal distribution 
 approximately 68\% of observations will fall within 1 standard deviation of the mean, and approximately 95\% within 2 standard deviations of the mean. 
 
+## Summary of these continuous distributions
+
+We have studied 3 common continuous distributions:
+
+* **uniform**: a random variable for which all values in an interval are equally likely.
+* **exponential**: a positive random variable, which arises as the times between events in a Poisson process. 
+* **normal**: a symmetric random variable often used as a model for measurement errors or data that arise as the sums or averages of a large number of random variables.
+
 ## QQ plots {#qq}
 
 We have seen that we can use a plot, for example, a histogram to examine the shape of the frequency distribution of data.  Sometimes we are interested in deciding whether the data appear to have come from a particular distribution, with a particular shape.  
