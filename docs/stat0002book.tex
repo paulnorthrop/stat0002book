@@ -439,8 +439,8 @@ To simulate a fake space shuttle dataset we do the following for each of the 23 
 
 We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other. In Chapter \ref{rvs} we will see that \(y\) is a value simulated from a binomial(6, \(p\)) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.
 
-\hypertarget{descriptive-statistics}{%
-\chapter{Descriptive Statistics}\label{descriptive-statistics}}
+\hypertarget{descriptive}{%
+\chapter{Descriptive Statistics}\label{descriptive}}
 
 The first important step in any data analysis is to \textbf{describe} the
 available data. This is often called an \textbf{exploratory} or \textbf{initial} data analysis. It is normally not possible to just look at the dataset, especially if it is large, and just see any interesting structures. The task of a statistician is therefore to \textbf{extract} and \textbf{condense} the relevant information -- what is relevant will depend on the aim of the analysis. Some of the standard methods to do so are addressed in the next sections. Despite all the technicalities, always remember that the numbers / figures / plots produced for data must be \textbf{interpreted with regard to the problem or question at hand}, that is, always ask yourself ``what does this number / plot mean?''.
@@ -5369,11 +5369,55 @@ The points in the exponential QQ plot in Figure \ref{fig:expqq} are generally cl
 \hypertarget{inference}{%
 \chapter{Statistical Inference}\label{inference}}
 
+Statistics is the science of collecting, analysing and interpreting data.
+Statistical inference makes use of information from a sample to draw conclusions
+(inferences) about the population from which the sample was taken.
+
+\hypertarget{the-story-so-far}{%
+\section{The story so far}\label{the-story-so-far}}
+
+In Chapter \ref{descriptive} we considered ways to describe and summarise \textbf{sample data}. In Chapter \ref{probability} we introduced the concept of the \textbf{probability} of an event and in Chapter \ref{rvs} we defined a \textbf{random variable} to be a mapping of each value in the sample space to a real number. In Chapter \ref{simple} we considered some examples of some simple \textbf{probability distributions} for random variables that may describe the behaviour of a random quantity under certain special situations. When we use a probability distribution in this way we may refer to it as a \textbf{probability model}.
+
 \hypertarget{sample-and-populations}{%
 \section{Sample and populations}\label{sample-and-populations}}
 
+Suppose that we are interested in the distribution of some aspect of a population, for example, the outcomes of successive tosses of a coin. In many cases it is not possible to collect information on the entire population. Therefore, a subset of the population, a \textbf{sample}, is selected. The aim is to generalise from the particular sample collected to the population from which it came. The sample should be representative of the population. This is often achieved most straightforwardly by random sampling, where each member of the population has an equal chance of being chosen and different selections from the population are independent.
+
 \hypertarget{probability-models}{%
 \section{Probability models}\label{probability-models}}
+
+Often we makes inferences about a population using probability models. We view the data \(X_1, X_2,...,X_n\) as random variables sampled randomly from a probability distribution. The probability distribution often involves unknown constants, or \textbf{parameters}. We use the data to estimate the values of these parameters. We should also quantify how uncertain we are about the values of the parameters. Generally speaking, the more data we have the more certain we can be about the approximate value of the parameters. This process of is called \textbf{statistical inference}, because we are trying to infer the unknown population distribution and its parameters based on sample statistics.
+
+Consider the coin-tossing example near the start of Chapter \ref{probability}. The population of interest is the infinite set of outcomes which would be produced if Kerrich were able to toss the coin forever. The sample is results of the 10,000 tosses which Kerrich actually carried out. The population parameter of interest is the proportion \(p\) of tosses on which a head is obtained. If we assume that successive coin tosses are independent and that the probability \(p\) of a head is the same on each toss, then the distribution of the total number \(X\) of heads is binomial(\(10000, p\)). This binomial distribution is our probability model and \(p\) is its unknown parameter. Possible questions of interest are:
+What is our `best' estimate of \(p\)? Can we provide an interval to quantify our uncertainty about \(p\)? Is it plausible that \(p=1/2\)?
+
+\hypertarget{summary}{%
+\subsection*{Summary}\label{summary}}
+\addcontentsline{toc}{subsection}{Summary}
+
+\begin{itemize}
+\tightlist
+\item
+  We are interested in the distribution of a random variable \(X\).
+\item
+  Data: a random sample \(X_1=x_1, \ldots, X_n=x_n\).
+\item
+  We assume that \(X\) has a probability distribution with parameter \(\theta\). We might write \(X \sim p(x; \theta)\).
+\item
+  We use data to make inferences about \(\theta\) and therefore about the
+  distribution of \(X\).
+\end{itemize}
+
+This is summarised in Figure \ref{inference}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/inference} 
+
+}
+
+\caption{A schematic to describe the idea of statistical inference.}\label{fig:inference}
+\end{figure}
 
 \hypertarget{fitting-models}{%
 \section{Fitting models}\label{fitting-models}}
