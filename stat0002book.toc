@@ -114,32 +114,32 @@
 \contentsline {section}{\numberline {5.10}QQ plots}{93}{section.5.10}%
 \contentsline {subsection}{\numberline {5.10.1}Normal QQ plots}{93}{subsection.5.10.1}%
 \contentsline {subsubsection}{Constructing a QQ plot}{94}{section*.133}%
-\contentsline {subsubsection}{Departures from normality}{102}{section*.141}%
-\contentsline {subsubsection}{\numberline {5.10.1.1}The Australian births data}{103}{subsubsection.5.10.1.1}%
-\contentsline {subsection}{\numberline {5.10.2}Uniform QQ plots}{103}{subsection.5.10.2}%
-\contentsline {subsection}{\numberline {5.10.3}Exponential QQ plots}{105}{subsection.5.10.3}%
-\contentsline {chapter}{\numberline {6}Statistical Inference}{107}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Sample and populations}{107}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Probability models}{107}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Fitting models}{107}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{107}{section.6.4}%
-\contentsline {section}{\numberline {6.5}What makes an estimator good?}{107}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{107}{section.6.6}%
-\contentsline {chapter}{\numberline {7}Contingency tables}{108}{chapter.7}%
-\contentsline {section}{\numberline {7.1}2-way contingency tables}{108}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{108}{subsection.7.1.1}%
-\contentsline {section}{\numberline {7.2}3-way contingency tables}{108}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Linear regression}{109}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Simple linear regression}{109}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Looking at scatter plots}{109}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Model checking}{109}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{109}{subsection.8.3.1}%
-\contentsline {section}{\numberline {8.4}Use of transformations}{109}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Over-fitting}{109}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Other aspects of regression}{109}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{109}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Correlation}{110}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{110}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Covariance and correlation}{110}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{110}{section.9.3}%
-\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{111}{chapter.10}%
+\contentsline {subsubsection}{Departures from normality}{102}{section*.142}%
+\contentsline {subsubsection}{\numberline {5.10.1.1}The Australian births data}{104}{subsubsection.5.10.1.1}%
+\contentsline {subsection}{\numberline {5.10.2}Uniform QQ plots}{104}{subsection.5.10.2}%
+\contentsline {subsection}{\numberline {5.10.3}Exponential QQ plots}{104}{subsection.5.10.3}%
+\contentsline {chapter}{\numberline {6}Statistical Inference}{108}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sample and populations}{108}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Probability models}{108}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Fitting models}{108}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Uncertainty in estimation}{108}{section.6.4}%
+\contentsline {section}{\numberline {6.5}What makes an estimator good?}{108}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Assessing goodness-of-fit}{108}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Contingency tables}{109}{chapter.7}%
+\contentsline {section}{\numberline {7.1}2-way contingency tables}{109}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Comparing probabilities}{109}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}3-way contingency tables}{109}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Linear regression}{110}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Simple linear regression}{110}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Looking at scatter plots}{110}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Model checking}{110}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{110}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Use of transformations}{110}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Over-fitting}{110}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Other aspects of regression}{110}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{110}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Correlation}{111}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{111}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Covariance and correlation}{111}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{111}{section.9.3}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{112}{chapter.10}%
