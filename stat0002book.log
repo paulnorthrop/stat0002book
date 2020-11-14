@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  14 NOV 2020 12:32
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  14 NOV 2020 22:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1558,12 +1558,13 @@ File: images/baby_normal_box.png Graphic file (type bmp)
 [89]
 File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
-[90] [91]
+[90]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 5013.
-[92] [93]
+[91] [92]
 File: images/qq_picture.png Graphic file (type bmp)
 <images/qq_picture.png>
+[93]
 File: images/qq_schematic.png Graphic file (type bmp)
 <images/qq_schematic.png>
 [94]
@@ -1571,7 +1572,7 @@ File: images/ox_qq_sim.png Graphic file (type bmp)
 <images/ox_qq_sim.png>
 File: images/ox_qq_simenv.png Graphic file (type bmp)
 <images/ox_qq_simenv.png>
-[95] [96] [97]
+[95] [96]
 File: images/ox_hist_trans.png Graphic file (type bmp)
 <images/ox_hist_trans.png>
 File: images/ox_qq_trans.png Graphic file (type bmp)
@@ -1580,41 +1581,85 @@ File: images/ox_qq_time_env.png Graphic file (type bmp)
 <images/ox_qq_time_env.png>
 File: images/ox_qq_sqrttime_env.png Graphic file (type bmp)
 <images/ox_qq_sqrttime_env.png>
-[98] [99] [100] [101]
+[97] [98] [99] [100]
 File: images/ox_qq_linequart.png Graphic file (type bmp)
 <images/ox_qq_linequart.png>
 File: images/QQtypes.png Graphic file (type bmp)
 <images/QQtypes.png>
-[102] [103]
+[101] [102]
 File: images/baby_normal_qq_env.png Graphic file (type bmp)
 <images/baby_normal_qq_env.png>
 File: images/baby_unif_qq_simenv.png Graphic file (type bmp)
 <images/baby_unif_qq_simenv.png>
-[104] [105]
+[103] [104]
 File: images/exp_simenv.png Graphic file (type bmp)
 <images/exp_simenv.png>
-[106] [107]
+[105] [106]
 Chapter 6.
-[108
+[107
 
 ]
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
+[108]
+Underfull \hbox (badness 10000) in paragraph at lines 5442--5444
+
+ []
+
 [109]
+File: images/coin_sim.png Graphic file (type bmp)
+<images/coin_sim.png>
+File: images/normal_sim_3_mean.png Graphic file (type bmp)
+<images/normal_sim_3_mean.png>
+File: images/normal_sim_3_var.png Graphic file (type bmp)
+<images/normal_sim_3_var.png>
+File: images/normal_sim_10_mean.png Graphic file (type bmp)
+<images/normal_sim_10_mean.png>
+File: images/normal_sim_10_var.png Graphic file (type bmp)
+<images/normal_sim_10_var.png>
+File: images/normal_sim_44_mean.png Graphic file (type bmp)
+<images/normal_sim_44_mean.png>
+File: images/normal_sim_44_var.png Graphic file (type bmp)
+<images/normal_sim_44_var.png>
+File: images/normal_sim_100_mean.png Graphic file (type bmp)
+<images/normal_sim_100_mean.png>
+File: images/normal_sim_100_var.png Graphic file (type bmp)
+<images/normal_sim_100_var.png>
+[110] [111]
+File: images/exponential_sim_3_mean.png Graphic file (type bmp)
+<images/exponential_sim_3_mean.png>
+File: images/exponential_sim_3_var.png Graphic file (type bmp)
+<images/exponential_sim_3_var.png>
+File: images/exponential_sim_10_mean.png Graphic file (type bmp)
+<images/exponential_sim_10_mean.png>
+File: images/exponential_sim_10_var.png Graphic file (type bmp)
+<images/exponential_sim_10_var.png>
+File: images/exponential_sim_44_mean.png Graphic file (type bmp)
+<images/exponential_sim_44_mean.png>
+File: images/exponential_sim_44_var.png Graphic file (type bmp)
+<images/exponential_sim_44_var.png>
+File: images/exponential_sim_100_mean.png Graphic file (type bmp)
+<images/exponential_sim_100_mean.png>
+File: images/exponential_sim_100_var.png Graphic file (type bmp)
+<images/exponential_sim_100_var.png>
+[112] [113] [114]
+File: images/normal_mean_median.png Graphic file (type bmp)
+<images/normal_mean_median.png>
+[115] [116] [117] [118]
 Chapter 7.
-[110
+[119
 
 ]
 Chapter 8.
-[111
+[120
 
 ]
 Chapter 9.
-[112
+[121
 
 ]
 Chapter 10.
-(./stat0002book.bbl [113
+(./stat0002book.bbl [122
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1651,7 +1696,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[114
+[123
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1663,15 +1708,15 @@ Package polyglossia Info: Option: english variant=british.
 Package polyglossia Info: Option: english variant=british.
 )
 Package rerunfilecheck Info: File `stat0002book.out' has not changed.
-(rerunfilecheck)             Checksum: E058E6623142377E57B2354B0EA54FC6;12071.
+(rerunfilecheck)             Checksum: F3299C1EA8452B659AAD762928E70D46;12040.
  ) 
 Here is how much of TeX's memory you used:
- 23677 strings out of 479426
- 451830 string characters out of 5879405
- 1028546 words of memory out of 5000000
- 42607 multiletter control sequences out of 15000+600000
+ 23893 strings out of 479426
+ 458040 string characters out of 5879405
+ 1030598 words of memory out of 5000000
+ 42805 multiletter control sequences out of 15000+600000
  541779 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1057b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (114 pages).
+Output written on stat0002book.pdf (123 pages).

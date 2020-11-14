@@ -90,7 +90,7 @@ Suppose that Kerrich repeated his experiment a second time.  It is very unlikely
 ### Simulation: coin-tossing example 
 
 To study the sampling distribution of the estimator $\hat{p}$ we imagine Kerrich repeating his experiment a large number of times.  Each time the experiment is carried out the proportion of  heads is calculated.  These values are a random sample from the sampling distribution of  $\hat{p}$.  We cannot actually get Kerrich to repeat his experiment a large number of times. However, we can use a computer to simulate his experiment.  We do this 100,000 times,
-assuming that the coin is fair, that is, $p=P(H)=1/2$.  Figure \@ref{fig:coinsim} shows a histogram of the 100,000 estimates of $p$. This histogram illustrates the sampling distribution of $\hat{p}$ if $p=1/2$.
+assuming that the coin is fair, that is, $p=P(H)=1/2$.  Figure \@ref(fig:coinsim) shows a histogram of the 100,000 estimates of $p$. This histogram illustrates the sampling distribution of $\hat{p}$ if $p=1/2$.
 
 ```{r echo=FALSE, coinsim, fig.show='hold', fig.cap='Histogram of the proportions of heads obtained when Kerrich\'s coin tossing experiment is simulated 100,000 times, using $p=P(H)=1/2$.', out.width = '80%'}
 knitr::include_graphics("images/coin_sim.png")
@@ -111,7 +111,7 @@ we simulate samples of size 44 from a $N(7.22,1.36)$ distribution.  We do this 1
 
 The results are in the third row of Figure \@ref(fig:normalsim). For comparison we also give the histograms for sample sizes of 3, 10 and 100. 
 
-```{r echo=FALSE, normalsim, fig.show='hold', fig.cap='The sampling distribution of $\\hat{\\mu}$ and $\\hat{\\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots.', out.width = '50%'}
+```{r echo=FALSE, normalsim, fig.show='hold', fig.cap='The sampling distribution of $\\hat{\\mu}$ and $\\hat{\\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots.', out.width = '45%'}
 knitr::include_graphics("images/normal_sim_3_mean.png")
 knitr::include_graphics("images/normal_sim_3_var.png")
 knitr::include_graphics("images/normal_sim_10_mean.png")
@@ -138,7 +138,7 @@ We take times between births in the Australian births dataset as an example, whe
 \[ \hat{\mu} = 0.543 \mbox{ hours}, \quad \mbox{that is,  } \hat{\lambda}=1/0.543=1.84. \]
 Although we know that for the exponential distribution the variance is the square of the mean, we estimate separately the variance of this distribution using the sample variance. The results are given in Figure \@ref(fig:expsim).
 
-```{r echo=FALSE, expsim, fig.show='hold', fig.cap='The sampling distribution of $\\hat{\\mu}$ and $\\hat{\\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots.', out.width = '50%'}
+```{r echo=FALSE, expsim, fig.show='hold', fig.cap='The sampling distribution of $\\hat{\\mu}$ and $\\hat{\\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots.', out.width = '45%'}
 knitr::include_graphics("images/exponential_sim_3_mean.png")
 knitr::include_graphics("images/exponential_sim_3_var.png")
 knitr::include_graphics("images/exponential_sim_10_mean.png")
@@ -177,7 +177,7 @@ We have seen that
 $$\hat{\mu} =\overline{X} \sim N\left(\mu,\frac{\sigma^2}{n}\right).$$
 Therefore, $\mbox{E}(\overline{X}) = \mu$ and $\overline{X}$ is unbiased for $\mu$.
 
-### Variance
+### Variance {#varianceofestimator}
 
 Suppose that $T$ is unbiased for $\theta$.  If $\mbox{var}(T)$ is small then the sampling distribution of $T$ is concentrated closely about $\theta$.
 
@@ -236,7 +236,7 @@ It can be shown that $\widetilde{\mu}$ is unbiased and, for large $n$,
 compared to 
 \[ \mbox{var}(\overline{X}) = \frac{\sigma^2}{n}. \]
 
-This is illustrated in Figure \@ref(meanmedian).  Note that this result relies on the assumption that the random sample is from a normal distribution.  If the data are sampled from another distribution then the sample mean may not have a smaller variance that the sample median.
+This is illustrated in Figure \@ref(fig:meanmedian).  Note that this result relies on the assumption that the random sample is from a normal distribution.  If the data are sampled from another distribution then the sample mean may not have a smaller variance that the sample median.
 
 ```{r echo=FALSE, meanmedian, fig.show='hold', fig.cap='The sampling distribution of the sample mean and the approximate large sample sampling distribution of the sample median for a random sample from a $N(7.22, 1.36)$.  A sample size of 44 is used for illustration.', out.width = '75%'}
 knitr::include_graphics("images/normal_mean_median.png")

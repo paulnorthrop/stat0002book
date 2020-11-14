@@ -53,6 +53,70 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -198,7 +262,7 @@
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="inference.html"><a href="inference.html#good"><i class="fa fa-check"></i><b>6.6</b> Properties of estimators</a><ul>
 <li class="chapter" data-level="6.6.1" data-path="inference.html"><a href="inference.html#bias"><i class="fa fa-check"></i><b>6.6.1</b> Bias</a></li>
-<li class="chapter" data-level="6.6.2" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>6.6.2</b> Variance</a></li>
+<li class="chapter" data-level="6.6.2" data-path="inference.html"><a href="inference.html#varianceofestimator"><i class="fa fa-check"></i><b>6.6.2</b> Variance</a></li>
 <li class="chapter" data-level="6.6.3" data-path="inference.html"><a href="inference.html#mean-squared-error-mse"><i class="fa fa-check"></i><b>6.6.3</b> Mean squared error (MSE)</a></li>
 <li class="chapter" data-level="6.6.4" data-path="inference.html"><a href="inference.html#standard-error"><i class="fa fa-check"></i><b>6.6.4</b> Standard error</a></li>
 <li class="chapter" data-level="6.6.5" data-path="inference.html"><a href="inference.html#consistency"><i class="fa fa-check"></i><b>6.6.5</b> Consistency</a></li>
@@ -324,7 +388,7 @@ An estimate is not a random variable, it is a constant.</li>
 <div id="simulation-coin-tossing-example" class="section level3">
 <h3><span class="header-section-number">6.5.1</span> Simulation: coin-tossing example</h3>
 <p>To study the sampling distribution of the estimator <span class="math inline">\(\hat{p}\)</span> we imagine Kerrich repeating his experiment a large number of times. Each time the experiment is carried out the proportion of heads is calculated. These values are a random sample from the sampling distribution of <span class="math inline">\(\hat{p}\)</span>. We cannot actually get Kerrich to repeat his experiment a large number of times. However, we can use a computer to simulate his experiment. We do this 100,000 times,
-assuming that the coin is fair, that is, <span class="math inline">\(p=P(H)=1/2\)</span>. Figure @ref{fig:coinsim} shows a histogram of the 100,000 estimates of <span class="math inline">\(p\)</span>. This histogram illustrates the sampling distribution of <span class="math inline">\(\hat{p}\)</span> if <span class="math inline">\(p=1/2\)</span>.</p>
+assuming that the coin is fair, that is, <span class="math inline">\(p=P(H)=1/2\)</span>. Figure <a href="inference.html#fig:coinsim">6.2</a> shows a histogram of the 100,000 estimates of <span class="math inline">\(p\)</span>. This histogram illustrates the sampling distribution of <span class="math inline">\(\hat{p}\)</span> if <span class="math inline">\(p=1/2\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:coinsim"></span>
 <img src="images/coin_sim.png" alt="Histogram of the proportions of heads obtained when Kerrich's coin tossing experiment is simulated 100,000 times, using $p=P(H)=1/2$." width="80%" />
 <p class="caption">
@@ -344,7 +408,7 @@ We take the Australian birth weights data as an example, where we had <span clas
 we simulate samples of size 44 from a <span class="math inline">\(N(7.22,1.36)\)</span> distribution. We do this 100,000 times and plot a histogram of the estimates of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>.</p>
 <p>The results are in the third row of Figure <a href="inference.html#fig:normalsim">6.3</a>. For comparison we also give the histograms for sample sizes of 3, 10 and 100.</p>
 <div class="figure" style="text-align: center"><span id="fig:normalsim"></span>
-<img src="images/normal_sim_3_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_3_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_10_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_10_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_44_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_44_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_100_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/normal_sim_100_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="50%" />
+<img src="images/normal_sim_3_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_3_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_10_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_10_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_44_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_44_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_100_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/normal_sim_100_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from a $N(7.22,1.36)$ distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the $N(7.22,1.36)$ distribution. The sample size is given in the titles of the plots." width="45%" />
 <p class="caption">
 Figure 6.3: The sampling distribution of <span class="math inline">\(\hat{\mu}\)</span> and <span class="math inline">\(\hat{\sigma}^2\)</span> based on 100,000 independent simulations from a <span class="math inline">\(N(7.22,1.36)\)</span> distribution. Left: mean. Right: variance. The dotted line in the top left plot is the p.d.f. of the <span class="math inline">\(N(7.22,1.36)\)</span> distribution. The sample size is given in the titles of the plots.
 </p>
@@ -365,7 +429,7 @@ We take times between births in the Australian births dataset as an example, whe
 <span class="math display">\[ \hat{\mu} = 0.543 \mbox{ hours}, \quad \mbox{that is,  } \hat{\lambda}=1/0.543=1.84. \]</span>
 Although we know that for the exponential distribution the variance is the square of the mean, we estimate separately the variance of this distribution using the sample variance. The results are given in Figure <a href="inference.html#fig:expsim">6.4</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:expsim"></span>
-<img src="images/exponential_sim_3_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_3_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_10_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_10_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_44_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_44_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_100_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" /><img src="images/exponential_sim_100_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="50%" />
+<img src="images/exponential_sim_3_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_3_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_10_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_10_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_44_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_44_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_100_mean.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" /><img src="images/exponential_sim_100_var.png" alt="The sampling distribution of $\hat{\mu}$ and $\hat{\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots." width="45%" />
 <p class="caption">
 Figure 6.4: The sampling distribution of <span class="math inline">\(\hat{\mu}\)</span> and <span class="math inline">\(\hat{\sigma}^2\)</span> based on 100,000 independent simulations from an exponential(1.84) distribution. Left: mean. Right: variance. The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots.
 </p>
@@ -393,7 +457,7 @@ where <span class="math inline">\(\sigma^2\)</span> is finite. We define the est
 <span class="math display">\[\hat{\mu} =\overline{X} \sim N\left(\mu,\frac{\sigma^2}{n}\right).\]</span>
 Therefore, <span class="math inline">\(\mbox{E}(\overline{X}) = \mu\)</span> and <span class="math inline">\(\overline{X}\)</span> is unbiased for <span class="math inline">\(\mu\)</span>.</p>
 </div>
-<div id="variance" class="section level3">
+<div id="varianceofestimator" class="section level3">
 <h3><span class="header-section-number">6.6.2</span> Variance</h3>
 <p>Suppose that <span class="math inline">\(T\)</span> is unbiased for <span class="math inline">\(\theta\)</span>. If <span class="math inline">\(\mbox{var}(T)\)</span> is small then the sampling distribution of <span class="math inline">\(T\)</span> is concentrated closely about <span class="math inline">\(\theta\)</span>.</p>
 <p>Suppose that we compare 2 unbiased estimators <span class="math inline">\(T_1\)</span> and <span class="math inline">\(T_2\)</span>. If <span class="math inline">\(\mbox{var}(T_1) &lt; \mbox{var}(T_2)\)</span> then we may prefer <span class="math inline">\(T_1\)</span> to <span class="math inline">\(T_2\)</span>. Both estimators have the property that the mean of sampling distribution is located at <span class="math inline">\(\theta\)</span> but <span class="math inline">\(T_1\)</span> varies less about this mean than <span class="math inline">\(T_2\)</span>, as judged the sampling variance of the estimators.</p>
@@ -438,7 +502,7 @@ It can be shown that <span class="math inline">\(\widetilde{\mu}\)</span> is unb
 <span class="math display">\[ \mbox{var}(\widetilde{\mu}) \approx 1.57\,\frac{\sigma^2}{n}, \]</span>
 compared to
 <span class="math display">\[ \mbox{var}(\overline{X}) = \frac{\sigma^2}{n}. \]</span></p>
-<p>This is illustrated in Figure <a href="#meanmedian"><strong>??</strong></a>. Note that this result relies on the assumption that the random sample is from a normal distribution. If the data are sampled from another distribution then the sample mean may not have a smaller variance that the sample median.</p>
+<p>This is illustrated in Figure <a href="inference.html#fig:meanmedian">6.5</a>. Note that this result relies on the assumption that the random sample is from a normal distribution. If the data are sampled from another distribution then the sample mean may not have a smaller variance that the sample median.</p>
 <div class="figure" style="text-align: center"><span id="fig:meanmedian"></span>
 <img src="images/normal_mean_median.png" alt="The sampling distribution of the sample mean and the approximate large sample sampling distribution of the sample median for a random sample from a $N(7.22, 1.36)$.  A sample size of 44 is used for illustration." width="75%" />
 <p class="caption">

@@ -556,7 +556,7 @@ Let $T_2$ be the time between the 1st birth and the 2nd birth; and $T_3$ be the 
 
 Figure \@ref(fig:babyexpplots) shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.
 
-```{r echo=FALSE, babyexpplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample times between births.', out.width = '50%'}
+```{r echo=FALSE, babyexpplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample times between births.', out.width = '45%'}
 knitr::include_graphics("images/baby_exp_hist.png")
 knitr::include_graphics("images/baby_exp_box.png")
 ```
@@ -606,7 +606,7 @@ for $\lambda > 0$, then $T \sim \mbox{exponential}(\lambda)$.
 
 Suppose now that we are interested in the birth weights $Z_1,\ldots,Z_{44}$ of the babies.  Figure \@ref(fig:babynormalplots) shows a histogram and a boxplot of the of the sample birth weights $z_1,\ldots,z_n$.  I have converted the weights from grams to pounds (1 pound $\approx$ 453.5g).
 
-```{r echo=FALSE, babynormalplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample birth weights.', out.width = '50%'}
+```{r echo=FALSE, babynormalplots, fig.show='hold', fig.cap='Histogram (left) and boxplot (right) of the sample birth weights.', out.width = '45%'}
 knitr::include_graphics("images/baby_normal_histnew.png")
 knitr::include_graphics("images/baby_normal_box.png")
 ```
@@ -758,9 +758,9 @@ For simplicity we suppose that the sample size $n=9$. Therefore we want to calcu
 qnorm((1:9) / 10, mean = 7.72, sd = 3.57)
 ```
 
-In Figure \@ref{fig:qqpic} these quantiles are superimposed on the p.d.f. of a $N(7.72, 3.57^2)$ distribution.
+In Figure \@ref(fig:qqpic) these quantiles are superimposed on the p.d.f. of a $N(7.72, 3.57^2)$ distribution.
 
-```{r echo=FALSE, qqpic, fig.show='hold', fig.cap='A normal p.d.f. with the 10%, 20%, ..., 90% quantiles indicated with vertical lines.'}
+```{r echo=FALSE, qqpic, fig.show='hold', fig.cap='A normal p.d.f. with the 10\\%, 20\\%, ..., 90\\% quantiles indicated with vertical lines.'}
 include_cropped_graphics("images/qq_picture.png")
 ```
 
