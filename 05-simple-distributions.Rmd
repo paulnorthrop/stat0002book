@@ -666,7 +666,7 @@ and
 \int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad 
 \quad -\infty < x < \infty. \]
 
-### Evaluating the the normal c.d.f. and quantiles
+### Evaluating the normal c.d.f. and quantiles
 
 Suppose that $W \sim N(7.22, 1.36)$, that is, $\mbox{E}(W)=7.22$ and $\mbox{var}(W)=1.36$ and we want to calculate $P(W \leq 10)$.  Then
 

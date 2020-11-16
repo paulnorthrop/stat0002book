@@ -109,7 +109,7 @@
 \contentsline {section}{\numberline {5.9}The normal distribution}{89}{section.5.9}%
 \contentsline {subsection}{\numberline {5.9.1}Summary of the \(\mbox {N}(\mitmu ,\mitsigma ^2)\) distribution}{91}{subsection.5.9.1}%
 \contentsline {subsection}{\numberline {5.9.2}The standard normal disribution}{91}{subsection.5.9.2}%
-\contentsline {subsection}{\numberline {5.9.3}Evaluating the the normal c.d.f. and quantiles}{91}{subsection.5.9.3}%
+\contentsline {subsection}{\numberline {5.9.3}Evaluating the normal c.d.f. and quantiles}{91}{subsection.5.9.3}%
 \contentsline {subsection}{\numberline {5.9.4}Interpretation of \(\mitsigma \)}{92}{subsection.5.9.4}%
 \contentsline {section}{\numberline {5.10}Summary of these continuous distributions}{92}{section.5.10}%
 \contentsline {section}{\numberline {5.11}QQ plots}{93}{section.5.11}%
