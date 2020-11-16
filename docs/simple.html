@@ -415,7 +415,7 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 <h2><span class="header-section-number">5.3</span> The binomial distribution</h2>
 <p>We have seen that the 44 births are 44 Bernoulli trials. We define a random variable <span class="math inline">\(Y\)</span> equal to the total number of boys in the 44 births, that is,
 <span class="math display">\[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]</span>
-We assume that the outcome of each birth is indepdendent of the outcomes of all the other births, that is, the random variables <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are mutually independent. Therefore, we have assumed that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are independent and identically distributed, or i.i.d. for short. `Identically distributed’ means that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> have exactly the same distribution, including the values of any unknown parameters. We may write</p>
+We assume that the outcome of each birth is independent of the outcomes of all the other births, that is, the random variables <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are mutually independent. Therefore, we have assumed that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are independent and identically distributed, or i.i.d. for short. `Identically distributed’ means that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> have exactly the same distribution, including the values of any unknown parameters. We may write</p>
 <p><span class="math display">\[ X_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]</span>
 or
 <span class="math display">\[ X_i \,\stackrel{{\rm indep}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]</span></p>
@@ -443,7 +443,7 @@ P(Y=y)={44 \choose y}
 p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44. 
 \]</span>
 The combinatorial term <span class="math inline">\({44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}\)</span>
-gives the number of ways in which <span class="math inline">\(y\)</span> boys births can be positioned amongst the 44 births.</p>
+gives the number of ways in which <span class="math inline">\(y\)</span> boys births can be positioned among the 44 births.</p>
 <p><span class="math inline">\(Y\)</span> has a binomial distribution with parameters <span class="math inline">\(44\)</span> and <span class="math inline">\(p\)</span>, <span class="math inline">\((0 \leq p \leq 1)\)</span>, or, for short,
 <span class="math display">\[ Y \sim \,\mbox{binomial}(44,p). \]</span>
 In this example the observed value of <span class="math inline">\(Y\)</span> is <span class="math inline">\(y=26\)</span>.</p>
@@ -960,9 +960,9 @@ Figure 5.16: Example normal QQ plot for a sample of size <span class="math inlin
 <p>How can we decide this? Well, we need to know what such QQ plots would look like. If we have a sample that we <strong>know</strong> is sampled from a normal distribution then we can produce a normal QQ plot and see what it looks like. If we have many different samples of data we can see a whole range of different QQ plots.</p>
 <p>We use a computer to <strong>simulate</strong> 95 values from a <span class="math inline">\(N(7.72,3.57^2)\)</span> distribution. We do this 9 times and produce a normal QQ plot for each set of simulated data. Figure <a href="simple.html#fig:oxqqsim">5.17</a> shows these QQ plots.</p>
 <div class="figure" style="text-align: center"><span id="fig:oxqqsim"></span>
-<img src="images/ox_qq_sim.png" alt="Normal QQ plots of 9 samples of size 95 simmulated from a $N(7.72, 3.57^2)$ distribution." width="75%" />
+<img src="images/ox_qq_sim.png" alt="Normal QQ plots of 9 samples of size 95 simulated from a $N(7.72, 3.57^2)$ distribution." width="75%" />
 <p class="caption">
-Figure 5.17: Normal QQ plots of 9 samples of size 95 simmulated from a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.
+Figure 5.17: Normal QQ plots of 9 samples of size 95 simulated from a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.
 </p>
 </div>
 <p>Generally the points on these plots lie quite close to the line of equality. However,</p>

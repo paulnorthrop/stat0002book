@@ -146,7 +146,7 @@ for some $p$, $0 \leq p \leq 1$, then $X \sim \mbox{Bernoulli}(p)$.
 
 We have seen that the 44 births are 44 Bernoulli trials.  We define a random variable $Y$ equal to the total number of boys in the 44 births, that is,
 \[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]
-We assume that the outcome of each birth is indepdendent of the outcomes of all the other births, that is, the random variables $X_1, \ldots, X_{44}$ are mutually independent. Therefore, we have assumed that $X_1, \ldots, X_{44}$ are independent and identically distributed, or i.i.d. for short.  `Identically distributed' means that $X_1, \ldots, X_{44}$ have exactly the same distribution, including the values of any unknown parameters.  We may write
+We assume that the outcome of each birth is independent of the outcomes of all the other births, that is, the random variables $X_1, \ldots, X_{44}$ are mutually independent. Therefore, we have assumed that $X_1, \ldots, X_{44}$ are independent and identically distributed, or i.i.d. for short.  `Identically distributed' means that $X_1, \ldots, X_{44}$ have exactly the same distribution, including the values of any unknown parameters.  We may write
 
 \[ X_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]
 or
@@ -181,7 +181,7 @@ P(Y=y)={44 \choose y}
 p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44. 
 \]
 The combinatorial term ${44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}$ 
-gives the number of ways in which $y$ boys births can be positioned amongst the 44 births.
+gives the number of ways in which $y$ boys births can be positioned among the 44 births.
 
 $Y$ has a binomial distribution with parameters $44$ and $p$, $(0 \leq p \leq 1)$, or, for short,
 \[ Y \sim \,\mbox{binomial}(44,p). \]
@@ -795,7 +795,7 @@ How can we decide this?  Well, we need to know what such QQ plots would look lik
 
 We use a computer to **simulate** 95 values from a $N(7.72,3.57^2)$ distribution.  We do this 9 times and produce a normal QQ plot for each set of simulated data.  Figure \@ref(fig:oxqqsim) shows these QQ plots.   
 
-```{r echo=FALSE, oxqqsim, fig.show='hold', fig.cap='Normal QQ plots of 9 samples of size 95 simmulated from a $N(7.72, 3.57^2)$ distribution.'}
+```{r echo=FALSE, oxqqsim, fig.show='hold', fig.cap='Normal QQ plots of 9 samples of size 95 simulated from a $N(7.72, 3.57^2)$ distribution.'}
 include_cropped_graphics("images/ox_qq_sim.png")
 ```
 
