@@ -569,8 +569,8 @@ that is, $T_1,\ldots,T_{44}$ are a random sample from an $\mbox{exponential}(\la
 There is more than one to estimate $\lambda$.  One approach is to note that the parameter $\lambda$ here is the same as the parameter $\lambda$ in Section \@ref(Poisson).  Therefore, we could the estimate $\hat{\lambda}=44/24\approx 1.83$ births per hour.  
 
 Alternatively, we could use the fact that the mean of an $\mbox{exponential}(\lambda)$ distribution is $1/\lambda$.  The sample mean of the 44 times $t_1,\ldots,t_{44}$ between births is 
-\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{~minutes} 
-\approx 0.543 \mbox{~hours}. \]
+\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{ minutes} 
+\approx 0.543 \mbox{ hours}. \]
 Rearranging
 \[ \mbox{E}(T) = \frac{1}{\lambda}, \]
 gives
