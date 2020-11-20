@@ -147,7 +147,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-11-16}
+\date{2020-11-20}
 
 \begin{document}
 \maketitle
@@ -5583,7 +5583,7 @@ In Sections \ref{simnorm} and \ref{simexp} we saw that increasing the sample siz
 
 Suppose that
 \[X_1, \,\ldots,X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, N(\mu,\sigma^2),\]
-where \(\sigma^2\) is finite. We define the estimator \(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\) of \(\mu\).
+where \(\sigma^2\) is positive and finite. We define the estimator \(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\) of \(\mu\).
 
 \hypertarget{bias}{%
 \subsection{Bias}\label{bias}}
@@ -5613,7 +5613,7 @@ We can show that
 \mbox{MSE}(T) = \mbox{var}(T) + [\mbox{bias}(T)] ^ 2. 
 \label{eq:mse}
 \end{equation}
-This is one way that we could combine bias and variance into one quantity. If, for example, \(\mbox{MSE}(T_b) < \mbox{MSE}(T_u)\) then, based on the \mbox{MSE} criterion, we prefer \(T_b\) to \(T_u\).
+This is one way that we could combine bias and variance into one quantity. If, for example, \(\mbox{MSE}(T_b) < \mbox{MSE}(T_u)\) then, based on the \(\mbox{MSE}\) criterion, we prefer \(T_b\) to \(T_u\).
 
 \hypertarget{standard-error}{%
 \subsection{Standard error}\label{standard-error}}

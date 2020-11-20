@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -450,7 +450,7 @@ Figure 6.4: The sampling distribution of <span class="math inline">\(\hat{\mu}\)
 <p><strong>Estimating mean of a normal distribution</strong></p>
 <p>Suppose that
 <span class="math display">\[X_1, \,\ldots,X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, N(\mu,\sigma^2),\]</span>
-where <span class="math inline">\(\sigma^2\)</span> is finite. We define the estimator <span class="math inline">\(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\)</span> of <span class="math inline">\(\mu\)</span>.</p>
+where <span class="math inline">\(\sigma^2\)</span> is positive and finite. We define the estimator <span class="math inline">\(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\)</span> of <span class="math inline">\(\mu\)</span>.</p>
 <div id="bias" class="section level3">
 <h3><span class="header-section-number">6.6.1</span> Bias</h3>
 <p>An estimator <span class="math inline">\(T\)</span> is <strong>unbiased</strong> for a parameter <span class="math inline">\(\theta\)</span> if <span class="math inline">\(\mbox{E}(T)=\theta\)</span>. The <strong>bias</strong> of <span class="math inline">\(T\)</span> is <span class="math inline">\(\mbox{bias}(T)=\mbox{E}(T)-\theta\)</span>. If <span class="math inline">\(T\)</span> is unbiased then <span class="math inline">\(\mbox{bias}(T)=0\)</span>.</p>
@@ -473,7 +473,7 @@ We can show that
 \mbox{MSE}(T) = \mbox{var}(T) + [\mbox{bias}(T)] ^ 2. 
 \tag{6.1}
 \end{equation}\]</span>
-This is one way that we could combine bias and variance into one quantity. If, for example, <span class="math inline">\(\mbox{MSE}(T_b) &lt; \mbox{MSE}(T_u)\)</span> then, based on the  criterion, we prefer <span class="math inline">\(T_b\)</span> to <span class="math inline">\(T_u\)</span>.</p>
+This is one way that we could combine bias and variance into one quantity. If, for example, <span class="math inline">\(\mbox{MSE}(T_b) &lt; \mbox{MSE}(T_u)\)</span> then, based on the <span class="math inline">\(\mbox{MSE}\)</span> criterion, we prefer <span class="math inline">\(T_b\)</span> to <span class="math inline">\(T_u\)</span>.</p>
 </div>
 <div id="standard-error" class="section level3">
 <h3><span class="header-section-number">6.6.4</span> Standard error</h3>
