@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  20 NOV 2020 01:35
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  22 NOV 2020 18:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1646,19 +1646,61 @@ File: images/normal_mean_median.png Graphic file (type bmp)
 <images/normal_mean_median.png>
 [112] [113] [114] [115]
 Chapter 7.
+File: images/berk_2way.png Graphic file (type bmp)
+<images/berk_2way.png>
 [116
 
-]
+] [117]
+File: images/berk_2way_oe.png Graphic file (type bmp)
+<images/berk_2way_oe.png>
+File: images/ct_notation.png Graphic file (type bmp)
+<images/ct_notation.png>
+[118] [119]
+File: images/berkresnew2.png Graphic file (type bmp)
+<images/berkresnew2.png>
+[120]
+File: images/berk_sim.png Graphic file (type bmp)
+<images/berk_sim.png>
+[121] [122]
+File: images/berk_row.png Graphic file (type bmp)
+<images/berk_row.png>
+[123]
+File: images/odds.png Graphic file (type bmp)
+<images/odds.png>
+[124]
+File: images/case_control.png Graphic file (type bmp)
+<images/case_control.png>
+[125]
+File: images/berk_3way.png Graphic file (type bmp)
+<images/berk_3way.png>
+[126] [127]
+File: images/berkmarg1.png Graphic file (type bmp)
+<images/berkmarg1.png>
+File: images/berkmarg2.png Graphic file (type bmp)
+<images/berkmarg2.png>
+File: images/berkmarg3.png Graphic file (type bmp)
+<images/berkmarg3.png>
+[128]
+File: images/berkmarg4.png Graphic file (type bmp)
+<images/berkmarg4.png>
+File: images/berkcond1.png Graphic file (type bmp)
+<images/berkcond1.png>
+File: images/berkcond2.png Graphic file (type bmp)
+<images/berkcond2.png>
+[129]
+File: images/berkcond3.png Graphic file (type bmp)
+<images/berkcond3.png>
+[130] [131]
 Chapter 8.
-[117
+[132
 
 ]
 Chapter 9.
-[118
+[133
 
 ]
 Chapter 10.
-(./stat0002book.bbl [119
+(./stat0002book.bbl [134
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1695,7 +1737,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[120
+[135
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1710,12 +1752,12 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: 7639E3E94C6FD979EB13575AF0F2CE86;12313.
  ) 
 Here is how much of TeX's memory you used:
- 23894 strings out of 479426
- 458079 string characters out of 5879405
- 1030667 words of memory out of 5000000
- 42806 multiletter control sequences out of 15000+600000
+ 24092 strings out of 479426
+ 461936 string characters out of 5879405
+ 1032878 words of memory out of 5000000
+ 42988 multiletter control sequences out of 15000+600000
  541779 words of font info for 100 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1057b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (120 pages).
+Output written on stat0002book.pdf (135 pages).
