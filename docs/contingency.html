@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -53,70 +53,6 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
-<style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -275,7 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a><ul>
 <li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#comparing-probabilities"><i class="fa fa-check"></i><b>7.1.1</b> Comparing probabilities</a></li>
+<li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#indep"><i class="fa fa-check"></i><b>7.1.1</b> Independence</a></li>
+<li class="chapter" data-level="7.1.2" data-path="contingency.html"><a href="contingency.html#compprob"><i class="fa fa-check"></i><b>7.1.2</b> Comparing probabilities</a></li>
+<li class="chapter" data-level="7.1.3" data-path="contingency.html"><a href="contingency.html#measures-of-association"><i class="fa fa-check"></i><b>7.1.3</b> Measures of association</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a></li>
 </ul></li>
@@ -319,11 +257,225 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="contingency" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Contingency tables</h1>
+<p>In this chapter, and the next chapter on linear regression, we explore the relationships between two, or more, variables. In this chapter we consider the situation where all variables are categorical. In Chapter (linreg) the main variable of interest is continuous.</p>
+<p>Suppose that for each of a number of objects/people/experimental units we record the value of 2 of more categorical variables. For each variable the categories must be mutually exclusive and exhaustive. For example, in the Berkeley admissions data for each applicant we record the sex (Male/Female) and the outcome of the application (Accept/Reject). We present these data in a <strong>contingency table</strong>, which summarises the number (<strong>frequency</strong> or <strong>count</strong>) of subjects falling into each of the possible categories defined by the categorical variables. A <strong>contingency</strong> is an event that may occur a possibility. A contingency table is a summary of the frequencies with which combinations of such events occur.</p>
+<p>The main aim of analysing data in a contingency table is to examine whether the values of the categorical variables are associated with each other, and, if they are associated, <strong>how</strong> they are associated. In other words, we ask the question: “How does the distribution of one variable depend on the value of the other variable?”.</p>
+<p>Note that association does not imply causation. Just because two variables are associated it does not mean that one variable affects (causes) the other directly. It may be that the association between the two variables is due to each of their relationships with another variable. This seems to be the case for the Berkeley admissions data. We will consider 2-way contingency tables - where subjects are classified according to 2 categorical variables - and 3-way contingency table - where they are classified according to 3 categorical variables.</p>
+<p>We return to the Berkeley admissions data. We have already seen the 2-way contingency table in Figure <a href="contingency.html#fig:berk2way">7.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:berk2way"></span>
+<img src="images/berk_2way.png" alt="2-way contingency table for the Berkeley admissions data." width="50%" />
+<p class="caption">
+Figure 7.1: 2-way contingency table for the Berkeley admissions data.
+</p>
+</div>
+<p>This is a 2 <span class="math inline">\(\times\)</span> 2 (or 2 by 2), contingency table: there are 2 row categories (<span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span>) and 2 column categories (<span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span>). The 4 squares in the middle of the table are called the <strong>cells</strong>. The sums of the numbers in the cells across the rows are called the <strong>row totals</strong>. For these data the row totals 2691 and 1835. Similarly, the <strong>column totals</strong> are 1755 and 2771.</p>
+<p>These Berkeley admissions data also contain the department to which the applicants applied. We include this information to extend the 2-way contingency table in Figure <a href="#tab:2way"><strong>??</strong></a> to produce the 3-way contingency table in Figure <a href="contingency.html#fig:berk3way">7.2</a>. This is a 2 <span class="math inline">\(\times\)</span> 2 <span class="math inline">\(\times\)</span> 6 contingency table.</p>
+<div class="figure" style="text-align: center"><span id="fig:berk3way"></span>
+<img src="images/berk_3way.png" alt="3-way contingency table for the Berkeley admissions data." width="50%" />
+<p class="caption">
+Figure 7.2: 3-way contingency table for the Berkeley admissions data.
+</p>
+</div>
+<p>In Chapter <a href="probability.html#probability">3</a> we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley <strong>in general</strong>. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section <a href="contingency.html#way2">7.1</a>. We also wish to consider how the department to which the applicant applies affects things. We do this in section <a href="contingency.html#way3">7.2</a>. We will see that when there are more than two variables there are several ways to study the association between them.</p>
 <div id="way2" class="section level2">
 <h2><span class="header-section-number">7.1</span> 2-way contingency tables</h2>
-<div id="comparing-probabilities" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Comparing probabilities</h3>
-<p>Note that in Ross, S. (2010) A First Course in Probability the odds ratio of an event <span class="math inline">\(A\)</span> is defined (incorrectly) as <span class="math inline">\(P(A) / (1 - P(A))\)</span>. This is a ratio of probabilities. The conventional use of the term <strong>odds ratio</strong> is for a ratio of odds.</p>
+<p>We analyse the data in Figure <a href="contingency.html#fig:berk2way">7.1</a>. We will consider two questions.</p>
+<p><strong>Question 1: independence</strong>. Are the random variables outcome and sex independent?</p>
+<p><strong>Question 2: comparing probabilities</strong>. Is the probability of acceptance equal for males and females?</p>
+<p>These questions are very similar, but there is a subtle distinction between them. Question 1 treats both outcome and sex as random variables. In Question 2 we condition on the sex of the applicant and compare the probabilities of acceptance that we obtain in each case.</p>
+<p>We will see that the calculations performed to answer Question 1 are the same as those performed to answer Question 2. Therefore, you may wonder why we bother to make this distinction. The reason is that there are situations where it is not appropriate to treat both variables as random variables. There are contingency tables where some of the totals are are fixed in advance before the data are collected. For example, it may be that the row totals are known in advance. In the current context, this would mean that Berkeley decided in advance to consider exactly 2691 applications from males and 1835 applications from females. In that event we cannot treat sex as a random variable, because the numbers of males and females is not random. This is clearly not what would have happened.</p>
+<p>Nevertheless, we consider both questions because there are examples where totals are fixed. An example is a case-control study, in which potential risk factors for a disease are studied by looking for differences in characteristics between people who have the disease, the cases, and those who do not, the controls. We return to this in Section <a href="contingency.html#compprob">7.1.2</a></p>
+<div id="indep" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Independence</h3>
+<p><strong>Question 1: independence</strong>. Are the random variables outcome and sex independent?</p>
+<p>In the Berkeley example we have two categorical random variables; sex (2 levels: <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span>) and outcome (2 levels: <span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span>). We wish to examine whether the categorical random variables sex (rows of the table) and outcome (columns of the table) are independent. To do this we compare the observed frequencies with the frequencies we expect if the random variables sex and outcome are independent.</p>
+<p>How can we estimate the expected frequencies? If the random variables sex and outcome are independent then
+<span class="math display">\[ P(M, A) = P(M)P(A), \quad P(F, A)=P(F)P(A), \]</span>
+<span class="math display">\[ P(M, R) = P(M)P(R), \quad P(F, R)=P(F)P(R).  \]</span></p>
+<p>To get the expected frequencies we multiply these probabilities by 4526. We do not know these probabilities. Therefore, we estimate them using proportions in the observed data:
+<span class="math display">\[ \widehat{P}(M)=\frac{2691}{4526}, \,\, \widehat{P}(F)=\frac{1835}{4526}, \,\,
+\widehat{P}(A)=\frac{1755}{4526}, \,\, \widehat{P}(R)=\frac{2771}{4526}.  \]</span></p>
+<p>Therefore, the expected frequency for sex=<span class="math inline">\(M\)</span> and outcome=<span class="math inline">\(A\)</span> is estimated as
+<span class="math display">\[ \frac{2691}{4526} \times \frac{1755}{4526} \times 4526 = \frac{2691 \times 1755}{4526} = 1,043.46. \]</span></p>
+<p>The other expected frequencies are estimated similarly to give Figure <a href="contingency.html#fig:berkoe">7.3</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkoe"></span>
+<img src="images/berk_2way_oe.png" alt="Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome." width="50%" />
+<p class="caption">
+Figure 7.3: Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome.
+</p>
+</div>
+<p>Note that the row totals of the estimated expected frequencies are equal to the observed row totals, and similarly for the column totals. In other words the estimated expected frequencies preserve the row and column totals.</p>
+<p>We can see that more males are accepted than expected (1,198 accepted compared to the 1,043.5 expected) and fewer females are accepted than expected (557 accepted compared to the 711.5 expected). The fact that the observed frequencies are different from the estimated expected frequencies does not mean that sex and outcome are dependent. However, if the observed and estimated expected frequencies are very different then we might doubt that sex and outcome are independent.</p>
+<p><strong>Notation </strong></p>
+<p>We define some general notation for use with an <span class="math inline">\(I \times J\)</span> contingency tables. Let</p>
+<ul>
+<li><span class="math inline">\(X\)</span> be the random variable on the rows of the table. (<span class="math inline">\(X=1,2,\ldots, I-1\)</span> or <span class="math inline">\(I\)</span>).</li>
+<li><span class="math inline">\(Y\)</span> be the random variable on the columns of the table. (<span class="math inline">\(Y=1,2,\ldots, J-1\)</span> or <span class="math inline">\(J\)</span>).</li>
+<li><span class="math inline">\(n_{ij}\)</span> be the observed frequency for the event <span class="math inline">\(\{X=i\)</span> and <span class="math inline">\(Y=j\}\)</span>.</li>
+<li><span class="math inline">\(n_{i+}=\displaystyle\sum_{j=1}^J n_{ij}\)</span>, the sum of the frequencies in row <span class="math inline">\(i\)</span>.</li>
+<li><span class="math inline">\(n_{+j}=\displaystyle\sum_{i=1}^I n_{ij}\)</span>, the sum of the frequencies in column <span class="math inline">\(j\)</span>.</li>
+<li><span class="math inline">\(n\)</span> be the sample size.</li>
+</ul>
+<p>Figure <a href="contingency.html#fig:notation">7.4</a> illustrates this notation.</p>
+<div class="figure" style="text-align: center"><span id="fig:notation"></span>
+<img src="images/ct_notation.png" alt="Notation for a 2-way contingency table." width="75%" />
+<p class="caption">
+Figure 7.4: Notation for a 2-way contingency table.
+</p>
+</div>
+<p><strong>Calculating estimated expected frequencies under independence</strong></p>
+<p>For <span class="math inline">\(i=1,\ldots,I\)</span> and <span class="math inline">\(j=1,\ldots,J\)</span> the observed frequency <span class="math inline">\(n_{ij}\)</span> is the sample value of a random variable <span class="math inline">\(N_{ij}\)</span> with expected value <span class="math inline">\(\mu_{ij}\)</span>.</p>
+<p>Let
+<span class="math display">\[ p_{ij} = P(X=i,  Y=j) \]</span>
+and
+<span class="math display">\[ p_{i+}=\displaystyle\sum_{j=1}^J p_{ij}=P(X=i) \quad \mbox{and} \quad p_{+j}=\displaystyle\sum_{i=1}^I p_{ij}=P(Y=j). \]</span></p>
+<p><span class="math display">\[ p_{i+} \mbox{ is the probability of being in row }i \]</span></p>
+<p><span class="math display">\[ p_{+j} \mbox{ is the probability of being in column }j \]</span></p>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent then</p>
+<p><span class="math display">\[ p_{ij} = P(X=i,  Y=j) = P(X=i)\,P(Y=j) = p_{i+}\,p_{+j}. \]</span></p>
+<p>Therefore the expected frequency for the <span class="math inline">\((i,j)\)</span>th cell in the table is given by</p>
+<p><span class="math display">\[ \mu_{ij} = n\,p_{ij} = n\,p_{i+}\,p_{+j}. \]</span></p>
+<p>We estimate <span class="math inline">\(p_{i+}\)</span> and <span class="math inline">\(p_{+j}\)</span> using</p>
+<p><span class="math display">\[ \hat{p}_{i+} = \frac{n_{i+}}{n}, \quad \mbox{and} \quad \hat{p}_{+j} = \frac{n_{+j}}{n}, \]</span></p>
+<p>to give the estimated expected frequency</p>
+<p><span class="math display">\[ \hat{\mu}_{ij} = n\,\hat{p}_{i+}\,\hat{p}_{+j} = n\,\frac{n_{i+}}{n}\,\frac{n_{+j}}{n} = \frac{n_{i+}\,n_{+j}}{n}. \]</span></p>
+<p><strong>Residuals</strong></p>
+<p>To help us compare the observed and estimated expected frequencies we can use residuals. We define, for <span class="math inline">\(i=1,\ldots,I,\,j=1,\ldots,J\)</span>, (estimated) residuals:
+<span class="math display">\[ r_{ij} = n_{ij}-\hat{\mu}_{ij}. \]</span>
+However, the residuals will tend to be larger for cells with larger estimated expected frequencies. Instead we can use <strong>Pearson residuals</strong>
+<span class="math display">\[ r^P_{ij} = \frac{n_{ij}-\hat{\mu}_{ij}}{\sqrt{\hat{\mu}_{ij}}}, \]</span>
+or <strong>standardised Pearson residuals</strong>
+<span class="math display">\[ r^{S}_{ij} = \frac{n_{ij}-\hat{\mu}_{ij}}{\sqrt{\hat{\mu}_{ij}\,
+\left(1-\hat{p}_{i+}\right)\,\left(1-\hat{p}_{+j}\right)}}. \]</span></p>
+<p><strong>Example calculation of residuals: for cell (1,1)</strong></p>
+<p><span class="math display">\[ \hat{p}_{1+} = \frac{2691}{4526} = 0.59, \qquad \hat{p}_{+1}=\frac{1755}{4526} = 0.39. \]</span></p>
+<p><span class="math display">\[ \hat{\mu}_{11} = \frac{n_{1+}\,n_{+1}}{n} = \frac{2691 \times 1755}{4526} = 1043.46. \]</span></p>
+<p><span class="math display">\[ r_{11} = n_{11}-\hat{\mu}_{11} = 1198 - 1043.46 = 154.54. \]</span></p>
+<p><span class="math display">\[ r_{11}^P = \frac{r_{11}}{\sqrt{\hat{\mu}_{11}}} = \frac{154.54}{\sqrt{1043.46}} = 4.78. \]</span></p>
+<p><span class="math display">\[ r_{11}^S = \frac{r_{11}^P}{\sqrt{(1-\hat{p}_{1+})\,(1-\hat{p}_{+1})}} 
+= \frac{4.78}{\sqrt{\left(1-\displaystyle\frac{2691}{4526}\right)\,\left(1-\displaystyle\frac{1755}{4526}\right)}}=9.60. \]</span></p>
+<p>We have found that the observed frequencies are different to those expected if outcome and sex are independent, producing non-zero residuals. Even if outcome and sex <strong>are</strong> independent it is very unlikely that the residuals will be exactly zero. The question is whether these residuals are so large to suggest that outcome and sex are not independent. To assess this we need to know what kind of residuals tend to occur when outcome and sex are independent. If residuals that are as large or larger then the ones that we have observed are unlikely to occur then it suggests that outcome and sex are not independent.</p>
+<p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, and if the expected frequencies are large, each Pearson residual, and each standardised Pearson residual, has approximately a normal distribution with mean 0. In addition the standardised Pearson residuals have an approximate variance of 1. So, <strong>if these assumptions are true</strong>, the standardised Pearson residuals are approximately N(0,1). Owing to the properties of the N(0,1) distribution, most (approximately 95%) of the residuals should lie in the range <span class="math inline">\((-2, 2)\)</span>. The presence of residuals that have a large magnitude would be surprising and may suggest that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not independent.</p>
+<p>The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure <a href="contingency.html#fig:berkres">7.5</a></p>
+<div class="figure" style="text-align: center"><span id="fig:berkres"></span>
+<img src="images/berkresnew2.png" alt="Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table." width="80%" />
+<p class="caption">
+Figure 7.5: Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table.
+</p>
+</div>
+<p>The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex. This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.</p>
+<p>Notice that the residuals are equal in magnitude - so really there is only one residual. The row sums and the column sums of the residuals are equal to zero because the estimated expected frequencies preserve the row and column totals. The residuals have this property for all <span class="math inline">\(I \times J\)</span> contingency tables. In the <span class="math inline">\(2 \times 2\)</span> case this means that only 1 of the estimated expected frequencies is free to vary, in the sense that it we calculate one of the estimated expected frequencies then the values of the other 3 estimated expected frequencies follow directly from the fact that the residuals sum to 0 across the rows and down the columns. We say that there is only 1 degree of freedom. This is why, if we perform an hypothesis like the one outlined below, the test statistic is related to the distribution of a chi-squared distribution with 1 degree of freedom.</p>
+<p>Things are not so simple for standardised Pearson residuals, but it is true that the sums of the standardised Pearson residuals over a variable will be equal to zero if that variable has two levels. In this <span class="math inline">\(2 \times 2\)</span> case both the row sums and column sums of the standardised Pearson residuals are equal to zero.</p>
+<p>Now we assess whether outcome and sex are independent in a more formal way, using an hypothesis test.</p>
+<p><strong>A brief outline of hypothesis testing in this case</strong></p>
+<p>General idea:</p>
+<ul>
+<li>assume that sex and outcome are independent (<strong>null hypothesis</strong> <span class="math inline">\(H_0\)</span>);</li>
+<li>calculate the expected frequencies assuming that sex and income are independent;</li>
+<li>compare the observed frequencies with the expected frequencies;</li>
+<li>assess whether the observed and expected counts are so different that they suggest that sex and outcome are not independent. Above we used standardised residuals to help us assess this.</li>
+</ul>
+<p>This is an outline of an <strong>hypothesis test</strong>. You will see that the test is based on
+<span class="math display">\[ X^2 = \sum_{i,j} \left(r_{ij}^P\right)^2 = \sum_{i,j} \frac{\left(n_{ij}-\hat{\mu}_{ij}\right)^2}{\hat{\mu}_{ij}}, \]</span>
+which combines the Pearson residuals into a single value.</p>
+<p>It can be shown that if the null hypothesis <span class="math inline">\(H_0\)</span> is true (and the expected
+frequencies are sufficiently large) then, before we have observed the data, the
+random variable <span class="math inline">\(X^2\)</span> has (approximately) a chi-squared distribution with 1 degree of freedom, denoted <span class="math inline">\(\chi^2_1\)</span>.</p>
+<p>To demonstrate that this is the case we use simulation. We simulate 1000 2 <span class="math inline">\(\times\)</span> 2 tables of data, like those in Figure <a href="contingency.html#fig:berk2way">7.1</a> except that the data have been simulated assuming that outcome and sex are independent. Figure <a href="contingency.html#fig:berksim">7.6</a> is a histogram of the resulting 1000 values of the <span class="math inline">\(X^2\)</span> statistic. Also shown is the p.d.f. of a <span class="math inline">\(\chi^2_1\)</span> random variable.</p>
+<div class="figure" style="text-align: center"><span id="fig:berksim"></span>
+<img src="images/berk_sim.png" alt="Histogram of the $X^2$ statistic values from 1000 simulated 2 $	imes$ 2 contingency tables, where the row and column variables are independent." width="80%" />
+<p class="caption">
+Figure 7.6: Histogram of the <span class="math inline">\(X^2\)</span> statistic values from 1000 simulated 2 $ imes$ 2 contingency tables, where the row and column variables are independent.
+</p>
+</div>
+<p>We can see that values of <span class="math inline">\(X^2\)</span> above 4 are rare. It can be shown that, under <span class="math inline">\(H_0\)</span> a value above 3.84 will only occur 5% of the time. The value of <span class="math inline">\(X^2\)</span> from the <strong>real</strong> data is 92.21. Clearly a value as large as this is very unlikely to occur if <span class="math inline">\(H_0\)</span> is true. In fact, the probability (a <span class="math inline">\(p\)</span>-value) of observing a value of <span class="math inline">\(X^2\)</span> greater than 92.21 is less than <span class="math inline">\(2.2 \times 10^{-16}\)</span>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data we observe if <span class="math inline">\(H_0\)</span> is true. This very small <span class="math inline">\(p\)</span>-value suggests that <span class="math inline">\(H_0\)</span> is not true, so we would reject <span class="math inline">\(H_0\)</span>.</p>
+<p>It is not a coincidence that the square root of the <span class="math inline">\(X^2\)</span> statistic, <span class="math inline">\(\sqrt{92.21}\)</span>, is equal to <span class="math inline">\(9.60\)</span>, the magnitude of the standardised Pearson residual. In the <span class="math inline">\(2 \times 2\)</span> case assessing the magnitude of the standard Pearson residuals is equivalent to performing the hypothesis test based on the <span class="math inline">\(X^2\)</span> statistic.</p>
+<p>Now suppose that the real data had given a value of 0.45, for example. The histogram suggests that under <span class="math inline">\(H_0\)</span> a value as large as this is quite likely to occur (in fact 0.45 is the median of the <span class="math inline">\(\chi^2_1\)</span> distribution) so we would not reject <span class="math inline">\(H_0\)</span>.</p>
+</div>
+<div id="compprob" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> Comparing probabilities</h3>
+<p><strong>Question 2: comparing probabilities</strong>. Is the probability of acceptance equal for males and females?</p>
+<p>Now suppose that Berkeley used method 3 to collect the data. If this is the case we cannot estimate <span class="math inline">\(P(M)\)</span> (or <span class="math inline">\(P(F)\)</span>), or <strong>joint</strong> probabilities such as <span class="math inline">\(P(M, A)\)</span>. It is not meaningful to ask whether sex and outcome are independent because sex is not a random variable; the proportions of males and females have been fixed in advance by Berkeley.</p>
+<p>However, it <strong>meaningful</strong> to look at the conditional distribution of the random variable outcome for each sex. In other words, is the probability of acceptance equal for males and females? In section <a href="contingency.html#indep">7.1.1</a> we treated the random variables outcome and sex symmetrically, that is, on an equal basis. Now we treat outcome as a <strong>response</strong> variable and sex as an <strong>explanatory</strong> variable. We examine how the distribution of the response variable outcome depends on the value of the explanatory variable sex. In this example it makes sense to do this: we can imagine that sex could affect the outcome; not the other way round.</p>
+<p>Therefore, we have to change slightly the question we ask. Instead of asking whether sex and outcome are independent, we ask whether the probability of acceptance is the same for males and for females. In other words is
+<span class="math display">\[ P(A~|~M) = P(A~|~F) = P(A)\,? \]</span></p>
+<p>We estimate these probabilities:
+<span class="math display">\[ \hat{P}(A~|~M) = \frac{1198}{2691} = 0.445, \quad \hat{P}(A~|~F) =  \frac{557}{1835} = 0.304, \quad \hat{P}(A) =  \frac{1755}{4526}= 0.388. \]</span></p>
+<p>These estimates come from the <strong>row proportions</strong> of the 2 <span class="math inline">\(\times\)</span> 2 contingency table. The row proportions give the the proportions of applicants who were accepted/rejected in a given row of the table, that is, for males and for females.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkrow"></span>
+<img src="images/berk_row.png" alt="Row proportions for the Berkeley 2 $\times$ 2 contingency table." width="25%" />
+<p class="caption">
+Figure 7.7: Row proportions for the Berkeley 2 <span class="math inline">\(\times\)</span> 2 contingency table.
+</p>
+</div>
+<p>The <strong>column proportions</strong> could also be calculated, but they are not meaningful
+if method 3 is used to collect the data. For example, the proportion of accepted applicants who are male depends on the number of male applicants and, if method 3 is used, this number is decided by Berkeley. Even if method 1 or method 2 was used it makes more sense to look at row proportions, which shows how the response (outcome) depends on the explanatory variable (sex).</p>
+<p>It is true that
+<span class="math display">\[ \hat{P}(A~|~M) &gt; \hat{P}(A~|~F). \]</span>
+However, is <span class="math inline">\(\hat{P}(A~|~M)\)</span> so much greater than <span class="math inline">\(\hat{P}(A~|~F)\)</span> to suggest that <span class="math inline">\(P(A~|~M) &gt; P(A~|~F)\)</span>? To answer this question we compare the frequencies we expect if <span class="math inline">\(P(A~|~M) = P(A~|~F)\)</span> with the observed frequencies. What are the expected frequencies if <span class="math inline">\(P(A~|~M)=P(A~|~F)=P(A)\)</span>?</p>
+<p>Consider the 2691 males. The expected frequency for accepted applicants is <span class="math inline">\(P(A) \times 2691\)</span> and for rejected applicants is <span class="math inline">\(P(R) \times 2691\)</span>. Similarly, for the 1835 females the estimated expected frequencies are <span class="math inline">\(P(A) \times 1835\)</span> and <span class="math inline">\(P(R) \times 1835\)</span> respectively. We do not know <span class="math inline">\(P(A)\)</span>, but we can estimate it using
+<span class="math display">\[ \hat{P}(A) = \frac{1755}{4526}. \]</span>
+Then, if <span class="math inline">\(P(A~|~M)=P(A~|~F)=P(A)\)</span>, the estimated expected frequency for sex=<span class="math inline">\(M\)</span> and outcome=<span class="math inline">\(A\)</span> is
+<span class="math display">\[ \hat{P}(A) \times 2691 = \frac{1755}{4526} \times 2691 = 1043.46. \]</span>
+This is exactly the same estimated expected frequency as in question 1. The estimated expected frequencies (and the residuals and standardised Pearson residuals) under the assumption that <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span> are identical to those under the assumption that sex and outcome are independent. This makes sense: if outcome (<span class="math inline">\(Y\)</span>) is independent of sex (<span class="math inline">\(X\)</span>) then the probability distribution of outcome is the same for each sex. The calculations used to answer Question 1 are the same as the calculations used to answer Question 2.</p>
+</div>
+<div id="measures-of-association" class="section level3">
+<h3><span class="header-section-number">7.1.3</span> Measures of association</h3>
+<p>If we decide that the probability of acceptance depends on sex then we should also indicate <strong>how</strong> it depends on sex and <strong>how much</strong>. How can we compare the values of 2 probabilities: <span class="math inline">\(P(A~|~M)\)</span> and <span class="math inline">\(P(A~|~F)\)</span>?</p>
+<p><strong>The difference in the probability of acceptance</strong></p>
+<p><span class="math display">\[P(A~|~M)-P(A~|~F),\]</span>
+which is equal to 0 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the estimate is <span class="math inline">\(0.445 - 0.304 \approx 0.14\)</span>.</p>
+<p>A problem with using <span class="math inline">\(P(A~|~M)-P(A~|~F)\)</span> is that if <span class="math inline">\(P(A~|~M)\)</span> and <span class="math inline">\(P(A~|~F)\)</span> are very near 0 or very near 1, the value of <span class="math inline">\(P(A~|~M)-P(A~|~F)\)</span> will be small. For example, if</p>
+<ul>
+<li><span class="math inline">\(P(A~|~M)=0.01\)</span> and <span class="math inline">\(P(A~|~F)=0.001\)</span> then <span class="math inline">\(P(A~|~M)-P(A~|~F)=0.009\)</span>;</li>
+<li><span class="math inline">\(P(A~|~M)=0.41\)</span> and <span class="math inline">\(P(A~|~F)=0.401\)</span> then <span class="math inline">\(P(A~|~M)-P(A~|~F)=0.009\)</span>.</li>
+</ul>
+<p>Although the differences are the same, the former difference seems more important since <span class="math inline">\(P(A~|~M)\)</span> is 10 times greater than <span class="math inline">\(P(A~|F)\)</span>. The following alternatives, <strong>relative risk</strong> and <strong>odds ratio</strong>, do not have this problem.</p>
+<p><strong>The relative risk, a ratio of probabilities</strong></p>
+<p><span class="math display">\[\frac{P(A~|~M)}{P(A~|~F)} \qquad \left( \,\mbox{or} \qquad \frac{P(R~|~M)}{P(R~|~F)} \,\right)\]</span>
+which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the relative risk of acceptance is <span class="math inline">\(\hat{P}(A~|~M)/\hat{P}(A~|~F) \approx 1.47\)</span>. The relative risk of rejection is <span class="math inline">\(\hat{P}(R~|~M)/\hat{P}(R~|~F) \approx 0.79\)</span>.</p>
+<p>Note: we cannot infer <span class="math inline">\(\hat{P}(R~|~M)/\hat{P}(R~|~F)\)</span> from (only) the value of <span class="math inline">\(\hat{P}(A~|~M)/\hat{P}(A~|~F)\)</span>. Therefore, it matters whether we choose to work with conditional probabilities of <span class="math inline">\(A\)</span> or of <span class="math inline">\(R\)</span>.</p>
+<p><strong>The odds ratio, a ratio of odds</strong></p>
+<p><span class="math display">\[\frac{P(A~|~M)}{1-P(A~|~M)}\,\,\Bigg/\,\,\frac{P(A~|~F)}{1-P(A~|~F)},\]</span>
+which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the estimate is <span class="math inline">\(\approx\)</span> 1.84.</p>
+<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\mbox{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\mbox{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\mbox{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">7.8</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:odds"></span>
+<img src="images/odds.png" alt="The value of the odds of an event for different probabilities of that event." width="60%" />
+<p class="caption">
+Figure 7.8: The value of the odds of an event for different probabilities of that event.
+</p>
+</div>
+<p>[In the book Ross, S. (2010) A First Course in Probability, the odds ratio of an event <span class="math inline">\(B\)</span> is defined (incorrectly in my view) as <span class="math inline">\(P(B) / (1 - P(B))\)</span>. This is a ratio of probabilities. The conventional use of the term odds ratio is for a ratio of odds.]</p>
+<p>An odds ratio tells us how much greater the odds of an event are in one group compared to another group. The estimated odds of <span class="math inline">\(A\)</span> for <span class="math inline">\(M\)</span> are
+<span class="math inline">\(\hat{P}(A~|~M)/[1-\hat{P}(A~|~M)] \approx 0.802.\)</span> The estimated odds of <span class="math inline">\(A\)</span> for <span class="math inline">\(F\)</span> are <span class="math inline">\(\hat{P}(A~|F)/[1-\hat{P}(A~|~F)] \approx 0.436.\)</span> Therefore, the odds ratio of acceptance, comparing <span class="math inline">\(M\)</span> to <span class="math inline">\(F\)</span>, is <span class="math inline">\(1.84 (\approx 0.802/0.436)\)</span>. The estimated odds of acceptance for males are approximately 2 times those for females.
+We could instead work with the conditional probabilities of the event <span class="math inline">\(R\)</span>, instead of the event <span class="math inline">\(A\)</span>. The estimated odds of <span class="math inline">\(R\)</span> for <span class="math inline">\(M\)</span> are <span class="math inline">\(\hat{P}(R~|~M)/[1-\hat{P}(R~|~M)] \approx 1.25 \,\,\,(=1/0.802).\)</span> The estimated odds of <span class="math inline">\(R\)</span> for <span class="math inline">\(F\)</span> are <span class="math inline">\(\hat{P}(R~|F)/[1-\hat{P}(R~|~F)] \approx 2.29 \,\,\,(=1/0.436).\)</span> When we change from considering <span class="math inline">\(A\)</span> to <span class="math inline">\(R\)</span>, the effect is to take the reciprocal of the odds. That is,</p>
+<p><span class="math display">\[ \frac{P(R \mid M)}{1 - P(R \mid M)} = \left[\frac{P(A \mid M)}{1 - P(A \mid M)}\right]^{-1} \quad \mbox{and} \quad \frac{P(R \mid F)}{1 - P(R \mid F)} = \left[\frac{P(A \mid F)}{1 - P(A \mid F)}\right]^{-1}. \]</span>
+Therefore, the estimated odds of <span class="math inline">\(R\)</span>, comparing males to females, is the reciprocal of the odds of <span class="math inline">\(A\)</span> comparing males to females. Since <span class="math inline">\(1/1.84 \approx 1/2\)</span>, we could say that the estimated odds of rejection for males are approximately a half of those for females.</p>
+<p>The main point is that, when estimating the odds ratio, it doesn’t matter whether we work with <span class="math inline">\(P(A~|~M)\)</span> and <span class="math inline">\(P(A~|~F)\)</span> or <span class="math inline">\(P(R~|~M)\)</span> and <span class="math inline">\(P(R~|~F)\)</span>, provided that we remember when we interpret the estimate of the odds.</p>
+<p><strong>Odds ratio and relative risk</strong></p>
+<p>If <span class="math inline">\(P(A~|~M)\)</span> and <span class="math inline">\(P(A~|~F)\)</span> are very small then the relative risk and the odds ratio have similar values (when a probability <span class="math inline">\(p\)</span> is close to <span class="math inline">\(0\)</span>, <span class="math inline">\(p/(1-p) \approx p\)</span>). In general, there are two more reasons to <strong>prefer the odds ratio</strong>.</p>
+<ul>
+<li><p>The value of the odds ratio does not change if we treat sex as the response variable instead of outcome. This is not true of the relative risk. It can be shown, using Bayes’ theorem, that
+<span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(A~|~M)}{1-P(A~|~M)}}{\displaystyle\frac{P(A~|~F)}{1-P(A~|~F)}} 
+\,\,\,=\,\,\, \frac{\displaystyle\frac{P(M~|~A)}{1-P(M~|~A)}}{\displaystyle\frac{P(M~|~R)}{1-P(M~|~R)}}, \]</span>
+that is, the odds ratio of acceptance, comparing males to females, is equal to the odds ratio of being male, comparing acceptance to rejection. With odds ratios it doesn’t matter which variable we treat as the response</p></li>
+<li><p>For some datasets it is not possible to estimate the relative risk. Consider the 2-way contingency table in Figure <a href="contingency.html#fig:casecontrol">7.9</a>.</p></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:casecontrol"></span>
+<img src="images/case_control.png" alt="Example data from a case-control study.  Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13." width="40%" />
+<p class="caption">
+Figure 7.9: Example data from a case-control study. Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.
+</p>
+</div>
+<p>These data comes from a very old case-control study, designed to investigate the link between smoking and lung cancer. The idea is to compare the smoking habits of people with lung cancer (the <strong>cases</strong>) and people without lung cancer, but who are otherwise similar to the cases (the <strong>controls</strong>). The people conducting the study decided to have equal number of cases and controls: 86 of each. That is, they fixed both column totals at 86. Therefore, this is <strong>not</strong> a random sample of people from the population: if we did sample people randomly from the population then we would expect to obtain far fewer people with lung cancer than people without lung cancer. Each person was asked whether they were a smoker or non-smoker.</p>
+<p>Let <span class="math inline">\(L\)</span> be the event that a person has lung cancer and let <span class="math inline">\(S\)</span> the event that a person is a smoker. We can estimate <span class="math inline">\(P(S \mid L)\)</span> and <span class="math inline">\(P(S \mid \mbox{not}L)\)</span>: <span class="math inline">\(\hat{P}(S \mid L) = 83/86 \approx 0.97\)</span> and <span class="math inline">\(\hat{P}(S \mid \mbox{not}L) = 83/86 \approx 0.84\)</span>. If we condition on <span class="math inline">\(L\)</span> or on <span class="math inline">\(\mbox{not}L\)</span> then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed. Both these estimates are high, because smoking was more prevalent in the 1950s, and <span class="math inline">\(\hat{P}(S \mid L) &gt; \hat{P}(S \mid \mbox{not}L)\)</span>, that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using
+<span class="math display">\[ \displaystyle\frac{\displaystyle\frac{\hat{P}(S \mid L)}{1-\hat{P}(S \mid L)}}{\displaystyle\frac{\hat{P}(S \mid \mbox{not}L)}{1-\hat{P}(S \mid \mbox{not}L)}}
+= \displaystyle\frac{\displaystyle\frac{83/86}{3/86}}{\displaystyle\frac{72/86}{14/86}}
+= \frac{83 \times 14}{72 \times 3} = 5.38. \]</span></p>
+<p>Can we estimate the relative risk? No we cannot. In this example, the relative risk of interest is <span class="math inline">\(P(L \mid S) / P(L \mid \mbox{not}S)\)</span>: we compare the probabilities of developing lung cancer for smokers and non-smokers. However, the way that these data have been sampled means that they provide no information about <span class="math inline">\(P(L)\)</span>, that is, the proportion of people <strong>in the population</strong> who have lung cancer. The proportion of people <strong>in the sample</strong> who have lung cancer has been fixed at <span class="math inline">\(1/2\)</span> by the people who designed the study, because they fixed the column totals. Similarly, we cannot use these data to estimate <span class="math inline">\(P(L \mid S)\)</span> or <span class="math inline">\(P(L \mid \mbox{not}S)\)</span>, the proportion of people with lung cancer will also be artificially high within the smoker and for non-smoker categories.</p>
+<p>However, <strong>can</strong> estimate the odds ratio that we would like, that is, the odds ratio of lung cancer, comparing smoker to non-smokers, because this is equal to the estimate of 5.38 that we calculated above, owing to</p>
+<p><span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}} 
+\,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \mbox{not}L)}{1-P(S \mid \mbox{not}L)}}. \]</span></p>
 </div>
 </div>
 <div id="way3" class="section level2">
