@@ -19,7 +19,7 @@ options(
 #)
 ```
 
-```{r, figsetup3, include=FALSE}
+```{r, figsetup7, include=FALSE}
 knitr::opts_chunk$set(
   fig.align = 'center',
   out.width = '75%'
@@ -35,7 +35,7 @@ include_cropped_graphics <- function(x) {
 
 # Contingency tables {#contingency}
 
-In this chapter, and the next chapter on linear regression, we explore the relationships between two, or more, variables. In this chapter we consider the situation where all variables are categorical.  In Chapter \ref(linreg) the main variable of interest is continuous. 
+In this chapter, and the next chapter on linear regression, we explore the relationships between two, or more, variables. In this chapter we consider the situation where all variables are categorical.  In Chapter \@ref(linreg) the main variable of interest is continuous. 
 
 Suppose that for each of a number of objects/people/experimental units we record the value of 2 of more categorical variables.  For each variable the categories must be mutually exclusive and exhaustive. For example, in the Berkeley admissions data for each applicant we record the sex (Male/Female) and the outcome of the application (Accept/Reject). We present these data in a **contingency table**, which summarises the number (**frequency** or **count**) of subjects falling into each of the possible categories defined by the categorical variables.  A **contingency** is an event that may occur a possibility.  A contingency table is a summary of the frequencies with which combinations of such events occur.
 
@@ -65,9 +65,9 @@ We analyse the data in Figure \@ref(fig:berk2way).  We will consider two questio
 
 These questions are very similar, but there is a subtle distinction between them.  Question 1 treats both outcome and sex as random variables.  In Question 2 we condition on the sex of the applicant and compare the probabilities of acceptance that we obtain in each case.  
 
-We will see that the calculations performed to answer Question 1 are the same as those performed to answer Question 2.  Therefore, you may wonder why we bother to make this distinction.  The reason is that there are situations where it is not appropriate to treat both variables as random variables.  There are contingency tables where some of the totals are are fixed in advance before the data are collected.  For example, it may be that the row totals are known in advance. In the current context, this would mean that Berkeley decided in advance to consider exactly 2691 applications from males and 1835 applications from females.  In that event we cannot treat sex as a random variable, because the numbers of males and females is not random.  This is clearly not what would have happened.  
+We will see that the calculations performed to answer Question 1 are the same as those performed to answer Question 2.  Therefore, you may wonder why we bother to make this distinction.  The reason is that there are situations where it is not appropriate to treat both variables as random variables.  There are contingency tables where some of the totals are are fixed in advance before the data are collected.  For example, it may be that the row totals are known in advance. In the current context, this would mean that Berkeley decided in advance to consider exactly 2691 applications from males and 1835 applications from females.  In that event we cannot treat sex as a random variable, because the numbers of males and females is not random.  
 
-Nevertheless, we consider both questions because there are examples where totals are fixed.  An example is a case-control study, in which potential risk factors for a disease are studied by looking for differences in characteristics between people who have the disease, the cases, and those who do not, the controls.  We return to this in Section \@ref(compprob)
+This is clearly not what would have happened in this example.  Nevertheless, we consider both questions because there are examples where totals are fixed.  An example is a case-control study, in which potential risk factors for a disease are studied by looking for differences in characteristics between people who have the disease, the cases, and those who do not, the controls.  We return to this in Section \@ref(measures).
 
 ### Independence {#indep}
 
@@ -80,8 +80,8 @@ How can we estimate the expected frequencies?  If the random variables sex and o
 \[ P(M, R) = P(M)P(R), \quad P(F, R)=P(F)P(R).  \]
 
 To get the expected frequencies we multiply these probabilities by 4526. We do not know these probabilities.  Therefore, we estimate them using proportions in the observed data:
-\[ \widehat{P}(M)=\frac{2691}{4526}, \,\, \widehat{P}(F)=\frac{1835}{4526}, \,\,
-\widehat{P}(A)=\frac{1755}{4526}, \,\, \widehat{P}(R)=\frac{2771}{4526}.  \]
+\[ \hat{P}(M)=\frac{2691}{4526}, \,\, \hat{P}(F)=\frac{1835}{4526}, \,\,
+\hat{P}(A)=\frac{1755}{4526}, \,\, \hat{P}(R)=\frac{2771}{4526}.  \]
 
 Therefore, the expected frequency for sex=$M$ and outcome=$A$ is estimated as
 \[ \frac{2691}{4526} \times \frac{1755}{4526} \times 4526 = \frac{2691 \times 1755}{4526} = 1,043.46. \]
@@ -152,7 +152,7 @@ or **standardised Pearson residuals**
 \[ r^{S}_{ij} = \frac{n_{ij}-\hat{\mu}_{ij}}{\sqrt{\hat{\mu}_{ij}\,
 \left(1-\hat{p}_{i+}\right)\,\left(1-\hat{p}_{+j}\right)}}. \]
 
-**Example calculation of residuals: for cell (1,1)**
+**Example calculation of residuals for cell (1,1)**
 
 \[ \hat{p}_{1+} = \frac{2691}{4526} = 0.59, \qquad \hat{p}_{+1}=\frac{1755}{4526} = 0.39. \]
 
@@ -169,13 +169,11 @@ We have found that the observed frequencies are different to those expected if o
 
 If $X$ and $Y$ are independent, and if the expected frequencies are large, each Pearson residual, and each standardised Pearson residual, has approximately a normal distribution with mean 0. In addition the standardised Pearson residuals have an approximate variance of 1. So, **if these assumptions are true**, the standardised Pearson residuals are approximately N(0,1).  Owing to the properties of the N(0,1) distribution, most (approximately 95\%) of the residuals should lie in the range $(-2, 2)$.  The presence of residuals that have a large magnitude would be surprising and may suggest that $X$ and $Y$ are not independent.
 
-The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure \@ref(fig:berkres)
+The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure \@ref(fig:berkres).  The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex.  This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.
 
 ```{r echo=FALSE, berkres, fig.show='hold', fig.cap='Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table.', out.width='80%'}
 include_cropped_graphics("images/berkresnew2.png")
 ```
-
-The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex.  This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.
 
 Notice that the residuals are equal in magnitude - so really there is only one residual.  The row sums and the column sums of the residuals are equal to zero because the estimated expected frequencies preserve the row and column totals.  The residuals have this property for all $I \times J$ contingency tables. In the $2 \times 2$ case this means that only 1 of the estimated expected frequencies is free to vary, in the sense that it we calculate one of the estimated expected frequencies then the values of the other 3 estimated expected frequencies follow directly from the fact that the residuals sum to 0 across the rows and down the columns.  We say that there is only 1 degree of freedom.  This is why, if we perform an hypothesis like the one outlined below, the test statistic is related to the distribution of a chi-squared distribution with 1 degree of freedom.
 
@@ -202,7 +200,7 @@ random variable $X^2$ has (approximately) a chi-squared distribution with 1 degr
 
 To demonstrate that this is the case we use simulation. We simulate 1000 2 $\times$ 2 tables of data, like those in Figure \@ref(fig:berk2way) except that the data have been simulated assuming that outcome and sex are independent.  Figure \@ref(fig:berksim) is a histogram of the resulting 1000 values of the $X^2$ statistic.  Also shown is the p.d.f. of a $\chi^2_1$ random variable.
 
-```{r echo=FALSE, berksim, fig.show='hold', fig.cap='Histogram of the $X^2$ statistic values from 1000 simulated 2 $\times$ 2 contingency tables, where the row and column variables are independent.', out.width='80%'}
+```{r echo=FALSE, berksim, fig.show='hold', fig.cap='Histogram of the $X^2$ statistic values from 1000 simulated 2 $\\times$ 2 contingency tables, where the row and column variables are independent.', out.width='80%'}
 include_cropped_graphics("images/berk_sim.png")
 ```
 
@@ -245,7 +243,7 @@ Then, if $P(A~|~M)=P(A~|~F)=P(A)$, the estimated expected frequency for sex=$M$ 
 \[ \hat{P}(A) \times 2691 = \frac{1755}{4526} \times 2691 = 1043.46. \]
 This is exactly the same estimated expected frequency as in question 1. The estimated expected frequencies (and the residuals and standardised Pearson residuals) under the assumption that $P(A~|~M)=P(A~|~F)$ are identical to those under the assumption that sex and outcome are independent.   This makes sense: if outcome ($Y$) is independent of sex ($X$) then the probability distribution of outcome is the same for each sex.  The calculations used to answer Question 1 are the same as the calculations used to answer Question 2. 
 
-### Measures of association
+### Measures of association {#measures}
 
 If we decide that the probability of acceptance depends on sex then we should also indicate **how** it depends on sex and **how much**.  How can we compare the values of 2 probabilities: $P(A~|~M)$ and $P(A~|~F)$?
 
@@ -292,7 +290,7 @@ The main point is that, when estimating the odds ratio, it doesn't matter whethe
 
 **Odds ratio and relative risk**
 
-If $P(A~|~M)$ and $P(A~|~F)$ are very small then the relative risk and the odds ratio have similar values (when a probability $p$ is close to $0$, $p/(1-p) \approx p$).  In general, there are two more reasons to **prefer the odds ratio**.
+There are two more reasons to **prefer the odds ratio**.
 
 * The value of the odds ratio does not change if we treat sex as the response variable instead of outcome.  This is not true of the relative risk.  It can be shown, using Bayes' theorem, that
 \[ \displaystyle\frac{\displaystyle\frac{P(A~|~M)}{1-P(A~|~M)}}{\displaystyle\frac{P(A~|~F)}{1-P(A~|~F)}} 
@@ -319,6 +317,8 @@ However, **can** estimate the odds ratio that we would like, that is, the odds r
 \[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}} 
 \,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \mbox{not}L)}{1-P(S \mid \mbox{not}L)}}. \]
 
+Finally, we note that in cases where the events of interest happen very rarely, that is, they have very small probabilities, then the relative risk and the odds ratio have similar values.  This is because when a probability $p$ is close to $0$, $p/(1-p) \approx p$.  Therefore, in studies of a rare disease an estimated odds ratio is often taken as an estimate of a relative risk.
+
 ## 3-way contingency tables {#way3}
 
 Figure \@ref(fig:berk3way) shows the 2 $\times$ 2 $\times$ 6 contingency table that results from classifying applicants according to 3 categorical variables: sex ($X$), outcome ($Y$) and department ($Z$). We now have a 2-way contingency table, like the one we analysed in Section \@ref(way2), in each of the 6 departments. 
@@ -329,11 +329,11 @@ include_cropped_graphics("images/berk_3way.png")
 
 In a 3-way contingency table there are many possible associations that we could examine.  We consider the following cases.
 
-**Mutual independence**. all 3 variables at once, that is, outcome, sex and department; 
+**Mutual independence**. We consider 3 variables at once, that is, outcome, sex and department.
 
-**Marginal independence**. 2 variables, ignoring the value of the third variable, that is, outcome and sex (we have already done this), outcome and department, sex and department;
+**Marginal independence**. We consider 2 variables, ignoring the value of the third variable, that is, outcome and sex (we have already done this), outcome and department, sex and department;
 
-**Conditional independence**. 2 variables separately for each value of the third variable, e.g. outcome and sex separately with each department.
+**Conditional independence**. We consider 2 variables separately for each value of the third variable, e.g. outcome and sex separately with each department.
 
 ### Mutual independence
 
