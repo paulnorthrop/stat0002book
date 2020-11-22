@@ -51,11 +51,7 @@ include_cropped_graphics("images/berk_2way.png")
 
 This is a 2 $\times$ 2 (or 2 by 2), contingency table: there are 2 row categories ($M$ and $F$) and 2 column categories ($A$ and $R$).  The 4 squares in the middle of the table are called the **cells**.  The sums of the numbers in the cells across the rows are called the **row totals**.  For these data the row totals 2691 and 1835.  Similarly, the **column totals** are 1755 and 2771. 
 
-These Berkeley admissions data also contain the department to which the applicants applied.  We include this information to extend the 2-way contingency table in Figure \@ref(tab:2way) to produce the 3-way contingency table in Figure \@ref(fig:berk3way). This is a 2 $\times$ 2 $\times$ 6 contingency table.
-
-```{r echo=FALSE, berk3way, fig.show='hold', fig.cap='3-way contingency table for the Berkeley admissions data.', out.width='50%'}
-include_cropped_graphics("images/berk_3way.png")
-```
+These Berkeley admissions data also contain the department to which the applicants applied.  We include this information to extend the 2-way contingency table in Figure \@ref(fig:berk2way) to produce the 3-way contingency table in Figure \@ref(fig:berk3way) at the start of Section \@ref(way3). 
 
 In Chapter \@ref(probability) we defined the population of interest to be graduate applications to Berkeley in 1973.  We calculated, for example, the probability that an applicant chosen at random from this population is accepted.  Now we will be more adventurous.  We are interested in graduate applications to Berkeley **in general**.  We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973.  The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities.  We wish to examine whether sex and the outcome of the application are associated.  We do this in Section \@ref(way2).  We also wish to consider how the department to which the applicant applies affects things. We do this in section \@ref(way3).  We will see that when there are more than two variables there are several ways to study the association between them.
 
@@ -305,7 +301,7 @@ that is, the odds ratio of acceptance, comparing males to females, is equal to t
 
 * For some datasets it is not possible to estimate the relative risk.  Consider the 2-way contingency table in Figure \@ref(fig:casecontrol).  
 
-```{r echo=FALSE, casecontrol, fig.show='hold', fig.cap='Example data from a case-control study.  Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.', out.width='40%'}
+```{r echo=FALSE, casecontrol, fig.show='hold', fig.cap='Example data from a case-control study.  Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.', out.width='50%'}
 include_cropped_graphics("images/case_control.png")
 ```
 
@@ -323,5 +319,118 @@ However, **can** estimate the odds ratio that we would like, that is, the odds r
 \[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}} 
 \,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \mbox{not}L)}{1-P(S \mid \mbox{not}L)}}. \]
 
-
 ## 3-way contingency tables {#way3}
+
+Figure \@ref(fig:berk3way) shows the 2 $\times$ 2 $\times$ 6 contingency table that results from classifying applicants according to 3 categorical variables: sex ($X$), outcome ($Y$) and department ($Z$). We now have a 2-way contingency table, like the one we analysed in Section \@ref(way2), in each of the 6 departments. 
+
+```{r echo=FALSE, berk3way, fig.show='hold', fig.cap='3-way contingency table for the Berkeley admissions data.', out.width='50%'}
+include_cropped_graphics("images/berk_3way.png")
+```
+
+In a 3-way contingency table there are many possible associations that we could examine.  We consider the following cases.
+
+**Mutual independence**. all 3 variables at once, that is, outcome, sex and department; 
+
+**Marginal independence**. 2 variables, ignoring the value of the third variable, that is, outcome and sex (we have already done this), outcome and department, sex and department;
+
+**Conditional independence**. 2 variables separately for each value of the third variable, e.g. outcome and sex separately with each department.
+
+### Mutual independence
+
+We examine whether the categorical random variables  sex, outcome and department are mutually independent, that is, there are no relationships between these three variables.  We have already seen in Section \@ref(way2) that the data suggest that outcome and sex are not independent.  If outcome and sex are not independent then outcome, sex and department cannot be mutually independent.  
+
+We consider how to estimate expected frequencies under the assumption that outcome, sex and department are mutually independent.  (We will not actually calculate them though.) The approach we use is the same one we used for the 2-way table: we estimate the expected frequencies under the assumption that these variables are mutually independent.
+
+How can we estimate these expected frequencies?
+
+We take sex=$M$, outcome=$A$ and department=$D_1$ as an example.  If sex, outcome and department are mutually independent then
+\[ P(M, A, D_1) = P(M)\,P(A)\,P(D_1). \]
+We do not know $P(M), P(A)$ or $P(D_1)$, so we estimate them using the proportions in the observed data:
+\[ \hat{P}(M)=\frac{2691}{4526}, \quad \hat{P}(A)=\frac{1755}{4526}, \quad \hat{P}(D_1)=\frac{933}{4526}. \]
+Therefore, the expected frequency for sex=$M$, outcome=$A$ and department=$D_1$ is estimated by
+\[ \frac{2691}{4526} \times \frac{1755}{4526} \times \frac{933}{4526} \times 4526 
+= \frac{2691 \times 1755 \times 933}{4526^2} = 215.1. \]
+The other expected frequencies are estimated similarly.  Extending our previous notation in an obvious way we have 
+\[ \hat{\mu}_{ijk} = n\,\hat{p}_{i++}\,\hat{p}_{+j+}\,\hat{p}_{++k} = \frac{n_{i++}\,n_{+j+}\,n_{++k}}{n^2}, \]
+where
+\[ \hat{p}_{i++} = \frac{n_{i++}}{n}, \qquad \hat{p}_{+j+} = \frac{n_{+j+}}{n}, \qquad 
+\hat{p}_{++k} = \frac{n_{++k}}{n}. \]
+
+### Marginal independence
+
+We produce **marginal** 2-way contingency tables by ignoring one of variables, and examine the association between the remaining 2 variables. We have already looked at the association between outcome and sex.
+
+Firstly we look at the association between sex and department. This gives a 2 $\times$ 6 contingency table.  The observed and estimated expected frequencies and the standardised Pearson residuals are given in Figures \@ref(fig:berkmarg1) and \@ref(fig:berkmarg2).
+
+```{r echo=FALSE, berkmarg1, fig.show='hold', fig.cap='Observed and estimated expected values for sex and department.', out.width='65%'}
+include_cropped_graphics("images/berkmarg1.png")
+```
+
+```{r echo=FALSE, berkmarg2, fig.show='hold', fig.cap='Standardised Pearson residuals for sex and department.', out.width='50%'}
+include_cropped_graphics("images/berkmarg2.png")
+```
+
+Note: the
+
+* estimated expected frequencies preserve the row and column totals;
+* residuals sum to zero across rows and down columns.
+* standardised Pearson residuals sum to zero down columns.
+
+We can see that many more males apply to departments 1 and 2, and many more females apply to departments 3 and 5 than we could expect if sex and department are independent. We can also see this from the estimated conditional probabilities in Figure \@ref(fig:berkmarg3).
+
+```{r echo=FALSE, berkmarg3, fig.show='hold', fig.cap='Estimated conditional probabilities of department given sex.', out.width='85%'}
+include_cropped_graphics("images/berkmarg3.png")
+```
+
+There does appear to be an association between sex and department.  It seems that males prefer to apply to department 1 and 2 while females prefer to apply to departments 3 and 5.
+
+Is there association between department and outcome? It turns out that department and outcome do appear to be associated.  In particular the probability of acceptance in departments 1 and 2 seem to be much greater than the probability of acceptance in department 3 and 5, as we can see from the estimates in Figure \@ref(fig:berkmarg4).
+
+```{r echo=FALSE, berkmarg4, fig.show='hold', fig.cap='Estimated conditional probabilities of acceptance given department.', out.width='75%'}
+include_cropped_graphics("images/berkmarg4.png")
+```
+
+### Conditional independence
+
+Now we look at the association between sex and outcome separately within each department.  We simply analyse each of the six 2 $\times$ 2 tables in Figure \@ref(fig:berk3way).  In other words we **condition** on the value of department, for example, department=1, ignoring the data from other departments. Then we examine whether sex and outcome are conditionally independent given that department=1.
+We do this for each department in turn.
+
+Since it is likely that decisions to accept or reject a candidate are taken within each department, it makes sense to ask whether there is any sexual discrimination within each department. Figure \@ref(fig:berkcond1) summarises the observed frequencies and estimated expected frequencies under the assumption that outcome is independent of sex and the standardised Pearson residuals.
+
+```{r echo=FALSE, berkcond1, fig.show='hold', fig.cap='Left: 2 $\\times$ 2 contingency table for department 1.  Right: standardised residuals.', out.width='75%'}
+include_cropped_graphics("images/berkcond1.png")
+```
+
+The size of the standardised Pearson residual suggests that outcome and sex are not independent. In fact more females are accepted to department 1 than would be expected if outcome and sex are independent. We can also see this from the estimated conditional probabilities in Figure \@ref(fig:berkcond2).
+
+```{r echo=FALSE, berkcond2, fig.show='hold', fig.cap='Estimated conditional probabilities of acceptance given sex and department.', out.width='75%'}
+include_cropped_graphics("images/berkcond2.png")
+```
+
+We leave the calculation of estimated expected frequencies and residuals for departments 2 to 6 as an exercise.  The Figure \@ref(fig:berkcond3) gives the standardised Pearson residuals for the $(M, A)$ cell.
+
+```{r echo=FALSE, berkcond3, fig.show='hold', fig.cap='Standardised Pearson residuals for the $(M, A)$ cell by department.', out.width='75%'}
+include_cropped_graphics("images/berkcond3.png")
+```
+
+A positive value indicates that more males were accepted than would be expected if outcome and sex are independent, whereas a negative value indicates that more females were accepted than would be expected.  In only one department, department 1, do the data seem inconsistent with outcome and sex being independent. In this department females seem to have a higher probability of acceptance. Note, this may not be a result of discrimination in favour of females: there may be other data that explain why this happens.
+
+### Confounding variables
+
+We have observed the following.
+
+* Analysis of the 2-way table of outcome and sex suggests that the probability of acceptance is greater for males than for females.
+* Analysis of the six 2-way tables of outcome and sex within each department suggests that in departments 2 to 6 outcome and sex are independent, and in department 1 females have a higher probability of acceptance.
+
+In other words, the association between outcome and sex is different in the marginal 2 $\times$ 2 table than in the six conditional 2 $\times$ 2 tables.
+
+Is there an explanation for this?  The data suggest that
+
+* department is dependent on sex: females tend to apply to different departments to males;
+* outcome is dependent on department: some departments have lower acceptances rates than others.
+
+The apparent association between sex and outcome seems actually to be a combined effect of (a) sex affecting department, and (b) department affecting outcome.  Sex does not seem to affect outcome directly. Females are more likely than males to apply to the departments into which it is more difficult to be accepted.
+
+The estimated association between sex and outcome depends on the value of the variable department.  It is not uncommon for the estimated association between two variables to change depending on the value of a third variable, a so-called **confounding** or **lurking** variable.  To confound means to confuse, surprise or mix up.  To lurk means to hide in the background, perhaps with sinister intent! In this example, department is the confounding variable. **Simpson's paradox** describes extreme cases of this, where the direction or nature of the estimated association changes or perhaps disappears. Misleading inferences could be produced if we are not aware of the effects of the confounding variable.
+
+The moral is that it can be dangerous to 'collapse' a 3-way contingency table down to a 2-way contingency table, by ignoring a variable.  If we move from a 3-way table to a 2-way table without analysing the 3-way table we may be throwing away important data.

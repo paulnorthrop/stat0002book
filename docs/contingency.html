@@ -215,7 +215,12 @@
 <li class="chapter" data-level="7.1.2" data-path="contingency.html"><a href="contingency.html#compprob"><i class="fa fa-check"></i><b>7.1.2</b> Comparing probabilities</a></li>
 <li class="chapter" data-level="7.1.3" data-path="contingency.html"><a href="contingency.html#measures-of-association"><i class="fa fa-check"></i><b>7.1.3</b> Measures of association</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a></li>
+<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="contingency.html"><a href="contingency.html#mutual-independence"><i class="fa fa-check"></i><b>7.2.1</b> Mutual independence</a></li>
+<li class="chapter" data-level="7.2.2" data-path="contingency.html"><a href="contingency.html#marginal-independence"><i class="fa fa-check"></i><b>7.2.2</b> Marginal independence</a></li>
+<li class="chapter" data-level="7.2.3" data-path="contingency.html"><a href="contingency.html#conditional-independence"><i class="fa fa-check"></i><b>7.2.3</b> Conditional independence</a></li>
+<li class="chapter" data-level="7.2.4" data-path="contingency.html"><a href="contingency.html#confounding-variables"><i class="fa fa-check"></i><b>7.2.4</b> Confounding variables</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a><ul>
 <li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a></li>
@@ -269,13 +274,7 @@ Figure 7.1: 2-way contingency table for the Berkeley admissions data.
 </p>
 </div>
 <p>This is a 2 <span class="math inline">\(\times\)</span> 2 (or 2 by 2), contingency table: there are 2 row categories (<span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span>) and 2 column categories (<span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span>). The 4 squares in the middle of the table are called the <strong>cells</strong>. The sums of the numbers in the cells across the rows are called the <strong>row totals</strong>. For these data the row totals 2691 and 1835. Similarly, the <strong>column totals</strong> are 1755 and 2771.</p>
-<p>These Berkeley admissions data also contain the department to which the applicants applied. We include this information to extend the 2-way contingency table in Figure <a href="#tab:2way"><strong>??</strong></a> to produce the 3-way contingency table in Figure <a href="contingency.html#fig:berk3way">7.2</a>. This is a 2 <span class="math inline">\(\times\)</span> 2 <span class="math inline">\(\times\)</span> 6 contingency table.</p>
-<div class="figure" style="text-align: center"><span id="fig:berk3way"></span>
-<img src="images/berk_3way.png" alt="3-way contingency table for the Berkeley admissions data." width="50%" />
-<p class="caption">
-Figure 7.2: 3-way contingency table for the Berkeley admissions data.
-</p>
-</div>
+<p>These Berkeley admissions data also contain the department to which the applicants applied. We include this information to extend the 2-way contingency table in Figure <a href="contingency.html#fig:berk2way">7.1</a> to produce the 3-way contingency table in Figure <a href="contingency.html#fig:berk3way">7.9</a> at the start of Section <a href="contingency.html#way3">7.2</a>.</p>
 <p>In Chapter <a href="probability.html#probability">3</a> we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley <strong>in general</strong>. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section <a href="contingency.html#way2">7.1</a>. We also wish to consider how the department to which the applicant applies affects things. We do this in section <a href="contingency.html#way3">7.2</a>. We will see that when there are more than two variables there are several ways to study the association between them.</p>
 <div id="way2" class="section level2">
 <h2><span class="header-section-number">7.1</span> 2-way contingency tables</h2>
@@ -297,11 +296,11 @@ Figure 7.2: 3-way contingency table for the Berkeley admissions data.
 \widehat{P}(A)=\frac{1755}{4526}, \,\, \widehat{P}(R)=\frac{2771}{4526}.  \]</span></p>
 <p>Therefore, the expected frequency for sex=<span class="math inline">\(M\)</span> and outcome=<span class="math inline">\(A\)</span> is estimated as
 <span class="math display">\[ \frac{2691}{4526} \times \frac{1755}{4526} \times 4526 = \frac{2691 \times 1755}{4526} = 1,043.46. \]</span></p>
-<p>The other expected frequencies are estimated similarly to give Figure <a href="contingency.html#fig:berkoe">7.3</a>.</p>
+<p>The other expected frequencies are estimated similarly to give Figure <a href="contingency.html#fig:berkoe">7.2</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:berkoe"></span>
 <img src="images/berk_2way_oe.png" alt="Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome." width="50%" />
 <p class="caption">
-Figure 7.3: Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome.
+Figure 7.2: Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome.
 </p>
 </div>
 <p>Note that the row totals of the estimated expected frequencies are equal to the observed row totals, and similarly for the column totals. In other words the estimated expected frequencies preserve the row and column totals.</p>
@@ -316,11 +315,11 @@ Figure 7.3: Observed frequencies and estimated expected frequencies (in brackets
 <li><span class="math inline">\(n_{+j}=\displaystyle\sum_{i=1}^I n_{ij}\)</span>, the sum of the frequencies in column <span class="math inline">\(j\)</span>.</li>
 <li><span class="math inline">\(n\)</span> be the sample size.</li>
 </ul>
-<p>Figure <a href="contingency.html#fig:notation">7.4</a> illustrates this notation.</p>
+<p>Figure <a href="contingency.html#fig:notation">7.3</a> illustrates this notation.</p>
 <div class="figure" style="text-align: center"><span id="fig:notation"></span>
 <img src="images/ct_notation.png" alt="Notation for a 2-way contingency table." width="75%" />
 <p class="caption">
-Figure 7.4: Notation for a 2-way contingency table.
+Figure 7.3: Notation for a 2-way contingency table.
 </p>
 </div>
 <p><strong>Calculating estimated expected frequencies under independence</strong></p>
@@ -356,11 +355,11 @@ or <strong>standardised Pearson residuals</strong>
 = \frac{4.78}{\sqrt{\left(1-\displaystyle\frac{2691}{4526}\right)\,\left(1-\displaystyle\frac{1755}{4526}\right)}}=9.60. \]</span></p>
 <p>We have found that the observed frequencies are different to those expected if outcome and sex are independent, producing non-zero residuals. Even if outcome and sex <strong>are</strong> independent it is very unlikely that the residuals will be exactly zero. The question is whether these residuals are so large to suggest that outcome and sex are not independent. To assess this we need to know what kind of residuals tend to occur when outcome and sex are independent. If residuals that are as large or larger then the ones that we have observed are unlikely to occur then it suggests that outcome and sex are not independent.</p>
 <p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, and if the expected frequencies are large, each Pearson residual, and each standardised Pearson residual, has approximately a normal distribution with mean 0. In addition the standardised Pearson residuals have an approximate variance of 1. So, <strong>if these assumptions are true</strong>, the standardised Pearson residuals are approximately N(0,1). Owing to the properties of the N(0,1) distribution, most (approximately 95%) of the residuals should lie in the range <span class="math inline">\((-2, 2)\)</span>. The presence of residuals that have a large magnitude would be surprising and may suggest that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not independent.</p>
-<p>The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure <a href="contingency.html#fig:berkres">7.5</a></p>
+<p>The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure <a href="contingency.html#fig:berkres">7.4</a></p>
 <div class="figure" style="text-align: center"><span id="fig:berkres"></span>
 <img src="images/berkresnew2.png" alt="Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table." width="80%" />
 <p class="caption">
-Figure 7.5: Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table.
+Figure 7.4: Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table.
 </p>
 </div>
 <p>The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex. This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.</p>
@@ -381,11 +380,11 @@ which combines the Pearson residuals into a single value.</p>
 <p>It can be shown that if the null hypothesis <span class="math inline">\(H_0\)</span> is true (and the expected
 frequencies are sufficiently large) then, before we have observed the data, the
 random variable <span class="math inline">\(X^2\)</span> has (approximately) a chi-squared distribution with 1 degree of freedom, denoted <span class="math inline">\(\chi^2_1\)</span>.</p>
-<p>To demonstrate that this is the case we use simulation. We simulate 1000 2 <span class="math inline">\(\times\)</span> 2 tables of data, like those in Figure <a href="contingency.html#fig:berk2way">7.1</a> except that the data have been simulated assuming that outcome and sex are independent. Figure <a href="contingency.html#fig:berksim">7.6</a> is a histogram of the resulting 1000 values of the <span class="math inline">\(X^2\)</span> statistic. Also shown is the p.d.f. of a <span class="math inline">\(\chi^2_1\)</span> random variable.</p>
+<p>To demonstrate that this is the case we use simulation. We simulate 1000 2 <span class="math inline">\(\times\)</span> 2 tables of data, like those in Figure <a href="contingency.html#fig:berk2way">7.1</a> except that the data have been simulated assuming that outcome and sex are independent. Figure <a href="contingency.html#fig:berksim">7.5</a> is a histogram of the resulting 1000 values of the <span class="math inline">\(X^2\)</span> statistic. Also shown is the p.d.f. of a <span class="math inline">\(\chi^2_1\)</span> random variable.</p>
 <div class="figure" style="text-align: center"><span id="fig:berksim"></span>
 <img src="images/berk_sim.png" alt="Histogram of the $X^2$ statistic values from 1000 simulated 2 $	imes$ 2 contingency tables, where the row and column variables are independent." width="80%" />
 <p class="caption">
-Figure 7.6: Histogram of the <span class="math inline">\(X^2\)</span> statistic values from 1000 simulated 2 $ imes$ 2 contingency tables, where the row and column variables are independent.
+Figure 7.5: Histogram of the <span class="math inline">\(X^2\)</span> statistic values from 1000 simulated 2 $ imes$ 2 contingency tables, where the row and column variables are independent.
 </p>
 </div>
 <p>We can see that values of <span class="math inline">\(X^2\)</span> above 4 are rare. It can be shown that, under <span class="math inline">\(H_0\)</span> a value above 3.84 will only occur 5% of the time. The value of <span class="math inline">\(X^2\)</span> from the <strong>real</strong> data is 92.21. Clearly a value as large as this is very unlikely to occur if <span class="math inline">\(H_0\)</span> is true. In fact, the probability (a <span class="math inline">\(p\)</span>-value) of observing a value of <span class="math inline">\(X^2\)</span> greater than 92.21 is less than <span class="math inline">\(2.2 \times 10^{-16}\)</span>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data we observe if <span class="math inline">\(H_0\)</span> is true. This very small <span class="math inline">\(p\)</span>-value suggests that <span class="math inline">\(H_0\)</span> is not true, so we would reject <span class="math inline">\(H_0\)</span>.</p>
@@ -405,7 +404,7 @@ Figure 7.6: Histogram of the <span class="math inline">\(X^2\)</span> statistic 
 <div class="figure" style="text-align: center"><span id="fig:berkrow"></span>
 <img src="images/berk_row.png" alt="Row proportions for the Berkeley 2 $\times$ 2 contingency table." width="25%" />
 <p class="caption">
-Figure 7.7: Row proportions for the Berkeley 2 <span class="math inline">\(\times\)</span> 2 contingency table.
+Figure 7.6: Row proportions for the Berkeley 2 <span class="math inline">\(\times\)</span> 2 contingency table.
 </p>
 </div>
 <p>The <strong>column proportions</strong> could also be calculated, but they are not meaningful
@@ -438,11 +437,11 @@ which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. F
 <p><strong>The odds ratio, a ratio of odds</strong></p>
 <p><span class="math display">\[\frac{P(A~|~M)}{1-P(A~|~M)}\,\,\Bigg/\,\,\frac{P(A~|~F)}{1-P(A~|~F)},\]</span>
 which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the estimate is <span class="math inline">\(\approx\)</span> 1.84.</p>
-<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\mbox{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\mbox{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\mbox{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">7.8</a>.</p>
+<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\mbox{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\mbox{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\mbox{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">7.7</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:odds"></span>
 <img src="images/odds.png" alt="The value of the odds of an event for different probabilities of that event." width="60%" />
 <p class="caption">
-Figure 7.8: The value of the odds of an event for different probabilities of that event.
+Figure 7.7: The value of the odds of an event for different probabilities of that event.
 </p>
 </div>
 <p>[In the book Ross, S. (2010) A First Course in Probability, the odds ratio of an event <span class="math inline">\(B\)</span> is defined (incorrectly in my view) as <span class="math inline">\(P(B) / (1 - P(B))\)</span>. This is a ratio of probabilities. The conventional use of the term odds ratio is for a ratio of odds.]</p>
@@ -459,12 +458,12 @@ Therefore, the estimated odds of <span class="math inline">\(R\)</span>, compari
 <span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(A~|~M)}{1-P(A~|~M)}}{\displaystyle\frac{P(A~|~F)}{1-P(A~|~F)}} 
 \,\,\,=\,\,\, \frac{\displaystyle\frac{P(M~|~A)}{1-P(M~|~A)}}{\displaystyle\frac{P(M~|~R)}{1-P(M~|~R)}}, \]</span>
 that is, the odds ratio of acceptance, comparing males to females, is equal to the odds ratio of being male, comparing acceptance to rejection. With odds ratios it doesn’t matter which variable we treat as the response</p></li>
-<li><p>For some datasets it is not possible to estimate the relative risk. Consider the 2-way contingency table in Figure <a href="contingency.html#fig:casecontrol">7.9</a>.</p></li>
+<li><p>For some datasets it is not possible to estimate the relative risk. Consider the 2-way contingency table in Figure <a href="contingency.html#fig:casecontrol">7.8</a>.</p></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:casecontrol"></span>
-<img src="images/case_control.png" alt="Example data from a case-control study.  Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13." width="40%" />
+<img src="images/case_control.png" alt="Example data from a case-control study.  Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13." width="50%" />
 <p class="caption">
-Figure 7.9: Example data from a case-control study. Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.
+Figure 7.8: Example data from a case-control study. Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.
 </p>
 </div>
 <p>These data comes from a very old case-control study, designed to investigate the link between smoking and lung cancer. The idea is to compare the smoking habits of people with lung cancer (the <strong>cases</strong>) and people without lung cancer, but who are otherwise similar to the cases (the <strong>controls</strong>). The people conducting the study decided to have equal number of cases and controls: 86 of each. That is, they fixed both column totals at 86. Therefore, this is <strong>not</strong> a random sample of people from the population: if we did sample people randomly from the population then we would expect to obtain far fewer people with lung cancer than people without lung cancer. Each person was asked whether they were a smoker or non-smoker.</p>
@@ -480,7 +479,118 @@ Figure 7.9: Example data from a case-control study. Source: Dorn, H.F. (1954) Th
 </div>
 <div id="way3" class="section level2">
 <h2><span class="header-section-number">7.2</span> 3-way contingency tables</h2>
+<p>Figure <a href="contingency.html#fig:berk3way">7.9</a> shows the 2 <span class="math inline">\(\times\)</span> 2 <span class="math inline">\(\times\)</span> 6 contingency table that results from classifying applicants according to 3 categorical variables: sex (<span class="math inline">\(X\)</span>), outcome (<span class="math inline">\(Y\)</span>) and department (<span class="math inline">\(Z\)</span>). We now have a 2-way contingency table, like the one we analysed in Section <a href="contingency.html#way2">7.1</a>, in each of the 6 departments.</p>
+<div class="figure" style="text-align: center"><span id="fig:berk3way"></span>
+<img src="images/berk_3way.png" alt="3-way contingency table for the Berkeley admissions data." width="50%" />
+<p class="caption">
+Figure 7.9: 3-way contingency table for the Berkeley admissions data.
+</p>
+</div>
+<p>In a 3-way contingency table there are many possible associations that we could examine. We consider the following cases.</p>
+<p><strong>Mutual independence</strong>. all 3 variables at once, that is, outcome, sex and department;</p>
+<p><strong>Marginal independence</strong>. 2 variables, ignoring the value of the third variable, that is, outcome and sex (we have already done this), outcome and department, sex and department;</p>
+<p><strong>Conditional independence</strong>. 2 variables separately for each value of the third variable, e.g. outcome and sex separately with each department.</p>
+<div id="mutual-independence" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Mutual independence</h3>
+<p>We examine whether the categorical random variables sex, outcome and department are mutually independent, that is, there are no relationships between these three variables. We have already seen in Section <a href="contingency.html#way2">7.1</a> that the data suggest that outcome and sex are not independent. If outcome and sex are not independent then outcome, sex and department cannot be mutually independent.</p>
+<p>We consider how to estimate expected frequencies under the assumption that outcome, sex and department are mutually independent. (We will not actually calculate them though.) The approach we use is the same one we used for the 2-way table: we estimate the expected frequencies under the assumption that these variables are mutually independent.</p>
+<p>How can we estimate these expected frequencies?</p>
+<p>We take sex=<span class="math inline">\(M\)</span>, outcome=<span class="math inline">\(A\)</span> and department=<span class="math inline">\(D_1\)</span> as an example. If sex, outcome and department are mutually independent then
+<span class="math display">\[ P(M, A, D_1) = P(M)\,P(A)\,P(D_1). \]</span>
+We do not know <span class="math inline">\(P(M), P(A)\)</span> or <span class="math inline">\(P(D_1)\)</span>, so we estimate them using the proportions in the observed data:
+<span class="math display">\[ \hat{P}(M)=\frac{2691}{4526}, \quad \hat{P}(A)=\frac{1755}{4526}, \quad \hat{P}(D_1)=\frac{933}{4526}. \]</span>
+Therefore, the expected frequency for sex=<span class="math inline">\(M\)</span>, outcome=<span class="math inline">\(A\)</span> and department=<span class="math inline">\(D_1\)</span> is estimated by
+<span class="math display">\[ \frac{2691}{4526} \times \frac{1755}{4526} \times \frac{933}{4526} \times 4526 
+= \frac{2691 \times 1755 \times 933}{4526^2} = 215.1. \]</span>
+The other expected frequencies are estimated similarly. Extending our previous notation in an obvious way we have
+<span class="math display">\[ \hat{\mu}_{ijk} = n\,\hat{p}_{i++}\,\hat{p}_{+j+}\,\hat{p}_{++k} = \frac{n_{i++}\,n_{+j+}\,n_{++k}}{n^2}, \]</span>
+where
+<span class="math display">\[ \hat{p}_{i++} = \frac{n_{i++}}{n}, \qquad \hat{p}_{+j+} = \frac{n_{+j+}}{n}, \qquad 
+\hat{p}_{++k} = \frac{n_{++k}}{n}. \]</span></p>
+</div>
+<div id="marginal-independence" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Marginal independence</h3>
+<p>We produce <strong>marginal</strong> 2-way contingency tables by ignoring one of variables, and examine the association between the remaining 2 variables. We have already looked at the association between outcome and sex.</p>
+<p>Firstly we look at the association between sex and department. This gives a 2 <span class="math inline">\(\times\)</span> 6 contingency table. The observed and estimated expected frequencies and the standardised Pearson residuals are given in Figures <a href="contingency.html#fig:berkmarg1">7.10</a> and <a href="contingency.html#fig:berkmarg2">7.11</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkmarg1"></span>
+<img src="images/berkmarg1.png" alt="Observed and estimated expected values for sex and department." width="65%" />
+<p class="caption">
+Figure 7.10: Observed and estimated expected values for sex and department.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:berkmarg2"></span>
+<img src="images/berkmarg2.png" alt="Standardised Pearson residuals for sex and department." width="50%" />
+<p class="caption">
+Figure 7.11: Standardised Pearson residuals for sex and department.
+</p>
+</div>
+<p>Note: the</p>
+<ul>
+<li>estimated expected frequencies preserve the row and column totals;</li>
+<li>residuals sum to zero across rows and down columns.</li>
+<li>standardised Pearson residuals sum to zero down columns.</li>
+</ul>
+<p>We can see that many more males apply to departments 1 and 2, and many more females apply to departments 3 and 5 than we could expect if sex and department are independent. We can also see this from the estimated conditional probabilities in Figure <a href="contingency.html#fig:berkmarg3">7.12</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkmarg3"></span>
+<img src="images/berkmarg3.png" alt="Estimated conditional probabilities of department given sex." width="85%" />
+<p class="caption">
+Figure 7.12: Estimated conditional probabilities of department given sex.
+</p>
+</div>
+<p>There does appear to be an association between sex and department. It seems that males prefer to apply to department 1 and 2 while females prefer to apply to departments 3 and 5.</p>
+<p>Is there association between department and outcome? It turns out that department and outcome do appear to be associated. In particular the probability of acceptance in departments 1 and 2 seem to be much greater than the probability of acceptance in department 3 and 5, as we can see from the estimates in Figure <a href="contingency.html#fig:berkmarg4">7.13</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkmarg4"></span>
+<img src="images/berkmarg4.png" alt="Estimated conditional probabilities of acceptance given department." width="75%" />
+<p class="caption">
+Figure 7.13: Estimated conditional probabilities of acceptance given department.
+</p>
+</div>
+</div>
+<div id="conditional-independence" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> Conditional independence</h3>
+<p>Now we look at the association between sex and outcome separately within each department. We simply analyse each of the six 2 <span class="math inline">\(\times\)</span> 2 tables in Figure <a href="contingency.html#fig:berk3way">7.9</a>. In other words we <strong>condition</strong> on the value of department, for example, department=1, ignoring the data from other departments. Then we examine whether sex and outcome are conditionally independent given that department=1.
+We do this for each department in turn.</p>
+<p>Since it is likely that decisions to accept or reject a candidate are taken within each department, it makes sense to ask whether there is any sexual discrimination within each department. Figure <a href="contingency.html#fig:berkcond1">7.14</a> summarises the observed frequencies and estimated expected frequencies under the assumption that outcome is independent of sex and the standardised Pearson residuals.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkcond1"></span>
+<img src="images/berkcond1.png" alt="Left: 2 $\times$ 2 contingency table for department 1.  Right: standardised residuals." width="75%" />
+<p class="caption">
+Figure 7.14: Left: 2 <span class="math inline">\(\times\)</span> 2 contingency table for department 1. Right: standardised residuals.
+</p>
+</div>
+<p>The size of the standardised Pearson residual suggests that outcome and sex are not independent. In fact more females are accepted to department 1 than would be expected if outcome and sex are independent. We can also see this from the estimated conditional probabilities in Figure <a href="contingency.html#fig:berkcond2">7.15</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkcond2"></span>
+<img src="images/berkcond2.png" alt="Estimated conditional probabilities of acceptance given sex and department." width="75%" />
+<p class="caption">
+Figure 7.15: Estimated conditional probabilities of acceptance given sex and department.
+</p>
+</div>
+<p>We leave the calculation of estimated expected frequencies and residuals for departments 2 to 6 as an exercise. The Figure <a href="contingency.html#fig:berkcond3">7.16</a> gives the standardised Pearson residuals for the <span class="math inline">\((M, A)\)</span> cell.</p>
+<div class="figure" style="text-align: center"><span id="fig:berkcond3"></span>
+<img src="images/berkcond3.png" alt="Standardised Pearson residuals for the $(M, A)$ cell by department." width="75%" />
+<p class="caption">
+Figure 7.16: Standardised Pearson residuals for the <span class="math inline">\((M, A)\)</span> cell by department.
+</p>
+</div>
+<p>A positive value indicates that more males were accepted than would be expected if outcome and sex are independent, whereas a negative value indicates that more females were accepted than would be expected. In only one department, department 1, do the data seem inconsistent with outcome and sex being independent. In this department females seem to have a higher probability of acceptance. Note, this may not be a result of discrimination in favour of females: there may be other data that explain why this happens.</p>
+</div>
+<div id="confounding-variables" class="section level3">
+<h3><span class="header-section-number">7.2.4</span> Confounding variables</h3>
+<p>We have observed the following.</p>
+<ul>
+<li>Analysis of the 2-way table of outcome and sex suggests that the probability of acceptance is greater for males than for females.</li>
+<li>Analysis of the six 2-way tables of outcome and sex within each department suggests that in departments 2 to 6 outcome and sex are independent, and in department 1 females have a higher probability of acceptance.</li>
+</ul>
+<p>In other words, the association between outcome and sex is different in the marginal 2 <span class="math inline">\(\times\)</span> 2 table than in the six conditional 2 <span class="math inline">\(\times\)</span> 2 tables.</p>
+<p>Is there an explanation for this? The data suggest that</p>
+<ul>
+<li>department is dependent on sex: females tend to apply to different departments to males;</li>
+<li>outcome is dependent on department: some departments have lower acceptances rates than others.</li>
+</ul>
+<p>The apparent association between sex and outcome seems actually to be a combined effect of (a) sex affecting department, and (b) department affecting outcome. Sex does not seem to affect outcome directly. Females are more likely than males to apply to the departments into which it is more difficult to be accepted.</p>
+<p>The estimated association between sex and outcome depends on the value of the variable department. It is not uncommon for the estimated association between two variables to change depending on the value of a third variable, a so-called <strong>confounding</strong> or <strong>lurking</strong> variable. To confound means to confuse, surprise or mix up. To lurk means to hide in the background, perhaps with sinister intent! In this example, department is the confounding variable. <strong>Simpson’s paradox</strong> describes extreme cases of this, where the direction or nature of the estimated association changes or perhaps disappears. Misleading inferences could be produced if we are not aware of the effects of the confounding variable.</p>
+<p>The moral is that it can be dangerous to ‘collapse’ a 3-way contingency table down to a 2-way contingency table, by ignoring a variable. If we move from a 3-way table to a 2-way table without analysing the 3-way table we may be throwing away important data.</p>
 
+</div>
 </div>
 </div>
             </section>
