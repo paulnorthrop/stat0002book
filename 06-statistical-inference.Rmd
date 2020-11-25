@@ -217,7 +217,7 @@ As the sample size $n$ increases to infinity we require that the probability tha
 
 The normality assumption is not necessary here, owing to the weak law of large numbers.
 
-**The weak law of large numbers**.  If $X_1, ..., X_n$ are i.i.d. with $\mbox{E}(X_i)=\mu$, for $i=1, ..., n$ then $\overline{X} \overset{p}{\to} \mu$, that is, $\overline{X}$ is a consistent estimator of $\mu$.
+**The weak law of large numbers**.  If $X_1, ..., X_n$ are i.i.d. with $\mbox{E}(X_i)=\mu$, for $i=1, ..., n$ then $\overline{X} \overset{p}{\to} \mu,$ that is, $\overline{X}$ is a consistent estimator of $\mu$.
 
 For an estimator $T$ to be consistent it is **necessary** for the condition in equation \@ref(eq:consistency) to hold.  However, in many cases it is easier to prove that $T$ is consistent for $\theta$ in a different way.  If $\mbox{MSE}(T) \rightarrow 0$ as $n \rightarrow \infty$ then it can be shown that the condition in equation \@ref(eq:consistency) holds, which provides a **sufficient** condition for $T$ to be consistent for $\theta$.  If we can find $\mbox{MSE}(T)$ and show that it tends to zero as $n$ tends to infinity then we have shown that $T$ is consistent for $\theta$. Owing to equation \@ref(eq:mse), we could, equivalently, show that $\mbox{E}(T) \rightarrow \theta$ as $n \rightarrow \infty$ and $\mbox{var}(T) \rightarrow 0$ as $n \rightarrow \infty$.  If $\mbox{bias}(T) \rightarrow 0$ as $n \rightarrow \infty$ then we say that $T$ is asymptotically unbiased for $\theta$.
 

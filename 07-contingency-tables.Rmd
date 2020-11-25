@@ -28,8 +28,8 @@ knitr::opts_chunk$set(
 
 ```{r, echo = FALSE}
 include_cropped_graphics <- function(x) {
-  knitr::include_graphics(knitr::plot_crop(x))
-#  knitr::include_graphics(x)
+#  knitr::include_graphics(knitr::plot_crop(x))
+  knitr::include_graphics(x)
 }
 ```
 
