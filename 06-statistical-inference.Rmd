@@ -213,11 +213,11 @@ for any $\epsilon>0$ and for any possible value of $\theta$.  We refer to the pr
 
 As the sample size $n$ increases to infinity we require that the probability that $T$ is arbitrarily close to $\theta$ increases to 1.  This is because $P(| T - \theta | \, \leq \epsilon) = 1 - P(| T - \theta | > \epsilon)$.  You may also see this idea expressed as "$T$ converges in probability to $\theta$" or $T \overset{p}{\to} \theta$, for short.
 
-**Exercise**.  Use the condition in equation \@ref(eq:consistency) to show that $\overline{X}$ is a consistent estimator of $\mu$.
+**Exercise**.  Use the condition in equation \@ref(eq:consistency) to show that, for our running example based on a random sample from a $N(\mu, \sigma^2)$ distribution, $\overline{X}$ is a consistent estimator of $\mu$.
 
 The normality assumption is not necessary here, owing to the weak law of large numbers.
 
-**The weak law of large numbers**.  If $X_1, ..., X_n$ are i.i.d. with $\mbox{E}(X_i)=\mu$ and $\mbox{var}(X_i) = \sigma^2$, for $i=1, ..., n$ then $\overline{X} \overset{p}{\to} \mu$, that is, $\overline{X}$ is a consistent estimator of $\mu$.
+**The weak law of large numbers**.  If $X_1, ..., X_n$ are i.i.d. with $\mbox{E}(X_i)=\mu$, for $i=1, ..., n$ then $\overline{X} \overset{p}{\to} \mu$, that is, $\overline{X}$ is a consistent estimator of $\mu$.
 
 For an estimator $T$ to be consistent it is **necessary** for the condition in equation \@ref(eq:consistency) to hold.  However, in many cases it is easier to prove that $T$ is consistent for $\theta$ in a different way.  If $\mbox{MSE}(T) \rightarrow 0$ as $n \rightarrow \infty$ then it can be shown that the condition in equation \@ref(eq:consistency) holds, which provides a **sufficient** condition for $T$ to be consistent for $\theta$.  If we can find $\mbox{MSE}(T)$ and show that it tends to zero as $n$ tends to infinity then we have shown that $T$ is consistent for $\theta$. Owing to equation \@ref(eq:mse), we could, equivalently, show that $\mbox{E}(T) \rightarrow \theta$ as $n \rightarrow \infty$ and $\mbox{var}(T) \rightarrow 0$ as $n \rightarrow \infty$.  If $\mbox{bias}(T) \rightarrow 0$ as $n \rightarrow \infty$ then we say that $T$ is asymptotically unbiased for $\theta$.
 
