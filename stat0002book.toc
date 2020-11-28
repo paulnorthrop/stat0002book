@@ -147,7 +147,7 @@
 \contentsline {subsection}{\numberline {7.2.1}Mutual independence}{126}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Marginal independence}{128}{subsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.2.3}Conditional independence}{129}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Confounding variables}{130}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.4}Confounding variables}{131}{subsection.7.2.4}%
 \contentsline {chapter}{\numberline {8}Linear regression}{132}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Simple linear regression}{132}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Looking at scatter plots}{132}{section.8.2}%
