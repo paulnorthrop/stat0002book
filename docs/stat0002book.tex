@@ -147,7 +147,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-11-25}
+\date{2020-11-28}
 
 \begin{document}
 \maketitle
@@ -5638,7 +5638,7 @@ As the sample size \(n\) increases to infinity we require that the probability t
 
 The normality assumption is not necessary here, owing to the weak law of large numbers.
 
-\textbf{The weak law of large numbers}. If \(X_1, ..., X_n\) are i.i.d. with \(\mbox{E}(X_i)=\mu\), for \(i=1, ..., n\) then \(\overline{X} \overset{p}{\to} \mu\), that is, \(\overline{X}\) is a consistent estimator of \(\mu\).
+\textbf{The weak law of large numbers}. If \(X_1, ..., X_n\) are i.i.d. with \(\mbox{E}(X_i)=\mu\), for \(i=1, ..., n\) then \(\overline{X} \overset{p}{\to} \mu,\) that is, \(\overline{X}\) is a consistent estimator of \(\mu\).
 
 For an estimator \(T\) to be consistent it is \textbf{necessary} for the condition in equation \eqref{eq:consistency} to hold. However, in many cases it is easier to prove that \(T\) is consistent for \(\theta\) in a different way. If \(\mbox{MSE}(T) \rightarrow 0\) as \(n \rightarrow \infty\) then it can be shown that the condition in equation \eqref{eq:consistency} holds, which provides a \textbf{sufficient} condition for \(T\) to be consistent for \(\theta\). If we can find \(\mbox{MSE}(T)\) and show that it tends to zero as \(n\) tends to infinity then we have shown that \(T\) is consistent for \(\theta\). Owing to equation \eqref{eq:mse}, we could, equivalently, show that \(\mbox{E}(T) \rightarrow \theta\) as \(n \rightarrow \infty\) and \(\mbox{var}(T) \rightarrow 0\) as \(n \rightarrow \infty\). If \(\mbox{bias}(T) \rightarrow 0\) as \(n \rightarrow \infty\) then we say that \(T\) is asymptotically unbiased for \(\theta\).
 
@@ -5770,7 +5770,7 @@ This is a 2 \(\times\) 2 (or 2 by 2), contingency table: there are 2 row categor
 
 These Berkeley admissions data also contain the department to which the applicants applied. We include this information to extend the 2-way contingency table in Figure \ref{fig:berk2way} to produce the 3-way contingency table in Figure \ref{fig:berk3way} at the start of Section \ref{way3}.
 
-In Chapter \ref{probability} we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley \textbf{in general}. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section \ref{way2}. We also wish to consider how the department to which the applicant applies affects things. We do this in section \ref{way3}. We will see that when there are more than two variables there are several ways to study the association between them.
+In Chapter \ref{probability} we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley \textbf{in general}. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section \ref{way2}. We also wish to consider how the department to which the applicant applies affects things. We do this in Section \ref{way3}. We will see that when there are more than two variables there are several ways to study the association between them.
 
 \hypertarget{way2}{%
 \section{2-way contingency tables}\label{way2}}
@@ -5972,7 +5972,7 @@ Now suppose that the real data had given a value of 0.45, for example. The histo
 
 Now suppose that Berkeley used method 3 to collect the data. If this is the case we cannot estimate \(P(M)\) (or \(P(F)\)), or \textbf{joint} probabilities such as \(P(M, A)\). It is not meaningful to ask whether sex and outcome are independent because sex is not a random variable; the proportions of males and females have been fixed in advance by Berkeley.
 
-However, it \textbf{meaningful} to look at the conditional distribution of the random variable outcome for each sex. In other words, is the probability of acceptance equal for males and females? In section \ref{indep} we treated the random variables outcome and sex symmetrically, that is, on an equal basis. Now we treat outcome as a \textbf{response} variable and sex as an \textbf{explanatory} variable. We examine how the distribution of the response variable outcome depends on the value of the explanatory variable sex. In this example it makes sense to do this: we can imagine that sex could affect the outcome; not the other way round.
+However, it \textbf{meaningful} to look at the conditional distribution of the random variable outcome for each sex. In other words, is the probability of acceptance equal for males and females? In Section \ref{indep} we treated the random variables outcome and sex symmetrically, that is, on an equal basis. Now we treat outcome as a \textbf{response} variable and sex as an \textbf{explanatory} variable. We examine how the distribution of the response variable outcome depends on the value of the explanatory variable sex. In this example it makes sense to do this: we can imagine that sex could affect the outcome; not the other way round.
 
 Therefore, we have to change slightly the question we ask. Instead of asking whether sex and outcome are independent, we ask whether the probability of acceptance is the same for males and for females. In other words is
 \[ P(A~|~M) = P(A~|~F) = P(A)\,? \]
