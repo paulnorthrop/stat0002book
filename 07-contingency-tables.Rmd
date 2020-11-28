@@ -273,7 +273,7 @@ which is equal to 1 if $P(A~|~M)=P(A~|~F)$. For the Berkeley data the estimate i
 
 The **odds** of an event $B$ is the ratio of the probability $P(B)$ that the event occurs to the probability $P(\mbox{not}B) = 1 - P(B)$ that it does not occur.  If  $P(B) = \frac12$ then $B$ and $\mbox{not}B$ are are equally likely and so the odds of event $B$ equals 1.  If  $P(B) = \frac23$ then $B$ has double the probability of $\mbox{not}B$ and so the odds of event $B$ equals 2.  Some other simple cases are summarised in Figure \@ref(fig:odds).  
 
-```{r echo=FALSE, odds, fig.show='hold', fig.cap='The value of the odds of an event for different probabilities of that event.', out.width='60%'}
+```{r echo=FALSE, odds, fig.show='hold', fig.cap='The value of the odds of an event for different probabilities $p$ of that event.', out.width='50%'}
 include_cropped_graphics("images/odds.png")
 ```
 
