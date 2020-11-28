@@ -167,7 +167,7 @@ or **standardised Pearson residuals**
 
 We have found that the observed frequencies are different to those expected if outcome and sex are independent, producing non-zero residuals.   Even if outcome and sex **are** independent it is very unlikely that the residuals will be exactly zero.  The question is whether these residuals are so large to suggest that outcome and sex are not independent. To assess this we need to know what kind of residuals tend to occur when outcome and sex are independent. If residuals that are as large or larger then the ones that we have observed are unlikely to occur then it suggests that outcome and sex are not independent. 
 
-If $X$ and $Y$ are independent, and if the expected frequencies are large, each Pearson residual, and each standardised Pearson residual, has approximately a normal distribution with mean 0. In addition the standardised Pearson residuals have an approximate variance of 1. So, **if these assumptions are true**, the standardised Pearson residuals are approximately N(0,1).  Owing to the properties of the N(0,1) distribution, most (approximately 95\%) of the residuals should lie in the range $(-2, 2)$.  The presence of residuals that have a large magnitude would be surprising and may suggest that $X$ and $Y$ are not independent.
+If $X$ and $Y$ are independent, and if the expected frequencies are large enough (a check is that all the estimated expected frequencies are greater than 5), each Pearson residual, and each standardised Pearson residual, has approximately a normal distribution with mean 0. In addition the standardised Pearson residuals have an approximate variance of 1. So, **if these assumptions are true**, the standardised Pearson residuals are approximately N(0,1).  Owing to the properties of the N(0,1) distribution, most (approximately 95\%) of the residuals should lie in the range $(-2, 2)$.  The presence of residuals that have a large magnitude would be surprising and may suggest that $X$ and $Y$ are not independent.
 
 The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure \@ref(fig:berkres).  The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex.  This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.
 
@@ -195,7 +195,7 @@ This is an outline of an **hypothesis test**. You will see that the test is base
 which combines the Pearson residuals into a single value.
 
 It can be shown that if the null hypothesis $H_0$ is true (and the expected
-frequencies are sufficiently large) then, before we have observed the data, the 
+frequencies are sufficiently large: again we check that the estimated expected frequencies are greater than 5) then, before we have observed the data, the 
 random variable $X^2$ has (approximately) a chi-squared distribution with 1 degree of freedom, denoted $\chi^2_1$. 
 
 To demonstrate that this is the case we use simulation. We simulate 1000 2 $\times$ 2 tables of data, like those in Figure \@ref(fig:berk2way) except that the data have been simulated assuming that outcome and sex are independent.  Figure \@ref(fig:berksim) is a histogram of the resulting 1000 values of the $X^2$ statistic.  Also shown is the p.d.f. of a $\chi^2_1$ random variable.
