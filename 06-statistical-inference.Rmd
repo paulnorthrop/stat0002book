@@ -198,7 +198,7 @@ This is one way that we could combine bias and variance into one quantity.  If, 
 
 ### Standard error 
 
-We have seen that the variance, or standard deviation, of an estimator is of interest.  Often, $\mbox{var}(T)$ depends on unknown parameters that need to be estimated from the data.  In cases like this we need to estimate the standard deviation of $T$ by substituting estimates for the unknown parameters in $\sqrt{\mbox{var}(T)}$.  This is then called the **standard error** of $T$, or $\mbox{SE}(T)$.
+We have seen that the variance, or standard deviation, of an estimator is of interest.  Often, $\mbox{var}(T)$ depends on unknown parameters that need to be estimated from the data.  In cases like this we need to estimate the standard deviation of $T$ by substituting estimates for the unknown parameters in $\sqrt{\mbox{var}(T)}$.  This is then called the estimated **standard error** of $T$, or $\mbox{SE}(T)$.
 
 For example, we found that $\mbox{var}(\hat{\mu})=\sigma^2/n$.  We estimate $\sigma$ using the sample standard deviation $\hat{\sigma} = \sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i-\overline{x})^2}$.  Therefore, $\mbox{SE}(\hat{\mu})=\hat{\sigma}/\sqrt{n}$.
 

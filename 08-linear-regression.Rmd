@@ -1,6 +1,203 @@
+```{r, figsetup8, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = 'center',
+  out.width = '75%'
+)
+```
+
+```{r, echo = FALSE}
+include_cropped_graphics <- function(x) {
+#  knitr::include_graphics(knitr::plot_crop(x))
+  knitr::include_graphics(x)
+}
+```
+
 # Linear regression {#linreg}
 
+In this chapter, and Chapter \@ref(correlationchapter), we examine the relationship between 2 continuous variables.  First we consider **regression** problems, where the distribution of a **response variable** $Y$ is thought to be dependent on the value of an **explanatory variable** $X$. Possible aims are (a) to understand the relationship between $Y$ and $X$, or (b) to predict $Y$ from the value of $X$. We examine the conditional distribution of the random variable $Y$ given that $X=x$, that is, $Y \mid X=x$.  In particular, we study a **simple linear regression model** in which the conditional mean $\mbox{E}(Y \mid X=x)$ of $Y$ given that $X=x$ is assumed to be a linear function of $x$ and the conditional variance $\mbox{var}(Y \mid X=x)$ of $Y$ is assumed to be constant.  That is, 
+\[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \mbox{and} \qquad \mbox{var}(Y \mid X=x)=\sigma^2, \]
+for some constants $\alpha, \beta$ and $\sigma^2$.
+
+In many cases it is clear which variable should be the response variable $Y$ and which should be the explanatory variable $X$.  For example,
+
+* If changes in $x$ cause changes in $Y$, so that the direction of dependence is clear. For example, $x$=river depth influencing $Y$=flow rate.
+* If the values of $X$ are controlled  by an experimenter and then the value of $Y$ is observed.  For example, $x$=dosage of drug and $Y$=reduction in blood pressure.  This is sometimes called **regression sampling**.
+* If we wish to predict $Y$ using $x$.  For example, $x$=share value today and $Y$=share value tomorrow.
+
+In a related, but different, problem the 2 random variables $Y$ and $X$ are treated symmetrically. The question is how these random variables are associated. A measure of strength of **linear** association between 2 variables is given by a **correlation coefficient** (see Chapter \@ref(correlationchapter)).
+
+Regression answers the question "How does the conditional distribution of the random variable $Y$ depend on the value $x$ of $X$?". Correlation answers the question "How strong is any **linear** association between the random variables $Y$ and $X$?". In a regression problem we assume that the $Y$ values are random variables (that is, subject to random variability) but the $x$ values are not. When using a correlation coefficient we assume that both $X$ and $Y$ are random variables.
+
 ## Simple linear regression
+
+We use a small set of data, and some physical theory, to estimate the age of the Universe!  In 1929 the famous astronomer Edwin Hubble published a paper (@Hubble1929) reporting a relationship he had observed (using a telescope) between the distance of a nebula (a star) from the Earth and the velocity (the **recession velocity**) with which it was moving away from the Earth. Hubble's data are given in Table \@ref(fig:tablehubble). A scatter plot of distance against velocity is given in Figure \@ref(fig:hubblescatter).
+
+```{r echo=FALSE, tablehubble, fig.show='hold', fig.cap='Hubble\'s data. 1 MPc = 1 megaparsec = $3.086 \\times 10^{19}$ km. A megaparsec is a long distance: the distance from the Earth to the Sun is \'only\' $1.5 \\times 10^8$ km.'}
+include_cropped_graphics("images/hubbletable.png")
+```
+
+```{r echo=FALSE, hubblescatter, fig.show='hold', fig.cap='Scatter plot of distance against recession velocity.'}
+include_cropped_graphics("images/hubble_scatter.png")
+```
+
+It appears that distance and velocity are **positively associated**: the values of distance tend to be larger for nebulae with large velocities than for nebulae with smaller velocities. Also, this relationship appears to be approximately linear, at least over the range of velocities available.
+
+Scientists then wondered how the positive linear association between distance and velocity could have arisen. The result was 'Big Bang' theory.  This theory proposes that the Universe started with a Big Bang at a single point in space a very long time ago, scattering material around the surface of an ever-expanding sphere. If Big Bang theory is correct then the relationship between distance ($Y$) and recession velocity ($X$) should be of the form
+\[ Y = T X, \]
+where $T$ is the age of the Universe when the observations were made. This is called Hubble's Law. In other words, distance, $Y$, should depend linearly on velocity, $X$. $H=1/T$ is called **Hubble's constant**.
+
+The points in Figure \@ref(fig:hubblescatter) do not lie exactly on a straight line, partly because the values of distance are not exact: they include measurement error. Also, there may have been astronomical events since the Big Bang which have weakened further the supposed linear relationships between distance and velocity.  If we look at nebulae with the same value, $x$,  of velocity the measured value of distance, $Y$, varies from one nebulae to another. For example, the 4 nebulae with velocities of 500 km/sec have have distances 0.9, 1.1, 1.4 and 2.0 MPc.  So, for a given value of velocity there is variability in their distances from the Earth. Therefore, $Y \mid X=x$ is a random variable, with conditional mean $\mbox{E}(Y \mid X=x)$ and conditional variance $\mbox{var}(Y \mid X=x)$.
+
+In Figure \@ref(fig:hubblescatter) it looks possible that there is a straight line relationship between $\mbox{E}(Y \mid X=x)$ and $x$.  Therefore we consider fitting a simple linear regression model of $Y$ on $x$. You could think of this as a way to draw a 'line of best fit' through the points in Figure \@ref(fig:hubblescatter).
+
+### Simple linear regression model
+
+We assume that 
+\begin{equation}
+Y_i = \alpha + \beta\,x_i +  \epsilon_i, \qquad i=1,\ldots,n, 
+(\#eq:regeqn)
+\end{equation}
+where $\epsilon_i, i=1, \ldots, n$ are error terms, representing random 'noise'. The $\alpha + \beta\,x_i$ part of the model is the **systematic** part. The $\epsilon_i$ is the **random** part of the model.  It is assumed that
+\[  \mbox{E}( \epsilon_i)=0, \qquad \mbox{and} \qquad  \mbox{var}( \epsilon_i)=\sigma^2, \]
+and that $\epsilon_1, \ldots,  \epsilon_n$ are **uncorrelated**. We will study **correlation** in the next section.  It is a measure of the degree of **linear** association between two random variables.  Uncorrelated random variables have no linear association.
+
+Another way to write down this model is, for $i=1,\ldots,n$, 
+\[  \mbox{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\mbox{straight line relationship}), \]
+and 
+\[ \qquad  \mbox{var}(Y_i \mid X=x_i)=\sigma^2, \qquad\quad (\mbox{constant variance}), \]
+where, given the values $x_1,\ldots,x_n$, the random variables $Y_1, \ldots, Y_n$ are uncorrelated.
+
+Figure \@ref(fig:regschematic) shows how the conditional distribution
+of $Y$ is assumed to vary with the value of $x$.
+
+```{r echo=FALSE, regschematic, fig.show='hold', fig.cap='Conditional distribution of $Y$ given $X=x$ for a linear regression model.'}
+include_cropped_graphics("images/regschematic.png")
+```
+
+**Interpretation of parameters**
+
+* Intercept: $\alpha$.  The expected value (mean) of $Y$ when $X=0$, that is, $\mbox{E}(Y~|~X=0)$.
+* Gradient or slope: $\beta$.  The amount by which the mean of $Y$ given $X=x$, $\mbox{E}(Y~|~X=x)$, 
+increases when $x$ is increased by 1 unit.  That is,
+\[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]
+* Error variance: $\sigma^2$.  The variability of the response about the linear regression line (in the vertical direction).
+
+### Least squares estimation of $\alpha$ and $\beta$
+
+Suppose that we have paired data $(x_1,y_1), \ldots, (x_n,y_n)$. How can we fit a simple linear regression model to these data? Initially, our aim is to use estimators $\hat{\alpha}$ and $\hat{\beta}$  of $\alpha$ and $\beta$ to produce an estimated regression line
+\[ y= \hat{\alpha}+\hat{\beta}\,x. \]
+There are many possible estimators of $\alpha$ and $\beta$ that could be used. A standard approach, which produces estimators with some nice properties is **least squares estimation**.  Firstly, we rearrange equation \@ref(eq:regeqn) to define **residuals**
+\[ r_i = Y_i-(\hat{\alpha}+\hat{\beta}\,x_i) = Y_i-\hat{Y}_i, \qquad i=1,\ldots,n, \]
+the differences between the observed values $Y_i, i = 1, \ldots, n$ and the **fitted values** $\hat{Y}_i=\hat{\alpha}+\hat{\beta}\,x_i$, $i = 1, \ldots, n$ given by the estimated regression line.
+
+The least squares estimators have the property that they minimise the sum of squared residuals:
+\[ \sum_{i=1}^n \left(Y_i-\hat{\alpha}-\hat{\beta}\,x_i\right)^2. \]
+
+It is possible to do this by hand to give
+\begin{equation}
+\hat{\beta}=\frac{\displaystyle\sum_{i=1}^n \left(x_i- \overline{x}\right)\,\left(Y_i- \overline{Y}\right)}
+{\displaystyle\sum_{i=1}^n \left(x_i- \overline{x}\right)^2} = \frac{C_{xY}}{C_{xx}} \qquad
+\mbox{and} \qquad  
+\hat{\alpha}=  \overline{Y} - \hat{\beta}\, \overline{x}, 
+\end{equation}
+where $\overline{Y} = (1/n)\sum_{i=1}^n Y_i$ and $\overline{x} = (1/n)\sum_{i=1}^n x_i$.  Note: $\hat{\alpha}$ and $\hat{\beta}$ are each linear combinations of$Y_1,\ldots,Y_n$.
+
+For a given set of data the minimised sum of squared residuals is called the **residual sum of squares (RSS)**, that is,
+\[ RSS = \sum_{i=1}^n \left(y_i-\hat{\alpha}-\hat{\beta}\,x_i\right)^2 = \sum_{i=1}^n r_i^{\,\,2} 
+= \sum_{i=1}^n \left(y_i-\hat{y}_i\right)^2. \]
+
+**Estimating $\sigma^2$**. There is one remaining parameter to estimate; the error variance $\sigma^2$. The usual estimator is
+\begin{equation}
+\hat{\sigma}^2 = \frac{RSS}{n-2}.
+\end{equation}
+An estimate of $\sigma^2$ is important because it quantifies how much variability there is about the assumed straight line relationship between $Y$ and $x$.
+
+**Properties of estimators.** It can be shown that 
+\[  \mbox{E}(\hat{\alpha})=\alpha, \quad  \mbox{E}(\hat{\beta})=\beta, \quad  \mbox{E}(\hat{\sigma}^2)=\sigma^2, \]
+that is, these estimators are unbiased for the parameters they are intended to estimate. It can also be shown that the least squares estimators $\hat{\alpha}$ and $\hat{\beta}$ have the smallest possible variances of all unbiased estimators of $\alpha$ and $\beta$ which are linear combinations of the response $Y_1,\ldots,Y_n$. 
+
+**Coefficient of determination.** We may wish to quantify how much of the variability in the responses $Y_1,\ldots,Y_n$ is explained by the values $x_1,\ldots,x_n$ of the explanatory variable. To do this we can compare the variance of the residuals $\{r_i\}$ with the variance of the original observations $\{Y_i\}$, producing the **coefficient of determination**, $R^2$, given by 
+\[ R^2 = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
+= 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
+{\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
+where $0 \leq R^2 \leq 1$: $R^2=1$ indicates a perfect fit; $R^2=0$ indicates that none of the variability in $Y_1,\ldots,Y_n$ is explained by $x_1,\ldots,x_n$, producing a horizontal regression line ($\hat{\beta}=0$). The value of $R^2$, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in $Y$ which is explained by $x$.
+
+### Least squares fitting to Hubble's data
+
+Figures \@ref(fig:hubble_fit_flat), \@ref(fig:hubble_fit_origin) and \@ref(fig:hubble_fit) show least squares regression lines under 3 different models:
+
+* Model 1.  $Y$ does not depend on $X$, so that 
+
+\[ Y_i = \alpha_1 + \epsilon_i, \qquad i=1,\ldots, n. \]
+
+* Model 2.  $Y$ depends on $X$ according to Hubble's law, so that 
+
+\[ Y_i = \beta_2\,x_i + \epsilon_i, \qquad i=1,\ldots, n, \]
+
+where $\beta=T$ is the age of the Universe.
+
+* Model 3.  $Y$ depends on $X$ according to the full linear regression model
+
+\[ Y_i = \alpha_3+\beta_3\,x_i + \epsilon_i, \qquad i=1,\ldots, n. \]
+
+```{r echo=FALSE, hubblefitflat, fig.show='hold', fig.cap='Scatter plot of distance against recession velocity, with least squares fit of a horizontal line.'}
+include_cropped_graphics("images/hubble_fit_flat.png")
+```
+```{r echo=FALSE, hubblefitorigin, fig.show='hold', fig.cap='Scatter plot of distance against recession velocity, with least squares fit of a line through the origin.'}
+include_cropped_graphics("images/hubble_fit_origin.png")
+```
+```{r echo=FALSE, hubblefit, fig.show='hold', fig.cap='Scatter plot of distance against recession velocity, with least squares fit of an unconstrained line.'}
+include_cropped_graphics("images/hubble_fit.png")
+```
+
+These figures also shows the sizes of the residuals and the residual sums of squares $RSS$.  From the plots, and the relative sizes of $RSS$, it seems clear that velocity $x$ explains some of the variability in the values of distance $Y$.  The $RSS$, $RSS_3$, of model 3 is smaller than the $RSS$, $RSS_2$, of model 2. It is impossible that $RSS_3 > RSS_2$. 
+
+A key question is whether $RSS_3$ is so much smaller than $RSS_2$ that we would choose model 3 over model 2, which is a question that is considered in STAT0003. Model 2 is an example of **regression through the origin**, where it is assumed that the intercept equals 0.  We should only fit this kind of model if we have a good reason to. Here Hubble's Law gives us a good reason.  Note that for a regression through the origin, we use $\hat{\sigma}^2 = RSS/(n-1)$.
+
+Since we want to estimate the age of the Universe, we use the estimated regression line for model 2:
+\[ y = 0.00192\,x.  \]
+Therefore, the estimated age of the Universe is given by 
+\[ \hat{T}=0.00192 \mbox{~Mpc/km/sec}. \]
+To clarify the units of $\hat{T}$ we need to convert MPcs to kms by multiplying by $3.086 \times 10^{19}$. This gives $\hat{T}$ in seconds.  We convert to years by dividing by $60 \times 60 \times 24 \times 365.25$:
+\[ \hat{T}
+= 0.00192 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} 
+\approx 2 \mbox{ billion years}. \]
+
+**Update**
+
+Since Hubble's work, physicists have obtained more data in order to obtain better estimates of distances of nebulae from the Earth and hence the age of the Universe. Figure \@ref(fig:hubblescatternew) shows an example of these data (@Freedman2001). Using more powerful telescopes, it has been possible to estimate the distances of nebulae which are further from the Earth.  Having a wider range of distances gives a better (smaller variance) estimator of the age of the Universe.  
+
+```{r echo=FALSE, hubblescatternew, fig.show='hold', fig.cap='Scatter plots of new \'Hubble\' data with fitted regression through the origin.'}
+include_cropped_graphics("images/hubble_scatter_new.png")
+```
+
+Using these data we obtain $\hat{T}=0.0123$ which gives
+\[ 
+\hat{T} = 
+0.0123 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} \approx 12 \mbox{ billion years}. \]
+This estimate agrees more closely with current scientific understanding of the age of the Universe than Hubble original estimate.
+
+### Normal linear regression model
+
+It is common to make the extra assumption that the errors are normally distributed:
+\[ \epsilon_i \sim N(0,\sigma^2), \qquad i=1,\ldots,n. \]
+In other words
+\[ Y_i \mid X=x_i \,\stackrel{{\rm indep}}{\sim}\, N(\alpha+\beta\,x_i,\sigma^2), \qquad i=1,\ldots,n. \]
+These results are used to enable us to (a) decide whether the explanatory variable $x$ is needed in the model, and (b) produce interval estimates of $\alpha, \beta, \sigma^2$ and for predictions made from the model.
+
+### Summary of the assumptions of a (normal) linear regression model
+
+1. **Linearity**: the conditional mean of $Y$ given $x$ is a linear function of $x$.
+2. **Constant error variance**: the variability of $Y$ is the same for all values of $x$.
+3. **Uncorrelatedness of errors**: the errors are not linearly associated.
+4. **Normality of errors**: for a given value of $x$, $Y$ has a normal distribution.
+
+**Uncorrelatedness** and **independence** are related concepts.  
+If two random variables are independent then they are uncorrelated, that is, independence implies lack of correlation.  However, the reverse is not true: two random variables can be uncorrelated but **not** independent (see Section \@ref(correxamples), that is, lack of correlation does **not** imply independence.  The only exception to this is the (multivariate) normal distribution:  for example, if two (jointly) normal random variables are uncorrelated then they are independent.  This explains why it is common for an alternative assumption 3. to be used:
+
+3. **Independence of errors**: knowledge that one response $Y_i$ is larger than expected based on the model does not give us information about whether a different response $Y_j$ is larger (or smaller) than expected.
+
+Notice that, even in the normal linear regression model, we have not made any assumption about the distribution of the $x$s.  In some studies the values of $x$ are chosen by an experimenter, that is, they are not random at all.
 
 ## Looking at scatter plots
 

@@ -12,6 +12,22 @@ Dalal, S.~R., Fowlkes, E.~B., and Hoadley, B. (1989).
 \newblock {\em Journal of the American Statistical Association},
   84(408):945--957.
 
+\bibitem[Freedman et~al., 2001]{Freedman2001}
+Freedman, W.~L., Madore, B.~F., Gibson, B.~K., Ferrarese, L., Kelson, D.~D.,
+  Sakai, S., Mould, J.~R., Robert C.~Kennicutt, J., Ford, H.~C., Graham, J.~A.,
+  Huchra, J.~P., Hughes, S. M.~G., Illingworth, G.~D., Macri, L.~M., and
+  Stetson, P.~B. (2001).
+\newblock Final results from {theHubble} space {TelescopeKey} project to
+  measure the hubble constant.
+\newblock {\em The Astrophysical Journal}, 553(1):47--72.
+
+\bibitem[Hubble, 1929]{Hubble1929}
+Hubble, E. (1929).
+\newblock A relation between distance and radial velocity among extra-galactic
+  nebulae.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  15(3):168--173.
+
 \bibitem[Simpson et~al., 1975]{clouds}
 Simpson, J., Olsen, A., and Eden, J.~C. (1975).
 \newblock A {B}ayesian analysis of a multiplicative treatment effect in weather

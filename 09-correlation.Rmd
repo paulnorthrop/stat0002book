@@ -5,3 +5,5 @@
 ## Covariance and correlation
 
 ## Use and misuse of correlation
+
+### Examples of correlations of different strengths {#correxamples}
