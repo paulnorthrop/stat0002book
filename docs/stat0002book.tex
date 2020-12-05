@@ -147,7 +147,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-12-04}
+\date{2020-12-05}
 
 \begin{document}
 \maketitle
@@ -5398,8 +5398,8 @@ In Chapter \ref{descriptive} we considered ways to describe and summarise \textb
 
 Suppose that we are interested in the distribution of some aspect of a population, for example, the outcomes of successive tosses of a coin. In many cases it is not possible to collect information on the entire population. Therefore, a subset of the population, a \textbf{sample}, is selected. The aim is to generalise from the particular sample collected to the population from which it came. The sample should be representative of the population. This is often achieved most straightforwardly by random sampling, where each member of the population has an equal chance of being chosen and different selections from the population are independent.
 
-\hypertarget{probability-models}{%
-\section{Probability models}\label{probability-models}}
+\hypertarget{probmodels}{%
+\section{Probability models}\label{probmodels}}
 
 Often we makes inferences about a population using probability models. We view the data \(X_1, X_2,...,X_n\) as random variables sampled randomly from a probability distribution. The probability distribution often involves unknown constants, or \textbf{parameters}. We use the data to estimate the values of these parameters. We should also quantify how uncertain we are about the values of the parameters. Generally speaking, the more data we have the more certain we can be about the approximate value of the parameters. This process of is called \textbf{statistical inference}, because we are trying to infer the unknown population distribution and its parameters based on sample statistics.
 
@@ -6473,11 +6473,11 @@ where \(\beta=T\) is the age of the Universe.
 \caption{Scatter plot of distance against recession velocity, with least squares fit of an unconstrained line.}\label{fig:hubblefit}
 \end{figure}
 
-These figures also shows the sizes of the residuals and the residual sums of squares \(RSS\). From the plots, and the relative sizes of \(RSS\), it seems clear that velocity \(x\) explains some of the variability in the values of distance \(Y\). The \(RSS\), \(RSS_3\), of model 3 is smaller than the \(RSS\), \(RSS_2\), of model 2. It is impossible that \(RSS_3 > RSS_2\).
+These figures also shows the sizes of the residuals and the residual sums of squares \(RSS\). From the plots, and the relative sizes of \(RSS\), it seems clear that velocity \(x\) explains some of the variability in the values of distance \(Y\). The \(RSS\), \(RSS_3\), of Model 3 is smaller than the \(RSS\), \(RSS_2\), of Model 2. It is impossible that \(RSS_3 > RSS_2\).
 
-A key question is whether \(RSS_3\) is so much smaller than \(RSS_2\) that we would choose model 3 over model 2, which is a question that is considered in STAT0003. Model 2 is an example of \textbf{regression through the origin}, where it is assumed that the intercept equals 0. We should only fit this kind of model if we have a good reason to. Here Hubble's Law gives us a good reason. Note that for a regression through the origin, we use \(\hat{\sigma}^2 = RSS/(n-1)\).
+A key question is whether \(RSS_3\) is so much smaller than \(RSS_2\) that we would choose Model 3 over Model 2, which is a question that is considered in STAT0003. Model 2 is an example of \textbf{regression through the origin}, where it is assumed that the intercept equals 0. We should only fit this kind of model if we have a good reason to. Here Hubble's Law gives us a good reason. Note that for a regression through the origin, we use \(\hat{\sigma}^2 = RSS/(n-1)\).
 
-Since we want to estimate the age of the Universe, we use the estimated regression line for model 2:
+Since we want to estimate the age of the Universe, we use the estimated regression line for Model 2:
 \[ y = 0.00192\,x.  \]
 Therefore, the estimated age of the Universe is given by
 \[ \hat{T}=0.00192 \mbox{~Mpc/km/sec}. \]
@@ -6514,8 +6514,8 @@ In other words
 \[ Y_i \mid X=x_i \,\stackrel{{\rm indep}}{\sim}\, N(\alpha+\beta\,x_i,\sigma^2), \qquad i=1,\ldots,n. \]
 These results are used to enable us to (a) decide whether the explanatory variable \(x\) is needed in the model, and (b) produce interval estimates of \(\alpha, \beta, \sigma^2\) and for predictions made from the model.
 
-\hypertarget{summary-of-the-assumptions-of-a-normal-linear-regression-model}{%
-\subsection{Summary of the assumptions of a (normal) linear regression model}\label{summary-of-the-assumptions-of-a-normal-linear-regression-model}}
+\hypertarget{lmsummary}{%
+\subsection{Summary of the assumptions of a (normal) linear regression model}\label{lmsummary}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6543,14 +6543,432 @@ If two random variables are independent then they are uncorrelated, that is, ind
 
 Notice that, even in the normal linear regression model, we have not made any assumption about the distribution of the \(x\)s. In some studies the values of \(x\) are chosen by an experimenter, that is, they are not random at all.
 
-\hypertarget{looking-at-scatter-plots}{%
-\section{Looking at scatter plots}\label{looking-at-scatter-plots}}
+\hypertarget{looking}{%
+\section{Looking at scatter plots}\label{looking}}
+
+Before fitting a linear regression model we should look at a scatter plot of \(Y\) against \(x\) to see whether the assumptions of the linear regression model appear to be reasonable. Some questions:
+
+\begin{enumerate}
+\def\labelenumi{\roman{enumi}.}
+\item
+  Is the relationship between \(Y\) and \(x\) approximately linear?
+\item
+  Suppose that we imagine, or draw, a straight line (or a curve if the relationship is non-linear) through the data. Is the variability of \(Y\) (the vertical spread) of points about this straight line approximately constant for all values of \(x\)?
+\item
+  Are there any points which do not appear to fit in with the general pattern of the rest of the data?
+\end{enumerate}
+
+Figure \ref{fig:lmexplplots} gives some example scatter plots.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/lm_expl_plots} 
+
+}
+
+\caption{Some scatter plots.(a) (approximately) linear relationship, (approximately) constant spread about line; (b) non-linear relationship, constant spread about curve;(c) non-linear relationship, increasing spread about curve;(d) quadratic relationship, constant spread about curve; (e) linear relationship, increasing spread about line;(f) linear relationship, non-constant spread about line.}\label{fig:lmexplplots}
+\end{figure}
+
+We now consider what course of action to take based on each of these plots.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The assumptions of linearity and constant error variance appear to be reasonable. Therefore, we fit a simple linear regression model to these data.
+\item
+  The assumption of linearity is not reasonable, but
+
+  \begin{enumerate}
+  \def\labelenumii{\roman{enumii}.}
+  \tightlist
+  \item
+    the relationship between \(Y\) and \(x\) is monotonic (increasing), and
+  \item
+    the variability in \(Y\) is approximately constant for all values of \(x\).
+  \end{enumerate}
+\end{enumerate}
+
+We could try transforming \(x\) to straighten the scatter plot, because transforming \(x\) will not affect the vertical spread of the points. The plot is `hollow down' so we could try \(\log x\) or \(\sqrt{x}\). (If we transform \(Y\) then (b)(ii) would probably no longer be true.)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  The assumption of linearity is not reasonable, but
+
+  \begin{enumerate}
+  \def\labelenumii{\roman{enumii}.}
+  \tightlist
+  \item
+    the relationship between \(Y\) and \(x\) is monotonic (increasing), and
+  \item
+    the variability in \(Y\) increases as \(x\) increases (or, equivalently, as the mean of \(Y\) increases).
+  \end{enumerate}
+\end{enumerate}
+
+We could try transforming \(Y\) to straighten the scatter plot. Transforming \(Y\) will affect the vertical spread of the points. We may be able to find a transformation of \(Y\) which both straightens the plot and makes the variability in \(Y\) approximately constant for all values of \(x\). The plot is `hollow up' so we could try \(\log Y\) or \(\sqrt{Y}\). If not, we may need to transform both \(Y\) and \(x\). (If we transform \(x\) only then the variability of \(Y\) will still increase as \(x\) increases.)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  The assumption of linearity is not reasonable, and
+
+  \begin{enumerate}
+  \def\labelenumii{\roman{enumii}.}
+  \tightlist
+  \item
+    the relationship between \(Y\) and \(x\) is not monotonic (it is quadratic), and
+  \item
+    the variability in \(Y\) is approximately constant for all values of \(x\).
+  \end{enumerate}
+\end{enumerate}
+
+Fit a regression model of the form
+\[ Y_i = \alpha+\beta_1\,x_i+\beta_2\,x_i^2 + \epsilon_i, \qquad i=1,\ldots, n. \]
+This is beyond the scope of STAT0002. You will study this in STAT0006.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\setcounter{enumi}{4}
+\item
+  The assumption of linearity is reasonable but the variability in \(Y\) increases as \(x\) increases. A transformation of \(Y\) may be able to make the variability of \(Y\) approximately constant, but it would produce a non-linear relationship. (Transforming both \(Y\) and \(x\) might work.) However, even though the assumption of constant error variance is not reasonable, the least squares estimates of a simple linear regression are sensible (unbiased). However, it is better to use something called \textbf{weighted least squares} estimation (this is beyond the scope
+  of STAT0002).
+\item
+  The assumption of linearity is reasonable but the variability in \(Y\) is small for extreme (small or large) values of \(x\) and large for middling values of \(x\). The comments made in (e) also apply here.
+\end{enumerate}
+
+If we use transformation to make the assumptions of the simple linear regression model reasonable then, ideally, the transformation should make sense in terms of the subject matter of the data, and be easy to interpret. When interpreting the results of the modelling we need to take into account any transformation used. We will consider some examples where transformation is needed in Section \ref{linregtrans}. In the next section we consider how to check the assumptions of a model \textbf{after} it has been fitted.
 
 \hypertarget{model-checking}{%
 \section{Model checking}\label{model-checking}}
 
+We consider how to use residuals to check the various assumptions of a simple linear regression model. The residual \(r_i\) is a measure of how closely a model agrees with the observation \(y_i\). Recall that we are checking for both isolated lack-of-fit (a few unusual observations) and systematic lack-of-fit (where some more general behaviour of the data is different from the model).
+
+It is best to use graphs to examine the residuals. For many of these plots we can simply use the residuals
+\[ r_i = y_i-\hat{y}_i, \qquad i=1,\ldots,n. \]
+However, it can be helpful to standardise residuals so that they have approximately
+a variance of 1, if the model is true. One possibility is to divide by the estimate of \(\sigma\), that is, \(r_i/\hat{\sigma}\).
+However, different \(r_i\)s usually have slightly different variances. To take account of this we can use \{\it standardised residuals\}
+\[ r^S_i = \frac{r_i}{\hat{\sigma}\,\sqrt{1-h_{ii}}}, \]
+where \(h_{ii}\) is a number between 0 and 1 whose calculation is beyond the scope of STAT0002.
+
+We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Linearity}. The relationship between \(\mbox{E}(Y~|~X=x)\) is linear in \(x\).
+\end{itemize}
+
+The initial plot of \(Y\) against \(x\) gives us a good idea about this. We also plot (standardised) residuals against \(x\) (or the fitted values). If the assumption of linearity is valid then we expect a random scatter of points with no obvious
+pattern. Patterns in the residuals may indicate a non-linear relationship between
+\(Y\) and \(x\).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Constant error variance.} The errors have the same variance, \(\sigma^2\).
+\end{itemize}
+
+We plot (standardised) residuals against the fitted values. If the assumption of constant variance is valid then we expect a random scatter of points with no obvious pattern. A common departure is that the variability of the residuals increases/decreases with the fitted values. This suggests that the error variance increases/decreases with \(Y\).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Independent errors.} The errors \(\{\epsilon_i\}\) should be independent.
+\end{itemize}
+
+This is an important assumption. However, it can be difficult to check, because there are many ways in which the response data could be dependent. We list some common forms of dependence below.
+
+\begin{itemize}
+\item
+  \textbf{Serial} dependence (dependence in time). Suppose that if observation \(Y_i\) is larger (smaller) than expected under the model, giving a positive (negative) residual, then observation \(Y_{i+1}\) will tend also to be larger (smaller) than expected. In this case the successive residuals will be positively associated: the value of one residual affects the value of the next residual. In this case, if the residuals are plotted in time order, there will tend to be more groups of positive residuals and groups of negative residuals than there would be if the residuals were independent. Similarly, if the residuals are negatively associated the residuals will tend alternate from positive to negative and back again repeatedly. If the data were collected in time order (and we are given the order) we should produce a scatter plot of \(r^S_{i+1}\) against \(r^S_i\), that is, each residual against the previous residual, to check whether the size of one residual affects the size of the next residual.
+\item
+  \textbf{Spatial} dependence. This is similar to serial dependence except that the dependence is over space rather than in time. It arises in situations where data are collected at different locations in space. It is common that observations from two nearby locations tend to be more similar to each other than observations from two distant locations. Suppose that we have time series of observations at two locations. We should produce a scatter plot of the residuals at one location against the (corresponding) residuals at the other location.
+\item
+  \textbf{Cluster} dependence. This may occur when the data have been collected in groups. For example, suppose that we collect data on students from UCL. Two students from the same department may tend to be more similar to each other in their responses than two students from different departments. In such cases we could colour or label the points in the residual plots to reflect the department of each student, and look for patterns.
+\end{itemize}
+
+Otherwise, it is important to understand how the data were generated, and what they mean, in order to assess whether (given the values of \(x_1,\ldots x_n\)) the responses, \(Y_1,\ldots,Y_n\), can be assumed to be independent.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Normality}. If the errors \(\{\epsilon_i\}\) are assumed to have a normal distribution then the standardised residuals should have approximately a N(0,1) distribution. We can look at a histogram or a normal QQ plot of residuals.
+\end{itemize}
+
+In addition we should check these plots for any points which do not fit in with the pattern of the other residuals.
+
+Figure \ref{fig:resplots} shows the plots of residuals vs.~fitted values after fitting a linear regression model to the scatter plots in Figure \ref{fig:lmexplplots}. (Note that we shouldn't really fit a linear model to the data in plots (b), (c) and (d). We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/lm_res_plots} 
+
+}
+
+\caption{Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond).}\label{fig:resplots}
+\end{figure}
+
+Plot (a) is an example of a residual plot for a model that fits well: a random scatter of points about the horizontal line residual=0, with approximately constant vertical spread for all values on the \(x\)-axis. In Section \ref{looking} we explained, for the other plots, what the patterns in these plots implied about the relationship between the response and the explanatory variable, and we considered actions we could take in these cases.
+
+Note that:
+
+\begin{itemize}
+\tightlist
+\item
+  We must take into account the spread of the points on the \(x\)-axes of these plots. For example, a triangular pattern can be produced just because there are more large fitted values than small fitted values (see Figure \ref{fig:unevenx}).
+\item
+  The human eye is very good at picking out patterns in plot, even when these patterns do not really exist!
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/uneven} 
+
+}
+
+\caption{Left: scatter plot of $y$ against $x$.  The true relationship is linear with constant error variance.  Right: a triangular residual plot results from uneven distribution of $x$ values.}\label{fig:unevenx}
+\end{figure}
+
+Figure \ref{fig:nonnormal} shows a scatter plot where the relationship between \(\mbox{E}(Y \mid X=x)\) and \(x\) is linear and the variability in \(Y\) about this line is approximately constant. However, the distribution of \(Y\) about the line is skewed. We can see this from the scatter plot and, more clearly, in the residual plots in Figure \ref{fig:nonnormalres}. Although transformation of \(Y\) could make the error distribution more symmetric, it will mess up the linearity. Therefore, the action to take is to fit the linear regression model, and report the fact that the error distribution is skewed.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/non_normal} 
+
+}
+
+\caption{Scatter plot of $y$ against $x$.  The true relationship is linear but the error distribution skewed (with constant variance).}\label{fig:nonnormal}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/non_normal_res} 
+
+}
+
+\caption{Residual plots from the linear model fitted to the data in Figure \\ref{fig:nonnormal}.}\label{fig:nonnormalres}
+\end{figure}
+
+Transformation of \(Y\) could make the error distribution more symmetric, but it will mess up the linearity. Therefore, we fit the linear regression model, and report
+the fact that the error distribution is skewed.
+
+\textbf{The Hubble example (continued)}. We return to Hubble's data. Figure \ref{fig:hubblecheck} shows some residual plots for Model 2 and Model 3.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/hubble_check_origin} 
+
+}
+
+\caption{Checking the linear regression model fitted to Hubble's data. Model 2, regression through the origin.}\label{fig:hubblecheckorigin}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/hubble_check} 
+
+}
+
+\caption{Checking the linear regression model fitted to Hubble's data. Model 3.}\label{fig:hubblecheck}
+\end{figure}
+
+There is no obvious lack-of-fit for Model 3. For Model 2 the main effect of forcing the regression line through the origin is to produce weak linear patterns in the plots of residuals against fitted values and against velocity.
+
+\hypertarget{departures-from-assumptions}{%
+\subsection{Departures from assumptions}\label{departures-from-assumptions}}
+
+As we have seen in Section \ref{lmsummary} the main assumptions underlying a (normal) linear regression model are linearity, constant error variance, independence of errors and normality of errors. Since all models are wrong (see Section \ref{probmodels} these assumptions cannot be exactly true. However, we hope that they are approximately true, or at least close enough to being true that the results from the model are useful.
+
+\begin{itemize}
+\tightlist
+\item
+  If one, or more, of these assumptions is not even approximately true, should we be worried? What should we do about it?
+\item
+  Are these assumptions of equal importance? Or are particular assumptions more important than others, because even a small departure from the assumption results in our inferences being very incorrect?
+\end{itemize}
+
+We consider departures from each assumption, and what to do about them, in turn.
+For the moment we assume that there is a departure from only one of the assumptions.
+
+\textbf{Linearity}
+
+Departures.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Systematic departure. A straight line is not appropriate generally: curved relationship or two separate straight lines, e.g.~one for men, one for women.
+\item
+  Isolated departure. A straight line is appropriate for most of the data but there are a small number of outliers.
+\end{enumerate}
+
+Consequences.
+
+\begin{itemize}
+\tightlist
+\item
+  Bias: systematic over/under estimation and prediction of \(\mbox{E}(Y \mid X=x)\).\}
+\item
+  Misleading inferences: confidence intervals and standard errors (see STAT0003)
+  do not reflect the true uncertainty, hypothesis tests of regression parameters
+  (see STAT0003) do not have the correct properties.
+\end{itemize}
+
+Action.
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Systematic departure. Curved relationship: transform \(Y\) and/or \(x\) to achieve approximate linearity; or fit a non-linear regression model (beyond scope of STAT0002). 2 straight lines: fit two separate regression lines, e.g.~one for males and one for females.
+\item
+  Isolated departure. Check outliers (see Section \ref{outliers}). If outliers are kept, use a statistical method that is designed to be resistant to the presence of outliers (beyond scope of STAT0002).
+\end{enumerate}
+
+\textbf{Constant error variance}
+
+Departures: for example, plots (e) and (f) in Figure \ref{fig:lmexplplots}.
+
+Consequences.
+
+\begin{itemize}
+\tightlist
+\item
+  The least squares estimators are still unbiased for \(\alpha\) and \(\beta\).
+\item
+  Misleading inferences (as in linearity above).
+\end{itemize}
+
+Action: transform \(Y\) to achieve approximate constancy of error variance; or
+use weighted least squares (beyond scope of STAT0002).
+
+\textbf{Independence of errors}
+
+Departures: serial, spatial or cluster dependence.
+
+Consequences:
+
+\begin{itemize}
+\tightlist
+\item
+  The least squares estimators are still unbiased for \(\alpha\) and \(\beta\).
+\item
+  Seriously misleading inferences (as above but more affected). For example, if there is strong dependence between the errors then the amount of information in the data to estimate the model parameters is much different than if the errors are independent. Not taking this into account means that uncertainty in the estimates is misrepresented.
+\end{itemize}
+
+Action: more complicated modelling to take into account the form of the dependence (beyond scope of STAT0002).
+
+\textbf{Normality of errors}
+
+Departures: an error distribution which is not normal, for example, skewed (see Figure \ref{fig:nonnormal}, light-tailed or heavy-tailed.
+
+Consequences:
+
+\begin{itemize}
+\tightlist
+\item
+  The least squares estimators are still unbiased for \(\alpha\) and \(\beta\).
+\item
+  Inferences: confidence intervals, hypothesis tests etc. are OK unless the non-normality is extreme or the sample size is small. This is because the sampling distributions of \(\hat{\alpha}\) and \(\hat{\beta}\) can be approximately normal
+  even when the errors are not normal.
+\item
+  However, prediction intervals for new observations (see STAT0003) are affected because they are based directly on the normality of the errors.
+\end{itemize}
+
+Action:
+
+\begin{itemize}
+\tightlist
+\item
+  Fit the model; report the non-normality of the error distribution.
+\item
+  There may be a good reason to use a model with a different response distribution for \(Y\), e.g.~if the \(Y\)s are counts we could use a Poisson distribution (beyond the scope of STAT0002).
+\end{itemize}
+
+The order of importance of the assumptions for a linear model (most important first) is: linearity and independence, constant error variance, normality of errors. We may find that there are clear departures from more than one assumption, for example, the relationship between \(Y\) and \(x\) is non-linear and the error variance is not constant. If we are lucky we might find a transformation to improve both of these departures.
+
 \hypertarget{outliers}{%
 \subsection{Outliers and influential observations}\label{outliers}}
+
+We have already considered the possibility of outliers. We shouldn't remove an observation just because it appears to be an outlier. However, we should consider whether the conclusions of our analysis are not influenced strongly by outliers. An observation which influences strongly the conclusions of a statistical analysis is called an \textbf{influential observation}. We can assess whether an observation (or group of observations) is influential is to carry out the analysis with and without the observation, and see whether the conclusions change by a practically relevant amount. We will see that in a linear regression analysis some types of outlier are influential, whereas others are not.
+
+Figure \ref{fig:lminfluence} shows some examples where there are one or two outlying observations. The greater the influence of the outlier(s) the greater the change in the fitted regression line when the they are removed. Generally speaking, an observation with an outlying (small or large) value of \(x\) has a greater potential (the technical term is \textbf{leverage}) to affect the fitted regression line than an observation which has an average \(x\) value. This can be seen by comparing plots (a) and (b).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{images/lm_influence} 
+
+}
+
+\caption{Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (---------) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying $x$ value with moderate influence on the fitted regression line; (b) average $x$ value with small influence; (c) 2 outlying $x$s with large influence; (d) outlying $x$ with large influence.}\label{fig:lminfluence}
+\end{figure}
+
+\textbf{How to deal with outliers and influential observations}
+
+Before carrying out a statistical analysis the data should be checked for unusual or unexpected observations and, if possible, any errors should be corrected. Suppose that as a result of statistical analyses an observation, or group of observations, are thought to be outlying and/or influential. Then the following procedure should be followed.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Do the conclusions change by a practically important amount when the observation is deleted?
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    If ``No'': Leave the observation in the dataset;
+  \item
+    If ``Yes'': goto 2.
+  \end{enumerate}
+\item
+  Investigate the observation.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \item
+    Is the observation clearly incorrect?
+
+    \begin{enumerate}
+    \def\labelenumiii{\roman{enumiii}.}
+    \tightlist
+    \item
+      If ``Yes'': if the error cannot be corrected then either use a resistant statistical method or delete the case.
+    \item
+      If ``No'': goto 3.
+    \end{enumerate}
+  \item
+    Is there good reason to believe that the observation does not come from the population of interest?
+
+    \begin{enumerate}
+    \def\labelenumiii{\roman{enumiii}.}
+    \tightlist
+    \item
+      If ``Yes'': either use a resistant statistical method or delete the case.
+    \item
+      If ``No'': goto 3.
+    \end{enumerate}
+  \end{enumerate}
+\item
+  (For linear regression.) Does the observation have an explanatory variable (\(x\)) value which is much smaller or much larger than those of the other observations?
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    If ``Yes'': delete the observation; refit the model; report conclusions for the reduced range of explanatory variables.
+  \item
+    If ``No'': more data, or more information about the influential observation, are needed. Perhaps report 2 separate conclusions: one with the influential observation, one without.
+  \end{enumerate}
+\end{enumerate}
+
+There must be a good reason for deleting an observation.
 
 \hypertarget{linregtrans}{%
 \section{Use of transformations}\label{linregtrans}}

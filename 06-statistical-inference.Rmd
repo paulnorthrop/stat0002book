@@ -19,7 +19,7 @@ In Chapter \@ref(descriptive) we considered ways to describe and summarise **sam
 
 Suppose that we are interested in the distribution of some aspect of a population, for example, the outcomes of successive tosses of a coin. In many cases it is not possible to collect information on the entire population. Therefore, a subset of the population, a **sample**, is selected. The aim is to generalise from the particular sample collected to the population from which it came.  The sample should be representative of the population. This is often achieved most straightforwardly by random sampling, where each member of the population has an equal chance of being chosen and different selections from the population are independent.
 
-## Probability models
+## Probability models {#probmodels}
 
 Often we makes inferences about a population using probability models. We view the data $X_1, X_2,...,X_n$ as random variables sampled randomly from a probability distribution.  The probability distribution often involves unknown constants, or **parameters**.  We use the data to estimate the values of these parameters. We should also quantify how uncertain we are about the values of the parameters. Generally speaking, the more data we have the more certain we can be about the approximate value of the parameters.  This process of is called **statistical inference**, because we are trying to infer the unknown population distribution and its parameters based on sample statistics.
 

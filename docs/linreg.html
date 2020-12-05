@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-12-04" />
+<meta name="date" content="2020-12-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -253,7 +253,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a><ul>
 <li class="chapter" data-level="6.1" data-path="inference.html"><a href="inference.html#the-story-so-far"><i class="fa fa-check"></i><b>6.1</b> The story so far</a></li>
 <li class="chapter" data-level="6.2" data-path="inference.html"><a href="inference.html#sample-and-populations"><i class="fa fa-check"></i><b>6.2</b> Sample and populations</a></li>
-<li class="chapter" data-level="6.3" data-path="inference.html"><a href="inference.html#probability-models"><i class="fa fa-check"></i><b>6.3</b> Probability models</a></li>
+<li class="chapter" data-level="6.3" data-path="inference.html"><a href="inference.html#probmodels"><i class="fa fa-check"></i><b>6.3</b> Probability models</a></li>
 <li class="chapter" data-level="6.4" data-path="inference.html"><a href="inference.html#fitting-models"><i class="fa fa-check"></i><b>6.4</b> Fitting models</a></li>
 <li class="chapter" data-level="6.5" data-path="inference.html"><a href="inference.html#uncertainty-in-estimation"><i class="fa fa-check"></i><b>6.5</b> Uncertainty in estimation</a><ul>
 <li class="chapter" data-level="6.5.1" data-path="inference.html"><a href="inference.html#simulation-coin-tossing-example"><i class="fa fa-check"></i><b>6.5.1</b> Simulation: coin-tossing example</a></li>
@@ -292,11 +292,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.2" data-path="linreg.html"><a href="linreg.html#least-squares-estimation-of-alpha-and-beta"><i class="fa fa-check"></i><b>8.1.2</b> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></a></li>
 <li class="chapter" data-level="8.1.3" data-path="linreg.html"><a href="linreg.html#least-squares-fitting-to-hubbles-data"><i class="fa fa-check"></i><b>8.1.3</b> Least squares fitting to Hubble’s data</a></li>
 <li class="chapter" data-level="8.1.4" data-path="linreg.html"><a href="linreg.html#normal-linear-regression-model"><i class="fa fa-check"></i><b>8.1.4</b> Normal linear regression model</a></li>
-<li class="chapter" data-level="8.1.5" data-path="linreg.html"><a href="linreg.html#summary-of-the-assumptions-of-a-normal-linear-regression-model"><i class="fa fa-check"></i><b>8.1.5</b> Summary of the assumptions of a (normal) linear regression model</a></li>
+<li class="chapter" data-level="8.1.5" data-path="linreg.html"><a href="linreg.html#lmsummary"><i class="fa fa-check"></i><b>8.1.5</b> Summary of the assumptions of a (normal) linear regression model</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking-at-scatter-plots"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
+<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
 <li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.1</b> Outliers and influential observations</a></li>
+<li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#departures-from-assumptions"><i class="fa fa-check"></i><b>8.3.1</b> Departures from assumptions</a></li>
+<li class="chapter" data-level="8.3.2" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.2</b> Outliers and influential observations</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a></li>
 <li class="chapter" data-level="8.5" data-path="linreg.html"><a href="linreg.html#over-fitting"><i class="fa fa-check"></i><b>8.5</b> Over-fitting</a></li>
@@ -466,9 +467,9 @@ Figure 8.5: Scatter plot of distance against recession velocity, with least squa
 Figure 8.6: Scatter plot of distance against recession velocity, with least squares fit of an unconstrained line.
 </p>
 </div>
-<p>These figures also shows the sizes of the residuals and the residual sums of squares <span class="math inline">\(RSS\)</span>. From the plots, and the relative sizes of <span class="math inline">\(RSS\)</span>, it seems clear that velocity <span class="math inline">\(x\)</span> explains some of the variability in the values of distance <span class="math inline">\(Y\)</span>. The <span class="math inline">\(RSS\)</span>, <span class="math inline">\(RSS_3\)</span>, of model 3 is smaller than the <span class="math inline">\(RSS\)</span>, <span class="math inline">\(RSS_2\)</span>, of model 2. It is impossible that <span class="math inline">\(RSS_3 &gt; RSS_2\)</span>.</p>
-<p>A key question is whether <span class="math inline">\(RSS_3\)</span> is so much smaller than <span class="math inline">\(RSS_2\)</span> that we would choose model 3 over model 2, which is a question that is considered in STAT0003. Model 2 is an example of <strong>regression through the origin</strong>, where it is assumed that the intercept equals 0. We should only fit this kind of model if we have a good reason to. Here Hubble’s Law gives us a good reason. Note that for a regression through the origin, we use <span class="math inline">\(\hat{\sigma}^2 = RSS/(n-1)\)</span>.</p>
-<p>Since we want to estimate the age of the Universe, we use the estimated regression line for model 2:
+<p>These figures also shows the sizes of the residuals and the residual sums of squares <span class="math inline">\(RSS\)</span>. From the plots, and the relative sizes of <span class="math inline">\(RSS\)</span>, it seems clear that velocity <span class="math inline">\(x\)</span> explains some of the variability in the values of distance <span class="math inline">\(Y\)</span>. The <span class="math inline">\(RSS\)</span>, <span class="math inline">\(RSS_3\)</span>, of Model 3 is smaller than the <span class="math inline">\(RSS\)</span>, <span class="math inline">\(RSS_2\)</span>, of Model 2. It is impossible that <span class="math inline">\(RSS_3 &gt; RSS_2\)</span>.</p>
+<p>A key question is whether <span class="math inline">\(RSS_3\)</span> is so much smaller than <span class="math inline">\(RSS_2\)</span> that we would choose Model 3 over Model 2, which is a question that is considered in STAT0003. Model 2 is an example of <strong>regression through the origin</strong>, where it is assumed that the intercept equals 0. We should only fit this kind of model if we have a good reason to. Here Hubble’s Law gives us a good reason. Note that for a regression through the origin, we use <span class="math inline">\(\hat{\sigma}^2 = RSS/(n-1)\)</span>.</p>
+<p>Since we want to estimate the age of the Universe, we use the estimated regression line for Model 2:
 <span class="math display">\[ y = 0.00192\,x.  \]</span>
 Therefore, the estimated age of the Universe is given by
 <span class="math display">\[ \hat{T}=0.00192 \mbox{~Mpc/km/sec}. \]</span>
@@ -498,7 +499,7 @@ In other words
 <span class="math display">\[ Y_i \mid X=x_i \,\stackrel{{\rm indep}}{\sim}\, N(\alpha+\beta\,x_i,\sigma^2), \qquad i=1,\ldots,n. \]</span>
 These results are used to enable us to (a) decide whether the explanatory variable <span class="math inline">\(x\)</span> is needed in the model, and (b) produce interval estimates of <span class="math inline">\(\alpha, \beta, \sigma^2\)</span> and for predictions made from the model.</p>
 </div>
-<div id="summary-of-the-assumptions-of-a-normal-linear-regression-model" class="section level3">
+<div id="lmsummary" class="section level3">
 <h3><span class="header-section-number">8.1.5</span> Summary of the assumptions of a (normal) linear regression model</h3>
 <ol style="list-style-type: decimal">
 <li><strong>Linearity</strong>: the conditional mean of <span class="math inline">\(Y\)</span> given <span class="math inline">\(x\)</span> is a linear function of <span class="math inline">\(x\)</span>.</li>
@@ -514,13 +515,237 @@ If two random variables are independent then they are uncorrelated, that is, ind
 <p>Notice that, even in the normal linear regression model, we have not made any assumption about the distribution of the <span class="math inline">\(x\)</span>s. In some studies the values of <span class="math inline">\(x\)</span> are chosen by an experimenter, that is, they are not random at all.</p>
 </div>
 </div>
-<div id="looking-at-scatter-plots" class="section level2">
+<div id="looking" class="section level2">
 <h2><span class="header-section-number">8.2</span> Looking at scatter plots</h2>
+<p>Before fitting a linear regression model we should look at a scatter plot of <span class="math inline">\(Y\)</span> against <span class="math inline">\(x\)</span> to see whether the assumptions of the linear regression model appear to be reasonable. Some questions:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Is the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> approximately linear?</p></li>
+<li><p>Suppose that we imagine, or draw, a straight line (or a curve if the relationship is non-linear) through the data. Is the variability of <span class="math inline">\(Y\)</span> (the vertical spread) of points about this straight line approximately constant for all values of <span class="math inline">\(x\)</span>?</p></li>
+<li><p>Are there any points which do not appear to fit in with the general pattern of the rest of the data?</p></li>
+</ol>
+<p>Figure <a href="linreg.html#fig:lmexplplots">8.8</a> gives some example scatter plots.</p>
+<div class="figure" style="text-align: center"><span id="fig:lmexplplots"></span>
+<img src="images/lm_expl_plots.png" alt="Some scatter plots.(a) (approximately) linear relationship, (approximately) constant spread about line; (b) non-linear relationship, constant spread about curve;(c) non-linear relationship, increasing spread about curve;(d) quadratic relationship, constant spread about curve; (e) linear relationship, increasing spread about line;(f) linear relationship, non-constant spread about line." width="95%" />
+<p class="caption">
+Figure 8.8: Some scatter plots.(a) (approximately) linear relationship, (approximately) constant spread about line; (b) non-linear relationship, constant spread about curve;(c) non-linear relationship, increasing spread about curve;(d) quadratic relationship, constant spread about curve; (e) linear relationship, increasing spread about line;(f) linear relationship, non-constant spread about line.
+</p>
+</div>
+<p>We now consider what course of action to take based on each of these plots.</p>
+<ol style="list-style-type: lower-alpha">
+<li>The assumptions of linearity and constant error variance appear to be reasonable. Therefore, we fit a simple linear regression model to these data.</li>
+<li>The assumption of linearity is not reasonable, but
+<ol style="list-style-type: lower-roman">
+<li>the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> is monotonic (increasing), and</li>
+<li>the variability in <span class="math inline">\(Y\)</span> is approximately constant for all values of <span class="math inline">\(x\)</span>.</li>
+</ol></li>
+</ol>
+<p>We could try transforming <span class="math inline">\(x\)</span> to straighten the scatter plot, because transforming <span class="math inline">\(x\)</span> will not affect the vertical spread of the points. The plot is `hollow down’ so we could try <span class="math inline">\(\log x\)</span> or <span class="math inline">\(\sqrt{x}\)</span>. (If we transform <span class="math inline">\(Y\)</span> then (b)(ii) would probably no longer be true.)</p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>The assumption of linearity is not reasonable, but
+<ol style="list-style-type: lower-roman">
+<li>the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> is monotonic (increasing), and</li>
+<li>the variability in <span class="math inline">\(Y\)</span> increases as <span class="math inline">\(x\)</span> increases (or, equivalently, as the mean of <span class="math inline">\(Y\)</span> increases).</li>
+</ol></li>
+</ol>
+<p>We could try transforming <span class="math inline">\(Y\)</span> to straighten the scatter plot. Transforming <span class="math inline">\(Y\)</span> will affect the vertical spread of the points. We may be able to find a transformation of <span class="math inline">\(Y\)</span> which both straightens the plot and makes the variability in <span class="math inline">\(Y\)</span> approximately constant for all values of <span class="math inline">\(x\)</span>. The plot is `hollow up’ so we could try <span class="math inline">\(\log Y\)</span> or <span class="math inline">\(\sqrt{Y}\)</span>. If not, we may need to transform both <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span>. (If we transform <span class="math inline">\(x\)</span> only then the variability of <span class="math inline">\(Y\)</span> will still increase as <span class="math inline">\(x\)</span> increases.)</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>The assumption of linearity is not reasonable, and
+<ol style="list-style-type: lower-roman">
+<li>the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> is not monotonic (it is quadratic), and</li>
+<li>the variability in <span class="math inline">\(Y\)</span> is approximately constant for all values of <span class="math inline">\(x\)</span>.</li>
+</ol></li>
+</ol>
+<p>Fit a regression model of the form
+<span class="math display">\[ Y_i = \alpha+\beta_1\,x_i+\beta_2\,x_i^2 + \epsilon_i, \qquad i=1,\ldots, n. \]</span>
+This is beyond the scope of STAT0002. You will study this in STAT0006.</p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li><p>The assumption of linearity is reasonable but the variability in <span class="math inline">\(Y\)</span> increases as <span class="math inline">\(x\)</span> increases. A transformation of <span class="math inline">\(Y\)</span> may be able to make the variability of <span class="math inline">\(Y\)</span> approximately constant, but it would produce a non-linear relationship. (Transforming both <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> might work.) However, even though the assumption of constant error variance is not reasonable, the least squares estimates of a simple linear regression are sensible (unbiased). However, it is better to use something called <strong>weighted least squares</strong> estimation (this is beyond the scope
+of STAT0002).</p></li>
+<li><p>The assumption of linearity is reasonable but the variability in <span class="math inline">\(Y\)</span> is small for extreme (small or large) values of <span class="math inline">\(x\)</span> and large for middling values of <span class="math inline">\(x\)</span>. The comments made in (e) also apply here.</p></li>
+</ol>
+<p>If we use transformation to make the assumptions of the simple linear regression model reasonable then, ideally, the transformation should make sense in terms of the subject matter of the data, and be easy to interpret. When interpreting the results of the modelling we need to take into account any transformation used. We will consider some examples where transformation is needed in Section <a href="linreg.html#linregtrans">8.4</a>. In the next section we consider how to check the assumptions of a model <strong>after</strong> it has been fitted.</p>
 </div>
 <div id="model-checking" class="section level2">
 <h2><span class="header-section-number">8.3</span> Model checking</h2>
+<p>We consider how to use residuals to check the various assumptions of a simple linear regression model. The residual <span class="math inline">\(r_i\)</span> is a measure of how closely a model agrees with the observation <span class="math inline">\(y_i\)</span>. Recall that we are checking for both isolated lack-of-fit (a few unusual observations) and systematic lack-of-fit (where some more general behaviour of the data is different from the model).</p>
+<p>It is best to use graphs to examine the residuals. For many of these plots we can simply use the residuals
+<span class="math display">\[ r_i = y_i-\hat{y}_i, \qquad i=1,\ldots,n. \]</span>
+However, it can be helpful to standardise residuals so that they have approximately
+a variance of 1, if the model is true. One possibility is to divide by the estimate of <span class="math inline">\(\sigma\)</span>, that is, <span class="math inline">\(r_i/\hat{\sigma}\)</span>.
+However, different <span class="math inline">\(r_i\)</span>s usually have slightly different variances. To take account of this we can use {}
+<span class="math display">\[ r^S_i = \frac{r_i}{\hat{\sigma}\,\sqrt{1-h_{ii}}}, \]</span>
+where <span class="math inline">\(h_{ii}\)</span> is a number between 0 and 1 whose calculation is beyond the scope of STAT0002.</p>
+<p>We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.</p>
+<ul>
+<li><strong>Linearity</strong>. The relationship between <span class="math inline">\(\mbox{E}(Y~|~X=x)\)</span> is linear in <span class="math inline">\(x\)</span>.</li>
+</ul>
+<p>The initial plot of <span class="math inline">\(Y\)</span> against <span class="math inline">\(x\)</span> gives us a good idea about this. We also plot (standardised) residuals against <span class="math inline">\(x\)</span> (or the fitted values). If the assumption of linearity is valid then we expect a random scatter of points with no obvious
+pattern. Patterns in the residuals may indicate a non-linear relationship between
+<span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li><strong>Constant error variance.</strong> The errors have the same variance, <span class="math inline">\(\sigma^2\)</span>.</li>
+</ul>
+<p>We plot (standardised) residuals against the fitted values. If the assumption of constant variance is valid then we expect a random scatter of points with no obvious pattern. A common departure is that the variability of the residuals increases/decreases with the fitted values. This suggests that the error variance increases/decreases with <span class="math inline">\(Y\)</span>.</p>
+<ul>
+<li><strong>Independent errors.</strong> The errors <span class="math inline">\(\{\epsilon_i\}\)</span> should be independent.</li>
+</ul>
+<p>This is an important assumption. However, it can be difficult to check, because there are many ways in which the response data could be dependent. We list some common forms of dependence below.</p>
+<ul>
+<li><p><strong>Serial</strong> dependence (dependence in time). Suppose that if observation <span class="math inline">\(Y_i\)</span> is larger (smaller) than expected under the model, giving a positive (negative) residual, then observation <span class="math inline">\(Y_{i+1}\)</span> will tend also to be larger (smaller) than expected. In this case the successive residuals will be positively associated: the value of one residual affects the value of the next residual. In this case, if the residuals are plotted in time order, there will tend to be more groups of positive residuals and groups of negative residuals than there would be if the residuals were independent. Similarly, if the residuals are negatively associated the residuals will tend alternate from positive to negative and back again repeatedly. If the data were collected in time order (and we are given the order) we should produce a scatter plot of <span class="math inline">\(r^S_{i+1}\)</span> against <span class="math inline">\(r^S_i\)</span>, that is, each residual against the previous residual, to check whether the size of one residual affects the size of the next residual.</p></li>
+<li><p><strong>Spatial</strong> dependence. This is similar to serial dependence except that the dependence is over space rather than in time. It arises in situations where data are collected at different locations in space. It is common that observations from two nearby locations tend to be more similar to each other than observations from two distant locations. Suppose that we have time series of observations at two locations. We should produce a scatter plot of the residuals at one location against the (corresponding) residuals at the other location.</p></li>
+<li><p><strong>Cluster</strong> dependence. This may occur when the data have been collected in groups. For example, suppose that we collect data on students from UCL. Two students from the same department may tend to be more similar to each other in their responses than two students from different departments. In such cases we could colour or label the points in the residual plots to reflect the department of each student, and look for patterns.</p></li>
+</ul>
+<p>Otherwise, it is important to understand how the data were generated, and what they mean, in order to assess whether (given the values of <span class="math inline">\(x_1,\ldots x_n\)</span>) the responses, <span class="math inline">\(Y_1,\ldots,Y_n\)</span>, can be assumed to be independent.</p>
+<ul>
+<li><strong>Normality</strong>. If the errors <span class="math inline">\(\{\epsilon_i\}\)</span> are assumed to have a normal distribution then the standardised residuals should have approximately a N(0,1) distribution. We can look at a histogram or a normal QQ plot of residuals.</li>
+</ul>
+<p>In addition we should check these plots for any points which do not fit in with the pattern of the other residuals.</p>
+<p>Figure <a href="linreg.html#fig:resplots">8.9</a> shows the plots of residuals vs. fitted values after fitting a linear regression model to the scatter plots in Figure <a href="linreg.html#fig:lmexplplots">8.8</a>. (Note that we shouldn’t really fit a linear model to the data in plots (b), (c) and (d). We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.</p>
+<div class="figure" style="text-align: center"><span id="fig:resplots"></span>
+<img src="images/lm_res_plots.png" alt="Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond)." width="95%" />
+<p class="caption">
+Figure 8.9: Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond).
+</p>
+</div>
+<p>Plot (a) is an example of a residual plot for a model that fits well: a random scatter of points about the horizontal line residual=0, with approximately constant vertical spread for all values on the <span class="math inline">\(x\)</span>-axis. In Section <a href="linreg.html#looking">8.2</a> we explained, for the other plots, what the patterns in these plots implied about the relationship between the response and the explanatory variable, and we considered actions we could take in these cases.</p>
+<p>Note that:</p>
+<ul>
+<li>We must take into account the spread of the points on the <span class="math inline">\(x\)</span>-axes of these plots. For example, a triangular pattern can be produced just because there are more large fitted values than small fitted values (see Figure <a href="linreg.html#fig:unevenx">8.10</a>).</li>
+<li>The human eye is very good at picking out patterns in plot, even when these patterns do not really exist!</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unevenx"></span>
+<img src="images/uneven.png" alt="Left: scatter plot of $y$ against $x$.  The true relationship is linear with constant error variance.  Right: a triangular residual plot results from uneven distribution of $x$ values." width="95%" />
+<p class="caption">
+Figure 8.10: Left: scatter plot of <span class="math inline">\(y\)</span> against <span class="math inline">\(x\)</span>. The true relationship is linear with constant error variance. Right: a triangular residual plot results from uneven distribution of <span class="math inline">\(x\)</span> values.
+</p>
+</div>
+<p>Figure <a href="linreg.html#fig:nonnormal">8.11</a> shows a scatter plot where the relationship between <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span> and <span class="math inline">\(x\)</span> is linear and the variability in <span class="math inline">\(Y\)</span> about this line is approximately constant. However, the distribution of <span class="math inline">\(Y\)</span> about the line is skewed. We can see this from the scatter plot and, more clearly, in the residual plots in Figure <a href="linreg.html#fig:nonnormalres">8.12</a>. Although transformation of <span class="math inline">\(Y\)</span> could make the error distribution more symmetric, it will mess up the linearity. Therefore, the action to take is to fit the linear regression model, and report the fact that the error distribution is skewed.</p>
+<div class="figure" style="text-align: center"><span id="fig:nonnormal"></span>
+<img src="images/non_normal.png" alt="Scatter plot of $y$ against $x$.  The true relationship is linear but the error distribution skewed (with constant variance)." width="75%" />
+<p class="caption">
+Figure 8.11: Scatter plot of <span class="math inline">\(y\)</span> against <span class="math inline">\(x\)</span>. The true relationship is linear but the error distribution skewed (with constant variance).
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:nonnormalres"></span>
+<img src="images/non_normal_res.png" alt="Residual plots from the linear model fitted to the data in Figure \@ref(fig:nonnormal)." width="95%" />
+<p class="caption">
+Figure 8.12: Residual plots from the linear model fitted to the data in Figure <a href="linreg.html#fig:nonnormal">8.11</a>.
+</p>
+</div>
+<p>Transformation of <span class="math inline">\(Y\)</span> could make the error distribution more symmetric, but it will mess up the linearity. Therefore, we fit the linear regression model, and report
+the fact that the error distribution is skewed.</p>
+<p><strong>The Hubble example (continued)</strong>. We return to Hubble’s data. Figure <a href="linreg.html#fig:hubblecheck">8.14</a> shows some residual plots for Model 2 and Model 3.</p>
+<div class="figure" style="text-align: center"><span id="fig:hubblecheckorigin"></span>
+<img src="images/hubble_check_origin.png" alt="Checking the linear regression model fitted to Hubble's data. Model 2, regression through the origin." width="95%" />
+<p class="caption">
+Figure 8.13: Checking the linear regression model fitted to Hubble’s data. Model 2, regression through the origin.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:hubblecheck"></span>
+<img src="images/hubble_check.png" alt="Checking the linear regression model fitted to Hubble's data. Model 3." width="95%" />
+<p class="caption">
+Figure 8.14: Checking the linear regression model fitted to Hubble’s data. Model 3.
+</p>
+</div>
+<p>There is no obvious lack-of-fit for Model 3. For Model 2 the main effect of forcing the regression line through the origin is to produce weak linear patterns in the plots of residuals against fitted values and against velocity.</p>
+<div id="departures-from-assumptions" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Departures from assumptions</h3>
+<p>As we have seen in Section <a href="linreg.html#lmsummary">8.1.5</a> the main assumptions underlying a (normal) linear regression model are linearity, constant error variance, independence of errors and normality of errors. Since all models are wrong (see Section <a href="inference.html#probmodels">6.3</a> these assumptions cannot be exactly true. However, we hope that they are approximately true, or at least close enough to being true that the results from the model are useful.</p>
+<ul>
+<li>If one, or more, of these assumptions is not even approximately true, should we be worried? What should we do about it?</li>
+<li>Are these assumptions of equal importance? Or are particular assumptions more important than others, because even a small departure from the assumption results in our inferences being very incorrect?</li>
+</ul>
+<p>We consider departures from each assumption, and what to do about them, in turn.
+For the moment we assume that there is a departure from only one of the assumptions.</p>
+<p><strong>Linearity</strong></p>
+<p>Departures.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Systematic departure. A straight line is not appropriate generally: curved relationship or two separate straight lines, e.g. one for men, one for women.</li>
+<li>Isolated departure. A straight line is appropriate for most of the data but there are a small number of outliers.</li>
+</ol>
+<p>Consequences.</p>
+<ul>
+<li>Bias: systematic over/under estimation and prediction of <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span>.}</li>
+<li>Misleading inferences: confidence intervals and standard errors (see STAT0003)
+do not reflect the true uncertainty, hypothesis tests of regression parameters
+(see STAT0003) do not have the correct properties.</li>
+</ul>
+<p>Action.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Systematic departure. Curved relationship: transform <span class="math inline">\(Y\)</span> and/or <span class="math inline">\(x\)</span> to achieve approximate linearity; or fit a non-linear regression model (beyond scope of STAT0002). 2 straight lines: fit two separate regression lines, e.g. one for males and one for females.</li>
+<li>Isolated departure. Check outliers (see Section <a href="linreg.html#outliers">8.3.2</a>). If outliers are kept, use a statistical method that is designed to be resistant to the presence of outliers (beyond scope of STAT0002).</li>
+</ol>
+<p><strong>Constant error variance</strong></p>
+<p>Departures: for example, plots (e) and (f) in Figure <a href="linreg.html#fig:lmexplplots">8.8</a>.</p>
+<p>Consequences.</p>
+<ul>
+<li>The least squares estimators are still unbiased for <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</li>
+<li>Misleading inferences (as in linearity above).</li>
+</ul>
+<p>Action: transform <span class="math inline">\(Y\)</span> to achieve approximate constancy of error variance; or
+use weighted least squares (beyond scope of STAT0002).</p>
+<p><strong>Independence of errors</strong></p>
+<p>Departures: serial, spatial or cluster dependence.</p>
+<p>Consequences:</p>
+<ul>
+<li>The least squares estimators are still unbiased for <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</li>
+<li>Seriously misleading inferences (as above but more affected). For example, if there is strong dependence between the errors then the amount of information in the data to estimate the model parameters is much different than if the errors are independent. Not taking this into account means that uncertainty in the estimates is misrepresented.</li>
+</ul>
+<p>Action: more complicated modelling to take into account the form of the dependence (beyond scope of STAT0002).</p>
+<p><strong>Normality of errors</strong></p>
+<p>Departures: an error distribution which is not normal, for example, skewed (see Figure <a href="linreg.html#fig:nonnormal">8.11</a>, light-tailed or heavy-tailed.</p>
+<p>Consequences:</p>
+<ul>
+<li>The least squares estimators are still unbiased for <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>.</li>
+<li>Inferences: confidence intervals, hypothesis tests etc. are OK unless the non-normality is extreme or the sample size is small. This is because the sampling distributions of <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> can be approximately normal
+even when the errors are not normal.</li>
+<li>However, prediction intervals for new observations (see STAT0003) are affected because they are based directly on the normality of the errors.</li>
+</ul>
+<p>Action:</p>
+<ul>
+<li>Fit the model; report the non-normality of the error distribution.</li>
+<li>There may be a good reason to use a model with a different response distribution for <span class="math inline">\(Y\)</span>, e.g. if the <span class="math inline">\(Y\)</span>s are counts we could use a Poisson distribution (beyond the scope of STAT0002).</li>
+</ul>
+<p>The order of importance of the assumptions for a linear model (most important first) is: linearity and independence, constant error variance, normality of errors. We may find that there are clear departures from more than one assumption, for example, the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> is non-linear and the error variance is not constant. If we are lucky we might find a transformation to improve both of these departures.</p>
+</div>
 <div id="outliers" class="section level3">
-<h3><span class="header-section-number">8.3.1</span> Outliers and influential observations</h3>
+<h3><span class="header-section-number">8.3.2</span> Outliers and influential observations</h3>
+<p>We have already considered the possibility of outliers. We shouldn’t remove an observation just because it appears to be an outlier. However, we should consider whether the conclusions of our analysis are not influenced strongly by outliers. An observation which influences strongly the conclusions of a statistical analysis is called an <strong>influential observation</strong>. We can assess whether an observation (or group of observations) is influential is to carry out the analysis with and without the observation, and see whether the conclusions change by a practically relevant amount. We will see that in a linear regression analysis some types of outlier are influential, whereas others are not.</p>
+<p>Figure <a href="linreg.html#fig:lminfluence">8.15</a> shows some examples where there are one or two outlying observations. The greater the influence of the outlier(s) the greater the change in the fitted regression line when the they are removed. Generally speaking, an observation with an outlying (small or large) value of <span class="math inline">\(x\)</span> has a greater potential (the technical term is <strong>leverage</strong>) to affect the fitted regression line than an observation which has an average <span class="math inline">\(x\)</span> value. This can be seen by comparing plots (a) and (b).</p>
+<div class="figure" style="text-align: center"><span id="fig:lminfluence"></span>
+<img src="images/lm_influence.png" alt="Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (---------) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying $x$ value with moderate influence on the fitted regression line; (b) average $x$ value with small influence; (c) 2 outlying $x$s with large influence; (d) outlying $x$ with large influence." width="95%" />
+<p class="caption">
+Figure 8.15: Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (———) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying <span class="math inline">\(x\)</span> value with moderate influence on the fitted regression line; (b) average <span class="math inline">\(x\)</span> value with small influence; (c) 2 outlying <span class="math inline">\(x\)</span>s with large influence; (d) outlying <span class="math inline">\(x\)</span> with large influence.
+</p>
+</div>
+<p><strong>How to deal with outliers and influential observations</strong></p>
+<p>Before carrying out a statistical analysis the data should be checked for unusual or unexpected observations and, if possible, any errors should be corrected. Suppose that as a result of statistical analyses an observation, or group of observations, are thought to be outlying and/or influential. Then the following procedure should be followed.</p>
+<ol style="list-style-type: decimal">
+<li><p>Do the conclusions change by a practically important amount when the observation is deleted?</p>
+<ol style="list-style-type: lower-alpha">
+<li>If ``No’’: Leave the observation in the dataset;</li>
+<li>If ``Yes’’: goto 2.</li>
+</ol></li>
+<li><p>Investigate the observation.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Is the observation clearly incorrect?</p>
+<ol style="list-style-type: lower-roman">
+<li>If ``Yes’’: if the error cannot be corrected then either use a resistant statistical method or delete the case.</li>
+<li>If ``No’’: goto 3.</li>
+</ol></li>
+<li><p>Is there good reason to believe that the observation does not come from the population of interest?</p>
+<ol style="list-style-type: lower-roman">
+<li>If ``Yes’’: either use a resistant statistical method or delete the case.</li>
+<li>If ``No’’: goto 3.</li>
+</ol></li>
+</ol></li>
+<li><p>(For linear regression.) Does the observation have an explanatory variable (<span class="math inline">\(x\)</span>) value which is much smaller or much larger than those of the other observations?</p>
+<ol style="list-style-type: lower-alpha">
+<li>If ``Yes’’: delete the observation; refit the model; report conclusions for the reduced range of explanatory variables.</li>
+<li>If ``No’’: more data, or more information about the influential observation, are needed. Perhaps report 2 separate conclusions: one with the influential observation, one without.</li>
+</ol></li>
+</ol>
+<p>There must be a good reason for deleting an observation.</p>
 </div>
 </div>
 <div id="linregtrans" class="section level2">

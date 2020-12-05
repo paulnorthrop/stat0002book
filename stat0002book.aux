@@ -545,7 +545,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Sample and populations}{104}{section.6.2}\protected@file@percent }
 \newlabel{sample-and-populations}{{6.2}{104}{Sample and populations}{section.6.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Probability models}{104}{section.6.3}\protected@file@percent }
-\newlabel{probability-models}{{6.3}{104}{Probability models}{section.6.3}{}}
+\newlabel{probmodels}{{6.3}{104}{Probability models}{section.6.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces A schematic to describe the idea of statistical inference.\relax }}{105}{figure.caption.148}\protected@file@percent }
 \newlabel{fig:inference}{{6.1}{105}{A schematic to describe the idea of statistical inference.\relax }{figure.caption.148}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.4}Fitting models}{105}{section.6.4}\protected@file@percent }
@@ -685,42 +685,60 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.4}Normal linear regression model}{139}{subsection.8.1.4}\protected@file@percent }
 \newlabel{normal-linear-regression-model}{{8.1.4}{139}{Normal linear regression model}{subsection.8.1.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {8.1.5}Summary of the assumptions of a (normal) linear regression model}{139}{subsection.8.1.5}\protected@file@percent }
-\newlabel{summary-of-the-assumptions-of-a-normal-linear-regression-model}{{8.1.5}{139}{Summary of the assumptions of a (normal) linear regression model}{subsection.8.1.5}{}}
+\newlabel{lmsummary}{{8.1.5}{139}{Summary of the assumptions of a (normal) linear regression model}{subsection.8.1.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {8.2}Looking at scatter plots}{140}{section.8.2}\protected@file@percent }
-\newlabel{looking-at-scatter-plots}{{8.2}{140}{Looking at scatter plots}{section.8.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.3}Model checking}{140}{section.8.3}\protected@file@percent }
-\newlabel{model-checking}{{8.3}{140}{Model checking}{section.8.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.1}Outliers and influential observations}{140}{subsection.8.3.1}\protected@file@percent }
-\newlabel{outliers}{{8.3.1}{140}{Outliers and influential observations}{subsection.8.3.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.4}Use of transformations}{140}{section.8.4}\protected@file@percent }
-\newlabel{linregtrans}{{8.4}{140}{Use of transformations}{section.8.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.5}Over-fitting}{140}{section.8.5}\protected@file@percent }
-\newlabel{over-fitting}{{8.5}{140}{Over-fitting}{section.8.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.6}Other aspects of regression}{140}{section.8.6}\protected@file@percent }
-\newlabel{other-aspects-of-regression}{{8.6}{140}{Other aspects of regression}{section.8.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{140}{section.8.7}\protected@file@percent }
-\newlabel{uncertainty-in-parameter-estimates}{{8.7}{140}{Uncertainty in parameter estimates}{section.8.7}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {9}Correlation}{141}{chapter.9}\protected@file@percent }
+\newlabel{looking}{{8.2}{140}{Looking at scatter plots}{section.8.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.8}{\ignorespaces Some scatter plots.(a) (approximately) linear relationship, (approximately) constant spread about line; (b) non-linear relationship, constant spread about curve;(c) non-linear relationship, increasing spread about curve;(d) quadratic relationship, constant spread about curve; (e) linear relationship, increasing spread about line;(f) linear relationship, non-constant spread about line.\relax }}{141}{figure.caption.176}\protected@file@percent }
+\newlabel{fig:lmexplplots}{{8.8}{141}{Some scatter plots.(a) (approximately) linear relationship, (approximately) constant spread about line; (b) non-linear relationship, constant spread about curve;(c) non-linear relationship, increasing spread about curve;(d) quadratic relationship, constant spread about curve; (e) linear relationship, increasing spread about line;(f) linear relationship, non-constant spread about line.\relax }{figure.caption.176}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.3}Model checking}{142}{section.8.3}\protected@file@percent }
+\newlabel{model-checking}{{8.3}{142}{Model checking}{section.8.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.9}{\ignorespaces Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond).\relax }}{144}{figure.caption.177}\protected@file@percent }
+\newlabel{fig:resplots}{{8.9}{144}{Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond).\relax }{figure.caption.177}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.10}{\ignorespaces Left: scatter plot of $y$ against $x$. The true relationship is linear with constant error variance. Right: a triangular residual plot results from uneven distribution of $x$ values.\relax }}{145}{figure.caption.178}\protected@file@percent }
+\newlabel{fig:unevenx}{{8.10}{145}{Left: scatter plot of $y$ against $x$. The true relationship is linear with constant error variance. Right: a triangular residual plot results from uneven distribution of $x$ values.\relax }{figure.caption.178}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.1}Departures from assumptions}{145}{subsection.8.3.1}\protected@file@percent }
+\newlabel{departures-from-assumptions}{{8.3.1}{145}{Departures from assumptions}{subsection.8.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.11}{\ignorespaces Scatter plot of $y$ against $x$. The true relationship is linear but the error distribution skewed (with constant variance).\relax }}{146}{figure.caption.179}\protected@file@percent }
+\newlabel{fig:nonnormal}{{8.11}{146}{Scatter plot of $y$ against $x$. The true relationship is linear but the error distribution skewed (with constant variance).\relax }{figure.caption.179}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.12}{\ignorespaces Residual plots from the linear model fitted to the data in Figure  ref{fig:nonnormal}.\relax }}{146}{figure.caption.180}\protected@file@percent }
+\newlabel{fig:nonnormalres}{{8.12}{146}{Residual plots from the linear model fitted to the data in Figure \\ref{fig:nonnormal}.\relax }{figure.caption.180}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.13}{\ignorespaces Checking the linear regression model fitted to Hubble's data. Model 2, regression through the origin.\relax }}{147}{figure.caption.181}\protected@file@percent }
+\newlabel{fig:hubblecheckorigin}{{8.13}{147}{Checking the linear regression model fitted to Hubble's data. Model 2, regression through the origin.\relax }{figure.caption.181}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.14}{\ignorespaces Checking the linear regression model fitted to Hubble's data. Model 3.\relax }}{147}{figure.caption.182}\protected@file@percent }
+\newlabel{fig:hubblecheck}{{8.14}{147}{Checking the linear regression model fitted to Hubble's data. Model 3.\relax }{figure.caption.182}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3.2}Outliers and influential observations}{149}{subsection.8.3.2}\protected@file@percent }
+\newlabel{outliers}{{8.3.2}{149}{Outliers and influential observations}{subsection.8.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8.15}{\ignorespaces Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (---------) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying $x$ value with moderate influence on the fitted regression line; (b) average $x$ value with small influence; (c) 2 outlying $x$s with large influence; (d) outlying $x$ with large influence.\relax }}{150}{figure.caption.183}\protected@file@percent }
+\newlabel{fig:lminfluence}{{8.15}{150}{Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (---------) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying $x$ value with moderate influence on the fitted regression line; (b) average $x$ value with small influence; (c) 2 outlying $x$s with large influence; (d) outlying $x$ with large influence.\relax }{figure.caption.183}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.4}Use of transformations}{151}{section.8.4}\protected@file@percent }
+\newlabel{linregtrans}{{8.4}{151}{Use of transformations}{section.8.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.5}Over-fitting}{151}{section.8.5}\protected@file@percent }
+\newlabel{over-fitting}{{8.5}{151}{Over-fitting}{section.8.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.6}Other aspects of regression}{151}{section.8.6}\protected@file@percent }
+\newlabel{other-aspects-of-regression}{{8.6}{151}{Other aspects of regression}{section.8.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{151}{section.8.7}\protected@file@percent }
+\newlabel{uncertainty-in-parameter-estimates}{{8.7}{151}{Uncertainty in parameter estimates}{section.8.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {9}Correlation}{152}{chapter.9}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{correlationchapter}{{9}{141}{Correlation}{chapter.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{141}{section.9.1}\protected@file@percent }
-\newlabel{correlation-a-measure-of-linear-association}{{9.1}{141}{Correlation: a measure of linear association}{section.9.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.2}Covariance and correlation}{141}{section.9.2}\protected@file@percent }
-\newlabel{covariance-and-correlation}{{9.2}{141}{Covariance and correlation}{section.9.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{141}{section.9.3}\protected@file@percent }
-\newlabel{use-and-misuse-of-correlation}{{9.3}{141}{Use and misuse of correlation}{section.9.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Examples of correlations of different strengths}{141}{subsection.9.3.1}\protected@file@percent }
-\newlabel{correxamples}{{9.3.1}{141}{Examples of correlations of different strengths}{subsection.9.3.1}{}}
+\newlabel{correlationchapter}{{9}{152}{Correlation}{chapter.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{152}{section.9.1}\protected@file@percent }
+\newlabel{correlation-a-measure-of-linear-association}{{9.1}{152}{Correlation: a measure of linear association}{section.9.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.2}Covariance and correlation}{152}{section.9.2}\protected@file@percent }
+\newlabel{covariance-and-correlation}{{9.2}{152}{Covariance and correlation}{section.9.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{152}{section.9.3}\protected@file@percent }
+\newlabel{use-and-misuse-of-correlation}{{9.3}{152}{Use and misuse of correlation}{section.9.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3.1}Examples of correlations of different strengths}{152}{subsection.9.3.1}\protected@file@percent }
+\newlabel{correxamples}{{9.3.1}{152}{Examples of correlations of different strengths}{subsection.9.3.1}{}}
 \bibdata{book.bib,packages.bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{142}{chapter.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{153}{chapter.10}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{a-general-strategy-for-statistical-modelling}{{10}{142}{A general strategy for statistical modelling}{chapter.10}{}}
+\newlabel{a-general-strategy-for-statistical-modelling}{{10}{153}{A general strategy for statistical modelling}{chapter.10}{}}
 \bibcite{berkeley}{{1}{1975}{{Bickel et~al.}}{{}}}
 \bibcite{shuttle}{{2}{1989}{{Dalal et~al.}}{{}}}
 \bibcite{Freedman2001}{{3}{2001}{{Freedman et~al.}}{{}}}
 \bibcite{Hubble1929}{{4}{1929}{{Hubble}}{{}}}
 \bibcite{clouds}{{5}{1975}{{Simpson et~al.}}{{}}}
 \bibcite{election}{{6}{2002}{{Smith}}{{}}}
-\gdef \@abspage@last{143}
+\gdef \@abspage@last{154}

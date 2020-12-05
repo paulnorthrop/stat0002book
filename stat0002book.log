@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  4 DEC 2020 21:52
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.8)  5 DEC 2020 00:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,7 +621,7 @@ Package: wrapfig 2003/01/31  v 3.6
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
 (c:/Users/paul/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.t
 ex
@@ -1710,13 +1710,37 @@ File: images/hubble_fit.png Graphic file (type bmp)
 [136] [137]
 File: images/hubble_scatter_new.png Graphic file (type bmp)
 <images/hubble_scatter_new.png>
-[138] [139] [140]
+[138] [139]
+File: images/lm_expl_plots.png Graphic file (type bmp)
+<images/lm_expl_plots.png>
+[140] [141]
+LaTeX Font Info:    Font shape `TU/lmss/bx/it' in size <10.95> not available
+(Font)              Font shape `TU/lmss/bx/sl' tried instead on input line 6664
+.
+[142]
+File: images/lm_res_plots.png Graphic file (type bmp)
+<images/lm_res_plots.png>
+[143] [144]
+File: images/uneven.png Graphic file (type bmp)
+<images/uneven.png>
+File: images/non_normal.png Graphic file (type bmp)
+<images/non_normal.png>
+File: images/non_normal_res.png Graphic file (type bmp)
+<images/non_normal_res.png>
+File: images/hubble_check_origin.png Graphic file (type bmp)
+<images/hubble_check_origin.png>
+File: images/hubble_check.png Graphic file (type bmp)
+<images/hubble_check.png>
+[145] [146] [147] [148]
+File: images/lm_influence.png Graphic file (type bmp)
+<images/lm_influence.png>
+[149] [150] [151]
 Chapter 9.
-[141
+[152
 
 ]
 Chapter 10.
-(./stat0002book.bbl [142
+(./stat0002book.bbl [153
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1753,7 +1777,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[143
+[154
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1768,12 +1792,12 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: 7639E3E94C6FD979EB13575AF0F2CE86;12313.
  ) 
 Here is how much of TeX's memory you used:
- 24190 strings out of 479426
- 464328 string characters out of 5879405
- 1034437 words of memory out of 5000000
- 43078 multiletter control sequences out of 15000+600000
- 541779 words of font info for 100 fonts, out of 8000000 for 9000
+ 24291 strings out of 479426
+ 466569 string characters out of 5879405
+ 1036517 words of memory out of 5000000
+ 43169 multiletter control sequences out of 15000+600000
+ 541787 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1057b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (143 pages).
+Output written on stat0002book.pdf (154 pages).
