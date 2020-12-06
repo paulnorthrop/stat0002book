@@ -222,13 +222,13 @@ b. The assumption of linearity is not reasonable, but
     i. the relationship between $Y$ and $x$ is monotonic (increasing), and
     ii. the variability in $Y$ is approximately constant for all values of $x$.
 
-We could try transforming $x$ to straighten the scatter plot, because transforming $x$ will not affect the vertical spread of the points.  The plot is `hollow down' so we could try $\log x$ or $\sqrt{x}$. (If we transform $Y$ then (b)(ii) would probably no longer be true.)
+We could try transforming $x$ to straighten the scatter plot, because transforming $x$ will not affect the vertical spread of the points.  The plot is like the plot in the top left of Figure \@ref(fig:tukey), so we could try $\log x$ or $\sqrt{x}$. (If we transform $Y$ then (b)(ii) would probably no longer be true.)
 
 c. The assumption of linearity is not reasonable, but
     i. the relationship between $Y$ and $x$ is monotonic (increasing), and
     ii. the variability in $Y$ increases as $x$ increases (or, equivalently, as the mean of $Y$ increases).
 
-We could try transforming $Y$ to straighten the scatter plot.  Transforming $Y$ will affect the vertical spread of the points.  We may be able to find a transformation of $Y$ which both straightens the plot and makes the variability in $Y$ approximately constant for all values of $x$. The plot is `hollow up' so we could try $\log Y$ or $\sqrt{Y}$. If not, we may need to transform both $Y$ and $x$. (If we transform $x$ only then the variability of $Y$ will still increase as $x$ increases.)
+We could try transforming $Y$ to straighten the scatter plot.  Transforming $Y$ will affect the vertical spread of the points.  We may be able to find a transformation of $Y$ which both straightens the plot and makes the variability in $Y$ approximately constant for all values of $x$. The plot is like the plot in the bottom right of Figure \@ref(fig:tukey), so we could try $\log Y$ or $\sqrt{Y}$. If not, we may need to transform both $Y$ and $x$. (If we transform $x$ only then the variability of $Y$ will still increase as $x$ increases.)
 
 d. The assumption of linearity is not reasonable, and
     i. the relationship between $Y$ and $x$ is not monotonic (it is quadratic), and
