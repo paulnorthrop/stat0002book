@@ -160,12 +160,12 @@
 \contentsline {subsection}{\numberline {8.3.1}Departures from assumptions}{145}{subsection.8.3.1}%
 \contentsline {subsection}{\numberline {8.3.2}Outliers and influential observations}{149}{subsection.8.3.2}%
 \contentsline {section}{\numberline {8.4}Use of transformations}{151}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Over-fitting}{151}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Other aspects of regression}{151}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{151}{section.8.7}%
-\contentsline {chapter}{\numberline {9}Correlation}{152}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{152}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Covariance and correlation}{152}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{152}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Examples of correlations of different strengths}{152}{subsection.9.3.1}%
-\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{153}{chapter.10}%
+\contentsline {section}{\numberline {8.5}Over-fitting}{155}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Other aspects of regression}{155}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Uncertainty in parameter estimates}{155}{section.8.7}%
+\contentsline {chapter}{\numberline {9}Correlation}{156}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{156}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Covariance and correlation}{156}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{156}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Examples of correlations of different strengths}{156}{subsection.9.3.1}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{157}{chapter.10}%

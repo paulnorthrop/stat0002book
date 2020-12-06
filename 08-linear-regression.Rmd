@@ -253,7 +253,7 @@ It is best to use graphs to examine the residuals. For many of these plots we ca
 \[ r_i = y_i-\hat{y}_i, \qquad i=1,\ldots,n. \]
 However, it can be helpful to standardise residuals so that they have approximately
 a variance of 1, if the model is true. One possibility is to divide by the estimate of $\sigma$, that is, $r_i/\hat{\sigma}$.
-However, different $r_i$s usually have slightly different variances. To take account of this we can use {\it standardised residuals}
+However, different $r_i$s usually have slightly different variances. To take account of this we can use **standardised residuals**
 \[ r^S_i = \frac{r_i}{\hat{\sigma}\,\sqrt{1-h_{ii}}}, \]
 where $h_{ii}$ is a number between 0 and 1 whose calculation is beyond the scope of STAT0002.
 
@@ -285,7 +285,7 @@ Otherwise, it is important to understand how the data were generated, and what t
 
 In addition we should check these plots for any points which do not fit in with the pattern of the other residuals.
 
-Figure \@ref(fig:resplots) shows the plots of residuals vs. fitted values after fitting a linear regression model to the scatter plots in Figure \@ref(fig:lmexplplots). (Note that we shouldn't really fit a linear model to the data in plots (b), (c) and (d).  We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.
+Figure \@ref(fig:resplots) shows the plots of residuals against fitted values after fitting a linear regression model to the scatter plots in Figure \@ref(fig:lmexplplots). (Note that we shouldn't really fit a linear model to the data in plots (b), (c) and (d).  We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.
 
 ```{r echo=FALSE, resplots, fig.show='hold', fig.cap='Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond).', out.width = '95%'}
 include_cropped_graphics("images/lm_res_plots.png")
@@ -437,6 +437,67 @@ Before carrying out a statistical analysis the data should be checked for unusua
 There must be a good reason for deleting an observation.  
 
 ## Use of transformations {#linregtrans}
+
+In Section \@ref(transformation) we found that taking a log transformation of rainfall amounts in the cloud-seeding dataset had two effects: (a) it made the values in the two groups more symmetrically distributed, and (b) made the respective sample variances more similar.  In Section \@ref(looking) we saw examples where there were clear departures from the assumptions of a linear regression model (see Section \@ref(lmsummary)), but where a transformation of $Y$ and/or $x$ might be able to improve this.
+
+Suppose that, either before fitting a linear regression model or afterwards (checking the model using residual plots), we find that one, or more, of the assumptions of linearity, constant variance or normality appear not to be valid.We may be able to find transformations of the response variable $Y$ and/or the explanatory variable $x$ for which these assumptions are more valid.However, it may not be possible to find transformations for which all the assumptions are approximately valid.
+
+To illustrate this we return to the 2000 US Presidential election example.We saw that some of the relationships between Pat Buchanan's vote $Y$ and the explanatory variables were distinctly non-linear.We also concluded that the vote Buchanan received in Palm Beach County was an outlier, explainable by the format of the 'Butterfly' ballot paper used in Palm Beach. Therefore, we build a linear regression model for Buchanan's vote based on the election data in Florida, excluding Palm Beach County.  We use only one explanatory variable: Total Population, denoted by $x$.
+
+We consider 4 different models:
+
+\begin{eqnarray*}
+\mbox{E}(Y~|~X=x) &=& \alpha_1+\beta_1\,x, \qquad \quad \,\,\,\,\mbox{(model 1)}, \\
+\mbox{E}(Y~|~X=x) &=& \alpha_2+\beta_2\,\log x, \qquad \mbox{(model 2)}, \\
+\mbox{E}(\log Y~|~X=x) &=& \alpha_3+\beta_3\,\log x, \qquad \mbox{(model 3)}, \\
+\mbox{E}(\sqrt{Y}~|~X=x) &=& \alpha_4+\beta_4\,\log x, \qquad \mbox{(model 4)}.
+\end{eqnarray*}
+
+Figure \@ref(fig:electionLS) shows scatter plots of the variables involved for each of these models, with least squares regression lines.
+
+```{r echo=FALSE, electionLS, fig.show='hold', fig.cap='Least squares regression lines added to plots of the percentage of the vote for Buchanan against total population. Various transformations have been used.', out.width = '95%'}
+include_cropped_graphics("images/election_LS.png")
+```
+
+Figures \@ref(fig:electioncheck1), \@ref(fig:electioncheck2), \@ref(fig:electioncheck3) and \@ref(fig:electioncheck4) show residual plots for each of these models.
+
+```{r echo=FALSE, electioncheck1, fig.show='hold', fig.cap='Model checking for model 1.', out.width = '95%'}
+include_cropped_graphics("images/election_check1.png")
+```
+
+For Model 1 the plots of residuals against fitted values and residuals against Total Population indicate non-linearity and non-constant error variance.  Given that the fit is so bad in these respects, it is pointless examining the histogram and normal QQ plot of the residuals.  However, these plots indicate that the residuals look very unlike a sample from a normal distribution.
+
+```{r echo=FALSE, electioncheck2, fig.show='hold', fig.cap='Model checking for model 2.', out.width = '95%'}
+include_cropped_graphics("images/election_check2.png")
+```
+
+The general patterns in the plots for Model 2 are similar to those for Model 1, but the fit is improved compared to Model 1.
+
+```{r echo=FALSE, electioncheck3, fig.show='hold', fig.cap='Model checking for model 3.', out.width = '95%'}
+include_cropped_graphics("images/election_check3.png")
+```
+
+For Model 3 the plots of residuals against fitted values and against Total Population show a random scatter of points about the residual = 0 horizontal line. This is what we expect to see when the assumptions of linearity and constancy of error variance hold.  In addition, the histogram and normal QQ plot of the residuals suggest that the residuals look like a sample from a normal distribution.  This suggests that it would be reasonable to assume that the errors in the model are normally distributed.
+
+```{r echo=FALSE, electioncheck4, fig.show='hold', fig.cap='Model checking for model 4.', out.width = '95%'}
+include_cropped_graphics("images/election_check4.png")
+```
+
+For Model 4 there is a slight suggestion in the plots of residuals against fitted values and residuals against Total Population that the error variance increases with the value of $Y$, and hence decreases with the value of Total Population.  
+
+In summary, transformations may be used to 
+
+* make the relationship between two random variables closer to being linear;
+* make the variance of a random variable $Y$ closer to being constant in different groups, or for different values of another variable $x$;
+* make the distribution of a random variable more symmetric;
+* make the distribution of a random variable (or an error term in a linear regression model) closer to being normal.
+
+However, it may not be possible for a single transformation to achieve all the properties we want.  For example, suppose that the relationship between $Y$ and $x$ is non-linear and that the variance of $Y$ depends on the value of $x$.  We may find that 
+
+* the relationship between $\sqrt{Y}$ and $x$ is approximately linear, and
+* the variance of $\log Y$ is approximately constant for all values of $x$.
+
+If we wish to fit a linear regression model, after transforming $Y$, a compromise is necessary.
 
 ## Over-fitting
 

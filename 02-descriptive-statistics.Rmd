@@ -706,7 +706,7 @@ It is clear in both these plots that the vote in Palm Beach is an outlier.
 However, if we had produced separate plots of \% Buchanan vote and total
 population Palm Beach would not appear as an outlier.
 
-## Transformation of data
+## Transformation of data {#transformation}
 
 Some simple statistical methods are based on assumptions about the statistical properties of the data to which they are applied.  For example, there are methods that work well provided that a variable of interest is approximately symmetrically distributed.  If a variable has a distribution that is strongly skewed then the method will not have the properties that are expected and the results may be misleading.  In linear regression (see Chapter \@ref(linreg)) the mean of one variable is represented as being related linearly to the value of another variable.  If the reality is that this relationship is far from being linear then results may be very misleading.  
 

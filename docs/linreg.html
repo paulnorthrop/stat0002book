@@ -172,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="descriptive.html"><a href="descriptive.html#graphs2"><i class="fa fa-check"></i><b>2.7</b> Graphs (2 variables)</a><ul>
 <li class="chapter" data-level="2.7.1" data-path="descriptive.html"><a href="descriptive.html#scatter-plots"><i class="fa fa-check"></i><b>2.7.1</b> Scatter plots</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation-of-data"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a><ul>
+<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a><ul>
 <li class="chapter" data-level="2.8.1" data-path="descriptive.html"><a href="descriptive.html#transsymmetry"><i class="fa fa-check"></i><b>2.8.1</b> Transformation to approximate symmetry</a></li>
 <li class="chapter" data-level="2.8.2" data-path="descriptive.html"><a href="descriptive.html#straighten"><i class="fa fa-check"></i><b>2.8.2</b> Straightening scatter plots</a></li>
 </ul></li>
@@ -572,7 +572,7 @@ of STAT0002).</p></li>
 <span class="math display">\[ r_i = y_i-\hat{y}_i, \qquad i=1,\ldots,n. \]</span>
 However, it can be helpful to standardise residuals so that they have approximately
 a variance of 1, if the model is true. One possibility is to divide by the estimate of <span class="math inline">\(\sigma\)</span>, that is, <span class="math inline">\(r_i/\hat{\sigma}\)</span>.
-However, different <span class="math inline">\(r_i\)</span>s usually have slightly different variances. To take account of this we can use {}
+However, different <span class="math inline">\(r_i\)</span>s usually have slightly different variances. To take account of this we can use <strong>standardised residuals</strong>
 <span class="math display">\[ r^S_i = \frac{r_i}{\hat{\sigma}\,\sqrt{1-h_{ii}}}, \]</span>
 where <span class="math inline">\(h_{ii}\)</span> is a number between 0 and 1 whose calculation is beyond the scope of STAT0002.</p>
 <p>We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.</p>
@@ -600,7 +600,7 @@ pattern. Patterns in the residuals may indicate a non-linear relationship betwee
 <li><strong>Normality</strong>. If the errors <span class="math inline">\(\{\epsilon_i\}\)</span> are assumed to have a normal distribution then the standardised residuals should have approximately a N(0,1) distribution. We can look at a histogram or a normal QQ plot of residuals.</li>
 </ul>
 <p>In addition we should check these plots for any points which do not fit in with the pattern of the other residuals.</p>
-<p>Figure <a href="linreg.html#fig:resplots">8.9</a> shows the plots of residuals vs. fitted values after fitting a linear regression model to the scatter plots in Figure <a href="linreg.html#fig:lmexplplots">8.8</a>. (Note that we shouldn’t really fit a linear model to the data in plots (b), (c) and (d). We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.</p>
+<p>Figure <a href="linreg.html#fig:resplots">8.9</a> shows the plots of residuals against fitted values after fitting a linear regression model to the scatter plots in Figure <a href="linreg.html#fig:lmexplplots">8.8</a>. (Note that we shouldn’t really fit a linear model to the data in plots (b), (c) and (d). We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.</p>
 <div class="figure" style="text-align: center"><span id="fig:resplots"></span>
 <img src="images/lm_res_plots.png" alt="Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond)." width="95%" />
 <p class="caption">
@@ -750,6 +750,65 @@ Figure 8.15: Outliers and their influence on the fitted linear regression line. 
 </div>
 <div id="linregtrans" class="section level2">
 <h2><span class="header-section-number">8.4</span> Use of transformations</h2>
+<p>In Section <a href="descriptive.html#transformation">2.8</a> we found that taking a log transformation of rainfall amounts in the cloud-seeding dataset had two effects: (a) it made the values in the two groups more symmetrically distributed, and (b) made the respective sample variances more similar. In Section <a href="linreg.html#looking">8.2</a> we saw examples where there were clear departures from the assumptions of a linear regression model (see Section <a href="linreg.html#lmsummary">8.1.5</a>), but where a transformation of <span class="math inline">\(Y\)</span> and/or <span class="math inline">\(x\)</span> might be able to improve this.</p>
+<p>Suppose that, either before fitting a linear regression model or afterwards (checking the model using residual plots), we find that one, or more, of the assumptions of linearity, constant variance or normality appear not to be valid.We may be able to find transformations of the response variable <span class="math inline">\(Y\)</span> and/or the explanatory variable <span class="math inline">\(x\)</span> for which these assumptions are more valid.However, it may not be possible to find transformations for which all the assumptions are approximately valid.</p>
+<p>To illustrate this we return to the 2000 US Presidential election example.We saw that some of the relationships between Pat Buchanan’s vote <span class="math inline">\(Y\)</span> and the explanatory variables were distinctly non-linear.We also concluded that the vote Buchanan received in Palm Beach County was an outlier, explainable by the format of the ‘Butterfly’ ballot paper used in Palm Beach. Therefore, we build a linear regression model for Buchanan’s vote based on the election data in Florida, excluding Palm Beach County. We use only one explanatory variable: Total Population, denoted by <span class="math inline">\(x\)</span>.</p>
+<p>We consider 4 different models:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\mbox{E}(Y~|~X=x) &amp;=&amp; \alpha_1+\beta_1\,x, \qquad \quad \,\,\,\,\mbox{(model 1)}, \\
+\mbox{E}(Y~|~X=x) &amp;=&amp; \alpha_2+\beta_2\,\log x, \qquad \mbox{(model 2)}, \\
+\mbox{E}(\log Y~|~X=x) &amp;=&amp; \alpha_3+\beta_3\,\log x, \qquad \mbox{(model 3)}, \\
+\mbox{E}(\sqrt{Y}~|~X=x) &amp;=&amp; \alpha_4+\beta_4\,\log x, \qquad \mbox{(model 4)}.
+\end{eqnarray*}\]</span></p>
+<p>Figure <a href="linreg.html#fig:electionLS">8.16</a> shows scatter plots of the variables involved for each of these models, with least squares regression lines.</p>
+<div class="figure" style="text-align: center"><span id="fig:electionLS"></span>
+<img src="images/election_LS.png" alt="Least squares regression lines added to plots of the percentage of the vote for Buchanan against total population. Various transformations have been used." width="95%" />
+<p class="caption">
+Figure 8.16: Least squares regression lines added to plots of the percentage of the vote for Buchanan against total population. Various transformations have been used.
+</p>
+</div>
+<p>Figures <a href="linreg.html#fig:electioncheck1">8.17</a>, <a href="linreg.html#fig:electioncheck2">8.18</a>, <a href="linreg.html#fig:electioncheck3">8.19</a> and <a href="linreg.html#fig:electioncheck4">8.20</a> show residual plots for each of these models.</p>
+<div class="figure" style="text-align: center"><span id="fig:electioncheck1"></span>
+<img src="images/election_check1.png" alt="Model checking for model 1." width="95%" />
+<p class="caption">
+Figure 8.17: Model checking for model 1.
+</p>
+</div>
+<p>For Model 1 the plots of residuals against fitted values and residuals against Total Population indicate non-linearity and non-constant error variance. Given that the fit is so bad in these respects, it is pointless examining the histogram and normal QQ plot of the residuals. However, these plots indicate that the residuals look very unlike a sample from a normal distribution.</p>
+<div class="figure" style="text-align: center"><span id="fig:electioncheck2"></span>
+<img src="images/election_check2.png" alt="Model checking for model 2." width="95%" />
+<p class="caption">
+Figure 8.18: Model checking for model 2.
+</p>
+</div>
+<p>The general patterns in the plots for Model 2 are similar to those for Model 1, but the fit is improved compared to Model 1.</p>
+<div class="figure" style="text-align: center"><span id="fig:electioncheck3"></span>
+<img src="images/election_check3.png" alt="Model checking for model 3." width="95%" />
+<p class="caption">
+Figure 8.19: Model checking for model 3.
+</p>
+</div>
+<p>For Model 3 the plots of residuals against fitted values and against Total Population show a random scatter of points about the residual = 0 horizontal line. This is what we expect to see when the assumptions of linearity and constancy of error variance hold. In addition, the histogram and normal QQ plot of the residuals suggest that the residuals look like a sample from a normal distribution. This suggests that it would be reasonable to assume that the errors in the model are normally distributed.</p>
+<div class="figure" style="text-align: center"><span id="fig:electioncheck4"></span>
+<img src="images/election_check4.png" alt="Model checking for model 4." width="95%" />
+<p class="caption">
+Figure 8.20: Model checking for model 4.
+</p>
+</div>
+<p>For Model 4 there is a slight suggestion in the plots of residuals against fitted values and residuals against Total Population that the error variance increases with the value of <span class="math inline">\(Y\)</span>, and hence decreases with the value of Total Population.</p>
+<p>In summary, transformations may be used to</p>
+<ul>
+<li>make the relationship between two random variables closer to being linear;</li>
+<li>make the variance of a random variable <span class="math inline">\(Y\)</span> closer to being constant in different groups, or for different values of another variable <span class="math inline">\(x\)</span>;</li>
+<li>make the distribution of a random variable more symmetric;</li>
+<li>make the distribution of a random variable (or an error term in a linear regression model) closer to being normal.</li>
+</ul>
+<p>However, it may not be possible for a single transformation to achieve all the properties we want. For example, suppose that the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> is non-linear and that the variance of <span class="math inline">\(Y\)</span> depends on the value of <span class="math inline">\(x\)</span>. We may find that</p>
+<ul>
+<li>the relationship between <span class="math inline">\(\sqrt{Y}\)</span> and <span class="math inline">\(x\)</span> is approximately linear, and</li>
+<li>the variance of <span class="math inline">\(\log Y\)</span> is approximately constant for all values of <span class="math inline">\(x\)</span>.</li>
+</ul>
+<p>If we wish to fit a linear regression model, after transforming <span class="math inline">\(Y\)</span>, a compromise is necessary.</p>
 </div>
 <div id="over-fitting" class="section level2">
 <h2><span class="header-section-number">8.5</span> Over-fitting</h2>
