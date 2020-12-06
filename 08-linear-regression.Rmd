@@ -182,7 +182,7 @@ This estimate agrees more closely with current scientific understanding of the a
 It is common to make the extra assumption that the errors are normally distributed:
 \[ \epsilon_i \sim N(0,\sigma^2), \qquad i=1,\ldots,n. \]
 In other words
-\[ Y_i \mid X=x_i \,\stackrel{{\rm indep}}{\sim}\, N(\alpha+\beta\,x_i,\sigma^2), \qquad i=1,\ldots,n. \]
+\[ Y_i \mid X=x_i \sim N(\alpha+\beta\,x_i,\sigma^2), \qquad i=1,\ldots,n. \]
 These results are used to enable us to (a) decide whether the explanatory variable $x$ is needed in the model, and (b) produce interval estimates of $\alpha, \beta, \sigma^2$ and for predictions made from the model.
 
 ### Summary of the assumptions of a (normal) linear regression model {#lmsummary}
