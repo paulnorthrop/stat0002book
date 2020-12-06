@@ -285,7 +285,7 @@ Otherwise, it is important to understand how the data were generated, and what t
 
 In addition we should check these plots for any points which do not fit in with the pattern of the other residuals.
 
-Figure \@ref(fig:resplots) shows the plots of residuals against fitted values after fitting a linear regression model to the scatter plots in Figure \@ref(fig:lmexplplots). (Note that we shouldn't really fit a linear model to the data in plots (b), (c) and (d).  We do thishere just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.
+Figure \@ref(fig:resplots) shows the plots of residuals against fitted values after fitting a linear regression model to the scatter plots in Figure \@ref(fig:lmexplplots). (Note that we shouldn't really fit a linear model to the data in plots (b), (c) and (d).  We do this here just to show what the residual plots look like.) You should be able to see how the residual plots relate to the original scatter plots.
 
 ```{r echo=FALSE, resplots, fig.show='hold', fig.cap='Patterns to look out for in residual plots: (a) random scatter (satisfactory); (b) non-linear, constant spread about curve; (c) non-linear, increasing spread about curve; (d) quadratic, constant spread about curve; (e) scatter about line residual=0, increasing spread about line (triangle/funnel); (f) scatter about line residual=0, non-constant spread about line (diamond).', out.width = '95%'}
 include_cropped_graphics("images/lm_res_plots.png")
@@ -552,4 +552,20 @@ Therefore, if the error variance $\sigma^2$ is small then $\mbox{E}(Y \mid X = x
 
 ## Over-fitting
 
+We fitted a straight line model, 
+\[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x, \]
+to Hubble's data.  Even if this model is true, we can (usually) obtain a better fit (smaller RSS) by fitting a quadratic model,
+$$\mbox{E}(Y \mid X=x) = \alpha+\beta\,x+\gamma\,x^2.$$
+
+Extending this idea means that we can usually get closer and closer fits to the data by adding to the model a term in $x^3$, a term in $x^4$, and so on. Fitting a model with more than one explanatory variable is beyond the scope of STAT0002. However, in Figure \@ref(fig:hubblecurves) we show fits to Hubble's data of polynomials of degree 2, 3, 4 and 8.
+
+```{r echo=FALSE, hubblecurves, fig.show='hold', fig.cap='Fits of polynomial of degrees 2, 3, 4 and 8 to Hubble\'s data.', out.width = '95%'}
+include_cropped_graphics("images/hubble_curves.png")
+```
+
+As the degree of the polynomial increases the $RSS$ decreases. Fitting a polynomial of degree 8 gives us a better fit (as judged by the values of RSS) than the linear fit.  However, there are several reasons why using a high degree polynomial is a bad idea. 
+
+* **Lack of sense**. Fitting a very wiggly curve to these data doesn't make sense: Hubble's theory says that distance should be a linear function of velocity.
+* **Lack of understanding**. Fitting a model which is too complicated doesn't help our understanding the process which produced the data.
+* **Poor prediction**. A fitted curve that is too complicated will tend to predict new values poorly, because the curve adapts too closely to the random wiggles of the data, rather than getting the general relationship between $Y$ and $x$ approximately correct. A model that fits existing data well doesn't necessarily predict new observations well.
 

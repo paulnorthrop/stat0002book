@@ -1,3 +1,17 @@
+```{r, figsetup9, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = 'center',
+  out.width = '75%'
+)
+```
+
+```{r, echo = FALSE}
+include_cropped_graphics <- function(x) {
+#  knitr::include_graphics(knitr::plot_crop(x))
+  knitr::include_graphics(x)
+}
+```
+
 # Correlation {#correlationchapter}
 
 ## Correlation: a measure of linear association
