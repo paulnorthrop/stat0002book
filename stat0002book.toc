@@ -162,9 +162,9 @@
 \contentsline {section}{\numberline {8.4}Use of transformations}{151}{section.8.4}%
 \contentsline {subsection}{\numberline {8.4.1}Interpretation after transformation}{155}{subsection.8.4.1}%
 \contentsline {section}{\numberline {8.5}Over-fitting}{156}{section.8.5}%
-\contentsline {chapter}{\numberline {9}Correlation}{157}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{157}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Covariance and correlation}{157}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{157}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Examples of correlations of different strengths}{157}{subsection.9.3.1}%
-\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{158}{chapter.10}%
+\contentsline {chapter}{\numberline {9}Correlation}{158}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Correlation: a measure of linear association}{158}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Covariance and correlation}{158}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Use and misuse of correlation}{158}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Examples of correlations of different strengths}{158}{subsection.9.3.1}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{159}{chapter.10}%
