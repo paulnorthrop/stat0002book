@@ -442,7 +442,7 @@ In Section \@ref(transformation) we found that taking a log transformation of ra
 
 Suppose that, either before fitting a linear regression model or afterwards (checking the model using residual plots), we find that one, or more, of the assumptions of linearity, constant variance or normality appear not to be valid.We may be able to find transformations of the response variable $Y$ and/or the explanatory variable $x$ for which these assumptions are more valid.However, it may not be possible to find transformations for which all the assumptions are approximately valid.
 
-To illustrate this we return to the 2000 US Presidential election example.We saw that some of the relationships between Pat Buchanan's vote $Y$ and the explanatory variables were distinctly non-linear.We also concluded that the vote Buchanan received in Palm Beach County was an outlier, explainable by the format of the 'Butterfly' ballot paper used in Palm Beach. Therefore, we build a linear regression model for Buchanan's vote based on the election data in Florida, excluding Palm Beach County.  We use only one explanatory variable: Total Population, denoted by $x$.
+To illustrate this we return to the 2000 US Presidential Election example. We saw that some of the relationships between Pat Buchanan's vote $Y$ and the explanatory variables were distinctly non-linear.  We also concluded that the vote Buchanan received in Palm Beach County was an outlier, explainable by the format of the 'Butterfly' ballot paper used in Palm Beach. Therefore, we build a linear regression model for Buchanan's vote based on the election data in Florida, excluding Palm Beach County.  We use only one explanatory variable: Total Population, denoted by $x$.
 
 We consider 4 different models:
 
@@ -499,9 +499,57 @@ However, it may not be possible for a single transformation to achieve all the p
 
 If we wish to fit a linear regression model, after transforming $Y$, a compromise is necessary.
 
+### Interpretation after transformation
+
+If we use a transformation we should be careful to interpret the results carefully in light of the  transformation used.  Often we will want to report the results on the original scale of the data, rather than the transformed scale.  We illustrate this using the 2000 US Presidential Election example, using Model 3:
+$$ \mbox{E}(\log Y \mid X=x) = \alpha+\beta\,\log x, $$
+where $Y$ is per$\log$ denotes the natural log, that is, log to the base $e$.  Again, we fit the model after excluding the observation from Palm Beach County.  The least squares regression line is shown in the bottom left of Figure \@ref(fig:electionLS).  The equation of this line is 
+
+\[ \widehat{\mbox{E}}(\log Y \mid X=x) = 0.4 - 0.3\,\log x, \] 
+
+that is, $\hat{\alpha} = 0.4$ and $\hat{\beta} = -0.3$.  
+
+This provides an estimate for the way that the mean of $\log Y$ depends on $x$.  However, we may well be interested in $Y$, not $\log Y$.  Recall from Section \@ref(EgX) that, some special cases aside, $g[\mbox{E}(Y)] \neq \mbox{E}[g(Y)].$  In the current context,     
+
+\[ \log \mbox{E}(Y \mid X=x) \neq \mbox{E}(\log Y \mid X=x) \]
+or
+\[ \mbox{E}(Y \mid X=x) \neq \exp \left\{ \mbox{E}(\log Y \mid X=x) \right\}. \]
+Therefore, if we exponentiate the regression line then we do not obtain $\mbox{E}(Y \mid X=x)$, at least not exactly.  
+
+We will consider two ways to tackle this problem.  
+
+**Finding $\mbox{median}(Y \mid X = x).$** We assume that the error distribution is symmetric about 0, which implies that
+
+\[ \mbox{E}(\log Y \mid X=x) = \mbox{median}(\log Y \mid X=x). \]
+
+Consider a continuous random variable $W$.  If $P(\log W \leq m) = 1/2$ then $P(W \leq e^m) = 1/2$.  If $m$ is the median of $\log W$ then $e^m$ is the median of $W$.  Therefore,
+
+\[ \mbox{median}(Y \mid X=x) = \exp \left\{ \mbox{median}(\log Y \mid X=x) \right\} = \exp \{ \alpha + \beta \, \log x\} = e^\alpha x^\beta. \]
+
+This leads to the following estimate for the conditional median of $Y$ given $X = x$:
+
+\[ \widehat{\mbox{median}}(Y \mid X=x) = e^{0.4 - 0.3\,\log x} = e^{0.4}\,x^{-0.3} = 1.5\,x^{-0.3}. \]
+
+Based on this equation we estimate that if the population $x$ doubles then the median of the percentage of the vote that Buchanan obtains is multiplied by $2^{-0.3}=0.8$. Doubling the population is estimated to reduce the median of Buchanan's vote by 20\%, for example 5\% would reduce to 4\%.  This provides an interpretation for the estimate $\hat{\beta} = -0.3$.  What about $\hat{\alpha}=0.4$, or rather $e^{0.4}=1.5$?  When $x=1$, 
+\[ \widehat{\mbox{median}}(Y \mid X=x) = 1.5. \]
+We estimate that in populations of size 1000 the median of Buchanan's vote is 1.5\% of the vote. However, The smallest population in the data is 6289 people, so we are extrapolating when we make this interpretation.  It would be better to work with population recorded in units of 100,000.  Then the intercept relates to a realistic population.
+
+**Finding $\mbox{E}(Y \mid X = x).$** We assume that the error distribution is normal. Suppose that $Y$ and $X$ are Buchanan's percentage of the vote and the population size in an arbitrarily-chosen county. Given that $X=x$ we have 
+\[ \log Y = \alpha + \beta \log x + \epsilon, \]
+where $\epsilon \sim N(0,\sigma^2)$. Therefore,
+\[ Y = e^\alpha x^\beta e^\epsilon. \]
+It can be shown that $\mbox{E}\left(e^\epsilon\right)=e^{\sigma^2/2}$. Taking expectations gives
+
+\[ \mbox{E}(Y \mid X=x) = \mbox{E}( e^\alpha x^\beta e^\epsilon)
+= e^\alpha x^\beta \mbox{E}\left( e^\epsilon \right)
+= e^\alpha \, x^\beta \, e^{\sigma^2/2}. \]
+
+Therefore,
+
+\[ \mbox{E}(Y \mid X = x) = e^{\sigma^2/2} \, \mbox{median}(Y \mid X = x). \]
+
+Therefore, if the error variance $\sigma^2$ is small then $\mbox{E}(Y \mid X = x) \approx \mbox{median}(Y \mid X = x).$
+
 ## Over-fitting
 
-## Other aspects of regression
-
-## Uncertainty in parameter estimates
 

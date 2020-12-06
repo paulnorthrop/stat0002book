@@ -200,7 +200,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
 <li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
 <li class="chapter" data-level="4.3.3" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmex"><i class="fa fa-check"></i><b>4.3.3</b> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></a></li>
-<li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#the-expectation-of-gx"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
+<li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#EgX"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="rvs.html"><a href="rvs.html#variance-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.4.1</b> Variance of a discrete random variable</a></li>
@@ -299,10 +299,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#departures-from-assumptions"><i class="fa fa-check"></i><b>8.3.1</b> Departures from assumptions</a></li>
 <li class="chapter" data-level="8.3.2" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.2</b> Outliers and influential observations</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a></li>
+<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="linreg.html"><a href="linreg.html#interpretation-after-transformation"><i class="fa fa-check"></i><b>8.4.1</b> Interpretation after transformation</a></li>
+</ul></li>
 <li class="chapter" data-level="8.5" data-path="linreg.html"><a href="linreg.html#over-fitting"><i class="fa fa-check"></i><b>8.5</b> Over-fitting</a></li>
-<li class="chapter" data-level="8.6" data-path="linreg.html"><a href="linreg.html#other-aspects-of-regression"><i class="fa fa-check"></i><b>8.6</b> Other aspects of regression</a></li>
-<li class="chapter" data-level="8.7" data-path="linreg.html"><a href="linreg.html#uncertainty-in-parameter-estimates"><i class="fa fa-check"></i><b>8.7</b> Uncertainty in parameter estimates</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>9</b> Correlation</a><ul>
 <li class="chapter" data-level="9.1" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-a-measure-of-linear-association"><i class="fa fa-check"></i><b>9.1</b> Correlation: a measure of linear association</a></li>
@@ -489,7 +489,7 @@ This makes sense. If we multiply all observations by <span class="math inline">\
 <span class="math display">\[ \mathrm{E}(X_1 + X_2 + \cdots + X_n) = \mathrm{E}(X_1) + \mathrm{E}(X_2) + \cdots + \mathrm{E}(X_n). \]</span></li>
 </ul>
 </div>
-<div id="the-expectation-of-gx" class="section level3">
+<div id="EgX" class="section level3">
 <h3><span class="header-section-number">4.3.4</span> The expectation of <span class="math inline">\(g(X)\)</span></h3>
 <p>Suppose that <span class="math inline">\(Y=g(X)\)</span> is a function of of <span class="math inline">\(X\)</span>, such as <span class="math inline">\(aX+b\)</span>, <span class="math inline">\(X^2\)</span> or <span class="math inline">\(\log X\)</span>. Then <span class="math inline">\(Y\)</span> is also a random variable. If we find the p.m.f (if <span class="math inline">\(Y\)</span> is discrete) or p.d.f. (if <span class="math inline">\(Y\)</span> is continuous) of <span class="math inline">\(Y\)</span> then we can find the expectation of <span class="math inline">\(Y\)</span> using equation <a href="rvs.html#eq:discmean">(4.2)</a> or <a href="rvs.html#eq:contmean">(4.3)</a> as appropriate.</p>
 <p><span class="math display" id="eq:expfn">\[\begin{equation}
