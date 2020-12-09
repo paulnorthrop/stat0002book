@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-12-07" />
+<meta name="date" content="2020-12-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -574,7 +574,7 @@ However, it can be helpful to standardise residuals so that they have approximat
 a variance of 1, if the model is true. One possibility is to divide by the estimate of <span class="math inline">\(\sigma\)</span>, that is, <span class="math inline">\(r_i/\hat{\sigma}\)</span>.
 However, different <span class="math inline">\(r_i\)</span>s usually have slightly different variances. To take account of this we can use <strong>standardised residuals</strong>
 <span class="math display">\[ r^S_i = \frac{r_i}{\hat{\sigma}\,\sqrt{1-h_{ii}}}, \]</span>
-where <span class="math inline">\(h_{ii}\)</span> is a number between 0 and 1 whose calculation is beyond the scope of STAT0002.</p>
+where <span class="math inline">\(h_{ii}\)</span> is a number between 0 and 1 whose calculation is something that you do not need to know for STAT0002.</p>
 <p>We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.</p>
 <ul>
 <li><strong>Linearity</strong>. The relationship between <span class="math inline">\(\mbox{E}(Y~|~X=x)\)</span> is linear in <span class="math inline">\(x\)</span>.</li>
@@ -711,7 +711,7 @@ even when the errors are not normal.</li>
 <div id="outliers" class="section level3">
 <h3><span class="header-section-number">8.3.2</span> Outliers and influential observations</h3>
 <p>We have already considered the possibility of outliers. We shouldn’t remove an observation just because it appears to be an outlier. However, we should consider whether the conclusions of our analysis are not influenced strongly by outliers. An observation which influences strongly the conclusions of a statistical analysis is called an <strong>influential observation</strong>. We can assess whether an observation (or group of observations) is influential is to carry out the analysis with and without the observation, and see whether the conclusions change by a practically relevant amount. We will see that in a linear regression analysis some types of outlier are influential, whereas others are not.</p>
-<p>Figure <a href="linreg.html#fig:lminfluence">8.15</a> shows some examples where there are one or two outlying observations. The greater the influence of the outlier(s) the greater the change in the fitted regression line when the they are removed. Generally speaking, an observation with an outlying (small or large) value of <span class="math inline">\(x\)</span> has a greater potential (the technical term is <strong>leverage</strong>) to affect the fitted regression line than an observation which has an average <span class="math inline">\(x\)</span> value. This can be seen by comparing plots (a) and (b).</p>
+<p>Figure <a href="linreg.html#fig:lminfluence">8.15</a> shows some examples where there are one or two outlying observations. The greater the influence of the outlier(s) the greater the change in the fitted regression line when the they are removed. Generally speaking, an observation with an outlying (small or large) value of <span class="math inline">\(x\)</span> has a greater potential (the technical term is <strong>leverage</strong>) to affect the slope of the fitted regression line than an observation which has an average <span class="math inline">\(x\)</span> value. This can be seen by comparing plots (a) and (b).</p>
 <div class="figure" style="text-align: center"><span id="fig:lminfluence"></span>
 <img src="images/lm_influence.png" alt="Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (---------) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying $x$ value with moderate influence on the fitted regression line; (b) average $x$ value with small influence; (c) 2 outlying $x$s with large influence; (d) outlying $x$ with large influence." width="95%" />
 <p class="caption">

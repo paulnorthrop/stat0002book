@@ -255,7 +255,7 @@ However, it can be helpful to standardise residuals so that they have approximat
 a variance of 1, if the model is true. One possibility is to divide by the estimate of $\sigma$, that is, $r_i/\hat{\sigma}$.
 However, different $r_i$s usually have slightly different variances. To take account of this we can use **standardised residuals**
 \[ r^S_i = \frac{r_i}{\hat{\sigma}\,\sqrt{1-h_{ii}}}, \]
-where $h_{ii}$ is a number between 0 and 1 whose calculation is beyond the scope of STAT0002.
+where $h_{ii}$ is a number between 0 and 1 whose calculation is something that you do not need to know for STAT0002.
 
 We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.
 
@@ -401,7 +401,7 @@ The order of importance of the assumptions for a linear model (most important fi
 
 We have already considered the possibility of outliers.  We shouldn't remove an observation just because it appears to be an outlier.  However, we should consider whether the conclusions of our analysis are not influenced strongly by outliers.  An observation which influences strongly the conclusions of a statistical analysis is called an **influential observation**.  We can assess whether an observation (or group of observations) is influential is to carry out the analysis with and without the observation, and see whether the conclusions change by a practically relevant amount.  We will see that in a linear regression analysis some types of outlier are influential, whereas others are not.
 
-Figure \@ref(fig:lminfluence) shows some examples where there are one or two outlying observations. The greater the influence of the outlier(s) the greater the change in the fitted regression line when the they are removed. Generally speaking, an observation with an outlying (small or large) value of $x$ has a greater potential (the technical term is **leverage**) to affect the fitted regression line than an observation which has an average $x$ value.  This can be seen by comparing plots (a) and (b).  
+Figure \@ref(fig:lminfluence) shows some examples where there are one or two outlying observations. The greater the influence of the outlier(s) the greater the change in the fitted regression line when the they are removed. Generally speaking, an observation with an outlying (small or large) value of $x$ has a greater potential (the technical term is **leverage**) to affect the slope of the fitted regression line than an observation which has an average $x$ value.  This can be seen by comparing plots (a) and (b).  
 
 ```{r echo=FALSE, lminfluence, fig.show='hold', fig.cap='Outliers and their influence on the fitted linear regression line. The fitted line for the complete data (---------) and when the outlier(s) are removed (- - - - - -) is drawn on the plots. (a) outlying $x$ value with moderate influence on the fitted regression line; (b) average $x$ value with small influence; (c) 2 outlying $x$s with large influence; (d) outlying $x$ with large influence.', out.width = '95%'}
 include_cropped_graphics("images/lm_influence.png")
