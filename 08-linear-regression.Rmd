@@ -124,7 +124,7 @@ where $0 \leq R^2 \leq 1$: $R^2=1$ indicates a perfect fit; $R^2=0$ indicates th
 
 ### Least squares fitting to Hubble's data
 
-Figures \@ref(fig:hubble_fit_flat), \@ref(fig:hubble_fit_origin) and \@ref(fig:hubble_fit) show least squares regression lines under 3 different models:
+Figures \@ref(fig:hubblefitflat), \@ref(fig:hubblefitorigin) and \@ref(fig:hubblefit) show least squares regression lines under 3 different models:
 
 * Model 1.  $Y$ does not depend on $X$, so that 
 
