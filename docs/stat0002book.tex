@@ -6473,14 +6473,14 @@ where \(\beta=T\) is the age of the Universe.
 \caption{Scatter plot of distance against recession velocity, with least squares fit of an unconstrained line.}\label{fig:hubblefit}
 \end{figure}
 
-These figures also shows the sizes of the residuals and the residual sums of squares \(RSS\). From the plots, and the relative sizes of \(RSS\), it seems clear that velocity \(x\) explains some of the variability in the values of distance \(Y\). The \(RSS\), \(RSS_3\), of Model 3 is smaller than the \(RSS\), \(RSS_2\), of Model 2. It is impossible that \(RSS_3 > RSS_2\).
+These figures also shows the sizes of the residuals and the residual sums of squares \(RSS\). From the plots, and the relative sizes of \(RSS\), it seems clear that velocity \(x\) explains some of the variability in the values of distance \(Y\). The residual sum of squares, \(RSS_3\), of Model 3 is smaller than the residual sum of squares, \(RSS_2\), of Model 2. It is impossible that \(RSS_3 > RSS_2\).
 
 A key question is whether \(RSS_3\) is so much smaller than \(RSS_2\) that we would choose Model 3 over Model 2, which is a question that is considered in STAT0003. Model 2 is an example of \textbf{regression through the origin}, where it is assumed that the intercept equals 0. We should only fit this kind of model if we have a good reason to. Here Hubble's Law gives us a good reason. Note that for a regression through the origin, we use \(\hat{\sigma}^2 = RSS/(n-1)\).
 
 Since we want to estimate the age of the Universe, we use the estimated regression line for Model 2:
 \[ y = 0.00192\,x.  \]
 Therefore, the estimated age of the Universe is given by
-\[ \hat{T}=0.00192 \mbox{~Mpc/km/sec}. \]
+\[ \hat{T}=0.00192 \mbox{ Mpc/km/sec}. \]
 To clarify the units of \(\hat{T}\) we need to convert MPcs to kms by multiplying by \(3.086 \times 10^{19}\). This gives \(\hat{T}\) in seconds. We convert to years by dividing by \(60 \times 60 \times 24 \times 365.25\):
 \[ \hat{T}
 = 0.00192 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} 
