@@ -7190,14 +7190,239 @@ The relationship between these two variables is complicated. However, when deali
 
 This plot has a much clearer pattern. There is positive, approximately linear, association between \(Y\) and \(X\). Large values of the variables tend to occur together, as do small values. There are more points in the quadrants labelled B and C than in A and D. This positive association is due to the link between the US and Canadian financial markets. If you are investing in these markets it is important that you are aware of this positive association, since it means that when you lose money you are likely to lose it in both the US market and the Canadian market.
 
+Figure @ref(fig:exchange\_trans) suggests that \(X\) and \(Y\) are approximately positively, linearly associated. Correlation measures the strength of this linear association.
+
 \hypertarget{covariance-and-correlation}{%
 \section{Covariance and correlation}\label{covariance-and-correlation}}
+
+\textbf{Definition}. Let \(\mu_X=\mbox{E}(X)\) and \(\mu_Y=\mbox{E}(Y)\). The \textbf{covariance} \(\mbox{cov}(X,Y)\) between two random variables \(X\) and \(Y\) is given by
+\[
+\mbox{cov}(X,Y)=\mbox{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]=\mbox{E}(XY)-\mbox{E}(X)\mbox{E}(Y). 
+\]
+The value of \(\mbox{cov}(X,Y)\) depends on the scale of measurement of \(X\) and \(Y\). For example, if we were to multiply all the values of \(X\) by 2 then \(\mbox{cov}(X,Y)\) is also multiplied by 2. Therefore we define a standardised version of covariance: correlation.
+
+\textbf{Definition}. The \textbf{correlation (coefficient)} between two random variables \(X\) and \(Y\) is given by
+\[
+\rho = \mbox{corr}(X,Y) = \frac{\mbox{cov}(X,Y)}{\sqrt{\mbox{var}(X)\mbox{var}(Y)}} 
+= \frac{\mbox{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\sqrt{\mbox{var}(X)\mbox{var}(Y)}}, 
+\]
+provided that both \(\mbox{var}(X)\) and \(\mbox{var}(Y)\) are positive. Correlation is dimensionless (it has no units) and its value does not change if we scale \(X\) and/or \(Y\). Correlation (and covariance) are measures of \textbf{linear} association between random variables. They are a sensible measure of the strength of association between two random variables only if there is a linear relationship between them.
+
+Interpretation of \(\rho\):
+
+\begin{itemize}
+\tightlist
+\item
+  \(-1 \leq \rho \leq 1\).
+\item
+  If \(0 < \rho \leq 1\) then there is positive association between \(X\) and \(Y\).
+  The larger the value of \(\rho\) the stronger the positive association.
+\item
+  If \(-1 \leq \rho < 0\) then there is negative association between \(X\) and \(Y\).
+  The smaller the value of \(\rho\) the stronger the negative association.
+\item
+  If \(|\rho|=1\) there is a perfect linear relationship between \(X\) and \(Y\), that is
+  \(Y=\alpha\,X+\beta\). If \(\rho=1\) then \(\alpha>0\). If \(\rho=-1\) then \(\alpha<0\).
+\item
+  Values of \(\rho\) close to \(0\) do \textbf{not} indicate no association, just a lack of
+  \textbf{linear} association. If \(\rho\) is close to zero it could be that \(X\) and \(Y\) are strongly non-linearly associated.
+\item
+  If \(\rho=0\) we say that \(X\) and \(Y\) are \textbf{uncorrelated}.
+\end{itemize}
+
+\hypertarget{estimation}{%
+\subsection{Estimation}\label{estimation}}
+
+Suppose that we have a random sample \((X_1,Y_1), ..., (X_n,Y_n)\) from the joint distribution of \(X\) and \(Y\). The \textbf{sample correlation coefficient}
+\[
+r = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
+{\sqrt{\displaystyle\sum_{i=1}^n (X_i-\bar{X})^2 \displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}} 
+= \frac{C_{XY}}{\sqrt{C_{XX}\,C_{YY}}}, 
+\]
+is an estimator of the correlation coefficient \(\rho\).
+
+For the data in Figure \ref{fig:exchangetrans} we get \(r=0.82\). This confirms the quite strong positive linear association apparent in the plot. Why do these data give a value of \(r\) which is positive? We consider contributions of individual data points to the numerator
+\[  C_{xy}=\displaystyle\sum_{i=1}^n (x_i-\bar{x})(y_i-\bar{y}) \]
+of \(r\). Points in quadrant
+
+\begin{itemize}
+\tightlist
+\item
+  B will have \(x_i-\bar{x}>0\) and \(y_i-\bar{y}>0\). Therefore \((x_i-\bar{x})(y_i-\bar{y})>0\).\\
+\item
+  C will have \(x_i-\bar{x}<0\) and \(y_i-\bar{y}<0\). Therefore \((x_i-\bar{x})(y_i-\bar{y})>0\).\\
+\item
+  A will have \(x_i-\bar{x}<0\) and \(y_i-\bar{y}>0\). Therefore \((x_i-\bar{x})(y_i-\bar{y})<0\).\\
+\item
+  D will have \(x_i-\bar{x}>0\) and \(y_i-\bar{y}<0\). Therefore \((x_i-\bar{x})(y_i-\bar{y})<0\).
+\end{itemize}
+
+Therefore, since \(\sqrt{C_{xx}\,C_{yy}}>0\), and \(C_{xy}\) is a sum of contributions from all pairs \((x_i,y_i)\):
+
+\begin{itemize}
+\tightlist
+\item
+  If most of the observed points lie in quadrants B and C then \(r\) is positive.
+\item
+  If most of the observed points lie in quadrants A and D then \(r\) is negative.
+\item
+  If the numbers of points in each quadrant are approximately equal then \(r\) is close to 0.
+\end{itemize}
+
+\hypertarget{links-between-regression-and-correlation}{%
+\subsection{Links between regression and correlation}\label{links-between-regression-and-correlation}}
+
+Regression and correlation answer different questions. However, there are links between them. If we regress \(Y\) on \(x\) then
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  the sample coefficient of determination \(R^2\) is equal to \(r^2\), the square of the sample correlation coefficient,
+\item
+  the estimate of the regression slope \(\beta\) is related to the sample correlation coefficient via
+  \[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]
+\end{enumerate}
+
+These relationships make general sense.
+
+\begin{itemize}
+\tightlist
+\item
+  If \(R^2\) is large then the linear regression of \(Y\) on \(x\) explains a lot of variability in the \(Y\) data and so the correlation between \(X\) and \(Y\) must be strong.
+\item
+  The value of \(\hat{\beta}\) and the value of \(r\) have the same sign.
+\end{itemize}
 
 \hypertarget{use-and-misuse-of-correlation}{%
 \section{Use and misuse of correlation}\label{use-and-misuse-of-correlation}}
 
+We must be careful to use correlation only when it is appropriate. When it is used we must be careful to interpret its value carefully. In this section we give at some examples to show why we must use correlation with care.
+
+One golden rule is that we should \textbf{always plots the data}.
+
+\hypertarget{do-not-use-correlation-for-regression-sampling-schemes}{%
+\subsection{Do not use correlation for regression sampling schemes}\label{do-not-use-correlation-for-regression-sampling-schemes}}
+
+We should \textbf{not} to use correlation to summarise association between \(Y\) and \(X\) when regression sampling has been used, that is, where the values of \(X\) are \textbf{chosen} and then the values of \(Y\) are observed. We use simulation to show us why this is. Figure \ref{fig:xdesigncorr0} shows a random sample of size 100 from a joint distribution of \(X\) and \(Y\) for which \(\rho=0.5\). The sample correlation coefficient is 0.51.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/design_corr0} 
+
+}
+
+\caption{A random sample of size 100 from a distribution with $\rho=0.5$.}\label{fig:xdesigncorr0}
+\end{figure}
+
+In Figure \ref{fig:xdesigncorr} regression samples of size 10 have been taken from the \textbf{same} joint distribution, but
+
+\begin{itemize}
+\tightlist
+\item
+  on the left the values of \(x\) are \textbf{chosen} to be \(-2\) and \(+2\). We get \(r=0.84\).
+\item
+  on the right the values of \(x\) are \textbf{chosen} to be \(-0.1\) and \(+0.1\). We get \(r=-0.46\).
+\end{itemize}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/design_corr} 
+
+}
+
+\caption{Left: $x$-values chosen to be only -2 or 2.  Right: $x$-values chosen to be only -0.1 or 0.1.}\label{fig:xdesigncorr}
+\end{figure}
+
+The values chosen for \(x\) have a huge effect on \(r\). By choosing the values of \(x\) to be spread far apart we can make \(r\) as close to \(+1\) as we wish. If the values of \(x\) are chosen to be close together, \(r\) will be quite variable, but close to zero on average.
+
+\textbf{Summary}
+
+If regression sampling is used the value of \(r\) depends on the values of \(x\) chosen.
+
 \hypertarget{correxamples}{%
 \subsection{Examples of correlations of different strengths}\label{correxamples}}
+
+Figure \ref{fig:corr8} gives random samples from distributions with correlations \(\rho=0\) (2 of them), \(\rho=\pm 0.3, \rho=\pm 0.7\) and \(\rho=\pm 1\). The data in the bottom plots in Figure \ref{fig:corr8} are both sampled from distributions with \(\rho=0\). However, the associations between the variables are very different. On the left there is no association. On the right there is quite strong non-linear association.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/corr8c} \includegraphics[width=0.8\linewidth]{images/corr8d} 
+
+}
+
+\caption{Samples from distributions with correlations $
+ho=0$ (2 of them), $
+ho=\pm 0.3, 
+ho=\pm 0.7$ and $
+ho=\pm 1$.}\label{fig:corr8}
+\end{figure}
+
+\hypertarget{beware-missing-data-codes}{%
+\subsection{Beware missing data codes}\label{beware-missing-data-codes}}
+
+Most real datasets have \textbf{missing observations}. For example, people may decide not to answer some of the questions on a questionnaire. It is quite common to use a missing value code (such as -9) to identify a missing value. We need to be careful not to confuse a numerical missing value code with actual data.
+
+Consider the following situation, which is based on a real example.Someone is given data on two variables \(X\) and \(Y\). They calculate the sample correlation coefficient \(r\) and find that it is 0.95. They go back to the person who gave them the data and tell them that\(X\) and \(Y\) are strongly positively associated. The person is surprised: they expected the variables to be negatively associated. So they produce a plot of the data, shown on the left side of Figure \ref{fig:corrmissing}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/corr_missing1} \includegraphics[width=0.5\linewidth]{images/corr_missing2} 
+
+}
+
+\caption{Example data. Left: including the 'datum' (-9,9). Right: with the missing value removed.}\label{fig:corrmissing}
+\end{figure}
+
+It is then clear that the large positive value of \(r=0.95\) is due the missing value (-9,-9) being included in the plot. Once this point is removed the sample correlation is negative, \(r=-0.75\), as expected. A plot of the data with the missing value removed in shown on the right side of Figure \ref{fig:corrmissing}.
+
+\hypertarget{more-guessing-sample-correlations}{%
+\subsection{More guessing sample correlations}\label{more-guessing-sample-correlations}}
+
+Figure \ref{fig:guesscorr} gives some scatter plots with their sample correlation coefficients.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{images/guess_corr} 
+
+}
+
+\caption{Some scatter plots and their sample correlation coefficient.}\label{fig:guesscorr}
+\end{figure}
+
+Based on these plots, you will probably be surprised by the fact that for the data plotted in Figure \ref{fig:guesscorrnew2} the value of the sample correlation coefficient is 0.991. Can you guess what has caused this surprising value?
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/guess_corr_new2} 
+
+}
+
+\caption{Can you guess the value of the sample correlation coefficient?}\label{fig:guesscorrnew2}
+\end{figure}
+
+\hypertarget{summary}{%
+\subsection{Summary}\label{summary}}
+
+Correlation can be used when
+
+\begin{itemize}
+\tightlist
+\item
+  the data are a random sample from the joint distribution of \((X,Y)\),
+\item
+  the association between \(X\) and \(Y\) is approximately linear.
+\end{itemize}
+
+Correlation should \textbf{not} be used, that is, it can be misleading, if
+
+\begin{itemize}
+\tightlist
+\item
+  the values of either of the variables are controlled by an experimenter,
+\item
+  \(X\) and \(Y\) are associated non-linearly.
+\end{itemize}
 
 \hypertarget{a-general-strategy-for-statistical-modelling}{%
 \chapter{A general strategy for statistical modelling}\label{a-general-strategy-for-statistical-modelling}}
