@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-12-10" />
+<meta name="date" content="2020-12-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.2" data-path="descriptive.html"><a href="descriptive.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
 <li class="chapter" data-level="2.3.3" data-path="descriptive.html"><a href="descriptive.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
 <li class="chapter" data-level="2.3.4" data-path="descriptive.html"><a href="descriptive.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
-<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#correlation"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
+<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#corr1"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="descriptive.html"><a href="descriptive.html#frequency-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Frequency distribution</a></li>
@@ -335,8 +335,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="correlationchapter" class="section level1">
 <h1><span class="header-section-number">Chapter 9</span> Correlation</h1>
+<p>Now we consider the situation where objects are sampled randomly from a population, and, for each object, we observe the values of random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Therefore, unlike regression sampling, where the values of <span class="math inline">\(X\)</span> are chosen by an experimenter, both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables. Unlike a regression problem, we treat <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> symmetrically, that is, we do not identify one variable as a response and one as explanatory. We are interested in the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. How are they associated, and how strongly?</p>
+<p>When estimating correlation from data we will concentrate on the sample correlation coefficient <span class="math inline">\(r\)</span> defined in equation <a href="descriptive.html#eq:corr">(2.1)</a> of section <a href="descriptive.html#corr1">2.3.5</a>. However, the general comments make will also apply to Spearman’s rank correlation coefficient <span class="math inline">\(r_S\)</span> (also defined in section <a href="descriptive.html#corr1">2.3.5</a>.</p>
 <div id="correlation-a-measure-of-linear-association" class="section level2">
 <h2><span class="header-section-number">9.1</span> Correlation: a measure of linear association</h2>
+<p><strong>UK/USA/Canadian exchange rates</strong></p>
+<p>Figure <a href="correlationchapter.html#fig:exchangeraw">9.1</a> is a plot the UK Pound/Canadian dollar exchange rate vs. the UK Pound/US dollar exchange rate for each day between 2nd January 1997 and 21 November 2000.</p>
+<div class="figure" style="text-align: center"><span id="fig:exchangeraw"></span>
+<img src="images/exchange_raw.png" alt="Value of 1 UK pound in Canadian dollars against value of 1 UK pound in US dollars." width="75%" />
+<p class="caption">
+Figure 9.1: Value of 1 UK pound in Canadian dollars against value of 1 UK pound in US dollars.
+</p>
+</div>
+<p>The relationship between these two variables is complicated. However, when dealing with exchange rates it is common to (a) work with <span class="math inline">\(\log\)</span>(exchange rate), and (b) use the <strong>change</strong> in <span class="math inline">\(\log\)</span>(exchange rate) from one day to the next. This produces quantities called <strong>log-returns</strong>. In Figure <a href="correlationchapter.html#fig:exchangetrans">9.2</a> the log-returns for the UK Pound/Canadian dollar exchange rate (<span class="math inline">\(Y\)</span>) are plotted against the log-returns <span class="math inline">\(X\)</span> for the UK Pound/US exchange rate (<span class="math inline">\(X\)</span>).</p>
+<div class="figure" style="text-align: center"><span id="fig:exchangetrans"></span>
+<img src="images/exchange.png" alt="Plot of $Y$ against $X$.  The vertical line is drawn at the sample mean of the $X$ data and the horizontal line at the sample mean of the $Y$ data." width="75%" />
+<p class="caption">
+Figure 9.2: Plot of <span class="math inline">\(Y\)</span> against <span class="math inline">\(X\)</span>. The vertical line is drawn at the sample mean of the <span class="math inline">\(X\)</span> data and the horizontal line at the sample mean of the <span class="math inline">\(Y\)</span> data.
+</p>
+</div>
+<p>This plot has a much clearer pattern. There is positive, approximately linear, association between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>. Large values of the variables tend to occur together, as do small values. There are more points in the quadrants labelled B and C than in A and D. This positive association is due to the link between the US and Canadian financial markets. If you are investing in these markets it is important that you are aware of this positive association, since it means that when you lose money you are likely to lose it in both the US market and the Canadian market.</p>
 </div>
 <div id="covariance-and-correlation" class="section level2">
 <h2><span class="header-section-number">9.2</span> Covariance and correlation</h2>

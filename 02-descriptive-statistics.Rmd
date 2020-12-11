@@ -291,7 +291,7 @@ Table \@ref(tab:sumstats) summarises the summary statistics may be used as measu
 
 Table: (\#tab:sumstats) Summary of summary statistics
 
-### Correlation
+### Correlation {#corr1}
 
 Measures of correlation aim to summarise the strength of the relationship between two variables. Suppose that we have two samples $x_1,\ldots,x_n$ and $y_1,\ldots,y_n$ of **paired** data. For example, $x_1$ and $y_1$ could be the height and weight of person 1, $x_2$ and $y_2$ the height and weight of person 2, etc.
 

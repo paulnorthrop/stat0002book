@@ -7,14 +7,34 @@ knitr::opts_chunk$set(
 
 ```{r, echo = FALSE}
 include_cropped_graphics <- function(x) {
-#  knitr::include_graphics(knitr::plot_crop(x))
-  knitr::include_graphics(x)
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
 }
 ```
 
 # Correlation {#correlationchapter}
 
+Now we consider the situation where objects are sampled randomly from a population,  and, for each object, we observe the values of random variables $X$ and $Y$.  Therefore, unlike regression sampling, where the values of $X$ are chosen by an experimenter, both $X$ and $Y$ are random variables. Unlike a regression problem, we treat $X$ and $Y$ symmetrically, that is, we do not identify one variable as a response and one as explanatory. We are interested in the relationship between $X$ and $Y$. How are they associated, and how strongly?
+
+When estimating correlation from data we will concentrate on the sample correlation coefficient $r$ defined in equation \@ref(eq:corr) of section \@ref(corr1).  However, the general comments make will also apply to Spearman's rank correlation coefficient $r_S$ (also defined in section \@ref(corr1).
+
 ## Correlation: a measure of linear association
+
+**UK/USA/Canadian exchange rates**
+
+Figure \@ref(fig:exchangeraw) is a plot the UK Pound/Canadian dollar exchange rate vs. the UK Pound/US dollar exchange rate for each day between 2nd January 1997 and 21 November 2000.
+
+```{r echo=FALSE, exchangeraw, fig.show='hold', fig.cap='Value of 1 UK pound in Canadian dollars against value of 1 UK pound in US dollars.'}
+include_cropped_graphics("images/exchange_raw.png")
+```
+
+The relationship between these two variables is complicated.  However, when dealing with exchange rates it is common to (a) work with $\log$(exchange rate), and (b) use the **change** in $\log$(exchange rate) from one day to the next. This produces quantities called **log-returns**.  In Figure \@ref(fig:exchangetrans) the log-returns for the UK Pound/Canadian dollar exchange rate ($Y$) are plotted against the log-returns $X$ for the UK Pound/US exchange rate ($X$).
+
+```{r echo=FALSE, exchangetrans, fig.show='hold', fig.cap='Plot of $Y$ against $X$.  The vertical line is drawn at the sample mean of the $X$ data and the horizontal line at the sample mean of the $Y$ data.'}
+include_cropped_graphics("images/exchange.png")
+```
+
+This plot has a much clearer pattern.  There is positive, approximately linear, association between $Y$ and $X$. Large values of the variables tend to occur together, as do small values. There are more points in the quadrants labelled B and C than in A and D. This positive association is due to the link between the US and Canadian financial markets. If you are investing in these markets it is important that you are aware of this positive association, since it means that when you lose money you are likely to lose it in both the US market and the Canadian market.
 
 ## Covariance and correlation
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.12.6)  10 DEC 2020 01:19
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.12.6)  11 DEC 2020 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1747,11 +1747,16 @@ File: images/hubble_curves.png Graphic file (type bmp)
 <images/hubble_curves.png>
 [156] [157]
 Chapter 9.
+File: images/exchange_raw.png Graphic file (type bmp)
+<images/exchange_raw.png>
 [158
 
 ]
+File: images/exchange.png Graphic file (type bmp)
+<images/exchange.png>
+[159]
 Chapter 10.
-(./stat0002book.bbl [159
+(./stat0002book.bbl [160
 
 ])
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1788,7 +1793,7 @@ braces):
 >  {english/babelname}  =>  {british}
 >  {english/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {english/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[160
+[161
 
 ] (./stat0002book.aux
 Package polyglossia Info: Option: english variant=british.
@@ -1803,12 +1808,12 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: 69EB44276E87DAAA6C6C51A578E492C3;11880.
  ) 
 Here is how much of TeX's memory you used:
- 24358 strings out of 479324
- 468155 string characters out of 5876815
- 1038648 words of memory out of 5000000
- 43334 multiletter control sequences out of 15000+600000
+ 24382 strings out of 479324
+ 468645 string characters out of 5876815
+ 1038950 words of memory out of 5000000
+ 43356 multiletter control sequences out of 15000+600000
  410121 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1057b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on stat0002book.pdf (160 pages).
+Output written on stat0002book.pdf (161 pages).

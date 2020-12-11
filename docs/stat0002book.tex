@@ -147,7 +147,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-12-10}
+\date{2020-12-11}
 
 \begin{document}
 \maketitle
@@ -833,8 +833,8 @@ mode & &\tabularnewline
 \bottomrule
 \end{longtable}
 
-\hypertarget{correlation}{%
-\subsection{Correlation}\label{correlation}}
+\hypertarget{corr1}{%
+\subsection{Correlation}\label{corr1}}
 
 Measures of correlation aim to summarise the strength of the relationship between two variables. Suppose that we have two samples \(x_1,\ldots,x_n\) and \(y_1,\ldots,y_n\) of \textbf{paired} data. For example, \(x_1\) and \(y_1\) could be the height and weight of person 1, \(x_2\) and \(y_2\) the height and weight of person 2, etc.
 
@@ -6438,7 +6438,7 @@ Figures \ref{fig:hubblefitflat}, \ref{fig:hubblefitorigin} and \ref{fig:hubblefi
 
 \[ Y_i = \beta_2\,x_i + \epsilon_i, \qquad i=1,\ldots, n, \]
 
-where \(\beta=T\) is the age of the Universe.
+where \(\beta_2=T\) is the age of the Universe.
 
 \begin{itemize}
 \tightlist
@@ -6889,7 +6889,7 @@ Action:
 \item
   Fit the model; report the non-normality of the error distribution.
 \item
-  There may be a good reason to use a model with a different response distribution for \(Y\), e.g.~if the \(Y\)s are counts we could use a Poisson distribution (beyond the scope of STAT0002).
+  There may be a good reason to use a model with a different response distribution for \(Y\), for example, if the \(Y\)s are counts we could use a Poisson distribution (beyond the scope of STAT0002).
 \end{itemize}
 
 The order of importance of the assumptions for a linear model (most important first) is: linearity and independence, constant error variance, normality of errors. We may find that there are clear departures from more than one assumption, for example, the relationship between \(Y\) and \(x\) is non-linear and the error variance is not constant. If we are lucky we might find a transformation to improve both of these departures.
@@ -7157,8 +7157,38 @@ As the degree of the polynomial increases the \(RSS\) decreases. Fitting a polyn
 \hypertarget{correlationchapter}{%
 \chapter{Correlation}\label{correlationchapter}}
 
+Now we consider the situation where objects are sampled randomly from a population, and, for each object, we observe the values of random variables \(X\) and \(Y\). Therefore, unlike regression sampling, where the values of \(X\) are chosen by an experimenter, both \(X\) and \(Y\) are random variables. Unlike a regression problem, we treat \(X\) and \(Y\) symmetrically, that is, we do not identify one variable as a response and one as explanatory. We are interested in the relationship between \(X\) and \(Y\). How are they associated, and how strongly?
+
+When estimating correlation from data we will concentrate on the sample correlation coefficient \(r\) defined in equation \eqref{eq:corr} of section \ref{corr1}. However, the general comments make will also apply to Spearman's rank correlation coefficient \(r_S\) (also defined in section \ref{corr1}.
+
 \hypertarget{correlation-a-measure-of-linear-association}{%
 \section{Correlation: a measure of linear association}\label{correlation-a-measure-of-linear-association}}
+
+\textbf{UK/USA/Canadian exchange rates}
+
+Figure \ref{fig:exchangeraw} is a plot the UK Pound/Canadian dollar exchange rate vs.~the UK Pound/US dollar exchange rate for each day between 2nd January 1997 and 21 November 2000.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/exchange_raw} 
+
+}
+
+\caption{Value of 1 UK pound in Canadian dollars against value of 1 UK pound in US dollars.}\label{fig:exchangeraw}
+\end{figure}
+
+The relationship between these two variables is complicated. However, when dealing with exchange rates it is common to (a) work with \(\log\)(exchange rate), and (b) use the \textbf{change} in \(\log\)(exchange rate) from one day to the next. This produces quantities called \textbf{log-returns}. In Figure \ref{fig:exchangetrans} the log-returns for the UK Pound/Canadian dollar exchange rate (\(Y\)) are plotted against the log-returns \(X\) for the UK Pound/US exchange rate (\(X\)).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/exchange} 
+
+}
+
+\caption{Plot of $Y$ against $X$.  The vertical line is drawn at the sample mean of the $X$ data and the horizontal line at the sample mean of the $Y$ data.}\label{fig:exchangetrans}
+\end{figure}
+
+This plot has a much clearer pattern. There is positive, approximately linear, association between \(Y\) and \(X\). Large values of the variables tend to occur together, as do small values. There are more points in the quadrants labelled B and C than in A and D. This positive association is due to the link between the US and Canadian financial markets. If you are investing in these markets it is important that you are aware of this positive association, since it means that when you lose money you are likely to lose it in both the US market and the Canadian market.
 
 \hypertarget{covariance-and-correlation}{%
 \section{Covariance and correlation}\label{covariance-and-correlation}}

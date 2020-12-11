@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2020-12-10" />
+<meta name="date" content="2020-12-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.2" data-path="descriptive.html"><a href="descriptive.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
 <li class="chapter" data-level="2.3.3" data-path="descriptive.html"><a href="descriptive.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
 <li class="chapter" data-level="2.3.4" data-path="descriptive.html"><a href="descriptive.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
-<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#correlation"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
+<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#corr1"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a><ul>
 <li class="chapter" data-level="2.4.1" data-path="descriptive.html"><a href="descriptive.html#frequency-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Frequency distribution</a></li>
@@ -444,7 +444,7 @@ where <span class="math inline">\(0 \leq R^2 \leq 1\)</span>: <span class="math 
 <li>Model 2. <span class="math inline">\(Y\)</span> depends on <span class="math inline">\(X\)</span> according to Hubble’s law, so that</li>
 </ul>
 <p><span class="math display">\[ Y_i = \beta_2\,x_i + \epsilon_i, \qquad i=1,\ldots, n, \]</span></p>
-<p>where <span class="math inline">\(\beta=T\)</span> is the age of the Universe.</p>
+<p>where <span class="math inline">\(\beta_2=T\)</span> is the age of the Universe.</p>
 <ul>
 <li>Model 3. <span class="math inline">\(Y\)</span> depends on <span class="math inline">\(X\)</span> according to the full linear regression model</li>
 </ul>
@@ -704,7 +704,7 @@ even when the errors are not normal.</li>
 <p>Action:</p>
 <ul>
 <li>Fit the model; report the non-normality of the error distribution.</li>
-<li>There may be a good reason to use a model with a different response distribution for <span class="math inline">\(Y\)</span>, e.g. if the <span class="math inline">\(Y\)</span>s are counts we could use a Poisson distribution (beyond the scope of STAT0002).</li>
+<li>There may be a good reason to use a model with a different response distribution for <span class="math inline">\(Y\)</span>, for example, if the <span class="math inline">\(Y\)</span>s are counts we could use a Poisson distribution (beyond the scope of STAT0002).</li>
 </ul>
 <p>The order of importance of the assumptions for a linear model (most important first) is: linearity and independence, constant error variance, normality of errors. We may find that there are clear departures from more than one assumption, for example, the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span> is non-linear and the error variance is not constant. If we are lucky we might find a transformation to improve both of these departures.</p>
 </div>

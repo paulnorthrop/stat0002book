@@ -134,7 +134,7 @@ Figures \@ref(fig:hubblefitflat), \@ref(fig:hubblefitorigin) and \@ref(fig:hubbl
 
 \[ Y_i = \beta_2\,x_i + \epsilon_i, \qquad i=1,\ldots, n, \]
 
-where $\beta=T$ is the age of the Universe.
+where $\beta_2=T$ is the age of the Universe.
 
 * Model 3.  $Y$ depends on $X$ according to the full linear regression model
 
@@ -393,7 +393,7 @@ even when the errors are not normal.
 Action: 
 
 * Fit the model; report the non-normality of the error distribution.
-* There may be a good reason to use a model with a different response distribution for $Y$, e.g. if the $Y$s are counts we could use a Poisson distribution (beyond the scope of STAT0002).
+* There may be a good reason to use a model with a different response distribution for $Y$, for example, if the $Y$s are counts we could use a Poisson distribution (beyond the scope of STAT0002).
 
 The order of importance of the assumptions for a linear model (most important first) is: linearity and independence, constant error variance, normality of errors. We may find that there are clear departures from more than one assumption, for example, the relationship between $Y$ and $x$ is non-linear and the error variance is not constant. If we are lucky we might find a transformation to improve both of these departures.
 
