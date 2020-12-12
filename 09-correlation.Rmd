@@ -62,8 +62,8 @@ The larger the value of $\rho$ the stronger the positive association.
 The smaller the value of $\rho$ the stronger the negative association.
 * If $|\rho|=1$ there is a perfect linear relationship between $X$ and $Y$, that is
 $Y=\alpha\,X+\beta$.  If $\rho=1$ then $\alpha>0$.  If $\rho=-1$ then $\alpha<0$.
-* Values of $\rho$ close to $0$ do **not** indicate no association, just a lack of 
-**linear** association.  If $\rho$ is close to zero it could be that $X$ and $Y$ are strongly non-linearly associated.
+* $\rho = 0$ does **not** indicate no association, just a lack of 
+**linear** association.  If $\rho$ is zero, or close to zero, it could be that $X$ and $Y$ are strongly non-linearly associated.
 * If $\rho=0$ we say that $X$ and $Y$ are **uncorrelated**.
 
 ### Estimation
