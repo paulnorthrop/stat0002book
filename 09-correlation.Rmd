@@ -16,7 +16,7 @@ include_cropped_graphics <- function(x) {
 
 Now we consider the situation where objects are sampled randomly from a population,  and, for each object, we observe the values of random variables $X$ and $Y$.  Therefore, unlike regression sampling, where the values of $X$ are chosen by an experimenter, both $X$ and $Y$ are random variables. Unlike a regression problem, we treat $X$ and $Y$ symmetrically, that is, we do not identify one variable as a response and one as explanatory. We are interested in the relationship between $X$ and $Y$. How are they associated, and how strongly?
 
-When estimating correlation from data we will concentrate on the sample correlation coefficient $r$ defined in equation \@ref(eq:corr) of section \@ref(corr1).  However, the general comments make will also apply to Spearman's rank correlation coefficient $r_S$ (also defined in section \@ref(corr1).
+When estimating correlation from data we will concentrate on the sample correlation coefficient $r$ defined in equation \@ref(eq:corr) of Section \@ref(corr1), which is a measure of the strength of **linear** association.  However, the general comments that we make will also apply to Spearman's rank correlation coefficient $r_S$ (also defined in section \@ref(corr1).
 
 ## Correlation: a measure of linear association
 
