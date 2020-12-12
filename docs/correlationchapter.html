@@ -375,10 +375,10 @@ Figure 9.2: Plot of <span class="math inline">\(Y\)</span> against <span class="
 The value of <span class="math inline">\(\mbox{cov}(X,Y)\)</span> depends on the scale of measurement of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. For example, if we were to multiply all the values of <span class="math inline">\(X\)</span> by 2 then <span class="math inline">\(\mbox{cov}(X,Y)\)</span> is also multiplied by 2. Therefore we define a standardised version of covariance: correlation.</p>
 <p><strong>Definition</strong>. The <strong>correlation (coefficient)</strong> between two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is given by
 <span class="math display">\[
-\rho = \mbox{corr}(X,Y) = \frac{\mbox{cov}(X,Y)}{\sqrt{\mbox{var}(X)\mbox{var}(Y)}} 
-= \frac{\mbox{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\sqrt{\mbox{var}(X)\mbox{var}(Y)}}, 
+\rho = \mbox{corr}(X,Y) = \frac{\mbox{cov}(X,Y)}{\mbox{sd}(X)\mbox{sd}(Y)} 
+= \frac{\mbox{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\mbox{sd}(X)\mbox{sd}(Y)}, 
 \]</span>
-provided that both <span class="math inline">\(\mbox{var}(X)\)</span> and <span class="math inline">\(\mbox{var}(Y)\)</span> are positive. Correlation is dimensionless (it has no units) and its value does not change if we scale <span class="math inline">\(X\)</span> and/or <span class="math inline">\(Y\)</span>. Correlation (and covariance) are measures of <strong>linear</strong> association between random variables. They are a sensible measure of the strength of association between two random variables only if there is a linear relationship between them.</p>
+provided that both <span class="math inline">\(\mbox{sd}(X)\)</span> and <span class="math inline">\(\mbox{sd}(Y)\)</span> are positive. Correlation is dimensionless (it has no units) and its value does not change if we scale <span class="math inline">\(X\)</span> and/or <span class="math inline">\(Y\)</span>. Correlation (and covariance) are measures of <strong>linear</strong> association between random variables. They are a sensible measure of the strength of association between two random variables only if there is a linear relationship between them.</p>
 <p>Interpretation of <span class="math inline">\(\rho\)</span>:</p>
 <ul>
 <li><span class="math inline">\(-1 \leq \rho \leq 1\)</span>.</li>
