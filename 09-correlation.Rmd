@@ -70,7 +70,7 @@ $Y=\alpha\,X+\beta$.  If $\rho=1$ then $\alpha>0$.  If $\rho=-1$ then $\alpha<0$
 
 Suppose that we have a random sample $(X_1,Y_1), ..., (X_n,Y_n)$ from the joint distribution of $X$ and $Y$.  The **sample correlation coefficient**
 $$
-r = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
+R = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
 {\sqrt{\displaystyle\sum_{i=1}^n (X_i-\bar{X})^2 \displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}} 
 = \frac{C_{XY}}{\sqrt{C_{XX}\,C_{YY}}}, 
 $$
@@ -95,7 +95,7 @@ Therefore, since $\sqrt{C_{xx}\,C_{yy}}>0$, and $C_{xy}$ is a sum of contributio
 
 Regression and correlation answer different questions.  However, there are links between them.  If we regress $Y$ on $x$ then
 
-1. the sample coefficient of determination $R^2$ is equal to $r^2$, the square of the sample correlation coefficient,
+1. the sample coefficient of determination $R^2$ ($R^2$ is just a name: this is not literally the square of a quantity $R$) is equal to $r^2$, the square of the sample correlation coefficient,
 2. the estimate of the regression slope $\beta$ is related to the sample correlation coefficient via
 \[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]
 

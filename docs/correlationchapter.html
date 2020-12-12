@@ -396,7 +396,7 @@ The smaller the value of <span class="math inline">\(\rho\)</span> the stronger 
 <h3><span class="header-section-number">9.2.1</span> Estimation</h3>
 <p>Suppose that we have a random sample <span class="math inline">\((X_1,Y_1), ..., (X_n,Y_n)\)</span> from the joint distribution of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. The <strong>sample correlation coefficient</strong>
 <span class="math display">\[
-r = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
+R = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
 {\sqrt{\displaystyle\sum_{i=1}^n (X_i-\bar{X})^2 \displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}} 
 = \frac{C_{XY}}{\sqrt{C_{XX}\,C_{YY}}}, 
 \]</span>
@@ -424,7 +424,7 @@ of <span class="math inline">\(r\)</span>. Points in quadrant</p>
 <h3><span class="header-section-number">9.2.2</span> Links between regression and correlation</h3>
 <p>Regression and correlation answer different questions. However, there are links between them. If we regress <span class="math inline">\(Y\)</span> on <span class="math inline">\(x\)</span> then</p>
 <ol style="list-style-type: decimal">
-<li>the sample coefficient of determination <span class="math inline">\(R^2\)</span> is equal to <span class="math inline">\(r^2\)</span>, the square of the sample correlation coefficient,</li>
+<li>the sample coefficient of determination <span class="math inline">\(R^2\)</span> (<span class="math inline">\(R^2\)</span> is just a name: this is not literally the square of a quantity <span class="math inline">\(R\)</span>) is equal to <span class="math inline">\(r^2\)</span>, the square of the sample correlation coefficient,</li>
 <li>the estimate of the regression slope <span class="math inline">\(\beta\)</span> is related to the sample correlation coefficient via
 <span class="math display">\[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]</span></li>
 </ol>
