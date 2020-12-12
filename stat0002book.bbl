@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[Anscombe, 1973]{Anscombe1973}
+Anscombe, F.~J. (1973).
+\newblock Graphs in statistical analysis.
+\newblock {\em The American Statistician}, 27(1):17--21.
+
 \bibitem[Bickel et~al., 1975]{berkeley}
 Bickel, P.~J., Hammel, E.~A., and O{\textquoteright}Connell, J.~W. (1975).
 \newblock Sex bias in graduate admissions: Data from {B}erkeley.
