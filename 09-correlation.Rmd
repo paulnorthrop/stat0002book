@@ -183,6 +183,50 @@ Correlation should **not** be used, that is, it can be misleading, if
 
 ### Anscombe's datasets
 
-It is very important to plot data before fitting a linear regression model or estimating a correlation coefficient. In 1973 F.J. Anscombe created 4 datsets to illustrate the need for this.  His data are given in Table \@ref(fig:).
+It is very important to plot data before fitting a linear regression model or estimating a correlation coefficient. In 1973 F.J. Anscombe (@Anscombe1973) created 4 datasets to illustrate the need for this.  His data are given in Table \@ref(fig:anscombetable).  You discussed these data, and some other examples, in Tutorial 1.
 
+```{r echo=FALSE, anscombetable, fig.show='hold', fig.cap='Anscombe\'s datasets.', out.width = '60%'}
+include_cropped_graphics("images/anscombetable.png")
+```
 
+The datasets have many things in common.  For each of the 4 datasets:
+
+* the sample size is 11,
+* $\bar{x}=9.00$, $s_x=3.32$, $\bar{y}=7.50$ and $s_y=2.03$,
+* the least squares linear regression line is $y=3+0.5\,x$, with $RSS$=13.75,
+* the sample correlation coefficient $r=0.816$.
+* (By the way, the values of Spearman's rank correlation coefficient $r_S$ are
+0.818, 0.691, 0.991 and 0.500 respectively.)
+
+Based on these sample statistics we might be tempted to conclude that the association between $Y$ and $X$ is similar for each of the 4 datasets.  However, when we look at scatter plots of the data (Figure \@ref(fig:anscombeplot)) it is clear that this is not the case. This demonstrates that summary statistics alone do not describe adequately a probability distribution.
+
+```{r echo=FALSE, anscombeplot, fig.show='hold', fig.cap='Scatter plots of Anscombe\'s datasets. Top left: approximately linear association.  Top right: perfect non-linear association. Bottom left: Perfect linear association apart from 1 outlier.  Bottom right: the increase of 0.5 units in $y$ for each unit increase in $x$ suggested by the regression equation is due to a single observation.', out.width = '80%'}
+include_cropped_graphics("images/anscombe.png")
+```
+
+### We must interpret correlation with care.
+
+Suppose that we find that two variables $X$ and $Y$ have a sample correlation which is not close to 0.
+There are several ways that an apparent linear association can arise.
+
+1. Changes in $X$ cause changes in $Y$.
+2. Changes in $Y$ cause changes in $X$.
+3. Changes in a third variable $Z$ causes changes in both $X$ and $Y$.
+4. The observed association is just a coincidence.
+
+Points 3. and 4. show that correlation does **not** imply causation. 
+
+We finish with an example which may illustrate point 3.  We have already seen the time series plots in Figure \@ref(fig:fluandFTSE). 
+
+```{r echo=FALSE, fluandFTSE, fig.show='hold', fig.cap='Weekly FTSE 100 closing prices against numbers of people seeing their doctor about flu over 4-week periods.', out.width = '80%'}
+include_cropped_graphics("images/ftse_weekly_tufte.png")
+include_cropped_graphics("images/flu_tufte.png")
+```
+
+For the period of time over which these series overlap, we extract from the FTSE 100 data the weekly closing price that corresponds to each of the 4-weekly flu values.  In Figure \@ref(fig:fluvsFTSE) we plot (on a log-log scale) these FTSE values against the flu values.
+
+```{r echo=FALSE, fluvsFTSE, fig.show='hold', fig.cap='Weekly FTSE 100 closing prices against numbers of people seeing their doctor about flu over 4-week periods.', out.width = '60%'}
+include_cropped_graphics("images/flu_FTSE.png")
+```
+
+We see that there is weak negative association ($r=-0.32$) between the FTSE 100 and flu values. Does this suggest that flu causes the FTSE 100 share index to drop, or vice versa? This is not a ridiculous suggestion, but the time series plots suggest that the negative association is due to the fact that the FTSE 100 index has **increased** over time, whereas the number of people seeing their doctor about flu has **decreased** over time. There is a third variable, time, which causes changes in both the FTSE 100 and the incidence of flu.

@@ -173,4 +173,6 @@
 \contentsline {subsection}{\numberline {9.3.3}Beware missing data codes}{164}{subsection.9.3.3}%
 \contentsline {subsection}{\numberline {9.3.4}More guessing sample correlations}{165}{subsection.9.3.4}%
 \contentsline {subsection}{\numberline {9.3.5}Summary}{165}{subsection.9.3.5}%
-\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{167}{chapter.10}%
+\contentsline {subsection}{\numberline {9.3.6}Anscombe's datasets}{166}{subsection.9.3.6}%
+\contentsline {subsection}{\numberline {9.3.7}We must interpret correlation with care.}{166}{subsection.9.3.7}%
+\contentsline {chapter}{\numberline {10}A general strategy for statistical modelling}{170}{chapter.10}%
