@@ -1,3 +1,23 @@
+```{r, figsetup10, include=FALSE}
+knitr::opts_chunk$set(
+  fig.align = 'center',
+  out.width = '85%'
+)
+```
+
+```{r, echo = FALSE}
+include_cropped_graphics <- function(x) {
+  knitr::include_graphics(knitr::plot_crop(x))
+#  knitr::include_graphics(x)
+}
+```
+
 # A general strategy for statistical modelling
 
+It is important to realise that fitting a probability model to data is just one part of the modelling process.  Figure \@ref(fig:strategy) gives an outline of a general strategy for statistical modelling of data. The process is iterative, since it is rare that the first model is fitted is adequate.  It may be necessary to modify the model several times before it can be used to answer the questions of interest. You should always remember the context behind the data and provide an interpretation of the results in non-statistical terms, particularly if your audience contains people who are not statisticians.
 
+```{r echo=FALSE, strategy, fig.show='hold', fig.cap='A general strategy for statistical modelling.'}
+include_cropped_graphics("images/stat5_portrait.png")
+```
+
+STAT0002 does not cover all the areas of Statistics you may need to put this general strategy into practice. STAT0003, STAT0005 and STAT0008 will look in greater detail into the theory of statistical inference.  Important practical aspects will be covered in other modules, such as: STAT0006 - linear modelling with more than one covariate, interactions, where the effect of $x_1$ on $Y$ depends on the value of $x_2$; STAT0023 - statistical computing, non-linear models, non-normal response distributions; STAT0024 - design of sample surveys.
