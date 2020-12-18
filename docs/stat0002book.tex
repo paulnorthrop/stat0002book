@@ -147,7 +147,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2020-12-15}
+\date{2020-12-18}
 
 \begin{document}
 \maketitle
@@ -6382,7 +6382,7 @@ of \(Y\) is assumed to vary with the value of \(x\).
 Suppose that we have paired data \((x_1,y_1), \ldots, (x_n,y_n)\). How can we fit a simple linear regression model to these data? Initially, our aim is to use estimators \(\hat{\alpha}\) and \(\hat{\beta}\) of \(\alpha\) and \(\beta\) to produce an estimated regression line
 \[ y= \hat{\alpha}+\hat{\beta}\,x. \]
 There are many possible estimators of \(\alpha\) and \(\beta\) that could be used. A standard approach, which produces estimators with some nice properties is \textbf{least squares estimation}. Firstly, we rearrange equation \eqref{eq:regeqn} to define \textbf{residuals}
-\[ r_i = Y_i-(\hat{\alpha}+\hat{\beta}\,x_i) = Y_i-\hat{Y}_i, \qquad i=1,\ldots,n, \]
+\[ R_i = Y_i-(\hat{\alpha}+\hat{\beta}\,x_i) = Y_i-\hat{Y}_i, \qquad i=1,\ldots,n, \]
 the differences between the observed values \(Y_i, i = 1, \ldots, n\) and the \textbf{fitted values} \(\hat{Y}_i=\hat{\alpha}+\hat{\beta}\,x_i\), \(i = 1, \ldots, n\) given by the estimated regression line.
 
 The least squares estimators have the property that they minimise the sum of squared residuals:
