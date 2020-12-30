@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.12.6)  18 DEC 2020 10:25
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.12.6)  30 DEC 2020 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1276,8 +1276,8 @@ Overfull \hbox (13.99998pt too wide) in alignment at lines 1837--1837
 
 File: images/cloud_box.png Graphic file (type bmp)
 <images/cloud_box.png>
-File: images/cloud_box.png Graphic file (type bmp)
-<images/cloud_box.png>
+File: images/cloud_box_log.png Graphic file (type bmp)
+<images/cloud_box_log.png>
 [39]
 File: images/cloud_stem.png Graphic file (type bmp)
 <images/cloud_stem.png>
@@ -1860,10 +1860,10 @@ Package rerunfilecheck Info: File `stat0002book.out' has not changed.
 (rerunfilecheck)             Checksum: 69EB44276E87DAAA6C6C51A578E492C3;11880.
  ) 
 Here is how much of TeX's memory you used:
- 24547 strings out of 479324
- 472205 string characters out of 5876815
- 1040976 words of memory out of 5000000
- 43508 multiletter control sequences out of 15000+600000
+ 24558 strings out of 479324
+ 472468 string characters out of 5876815
+ 1041027 words of memory out of 5000000
+ 43518 multiletter control sequences out of 15000+600000
  410121 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  94i,17n,118p,1057b,992s stack positions out of 5000i,500n,10000p,200000b,80000s
