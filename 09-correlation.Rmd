@@ -206,8 +206,7 @@ include_cropped_graphics("images/anscombe.png")
 
 ### We must interpret correlation with care.
 
-Suppose that we find that two variables $X$ and $Y$ have a sample correlation which is not close to 0.
-There are several ways that an apparent linear association can arise.
+Suppose that we find that two variables $X$ and $Y$ have a sample correlation which is not close to 0 and that a plot of the sample data suggests that $X$ and $Y$ may be linearly related.  There are several ways that an apparent linear association can arise.
 
 1. Changes in $X$ cause changes in $Y$.
 2. Changes in $Y$ cause changes in $X$.
