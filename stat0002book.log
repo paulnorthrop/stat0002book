@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.12.6)  29 MAR 2021 11:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.12.6)  19 APR 2021 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1607,7 +1607,7 @@ Chapter 6.
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
 [106]
-Underfull \hbox (badness 10000) in paragraph at lines 5457--5459
+Underfull \hbox (badness 10000) in paragraph at lines 5456--5458
 
  []
 
@@ -1763,17 +1763,17 @@ Underfull \vbox (badness 3803) has occurred while \output is active []
 [159
 
 ] [160]
-Underfull \hbox (badness 10000) in paragraph at lines 7251--7253
+Underfull \hbox (badness 10000) in paragraph at lines 7250--7252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7253--7255
+Underfull \hbox (badness 10000) in paragraph at lines 7252--7254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7255--7257
+Underfull \hbox (badness 10000) in paragraph at lines 7254--7256
 
  []
 
@@ -1788,7 +1788,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7359.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7358.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>

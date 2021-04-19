@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2021-03-29" />
+<meta name="date" content="2021-04-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1103,8 +1103,7 @@ Figure 5.26: Uniform(0,24) QQ plot with simulation envelopes based on 19 simulat
 <div id="exponential-qq-plots" class="section level3">
 <h3><span class="header-section-number">5.11.3</span> Exponential QQ plots</h3>
 <p>Recall that in the Australian births data we wondered whether the times between the birth might be sampled from an exponential(<span class="math inline">\(\lambda\)</span>) distribution. We estimated <span class="math inline">\(\lambda\)</span> using <span class="math inline">\(\hat{\lambda} = 1.84\)</span>.</p>
-<p>Here, <span class="math inline">\(n=44\)</span>. For <span class="math inline">\(i=1, \ldots, n\)</span> we plot the <span class="math inline">\(i\)</span>th largest observation <span class="math inline">\(t_{(i)}\)</span> against the <span class="math inline">\(100\frac{i}{n+1}\%\)</span> theoretical quantile <span class="math inline">\(q_i\)</span> of
-an exponential(<span class="math inline">\(\hat{\lambda}\)</span>) distribution. To find the theoretical quantiles we solve <span class="math inline">\(\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)\)</span> for <span class="math inline">\(q_i\)</span> to give
+<p>Here, <span class="math inline">\(n=44\)</span>. For <span class="math inline">\(i=1, \ldots, n\)</span> we plot the <span class="math inline">\(i\)</span>th smallest observation <span class="math inline">\(t_{(i)}\)</span> against the <span class="math inline">\(100\frac{i}{n+1}\%\)</span> theoretical quantile <span class="math inline">\(q_i\)</span> of an exponential(<span class="math inline">\(\hat{\lambda}\)</span>) distribution. To find the theoretical quantiles we solve <span class="math inline">\(\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)\)</span> for <span class="math inline">\(q_i\)</span> to give
 <span class="math display">\[ q_i = -\frac{1}{\hat{\lambda}} \ln \left( 1-\frac{i}{n+1} \right). \]</span></p>
 <p>The points in the exponential QQ plot in Figure <a href="simple.html#fig:expqq">5.27</a> are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values. This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.</p>
 <div class="figure" style="text-align: center"><span id="fig:expqq"></span>

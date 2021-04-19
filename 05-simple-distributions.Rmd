@@ -914,8 +914,7 @@ Like the histogram we saw in Section \@ref(uniform) the QQ plot also suggests th
 
 Recall that in the Australian births data we wondered whether the times between the birth might be sampled from an exponential($\lambda$) distribution. We estimated $\lambda$ using $\hat{\lambda} = 1.84$. 
 
-Here, $n=44$.  For $i=1, \ldots, n$ we plot the $i$th largest observation $t_{(i)}$ against the $100\frac{i}{n+1}\%$ theoretical quantile $q_i$ of
-an exponential($\hat{\lambda}$) distribution.  To find the theoretical quantiles we solve $\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)$ for $q_i$ to give
+Here, $n=44$.  For $i=1, \ldots, n$ we plot the $i$th smallest observation $t_{(i)}$ against the $100\frac{i}{n+1}\%$ theoretical quantile $q_i$ of an exponential($\hat{\lambda}$) distribution.  To find the theoretical quantiles we solve $\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)$ for $q_i$ to give
 \[ q_i = -\frac{1}{\hat{\lambda}} \ln \left( 1-\frac{i}{n+1} \right). \]
 
 The points in the exponential QQ plot in Figure \@ref(fig:expqq) are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values.  This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.
