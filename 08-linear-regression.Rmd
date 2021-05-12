@@ -59,7 +59,7 @@ Y_i = \alpha + \beta\,x_i +  \epsilon_i, \qquad i=1,\ldots,n,
 \end{equation}
 where $\epsilon_i, i=1, \ldots, n$ are error terms, representing random 'noise'. The $\alpha + \beta\,x_i$ part of the model is the **systematic** part. The $\epsilon_i$ is the **random** part of the model.  It is assumed that, for $i = 1, ..., n$,
 \[  \mbox{E}( \epsilon_i)=0, \qquad \mbox{and} \qquad  \mbox{var}( \epsilon_i)=\sigma^2, \]
-and that $\epsilon_1, \ldots,  \epsilon_n$ are **uncorrelated**. We will study **correlation** in the next section.  It is a measure of the degree of **linear** association between two random variables.  Uncorrelated random variables have no linear association.
+and that $\epsilon_1, \ldots,  \epsilon_n$ are **uncorrelated**. We will study **correlation** in the next section.  It is a measure of the degree of **linear** association between two random variables.  Uncorrelated random variables have no linear association.  $\epsilon_1, \ldots,  \epsilon_n$ are **uncorrelated** if each pair of these variables is uncorrelated.
 
 Another way to write down this model is, for $i=1,\ldots,n$, 
 \[  \mbox{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\mbox{straight line relationship}), \]
