@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Simple distributions | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2021-05-12" />
+<meta name="date" content="2021-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="rvs.html"/>
 <link rel="next" href="inference.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,22 +51,23 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +87,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -118,6 +120,29 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -135,32 +160,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The purpose of these notes</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#real"><i class="fa fa-check"></i><b>1.1</b> Real statistical investigations</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#shuttle"><i class="fa fa-check"></i><b>1.2</b> Challenger Space Shuttle Catastrophe</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#shuttle"><i class="fa fa-check"></i><b>1.2</b> Challenger Space Shuttle Catastrophe</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#uncertainty"><i class="fa fa-check"></i><b>1.2.1</b> Uncertainty</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation"><i class="fa fa-check"></i><b>1.3</b> A very brief introduction to stochastic simulation</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="descriptive.html"><a href="descriptive.html"><i class="fa fa-check"></i><b>2</b> Descriptive Statistics</a><ul>
-<li class="chapter" data-level="2.1" data-path="descriptive.html"><a href="descriptive.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of data</a><ul>
+<li class="chapter" data-level="2" data-path="descriptive.html"><a href="descriptive.html"><i class="fa fa-check"></i><b>2</b> Descriptive Statistics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="descriptive.html"><a href="descriptive.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of data</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="descriptive.html"><a href="descriptive.html#qualitative-or-categorical-data"><i class="fa fa-check"></i><b>2.1.1</b> Qualitative or categorical data</a></li>
 <li class="chapter" data-level="2.1.2" data-path="descriptive.html"><a href="descriptive.html#quantitative-or-numerical-data"><i class="fa fa-check"></i><b>2.1.2</b> Quantitative or numerical data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="descriptive.html"><a href="descriptive.html#describing-distributions"><i class="fa fa-check"></i><b>2.2</b> Describing distributions</a><ul>
+<li class="chapter" data-level="2.2" data-path="descriptive.html"><a href="descriptive.html#describing-distributions"><i class="fa fa-check"></i><b>2.2</b> Describing distributions</a>
+<ul>
 <li class="chapter" data-level="" data-path="descriptive.html"><a href="descriptive.html#example-oxford-births-data"><i class="fa fa-check"></i>Example: Oxford births data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="descriptive.html"><a href="descriptive.html#summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Summary Statistics</a><ul>
+<li class="chapter" data-level="2.3" data-path="descriptive.html"><a href="descriptive.html#summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Summary Statistics</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="descriptive.html"><a href="descriptive.html#fivenumber"><i class="fa fa-check"></i><b>2.3.1</b> Five number summary</a></li>
 <li class="chapter" data-level="2.3.2" data-path="descriptive.html"><a href="descriptive.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
 <li class="chapter" data-level="2.3.3" data-path="descriptive.html"><a href="descriptive.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
 <li class="chapter" data-level="2.3.4" data-path="descriptive.html"><a href="descriptive.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
 <li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#corr1"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a><ul>
+<li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a>
+<ul>
 <li class="chapter" data-level="2.4.1" data-path="descriptive.html"><a href="descriptive.html#frequency-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Frequency distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="descriptive.html"><a href="descriptive.html#graphs"><i class="fa fa-check"></i><b>2.5</b> Graphs (1 variable)</a><ul>
+<li class="chapter" data-level="2.5" data-path="descriptive.html"><a href="descriptive.html#graphs"><i class="fa fa-check"></i><b>2.5</b> Graphs (1 variable)</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="descriptive.html"><a href="descriptive.html#histogram"><i class="fa fa-check"></i><b>2.5.1</b> Histograms</a></li>
 <li class="chapter" data-level="2.5.2" data-path="descriptive.html"><a href="descriptive.html#stem"><i class="fa fa-check"></i><b>2.5.2</b> Stem-and-leaf plots</a></li>
 <li class="chapter" data-level="2.5.3" data-path="descriptive.html"><a href="descriptive.html#dotplots"><i class="fa fa-check"></i><b>2.5.3</b> Dotplots</a></li>
@@ -169,125 +202,152 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.5.6" data-path="descriptive.html"><a href="descriptive.html#times-series-plots"><i class="fa fa-check"></i><b>2.5.6</b> Times series plots</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="descriptive.html"><a href="descriptive.html#election"><i class="fa fa-check"></i><b>2.6</b> 2000 US Presidential Election</a></li>
-<li class="chapter" data-level="2.7" data-path="descriptive.html"><a href="descriptive.html#graphs2"><i class="fa fa-check"></i><b>2.7</b> Graphs (2 variables)</a><ul>
+<li class="chapter" data-level="2.7" data-path="descriptive.html"><a href="descriptive.html#graphs2"><i class="fa fa-check"></i><b>2.7</b> Graphs (2 variables)</a>
+<ul>
 <li class="chapter" data-level="2.7.1" data-path="descriptive.html"><a href="descriptive.html#scatter-plots"><i class="fa fa-check"></i><b>2.7.1</b> Scatter plots</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a><ul>
+<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a>
+<ul>
 <li class="chapter" data-level="2.8.1" data-path="descriptive.html"><a href="descriptive.html#transsymmetry"><i class="fa fa-check"></i><b>2.8.1</b> Transformation to approximate symmetry</a></li>
 <li class="chapter" data-level="2.8.2" data-path="descriptive.html"><a href="descriptive.html#straighten"><i class="fa fa-check"></i><b>2.8.2</b> Straightening scatter plots</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> Probability</a><ul>
+<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> Probability</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#sids"><i class="fa fa-check"></i><b>3.1</b> Misleading statistical evidence in cot death trials</a></li>
 <li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#relative-frequency-definition-of-probability"><i class="fa fa-check"></i><b>3.2</b> Relative frequency definition of probability</a></li>
 <li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#basic-properties-of-probability"><i class="fa fa-check"></i><b>3.3</b> Basic properties of probability</a></li>
 <li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>3.4</b> Conditional probability</a></li>
-<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a><ul>
+<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a>
+<ul>
 <li class="chapter" data-level="3.5.1" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>3.5.1</b> Mutually exclusive events</a></li>
 </ul></li>
 <li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multrule"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
-<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a><ul>
+<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a>
+<ul>
 <li class="chapter" data-level="3.7.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.7.1</b> An example of independence</a></li>
 </ul></li>
 <li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.8</b> Law of total probability</a></li>
 <li class="chapter" data-level="3.9" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.9</b> Bayes’ theorem</a></li>
 <li class="chapter" data-level="3.10" data-path="probability.html"><a href="probability.html#dna-identification-evidence"><i class="fa fa-check"></i><b>3.10</b> DNA identification evidence</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a><ul>
+<li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="rvs.html"><a href="rvs.html#discrete"><i class="fa fa-check"></i><b>4.1</b> Discrete random variables</a></li>
 <li class="chapter" data-level="4.2" data-path="rvs.html"><a href="rvs.html#continuous"><i class="fa fa-check"></i><b>4.2</b> Continuous random variables</a></li>
-<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a><ul>
+<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
 <li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
 <li class="chapter" data-level="4.3.3" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmex"><i class="fa fa-check"></i><b>4.3.3</b> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></a></li>
 <li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#EgX"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a><ul>
+<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="rvs.html"><a href="rvs.html#variance-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.4.1</b> Variance of a discrete random variable</a></li>
 <li class="chapter" data-level="4.4.2" data-path="rvs.html"><a href="rvs.html#variance-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.4.2</b> Variance of a continuous random variable</a></li>
 <li class="chapter" data-level="4.4.3" data-path="rvs.html"><a href="rvs.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.4.3</b> Variance and standard deviation</a></li>
 <li class="chapter" data-level="4.4.4" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmvarx"><i class="fa fa-check"></i><b>4.4.4</b> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a><ul>
+<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a>
+<ul>
 <li class="chapter" data-level="4.5.1" data-path="rvs.html"><a href="rvs.html#the-median-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.1</b> The median of a random variable</a></li>
 <li class="chapter" data-level="4.5.2" data-path="rvs.html"><a href="rvs.html#the-mode-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.2</b> The mode of a random variable</a></li>
 </ul></li>
 <li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
 <li class="chapter" data-level="4.7" data-path="rvs.html"><a href="rvs.html#measures-of-shape"><i class="fa fa-check"></i><b>4.7</b> Measures of shape</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a><ul>
+<li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="simple.html"><a href="simple.html#australian-births-data"><i class="fa fa-check"></i><b>5.1</b> Australian births data</a></li>
-<li class="chapter" data-level="5.2" data-path="simple.html"><a href="simple.html#the-bernoulli-distribution"><i class="fa fa-check"></i><b>5.2</b> The Bernoulli distribution</a><ul>
+<li class="chapter" data-level="5.2" data-path="simple.html"><a href="simple.html#the-bernoulli-distribution"><i class="fa fa-check"></i><b>5.2</b> The Bernoulli distribution</a>
+<ul>
 <li class="chapter" data-level="5.2.1" data-path="simple.html"><a href="simple.html#summary-of-the-bernoullip-distribution"><i class="fa fa-check"></i><b>5.2.1</b> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="simple.html"><a href="simple.html#binomial"><i class="fa fa-check"></i><b>5.3</b> The binomial distribution</a><ul>
+<li class="chapter" data-level="5.3" data-path="simple.html"><a href="simple.html#binomial"><i class="fa fa-check"></i><b>5.3</b> The binomial distribution</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="simple.html"><a href="simple.html#binominf"><i class="fa fa-check"></i><b>5.3.1</b> A brief look at statistical inference about <span class="math inline">\(p\)</span></a></li>
 <li class="chapter" data-level="5.3.2" data-path="simple.html"><a href="simple.html#summary-of-the-binomialnp-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="simple.html"><a href="simple.html#the-geometric-distribution"><i class="fa fa-check"></i><b>5.4</b> The geometric distribution</a><ul>
+<li class="chapter" data-level="5.4" data-path="simple.html"><a href="simple.html#the-geometric-distribution"><i class="fa fa-check"></i><b>5.4</b> The geometric distribution</a>
+<ul>
 <li class="chapter" data-level="5.4.1" data-path="simple.html"><a href="simple.html#summary-of-the-geometricp-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="simple.html"><a href="simple.html#Poisson"><i class="fa fa-check"></i><b>5.5</b> The Poisson distribution</a><ul>
+<li class="chapter" data-level="5.5" data-path="simple.html"><a href="simple.html#Poisson"><i class="fa fa-check"></i><b>5.5</b> The Poisson distribution</a>
+<ul>
 <li class="chapter" data-level="5.5.1" data-path="simple.html"><a href="simple.html#summary-of-the-poissonmu-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="simple.html"><a href="simple.html#summary-of-these-discrete-distributions"><i class="fa fa-check"></i><b>5.6</b> Summary of these discrete distributions</a></li>
-<li class="chapter" data-level="5.7" data-path="simple.html"><a href="simple.html#uniform"><i class="fa fa-check"></i><b>5.7</b> The uniform distribution</a><ul>
+<li class="chapter" data-level="5.7" data-path="simple.html"><a href="simple.html#uniform"><i class="fa fa-check"></i><b>5.7</b> The uniform distribution</a>
+<ul>
 <li class="chapter" data-level="5.7.1" data-path="simple.html"><a href="simple.html#summary-of-the-uniformab-distribution"><i class="fa fa-check"></i><b>5.7.1</b> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.8" data-path="simple.html"><a href="simple.html#exponential"><i class="fa fa-check"></i><b>5.8</b> The exponential distribution</a><ul>
+<li class="chapter" data-level="5.8" data-path="simple.html"><a href="simple.html#exponential"><i class="fa fa-check"></i><b>5.8</b> The exponential distribution</a>
+<ul>
 <li class="chapter" data-level="5.8.1" data-path="simple.html"><a href="simple.html#summary-of-the-exponentiallambda-distribution"><i class="fa fa-check"></i><b>5.8.1</b> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a><ul>
+<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a>
+<ul>
 <li class="chapter" data-level="5.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>5.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
 <li class="chapter" data-level="5.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>5.9.2</b> The standard normal disribution</a></li>
 <li class="chapter" data-level="5.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>5.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
 <li class="chapter" data-level="5.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>5.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
 </ul></li>
 <li class="chapter" data-level="5.10" data-path="simple.html"><a href="simple.html#summary-of-these-continuous-distributions"><i class="fa fa-check"></i><b>5.10</b> Summary of these continuous distributions</a></li>
-<li class="chapter" data-level="5.11" data-path="simple.html"><a href="simple.html#qq"><i class="fa fa-check"></i><b>5.11</b> QQ plots</a><ul>
+<li class="chapter" data-level="5.11" data-path="simple.html"><a href="simple.html#qq"><i class="fa fa-check"></i><b>5.11</b> QQ plots</a>
+<ul>
 <li class="chapter" data-level="5.11.1" data-path="simple.html"><a href="simple.html#normal-qq-plots"><i class="fa fa-check"></i><b>5.11.1</b> Normal QQ plots</a></li>
 <li class="chapter" data-level="5.11.2" data-path="simple.html"><a href="simple.html#uniform-qq-plots"><i class="fa fa-check"></i><b>5.11.2</b> Uniform QQ plots</a></li>
 <li class="chapter" data-level="5.11.3" data-path="simple.html"><a href="simple.html#exponential-qq-plots"><i class="fa fa-check"></i><b>5.11.3</b> Exponential QQ plots</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a><ul>
+<li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="inference.html"><a href="inference.html#the-story-so-far"><i class="fa fa-check"></i><b>6.1</b> The story so far</a></li>
 <li class="chapter" data-level="6.2" data-path="inference.html"><a href="inference.html#sample-and-populations"><i class="fa fa-check"></i><b>6.2</b> Sample and populations</a></li>
 <li class="chapter" data-level="6.3" data-path="inference.html"><a href="inference.html#probmodels"><i class="fa fa-check"></i><b>6.3</b> Probability models</a></li>
 <li class="chapter" data-level="6.4" data-path="inference.html"><a href="inference.html#fitting-models"><i class="fa fa-check"></i><b>6.4</b> Fitting models</a></li>
-<li class="chapter" data-level="6.5" data-path="inference.html"><a href="inference.html#uncertainty-in-estimation"><i class="fa fa-check"></i><b>6.5</b> Uncertainty in estimation</a><ul>
+<li class="chapter" data-level="6.5" data-path="inference.html"><a href="inference.html#uncertainty-in-estimation"><i class="fa fa-check"></i><b>6.5</b> Uncertainty in estimation</a>
+<ul>
 <li class="chapter" data-level="6.5.1" data-path="inference.html"><a href="inference.html#simulation-coin-tossing-example"><i class="fa fa-check"></i><b>6.5.1</b> Simulation: coin-tossing example</a></li>
 <li class="chapter" data-level="6.5.2" data-path="inference.html"><a href="inference.html#simnorm"><i class="fa fa-check"></i><b>6.5.2</b> Simulation: estimating the parameters of a normal distribution</a></li>
 <li class="chapter" data-level="6.5.3" data-path="inference.html"><a href="inference.html#simexp"><i class="fa fa-check"></i><b>6.5.3</b> Simulation: estimating the parameters of an exponential distribution</a></li>
 <li class="chapter" data-level="6.5.4" data-path="inference.html"><a href="inference.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.5.4</b> Central Limit Theorem</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="inference.html"><a href="inference.html#good"><i class="fa fa-check"></i><b>6.6</b> Properties of estimators</a><ul>
+<li class="chapter" data-level="6.6" data-path="inference.html"><a href="inference.html#good"><i class="fa fa-check"></i><b>6.6</b> Properties of estimators</a>
+<ul>
 <li class="chapter" data-level="6.6.1" data-path="inference.html"><a href="inference.html#bias"><i class="fa fa-check"></i><b>6.6.1</b> Bias</a></li>
 <li class="chapter" data-level="6.6.2" data-path="inference.html"><a href="inference.html#varianceofestimator"><i class="fa fa-check"></i><b>6.6.2</b> Variance</a></li>
 <li class="chapter" data-level="6.6.3" data-path="inference.html"><a href="inference.html#mean-squared-error-mse"><i class="fa fa-check"></i><b>6.6.3</b> Mean squared error (MSE)</a></li>
 <li class="chapter" data-level="6.6.4" data-path="inference.html"><a href="inference.html#standard-error"><i class="fa fa-check"></i><b>6.6.4</b> Standard error</a></li>
 <li class="chapter" data-level="6.6.5" data-path="inference.html"><a href="inference.html#consistency"><i class="fa fa-check"></i><b>6.6.5</b> Consistency</a></li>
 </ul></li>
-<li class="chapter" data-level="6.7" data-path="inference.html"><a href="inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>6.7</b> Assessing goodness-of-fit</a><ul>
+<li class="chapter" data-level="6.7" data-path="inference.html"><a href="inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>6.7</b> Assessing goodness-of-fit</a>
+<ul>
 <li class="chapter" data-level="6.7.1" data-path="inference.html"><a href="inference.html#residuals"><i class="fa fa-check"></i><b>6.7.1</b> Residuals</a></li>
 <li class="chapter" data-level="6.7.2" data-path="inference.html"><a href="inference.html#standardised-residuals"><i class="fa fa-check"></i><b>6.7.2</b> Standardised residuals</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a><ul>
-<li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a><ul>
+<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a>
+<ul>
 <li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#indep"><i class="fa fa-check"></i><b>7.1.1</b> Independence</a></li>
 <li class="chapter" data-level="7.1.2" data-path="contingency.html"><a href="contingency.html#compprob"><i class="fa fa-check"></i><b>7.1.2</b> Comparing probabilities</a></li>
 <li class="chapter" data-level="7.1.3" data-path="contingency.html"><a href="contingency.html#measures"><i class="fa fa-check"></i><b>7.1.3</b> Measures of association</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a><ul>
+<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a>
+<ul>
 <li class="chapter" data-level="7.2.1" data-path="contingency.html"><a href="contingency.html#mutual-independence"><i class="fa fa-check"></i><b>7.2.1</b> Mutual independence</a></li>
 <li class="chapter" data-level="7.2.2" data-path="contingency.html"><a href="contingency.html#marginal-independence"><i class="fa fa-check"></i><b>7.2.2</b> Marginal independence</a></li>
 <li class="chapter" data-level="7.2.3" data-path="contingency.html"><a href="contingency.html#conditional-independence"><i class="fa fa-check"></i><b>7.2.3</b> Conditional independence</a></li>
 <li class="chapter" data-level="7.2.4" data-path="contingency.html"><a href="contingency.html#confounding-variables"><i class="fa fa-check"></i><b>7.2.4</b> Confounding variables</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a><ul>
-<li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a><ul>
+<li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression-model"><i class="fa fa-check"></i><b>8.1.1</b> Simple linear regression model</a></li>
 <li class="chapter" data-level="8.1.2" data-path="linreg.html"><a href="linreg.html#least-squares-estimation-of-alpha-and-beta"><i class="fa fa-check"></i><b>8.1.2</b> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></a></li>
 <li class="chapter" data-level="8.1.3" data-path="linreg.html"><a href="linreg.html#least-squares-fitting-to-hubbles-data"><i class="fa fa-check"></i><b>8.1.3</b> Least squares fitting to Hubble’s data</a></li>
@@ -295,22 +355,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.1.5" data-path="linreg.html"><a href="linreg.html#lmsummary"><i class="fa fa-check"></i><b>8.1.5</b> Summary of the assumptions of a (normal) linear regression model</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
-<li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a><ul>
+<li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#departures-from-assumptions"><i class="fa fa-check"></i><b>8.3.1</b> Departures from assumptions</a></li>
 <li class="chapter" data-level="8.3.2" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.2</b> Outliers and influential observations</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a><ul>
+<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="linreg.html"><a href="linreg.html#interpretation-after-transformation"><i class="fa fa-check"></i><b>8.4.1</b> Interpretation after transformation</a></li>
 </ul></li>
 <li class="chapter" data-level="8.5" data-path="linreg.html"><a href="linreg.html#over-fitting"><i class="fa fa-check"></i><b>8.5</b> Over-fitting</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>9</b> Correlation</a><ul>
+<li class="chapter" data-level="9" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>9</b> Correlation</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-a-measure-of-linear-association"><i class="fa fa-check"></i><b>9.1</b> Correlation: a measure of linear association</a></li>
-<li class="chapter" data-level="9.2" data-path="correlationchapter.html"><a href="correlationchapter.html#covariance-and-correlation"><i class="fa fa-check"></i><b>9.2</b> Covariance and correlation</a><ul>
+<li class="chapter" data-level="9.2" data-path="correlationchapter.html"><a href="correlationchapter.html#covariance-and-correlation"><i class="fa fa-check"></i><b>9.2</b> Covariance and correlation</a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="correlationchapter.html"><a href="correlationchapter.html#estimation"><i class="fa fa-check"></i><b>9.2.1</b> Estimation</a></li>
 <li class="chapter" data-level="9.2.2" data-path="correlationchapter.html"><a href="correlationchapter.html#links-between-regression-and-correlation"><i class="fa fa-check"></i><b>9.2.2</b> Links between regression and correlation</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="correlationchapter.html"><a href="correlationchapter.html#use-and-misuse-of-correlation"><i class="fa fa-check"></i><b>9.3</b> Use and misuse of correlation</a><ul>
+<li class="chapter" data-level="9.3" data-path="correlationchapter.html"><a href="correlationchapter.html#use-and-misuse-of-correlation"><i class="fa fa-check"></i><b>9.3</b> Use and misuse of correlation</a>
+<ul>
 <li class="chapter" data-level="9.3.1" data-path="correlationchapter.html"><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes"><i class="fa fa-check"></i><b>9.3.1</b> Do not use correlation for regression sampling schemes</a></li>
 <li class="chapter" data-level="9.3.2" data-path="correlationchapter.html"><a href="correlationchapter.html#correxamples"><i class="fa fa-check"></i><b>9.3.2</b> Examples of correlations of different strengths</a></li>
 <li class="chapter" data-level="9.3.3" data-path="correlationchapter.html"><a href="correlationchapter.html#beware-missing-data-codes"><i class="fa fa-check"></i><b>9.3.3</b> Beware missing data codes</a></li>
@@ -342,10 +407,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="simple" class="section level1">
+<div id="simple" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Simple distributions</h1>
 <p>We use a simple dataset to introduce some commonly-used simple distributions. We will study the <strong>discrete</strong> distributions: Bernoulli, binomial, geometric and Poisson. We will also study the <strong>continuous</strong> distributions: uniform, exponential, normal.</p>
-<div id="australian-births-data" class="section level2">
+<div id="australian-births-data" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Australian births data</h2>
 <p>Steele, S. (December 21, 1997), Babies by the Dozen for Christmas: 24-Hour Baby Boom, The Sunday Mail (Brisbane), page 7</p>
 <p>According to this article, a record 44 babies (18 girls and 26 boys) were born in one 24-hour period at the Mater Mothers’ Hospital, Brisbane, Australia, on 18th December 1997. The article listed the time of birth, the sex, and the weight in grams for each of the 44 babies. These data are given in Table <a href="simple.html#tab:abirths">5.1</a>.</p>
@@ -384,7 +449,7 @@ Figure 5.1: Birth times of babies on 18th December 1997 by sex.
 </p>
 </div>
 </div>
-<div id="the-bernoulli-distribution" class="section level2">
+<div id="the-bernoulli-distribution" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> The Bernoulli distribution</h2>
 <p>Consider the first birth. The outcome is either a boy <span class="math inline">\(B\)</span> or a girl <span class="math inline">\(G\)</span>. We define a random variable</p>
 <p><span class="math display">\[\begin{equation}
@@ -422,7 +487,7 @@ If we assume that the probability of a boy is the same for each birth then
 <span class="math display">\[ X_i \sim \mbox{Bernoulli}(p), \qquad \mbox{for}\,\,\,i=1,\ldots,44. \]</span></p>
 <p>In this example the sample values <span class="math inline">\(x_1, \ldots, x_{44}\)</span> of <span class="math inline">\(X_1,\ldots,X_{44}\)</span> are
 <span class="math display">\[ x_1=0, \quad x_2=0, \quad x_3=1, \quad \ldots \quad x_{44}=0. \]</span></p>
-<div id="summary-of-the-bernoullip-distribution" class="section level3">
+<div id="summary-of-the-bernoullip-distribution" class="section level3" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution</h3>
 <ul>
 <li><strong>Situation</strong>: an experiment with exactly 2 possible outcomes (a Bernoulli trial), mapped to the values 0 and 1.</li>
@@ -436,7 +501,7 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 </ul>
 </div>
 </div>
-<div id="binomial" class="section level2">
+<div id="binomial" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> The binomial distribution</h2>
 <p>We have seen that the 44 births are 44 Bernoulli trials. We define a random variable <span class="math inline">\(Y\)</span> equal to the total number of boys in the 44 births, that is,
 <span class="math display">\[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]</span>
@@ -482,7 +547,7 @@ In this example the observed value of <span class="math inline">\(Y\)</span> is 
 Figure 5.2: Binomial(<span class="math inline">\(44,p\)</span>) p.m.f.s: <span class="math inline">\(p=0.1\)</span> (top); <span class="math inline">\(p=1/2\)</span> (second from top); <span class="math inline">\(p=0.591\)</span> (second from bottom); <span class="math inline">\(p=0.9\)</span> (bottom). The sample value <span class="math inline">\(y=26\)</span> has been shaded in black.
 </p>
 </div>
-<div id="binominf" class="section level3">
+<div id="binominf" class="section level3" number="5.3.1">
 <h3><span class="header-section-number">5.3.1</span> A brief look at statistical inference about <span class="math inline">\(p\)</span></h3>
 <p><strong>This section of the notes is not part of STAT0002. It introduces ideas surrounding hypothesis testing and confidence intervals. If you take STAT0003 then you will cover these ideas in more detail. This section is included because you may find it interesting to think about these ideas now.</strong></p>
 <p>We have observed more boys than girls. If <span class="math inline">\(p=1/2\)</span> we would expect roughly equal numbers of boys and girls. Even if it is true that <span class="math inline">\(p=1/2\)</span>, we would only occasionally get equal numbers of boys and girls born on each day. We might like to quantify how unlikely is the event of a 26:18 split in 44 independent Bernoulli(1/2) trials. If this is very unlikely we might think that perhaps <span class="math inline">\(p \neq 1/2\)</span> after all. This is an example of <strong>statistical inference</strong>, that is, making an inference about the true value of <span class="math inline">\(p\)</span>. We will study statistical inference in Chapter <a href="inference.html#inference">6</a>.</p>
@@ -509,7 +574,7 @@ Figure 5.3: A binomial(<span class="math inline">\(44,1/2\)</span>) p.m.f. with 
 <p>In modern Statistics method 2. (<strong>interval estimation</strong>) is often preferred to 1. (<strong>hypothesis testing</strong>) because it gives an interval estimate for <span class="math inline">\(p\)</span> rather than just a decision of whether or not to reject <span class="math inline">\(H_0: p=0.5\)</span>.</p>
 </div>
 </div>
-<div id="summary-of-the-binomialnp-distribution" class="section level3">
+<div id="summary-of-the-binomialnp-distribution" class="section level3" number="5.3.2">
 <h3><span class="header-section-number">5.3.2</span> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution</h3>
 <ul>
 <li><strong>Situation</strong>: the number of 1s in <span class="math inline">\(n\)</span> independent Bernoulli trials,
@@ -523,7 +588,7 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 <p>A binomial(1,<span class="math inline">\(p\)</span>) distribution is the same as a Bernoulli(<span class="math inline">\(p\)</span>) distribution.</p>
 </div>
 </div>
-<div id="the-geometric-distribution" class="section level2">
+<div id="the-geometric-distribution" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> The geometric distribution</h2>
 <p>The ordering of the arrivals of the boy and girl babies is
 <span class="math display">\[ G G B B B G G B B B B B G G B G G B B B B G G G G B B B G B G B B B B B G B B B B G G G \]</span></p>
@@ -590,7 +655,7 @@ Multiplying the estimated probabilities by 26 gives the <strong>expected</strong
 Figure 5.5: Observed frequencies and estimated expected frequencies under a geometric(0.591) distribution.
 </p>
 </div>
-<div id="summary-of-the-geometricp-distribution" class="section level3">
+<div id="summary-of-the-geometricp-distribution" class="section level3" number="5.4.1">
 <h3><span class="header-section-number">5.4.1</span> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution</h3>
 <ul>
 <li><strong>Situation</strong>: the number of trials up to and including the first value of 1 in a sequence of independent Bernoulli trials, each trial having the same probability <span class="math inline">\(p\)</span> of obtaining a 1.</li>
@@ -603,7 +668,7 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 &
 <p>An alternative formulation is where a random variable <span class="math inline">\(V\)</span> is defined as the number of trials performed <strong>before</strong> the first 1 occurs. Therefore, the support of <span class="math inline">\(V\)</span> is <span class="math inline">\(0, 1, 2, ...\)</span> and <span class="math inline">\(V = W - 1\)</span>. The <code>dgeom()</code> function in R relates to a random variable like <span class="math inline">\(V\)</span>, not <span class="math inline">\(W\)</span>.</p>
 </div>
 </div>
-<div id="Poisson" class="section level2">
+<div id="Poisson" class="section level2" number="5.5">
 <h2><span class="header-section-number">5.5</span> The Poisson distribution</h2>
 <p>Now we look at the numbers <span class="math inline">\(N_1, \ldots, N_{24}\)</span> of births that occur in each hour of the 24 hours on the day December 18, 1997. This produces a <strong>count</strong> for each hour. We have split the 24-hour period into 24 time periods of the same length. We could equally have chosen to split it into 12 time periods, each of length 2 hours.</p>
 <p>The frequencies of these counts appear in column 2 of Table <a href="simple.html#tab:pois">5.3</a>. In column 4 we have divided these <strong>observed frequencies</strong> by 24 to obtain the <strong>relative frequencies</strong>. We explain the contents of columns 3 and 5 of this table later.</p>
@@ -676,7 +741,7 @@ Figure 5.7: Observed frequencies and the estimated expected frequencies under a 
 Figure 5.8: Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom).
 </p>
 </div>
-<div id="summary-of-the-poissonmu-distribution" class="section level3">
+<div id="summary-of-the-poissonmu-distribution" class="section level3" number="5.5.1">
 <h3><span class="header-section-number">5.5.1</span> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution</h3>
 <ul>
 <li>Situation: the number events occurring during a time period of fixed duration.</li>
@@ -691,7 +756,7 @@ for some <span class="math inline">\(\mu\)</span>, then <span class="math inline
 </ul>
 </div>
 </div>
-<div id="summary-of-these-discrete-distributions" class="section level2">
+<div id="summary-of-these-discrete-distributions" class="section level2" number="5.6">
 <h2><span class="header-section-number">5.6</span> Summary of these discrete distributions</h2>
 <p>We have studied 4 common discrete distributions:</p>
 <ul>
@@ -702,7 +767,7 @@ for some <span class="math inline">\(\mu\)</span>, then <span class="math inline
 <li><strong>Poisson</strong>: used for counts of events that arrive in a Poisson process.</li>
 </ul>
 </div>
-<div id="uniform" class="section level2">
+<div id="uniform" class="section level2" number="5.7">
 <h2><span class="header-section-number">5.7</span> The uniform distribution</h2>
 <p>Now suppose that we are interested in the <strong>times</strong> at which the babies are born. Previously we assumed that births occur in a Poisson process: singly, independently and randomly at a constant rate.</p>
 <p>If, as we have assumed, births occur in a Poisson process, that is, singly, independently and randomly at a constant rate, we would expect the times of birth to be scattered randomly over the interval (0, 24) hours. We would not expect all the births to be between, for example, 12h and 18h. However, births should not be regularly spaced: there will be periods of time when there are large numbers of births, and other periods of time when there are only small numbers. At first glance, the times of birth in Figure <a href="simple.html#fig:babyintro">5.1</a> do appear to be approximately consistent with being randomly scattered over (0, 24) hours.</p>
@@ -731,7 +796,7 @@ Figure 5.10: Histograms of times of birth, with U(0,24) p.d.f. superimposed.
 </p>
 </div>
 <p><strong>Exercise</strong>. Why might births not occur at the same rate throughout the day?</p>
-<div id="summary-of-the-uniformab-distribution" class="section level3">
+<div id="summary-of-the-uniformab-distribution" class="section level3" number="5.7.1">
 <h3><span class="header-section-number">5.7.1</span> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution</h3>
 <ul>
 <li><strong>Situation</strong>: a continuous random variable for which all values between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are equally likely.</li>
@@ -743,7 +808,7 @@ for <span class="math inline">\(b &gt; a\)</span>, then <span class="math inline
 </ul>
 </div>
 </div>
-<div id="exponential" class="section level2">
+<div id="exponential" class="section level2" number="5.8">
 <h2><span class="header-section-number">5.8</span> The exponential distribution</h2>
 <p>Now suppose that we are interested in the length of time <span class="math inline">\(T_1\)</span> until the
 first birth. Look at Table <a href="simple.html#tab:abirths">5.1</a>. In this example the observed value <span class="math inline">\(t_1\)</span> of <span class="math inline">\(T_1\)</span> is 5 minutes.</p>
@@ -786,7 +851,7 @@ Figure 5.12: Histogram of sample inter-birth times with superimposed p.d.f. of a
 <p>We have used the data in three different ways (based on the Poisson, uniform and exponential distributions) to check same assumption: that the births occur in a Poisson process. It is possible that one check suggests that this assumption is reasonable but another suggests that it is not. For example, if the births were regularly spaced (e.g. one birth exactly every half hour) then a histogram would look flat, or very close to being flat, depending a little on the bin width. However, the times between births are equal and therefore do not look at all like a random sample from an exponential distribution. The numbers of births in each of the 24 hours will not look like a random sample from Poisson distribution: they will be much less variable than they should be. The moral of this story: the fact that the particular way you have chosen to assess the fit of your distribution looks OK does not imply that the distribution is true. Another way to assess the fir might reveal a big problem.</p>
 <p><strong>Exercise</strong>. Based on the exponential distribution that we fitted to the Australian births data, what is the probability that the time gap between 2 births is longer than 90 minutes?</p>
 </div>
-<div id="summary-of-the-exponentiallambda-distribution" class="section level3">
+<div id="summary-of-the-exponentiallambda-distribution" class="section level3" number="5.8.1">
 <h3><span class="header-section-number">5.8.1</span> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</h3>
 <ul>
 <li>A situation in which this distribution arises:
@@ -802,7 +867,7 @@ for <span class="math inline">\(\lambda &gt; 0\)</span>, then <span class="math 
 </ul>
 </div>
 </div>
-<div id="normal" class="section level2">
+<div id="normal" class="section level2" number="5.9">
 <h2><span class="header-section-number">5.9</span> The normal distribution</h2>
 <p>Suppose now that we are interested in the birth weights <span class="math inline">\(Z_1,\ldots,Z_{44}\)</span> of the babies. Figure <a href="simple.html#fig:babynormalplots">5.13</a> shows a histogram and a boxplot of the of the sample birth weights <span class="math inline">\(z_1,\ldots,z_n\)</span>. I have converted the weights from grams to pounds (1 pound <span class="math inline">\(\approx\)</span> 453.5g).</p>
 <div class="figure" style="text-align: center"><span id="fig:babynormalplots"></span>
@@ -836,7 +901,7 @@ Figure 5.14: Histogram of sample birth weights, with a fitted normal p.d.f. supe
 </p>
 </div>
 <p>As we expect the fit if not particularly good. In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution. In Section <a href="simple.html#qq">5.11</a> we will use a <strong>normal QQ plot</strong> to assess the fit of a normal distribution to these data.</p>
-<div id="summary-of-the-mboxnmusigma2-distribution" class="section level3">
+<div id="summary-of-the-mboxnmusigma2-distribution" class="section level3" number="5.9.1">
 <h3><span class="header-section-number">5.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</h3>
 <ul>
 <li>Situation: used widely in Statistics
@@ -855,7 +920,7 @@ for <span class="math inline">\(\sigma &gt;0\)</span>, then <span class="math in
 <li><span class="math inline">\(\mbox{E}(Z)=\mu\)</span>, <span class="math inline">\(\mbox{var}(Z)=\sigma^2\)</span>.</li>
 </ul>
 </div>
-<div id="the-standard-normal-disribution" class="section level3">
+<div id="the-standard-normal-disribution" class="section level3" number="5.9.2">
 <h3><span class="header-section-number">5.9.2</span> The standard normal disribution</h3>
 <p>The <span class="math inline">\(N(0,1)\)</span> distribution is called the <strong>standard normal</strong> distribution. We write <span class="math inline">\(\phi(x)\)</span> for its p.d.f. and <span class="math inline">\(\Phi(x)\)</span> for its c.d.f., so that
 <span class="math display">\[ \phi(x)=\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,x^{2}}, \quad -\infty &lt; x &lt; \infty, \]</span>
@@ -864,7 +929,7 @@ and
 \int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad 
 \quad -\infty &lt; x &lt; \infty. \]</span></p>
 </div>
-<div id="evaluating-the-normal-c.d.f.-and-quantiles" class="section level3">
+<div id="evaluating-the-normal-c.d.f.-and-quantiles" class="section level3" number="5.9.3">
 <h3><span class="header-section-number">5.9.3</span> Evaluating the normal c.d.f. and quantiles</h3>
 <p>Suppose that <span class="math inline">\(W \sim N(7.22, 1.36)\)</span>, that is, <span class="math inline">\(\mbox{E}(W)=7.22\)</span> and <span class="math inline">\(\mbox{var}(W)=1.36\)</span> and we want to calculate <span class="math inline">\(P(W \leq 10)\)</span>. Then</p>
 <p><span class="math display">\[
@@ -884,26 +949,26 @@ P(W \leq 10)
 \end{aligned}
 \]</span></p>
 <p>Then the value of <span class="math inline">\(\Phi(2.38)\)</span> was found in a book of statistical tables. Now it is easier to use R.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="simple.html#cb1-1"></a>value &lt;-<span class="st"> </span>(<span class="dv">10</span> <span class="op">-</span><span class="st"> </span><span class="fl">7.22</span>) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="fl">1.36</span>)</span>
-<span id="cb1-2"><a href="simple.html#cb1-2"></a><span class="kw">pnorm</span>(value)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="simple.html#cb1-1" aria-hidden="true" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
+<span id="cb1-2"><a href="simple.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(value)</span></code></pre></div>
 <pre><code>## [1] 0.9914333</code></pre>
 <p>We can get even R to do the standardisation to the N(0, 1) case for us.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="simple.html#cb3-1"></a><span class="kw">pnorm</span>(<span class="dv">10</span>, <span class="dt">mean =</span> <span class="fl">7.22</span>, <span class="dt">sd =</span> <span class="kw">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="simple.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
 <pre><code>## [1] 0.9914333</code></pre>
 <p>Suppose now that we want to find the 95% quantile of <span class="math inline">\(W\)</span>, that is, <span class="math inline">\(w\)</span> for which <span class="math inline">\(P(W \leq w) = 0.95\)</span>. If we standardise <span class="math inline">\(W\)</span> to <span class="math inline">\(Z\)</span> as above then we find that <span class="math inline">\(w = 7.22 + \sqrt{1.36}\,\Phi^{-1}(0.95)\)</span>. The <code>qnorm()</code> function calculates the inverse c.d.f. <span class="math inline">\(\Phi^{-1}\)</span> (or quantile function).</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="simple.html#cb5-1"></a>value &lt;-<span class="st"> </span>(<span class="dv">10</span> <span class="op">-</span><span class="st"> </span><span class="fl">7.22</span>) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="fl">1.36</span>)</span>
-<span id="cb5-2"><a href="simple.html#cb5-2"></a><span class="fl">7.22</span> <span class="op">+</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="fl">1.36</span>) <span class="op">*</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="simple.html#cb5-1" aria-hidden="true" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
+<span id="cb5-2"><a href="simple.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fl">7.22</span> <span class="sc">+</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>) <span class="sc">*</span> <span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>## [1] 9.138212</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="simple.html#cb7-1"></a><span class="kw">qnorm</span>(<span class="fl">0.95</span>, <span class="dt">mean =</span> <span class="fl">7.22</span>, <span class="dt">sd =</span> <span class="kw">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="simple.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
 <pre><code>## [1] 9.138212</code></pre>
 </div>
-<div id="interpretation-of-sigma" class="section level3">
+<div id="interpretation-of-sigma" class="section level3" number="5.9.4">
 <h3><span class="header-section-number">5.9.4</span> Interpretation of <span class="math inline">\(\sigma\)</span></h3>
 <p>Suppose that <span class="math inline">\(X \sim N(\mu,\sigma^{2})\)</span>. Let <span class="math inline">\(p_k = P(|X-\mu| &lt; k\sigma)\)</span>, so that <span class="math inline">\(p_k\)</span> is the probability that <span class="math inline">\(X\)</span> lies within <span class="math inline">\(k\)</span> standard deviations of its mean. We have <span class="math inline">\(p_1 = 0.6826\)</span>, <span class="math inline">\(p_2 = 0.9545\)</span> and <span class="math inline">\(p_3 = 0.9973\)</span>. Therefore, for a large sample from a normal distribution
 approximately 68% of observations will fall within 1 standard deviation of the mean, and approximately 95% within 2 standard deviations of the mean.</p>
 </div>
 </div>
-<div id="summary-of-these-continuous-distributions" class="section level2">
+<div id="summary-of-these-continuous-distributions" class="section level2" number="5.10">
 <h2><span class="header-section-number">5.10</span> Summary of these continuous distributions</h2>
 <p>We have studied 3 common continuous distributions:</p>
 <ul>
@@ -912,12 +977,12 @@ approximately 68% of observations will fall within 1 standard deviation of the m
 <li><strong>normal</strong>: a symmetric random variable often used as a model for measurement errors or data that arise as the sums or averages of a large number of random variables.</li>
 </ul>
 </div>
-<div id="qq" class="section level2">
+<div id="qq" class="section level2" number="5.11">
 <h2><span class="header-section-number">5.11</span> QQ plots</h2>
 <p>We have seen that we can use a plot, for example, a histogram to examine the shape of the frequency distribution of data. Sometimes we are interested in deciding whether the data appear to have come from a particular distribution, with a particular shape.</p>
 <p>For example, many traditional statistical methods are based on an assumption that the data come from a normal distribution. It can be fairly easy to see from a plot whether the data appear to be symmetric or skewed, but judging whether whether a plot of the data has approximately the characteristic bell-shape of a normal distribution may be more difficult.</p>
 <p>Another way to compare the distribution of a sample with a particular distribution is to use a <strong>quantile-quantile plot</strong> or <strong>QQ plot</strong> for short. This plot is based on comparing sample quantiles (Section <a href="descriptive.html#fivenumber">2.3.1</a>) and theoretical quantiles (Section <a href="rvs.html#quantiles">4.6</a>). The following example is based on a normal distribution, but a QQ plot can be based on any <strong>continuous</strong> distribution.</p>
-<div id="normal-qq-plots" class="section level3">
+<div id="normal-qq-plots" class="section level3" number="5.11.1">
 <h3><span class="header-section-number">5.11.1</span> Normal QQ plots</h3>
 <p>Before we describe how to produce a QQ plot we return to the Oxford birth times example. The sample quartiles (<span class="math inline">\(q_L, m, q_U\)</span>) are 4.95, 7.50, and 9.75 hours. Also, the sample mean is 7.72 hours and the sample standard deviation is 3.57 hours. We suppose that these data have been sampled from a normal distribution with a mean of 7.72 hours and a standard deviation of 3.57 hours. We calculate the (theoretical) quartiles of this normal N(7.72,3.57<span class="math inline">\(^2\)</span>) distribution and compare them in Table <a href="simple.html#tab:compareqs">5.4</a> to the sample quartiles of Oxford births data.</p>
 <table>
@@ -956,7 +1021,7 @@ the quartiles of the normal distribution are greater than the empirical quartile
 <p>In section <a href="descriptive.html#fivenumber">2.3.1</a> we said that, for <span class="math inline">\(0 &lt; p &lt; 1\)</span> the <span class="math inline">\(100p\%\)</span> sample quantile is <span class="math inline">\(x_{(p(n+1))}\)</span>. If we substitute <span class="math inline">\(p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}\)</span> in <span class="math inline">\(x_{(p(n+1))}\)</span> then we obtain <span class="math inline">\(x_{(1)}, x_{(2)}, ..., x_{(n)}\)</span>. Therefore, the <strong>ordered sampled values</strong> or <strong>order statistics</strong> <span class="math inline">\(x_{(1)}, x_{(2)}, ..., x_{(n)}\)</span> are the <span class="math inline">\(100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%\)</span> sample quantiles.</p>
 <p><strong>How do we calculate the theoretical quantiles?</strong></p>
 <p>For simplicity we suppose that the sample size <span class="math inline">\(n=9\)</span>. Therefore we want to calculate the <span class="math inline">\(10\%, 20\%, \ldots, 90\%\)</span> quantiles of a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution. In R we would do the following.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="simple.html#cb9-1"></a><span class="kw">qnorm</span>((<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>) <span class="op">/</span><span class="st"> </span><span class="dv">10</span>, <span class="dt">mean =</span> <span class="fl">7.72</span>, <span class="dt">sd =</span> <span class="fl">3.57</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="simple.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">/</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.72</span>, <span class="at">sd =</span> <span class="fl">3.57</span>)</span></code></pre></div>
 <pre><code>## [1]  3.144861  4.715412  5.847890  6.815551  7.720000  8.624449  9.592110
 ## [8] 10.724588 12.295139</code></pre>
 <p>In Figure <a href="simple.html#fig:qqpic">5.15</a> these quantiles are superimposed on the p.d.f. of a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.</p>
@@ -1073,7 +1138,7 @@ Figure 5.24: Normal QQ plots of normal and non-normal data. The dashed lines das
 <p><strong>(e)</strong> A positively skewed distribution. The small values are larger than expected and the large values larger than expected than from a normal distribution, giving points above the straight line on the left of the plot and above the line on the right. (Distribution used: gamma distribution with shape parameter 2 and scale parameter 1).</p>
 <p><strong>(f)</strong> A negatively skewed distribution. The small values are smaller than expected and the large values smaller than expected than from a normal distribution, giving points below the straight line on the left of the plot and below the line on the right. (Distribution used: <span class="math inline">\(10-X\)</span>, where <span class="math inline">\(X\)</span> has the distribution used in (e) above).</p>
 </div>
-<div id="the-australian-births-data" class="section level4">
+<div id="the-australian-births-data" class="section level4" number="5.11.1.1">
 <h4><span class="header-section-number">5.11.1.1</span> The Australian births data</h4>
 <p>As a further example consider the QQ plot in Figure <a href="simple.html#fig:babynormalqqenv">5.25</a>. The points clearly do not lie on a straight line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure <a href="simple.html#fig:QQtypes">5.24</a>).</p>
 <div class="figure" style="text-align: center"><span id="fig:babynormalqqenv"></span>
@@ -1084,7 +1149,7 @@ Figure 5.25: Normal QQ plot to compare the Australian birth weights with a <span
 </div>
 </div>
 </div>
-<div id="uniform-qq-plots" class="section level3">
+<div id="uniform-qq-plots" class="section level3" number="5.11.2">
 <h3><span class="header-section-number">5.11.2</span> Uniform QQ plots</h3>
 <p>Recall that in the Australian births data we wondered whether the time at which a randomly-chosen baby is born might be sampled from a uniform distribution on the interval (0, 24) hours. To examine this we could produce a uniform QQ plot, by plotting the ordered sample values
 <span class="math display">\[ u_{(1)},\,  u_{(2)},\, \ldots,\, u_{(43)},\,  u_{(44)} \]</span>
@@ -1100,7 +1165,7 @@ Figure 5.26: Uniform(0,24) QQ plot with simulation envelopes based on 19 simulat
 </div>
 <p>Like the histogram we saw in Section <a href="simple.html#uniform">5.7</a> the QQ plot also suggests that babies tend to be born later in the day than would be expected: in the middle of the horizontal axis the times of births are greater than the corresponding quantiles of the <span class="math inline">\(U(0,24)\)</span> distribution. Notice that the simulation envelopes in this QQ plot show that we expect the largest departures from the straight line in the middle of the distribution than near the ends.</p>
 </div>
-<div id="exponential-qq-plots" class="section level3">
+<div id="exponential-qq-plots" class="section level3" number="5.11.3">
 <h3><span class="header-section-number">5.11.3</span> Exponential QQ plots</h3>
 <p>Recall that in the Australian births data we wondered whether the times between the birth might be sampled from an exponential(<span class="math inline">\(\lambda\)</span>) distribution. We estimated <span class="math inline">\(\lambda\)</span> using <span class="math inline">\(\hat{\lambda} = 1.84\)</span>.</p>
 <p>Here, <span class="math inline">\(n=44\)</span>. For <span class="math inline">\(i=1, \ldots, n\)</span> we plot the <span class="math inline">\(i\)</span>th smallest observation <span class="math inline">\(t_{(i)}\)</span> against the <span class="math inline">\(100\frac{i}{n+1}\%\)</span> theoretical quantile <span class="math inline">\(q_i\)</span> of an exponential(<span class="math inline">\(\hat{\lambda}\)</span>) distribution. To find the theoretical quantiles we solve <span class="math inline">\(\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)\)</span> for <span class="math inline">\(q_i\)</span> to give
@@ -1145,6 +1210,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
