@@ -6,10 +6,14 @@
   11pt,
   british,
   openany, a4paper]{book}
+\title{STAT0002 Introduction to Probability and Statistics}
+\author{Dr Paul Northrop}
+\date{2021-10-01}
+
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -84,7 +88,8 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
 \makeatletter
@@ -93,7 +98,7 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -125,7 +130,7 @@
 \usepackage{caption}
 \usepackage{graphicx}
 \usepackage{siunitx}
-\usepackage{ulem}
+\usepackage[normalem]{ulem}
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{hhline}
@@ -134,20 +139,23 @@
 \usepackage{threeparttable}
 \usepackage{wrapfig}
 \usepackage{adjustbox}
+\usepackage{hyperref}
 \usepackage{fontspec}
-\ifxetex
+\ifXeTeX
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
   \setmainlanguage[variant=british]{english}
 \else
-  \usepackage[shorthands=off,main=british]{babel}
+  \usepackage[main=british]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-
-\title{STAT0002 Introduction to Probability and Statistics}
-\author{Dr Paul Northrop}
-\date{2021-05-12}
 
 \begin{document}
 \maketitle
@@ -181,7 +189,7 @@ In practice they are not.
 
 The vast majority of real investigations have at least one non-standard feature which means that we cannot simply throw the data into a computer and get it to spit out the answer. Statistical analyses require a lot of careful thought.
 
-Ideally a statistician should be consulted \textbf{before} any data are collected. Often this is not the case. Commonly the statistician is presented with a set of data, with little explanation of its meaning or context. Sometimes the researcher has processed the raw data in some way before giving it to the statistician, perhaps removing information that seems, to them, to be unimportant. It is not uncommon for a researcher to ask a statistician to ``calculate a \(p\)-value for me''. Real statistical analyses are never this simple.
+Ideally a statistician should be consulted \textbf{before} any data are collected. Often this is not the case. Commonly the statistician is presented with a set of data, with little explanation of its meaning or context. Sometimes the researcher has processed the raw data in some way before giving it to the statistician, perhaps removing information that seems, to them, to be unimportant. It is not uncommon for a researcher to ask a statistician to ``calculate a \(p\)-value for me'\,'. Real statistical analyses are never this simple.
 
 Before starting a formal statistical analysis it is important to consider carefully the context of the problem. Data are not just numbers. They are recorded values of known \textbf{variables}, such as height or weight;
 they have \textbf{units} and an \textbf{interpretation}. Ask lots of questions of the people who produced the data, clarify the main objectives of the analysis and check for problems with the data. As we shall see in the in first example on the Space Shuttle, making a careless mistake early in an analysis can have
@@ -306,7 +314,7 @@ What can we learn from this example?
   It is dangerous to extrapolate beyond the range of your data. No data were available below 50\(^\circ\)F. The forecast temperature of 31\(^\circ\)F was much lower than this.
 \end{itemize}
 
-After the accident \citet{shuttle} estimated the probability of a catastropic O-ring failure (that is, one that would cause an explosion) at 31\(^\circ\)F to be at least 0.13, which is large considering that seven lives were at stake. {[}To quantify their \textbf{uncertainty} they estimate that the probability is 90\% certain to be between 0.03 and 0.37.{]} However, it should certainly be made clear that this estimate may not be at all reliable. For example, it could be that as temperature decreases below 50\(^\circ\)F the risk of an accident increases much more quickly than the statistical analysis suggests.
+After the accident \citet{shuttle} estimated the probability of a catastrophic O-ring failure (that is, one that would cause an explosion) at 31\(^\circ\)F to be at least 0.13, which is large considering that seven lives were at stake. {[}To quantify their \textbf{uncertainty} they estimate that the probability is 90\% certain to be between 0.03 and 0.37.{]} However, it should certainly be made clear that this estimate may not be at all reliable. For example, it could be that as temperature decreases below 50\(^\circ\)F the risk of an accident increases much more quickly than the statistical analysis suggests.
 
 The plot in Figure \ref{fig:shuttle3} gives you an idea of one of the analyses that \citet{shuttle} carried out. The sample proportions
 of O-rings showing thermal distress (number of O-rings showing distress divided by 6) are plotted against temperature. Also plotted is a smooth curve fitted to these data. {[}This analysis is beyond scope of STAT0002/0003. You may study this type of model in STAT0023.{]}
@@ -745,16 +753,16 @@ Which measures of location are sensible for different types of data? Consider ea
 \begin{longtable}[]{@{}lccc@{}}
 \caption{\label{tab:whichmeasures} Types of data and measures of location.}\tabularnewline
 \toprule
-& mean & median & mode\tabularnewline
+& mean & median & mode \\
 \midrule
 \endfirsthead
 \toprule
-& mean & median & mode\tabularnewline
+& mean & median & mode \\
 \midrule
 \endhead
-nominal & & &\tabularnewline
-ordinal & & &\tabularnewline
-numerical & & &\tabularnewline
+nominal & & & \\
+ordinal & & & \\
+numerical & & & \\
 \bottomrule
 \end{longtable}
 
@@ -766,14 +774,14 @@ Many standard statistical methods work best when the data are distributed symmet
 \begin{longtable}[]{@{}cccc@{}}
 \caption{\label{tab:thumb} Relative values of the sample mean and median and what this \textbf{might} suggest in some cases.}\tabularnewline
 \toprule
-mean \(<\) median & mean = median & mean \(>\) median &\tabularnewline
+mean \(<\) median & mean = median & mean \(>\) median & \\
 \midrule
 \endfirsthead
 \toprule
-mean \(<\) median & mean = median & mean \(>\) median &\tabularnewline
+mean \(<\) median & mean = median & mean \(>\) median & \\
 \midrule
 \endhead
-negative skew & symmetric & positive skew &\tabularnewline
+negative skew & symmetric & positive skew & \\
 \bottomrule
 \end{longtable}
 
@@ -786,14 +794,14 @@ Table \ref{tab:oxfivenum} gives the five-number summary of the Oxford birth time
 \begin{longtable}[]{@{}ccccc@{}}
 \caption{\label{tab:oxfivenum} Sample five-number summary of the Oxford birth times data.}\tabularnewline
 \toprule
-\(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\)\tabularnewline
+\(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\) \\
 \midrule
 \endfirsthead
 \toprule
-\(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\)\tabularnewline
+\(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\) \\
 \midrule
 \endhead
-1.50 & 4.90 & 7.50 & 9.75 & 19.00\tabularnewline
+1.50 & 4.90 & 7.50 & 9.75 & 19.00 \\
 \bottomrule
 \end{longtable}
 
@@ -820,16 +828,16 @@ Table \ref{tab:sumstats} summarises the summary statistics may be used as measur
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:sumstats} Summary of summary statistics}\tabularnewline
 \toprule
-location & spread & shape\tabularnewline
+location & spread & shape \\
 \midrule
 \endfirsthead
 \toprule
-location & spread & shape\tabularnewline
+location & spread & shape \\
 \midrule
 \endhead
-median & inter-quartile range & quartile skewness\tabularnewline
-mean & standard deviation or variance & skewness\tabularnewline
-mode & &\tabularnewline
+median & inter-quartile range & quartile skewness \\
+mean & standard deviation or variance & skewness \\
+mode & & \\
 \bottomrule
 \end{longtable}
 
@@ -865,19 +873,19 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 \begin{longtable}[]{@{}rrrrr@{}}
 \caption{\label{tab:smalldata} A small example dataset.}\tabularnewline
 \toprule
-\(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\)\tabularnewline
+\(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\) \\
 \midrule
 \endfirsthead
 \toprule
-\(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\)\tabularnewline
+\(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\) \\
 \midrule
 \endhead
-\(-2\) & \(6\) & \(-1.5\) & \(6\) & \(0\)\tabularnewline
-\(-1\) & \(5\) & \(-1.1\) & \(5\) & \(0\)\tabularnewline
-\(0\) & \(4\) & \(0.2\) & \(4\) & \(0\)\tabularnewline
-\(1\) & \(3\) & \(1.1\) & \(3\) & \(0\)\tabularnewline
-\(2\) & \(2\) & \(1.6\) & \(1\) & \(1\)\tabularnewline
-\(10\) & \(1\) & \(1.5\) & \(2\) & \(-1\)\tabularnewline
+\(-2\) & \(6\) & \(-1.5\) & \(6\) & \(0\) \\
+\(-1\) & \(5\) & \(-1.1\) & \(5\) & \(0\) \\
+\(0\) & \(4\) & \(0.2\) & \(4\) & \(0\) \\
+\(1\) & \(3\) & \(1.1\) & \(3\) & \(0\) \\
+\(2\) & \(2\) & \(1.6\) & \(1\) & \(1\) \\
+\(10\) & \(1\) & \(1.5\) & \(2\) & \(-1\) \\
 \bottomrule
 \end{longtable}
 
@@ -2237,9 +2245,9 @@ In this example it is perhaps easiest to think of the conditioning as selecting 
 
 When we are working with conditional probabilities we need to use a neat notation rather than write out long sentences like the ones above.
 
-Let \(C\) be the event that a family has one cot death. Let \(F_1\) be the event that the family in question is affluent, non-smoking, and the mother is over 26. Instead of writing ``the probability of one cot death in a family conditional on the type of family is 1 in 8543''" we write
+Let \(C\) be the event that a family has one cot death. Let \(F_1\) be the event that the family in question is affluent, non-smoking, and the mother is over 26. Instead of writing ``the probability of one cot death in a family conditional on the type of family is 1 in 8543'''' we write
 \[P(C \mid F_1) = \frac{1}{8543}.\]
-The `\(\mid\)' sign means \textbf{``conditional on''}' or, more simply, \textbf{``given''}. Therefore, for \(P(C \mid F_1)\) we might say "``the probability of event \(C\) conditional on event \(F_1\)'', or ``the probability of event \(C\) given event \(F_1\)''.
+The `\(\mid\)' sign means \textbf{``conditional on''}' or, more simply, \textbf{``given''}. Therefore, for \(P(C \mid F_1)\) we might say ````the probability of event \(C\) conditional on event \(F_1\)'', or ``the probability of event \(C\) given event \(F_1\)''.
 
 The (unconditional) probability of one cot death is given by
 \[P(C) = \frac{1}{1303}.\]
@@ -4411,7 +4419,7 @@ The last 3 observations (\(GGG\)) do not contribute here because we do not know 
 
 \multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering total\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 26\huxbpad{0pt}}} &
-\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-60pt}{\huxtpad{0pt + 1em}\raggedleft 26~~~\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-60pt}{\huxtpad{0pt + 1em}\raggedleft 26\hphantom{0}\hphantom{0}\hphantom{0}\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} \tabularnewline[-0.5pt]
 
@@ -4608,7 +4616,7 @@ The frequencies of these counts appear in column 2 of Table \ref{tab:pois}. In c
 
 \multicolumn{1}{!{\huxvb{0, 0, 0}{0}}p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering total\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 24\huxbpad{0pt}}} &
-\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-60pt}{\huxtpad{0pt + 1em}\raggedleft 24~~~\huxbpad{0pt}}} &
+\multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-60pt}{\huxtpad{0pt + 1em}\raggedleft 24\hphantom{0}\hphantom{0}\hphantom{0}\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0.1}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} &
 \multicolumn{1}{p{0.18\textwidth}!{\huxvb{0, 0, 0}{0}}}{\cellcolor[RGB]{255, 255, 255}\hspace{6pt}\parbox[b]{0.18\textwidth-6pt-6pt}{\huxtpad{0pt + 1em}\centering 1\huxbpad{0pt}}} \tabularnewline[-0.5pt]
 
@@ -5010,8 +5018,8 @@ Then the value of \(\Phi(2.38)\) was found in a book of statistical tables. Now 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{value <-}\StringTok{ }\NormalTok{(}\DecValTok{10} \OperatorTok{-}\StringTok{ }\FloatTok{7.22}\NormalTok{) }\OperatorTok{/}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{)}
-\KeywordTok{pnorm}\NormalTok{(value)}
+\NormalTok{value }\OtherTok{\textless{}{-}}\NormalTok{ (}\DecValTok{10} \SpecialCharTok{{-}} \FloatTok{7.22}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{)}
+\FunctionTok{pnorm}\NormalTok{(value)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5023,7 +5031,7 @@ We can get even R to do the standardisation to the N(0, 1) case for us.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{pnorm}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DataTypeTok{mean =} \FloatTok{7.22}\NormalTok{, }\DataTypeTok{sd =} \KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{))}
+\FunctionTok{pnorm}\NormalTok{(}\DecValTok{10}\NormalTok{, }\AttributeTok{mean =} \FloatTok{7.22}\NormalTok{, }\AttributeTok{sd =} \FunctionTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5035,8 +5043,8 @@ Suppose now that we want to find the 95\% quantile of \(W\), that is, \(w\) for 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{value <-}\StringTok{ }\NormalTok{(}\DecValTok{10} \OperatorTok{-}\StringTok{ }\FloatTok{7.22}\NormalTok{) }\OperatorTok{/}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{)}
-\FloatTok{7.22} \OperatorTok{+}\StringTok{ }\KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{) }\OperatorTok{*}\StringTok{ }\KeywordTok{qnorm}\NormalTok{(}\FloatTok{0.95}\NormalTok{)}
+\NormalTok{value }\OtherTok{\textless{}{-}}\NormalTok{ (}\DecValTok{10} \SpecialCharTok{{-}} \FloatTok{7.22}\NormalTok{) }\SpecialCharTok{/} \FunctionTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{)}
+\FloatTok{7.22} \SpecialCharTok{+} \FunctionTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{) }\SpecialCharTok{*} \FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.95}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5046,7 +5054,7 @@ Suppose now that we want to find the 95\% quantile of \(W\), that is, \(w\) for 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{qnorm}\NormalTok{(}\FloatTok{0.95}\NormalTok{, }\DataTypeTok{mean =} \FloatTok{7.22}\NormalTok{, }\DataTypeTok{sd =} \KeywordTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{))}
+\FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.95}\NormalTok{, }\AttributeTok{mean =} \FloatTok{7.22}\NormalTok{, }\AttributeTok{sd =} \FunctionTok{sqrt}\NormalTok{(}\FloatTok{1.36}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5092,15 +5100,15 @@ Before we describe how to produce a QQ plot we return to the Oxford birth times 
 \begin{longtable}[]{@{}crrr@{}}
 \caption{\label{tab:compareqs} Comparison of sample and theoretical quantiles.}\tabularnewline
 \toprule
-& \(q_L\) & \(m\) & \(q_U\)\tabularnewline
+& \(q_L\) & \(m\) & \(q_U\) \\
 \midrule
 \endfirsthead
 \toprule
-& \(q_L\) & \(m\) & \(q_U\)\tabularnewline
+& \(q_L\) & \(m\) & \(q_U\) \\
 \midrule
 \endhead
-sample & \(4.95\) & \(7.50\) & \(9.75\)\tabularnewline
-\(N(7.72, 3.57^2)\) & \(5.32\) & \(7.72\) & \(10.13\)\tabularnewline
+sample & \(4.95\) & \(7.50\) & \(9.75\) \\
+\(N(7.72, 3.57^2)\) & \(5.32\) & \(7.72\) & \(10.13\) \\
 \bottomrule
 \end{longtable}
 
@@ -5127,7 +5135,7 @@ For simplicity we suppose that the sample size \(n=9\). Therefore we want to cal
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{qnorm}\NormalTok{((}\DecValTok{1}\OperatorTok{:}\DecValTok{9}\NormalTok{) }\OperatorTok{/}\StringTok{ }\DecValTok{10}\NormalTok{, }\DataTypeTok{mean =} \FloatTok{7.72}\NormalTok{, }\DataTypeTok{sd =} \FloatTok{3.57}\NormalTok{)}
+\FunctionTok{qnorm}\NormalTok{((}\DecValTok{1}\SpecialCharTok{:}\DecValTok{9}\NormalTok{) }\SpecialCharTok{/} \DecValTok{10}\NormalTok{, }\AttributeTok{mean =} \FloatTok{7.72}\NormalTok{, }\AttributeTok{sd =} \FloatTok{3.57}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -5721,16 +5729,16 @@ As a simple example we return Australian births data. Recall that we fitted a Po
 \begin{longtable}[]{@{}cccccccc@{}}
 \caption{\label{tab:poissonfit} Observed values and fitted values (estimated expected frequencies) and residuals for a Poisson distribution fitted to the counts of babies born in each of the 24 hours in the Australian births data.}\tabularnewline
 \toprule
-number of births & 0 & 1 & 2 & 3 & 4 & \(\geq 5\) & total\tabularnewline
+number of births & 0 & 1 & 2 & 3 & 4 & \(\geq 5\) & total \\
 \midrule
 \endfirsthead
 \toprule
-number of births & 0 & 1 & 2 & 3 & 4 & \(\geq 5\) & total\tabularnewline
+number of births & 0 & 1 & 2 & 3 & 4 & \(\geq 5\) & total \\
 \midrule
 \endhead
-\(y_i\) & 3 & 8 & 6 & 4 & 3 & 0 & 24\tabularnewline
-\(\hat{y}_i\) & 3.8 & 7.0 & 6.4 & 3.9 & 1.8 & 0.9 & 24\tabularnewline
-\(r_i\) & -0.8 & 1.0 & -0.4 & 0.1 & 1.2 & -0.9 & 0\tabularnewline
+\(y_i\) & 3 & 8 & 6 & 4 & 3 & 0 & 24 \\
+\(\hat{y}_i\) & 3.8 & 7.0 & 6.4 & 3.9 & 1.8 & 0.9 & 24 \\
+\(r_i\) & -0.8 & 1.0 & -0.4 & 0.1 & 1.2 & -0.9 & 0 \\
 \bottomrule
 \end{longtable}
 
@@ -6922,9 +6930,9 @@ Before carrying out a statistical analysis the data should be checked for unusua
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    If ``No'': Leave the observation in the dataset;
+    If ``No'\,': Leave the observation in the dataset;
   \item
-    If ``Yes'': goto 2.
+    If ``Yes'\,': goto 2.
   \end{enumerate}
 \item
   Investigate the observation.
@@ -6938,9 +6946,9 @@ Before carrying out a statistical analysis the data should be checked for unusua
     \def\labelenumiii{\roman{enumiii}.}
     \tightlist
     \item
-      If ``Yes'': if the error cannot be corrected then either use a resistant statistical method or delete the case.
+      If ``Yes'\,': if the error cannot be corrected then either use a resistant statistical method or delete the case.
     \item
-      If ``No'': goto 3.
+      If ``No'\,': goto 3.
     \end{enumerate}
   \item
     Is there good reason to believe that the observation does not come from the population of interest?
@@ -6949,9 +6957,9 @@ Before carrying out a statistical analysis the data should be checked for unusua
     \def\labelenumiii{\roman{enumiii}.}
     \tightlist
     \item
-      If ``Yes'': either use a resistant statistical method or delete the case.
+      If ``Yes'\,': either use a resistant statistical method or delete the case.
     \item
-      If ``No'': goto 3.
+      If ``No'\,': goto 3.
     \end{enumerate}
   \end{enumerate}
 \item
@@ -6961,9 +6969,9 @@ Before carrying out a statistical analysis the data should be checked for unusua
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    If ``Yes'': delete the observation; refit the model; report conclusions for the reduced range of explanatory variables.
+    If ``Yes'\,': delete the observation; refit the model; report conclusions for the reduced range of explanatory variables.
   \item
-    If ``No'': more data, or more information about the influential observation, are needed. Perhaps report 2 separate conclusions: one with the influential observation, one without.
+    If ``No'\,': more data, or more information about the influential observation, are needed. Perhaps report 2 separate conclusions: one with the influential observation, one without.
   \end{enumerate}
 \end{enumerate}
 
@@ -7350,11 +7358,7 @@ Figure \ref{fig:corr8} gives random samples from distributions with correlations
 
 }
 
-\caption{Samples from distributions with correlations $
-ho=0$ (2 of them), $
-ho=\pm 0.3, 
-ho=\pm 0.7$ and $
-ho=\pm 1$.}\label{fig:corr8}
+\caption{Samples from distributions with correlations $ho=0$ (2 of them), $ho=\pm 0.3, ho=\pm 0.7$ and $ho=\pm 1$.}\label{fig:corr8}
 \end{figure}
 
 \hypertarget{beware-missing-data-codes}{%
