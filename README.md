@@ -3,5 +3,7 @@
 Please see the [Overview](https://moodle.ucl.ac.uk/course/view.php?id=8579&section=1) section of the [STAT0002 Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=8579) for important general information about STAT0002. 
 
 [Thursday Week 2](https://moodle.ucl.ac.uk/mod/zoom/view.php?id=3145324)
+
 [Tuesday Week 3](https://moodle.ucl.ac.uk/mod/zoom/view.php?id=3162664)
+
 [Thursday Week 3](https://moodle.ucl.ac.uk/mod/zoom/view.php?id=3162671)
