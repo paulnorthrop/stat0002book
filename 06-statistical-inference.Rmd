@@ -70,7 +70,7 @@ There is a subtle, but important, difference between the words **estimator** and
 \[ \hat{\mu}=\displaystyle\frac1n\sum_{i=1}^n X_i = \overline{X}. \] 
 An estimator is a random variable: before we observe data we do not know which value the estimator will have.
 *  An **estimate** is the value of an estimator **after** the data have been observed.  Once we have observed $X_1=x_1, X_2,=x_2, \ldots, X_n=x_n$ the estimate of $\mu$ is
-\[ \hat{\mu} = \displaystyle\frac1n\sum_{i=1}^n x_i = \overline{X}. \]
+\[ \hat{\mu} = \displaystyle\frac1n\sum_{i=1}^n x_i = \overline{x}. \]
 An estimate is not a random variable, it is a constant.
 
 Here, I have used the same notation, $\hat{\mu}$ for the estimator and the estimate.  However, the difference is clear from the fact that I have used capital $X$s to define the estimator and lower case $x$s to define the estimate.
