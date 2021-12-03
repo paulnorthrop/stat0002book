@@ -7098,7 +7098,7 @@ Therefore, if we exponentiate the regression line then we do not obtain \(\mbox{
 
 We will consider two ways to tackle this problem.
 
-\textbf{Finding \(\mbox{median}(Y \mid X = x).\)} We assume that the error distribution is symmetric about 0, which implies that
+\textbf{Inferring \(\mbox{median}(Y \mid X = x).\)} We assume that the error distribution is symmetric about 0, which implies that
 
 \[ \mbox{E}(\log Y \mid X=x) = \mbox{median}(\log Y \mid X=x). \]
 
@@ -7114,7 +7114,7 @@ Based on this equation we estimate that if the population \(x\) doubles then the
 \[ \widehat{\mbox{median}}(Y \mid X=x) = 1.5. \]
 We estimate that in populations of size 1000 the median of Buchanan's vote is 1.5\% of the vote. However, The smallest population in the data is 6289 people, so we are extrapolating when we make this interpretation. It would be better to work with population recorded in units of 100,000. Then the intercept relates to a realistic population.
 
-\textbf{Finding \(\mbox{E}(Y \mid X = x).\)} We assume that the error distribution is normal. Suppose that \(Y\) and \(X\) are Buchanan's percentage of the vote and the population size in an arbitrarily-chosen county. Given that \(X=x\) we have
+\textbf{Inferring \(\mbox{E}(Y \mid X = x).\)} We assume that the error distribution is normal. Suppose that \(Y\) and \(X\) are Buchanan's percentage of the vote and the population size in an arbitrarily-chosen county. Given that \(X=x\) we have
 \[ \log Y = \alpha + \beta \log x + \epsilon, \]
 where \(\epsilon \sim N(0,\sigma^2)\). Therefore,
 \[ Y = e^\alpha x^\beta e^\epsilon. \]
