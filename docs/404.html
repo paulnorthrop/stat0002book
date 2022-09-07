@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Introduction | STAT0002 Introduction to Probability and Statistics</title>
+  <title>Page not found | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Introduction | STAT0002 Introduction to Probability and Statistics" />
+  <meta property="og:title" content="Page not found | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Introduction | STAT0002 Introduction to Probability and Statistics" />
+  <meta name="twitter:title" content="Page not found | STAT0002 Introduction to Probability and Statistics" />
   
   <meta name="twitter:description" content="Produces STAT0002 notes in an accessible format" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="descriptive.html"/>
+
+
 <script src="libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -411,383 +411,19 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We will introduce core ideas in Probability and Statistics. These ideas will be introduced informally and the mathematical level will be kept as elementary as possible. Examples of real investigations will be used to motivate discussion of the ideas and to illustrate simple statistical methods. In the course STAT0003 the material in STAT0002 will be revisited in a more formal way and more advanced concepts and methods will be introduced.</p>
-<div id="real" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Real statistical investigations<a href="introduction.html#real" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We will spend some lecture time looking at examples of real investigations. The first of these is introduced in Section <a href="introduction.html#shuttle">1.2</a> and will be used as an worked example for your Meet your Professor In-course Assessment (ICA). Most of these are real investigations which have been described in real research papers. We will also use some much simpler teaching examples to illustrate statistical ideas and methods. However, teaching examples can give the impression that all statistical analyses are straightforward.
-In practice they are not.</p>
-<blockquote>
-<p>“Most real-life statistical problems have one or more nonstandard features. There are no routine statistical questions; only questionable statistical routines.” David Cox</p>
-</blockquote>
-<p>The vast majority of real investigations have at least one non-standard feature which means that we cannot simply throw the data into a computer and get it to spit out the answer. Statistical analyses require a lot of careful thought.</p>
-<p>Ideally a statistician should be consulted <strong>before</strong> any data are collected. Often this is not the case. Commonly the statistician is presented with a set of data, with little explanation of its meaning or context. Sometimes the researcher has processed the raw data in some way before giving it to the statistician, perhaps removing information that seems, to them, to be unimportant. It is not uncommon for a researcher to ask a statistician to ``calculate a <span class="math inline">\(p\)</span>-value for me’’. Real statistical analyses are never this simple.</p>
-<p>Before starting a formal statistical analysis it is important to consider carefully the context of the problem. Data are not just numbers. They are recorded values of known <strong>variables</strong>, such as height or weight;
-they have <strong>units</strong> and an <strong>interpretation</strong>. Ask lots of questions of the people who produced the data, clarify the main objectives of the analysis and check for problems with the data. As we shall see in the in first example on the Space Shuttle, making a careless mistake early in an analysis can have
-dire consequences.</p>
-<p>Many of the real-life problems we will consider required quite complicated data analyses reported in long research papers. I have summarised and simplified the details where necessary so that they are easier to understand. However, the main ideas and findings are unchanged. Some examples contain concepts and words which we will not define until later in STAT0002 or STAT0003. However, their meaning should be clear from the context of the problem. I hope that these investigations will convince you of the importance of the subject of Statistics.</p>
-</div>
-<div id="shuttle" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Challenger Space Shuttle Catastrophe<a href="introduction.html#shuttle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Dalal, S. R., Fowlkes, E. B. and Hoadley, B. (1989) <a href="https://moodle.ucl.ac.uk/mod/resource/view.php?id=316223">Risk analysis of the space shuttle: Pre-Challenger prediction of failure.</a>
-<em>J. Amer. Statist.</em> Assoc. <strong>84</strong>(408), 945–957.</p>
-<p>On 28 January 1986 the space shuttle Challenger exploded shortly after its launch, killing the seven astronauts on board.</p>
-<blockquote>
-<p>Could this accident have been predicted and therefore prevented?</p>
-</blockquote>
-<p>The accident was caused by gas leaking from one of the fuel tanks into the intense heat produced by the booster rockets. Usually such leaks are prevented by rubber seals called O-rings. It was known that O-ring failure would destroy Challenger and its crew. Subsequent investigation revealed that O-rings do not seal properly at low temperatures. O-rings need to expand to fill the gaps through which fuel can leak. At low temperatures O-rings lose elasticity, cannot expand, and therefore cannot fill the gaps.</p>
-<p>The night before the launch some engineers expressed concern about the possible effect of low temperature on O-ring peformance - the temperature forecast for
-the launch was 31<span class="math inline">\(^\circ\)</span>F (-0.5<span class="math inline">\(^\circ\)</span>C), much lower than on previous shuttle launches and below the temperature at which the O-rings were designed to work effectively. A meeting was called at which data (in table Table <a href="introduction.html#tab:tabshuttle1">1.1</a>) resulting from the 23 previous launches were discussed.</p>
-<table>
-<caption><span id="tab:tabshuttle1">Table 1.1: </span>Space shuttle data available at meeting. Number of O-rings (out of a total of 6) with thermal distress (damage) for launches at a given temperature</caption>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="right">flight</th>
-<th align="left">date</th>
-<th align="left">damaged</th>
-<th align="right">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">2</td>
-<td align="right">2</td>
-<td align="left">12/11/1981</td>
-<td align="left">1</td>
-<td align="right">70</td>
-</tr>
-<tr class="even">
-<td align="left">9</td>
-<td align="right">9</td>
-<td align="left">03/02/1984</td>
-<td align="left">1</td>
-<td align="right">57</td>
-</tr>
-<tr class="odd">
-<td align="left">10</td>
-<td align="right">10</td>
-<td align="left">06/04/1984</td>
-<td align="left">1</td>
-<td align="right">63</td>
-</tr>
-<tr class="even">
-<td align="left">11</td>
-<td align="right">11</td>
-<td align="left">30/08/1984</td>
-<td align="left">1</td>
-<td align="right">70</td>
-</tr>
-<tr class="odd">
-<td align="left">14</td>
-<td align="right">14</td>
-<td align="left">24/01/1985</td>
-<td align="left">3</td>
-<td align="right">53</td>
-</tr>
-<tr class="even">
-<td align="left">21</td>
-<td align="right">21</td>
-<td align="left">30/10/1985</td>
-<td align="left">2</td>
-<td align="right">75</td>
-</tr>
-<tr class="odd">
-<td align="left">23</td>
-<td align="right">23</td>
-<td align="left">21/01/1986</td>
-<td align="left">1</td>
-<td align="right">58</td>
-</tr>
-<tr class="even">
-<td align="left">24</td>
-<td align="right">24</td>
-<td align="left">28/01/1986</td>
-<td align="left">?</td>
-<td align="right">31</td>
-</tr>
-</tbody>
-</table>
-<p>The third column contains the number of O-rings which showed some damage due to
-thermal distress after the flight. What do you notice about these numbers?</p>
-<p>Figure <a href="introduction.html#fig:shuttle1">1.1</a>, which illustrates these data graphically, was examined at the meeting. Despite some of the people present at the meeting suggesting that the launch should be postponed until the temperature reached the lowest temperature experienced in previous launches, the meeting concluded that there was no evidence of a temperature effect on the performance of O-rings and the launch went ahead.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttle1"></span>
-<img src="images/shuttle1.png" alt="Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been omitted.  No clear association between the number of distressed O-rings and temperature is evident." width="75%" />
-<p class="caption">
-Figure 1.1: Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been omitted. No clear association between the number of distressed O-rings and temperature is evident.
-</p>
-</div>
-<p>Flights giving zero incidents of thermal distress were not included in the graph. This was because it was felt that these flights did not contribute any information about the temperature effect. When the complete dataset (see Table <a href="introduction.html#tab:tabshuttle2">1.2</a> and Figure <a href="introduction.html#fig:shuttle2">1.2</a>) is examined it is clear that these flights <strong>do</strong> contribute extra information.</p>
-<table>
-<caption><span id="tab:tabshuttle2">Table 1.2: </span>Complete space shuttle data. Number of damaged O-rings (out of a total of 6) for launches at a given temperature</caption>
-<thead>
-<tr class="header">
-<th align="right">flight</th>
-<th align="left">date</th>
-<th align="left">damaged</th>
-<th align="right">temperature</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">21/04/1981</td>
-<td align="left">0</td>
-<td align="right">66</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">12/11/1981</td>
-<td align="left">1</td>
-<td align="right">70</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">22/03/1982</td>
-<td align="left">0</td>
-<td align="right">69</td>
-</tr>
-<tr class="even">
-<td align="right">4</td>
-<td align="left">11/11/1982</td>
-<td align="left">0</td>
-<td align="right">68</td>
-</tr>
-<tr class="odd">
-<td align="right">5</td>
-<td align="left">04/04/1983</td>
-<td align="left">0</td>
-<td align="right">67</td>
-</tr>
-<tr class="even">
-<td align="right">6</td>
-<td align="left">18/06/1983</td>
-<td align="left">0</td>
-<td align="right">72</td>
-</tr>
-<tr class="odd">
-<td align="right">7</td>
-<td align="left">30/08/1983</td>
-<td align="left">0</td>
-<td align="right">73</td>
-</tr>
-<tr class="even">
-<td align="right">8</td>
-<td align="left">28/11/1983</td>
-<td align="left">0</td>
-<td align="right">70</td>
-</tr>
-<tr class="odd">
-<td align="right">9</td>
-<td align="left">03/02/1984</td>
-<td align="left">1</td>
-<td align="right">57</td>
-</tr>
-<tr class="even">
-<td align="right">10</td>
-<td align="left">06/04/1984</td>
-<td align="left">1</td>
-<td align="right">63</td>
-</tr>
-<tr class="odd">
-<td align="right">11</td>
-<td align="left">30/08/1984</td>
-<td align="left">1</td>
-<td align="right">70</td>
-</tr>
-<tr class="even">
-<td align="right">12</td>
-<td align="left">05/10/1984</td>
-<td align="left">0</td>
-<td align="right">78</td>
-</tr>
-<tr class="odd">
-<td align="right">13</td>
-<td align="left">08/11/1984</td>
-<td align="left">0</td>
-<td align="right">67</td>
-</tr>
-<tr class="even">
-<td align="right">14</td>
-<td align="left">24/01/1985</td>
-<td align="left">3</td>
-<td align="right">53</td>
-</tr>
-<tr class="odd">
-<td align="right">15</td>
-<td align="left">12/04/1985</td>
-<td align="left">0</td>
-<td align="right">67</td>
-</tr>
-<tr class="even">
-<td align="right">16</td>
-<td align="left">29/04/1985</td>
-<td align="left">0</td>
-<td align="right">75</td>
-</tr>
-<tr class="odd">
-<td align="right">17</td>
-<td align="left">17/06/1985</td>
-<td align="left">0</td>
-<td align="right">70</td>
-</tr>
-<tr class="even">
-<td align="right">18</td>
-<td align="left">29/07/1985</td>
-<td align="left">0</td>
-<td align="right">81</td>
-</tr>
-<tr class="odd">
-<td align="right">19</td>
-<td align="left">27/08/1985</td>
-<td align="left">0</td>
-<td align="right">76</td>
-</tr>
-<tr class="even">
-<td align="right">20</td>
-<td align="left">03/10/1985</td>
-<td align="left">0</td>
-<td align="right">79</td>
-</tr>
-<tr class="odd">
-<td align="right">21</td>
-<td align="left">30/10/1985</td>
-<td align="left">2</td>
-<td align="right">75</td>
-</tr>
-<tr class="even">
-<td align="right">22</td>
-<td align="left">26/11/1986</td>
-<td align="left">0</td>
-<td align="right">76</td>
-</tr>
-<tr class="odd">
-<td align="right">23</td>
-<td align="left">21/01/1986</td>
-<td align="left">1</td>
-<td align="right">58</td>
-</tr>
-<tr class="even">
-<td align="right">24</td>
-<td align="left">28/01/1986</td>
-<td align="left">?</td>
-<td align="right">31</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttle2"></span>
-<img src="images/shuttle2.png" alt="Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been included as hollow circles.  A clear negative association between the number of distress O-rings and temperature is evident." width="75%" />
-<p class="caption">
-Figure 1.2: Number of damaged O-rings plotted against temperature, for flights prior to 28/01/1986. Flights showing no incidents of distress have been included as hollow circles. A clear negative association between the number of distress O-rings and temperature is evident.
-</p>
-</div>
-<p>The enquiry into the Challenger accident concluded that a more careful analysis of the O-ring data would have revealed the apparent effect of temperature on O-ring performance.</p>
-<p>What can we learn from this example?</p>
-<ul>
-<li>Data analyses can have life and death consequences. Statisticians can be very important people!<br />
-</li>
-<li>Statistical analyses should use <strong>all</strong> the data. In this example only a non-random sample of the data are used. Removing some of the data had dire consequences. Values of zero are still data.</li>
-<li>It is dangerous to extrapolate beyond the range of your data. No data were available below 50<span class="math inline">\(^\circ\)</span>F. The forecast temperature of 31<span class="math inline">\(^\circ\)</span>F was much lower than this.</li>
-</ul>
-<p>After the accident <span class="citation">Dalal, Fowlkes, and Hoadley (<a href="#ref-shuttle" role="doc-biblioref">1989</a>)</span> estimated the probability of a catastrophic O-ring failure (that is, one that would cause an explosion) at 31<span class="math inline">\(^\circ\)</span>F to be at least 0.13, which is large considering that seven lives were at stake. [To quantify their <strong>uncertainty</strong> they estimate that the probability is 90% certain to be between 0.03 and 0.37.] However, it should certainly be made clear that this estimate may not be at all reliable. For example, it could be that as temperature decreases below 50<span class="math inline">\(^\circ\)</span>F the risk of an accident increases much more quickly than the statistical analysis suggests.</p>
-<p>The plot in Figure <a href="introduction.html#fig:shuttle3">1.3</a> gives you an idea of one of the analyses that <span class="citation">Dalal, Fowlkes, and Hoadley (<a href="#ref-shuttle" role="doc-biblioref">1989</a>)</span> carried out. The sample proportions
-of O-rings showing thermal distress (number of O-rings showing distress divided by 6) are plotted against temperature. Also plotted is a smooth curve fitted to these data. [This analysis is beyond scope of STAT0002/0003. You may study this type of model in STAT0023.]</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttle3"></span>
-<img src="images/shuttle3.png" alt="Proportion of O-rings showing some thermal distress plotted against temperature, with fitted logistic curve.  The fitted curve reflects the apparent negative association between this proportion and temperature." width="75%" />
-<p class="caption">
-Figure 1.3: Proportion of O-rings showing some thermal distress plotted against temperature, with fitted logistic curve. The fitted curve reflects the apparent negative association between this proportion and temperature.
-</p>
-</div>
-<div id="uncertainty" class="section level3 hasAnchor" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Uncertainty<a href="introduction.html#uncertainty" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Suppose there is a true curve, of the same general type as the one in Figure <a href="introduction.html#fig:shuttle3">1.3</a>, which describes how the probability that an O-ring is damaged depends on temperature. We use the NASA test flight data to guess, or <strong>estimate</strong> the exact shape of this true curve. The curve in figure <a href="introduction.html#fig:shuttle3">1.3</a> is <strong>not</strong> the true curve, it is an <strong>estimate</strong> of the true curve based on these data.</p>
-<p>If NASA repeated their launches, at exactly the same temperatures, these new data on the number of damaged O-rings would not be the same as the old data and the shape of the new estimated curve would be different from the shape of the old estimated curve. It may be that these 2 curves are quite similar or it could be that they are very different. We could ask them, very politely, repeat this process many times to get a large number of different sets of data. Each set of data produces an estimated curve.</p>
-<p>The dataset (and its estimated curve) we have is just one of many possible datasets that could be produced. We can imagine picking this dataset (and curve) at random from a big bag of possible datasets (and curves). These ideas are summarised in Figure <a href="introduction.html#fig:shuttlediagram">1.4</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttlediagram"></span>
-<img src="images/shuttle_diagram.png" alt="Diagram to illustrate the idea of repeating an experiment many times.  Each simulated set of flights leads to its own dataset and fitted logistic curve." width="75%" />
-<p class="caption">
-Figure 1.4: Diagram to illustrate the idea of repeating an experiment many times. Each simulated set of flights leads to its own dataset and fitted logistic curve.
-</p>
-</div>
-<p>Suppose that the estimated curves from the possible datasets are very similar to each other. We say that their <strong>variability</strong> is small. If this is the case then it doesn’t matter much which dataset we picked from the big bag of possible datasets: the results are similar for all datasets. Therefore, we can be fairly certain that the results we got from the dataset we have are close to the truth. Therefore the <strong>uncertainty</strong> surrounding the results is small.</p>
-<p>On the other hand, if the estimated curves from the possible datasets are very different to each other then their <strong>variability</strong> is large. If this is the case then the results will be very different depending on which dataset we pick. Therefore, it is possible that the results we got from the dataset are very far from the truth. Therefore the <strong>uncertainty</strong> about the results is large.</p>
-<p>We can see that <strong>variability</strong> and <strong>uncertainty</strong> are closely related. Small variability tends to produce small uncertainty, whereas large variability tends to produce large uncertainty. As we might expect the amount of data, (or, more precisely, the amount of <strong>information</strong> in the data) matters. Large datasets, with lots of information, tend to produce small variability in the results and therefore small uncertainty. Small datasets, with small amounts of information, tend to produce large variability in the results and therefore large uncertainty.</p>
-<p>So, how can we quantify how much uncertainty there is in the space shuttle example? It is unlikely that NASA will carry out all their launches again just for us. However, it is possible for us to produce (<strong>simulate</strong>) on a computer our own, fake, datasets using the estimated curve in Figure <a href="introduction.html#fig:shuttle3">1.3</a>. If this curve (and the assumptions used to produce it) are correct, this is equivalent to NASA carrying out more test flights: the simulated datasets have exactly the same statistical properties as the real dataset. In summary, we</p>
-<ul>
-<li>create a large number of fake (<strong>simulated</strong>) datasets;</li>
-<li>for each dataset we estimate a curve to describe how the probability of O-ring damage depends on temperature;</li>
-<li>examine how much the curves, and the estimate of probability at different temperatures vary between the simulated datasets.</li>
-</ul>
-<p>Figure <a href="introduction.html#fig:shuttlesimcurves">1.5</a> shows 50 simulated curves and the curve estimated from the real data.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttlesimcurves"></span>
-<img src="images/shuttle_simcurves.png" alt="50 curves fitted to simulated shuttle test flight data. The curves are similar over the range of temperatures observed in the data (53 to 81 degrees F), but vary greatly for lower temperatures, such as 31 degrees F." width="75%" />
-<p class="caption">
-Figure 1.5: 50 curves fitted to simulated shuttle test flight data. The curves are similar over the range of temperatures observed in the data (53 to 81 degrees F), but vary greatly for lower temperatures, such as 31 degrees F.
-</p>
-</div>
-<p>There is a lot of variability in these curves. Notice that the curves are quite close to each other for high temperatures - where we have some data - but that they are very spread out for low temperatures - where we have no data. This is confirmed by figure <a href="introduction.html#fig:shuttlesim">1.6</a> which shows how the estimated probability of O-ring damage depends on temperature.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttlesim"></span>
-<img src="images/shuttle_sim.png" alt="Histograms of estimated probabilities of O-ring damage at different temperatures." width="75%" />
-<p class="caption">
-Figure 1.6: Histograms of estimated probabilities of O-ring damage at different temperatures.
-</p>
-</div>
-<p>There is a large amount of uncertainty about the esimatated probabilities, particularly at 31<span class="math inline">\(^\circ\)</span>F, where it really mattered.</p>
-<p>To show the effect of sample size (the size of the dataset) we simulate datasets which are larger than the real dataset and see how much the curves fitted to these data vary between the datasets. Figure <a href="introduction.html#fig:shuttlesimcurves10">1.7</a> shows the estimated curves from 50 datasets, each of which is 10 times the size of the real dataset. Figure <a href="introduction.html#fig:shuttlesimcurves100">1.8</a> shows curves for datasets which are 100 times the size of the original dataset. As the sample size increases the variability decreases and so the uncertainty decreases.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttlesimcurves10"></span>
-<img src="images/shuttle_simcurves10.png" alt="50 curves fitted to simulated shuttle test flight datasets that are each 10 times the size of the real dataset.  In comparision to the curves based on the real dataset these curves vary less, but are still most variable for low temperatures." width="75%" />
-<p class="caption">
-Figure 1.7: 50 curves fitted to simulated shuttle test flight datasets that are each 10 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary less, but are still most variable for low temperatures.
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttlesimcurves100"></span>
-<img src="images/shuttle_simcurves100.png" alt="50 curves fitted to simulated shuttle test flight datasets that are each 100 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary much less, but are still most variable for low temperatures." width="75%" />
-<p class="caption">
-Figure 1.8: 50 curves fitted to simulated shuttle test flight datasets that are each 100 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary much less, but are still most variable for low temperatures.
-</p>
-</div>
-</div>
-</div>
-<div id="a-very-brief-introduction-to-stochastic-simulation" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> A very brief introduction to stochastic simulation<a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section contains words that we will not define until later in the course. Further information about stochastic simulation is available from the Stochastic Simulation section of the STAT0002 Moodle page.</p>
-<p>In Statistics it is common to assess a statistical method based on how well it would perform if used repeatedly on a large number of new datasets, where we imagine that the new datasets have exactly the same statistical properties as the real data. In some cases it is possible to do this using mathematics. Alternatively, we can use a computer to produce some fake (simulated) datasets from a model that has been fitted to the real data. How can we do this?</p>
-<p>Stochastic (stochastic simply means “involving randomness”) simulation is based on the ability to generate a random number <span class="math inline">\(u\)</span> between 0 and 1. Stochastic simply means “involving randomness”. Your pocket calculator probably has a button to do this, perhaps called RAN#. It is possible to transform this number <span class="math inline">\(u\)</span> so that it looks like it has been drawn from the distribution required, e.g. a binomial distribution or a normal distribution. If we produce a sequence <span class="math inline">\(u_1, u_2, \ldots, u_n\)</span> of random numbers between 0 and 1 and transform them appropriately, then the transformed values will look like a random sample from the distribution required. Of course, because these values are produced by rule implemented by a computer they are not really random. However, if the rule is designed carefully, these values are close enough to being a random sample for our purposes.</p>
-<p>For the purposes of the space shuttle experiment we simply need to simulate a 1 (O-ring distressed) with probability <span class="math inline">\(p\)</span>, and a 0 (0-ring not distressed) with probability <span class="math inline">\(1-p\)</span>. This is easy. If <span class="math inline">\(U\)</span> is a random number between 0 and 1 then the probability that <span class="math inline">\(U &lt; p\)</span> is <span class="math inline">\(p\)</span>. Therefore, we define</p>
-<p><span class="math display" id="eq:xbin">\[\begin{equation}
-X =
-\begin{cases}
-1 &amp; \text{if } U &lt; p, \\
-0 &amp; \text{if } U \geq p.
-\end{cases}
-\tag{1.1}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(p=1/2\)</span> this is like using a computer to flip an unbiased coin.</p>
-<p>To simulate a fake space shuttle dataset we do the following for each of the 23 flights:</p>
-<ol style="list-style-type: decimal">
-<li>set <span class="math inline">\(p\)</span> to be the value of the fitted curve in Figure <a href="introduction.html#fig:shuttle3">1.3</a> corresponding to the flight temperature;</li>
-<li>generate 6 random numbers <span class="math inline">\(u_1, \ldots, u_6\)</span> between 0 and 1;</li>
-<li>calculate <span class="math inline">\(x_1, \ldots, x_6\)</span> using equation <a href="introduction.html#eq:xbin">(1.1)</a>;</li>
-<li>calculate <span class="math inline">\(y=x_1+\cdots+x_6\)</span>, the total number of distressed O-rings.</li>
-</ol>
-<p>We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other. In Chapter <a href="rvs.html#rvs">5</a> we will see that <span class="math inline">\(y\)</span> is a value simulated from a binomial(6, <span class="math inline">\(p\)</span>) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.</p>
-
-</div>
-</div>
-<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-shuttle" class="csl-entry">
-Dalal, Siddhartha R., Edward B. Fowlkes, and Bruce Hoadley. 1989. <span>‘Risk Analysis of the Space Shuttle: Pre-Challenger Prediction of Failure’</span>. <em>Journal of the American Statistical Association</em> 84 (408): 945–57. <a href="https://doi.org/10.1080/01621459.1989.10478858">https://doi.org/10.1080/01621459.1989.10478858</a>.
-</div>
+<div id="page-not-found" class="section level1">
+<h1>Page not found</h1>
+<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
+<p>You may want to try searching to find the page's new location, or use
+the table of contents to find the page you are looking for.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="descriptive.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

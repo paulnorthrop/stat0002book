@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Descriptive Statistics | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Descriptive Statistics | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2021-12-03" />
+<meta name="date" content="2022-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="introduction.html"/>
 <link rel="next" href="probability.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +51,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -159,234 +160,237 @@ div.csl-indent {
 <li><a href="./">STAT0002 2020-21</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The purpose of these notes</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li><a href="index.html#the-purpose-of-these-notes" id="toc-the-purpose-of-these-notes">The purpose of these notes<span></span></a></li>
+<li><a href="introduction.html#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#real"><i class="fa fa-check"></i><b>1.1</b> Real statistical investigations</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#shuttle"><i class="fa fa-check"></i><b>1.2</b> Challenger Space Shuttle Catastrophe</a>
+<li><a href="introduction.html#real" id="toc-real"><span class="toc-section-number">1.1</span> Real statistical investigations<span></span></a></li>
+<li><a href="introduction.html#shuttle" id="toc-shuttle"><span class="toc-section-number">1.2</span> Challenger Space Shuttle Catastrophe<span></span></a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#uncertainty"><i class="fa fa-check"></i><b>1.2.1</b> Uncertainty</a></li>
+<li><a href="introduction.html#uncertainty" id="toc-uncertainty"><span class="toc-section-number">1.2.1</span> Uncertainty<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation"><i class="fa fa-check"></i><b>1.3</b> A very brief introduction to stochastic simulation</a></li>
+<li><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation" id="toc-a-very-brief-introduction-to-stochastic-simulation"><span class="toc-section-number">1.3</span> A very brief introduction to stochastic simulation<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="descriptive.html"><a href="descriptive.html"><i class="fa fa-check"></i><b>2</b> Descriptive Statistics</a>
+<li><a href="descriptive.html#descriptive" id="toc-descriptive"><span class="toc-section-number">2</span> Descriptive Statistics<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="descriptive.html"><a href="descriptive.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of data</a>
+<li><a href="descriptive.html#types-of-data" id="toc-types-of-data"><span class="toc-section-number">2.1</span> Types of data<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="descriptive.html"><a href="descriptive.html#qualitative-or-categorical-data"><i class="fa fa-check"></i><b>2.1.1</b> Qualitative or categorical data</a></li>
-<li class="chapter" data-level="2.1.2" data-path="descriptive.html"><a href="descriptive.html#quantitative-or-numerical-data"><i class="fa fa-check"></i><b>2.1.2</b> Quantitative or numerical data</a></li>
+<li><a href="descriptive.html#qualitative-or-categorical-data" id="toc-qualitative-or-categorical-data"><span class="toc-section-number">2.1.1</span> Qualitative or categorical data<span></span></a></li>
+<li><a href="descriptive.html#quantitative-or-numerical-data" id="toc-quantitative-or-numerical-data"><span class="toc-section-number">2.1.2</span> Quantitative or numerical data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="descriptive.html"><a href="descriptive.html#describing-distributions"><i class="fa fa-check"></i><b>2.2</b> Describing distributions</a>
+<li><a href="descriptive.html#describing-distributions" id="toc-describing-distributions"><span class="toc-section-number">2.2</span> Describing distributions<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="descriptive.html"><a href="descriptive.html#example-oxford-births-data"><i class="fa fa-check"></i>Example: Oxford births data</a></li>
+<li><a href="descriptive.html#example-oxford-births-data" id="toc-example-oxford-births-data">Example: Oxford births data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="descriptive.html"><a href="descriptive.html#summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Summary Statistics</a>
+<li><a href="descriptive.html#summary-statistics" id="toc-summary-statistics"><span class="toc-section-number">2.3</span> Summary Statistics<span></span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="descriptive.html"><a href="descriptive.html#fivenumber"><i class="fa fa-check"></i><b>2.3.1</b> Five number summary</a></li>
-<li class="chapter" data-level="2.3.2" data-path="descriptive.html"><a href="descriptive.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
-<li class="chapter" data-level="2.3.3" data-path="descriptive.html"><a href="descriptive.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
-<li class="chapter" data-level="2.3.4" data-path="descriptive.html"><a href="descriptive.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
-<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#corr1"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
+<li><a href="descriptive.html#fivenumber" id="toc-fivenumber"><span class="toc-section-number">2.3.1</span> Five number summary<span></span></a></li>
+<li><a href="descriptive.html#meanstdev" id="toc-meanstdev"><span class="toc-section-number">2.3.2</span> Mean and standard deviation<span></span></a></li>
+<li><a href="descriptive.html#mode" id="toc-mode"><span class="toc-section-number">2.3.3</span> Mode<span></span></a></li>
+<li><a href="descriptive.html#symmetry" id="toc-symmetry"><span class="toc-section-number">2.3.4</span> Symmetry<span></span></a></li>
+<li><a href="descriptive.html#corr1" id="toc-corr1"><span class="toc-section-number">2.3.5</span> Correlation<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a>
+<li><a href="descriptive.html#tables" id="toc-tables"><span class="toc-section-number">2.4</span> Tables<span></span></a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="descriptive.html"><a href="descriptive.html#frequency-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Frequency distribution</a></li>
+<li><a href="descriptive.html#frequency-distribution" id="toc-frequency-distribution"><span class="toc-section-number">2.4.1</span> Frequency distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="descriptive.html"><a href="descriptive.html#graphs"><i class="fa fa-check"></i><b>2.5</b> Graphs (1 variable)</a>
+<li><a href="descriptive.html#graphs" id="toc-graphs"><span class="toc-section-number">2.5</span> Graphs (1 variable)<span></span></a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="descriptive.html"><a href="descriptive.html#histogram"><i class="fa fa-check"></i><b>2.5.1</b> Histograms</a></li>
-<li class="chapter" data-level="2.5.2" data-path="descriptive.html"><a href="descriptive.html#stem"><i class="fa fa-check"></i><b>2.5.2</b> Stem-and-leaf plots</a></li>
-<li class="chapter" data-level="2.5.3" data-path="descriptive.html"><a href="descriptive.html#dotplots"><i class="fa fa-check"></i><b>2.5.3</b> Dotplots</a></li>
-<li class="chapter" data-level="2.5.4" data-path="descriptive.html"><a href="descriptive.html#boxplots"><i class="fa fa-check"></i><b>2.5.4</b> Boxplots</a></li>
-<li class="chapter" data-level="2.5.5" data-path="descriptive.html"><a href="descriptive.html#barplots"><i class="fa fa-check"></i><b>2.5.5</b> Barplots</a></li>
-<li class="chapter" data-level="2.5.6" data-path="descriptive.html"><a href="descriptive.html#times-series-plots"><i class="fa fa-check"></i><b>2.5.6</b> Times series plots</a></li>
+<li><a href="descriptive.html#histogram" id="toc-histogram"><span class="toc-section-number">2.5.1</span> Histograms<span></span></a></li>
+<li><a href="descriptive.html#stem" id="toc-stem"><span class="toc-section-number">2.5.2</span> Stem-and-leaf plots<span></span></a></li>
+<li><a href="descriptive.html#dotplots" id="toc-dotplots"><span class="toc-section-number">2.5.3</span> Dotplots<span></span></a></li>
+<li><a href="descriptive.html#boxplots" id="toc-boxplots"><span class="toc-section-number">2.5.4</span> Boxplots<span></span></a></li>
+<li><a href="descriptive.html#barplots" id="toc-barplots"><span class="toc-section-number">2.5.5</span> Barplots<span></span></a></li>
+<li><a href="descriptive.html#times-series-plots" id="toc-times-series-plots"><span class="toc-section-number">2.5.6</span> Times series plots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="descriptive.html"><a href="descriptive.html#election"><i class="fa fa-check"></i><b>2.6</b> 2000 US Presidential Election</a></li>
-<li class="chapter" data-level="2.7" data-path="descriptive.html"><a href="descriptive.html#graphs2"><i class="fa fa-check"></i><b>2.7</b> Graphs (2 variables)</a>
+<li><a href="descriptive.html#election" id="toc-election"><span class="toc-section-number">2.6</span> 2000 US Presidential Election<span></span></a></li>
+<li><a href="descriptive.html#graphs2" id="toc-graphs2"><span class="toc-section-number">2.7</span> Graphs (2 variables)<span></span></a>
 <ul>
-<li class="chapter" data-level="2.7.1" data-path="descriptive.html"><a href="descriptive.html#scatter-plots"><i class="fa fa-check"></i><b>2.7.1</b> Scatter plots</a></li>
+<li><a href="descriptive.html#scatter-plots" id="toc-scatter-plots"><span class="toc-section-number">2.7.1</span> Scatter plots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a>
+<li><a href="descriptive.html#transformation" id="toc-transformation"><span class="toc-section-number">2.8</span> Transformation of data<span></span></a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="descriptive.html"><a href="descriptive.html#transsymmetry"><i class="fa fa-check"></i><b>2.8.1</b> Transformation to approximate symmetry</a></li>
-<li class="chapter" data-level="2.8.2" data-path="descriptive.html"><a href="descriptive.html#straighten"><i class="fa fa-check"></i><b>2.8.2</b> Straightening scatter plots</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> Probability</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#sids"><i class="fa fa-check"></i><b>3.1</b> Misleading statistical evidence in cot death trials</a></li>
-<li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#relative-frequency-definition-of-probability"><i class="fa fa-check"></i><b>3.2</b> Relative frequency definition of probability</a></li>
-<li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#basic-properties-of-probability"><i class="fa fa-check"></i><b>3.3</b> Basic properties of probability</a></li>
-<li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>3.4</b> Conditional probability</a></li>
-<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>3.5.1</b> Mutually exclusive events</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multrule"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
-<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a>
-<ul>
-<li class="chapter" data-level="3.7.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.7.1</b> An example of independence</a></li>
-</ul></li>
-<li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.8</b> Law of total probability</a></li>
-<li class="chapter" data-level="3.9" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.9</b> Bayes’ theorem</a></li>
-<li class="chapter" data-level="3.10" data-path="probability.html"><a href="probability.html#dna-identification-evidence"><i class="fa fa-check"></i><b>3.10</b> DNA identification evidence</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="rvs.html"><a href="rvs.html#discrete"><i class="fa fa-check"></i><b>4.1</b> Discrete random variables</a></li>
-<li class="chapter" data-level="4.2" data-path="rvs.html"><a href="rvs.html#continuous"><i class="fa fa-check"></i><b>4.2</b> Continuous random variables</a></li>
-<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
-<li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
-<li class="chapter" data-level="4.3.3" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmex"><i class="fa fa-check"></i><b>4.3.3</b> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></a></li>
-<li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#EgX"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="rvs.html"><a href="rvs.html#variance-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.4.1</b> Variance of a discrete random variable</a></li>
-<li class="chapter" data-level="4.4.2" data-path="rvs.html"><a href="rvs.html#variance-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.4.2</b> Variance of a continuous random variable</a></li>
-<li class="chapter" data-level="4.4.3" data-path="rvs.html"><a href="rvs.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.4.3</b> Variance and standard deviation</a></li>
-<li class="chapter" data-level="4.4.4" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmvarx"><i class="fa fa-check"></i><b>4.4.4</b> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="rvs.html"><a href="rvs.html#the-median-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.1</b> The median of a random variable</a></li>
-<li class="chapter" data-level="4.5.2" data-path="rvs.html"><a href="rvs.html#the-mode-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.2</b> The mode of a random variable</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
-<li class="chapter" data-level="4.7" data-path="rvs.html"><a href="rvs.html#measures-of-shape"><i class="fa fa-check"></i><b>4.7</b> Measures of shape</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="simple.html"><a href="simple.html#australian-births-data"><i class="fa fa-check"></i><b>5.1</b> Australian births data</a></li>
-<li class="chapter" data-level="5.2" data-path="simple.html"><a href="simple.html#the-bernoulli-distribution"><i class="fa fa-check"></i><b>5.2</b> The Bernoulli distribution</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="simple.html"><a href="simple.html#summary-of-the-bernoullip-distribution"><i class="fa fa-check"></i><b>5.2.1</b> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="simple.html"><a href="simple.html#binomial"><i class="fa fa-check"></i><b>5.3</b> The binomial distribution</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="simple.html"><a href="simple.html#binominf"><i class="fa fa-check"></i><b>5.3.1</b> A brief look at statistical inference about <span class="math inline">\(p\)</span></a></li>
-<li class="chapter" data-level="5.3.2" data-path="simple.html"><a href="simple.html#summary-of-the-binomialnp-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="simple.html"><a href="simple.html#the-geometric-distribution"><i class="fa fa-check"></i><b>5.4</b> The geometric distribution</a>
-<ul>
-<li class="chapter" data-level="5.4.1" data-path="simple.html"><a href="simple.html#summary-of-the-geometricp-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="simple.html"><a href="simple.html#Poisson"><i class="fa fa-check"></i><b>5.5</b> The Poisson distribution</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="simple.html"><a href="simple.html#summary-of-the-poissonmu-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="simple.html"><a href="simple.html#summary-of-these-discrete-distributions"><i class="fa fa-check"></i><b>5.6</b> Summary of these discrete distributions</a></li>
-<li class="chapter" data-level="5.7" data-path="simple.html"><a href="simple.html#uniform"><i class="fa fa-check"></i><b>5.7</b> The uniform distribution</a>
-<ul>
-<li class="chapter" data-level="5.7.1" data-path="simple.html"><a href="simple.html#summary-of-the-uniformab-distribution"><i class="fa fa-check"></i><b>5.7.1</b> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.8" data-path="simple.html"><a href="simple.html#exponential"><i class="fa fa-check"></i><b>5.8</b> The exponential distribution</a>
-<ul>
-<li class="chapter" data-level="5.8.1" data-path="simple.html"><a href="simple.html#summary-of-the-exponentiallambda-distribution"><i class="fa fa-check"></i><b>5.8.1</b> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a>
-<ul>
-<li class="chapter" data-level="5.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>5.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
-<li class="chapter" data-level="5.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>5.9.2</b> The standard normal disribution</a></li>
-<li class="chapter" data-level="5.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>5.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
-<li class="chapter" data-level="5.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>5.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="5.10" data-path="simple.html"><a href="simple.html#summary-of-these-continuous-distributions"><i class="fa fa-check"></i><b>5.10</b> Summary of these continuous distributions</a></li>
-<li class="chapter" data-level="5.11" data-path="simple.html"><a href="simple.html#qq"><i class="fa fa-check"></i><b>5.11</b> QQ plots</a>
-<ul>
-<li class="chapter" data-level="5.11.1" data-path="simple.html"><a href="simple.html#normal-qq-plots"><i class="fa fa-check"></i><b>5.11.1</b> Normal QQ plots</a></li>
-<li class="chapter" data-level="5.11.2" data-path="simple.html"><a href="simple.html#uniform-qq-plots"><i class="fa fa-check"></i><b>5.11.2</b> Uniform QQ plots</a></li>
-<li class="chapter" data-level="5.11.3" data-path="simple.html"><a href="simple.html#exponential-qq-plots"><i class="fa fa-check"></i><b>5.11.3</b> Exponential QQ plots</a></li>
+<li><a href="descriptive.html#transsymmetry" id="toc-transsymmetry"><span class="toc-section-number">2.8.1</span> Transformation to approximate symmetry<span></span></a></li>
+<li><a href="descriptive.html#straighten" id="toc-straighten"><span class="toc-section-number">2.8.2</span> Straightening scatter plots<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a>
+<li><a href="probability.html#probability" id="toc-probability"><span class="toc-section-number">3</span> Probability I<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="inference.html"><a href="inference.html#the-story-so-far"><i class="fa fa-check"></i><b>6.1</b> The story so far</a></li>
-<li class="chapter" data-level="6.2" data-path="inference.html"><a href="inference.html#sample-and-populations"><i class="fa fa-check"></i><b>6.2</b> Sample and populations</a></li>
-<li class="chapter" data-level="6.3" data-path="inference.html"><a href="inference.html#probmodels"><i class="fa fa-check"></i><b>6.3</b> Probability models</a></li>
-<li class="chapter" data-level="6.4" data-path="inference.html"><a href="inference.html#fitting-models"><i class="fa fa-check"></i><b>6.4</b> Fitting models</a></li>
-<li class="chapter" data-level="6.5" data-path="inference.html"><a href="inference.html#uncertainty-in-estimation"><i class="fa fa-check"></i><b>6.5</b> Uncertainty in estimation</a>
+<li><a href="probability.html#sids" id="toc-sids"><span class="toc-section-number">3.1</span> Misleading statistical evidence in cot death trials<span></span></a></li>
+<li><a href="probability.html#relative-frequency-definition-of-probability" id="toc-relative-frequency-definition-of-probability"><span class="toc-section-number">3.2</span> Relative frequency definition of probability<span></span></a></li>
+<li><a href="probability.html#basic-properties-of-probability" id="toc-basic-properties-of-probability"><span class="toc-section-number">3.3</span> Basic properties of probability<span></span></a></li>
+<li><a href="probability.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.4</span> Conditional probability<span></span></a></li>
+<li><a href="probability.html#addition-rule-of-probability" id="toc-addition-rule-of-probability"><span class="toc-section-number">3.5</span> Addition rule of probability<span></span></a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="inference.html"><a href="inference.html#simulation-coin-tossing-example"><i class="fa fa-check"></i><b>6.5.1</b> Simulation: coin-tossing example</a></li>
-<li class="chapter" data-level="6.5.2" data-path="inference.html"><a href="inference.html#simnorm"><i class="fa fa-check"></i><b>6.5.2</b> Simulation: estimating the parameters of a normal distribution</a></li>
-<li class="chapter" data-level="6.5.3" data-path="inference.html"><a href="inference.html#simexp"><i class="fa fa-check"></i><b>6.5.3</b> Simulation: estimating the parameters of an exponential distribution</a></li>
-<li class="chapter" data-level="6.5.4" data-path="inference.html"><a href="inference.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.5.4</b> Central Limit Theorem</a></li>
+<li><a href="probability.html#mutually-exclusive-events" id="toc-mutually-exclusive-events"><span class="toc-section-number">3.5.1</span> Mutually exclusive events<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="inference.html"><a href="inference.html#good"><i class="fa fa-check"></i><b>6.6</b> Properties of estimators</a>
+<li><a href="probability.html#multrule" id="toc-multrule"><span class="toc-section-number">3.6</span> Multiplication rule of probability<span></span></a></li>
+<li><a href="probability.html#indepevents" id="toc-indepevents"><span class="toc-section-number">3.7</span> Independence of events<span></span></a>
 <ul>
-<li class="chapter" data-level="6.6.1" data-path="inference.html"><a href="inference.html#bias"><i class="fa fa-check"></i><b>6.6.1</b> Bias</a></li>
-<li class="chapter" data-level="6.6.2" data-path="inference.html"><a href="inference.html#varianceofestimator"><i class="fa fa-check"></i><b>6.6.2</b> Variance</a></li>
-<li class="chapter" data-level="6.6.3" data-path="inference.html"><a href="inference.html#mean-squared-error-mse"><i class="fa fa-check"></i><b>6.6.3</b> Mean squared error (MSE)</a></li>
-<li class="chapter" data-level="6.6.4" data-path="inference.html"><a href="inference.html#standard-error"><i class="fa fa-check"></i><b>6.6.4</b> Standard error</a></li>
-<li class="chapter" data-level="6.6.5" data-path="inference.html"><a href="inference.html#consistency"><i class="fa fa-check"></i><b>6.6.5</b> Consistency</a></li>
-</ul></li>
-<li class="chapter" data-level="6.7" data-path="inference.html"><a href="inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>6.7</b> Assessing goodness-of-fit</a>
-<ul>
-<li class="chapter" data-level="6.7.1" data-path="inference.html"><a href="inference.html#residuals"><i class="fa fa-check"></i><b>6.7.1</b> Residuals</a></li>
-<li class="chapter" data-level="6.7.2" data-path="inference.html"><a href="inference.html#standardised-residuals"><i class="fa fa-check"></i><b>6.7.2</b> Standardised residuals</a></li>
+<li><a href="probability.html#bloodindep" id="toc-bloodindep"><span class="toc-section-number">3.7.1</span> An example of independence<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a>
+<li><a href="probability-ii.html#probability-ii" id="toc-probability-ii"><span class="toc-section-number">4</span> Probability II<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a>
+<li><a href="probability-ii.html#law-of-total-probability" id="toc-law-of-total-probability"><span class="toc-section-number">4.1</span> Law of total probability<span></span></a></li>
+<li><a href="probability-ii.html#bayes-theorem" id="toc-bayes-theorem"><span class="toc-section-number">4.2</span> Bayes’ theorem<span></span></a></li>
+<li><a href="probability-ii.html#dna-identification-evidence" id="toc-dna-identification-evidence"><span class="toc-section-number">4.3</span> DNA identification evidence<span></span></a></li>
+</ul></li>
+<li><a href="rvs.html#rvs" id="toc-rvs"><span class="toc-section-number">5</span> Random variables<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#indep"><i class="fa fa-check"></i><b>7.1.1</b> Independence</a></li>
-<li class="chapter" data-level="7.1.2" data-path="contingency.html"><a href="contingency.html#compprob"><i class="fa fa-check"></i><b>7.1.2</b> Comparing probabilities</a></li>
-<li class="chapter" data-level="7.1.3" data-path="contingency.html"><a href="contingency.html#measures"><i class="fa fa-check"></i><b>7.1.3</b> Measures of association</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a>
+<li><a href="rvs.html#discrete" id="toc-discrete"><span class="toc-section-number">5.1</span> Discrete random variables<span></span></a></li>
+<li><a href="rvs.html#continuous" id="toc-continuous"><span class="toc-section-number">5.2</span> Continuous random variables<span></span></a></li>
+<li><a href="rvs.html#expectation" id="toc-expectation"><span class="toc-section-number">5.3</span> Expectation<span></span></a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="contingency.html"><a href="contingency.html#mutual-independence"><i class="fa fa-check"></i><b>7.2.1</b> Mutual independence</a></li>
-<li class="chapter" data-level="7.2.2" data-path="contingency.html"><a href="contingency.html#marginal-independence"><i class="fa fa-check"></i><b>7.2.2</b> Marginal independence</a></li>
-<li class="chapter" data-level="7.2.3" data-path="contingency.html"><a href="contingency.html#conditional-independence"><i class="fa fa-check"></i><b>7.2.3</b> Conditional independence</a></li>
-<li class="chapter" data-level="7.2.4" data-path="contingency.html"><a href="contingency.html#confounding-variables"><i class="fa fa-check"></i><b>7.2.4</b> Confounding variables</a></li>
+<li><a href="rvs.html#expectation-of-a-discrete-random-variable" id="toc-expectation-of-a-discrete-random-variable"><span class="toc-section-number">5.3.1</span> Expectation of a discrete random variable<span></span></a></li>
+<li><a href="rvs.html#expectation-of-a-continuous-random-variable" id="toc-expectation-of-a-continuous-random-variable"><span class="toc-section-number">5.3.2</span> Expectation of a continuous random variable<span></span></a></li>
+<li><a href="rvs.html#properties-of-mathrmex" id="toc-properties-of-mathrmex"><span class="toc-section-number">5.3.3</span> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span><span></span></a></li>
+<li><a href="rvs.html#EgX" id="toc-EgX"><span class="toc-section-number">5.3.4</span> The expectation of <span class="math inline">\(g(X)\)</span><span></span></a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a>
+<li><a href="rvs.html#variance" id="toc-variance"><span class="toc-section-number">5.4</span> Variance<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a>
+<li><a href="rvs.html#variance-of-a-discrete-random-variable" id="toc-variance-of-a-discrete-random-variable"><span class="toc-section-number">5.4.1</span> Variance of a discrete random variable<span></span></a></li>
+<li><a href="rvs.html#variance-of-a-continuous-random-variable" id="toc-variance-of-a-continuous-random-variable"><span class="toc-section-number">5.4.2</span> Variance of a continuous random variable<span></span></a></li>
+<li><a href="rvs.html#variance-and-standard-deviation" id="toc-variance-and-standard-deviation"><span class="toc-section-number">5.4.3</span> Variance and standard deviation<span></span></a></li>
+<li><a href="rvs.html#properties-of-mathrmvarx" id="toc-properties-of-mathrmvarx"><span class="toc-section-number">5.4.4</span> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span><span></span></a></li>
+</ul></li>
+<li><a href="rvs.html#locations" id="toc-locations"><span class="toc-section-number">5.5</span> Other measures of location<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression-model"><i class="fa fa-check"></i><b>8.1.1</b> Simple linear regression model</a></li>
-<li class="chapter" data-level="8.1.2" data-path="linreg.html"><a href="linreg.html#least-squares-estimation-of-alpha-and-beta"><i class="fa fa-check"></i><b>8.1.2</b> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></a></li>
-<li class="chapter" data-level="8.1.3" data-path="linreg.html"><a href="linreg.html#least-squares-fitting-to-hubbles-data"><i class="fa fa-check"></i><b>8.1.3</b> Least squares fitting to Hubble’s data</a></li>
-<li class="chapter" data-level="8.1.4" data-path="linreg.html"><a href="linreg.html#normal-linear-regression-model"><i class="fa fa-check"></i><b>8.1.4</b> Normal linear regression model</a></li>
-<li class="chapter" data-level="8.1.5" data-path="linreg.html"><a href="linreg.html#lmsummary"><i class="fa fa-check"></i><b>8.1.5</b> Summary of the assumptions of a (normal) linear regression model</a></li>
+<li><a href="rvs.html#the-median-of-a-random-variable" id="toc-the-median-of-a-random-variable"><span class="toc-section-number">5.5.1</span> The median of a random variable<span></span></a></li>
+<li><a href="rvs.html#the-mode-of-a-random-variable" id="toc-the-mode-of-a-random-variable"><span class="toc-section-number">5.5.2</span> The mode of a random variable<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
-<li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a>
+<li><a href="rvs.html#quantiles" id="toc-quantiles"><span class="toc-section-number">5.6</span> Quantiles<span></span></a></li>
+<li><a href="rvs.html#measures-of-shape" id="toc-measures-of-shape"><span class="toc-section-number">5.7</span> Measures of shape<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#simple" id="toc-simple"><span class="toc-section-number">6</span> Simple distributions<span></span></a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#departures-from-assumptions"><i class="fa fa-check"></i><b>8.3.1</b> Departures from assumptions</a></li>
-<li class="chapter" data-level="8.3.2" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.2</b> Outliers and influential observations</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a>
+<li><a href="simple.html#australian-births-data" id="toc-australian-births-data"><span class="toc-section-number">6.1</span> Australian births data<span></span></a></li>
+<li><a href="simple.html#the-bernoulli-distribution" id="toc-the-bernoulli-distribution"><span class="toc-section-number">6.2</span> The Bernoulli distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="linreg.html"><a href="linreg.html#interpretation-after-transformation"><i class="fa fa-check"></i><b>8.4.1</b> Interpretation after transformation</a></li>
+<li><a href="simple.html#summary-of-the-bernoullip-distribution" id="toc-summary-of-the-bernoullip-distribution"><span class="toc-section-number">6.2.1</span> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="linreg.html"><a href="linreg.html#over-fitting"><i class="fa fa-check"></i><b>8.5</b> Over-fitting</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>9</b> Correlation</a>
+<li><a href="simple.html#binomial" id="toc-binomial"><span class="toc-section-number">6.3</span> The binomial distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-a-measure-of-linear-association"><i class="fa fa-check"></i><b>9.1</b> Correlation: a measure of linear association</a></li>
-<li class="chapter" data-level="9.2" data-path="correlationchapter.html"><a href="correlationchapter.html#covariance-and-correlation"><i class="fa fa-check"></i><b>9.2</b> Covariance and correlation</a>
+<li><a href="simple.html#binominf" id="toc-binominf"><span class="toc-section-number">6.3.1</span> A brief look at statistical inference about <span class="math inline">\(p\)</span><span></span></a></li>
+<li><a href="simple.html#summary-of-the-binomialnp-distribution" id="toc-summary-of-the-binomialnp-distribution"><span class="toc-section-number">6.3.2</span> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#the-geometric-distribution" id="toc-the-geometric-distribution"><span class="toc-section-number">6.4</span> The geometric distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="correlationchapter.html"><a href="correlationchapter.html#estimation"><i class="fa fa-check"></i><b>9.2.1</b> Estimation</a></li>
-<li class="chapter" data-level="9.2.2" data-path="correlationchapter.html"><a href="correlationchapter.html#links-between-regression-and-correlation"><i class="fa fa-check"></i><b>9.2.2</b> Links between regression and correlation</a></li>
+<li><a href="simple.html#summary-of-the-geometricp-distribution" id="toc-summary-of-the-geometricp-distribution"><span class="toc-section-number">6.4.1</span> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="correlationchapter.html"><a href="correlationchapter.html#use-and-misuse-of-correlation"><i class="fa fa-check"></i><b>9.3</b> Use and misuse of correlation</a>
+<li><a href="simple.html#Poisson" id="toc-Poisson"><span class="toc-section-number">6.5</span> The Poisson distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="correlationchapter.html"><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes"><i class="fa fa-check"></i><b>9.3.1</b> Do not use correlation for regression sampling schemes</a></li>
-<li class="chapter" data-level="9.3.2" data-path="correlationchapter.html"><a href="correlationchapter.html#correxamples"><i class="fa fa-check"></i><b>9.3.2</b> Examples of correlations of different strengths</a></li>
-<li class="chapter" data-level="9.3.3" data-path="correlationchapter.html"><a href="correlationchapter.html#beware-missing-data-codes"><i class="fa fa-check"></i><b>9.3.3</b> Beware missing data codes</a></li>
-<li class="chapter" data-level="9.3.4" data-path="correlationchapter.html"><a href="correlationchapter.html#more-guessing-sample-correlations"><i class="fa fa-check"></i><b>9.3.4</b> More guessing sample correlations</a></li>
-<li class="chapter" data-level="9.3.5" data-path="correlationchapter.html"><a href="correlationchapter.html#summary"><i class="fa fa-check"></i><b>9.3.5</b> Summary</a></li>
-<li class="chapter" data-level="9.3.6" data-path="correlationchapter.html"><a href="correlationchapter.html#anscombes-datasets"><i class="fa fa-check"></i><b>9.3.6</b> Anscombe’s datasets</a></li>
-<li class="chapter" data-level="9.3.7" data-path="correlationchapter.html"><a href="correlationchapter.html#we-must-interpret-correlation-with-care."><i class="fa fa-check"></i><b>9.3.7</b> We must interpret correlation with care.</a></li>
+<li><a href="simple.html#summary-of-the-poissonmu-distribution" id="toc-summary-of-the-poissonmu-distribution"><span class="toc-section-number">6.5.1</span> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#summary-of-these-discrete-distributions" id="toc-summary-of-these-discrete-distributions"><span class="toc-section-number">6.6</span> Summary of these discrete distributions<span></span></a></li>
+<li><a href="simple.html#uniform" id="toc-uniform"><span class="toc-section-number">6.7</span> The uniform distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-uniformab-distribution" id="toc-summary-of-the-uniformab-distribution"><span class="toc-section-number">6.7.1</span> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#exponential" id="toc-exponential"><span class="toc-section-number">6.8</span> The exponential distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-exponentiallambda-distribution" id="toc-summary-of-the-exponentiallambda-distribution"><span class="toc-section-number">6.8.1</span> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#normal" id="toc-normal"><span class="toc-section-number">6.9</span> The normal distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-mboxnmusigma2-distribution" id="toc-summary-of-the-mboxnmusigma2-distribution"><span class="toc-section-number">6.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution<span></span></a></li>
+<li><a href="simple.html#the-standard-normal-disribution" id="toc-the-standard-normal-disribution"><span class="toc-section-number">6.9.2</span> The standard normal disribution<span></span></a></li>
+<li><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles" id="toc-evaluating-the-normal-c.d.f.-and-quantiles"><span class="toc-section-number">6.9.3</span> Evaluating the normal c.d.f. and quantiles<span></span></a></li>
+<li><a href="simple.html#interpretation-of-sigma" id="toc-interpretation-of-sigma"><span class="toc-section-number">6.9.4</span> Interpretation of <span class="math inline">\(\sigma\)</span><span></span></a></li>
+</ul></li>
+<li><a href="simple.html#summary-of-these-continuous-distributions" id="toc-summary-of-these-continuous-distributions"><span class="toc-section-number">6.10</span> Summary of these continuous distributions<span></span></a></li>
+<li><a href="simple.html#qq" id="toc-qq"><span class="toc-section-number">6.11</span> QQ plots<span></span></a>
+<ul>
+<li><a href="simple.html#normal-qq-plots" id="toc-normal-qq-plots"><span class="toc-section-number">6.11.1</span> Normal QQ plots<span></span></a></li>
+<li><a href="simple.html#uniform-qq-plots" id="toc-uniform-qq-plots"><span class="toc-section-number">6.11.2</span> Uniform QQ plots<span></span></a></li>
+<li><a href="simple.html#exponential-qq-plots" id="toc-exponential-qq-plots"><span class="toc-section-number">6.11.3</span> Exponential QQ plots<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="a-general-strategy-for-statistical-modelling.html"><a href="a-general-strategy-for-statistical-modelling.html"><i class="fa fa-check"></i><b>10</b> A general strategy for statistical modelling</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li><a href="inference.html#inference" id="toc-inference"><span class="toc-section-number">7</span> Statistical Inference<span></span></a>
+<ul>
+<li><a href="inference.html#the-story-so-far" id="toc-the-story-so-far"><span class="toc-section-number">7.1</span> The story so far<span></span></a></li>
+<li><a href="inference.html#sample-and-populations" id="toc-sample-and-populations"><span class="toc-section-number">7.2</span> Sample and populations<span></span></a></li>
+<li><a href="inference.html#probmodels" id="toc-probmodels"><span class="toc-section-number">7.3</span> Probability models<span></span></a></li>
+<li><a href="inference.html#fitting-models" id="toc-fitting-models"><span class="toc-section-number">7.4</span> Fitting models<span></span></a></li>
+<li><a href="inference.html#uncertainty-in-estimation" id="toc-uncertainty-in-estimation"><span class="toc-section-number">7.5</span> Uncertainty in estimation<span></span></a>
+<ul>
+<li><a href="inference.html#simulation-coin-tossing-example" id="toc-simulation-coin-tossing-example"><span class="toc-section-number">7.5.1</span> Simulation: coin-tossing example<span></span></a></li>
+<li><a href="inference.html#simnorm" id="toc-simnorm"><span class="toc-section-number">7.5.2</span> Simulation: estimating the parameters of a normal distribution<span></span></a></li>
+<li><a href="inference.html#simexp" id="toc-simexp"><span class="toc-section-number">7.5.3</span> Simulation: estimating the parameters of an exponential distribution<span></span></a></li>
+<li><a href="inference.html#central-limit-theorem" id="toc-central-limit-theorem"><span class="toc-section-number">7.5.4</span> Central Limit Theorem<span></span></a></li>
+</ul></li>
+<li><a href="inference.html#good" id="toc-good"><span class="toc-section-number">7.6</span> Properties of estimators<span></span></a>
+<ul>
+<li><a href="inference.html#bias" id="toc-bias"><span class="toc-section-number">7.6.1</span> Bias<span></span></a></li>
+<li><a href="inference.html#varianceofestimator" id="toc-varianceofestimator"><span class="toc-section-number">7.6.2</span> Variance<span></span></a></li>
+<li><a href="inference.html#mean-squared-error-mse" id="toc-mean-squared-error-mse"><span class="toc-section-number">7.6.3</span> Mean squared error (MSE)<span></span></a></li>
+<li><a href="inference.html#standard-error" id="toc-standard-error"><span class="toc-section-number">7.6.4</span> Standard error<span></span></a></li>
+<li><a href="inference.html#consistency" id="toc-consistency"><span class="toc-section-number">7.6.5</span> Consistency<span></span></a></li>
+</ul></li>
+<li><a href="inference.html#assessing-goodness-of-fit" id="toc-assessing-goodness-of-fit"><span class="toc-section-number">7.7</span> Assessing goodness-of-fit<span></span></a>
+<ul>
+<li><a href="inference.html#residuals" id="toc-residuals"><span class="toc-section-number">7.7.1</span> Residuals<span></span></a></li>
+<li><a href="inference.html#standardised-residuals" id="toc-standardised-residuals"><span class="toc-section-number">7.7.2</span> Standardised residuals<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="contingency.html#contingency" id="toc-contingency"><span class="toc-section-number">8</span> Contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#way2" id="toc-way2"><span class="toc-section-number">8.1</span> 2-way contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#indep" id="toc-indep"><span class="toc-section-number">8.1.1</span> Independence<span></span></a></li>
+<li><a href="contingency.html#compprob" id="toc-compprob"><span class="toc-section-number">8.1.2</span> Comparing probabilities<span></span></a></li>
+<li><a href="contingency.html#measures" id="toc-measures"><span class="toc-section-number">8.1.3</span> Measures of association<span></span></a></li>
+</ul></li>
+<li><a href="contingency.html#way3" id="toc-way3"><span class="toc-section-number">8.2</span> 3-way contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#mutual-independence" id="toc-mutual-independence"><span class="toc-section-number">8.2.1</span> Mutual independence<span></span></a></li>
+<li><a href="contingency.html#marginal-independence" id="toc-marginal-independence"><span class="toc-section-number">8.2.2</span> Marginal independence<span></span></a></li>
+<li><a href="contingency.html#conditional-independence" id="toc-conditional-independence"><span class="toc-section-number">8.2.3</span> Conditional independence<span></span></a></li>
+<li><a href="contingency.html#confounding-variables" id="toc-confounding-variables"><span class="toc-section-number">8.2.4</span> Confounding variables<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="linreg.html#linreg" id="toc-linreg"><span class="toc-section-number">9</span> Linear regression<span></span></a>
+<ul>
+<li><a href="linreg.html#simple-linear-regression" id="toc-simple-linear-regression"><span class="toc-section-number">9.1</span> Simple linear regression<span></span></a>
+<ul>
+<li><a href="linreg.html#simple-linear-regression-model" id="toc-simple-linear-regression-model"><span class="toc-section-number">9.1.1</span> Simple linear regression model<span></span></a></li>
+<li><a href="linreg.html#least-squares-estimation-of-alpha-and-beta" id="toc-least-squares-estimation-of-alpha-and-beta"><span class="toc-section-number">9.1.2</span> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span><span></span></a></li>
+<li><a href="linreg.html#least-squares-fitting-to-hubbles-data" id="toc-least-squares-fitting-to-hubbles-data"><span class="toc-section-number">9.1.3</span> Least squares fitting to Hubble’s data<span></span></a></li>
+<li><a href="linreg.html#normal-linear-regression-model" id="toc-normal-linear-regression-model"><span class="toc-section-number">9.1.4</span> Normal linear regression model<span></span></a></li>
+<li><a href="linreg.html#lmsummary" id="toc-lmsummary"><span class="toc-section-number">9.1.5</span> Summary of the assumptions of a (normal) linear regression model<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#looking" id="toc-looking"><span class="toc-section-number">9.2</span> Looking at scatter plots<span></span></a></li>
+<li><a href="linreg.html#model-checking" id="toc-model-checking"><span class="toc-section-number">9.3</span> Model checking<span></span></a>
+<ul>
+<li><a href="linreg.html#departures-from-assumptions" id="toc-departures-from-assumptions"><span class="toc-section-number">9.3.1</span> Departures from assumptions<span></span></a></li>
+<li><a href="linreg.html#outliers" id="toc-outliers"><span class="toc-section-number">9.3.2</span> Outliers and influential observations<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#linregtrans" id="toc-linregtrans"><span class="toc-section-number">9.4</span> Use of transformations<span></span></a>
+<ul>
+<li><a href="linreg.html#interpretation-after-transformation" id="toc-interpretation-after-transformation"><span class="toc-section-number">9.4.1</span> Interpretation after transformation<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#over-fitting" id="toc-over-fitting"><span class="toc-section-number">9.5</span> Over-fitting<span></span></a></li>
+</ul></li>
+<li><a href="correlationchapter.html#correlationchapter" id="toc-correlationchapter"><span class="toc-section-number">10</span> Correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#correlation-a-measure-of-linear-association" id="toc-correlation-a-measure-of-linear-association"><span class="toc-section-number">10.1</span> Correlation: a measure of linear association<span></span></a></li>
+<li><a href="correlationchapter.html#covariance-and-correlation" id="toc-covariance-and-correlation"><span class="toc-section-number">10.2</span> Covariance and correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#estimation" id="toc-estimation"><span class="toc-section-number">10.2.1</span> Estimation<span></span></a></li>
+<li><a href="correlationchapter.html#links-between-regression-and-correlation" id="toc-links-between-regression-and-correlation"><span class="toc-section-number">10.2.2</span> Links between regression and correlation<span></span></a></li>
+</ul></li>
+<li><a href="correlationchapter.html#use-and-misuse-of-correlation" id="toc-use-and-misuse-of-correlation"><span class="toc-section-number">10.3</span> Use and misuse of correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes" id="toc-do-not-use-correlation-for-regression-sampling-schemes"><span class="toc-section-number">10.3.1</span> Do not use correlation for regression sampling schemes<span></span></a></li>
+<li><a href="correlationchapter.html#correxamples" id="toc-correxamples"><span class="toc-section-number">10.3.2</span> Examples of correlations of different strengths<span></span></a></li>
+<li><a href="correlationchapter.html#beware-missing-data-codes" id="toc-beware-missing-data-codes"><span class="toc-section-number">10.3.3</span> Beware missing data codes<span></span></a></li>
+<li><a href="correlationchapter.html#more-guessing-sample-correlations" id="toc-more-guessing-sample-correlations"><span class="toc-section-number">10.3.4</span> More guessing sample correlations<span></span></a></li>
+<li><a href="correlationchapter.html#summary" id="toc-summary"><span class="toc-section-number">10.3.5</span> Summary<span></span></a></li>
+<li><a href="correlationchapter.html#anscombes-datasets" id="toc-anscombes-datasets"><span class="toc-section-number">10.3.6</span> Anscombe’s datasets<span></span></a></li>
+<li><a href="correlationchapter.html#we-must-interpret-correlation-with-care." id="toc-we-must-interpret-correlation-with-care."><span class="toc-section-number">10.3.7</span> We must interpret correlation with care.<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="a-general-strategy-for-statistical-modelling.html#a-general-strategy-for-statistical-modelling" id="toc-a-general-strategy-for-statistical-modelling"><span class="toc-section-number">11</span> A general strategy for statistical modelling<span></span></a></li>
+<li><a href="references.html#references" id="toc-references">References<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -407,8 +411,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="descriptive" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Descriptive Statistics</h1>
+<div id="descriptive" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Descriptive Statistics<a href="descriptive.html#descriptive" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The first important step in any data analysis is to <strong>describe</strong> the
 available data. This is often called an <strong>exploratory</strong> or <strong>initial</strong> data analysis. It is normally not possible to just look at the dataset, especially if it is large, and just see any interesting structures. The task of a statistician is therefore to <strong>extract</strong> and <strong>condense</strong> the relevant information – what is relevant will depend on the aim of the analysis. Some of the standard methods to do so are addressed in the next sections. Despite all the technicalities, always remember that the numbers / figures / plots produced for data must be <strong>interpreted with regard to the problem or question at hand</strong>, that is, always ask yourself “what does this number / plot mean?”.</p>
 <p>Before embarking on a formal statistical analysis of the data we should look at summaries of the data such as graphs, tables and summary statistics. This can be important to</p>
@@ -422,11 +426,11 @@ obviously better at treating a disease than treatment B?;</li>
 </ol>
 <p>In some cases the data summaries make it very clear what is going on and may
 make more formal methods of statistical analysis unnecessary.</p>
-<div id="types-of-data" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Types of data</h2>
-<p>Before analysing data it is important to consider what <strong>type</strong> they are. This will affect which statistics it is sensible to calculate, which graphs it is sensible to plot and which of the simple distributions we will study in Chapter <a href="simple.html#simple">5</a> might be used for these data.</p>
-<div id="qualitative-or-categorical-data" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Qualitative or categorical data</h3>
+<div id="types-of-data" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Types of data<a href="descriptive.html#types-of-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Before analysing data it is important to consider what <strong>type</strong> they are. This will affect which statistics it is sensible to calculate, which graphs it is sensible to plot and which of the simple distributions we will study in Chapter <a href="simple.html#simple">6</a> might be used for these data.</p>
+<div id="qualitative-or-categorical-data" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Qualitative or categorical data<a href="descriptive.html#qualitative-or-categorical-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Items are assigned to <strong>groups</strong> or <strong>categories</strong> based on some <strong>qualitative</strong> property. Examples:</p>
 <ul>
 <li>Hair colour: blonde, brown, red, black etc.</li>
@@ -445,8 +449,8 @@ make more formal methods of statistical analysis unnecessary.</p>
 <p>Nominal data: describe by (relative) frequencies. It is sensible to quote the mode, but not the mean or median.</p>
 <p>Ordinal data: It is sensible to quote the mode or median, but not the mean.</p>
 </div>
-<div id="quantitative-or-numerical-data" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Quantitative or numerical data</h3>
+<div id="quantitative-or-numerical-data" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Quantitative or numerical data<a href="descriptive.html#quantitative-or-numerical-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Items are measured in some way based on some <strong>quantitative</strong> property. This produces a one, or more, <strong>numbers</strong>. Examples:</p>
 <ul>
 <li>Time, in hours;</li>
@@ -463,8 +467,8 @@ make more formal methods of statistical analysis unnecessary.</p>
 is possible, e.g. time, height, age.</li>
 </ul>
 <p>Often discrete data are <strong>counts</strong>. Continuous data usually come from measurement. In practice continuous data are recorded discretely, e.g. to two decimal places.</p>
-<div id="interval-data-and-ratio-data" class="section level4 unnumbered">
-<h4>Interval data and ratio data</h4>
+<div id="interval-data-and-ratio-data" class="section level4 unnumbered hasAnchor">
+<h4>Interval data and ratio data<a href="descriptive.html#interval-data-and-ratio-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Quantitative data can be further classified as <strong>interval</strong> or <strong>ratio</strong>. Both interval data and ratio data have the property that an increase of 1 unit means the same whether it is from, say, 1 to 2 or from 10 to 11. However,</p>
 <ul>
 <li>a ratio scale has a natural zero, for example, temperature measured in degrees Kelvin;</li>
@@ -479,28 +483,28 @@ measured in Fahrenheit.</li>
 </div>
 </div>
 </div>
-<div id="describing-distributions" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Describing distributions</h2>
+<div id="describing-distributions" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Describing distributions<a href="descriptive.html#describing-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In describing the distribution of one variable the following it is important to
 examine the following.</p>
 <ol style="list-style-type: decimal">
 <li><strong>Location / average / central tendency of the data</strong>. Where is the centre of the distribution? What is a typical value?<br />
 </li>
 <li><strong>Spread / variability / dispersion / scale</strong>. How <strong>variable</strong> are the data? How far are they spread out?</li>
-<li><strong>Shape</strong>. What shape is the distribution of the data? In particular, is it <strong>symmetric</strong> or <strong>skewed</strong>, and if skewed, which way? A long tail to the right is called <strong>positive skew</strong> (or right skew or skewed to the right). A long tail to the left is known as a <strong>negative skew</strong> (or left skew or skewed to the left). Positive skew is much more common than negative skew. Figure <a href="descriptive.html#fig:shapes">2.1</a> gives some examples of shapes of symmetric, positive skew and negative skew distributions. In addition to being symmetric the plot in the top left of Figure <a href="descriptive.html#fig:shapes">2.1</a> of figure is bell-shaped. This shape is the shape of a <strong>normal distribution</strong> (see Section <a href="simple.html#normal">5.9</a>). The normal distribution is an important distribution in Statistics. We may wish to decide whether the data look like they have come from a normal distribution.</li>
-<li><strong>Outliers</strong>. Are there any outliers, that is, observations that appear to be out of line with the pattern of the rest of the data? This issue can also be hard to judge. For example, with a small number of observations, it is difficult to distinguish between data from a heavily skewed distribution and data from a symmetric distribution with outliers. What constitutes an outlier depends on the context so there is no rigid rule for defining/detecting outliers. The intended statistical analysis also matters. We will consider how to deal with outliers (in the context of linear regression) in Section <a href="linreg.html#outliers">8.3.2</a>.</li>
+<li><strong>Shape</strong>. What shape is the distribution of the data? In particular, is it <strong>symmetric</strong> or <strong>skewed</strong>, and if skewed, which way? A long tail to the right is called <strong>positive skew</strong> (or right skew or skewed to the right). A long tail to the left is known as a <strong>negative skew</strong> (or left skew or skewed to the left). Positive skew is much more common than negative skew. Figure <a href="descriptive.html#fig:shapes">2.1</a> gives some examples of shapes of symmetric, positive skew and negative skew distributions. In addition to being symmetric the plot in the top left of Figure <a href="descriptive.html#fig:shapes">2.1</a> of figure is bell-shaped. This shape is the shape of a <strong>normal distribution</strong> (see Section <a href="simple.html#normal">6.9</a>). The normal distribution is an important distribution in Statistics. We may wish to decide whether the data look like they have come from a normal distribution.</li>
+<li><strong>Outliers</strong>. Are there any outliers, that is, observations that appear to be out of line with the pattern of the rest of the data? This issue can also be hard to judge. For example, with a small number of observations, it is difficult to distinguish between data from a heavily skewed distribution and data from a symmetric distribution with outliers. What constitutes an outlier depends on the context so there is no rigid rule for defining/detecting outliers. The intended statistical analysis also matters. We will consider how to deal with outliers (in the context of linear regression) in Section <a href="linreg.html#outliers">9.3.2</a>.</li>
 <li><strong>Is there anything else to report?</strong> Note any <strong>unusual features</strong>
 about the data. Are there particular numbers which appear more often than we could expect? Do the data separate into groups?</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:shapes"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shapes"></span>
 <img src="images/shapes.png" alt="Examples of shapes of symmetric, positively skewed and negatively skewed distributions." width="75%" />
 <p class="caption">
 Figure 2.1: Examples of shapes of symmetric, positively skewed and negatively skewed distributions.
 </p>
 </div>
 <p>We will look at 3 ways basic tools which are used to describe and summarise data: summary statistics, tables and graphs. We can use a combination of these. For example summary statistics may be presented in a table or a graph. Carefully produced graphs are often the best way to describe, explore and summarise a set of data. Summary statistics reduce the data to a small set of numbers. Tables can retain more information but do not work well for datasets which are large or have many variables. In contrast graphs can show most, if not all, the information in the data and reveal complex relationships.</p>
-<div id="example-oxford-births-data" class="section level3 unnumbered">
-<h3>Example: Oxford births data</h3>
+<div id="example-oxford-births-data" class="section level3 unnumbered hasAnchor">
+<h3>Example: Oxford births data<a href="descriptive.html#example-oxford-births-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Table <a href="descriptive.html#tab:taboxbirths">2.1</a> shows the times (in hours) spent by 95 women giving birth in the delivery suite of the John Radcliffe Hospital in Oxford during 1 week. These are ratio data. At first we ignore the fact that the data are recorded on different days.</p>
 <table>
 <caption><span id="tab:taboxbirths">Table 2.1: </span>Time (in hours) spent by each of 95 women giving birth at the John
@@ -665,12 +669,12 @@ Radcliffe hospital in Oxford, UK, during a particular week.</caption>
 </table>
 </div>
 </div>
-<div id="summary-statistics" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Summary Statistics</h2>
+<div id="summary-statistics" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Summary Statistics<a href="descriptive.html#summary-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One way to summarise a dataset is to calculate numerical summaries called <strong>summary statistics</strong>. Summary statistics can be used as indicators of the location, spread and shape of the data (although looking at a plot can be more helpful).</p>
-<div id="fivenumber" class="section level3" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Five number summary</h3>
-<p>A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary. As we will see later, the five number summary involves quantities called <strong>sample quantiles</strong>. These are estimates of theoretical quantities that we will study in Chapter <a href="rvs.html#rvs">4</a>. There is more than one way to calculate sample quantiles. For example, the R statistical package has 9 options in its <code>quantile()</code> function. The particular method given below is just one of these options.</p>
+<div id="fivenumber" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Five number summary<a href="descriptive.html#fivenumber" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary. As we will see later, the five number summary involves quantities called <strong>sample quantiles</strong>. These are estimates of theoretical quantities that we will study in Chapter <a href="rvs.html#rvs">5</a>. There is more than one way to calculate sample quantiles. For example, the R statistical package has 9 options in its <code>quantile()</code> function. The particular method given below is just one of these options.</p>
 <p>If a dataset of observations, <span class="math inline">\(x_1,x_2,\ldots,x_n\)</span>, is arranged in order of size as <span class="math display">\[ x_{(1)} \leq x_{(2)} \leq \cdots \leq x_{(n)}\]</span> then the <strong>sample median</strong> is the `middle’ value (halfway between <span class="math inline">\(x_{(1)}\)</span> and <span class="math inline">\(x_{(n)}\)</span>), that is,
 <span class="math display">\[ m=x_{(\frac{1}{2}(n+1))}\,.\]</span>
 The median is a measure of location.</p>
@@ -702,8 +706,8 @@ number of times an event of interest occurs in a fixed period of time,
 for example, the number of births in the delivery suite of the John Radcliffe
 hospital in Oxford during one week.</p>
 </div>
-<div id="meanstdev" class="section level3" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Mean and standard deviation</h3>
+<div id="meanstdev" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Mean and standard deviation<a href="descriptive.html#meanstdev" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The most well known descriptive measures of <strong>numerical</strong> data are the (arithmetic) mean and the standard deviation.</p>
 <p>The <strong>sample mean</strong>, a measure of location, is defined as the arithmetic average
 <span class="math display">\[ \bar{x}\,=\,\frac{1}{n}(x_1+x_2+\cdots+x_n)=\frac{1}{n}\sum_{i=1}^n x_i\,.\]</span>
@@ -720,13 +724,13 @@ which is used by some calculators is equal to <span class="math inline">\(s^2 (1
 <li>the sample mean is easier to calculate;</li>
 <li>if samples are taken repeatedly the sample mean varies less than the sample median.</li>
 </ul>
-<p>We will examine this in more detail in Section <a href="inference.html#good">6.6</a>. Similarly, for a measure of spread, the sample standard deviation may be preferred for approximately symmetric data with no outliers, otherwise the IQR is preferable.</p>
+<p>We will examine this in more detail in Section <a href="inference.html#good">7.6</a>. Similarly, for a measure of spread, the sample standard deviation may be preferred for approximately symmetric data with no outliers, otherwise the IQR is preferable.</p>
 </div>
-<div id="mode" class="section level3" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Mode</h3>
-<p>For categorical data or discrete data the mode is the value (or values) which occurs most often. The concept of a mode is relevant to continuous data, but it is less obvious how we might estimate this using data. We return to this in Section <a href="rvs.html#locations">4.5</a>. The mode is a measure of location.</p>
-<div id="examples" class="section level4 unnumbered">
-<h4>Examples</h4>
+<div id="mode" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Mode<a href="descriptive.html#mode" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For categorical data or discrete data the mode is the value (or values) which occurs most often. The concept of a mode is relevant to continuous data, but it is less obvious how we might estimate this using data. We return to this in Section <a href="rvs.html#locations">5.5</a>. The mode is a measure of location.</p>
+<div id="examples" class="section level4 unnumbered hasAnchor">
+<h4>Examples<a href="descriptive.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>What are the sample mean, median and mode of the following data?</p>
 <blockquote>
 <p>blonde hair, red hair, red hair, black hair</p>
@@ -773,8 +777,8 @@ which is used by some calculators is equal to <span class="math inline">\(s^2 (1
 </table>
 </div>
 </div>
-<div id="symmetry" class="section level3" number="2.3.4">
-<h3><span class="header-section-number">2.3.4</span> Symmetry</h3>
+<div id="symmetry" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Symmetry<a href="descriptive.html#symmetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Many standard statistical methods work best when the data are distributed symmetrically. Looking at a graph is the best way to examine whether this is true. However, the relative values of the sample mean and sample median can give us an idea whether the data are approximately symmetric, as summarised in Table <a href="descriptive.html#tab:thumb">2.3</a>, but this rule-of-thumb can be misleading.</p>
 <table>
 <caption><span id="tab:thumb">Table 2.3: </span> Relative values of the sample mean and median and what this <strong>might</strong> suggest in some cases.</caption>
@@ -795,8 +799,8 @@ which is used by some calculators is equal to <span class="math inline">\(s^2 (1
 </tr>
 </tbody>
 </table>
-<div id="example.-oxford-births-data" class="section level4 unnumbered">
-<h4>Example. Oxford births data</h4>
+<div id="example.-oxford-births-data" class="section level4 unnumbered hasAnchor">
+<h4>Example. Oxford births data<a href="descriptive.html#example.-oxford-births-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Table <a href="descriptive.html#tab:oxfivenum">2.4</a> gives the five-number summary of the Oxford birth times data.</p>
 <table>
 <caption><span id="tab:oxfivenum">Table 2.4: </span> Sample five-number summary of the Oxford birth times data.</caption>
@@ -821,8 +825,8 @@ which is used by some calculators is equal to <span class="math inline">\(s^2 (1
 </table>
 <p>Half of the women took between approximately 5 and 10 hours to give birth.The quickest delivery was 90 minutes and the longest 19 hours. The mean <span class="math inline">\(\bar{x}\)</span> is 7.72 hours and the standard deviation is 3.57 hours. The fact that sample mean <span class="math inline">\(&gt;\)</span> sample median suggest that the data are slightly positively skewed, but this is something that we should confirm by looking at a suitable graph (see Section <a href="descriptive.html#graphs">2.5</a>).</p>
 </div>
-<div id="measures-of-skewness" class="section level4 unnumbered">
-<h4>Measures of skewness</h4>
+<div id="measures-of-skewness" class="section level4 unnumbered hasAnchor">
+<h4>Measures of skewness<a href="descriptive.html#measures-of-skewness" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Usually the best way to examine the shape of a distribution is to look at a graph see section <a href="descriptive.html#graphs">2.5</a>. In addition we could calculate summary measures of skewness, such as: the <strong>standardized sample skewness</strong>
 <span class="math display">\[\mbox{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
 \overline{x})^3}{s^3}, \]</span>
@@ -862,25 +866,25 @@ where <span class="math inline">\(q_L, m\)</span> and <span class="math inline">
 </table>
 </div>
 </div>
-<div id="corr1" class="section level3" number="2.3.5">
-<h3><span class="header-section-number">2.3.5</span> Correlation</h3>
+<div id="corr1" class="section level3 hasAnchor" number="2.3.5">
+<h3><span class="header-section-number">2.3.5</span> Correlation<a href="descriptive.html#corr1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Measures of correlation aim to summarise the strength of the relationship between two variables. Suppose that we have two samples <span class="math inline">\(x_1,\ldots,x_n\)</span> and <span class="math inline">\(y_1,\ldots,y_n\)</span> of <strong>paired</strong> data. For example, <span class="math inline">\(x_1\)</span> and <span class="math inline">\(y_1\)</span> could be the height and weight of person 1, <span class="math inline">\(x_2\)</span> and <span class="math inline">\(y_2\)</span> the height and weight of person 2, etc.</p>
 <p>The sample correlation coefficient
 <span class="math display" id="eq:corr">\[\begin{equation}
 r = \frac{\displaystyle\sum_{i=1}^n (x_i-\bar{x})(y_i-
 \bar{y})}{\sqrt{\displaystyle\sum_{i=1}^n (x_i-\bar{x})^2 \displaystyle\sum_{i=1}^n(y_i-
-\bar{y})^2}} \,\,\, \in [-1, 1]. 
+\bar{y})^2}} \,\,\, \in [-1, 1].
 \tag{2.1}
 \end{equation}\]</span>
 measures the strength of <strong>linear</strong> association between the two variables.</p>
-<p>We will look at correlation in detail later in the course (in Chapter <a href="correlationchapter.html#correlationchapter">9</a>). We must be careful to use the sample correlation coefficient only when it is appropriate to do so. We will see that it is important to plot the data.</p>
+<p>We will look at correlation in detail later in the course (in Chapter <a href="correlationchapter.html#correlationchapter">10</a>). We must be careful to use the sample correlation coefficient only when it is appropriate to do so. We will see that it is important to plot the data.</p>
 <p>The product-moment correlation coefficient <span class="math inline">\(r\)</span> is not the only possible measure of correlation. An alternative is <strong>Spearman’s rank correlation coefficient</strong> <span class="math inline">\(r_S\)</span>. First we rank the <span class="math inline">\(x_1,\ldots,x_n\)</span> values, giving a rank of 1 to the largest <span class="math inline">\(x\)</span> value, a rank of 2 to the second largest, down to a rank of <span class="math inline">\(n\)</span> for the smallest value. This gives ranks <span class="math inline">\(r^x_1, \ldots, r^x_n\)</span>. Then we do the same with <span class="math inline">\(y_1,\ldots,y_n\)</span> to produce ranks <span class="math inline">\(r^y_1, \ldots, r^y_n\)</span>. [If there are ties then we average the ranks of tied observations, e.g. if the 3rd and 4th largest values are equal then they each get a rank a 3.5.] Then we calculate the product-moment correlation of the paired ranks <span class="math inline">\((r^x_i, r^y_i), i=1,\ldots,n\)</span>, using equation <a href="descriptive.html#eq:corr">(2.1)</a> with <span class="math inline">\((x_i, y_i) = (r^x_i, r^y_i), i=1,\ldots,n\)</span>. If there are no ties then <span class="math inline">\(r_S\)</span> simplifies to
 <span class="math display">\[r_S = 1- \frac{6\displaystyle\sum_{i=1}^n d_i^2}{n(n^2-1)}, \]</span>
 where <span class="math inline">\(d_i=r^x_i-r^y_i\)</span> is the difference in the ranks of <span class="math inline">\(x_i\)</span> and <span class="math inline">\(y_i\)</span>. The general idea is to extract from the raw data only the ordering of the data points.</p>
 <p>The choice between using <span class="math inline">\(r\)</span> or <span class="math inline">\(r_S\)</span> as a measure of correlation is similar to the choice between using the sample mean or the sample median as a measure of location. In particular, <span class="math inline">\(r_S\)</span> is less sensitive to outliers than <span class="math inline">\(r\)</span>.<br />
 We have noted that <span class="math inline">\(r\)</span> measures the strength of <strong>linear</strong> association between two variables. In contrast <span class="math inline">\(r_S\)</span> is a measure of how close the relationship between the variables is to being <strong>monotone</strong>, i.e. either increasing or decreasing but not necessarily linear. If <span class="math inline">\(r_S=1\)</span> then the data have a perfect monotone increasing relationship. If <span class="math inline">\(r_S=-1\)</span> then the data have a perfect monotone decreasing relationship.</p>
-<div id="a-simple-example" class="section level4 unnumbered">
-<h4>A simple example</h4>
+<div id="a-simple-example" class="section level4 unnumbered hasAnchor">
+<h4>A simple example<a href="descriptive.html#a-simple-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Consider the small dataset in Table <a href="descriptive.html#tab:smalldata">2.6</a>.</p>
 <table>
 <caption><span id="tab:smalldata">Table 2.6: </span> A small example dataset.</caption>
@@ -942,11 +946,11 @@ We have noted that <span class="math inline">\(r\)</span> measures the strength 
 </div>
 </div>
 </div>
-<div id="tables" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Tables</h2>
+<div id="tables" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Tables<a href="descriptive.html#tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We saw in the Space shuttle investigation (Section <a href="introduction.html#shuttle">1.2</a>) that data can be presented in a table. We also saw that a graph can be a better way to see relationships and patterns in the data. In this section we look at a table which summarises the distribution of a set of data on one variable. We also look at a graph based on this table.</p>
-<div id="frequency-distribution" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Frequency distribution</h3>
+<div id="frequency-distribution" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Frequency distribution<a href="descriptive.html#frequency-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>frequency distribution</strong> is a tabular summary of a set of data that shows the number of items in each of several non-overlapping classes. To construct a frequency distribution for a sample we need to choose:</p>
 <ul>
 <li>the number of classes;</li>
@@ -983,14 +987,14 @@ discrete data each data value usually constitutes a class.</p>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">95</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;"></td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;"></td></tr>
 </table>
 
-<div id="relative-frequency-distribution" class="section level4 unnumbered">
-<h4>Relative frequency distribution</h4>
+<div id="relative-frequency-distribution" class="section level4 unnumbered hasAnchor">
+<h4>Relative frequency distribution<a href="descriptive.html#relative-frequency-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Column 3 of Table <a href="descriptive.html#tab:oxfreq">2.7</a> contains the <strong>proportion</strong> or <strong>relative frequency</strong> of observations in each class. Column 3 is calculated by dividing column 2 (the frequencies) by the total frequency (95 in this example). This produces the <strong>relative frequency distribution</strong> of the data. Column 3 shows that, for example, 15% of the women took between 2 and 4 hours to give birth. A graphical display of the relative frequency distribution of a set of data is provided by a <strong>histogram</strong> (see Section <a href="descriptive.html#histogram">2.5.1</a>).</p>
 </div>
-<div id="cumulative-distribution" class="section level4 unnumbered">
-<h4>Cumulative distribution</h4>
+<div id="cumulative-distribution" class="section level4 unnumbered hasAnchor">
+<h4>Cumulative distribution<a href="descriptive.html#cumulative-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Column 4 of Table <a href="descriptive.html#tab:oxfreq">2.7</a> contains the total number of observations with values less than or equal to the upper limit of each class. This is the <strong>cumulative frequency</strong>. We can see that 73 of the women took no longer than 10 hours to give birth. Column 5 contains the proportion of observations with values less than the upper limit of each class. This is the <strong>cumulative relative frequency</strong>. It is calculated by dividing column 4 by 95. We can see that approximately 77% of the women took no longer than 10 hours to give birth. It can be helpful to display the cumulative relative frequencies in a graph as in Figure <a href="descriptive.html#fig:oxcumfreq">2.2</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxcumfreq"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxcumfreq"></span>
 <img src="images/ox_cum_freq.png" alt="A cumulative relative frequency distribution of the Oxford birth times." width="75%" />
 <p class="caption">
 Figure 2.2: A cumulative relative frequency distribution of the Oxford birth times.
@@ -1019,19 +1023,19 @@ Figure 2.2: A cumulative relative frequency distribution of the Oxford birth tim
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">95</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;"></td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 0pt; border-top-color: rgb(0, 0, 0);    padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;"></td></tr>
 </table>
 
-<p>Figure <a href="descriptive.html#fig:oxcumfreq2">2.3</a> shows the resulting graph. Notice that the shape is similar to Figure <a href="descriptive.html#fig:oxcumfreq">2.2</a> but it is less smooth. The function (from time on the horizontal axis to cumulative relative frequency on the vertical axis) is often called the <strong>empirical cumulative distribution function</strong> or <strong>empirical c.d.f</strong>. The meaning will become clearer when we look at c.d.f.s in Section <a href="rvs.html#discrete">4.1</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxcumfreq2"></span>
+<p>Figure <a href="descriptive.html#fig:oxcumfreq2">2.3</a> shows the resulting graph. Notice that the shape is similar to Figure <a href="descriptive.html#fig:oxcumfreq">2.2</a> but it is less smooth. The function (from time on the horizontal axis to cumulative relative frequency on the vertical axis) is often called the <strong>empirical cumulative distribution function</strong> or <strong>empirical c.d.f</strong>. The meaning will become clearer when we look at c.d.f.s in Section <a href="rvs.html#discrete">5.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxcumfreq2"></span>
 <img src="images/ox_cum_freq2new.png" alt="A cumulative relative frequency distribution of the Oxford birth times, with classes defined so that there is one data value in each class." width="75%" />
 <p class="caption">
 Figure 2.3: A cumulative relative frequency distribution of the Oxford birth times, with classes defined so that there is one data value in each class.
 </p>
 </div>
-<p>Sometimes data are given to us in the form of Table <a href="descriptive.html#tab:oxfreq">2.7</a> and the individual data values are not available. For example, some birth data published by the Office of National Statistics data give mother’s age in 5 year age bands. Data provided in this form are called <strong>grouped data</strong>. We will analyse data from tables in Chapter <a href="contingency.html#contingency">7</a>.</p>
+<p>Sometimes data are given to us in the form of Table <a href="descriptive.html#tab:oxfreq">2.7</a> and the individual data values are not available. For example, some birth data published by the Office of National Statistics data give mother’s age in 5 year age bands. Data provided in this form are called <strong>grouped data</strong>. We will analyse data from tables in Chapter <a href="contingency.html#contingency">8</a>.</p>
 </div>
 </div>
 </div>
-<div id="graphs" class="section level2" number="2.5">
-<h2><span class="header-section-number">2.5</span> Graphs (1 variable)</h2>
+<div id="graphs" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Graphs (1 variable)<a href="descriptive.html#graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>These days it is very easy to plot a graph using a computer. However, <strong>you</strong> need to decide which type of graph is appropriate and the default graph produced by the computer may not be very good. Some general rules:</p>
 <ul>
 <li><strong>Always plot the data</strong>. Often this will show clearly the important features of the data. Formal statistical methods may be unnecessary or simply confirm the visual impression given by the plot. Also, plotting the data can reveal potential problems with the data, for example, outlying observations which do not fit in the with the general pattern of the data, or data which are clearly wrong.</li>
@@ -1041,8 +1045,8 @@ each other. There may be observations which are not unusual when variables are c
 </li>
 <li>Axis labels (remember the units!), the legend and caption should enable the viewer of the graph to understand the content of the graph.</li>
 </ul>
-<div id="histogram" class="section level3" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Histograms</h3>
+<div id="histogram" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Histograms<a href="descriptive.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>histogram</strong> is a graphical display based on the relative frequency distribution of a set of data on a <strong>continuous</strong> variable. The variable of interest is plotted on the <span class="math inline">\(x\)</span>-axis, which is divided into <strong>bins</strong> based on the classes of the frequency distribution. A rectangle is plotted for each bin. The height of a rectangle is calculated as
 <span class="math display" id="eq:hist">\[\begin{equation}
 \mbox{height} = \frac{\mbox{relative frequency}}{\mbox{bin width}} = \frac{\mbox{frequency}}{n \times \mbox{bin width}}.
@@ -1055,11 +1059,11 @@ the interval;</li>
 <li>the <strong>height</strong> represents the relative frequency of the observations in
 the interval <strong>per unit of measurement</strong>, commonly known as the <strong>density</strong>.</li>
 </ul>
-<p>The total area under a histogram is equal to 1. In fact a histogram is an estimate of a probability density function (see Section <a href="rvs.html#continuous">4.2</a>). The vertical axis is commonly labelled <strong>density</strong>.</p>
+<p>The total area under a histogram is equal to 1. In fact a histogram is an estimate of a probability density function (see Section <a href="rvs.html#continuous">5.2</a>). The vertical axis is commonly labelled <strong>density</strong>.</p>
 <p>It is common for people to plot frequencies (rather than relative frequencies per unit), giving what I will call a <strong>frequency plot</strong>, that is, <strong>not</strong> a true histogram.</p>
 <p>If the bin widths are equal the shape of frequency plot is the same as the corresponding histogram. However, when drawing a frequency plot using unequal bin widths it is important to take into account the differing widths of the bins. For example, in the plot on the bottom left of Figure <a href="descriptive.html#fig:oxhistbasic">2.4</a>, the frequency in the box for 12-20 hours is 4 times too high because the longer width of this interval has not been taken into account.
 One solution is to divide the frequencies by the bin width to produce frequencies <strong>per unit</strong>, but then we may as well produce a true histogram, using equation <a href="descriptive.html#eq:hist">(2.2)</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxhistbasic"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxhistbasic"></span>
 <img src="images/ox_hist_basic.png" alt="Frequency plots (left) and histograms (right) of the Oxford birth times." width="75%" />
 <p class="caption">
 Figure 2.4: Frequency plots (left) and histograms (right) of the Oxford birth times.
@@ -1068,31 +1072,31 @@ Figure 2.4: Frequency plots (left) and histograms (right) of the Oxford birth ti
 <p>A histogram can be useful to look at the shape of a distribution. However,
 especially for a small dataset, the shape of the histogram can depend greatly on the classes chosen to define the bins. Figure <a href="descriptive.html#fig:oxhistbasic">2.4</a> contains histograms and frequency histograms of the all the times in Table <a href="descriptive.html#tab:taboxbirths">2.1</a>. From the histograms we can easily see that the birth times data are slightly positively skewed.</p>
 </div>
-<div id="stem" class="section level3" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> Stem-and-leaf plots</h3>
+<div id="stem" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Stem-and-leaf plots<a href="descriptive.html#stem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>stem-and-leaf plot</strong> (or stem plot) is like an enhanced histogram. The <strong>stem</strong>, on the left, contain the times in whole hours. The <strong>leaves</strong>,
 on the right, contain the first digit after the decimal point. An advantage of a stem-and-leaf plot is that it gives the entire dataset (perhaps rounded) in sorted order. It is easy to calculate the five number summary of the data from a stem-and-leaf plot. Figure <a href="descriptive.html#fig:oxstem">2.5</a> shows a stem-and-leaf plot of the Oxford births data.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxstem"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxstem"></span>
 <img src="images/ox_stem.png" alt="Stem-and-leaf plot of the Oxford birth times. The decimal point is at the vertical line |. The data are rounded to the nearest 0.1 before plotting." width="60%" />
 <p class="caption">
 Figure 2.5: Stem-and-leaf plot of the Oxford birth times. The decimal point is at the vertical line |. The data are rounded to the nearest 0.1 before plotting.
 </p>
 </div>
 </div>
-<div id="dotplots" class="section level3" number="2.5.3">
-<h3><span class="header-section-number">2.5.3</span> Dotplots</h3>
+<div id="dotplots" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Dotplots<a href="descriptive.html#dotplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Dotplots are simple plots in which each observation is represented by a dot. If there are repeated observations, that is, observations with the same value (perhaps after rounding), then their dots are stacked on top of each other. Figure <a href="descriptive.html#fig:oxdotbasic">2.6</a> shows two dotplots. In the right hand plot the data were rounded to the nearest hour, producing a plot that looks a bit like a histogram with a bin width of 1 hour, with rectangles replaced by vertical lines of dots.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxdotbasic"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxdotbasic"></span>
 <img src="images/ox_dot_basic.png" alt="Dotplots of the Oxford birth times. Top: raw data (and lots of wasted white space).  Bottom: data rounded to the nearest hour." width="75%" /><img src="images/ox_dot_adv.png" alt="Dotplots of the Oxford birth times. Top: raw data (and lots of wasted white space).  Bottom: data rounded to the nearest hour." width="75%" />
 <p class="caption">
 Figure 2.6: Dotplots of the Oxford birth times. Top: raw data (and lots of wasted white space). Bottom: data rounded to the nearest hour.
 </p>
 </div>
 </div>
-<div id="boxplots" class="section level3" number="2.5.4">
-<h3><span class="header-section-number">2.5.4</span> Boxplots</h3>
+<div id="boxplots" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Boxplots<a href="descriptive.html#boxplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>boxplot</strong> (or box-and-whisker plot) is a graphical display containing the five-number summary. It also provides ways to assess the overall shape of the data. Figure <a href="descriptive.html#fig:oxdotbasic">2.6</a> explains how a standard boxplot is constructed.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxboxbasic"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxboxbasic"></span>
 <img src="images/ox_box_basic.png" alt="Boxplot of the Oxford birth times. The upper end (\#) of the upper whisker is drawn at the largest observation within a distance $1.5 (q_U-q_L)$ of $q_U$. The lower end (\$) of the lower whisker is drawn at the smallest observation within a distance $1.5 (q_U-q_L)$ of $q_L$." width="75%" />
 <p class="caption">
 Figure 2.7: Boxplot of the Oxford birth times. The upper end (#) of the upper whisker is drawn at the largest observation within a distance <span class="math inline">\(1.5 (q_U-q_L)\)</span> of <span class="math inline">\(q_U\)</span>. The lower end ($) of the lower whisker is drawn at the smallest observation within a distance <span class="math inline">\(1.5 (q_U-q_L)\)</span> of <span class="math inline">\(q_L\)</span>.
@@ -1102,18 +1106,18 @@ Figure 2.7: Boxplot of the Oxford birth times. The upper end (#) of the upper wh
 quartiles. The `whiskers’ extend to the most extreme observations that are within 1.5 IQR of the ends of the box. Sometimes a different criterion is used to determine the ends of the whiskers. Any more extreme values are individually identified (with a dot here).</p>
 <p>It can less easy easy to come to a conclusion concerning the nature of skewness using a boxplot than using a histogram. In this example the lengths of the whiskers and the presence of the value at 19 hours suggest slight positive skewness. However, the relative positions of the samples quartiles suggest (very slight) negative skewness, which is the cause of the slightly negative value of sample quartiles skewness towards the end of Section <a href="descriptive.html#symmetry">2.3.4</a>.</p>
 <p>Some alternatives are given in Figure <a href="descriptive.html#fig:oxboxadv">2.8</a>. Which do you prefer?</p>
-<div class="figure" style="text-align: center"><span id="fig:oxboxadv"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxboxadv"></span>
 <img src="images/ox_box_adv.png" alt="Alternative plots of the Oxford birth times based on the five-figure summary." width="75%" />
 <p class="caption">
 Figure 2.8: Alternative plots of the Oxford birth times based on the five-figure summary.
 </p>
 </div>
 </div>
-<div id="barplots" class="section level3" number="2.5.5">
-<h3><span class="header-section-number">2.5.5</span> Barplots</h3>
+<div id="barplots" class="section level3 hasAnchor" number="2.5.5">
+<h3><span class="header-section-number">2.5.5</span> Barplots<a href="descriptive.html#barplots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>barplot</strong> (or bar chart) has a similar appearance to a histogram but is used for numerical discrete data or categorical data. Therefore there are gaps between the bars in a barplot.</p>
-<div id="example-numerical-discrete-data" class="section level4 unnumbered">
-<h4>Example: numerical discrete data</h4>
+<div id="example-numerical-discrete-data" class="section level4 unnumbered hasAnchor">
+<h4>Example: numerical discrete data<a href="descriptive.html#example-numerical-discrete-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Table <a href="descriptive.html#tab:shuttlenew">2.9</a> shows the frequencies of the number of damaged O-rings in the space shuttle example. Figure <a href="descriptive.html#fig:shuttlebarplots">2.9</a> shows barplots (or equivalent) of these data. Which do you prefer?</p>
 <table>
 <caption><span id="tab:shuttlenew">Table 2.9: </span>Frequencies of numbers of damaged O-rings for the space shuttle data.</caption>
@@ -1134,15 +1138,15 @@ Figure 2.8: Alternative plots of the Oxford birth times based on the five-figure
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span id="fig:shuttlebarplots"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:shuttlebarplots"></span>
 <img src="images/shuttle_barplots.png" alt="Barplots of numbers of damaged O-rings on space shuttle flights." width="75%" />
 <p class="caption">
 Figure 2.9: Barplots of numbers of damaged O-rings on space shuttle flights.
 </p>
 </div>
 </div>
-<div id="example-categorical-data" class="section level4 unnumbered">
-<h4>Example: categorical data</h4>
+<div id="example-categorical-data" class="section level4 unnumbered hasAnchor">
+<h4>Example: categorical data<a href="descriptive.html#example-categorical-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Table <a href="descriptive.html#tab:ABOnew">2.10</a> shows the percentages of people in the UK with the 8 main blood groups O<span class="math inline">\(+\)</span>, A<span class="math inline">\(+\)</span>, B<span class="math inline">\(+\)</span>, AB<span class="math inline">\(+\)</span>, O<span class="math inline">\(-\)</span>, A<span class="math inline">\(-\)</span>, B<span class="math inline">\(-\)</span> and AB<span class="math inline">\(-\)</span>. See section <a href="probability.html#bloodindep">3.7.1</a> for more details about blood groups. These data are nominal.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 80%; margin-left: auto; margin-right: auto;  " id="tab:ABOnew">
 <caption style="caption-side: top; text-align: center;"><span id="tab:ABOnew">Table 2.10: </span> Percentages of people in the UK with the 8 main blood groups</caption><col><col><col><col><tr>
@@ -1160,13 +1164,13 @@ Figure 2.9: Barplots of numbers of damaged O-rings on space shuttle flights.
 </table>
 
 <p>Figure <a href="descriptive.html#fig:ABObar">2.10</a> displays these percentages in the form of a barplot. <a href="descriptive.html#fig:ABOpie">2.11</a> does this using a pie chart. Note that in the barplot we have sorted the categories, separately within the <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span> blood groups, in decreasing order of frequency. Do you prefer the table, the barplot or the pie chart? (Please do <strong>not</strong> choose the pie chart!)</p>
-<div class="figure" style="text-align: center"><span id="fig:ABObar"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ABObar"></span>
 <img src="images/ABO_barplots.png" alt="Barplot of the UK ABO blood group percentages." width="60%" />
 <p class="caption">
 Figure 2.10: Barplot of the UK ABO blood group percentages.
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:ABOpie"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ABOpie"></span>
 <img src="images/ABO_pie.png" alt="Pie chart (right) of the UK ABO blood group percentages." width="75%" />
 <p class="caption">
 Figure 2.11: Pie chart (right) of the UK ABO blood group percentages.
@@ -1174,10 +1178,10 @@ Figure 2.11: Pie chart (right) of the UK ABO blood group percentages.
 </div>
 </div>
 </div>
-<div id="times-series-plots" class="section level3" number="2.5.6">
-<h3><span class="header-section-number">2.5.6</span> Times series plots</h3>
+<div id="times-series-plots" class="section level3 hasAnchor" number="2.5.6">
+<h3><span class="header-section-number">2.5.6</span> Times series plots<a href="descriptive.html#times-series-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The top plot of Figure <a href="descriptive.html#fig:ftsenew">2.12</a> shows a <strong>time series plot</strong> (or time plot) of the weekly closing prices of the FTSE 100 share index from 2nd April 1984 to 13th August 2007. The bottom plot in this figure shows a different version of the same plot.</p>
-<div class="figure" style="text-align: center"><span id="fig:ftsenew"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ftsenew"></span>
 <img src="images/ftse_weekly.png" alt="Time series plots of the FTSE 100 weekly closing values, 1984--2007.  Top: default plot.  Bottom: modified version, with two vertical axes and the index measured in 1000s." width="75%" /><img src="images/ftse_weekly_tufte.png" alt="Time series plots of the FTSE 100 weekly closing values, 1984--2007.  Top: default plot.  Bottom: modified version, with two vertical axes and the index measured in 1000s." width="75%" />
 <p class="caption">
 Figure 2.12: Time series plots of the FTSE 100 weekly closing values, 1984–2007. Top: default plot. Bottom: modified version, with two vertical axes and the index measured in 1000s.
@@ -1191,7 +1195,7 @@ but you may see other aspects worth noting. Note that</p>
 <li>joining the dots can help to make interesting patterns easier to see.</li>
 </ul>
 <p>Figure <a href="descriptive.html#fig:fluts">2.13</a> shows a time series plot of another set of data. Can you guess what these data might be?</p>
-<div class="figure" style="text-align: center"><span id="fig:fluts"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fluts"></span>
 <img src="images/flu_tufte_no_label.png" alt="A time series plot of ?." width="75%" />
 <p class="caption">
 Figure 2.13: A time series plot of ?.
@@ -1199,25 +1203,25 @@ Figure 2.13: A time series plot of ?.
 </div>
 </div>
 </div>
-<div id="election" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> 2000 US Presidential Election</h2>
+<div id="election" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> 2000 US Presidential Election<a href="descriptive.html#election" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Smith, R. L. (2002) <a href="https://doi.org/10.1214/ss/1049993203">A Statistical Assessment of Buchanan’s Vote in Palm Beach County</a>. <em>Statistcal Science</em>, <strong>17</strong>(4), 441–457.</p>
 <p>In the 2000 U.S. Presidential election George W. Bush, the Republican candidate, narrowly beat Al Gore, the Democrat candidate. The result in the state of Florida was particularly close: Al Gore lost by only 537 votes out of 6 million votes cast. If Al Gore had won in Florida he would have become the U.S. President. After the election many allegations of voting irregularities were made and it was a month before Al Gore conceded defeat.</p>
 <p>One of the results which caused most surprise was in Palm Beach County, Florida. Pat Buchanan, the Reform Party candidate, got an unexpectedly large 3,407 votes. Based on results in Florida as a whole only 1,300 votes would be expected. Also, given that Palm Beach is largely a Democratic County, a right-wing candidate such as Buchanan would expect even fewer votes.</p>
 <p>In the days following the election it was suggested that the type of ballot paper, a so-called Butterfly Ballot <a href="descriptive.html#fig:butterfly">2.14</a> used in Palm Beach had confused voters and lead to votes being cast for Buchanan by mistake. People found the Buchanan vote in Palm Beach surprising and there is a plausible explanation for how it occurred.</p>
-<div class="figure" style="text-align: center"><span id="fig:butterfly"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:butterfly"></span>
 <img src="images/butterflyballot.png" alt="The Butterfly Ballot used in Palm Beach county." width="75%" />
 <p class="caption">
 Figure 2.14: The Butterfly Ballot used in Palm Beach county.
 </p>
 </div>
-<p><span class="citation"><a href="#ref-election" role="doc-biblioref">Smith</a> (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> uses election results, and other data (on race, age, education and income), from Florida to answer the following questions:</p>
+<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> uses election results, and other data (on race, age, education and income), from Florida to answer the following questions:</p>
 <ol style="list-style-type: decimal">
 <li>Is Buchanan’s vote of 3,407 very clearly out of line with the pattern of results form the rest of Florida? In Statistics we call such data values <strong>outliers</strong>.</li>
 <li>What level of vote for Buchanan would have been realistic in Palm Beach County?</li>
 </ol>
 <p>Figure <a href="descriptive.html#fig:election1">2.15</a> suggests that the answer to question 1. is “Yes”.</p>
-<div class="figure" style="text-align: center"><span id="fig:election1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:election1"></span>
 <img src="images/election1.png" alt=" Percentage of Buchanan votes against explanatory variables.  Palm Beach County is marked with a cross." width="75%" />
 <p class="caption">
 Figure 2.15:  Percentage of Buchanan votes against explanatory variables. Palm Beach County is marked with a cross.
@@ -1233,26 +1237,26 @@ Figure 2.15:  Percentage of Buchanan votes against explanatory variables. Palm B
 <li>decrease with the percentage of Gore votes;</li>
 <li>increase with the percentage of Bush votes.</li>
 </ul>
-<p><span class="citation"><a href="#ref-election" role="doc-biblioref">Smith</a> (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> answers questions 1. and 2. more formally by building a linear regression model. This model quantifies how the percentage of Buchanan vote <span class="math inline">\(Y\)</span>, the <strong>response variable</strong>, depends on the other variables,the <strong>explanatory variables</strong> <span class="math inline">\(x_1,\ldots,x_{12}\)</span>. The general idea is to</p>
+<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> answers questions 1. and 2. more formally by building a linear regression model. This model quantifies how the percentage of Buchanan vote <span class="math inline">\(Y\)</span>, the <strong>response variable</strong>, depends on the other variables,the <strong>explanatory variables</strong> <span class="math inline">\(x_1,\ldots,x_{12}\)</span>. The general idea is to</p>
 <ul>
 <li>build the model using all the data for Florida, apart from the data from Palm Beach, using only the explanatory variables that have a significant effect;</li>
 <li>predict the value of the Buchanan’s vote in Palm Beach using the model.</li>
 </ul>
-<p>We will study simple linear regression models (with only one explanatory variable) towards the end of STAT0002 (Chapter <a href="linreg.html#linreg">8</a>) and in STAT0003. The basic idea is to assume that a response variable has a linear (straight line) relationship with explanatory variables. The relationship will not be exact, so the model includes a <strong>random error</strong> term.</p>
-<p><span class="citation"><a href="#ref-election" role="doc-biblioref">Smith</a> (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> finds that transformations are required in order that the assumptions of the model are satisfied approximately. In particular he finds that using the response variable <span class="math inline">\(\sqrt{Y}\)</span> is better than using <span class="math inline">\(Y\)</span> itself (and better than other possible transformations). He also uses a <span class="math inline">\(\log_{10}\)</span> transformation on some of the explanatory variables (for example Total Population), that is, he uses <span class="math inline">\(\log_{10}(x)\)</span> rather than <span class="math inline">\(x\)</span>. Figure <a href="descriptive.html#fig:election2">2.16</a> is a new version of figure <a href="descriptive.html#fig:election1">2.15</a> in which the square root of the percentage of the vote obtained by Buchanan is plotted against the (possibly log-transformed) explanatory variables.</p>
-<p><span class="citation"><a href="#ref-election" role="doc-biblioref">Smith</a> (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> uses transformations of the original data in order to satisfy more closely the assumptions of the linear regression model:</p>
+<p>We will study simple linear regression models (with only one explanatory variable) towards the end of STAT0002 (Chapter <a href="linreg.html#linreg">9</a>) and in STAT0003. The basic idea is to assume that a response variable has a linear (straight line) relationship with explanatory variables. The relationship will not be exact, so the model includes a <strong>random error</strong> term.</p>
+<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> finds that transformations are required in order that the assumptions of the model are satisfied approximately. In particular he finds that using the response variable <span class="math inline">\(\sqrt{Y}\)</span> is better than using <span class="math inline">\(Y\)</span> itself (and better than other possible transformations). He also uses a <span class="math inline">\(\log_{10}\)</span> transformation on some of the explanatory variables (for example Total Population), that is, he uses <span class="math inline">\(\log_{10}(x)\)</span> rather than <span class="math inline">\(x\)</span>. Figure <a href="descriptive.html#fig:election2">2.16</a> is a new version of figure <a href="descriptive.html#fig:election1">2.15</a> in which the square root of the percentage of the vote obtained by Buchanan is plotted against the (possibly log-transformed) explanatory variables.</p>
+<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> uses transformations of the original data in order to satisfy more closely the assumptions of the linear regression model:</p>
 <ul>
 <li>response = <span class="math inline">\(\sqrt{Y}\)</span>, instead of <span class="math inline">\(Y\)</span>;</li>
 <li>for some explanatory variables, use <span class="math inline">\(\log_{10}(x)\)</span> instead of <span class="math inline">\(x\)</span>.</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:election2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:election2"></span>
 <img src="images/election2.png" alt="The square root of the percentage of Buchanan votes against explanatory variables.  Palm Beach County is marked with a cross.  Note the log scale on the $x$-axis of some plots." width="75%" />
 <p class="caption">
 Figure 2.16: The square root of the percentage of Buchanan votes against explanatory variables. Palm Beach County is marked with a cross. Note the log scale on the <span class="math inline">\(x\)</span>-axis of some plots.
 </p>
 </div>
-<div id="log-scales-on-axes" class="section level4 unnumbered">
-<h4>Log scales on axes</h4>
+<div id="log-scales-on-axes" class="section level4 unnumbered hasAnchor">
+<h4>Log scales on axes<a href="descriptive.html#log-scales-on-axes" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suppose that we produce a scatter plot where the data on the <span class="math inline">\(x\)</span>-axis are 0.1, 1, 10, 100 and 1000. If we wish to plot <span class="math inline">\(\log_{10}(x)\)</span> on the axis instead of <span class="math inline">\(x\)</span> we have two choices:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Calculate <span class="math inline">\(\log_{10}(x)\)</span> and plot these values on the axis.</li>
@@ -1262,7 +1266,7 @@ Therefore, on a <span class="math inline">\(\log_{10}\)</span> scale the values 
 </ol>
 <p>Both a. and b. will give exactly the same pattern of plot. The advantage of b. is that the original values are on the plot rather than the <span class="math inline">\(\log_{10}(x)\)</span>
 values. Figure <a href="descriptive.html#fig:logaxes">2.17</a> illustrates this.</p>
-<div class="figure" style="text-align: center"><span id="fig:logaxes"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:logaxes"></span>
 <img src="images/log_axes.png" alt="Plots to illustrate log-transformation of axes. Top: values of $x$ plotted. Middle: values of $\log_{10}(x)$ plotted. Bottom: values of $x$ plotted on a log-scale." width="75%" />
 <p class="caption">
 Figure 2.17: Plots to illustrate log-transformation of axes. Top: values of <span class="math inline">\(x\)</span> plotted. Middle: values of <span class="math inline">\(\log_{10}(x)\)</span> plotted. Bottom: values of <span class="math inline">\(x\)</span> plotted on a log-scale.
@@ -1274,24 +1278,24 @@ Figure 2.17: Plots to illustrate log-transformation of axes. Top: values of <spa
 <li>logs are often helpful when the raw data are ratios (e.g. <span class="math inline">\(x/y\)</span>) or products (e.g. <span class="math inline">\(xy\)</span>). For example, exchange rates and price indices are ratios. If <span class="math inline">\(x=y\)</span> then <span class="math inline">\(\log (x/y)=0\)</span>; if <span class="math inline">\(x=k\,y\)</span> then <span class="math inline">\(\log (x/y)=\log k\)</span>; if <span class="math inline">\(y=k\,x\)</span> then <span class="math inline">\(\log (x/y)=\log(1/k)=-\log k\)</span>; which is a nice symmetry.</li>
 </ul>
 <p>Imagine that the model has only one explanatory variable, Total Population. You can imagine fitting this linear regression model as drawing a line of best fit through the points on the graph in the top left hand corner of figure <a href="descriptive.html#fig:election2">2.16</a>. With more than one explanatory variable it is more complicated than this but the basic idea is the same.</p>
-<p>After removing the Buchanan vote in Palm Beach (which we have decided is an outlier) <span class="citation"><a href="#ref-election" role="doc-biblioref">Smith</a> (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> finds that the model fits the data well.</p>
-<p>The model predicts the Buchanan vote in Palm Beach to be 371, much lower than the official result of 3,407. This number (371) represents the `best guess’ at the Buchanan vote given the other data. To show just how unlikely was the vote of 3,407, <span class="citation"><a href="#ref-election" role="doc-biblioref">Smith</a> (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> calculates a 95% prediction interval of (219,534) for the Buchanan vote at Palm Beach. If the model is true, this interval has a probability of 95% of containing the true value of the Buchanan vote.</p>
+<p>After removing the Buchanan vote in Palm Beach (which we have decided is an outlier) <span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> finds that the model fits the data well.</p>
+<p>The model predicts the Buchanan vote in Palm Beach to be 371, much lower than the official result of 3,407. This number (371) represents the `best guess’ at the Buchanan vote given the other data. To show just how unlikely was the vote of 3,407, <span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> calculates a 95% prediction interval of (219,534) for the Buchanan vote at Palm Beach. If the model is true, this interval has a probability of 95% of containing the true value of the Buchanan vote.</p>
 <p>Smith’s analysis suggests that the true Buchanan vote should be approximately 3,000 votes lower than the official result. Given the design of the Butterfly Ballot it seems likely that most of these votes were intended for Al Gore. This would have given Gore the presidency instead of Bush.</p>
 </div>
 </div>
-<div id="graphs2" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Graphs (2 variables)</h2>
+<div id="graphs2" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Graphs (2 variables)<a href="descriptive.html#graphs2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When we have 2 continuous variables it is common to examine the relationship between them using a <strong>scatter plot</strong>.</p>
-<div id="scatter-plots" class="section level3" number="2.7.1">
-<h3><span class="header-section-number">2.7.1</span> Scatter plots</h3>
+<div id="scatter-plots" class="section level3 hasAnchor" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Scatter plots<a href="descriptive.html#scatter-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We have already seen some scatter plots in the 2000 US Presidential Election example. We reproduce two of these plots in Figures <a href="descriptive.html#fig:scatter1a">2.18</a> and <a href="descriptive.html#fig:scatter1b">2.19</a>. A scatter plot is used to examine the relationship between two variables. We need the data to occur in pairs. In Figures <a href="descriptive.html#fig:scatter1a">2.18</a> and <a href="descriptive.html#fig:scatter1b">2.19</a> each county has a pair of observations: the percentage of votes for Buchanan and the value of the explanatory variable.</p>
-<div class="figure" style="text-align: center"><span id="fig:scatter1a"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatter1a"></span>
 <img src="images/election_scatter1a.png" alt="Scatter plot of the percentage of the vote obtained by Buchanan against the total population from the 2000 US Presidential Election data." width="75%" />
 <p class="caption">
 Figure 2.18: Scatter plot of the percentage of the vote obtained by Buchanan against the total population from the 2000 US Presidential Election data.
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:scatter1b"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:scatter1b"></span>
 <img src="images/election_scatter1b.png" alt="Scatter plot of the square root of the percentage of the vote obtained by Buchanan against the log of the total population from the 2000 US Presidential Election data.  The plot suggests that these variables are aproximately linearly related." width="75%" />
 <p class="caption">
 Figure 2.19: Scatter plot of the square root of the percentage of the vote obtained by Buchanan against the log of the total population from the 2000 US Presidential Election data. The plot suggests that these variables are aproximately linearly related.
@@ -1310,13 +1314,13 @@ However, if we had produced separate plots of % Buchanan vote and total
 population Palm Beach would not appear as an outlier.</p>
 </div>
 </div>
-<div id="transformation" class="section level2" number="2.8">
-<h2><span class="header-section-number">2.8</span> Transformation of data</h2>
-<p>Some simple statistical methods are based on assumptions about the statistical properties of the data to which they are applied. For example, there are methods that work well provided that a variable of interest is approximately symmetrically distributed. If a variable has a distribution that is strongly skewed then the method will not have the properties that are expected and the results may be misleading. In linear regression (see Chapter <a href="linreg.html#linreg">8</a>) the mean of one variable is represented as being related linearly to the value of another variable. If the reality is that this relationship is far from being linear then results may be very misleading.</p>
+<div id="transformation" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Transformation of data<a href="descriptive.html#transformation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some simple statistical methods are based on assumptions about the statistical properties of the data to which they are applied. For example, there are methods that work well provided that a variable of interest is approximately symmetrically distributed. If a variable has a distribution that is strongly skewed then the method will not have the properties that are expected and the results may be misleading. In linear regression (see Chapter <a href="linreg.html#linreg">9</a>) the mean of one variable is represented as being related linearly to the value of another variable. If the reality is that this relationship is far from being linear then results may be very misleading.</p>
 <p>If we wish to make use of simple assumptions like symmetry of distribution and/or linearity of relationship, but it is clear that the raw data do not support these assumption, then a legitimate approach is to consider whether the assumptions are satisfied better after we transform the data. We illustrate this idea in Sections <a href="descriptive.html#transsymmetry">2.8.1</a> and <a href="descriptive.html#straighten">2.8.2</a>.</p>
-<div id="transsymmetry" class="section level3" number="2.8.1">
-<h3><span class="header-section-number">2.8.1</span> Transformation to approximate symmetry</h3>
-<p>The data in Table <a href="descriptive.html#tab:clouds">2.11</a> resulted from an experiment (<span class="citation"><a href="#ref-clouds" role="doc-biblioref">Simpson, Olsen, and Eden</a> (<a href="#ref-clouds" role="doc-biblioref">1975</a>)</span>) to see whether spraying silver nitrate into a cloud (known as <strong>seeding</strong> the cloud)
+<div id="transsymmetry" class="section level3 hasAnchor" number="2.8.1">
+<h3><span class="header-section-number">2.8.1</span> Transformation to approximate symmetry<a href="descriptive.html#transsymmetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The data in Table <a href="descriptive.html#tab:clouds">2.11</a> resulted from an experiment (<span class="citation">Simpson, Olsen, and Eden (<a href="#ref-clouds" role="doc-biblioref">1975</a>)</span>) to see whether spraying silver nitrate into a cloud (known as <strong>seeding</strong> the cloud)
 could make it produce more rainfall. 52 clouds were studied. 26 of the clouds were chosen at random and seeded with silver nitrate. The amounts of rainfall, in acre-feet, produced by each cloud is recorded. (An acre-foot is a unit of volume equal to 43,560 feet<span class="math inline">\(^3\)</span> or, approximately, 1233.5m<span class="math inline">\(^3\)</span>.)</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 75%; margin-left: auto; margin-right: auto;  " id="tab:clouds">
 <caption style="caption-side: top; text-align: center;"><span id="tab:clouds">Table 2.11: </span> The rainfall, in acre-feet, from 52 clouds, 26 of which were chosen at random to be seeded with silver nitrate.</caption><col><col><col><col><tr>
@@ -1350,14 +1354,14 @@ could make it produce more rainfall. 52 clouds were studied. 26 of the clouds we
 </table>
 
 <p>Figure <a href="descriptive.html#fig:cloudboxlog">2.21</a> shows separate boxplots of the rainfall amounts from seeded and unseeded clouds.</p>
-<div class="figure" style="text-align: center"><span id="fig:cloudbox"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cloudbox"></span>
 <img src="images/cloud_box.png" alt="Boxplots of rainfall in acre-feet for seeded and unseeded clouds.  Sample means are marked with a cross." width="75%" />
 <p class="caption">
 Figure 2.20: Boxplots of rainfall in acre-feet for seeded and unseeded clouds. Sample means are marked with a cross.
 </p>
 </div>
 <p>It is clear from the shape of these plots that the data are positively skewed. Also, the sample means are much greater than their corresponding sample medians. Measurements of (positive) environmental quantities are often positive skew. In addition, the rainfall values from the seeded clouds have a both higher location and a higher spread than the values from the unseeded clouds. After a log transformation (see <a href="descriptive.html#fig:cloudboxlog">2.21</a>), the data are closer to being approximately symmetric. The sample means are closer to their corresponding sample medians. In addition the log transformation makes the variances of the rainfall values in the two groups more nearly equal.</p>
-<div class="figure" style="text-align: center"><span id="fig:cloudboxlog"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cloudboxlog"></span>
 <img src="images/cloud_box_log.png" alt="Boxplots of rainfall in acre-feet for seeded and unseeded clouds after a $\log_{10}$ transformation has been applied.  Sample means are mared with a cross." width="75%" />
 <p class="caption">
 Figure 2.21: Boxplots of rainfall in acre-feet for seeded and unseeded clouds after a <span class="math inline">\(\log_{10}\)</span> transformation has been applied. Sample means are mared with a cross.
@@ -1368,47 +1372,47 @@ Figure 2.21: Boxplots of rainfall in acre-feet for seeded and unseeded clouds af
 <p>These rainfall data are positive so there is no problem using a transformation of the form <span class="math inline">\(y^c\)</span>. However, if a dataset contains negative values then there are problems. If <span class="math inline">\(y&lt;0\)</span> then <span class="math inline">\(y^c\)</span> can only be calculated in special cases where <span class="math inline">\(c\)</span> is an integer. We also need to be able to invert the transformation, that is, to infer the value of <span class="math inline">\(y\)</span> uniquely from the value of <span class="math inline">\(y^c\)</span>. If <span class="math inline">\(y\)</span> can be both negative and positive then this is only possible in the very special cases where <span class="math inline">\(c\)</span> is an odd integer. If a dataset contains zeros then we cannot use a log transformation, or <span class="math inline">\(y^c\)</span> for <span class="math inline">\(c &lt; 0\)</span>. The main point is that we need all the data to be positive in order to use the transformation <span class="math inline">\(y^c\)</span> (or <span class="math inline">\((y^c - 1) / c\)</span>). If we wish to transform data with non-positive values it is common to add a suitable constant to all values, to produce positive data, before transformation.</p>
 <p>The rainfall data range over several orders of magnitude, that is, from one to well over a thousand. Applying a log transformation is often useful when data range over several orders of magnitude.</p>
 <p><strong>An aside</strong>. If we particularly like stem-and-leaf plots then we could produce a back-to-back stem-and-leaf plot, as in the plots of the log-transformed rainfall totals in Figure <a href="descriptive.html#fig:cloudstem">2.22</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:cloudstem"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cloudstem"></span>
 <img src="images/cloud_stem.png" alt="Back to back stem-and-leaf plot of $\log_{10}$(rainfall) for the cloud seeding data. The decimal point is at the vertical line |. Leaf unit = 0.1 log(acre feet)" width="75%" />
 <p class="caption">
 Figure 2.22: Back to back stem-and-leaf plot of <span class="math inline">\(\log_{10}\)</span>(rainfall) for the cloud seeding data. The decimal point is at the vertical line |. Leaf unit = 0.1 log(acre feet)
 </p>
 </div>
 </div>
-<div id="straighten" class="section level3" number="2.8.2">
-<h3><span class="header-section-number">2.8.2</span> Straightening scatter plots</h3>
+<div id="straighten" class="section level3 hasAnchor" number="2.8.2">
+<h3><span class="header-section-number">2.8.2</span> Straightening scatter plots<a href="descriptive.html#straighten" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose we have drawn a scatter plot and the general form of the relationship between the variables <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> appears to be monotonic, <span class="math inline">\(y\)</span> tends either to increase or decrease with the value of <span class="math inline">\(x\)</span>, subject to some random scatter about this relationships. However, the relationship between the variables <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> is not even approximately a straight line, that is, it is non-linear, rather than linear.</p>
 <p>There are two main reasons why we may want to <strong>straighten out</strong> a scatter plot, that is, make it closer to being linear:</p>
 <ul>
 <li>we may be find it easier to appeciate the relationship between variables when that relationship is linear compared to a case where the relationship is non-linear and more complicated;</li>
-<li>we may be hoping to be able to use a simple method of analysis that requires approximate linearity, for example, linear regression (see Chapter <a href="linreg.html#linreg">8</a>).</li>
+<li>we may be hoping to be able to use a simple method of analysis that requires approximate linearity, for example, linear regression (see Chapter <a href="linreg.html#linreg">9</a>).</li>
 </ul>
-<div id="how-can-we-straighten-a-scatter-plot" class="section level4 unnumbered">
-<h4>How can we straighten a scatter plot?</h4>
+<div id="how-can-we-straighten-a-scatter-plot" class="section level4 unnumbered hasAnchor">
+<h4>How can we straighten a scatter plot?<a href="descriptive.html#how-can-we-straighten-a-scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We could transform the <span class="math inline">\(y\)</span> variable, that is, plot a function of <span class="math inline">\(y\)</span> on the <span class="math inline">\(y\)</span>-axis. As in Section <a href="descriptive.html#transsymmetry">2.8.1</a>, commonly-used transformations are</p>
 <p><span class="math display">\[
 y^3\,, \quad
 y^2\,, \quad
-(y)\,, \quad 
+(y)\,, \quad
 \sqrt{y}\,, \quad
 \log y\,, \quad
 -\frac{1}{\sqrt{y}}\,, \quad
 -\frac1y\,, \quad
 -\frac{1}{y^2}\,, \quad
--\frac{1}{y^3}\,, \quad 
+-\frac{1}{y^3}\,, \quad
 \]</span></p>
 <p><strong>Question</strong>: Why might we prefer to use the transformation <span class="math inline">\(-1/y\)</span>, rather than <span class="math inline">\(1/y\)</span>?</p>
 <p>Instead of transforming the <span class="math inline">\(y\)</span>-axis we could transform the <span class="math inline">\(x\)</span> variable, or both the <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> variables. For example, in Figure <a href="descriptive.html#fig:scatter1b">2.19</a> the use of a square root transformation on <span class="math inline">\(y\)</span> and a log transformation on <span class="math inline">\(x\)</span> produces a plot in which the relationship between the two variables is much closer being approximately linear than the variables plotted in Figure <a href="descriptive.html#fig:scatter1a">2.18</a>.</p>
 <p>If we wish to use transformation to straighten a scatter plot then we have lots of choice about which transformations to try. These days it is easy to use trial-and-error, that is, to try lots of transformations and judge by eye which of the resulting plots we prefer. There are also automatic computational methods to do this. However, before the advent of modern computing, producing plots was more time-consuming and it was helpful to use the shape of the original plot to suggest which transformations might work. One way to do this is sometimes called <strong>Tukey and Mosteller’s bulging rule</strong>.</p>
 <p>Consider the curve plotted in Figure <a href="descriptive.html#fig:hollowup">2.23</a>. Imagine a straight line drawn between the ends of this curve. In the middle of the curve the values of both <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are smaller than the points on the imaginary line. We say that the curve is bulging down in both the <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> directions.</p>
-<div class="figure" style="text-align: center"><span id="fig:hollowup"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hollowup"></span>
 <img src="images/hollow_up.png" alt="A curve in which both $y$ and $x$ are bulging down compared to an imaginary straight line drawn between the ends of the curve." width="75%" />
 <p class="caption">
 Figure 2.23: A curve in which both <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are bulging down compared to an imaginary straight line drawn between the ends of the curve.
 </p>
 </div>
 <p>Similarly, in Figure <a href="descriptive.html#fig:hollowdown">2.24</a> <span class="math inline">\(x\)</span> is bulging down but now <span class="math inline">\(y\)</span> is bulging up.</p>
-<div class="figure" style="text-align: center"><span id="fig:hollowdown"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hollowdown"></span>
 <img src="images/hollow_down.png" alt="A curve in which both $y$ and $x$ are bulging down compared to an imaginary straight line drawn between the ends of the curve." width="75%" />
 <p class="caption">
 Figure 2.24: A curve in which both <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> are bulging down compared to an imaginary straight line drawn between the ends of the curve.
@@ -1416,44 +1420,44 @@ Figure 2.24: A curve in which both <span class="math inline">\(y\)</span> and <s
 </div>
 <p>Suppose that we consider transforming only <span class="math inline">\(y\)</span>. Tukey and Mosteller’s bulging rule says that for scatter plots showing relationships like that depicted in Figure <a href="descriptive.html#fig:hollowup">2.23</a> we should try transformations like <span class="math inline">\(\sqrt{y}, \, \log y, \,-1/\sqrt{y}, \, -1/y, \, -1/y^2, \ldots\)</span>, that is, <span class="math inline">\(y^c\)</span>, for <span class="math inline">\(c &lt; 1\)</span>. For cases like Figure <a href="descriptive.html#fig:hollowup">2.23</a> we should try transformations like <span class="math inline">\(y^2, \, y^3, \ldots\)</span>, that is, <span class="math inline">\(y^c\)</span>, for <span class="math inline">\(c &gt; 1\)</span>.</p>
 <p>Consider Figure <a href="descriptive.html#fig:electionHS1">2.25</a> as an example. The relationship between the variables is similar to the curve in Figure <a href="descriptive.html#fig:hollowup">2.23</a>. Therefore, we should try transforming <span class="math inline">\(y\)</span> using using a transformation like <span class="math inline">\(\sqrt{y}, \, \log y, \ldots\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:electionHS1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:electionHS1"></span>
 <img src="images/election_HS1.png" alt="Scatter plot of the percentage of the vote obtained by Buchanan against the percentage of the population who graduate from high school the 2000 US Presidential Election data." width="75%" />
 <p class="caption">
 Figure 2.25: Scatter plot of the percentage of the vote obtained by Buchanan against the percentage of the population who graduate from high school the 2000 US Presidential Election data.
 </p>
 </div>
 <p>The curvature of the relationship shown in <a href="descriptive.html#fig:electionHS1">2.25</a> is not strong, so it makes sense that in Figure <a href="descriptive.html#fig:electionHS2">2.26</a> approximately linearity of relationship is acheived using the relatively weak transformation <span class="math inline">\(\sqrt{y}\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:electionHS2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:electionHS2"></span>
 <img src="images/election_HS2.png" alt="Scatter plot of the square root of the percentage of the vote obtained by Buchanan against the percentage of the population who graduate from high school the 2000 US Presidential Election data." width="75%" />
 <p class="caption">
 Figure 2.26: Scatter plot of the square root of the percentage of the vote obtained by Buchanan against the percentage of the population who graduate from high school the 2000 US Presidential Election data.
 </p>
 </div>
 <p>Figure <a href="descriptive.html#fig:tukey">2.27</a> shows how Tukey and Mosteller’s bulging rule works in the four different bulging cases, considering the possibilities of transforming <span class="math inline">\(y\)</span> only, <span class="math inline">\(x\)</span> only or both <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span>. To use this figure first pick the curve that is relevant to the scatter plot in question. The expressions given at the ends of this curve are examples of the kind of transformations that you could try. The general forms of the indicated transformations are given in the caption to the figure.</p>
-<div class="figure" style="text-align: center"><span id="fig:tukey"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tukey"></span>
 <img src="images/tukey.png" alt="Summary of transformations, of the form $Y^{c_y}$ and/or $X^{c_x}$, to try. Bottom left: $c_y &lt; 1, c_x &lt; 1$. Top left: $c_y &gt; 1, c_x &lt; 1$.Top right: $c_y &gt; 1, c_x &gt; 1$.Bottom right: $c_y &lt; 1, c_x &gt; 1$." width="75%" />
 <p class="caption">
 Figure 2.27: Summary of transformations, of the form <span class="math inline">\(Y^{c_y}\)</span> and/or <span class="math inline">\(X^{c_x}\)</span>, to try. Bottom left: <span class="math inline">\(c_y &lt; 1, c_x &lt; 1\)</span>. Top left: <span class="math inline">\(c_y &gt; 1, c_x &lt; 1\)</span>.Top right: <span class="math inline">\(c_y &gt; 1, c_x &gt; 1\)</span>.Bottom right: <span class="math inline">\(c_y &lt; 1, c_x &gt; 1\)</span>.
 </p>
 </div>
 </div>
-<div id="linearity-is-not-the-only-consideration" class="section level4 unnumbered">
-<h4>Linearity is not the only consideration</h4>
-<p>Although linearity can be important other things can be important too. Suppose that we draw a ‘line-of-best-fit’ on a scatter plot which looks approximately linear. Figure <a href="descriptive.html#fig:electionHS3">2.28</a> is a copy of Figure <a href="descriptive.html#fig:electionHS2">2.26</a> with such a line superimposed. In Chapter <a href="linreg.html#linreg">8</a> we will see that in a simple linear regression model it is assumed that the amount of (vertical) scatter in the <span class="math inline">\(y\)</span> direction of points about a line of best fit is the same for all values of the explanatory variable <span class="math inline">\(x\)</span>.</p>
+<div id="linearity-is-not-the-only-consideration" class="section level4 unnumbered hasAnchor">
+<h4>Linearity is not the only consideration<a href="descriptive.html#linearity-is-not-the-only-consideration" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Although linearity can be important other things can be important too. Suppose that we draw a ‘line-of-best-fit’ on a scatter plot which looks approximately linear. Figure <a href="descriptive.html#fig:electionHS3">2.28</a> is a copy of Figure <a href="descriptive.html#fig:electionHS2">2.26</a> with such a line superimposed. In Chapter <a href="linreg.html#linreg">9</a> we will see that in a simple linear regression model it is assumed that the amount of (vertical) scatter in the <span class="math inline">\(y\)</span> direction of points about a line of best fit is the same for all values of the explanatory variable <span class="math inline">\(x\)</span>.</p>
 <p>In Figure <a href="descriptive.html#fig:electionHS3">2.28</a> there is perhaps a greater spread of points about the line for small values of % HS Grad than for large values of % HS Grad.</p>
-<div class="figure" style="text-align: center"><span id="fig:electionHS3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:electionHS3"></span>
 <img src="images/election_HS3.png" alt="Scatter plot of the square root of the percentage of the vote obtained by Buchanan against the percentage of the population who graduate from high school the 2000 US Presidential Election data.  A (dashed) line-of-best-fit is superimposed." width="75%" />
 <p class="caption">
 Figure 2.28: Scatter plot of the square root of the percentage of the vote obtained by Buchanan against the percentage of the population who graduate from high school the 2000 US Presidential Election data. A (dashed) line-of-best-fit is superimposed.
 </p>
 </div>
-<p>In Section <a href="linreg.html#linregtrans">8.4</a> we consider how to use transformation of <span class="math inline">\(y\)</span> and/or <span class="math inline">\(x\)</span> to satisfy better the assumptions of a linear regression model.</p>
+<p>In Section <a href="linreg.html#linregtrans">9.4</a> we consider how to use transformation of <span class="math inline">\(y\)</span> and/or <span class="math inline">\(x\)</span> to satisfy better the assumptions of a linear regression model.</p>
 
 </div>
 </div>
 </div>
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-clouds" class="csl-entry">
 Simpson, Joanne, Anthony Olsen, and Jane C. Eden. 1975. <span>‘A <span>B</span>ayesian Analysis of a Multiplicative Treatment Effect in Weather Modification’</span>. <em>Technometrics</em> 17 (2): 161–66. <a href="https://doi.org/10.1080/00401706.1975.10489297">https://doi.org/10.1080/00401706.1975.10489297</a>.
@@ -1472,7 +1476,6 @@ Smith, Richard L. 2002. <span>‘A Statistical Assessment of <span>B</span>uchan
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1512,6 +1515,10 @@ gitbook.start({
 "text": null
 },
 "download": ["stat0002book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

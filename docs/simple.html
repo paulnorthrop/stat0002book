@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Simple distributions | STAT0002 Introduction to Probability and Statistics</title>
+  <title>Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
+  <meta property="og:title" content="Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
+  <meta name="twitter:title" content="Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
   
   <meta name="twitter:description" content="Produces STAT0002 notes in an accessible format" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2021-12-03" />
+<meta name="date" content="2022-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="rvs.html"/>
 <link rel="next" href="inference.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +51,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -159,234 +160,237 @@ div.csl-indent {
 <li><a href="./">STAT0002 2020-21</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The purpose of these notes</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li><a href="index.html#the-purpose-of-these-notes" id="toc-the-purpose-of-these-notes">The purpose of these notes<span></span></a></li>
+<li><a href="introduction.html#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#real"><i class="fa fa-check"></i><b>1.1</b> Real statistical investigations</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#shuttle"><i class="fa fa-check"></i><b>1.2</b> Challenger Space Shuttle Catastrophe</a>
+<li><a href="introduction.html#real" id="toc-real"><span class="toc-section-number">1.1</span> Real statistical investigations<span></span></a></li>
+<li><a href="introduction.html#shuttle" id="toc-shuttle"><span class="toc-section-number">1.2</span> Challenger Space Shuttle Catastrophe<span></span></a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#uncertainty"><i class="fa fa-check"></i><b>1.2.1</b> Uncertainty</a></li>
+<li><a href="introduction.html#uncertainty" id="toc-uncertainty"><span class="toc-section-number">1.2.1</span> Uncertainty<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation"><i class="fa fa-check"></i><b>1.3</b> A very brief introduction to stochastic simulation</a></li>
+<li><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation" id="toc-a-very-brief-introduction-to-stochastic-simulation"><span class="toc-section-number">1.3</span> A very brief introduction to stochastic simulation<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="descriptive.html"><a href="descriptive.html"><i class="fa fa-check"></i><b>2</b> Descriptive Statistics</a>
+<li><a href="descriptive.html#descriptive" id="toc-descriptive"><span class="toc-section-number">2</span> Descriptive Statistics<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="descriptive.html"><a href="descriptive.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of data</a>
+<li><a href="descriptive.html#types-of-data" id="toc-types-of-data"><span class="toc-section-number">2.1</span> Types of data<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="descriptive.html"><a href="descriptive.html#qualitative-or-categorical-data"><i class="fa fa-check"></i><b>2.1.1</b> Qualitative or categorical data</a></li>
-<li class="chapter" data-level="2.1.2" data-path="descriptive.html"><a href="descriptive.html#quantitative-or-numerical-data"><i class="fa fa-check"></i><b>2.1.2</b> Quantitative or numerical data</a></li>
+<li><a href="descriptive.html#qualitative-or-categorical-data" id="toc-qualitative-or-categorical-data"><span class="toc-section-number">2.1.1</span> Qualitative or categorical data<span></span></a></li>
+<li><a href="descriptive.html#quantitative-or-numerical-data" id="toc-quantitative-or-numerical-data"><span class="toc-section-number">2.1.2</span> Quantitative or numerical data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="descriptive.html"><a href="descriptive.html#describing-distributions"><i class="fa fa-check"></i><b>2.2</b> Describing distributions</a>
+<li><a href="descriptive.html#describing-distributions" id="toc-describing-distributions"><span class="toc-section-number">2.2</span> Describing distributions<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="descriptive.html"><a href="descriptive.html#example-oxford-births-data"><i class="fa fa-check"></i>Example: Oxford births data</a></li>
+<li><a href="descriptive.html#example-oxford-births-data" id="toc-example-oxford-births-data">Example: Oxford births data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="descriptive.html"><a href="descriptive.html#summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Summary Statistics</a>
+<li><a href="descriptive.html#summary-statistics" id="toc-summary-statistics"><span class="toc-section-number">2.3</span> Summary Statistics<span></span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="descriptive.html"><a href="descriptive.html#fivenumber"><i class="fa fa-check"></i><b>2.3.1</b> Five number summary</a></li>
-<li class="chapter" data-level="2.3.2" data-path="descriptive.html"><a href="descriptive.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
-<li class="chapter" data-level="2.3.3" data-path="descriptive.html"><a href="descriptive.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
-<li class="chapter" data-level="2.3.4" data-path="descriptive.html"><a href="descriptive.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
-<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#corr1"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
+<li><a href="descriptive.html#fivenumber" id="toc-fivenumber"><span class="toc-section-number">2.3.1</span> Five number summary<span></span></a></li>
+<li><a href="descriptive.html#meanstdev" id="toc-meanstdev"><span class="toc-section-number">2.3.2</span> Mean and standard deviation<span></span></a></li>
+<li><a href="descriptive.html#mode" id="toc-mode"><span class="toc-section-number">2.3.3</span> Mode<span></span></a></li>
+<li><a href="descriptive.html#symmetry" id="toc-symmetry"><span class="toc-section-number">2.3.4</span> Symmetry<span></span></a></li>
+<li><a href="descriptive.html#corr1" id="toc-corr1"><span class="toc-section-number">2.3.5</span> Correlation<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a>
+<li><a href="descriptive.html#tables" id="toc-tables"><span class="toc-section-number">2.4</span> Tables<span></span></a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="descriptive.html"><a href="descriptive.html#frequency-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Frequency distribution</a></li>
+<li><a href="descriptive.html#frequency-distribution" id="toc-frequency-distribution"><span class="toc-section-number">2.4.1</span> Frequency distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="descriptive.html"><a href="descriptive.html#graphs"><i class="fa fa-check"></i><b>2.5</b> Graphs (1 variable)</a>
+<li><a href="descriptive.html#graphs" id="toc-graphs"><span class="toc-section-number">2.5</span> Graphs (1 variable)<span></span></a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="descriptive.html"><a href="descriptive.html#histogram"><i class="fa fa-check"></i><b>2.5.1</b> Histograms</a></li>
-<li class="chapter" data-level="2.5.2" data-path="descriptive.html"><a href="descriptive.html#stem"><i class="fa fa-check"></i><b>2.5.2</b> Stem-and-leaf plots</a></li>
-<li class="chapter" data-level="2.5.3" data-path="descriptive.html"><a href="descriptive.html#dotplots"><i class="fa fa-check"></i><b>2.5.3</b> Dotplots</a></li>
-<li class="chapter" data-level="2.5.4" data-path="descriptive.html"><a href="descriptive.html#boxplots"><i class="fa fa-check"></i><b>2.5.4</b> Boxplots</a></li>
-<li class="chapter" data-level="2.5.5" data-path="descriptive.html"><a href="descriptive.html#barplots"><i class="fa fa-check"></i><b>2.5.5</b> Barplots</a></li>
-<li class="chapter" data-level="2.5.6" data-path="descriptive.html"><a href="descriptive.html#times-series-plots"><i class="fa fa-check"></i><b>2.5.6</b> Times series plots</a></li>
+<li><a href="descriptive.html#histogram" id="toc-histogram"><span class="toc-section-number">2.5.1</span> Histograms<span></span></a></li>
+<li><a href="descriptive.html#stem" id="toc-stem"><span class="toc-section-number">2.5.2</span> Stem-and-leaf plots<span></span></a></li>
+<li><a href="descriptive.html#dotplots" id="toc-dotplots"><span class="toc-section-number">2.5.3</span> Dotplots<span></span></a></li>
+<li><a href="descriptive.html#boxplots" id="toc-boxplots"><span class="toc-section-number">2.5.4</span> Boxplots<span></span></a></li>
+<li><a href="descriptive.html#barplots" id="toc-barplots"><span class="toc-section-number">2.5.5</span> Barplots<span></span></a></li>
+<li><a href="descriptive.html#times-series-plots" id="toc-times-series-plots"><span class="toc-section-number">2.5.6</span> Times series plots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="descriptive.html"><a href="descriptive.html#election"><i class="fa fa-check"></i><b>2.6</b> 2000 US Presidential Election</a></li>
-<li class="chapter" data-level="2.7" data-path="descriptive.html"><a href="descriptive.html#graphs2"><i class="fa fa-check"></i><b>2.7</b> Graphs (2 variables)</a>
+<li><a href="descriptive.html#election" id="toc-election"><span class="toc-section-number">2.6</span> 2000 US Presidential Election<span></span></a></li>
+<li><a href="descriptive.html#graphs2" id="toc-graphs2"><span class="toc-section-number">2.7</span> Graphs (2 variables)<span></span></a>
 <ul>
-<li class="chapter" data-level="2.7.1" data-path="descriptive.html"><a href="descriptive.html#scatter-plots"><i class="fa fa-check"></i><b>2.7.1</b> Scatter plots</a></li>
+<li><a href="descriptive.html#scatter-plots" id="toc-scatter-plots"><span class="toc-section-number">2.7.1</span> Scatter plots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a>
+<li><a href="descriptive.html#transformation" id="toc-transformation"><span class="toc-section-number">2.8</span> Transformation of data<span></span></a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="descriptive.html"><a href="descriptive.html#transsymmetry"><i class="fa fa-check"></i><b>2.8.1</b> Transformation to approximate symmetry</a></li>
-<li class="chapter" data-level="2.8.2" data-path="descriptive.html"><a href="descriptive.html#straighten"><i class="fa fa-check"></i><b>2.8.2</b> Straightening scatter plots</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> Probability</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#sids"><i class="fa fa-check"></i><b>3.1</b> Misleading statistical evidence in cot death trials</a></li>
-<li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#relative-frequency-definition-of-probability"><i class="fa fa-check"></i><b>3.2</b> Relative frequency definition of probability</a></li>
-<li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#basic-properties-of-probability"><i class="fa fa-check"></i><b>3.3</b> Basic properties of probability</a></li>
-<li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>3.4</b> Conditional probability</a></li>
-<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>3.5.1</b> Mutually exclusive events</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multrule"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
-<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a>
-<ul>
-<li class="chapter" data-level="3.7.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.7.1</b> An example of independence</a></li>
-</ul></li>
-<li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.8</b> Law of total probability</a></li>
-<li class="chapter" data-level="3.9" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.9</b> Bayes’ theorem</a></li>
-<li class="chapter" data-level="3.10" data-path="probability.html"><a href="probability.html#dna-identification-evidence"><i class="fa fa-check"></i><b>3.10</b> DNA identification evidence</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="rvs.html"><a href="rvs.html#discrete"><i class="fa fa-check"></i><b>4.1</b> Discrete random variables</a></li>
-<li class="chapter" data-level="4.2" data-path="rvs.html"><a href="rvs.html#continuous"><i class="fa fa-check"></i><b>4.2</b> Continuous random variables</a></li>
-<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
-<li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
-<li class="chapter" data-level="4.3.3" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmex"><i class="fa fa-check"></i><b>4.3.3</b> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></a></li>
-<li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#EgX"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="rvs.html"><a href="rvs.html#variance-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.4.1</b> Variance of a discrete random variable</a></li>
-<li class="chapter" data-level="4.4.2" data-path="rvs.html"><a href="rvs.html#variance-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.4.2</b> Variance of a continuous random variable</a></li>
-<li class="chapter" data-level="4.4.3" data-path="rvs.html"><a href="rvs.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.4.3</b> Variance and standard deviation</a></li>
-<li class="chapter" data-level="4.4.4" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmvarx"><i class="fa fa-check"></i><b>4.4.4</b> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="rvs.html"><a href="rvs.html#the-median-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.1</b> The median of a random variable</a></li>
-<li class="chapter" data-level="4.5.2" data-path="rvs.html"><a href="rvs.html#the-mode-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.2</b> The mode of a random variable</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
-<li class="chapter" data-level="4.7" data-path="rvs.html"><a href="rvs.html#measures-of-shape"><i class="fa fa-check"></i><b>4.7</b> Measures of shape</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="simple.html"><a href="simple.html#australian-births-data"><i class="fa fa-check"></i><b>5.1</b> Australian births data</a></li>
-<li class="chapter" data-level="5.2" data-path="simple.html"><a href="simple.html#the-bernoulli-distribution"><i class="fa fa-check"></i><b>5.2</b> The Bernoulli distribution</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="simple.html"><a href="simple.html#summary-of-the-bernoullip-distribution"><i class="fa fa-check"></i><b>5.2.1</b> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="simple.html"><a href="simple.html#binomial"><i class="fa fa-check"></i><b>5.3</b> The binomial distribution</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="simple.html"><a href="simple.html#binominf"><i class="fa fa-check"></i><b>5.3.1</b> A brief look at statistical inference about <span class="math inline">\(p\)</span></a></li>
-<li class="chapter" data-level="5.3.2" data-path="simple.html"><a href="simple.html#summary-of-the-binomialnp-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="simple.html"><a href="simple.html#the-geometric-distribution"><i class="fa fa-check"></i><b>5.4</b> The geometric distribution</a>
-<ul>
-<li class="chapter" data-level="5.4.1" data-path="simple.html"><a href="simple.html#summary-of-the-geometricp-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="simple.html"><a href="simple.html#Poisson"><i class="fa fa-check"></i><b>5.5</b> The Poisson distribution</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="simple.html"><a href="simple.html#summary-of-the-poissonmu-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="simple.html"><a href="simple.html#summary-of-these-discrete-distributions"><i class="fa fa-check"></i><b>5.6</b> Summary of these discrete distributions</a></li>
-<li class="chapter" data-level="5.7" data-path="simple.html"><a href="simple.html#uniform"><i class="fa fa-check"></i><b>5.7</b> The uniform distribution</a>
-<ul>
-<li class="chapter" data-level="5.7.1" data-path="simple.html"><a href="simple.html#summary-of-the-uniformab-distribution"><i class="fa fa-check"></i><b>5.7.1</b> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.8" data-path="simple.html"><a href="simple.html#exponential"><i class="fa fa-check"></i><b>5.8</b> The exponential distribution</a>
-<ul>
-<li class="chapter" data-level="5.8.1" data-path="simple.html"><a href="simple.html#summary-of-the-exponentiallambda-distribution"><i class="fa fa-check"></i><b>5.8.1</b> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a>
-<ul>
-<li class="chapter" data-level="5.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>5.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
-<li class="chapter" data-level="5.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>5.9.2</b> The standard normal disribution</a></li>
-<li class="chapter" data-level="5.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>5.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
-<li class="chapter" data-level="5.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>5.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="5.10" data-path="simple.html"><a href="simple.html#summary-of-these-continuous-distributions"><i class="fa fa-check"></i><b>5.10</b> Summary of these continuous distributions</a></li>
-<li class="chapter" data-level="5.11" data-path="simple.html"><a href="simple.html#qq"><i class="fa fa-check"></i><b>5.11</b> QQ plots</a>
-<ul>
-<li class="chapter" data-level="5.11.1" data-path="simple.html"><a href="simple.html#normal-qq-plots"><i class="fa fa-check"></i><b>5.11.1</b> Normal QQ plots</a></li>
-<li class="chapter" data-level="5.11.2" data-path="simple.html"><a href="simple.html#uniform-qq-plots"><i class="fa fa-check"></i><b>5.11.2</b> Uniform QQ plots</a></li>
-<li class="chapter" data-level="5.11.3" data-path="simple.html"><a href="simple.html#exponential-qq-plots"><i class="fa fa-check"></i><b>5.11.3</b> Exponential QQ plots</a></li>
+<li><a href="descriptive.html#transsymmetry" id="toc-transsymmetry"><span class="toc-section-number">2.8.1</span> Transformation to approximate symmetry<span></span></a></li>
+<li><a href="descriptive.html#straighten" id="toc-straighten"><span class="toc-section-number">2.8.2</span> Straightening scatter plots<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a>
+<li><a href="probability.html#probability" id="toc-probability"><span class="toc-section-number">3</span> Probability I<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="inference.html"><a href="inference.html#the-story-so-far"><i class="fa fa-check"></i><b>6.1</b> The story so far</a></li>
-<li class="chapter" data-level="6.2" data-path="inference.html"><a href="inference.html#sample-and-populations"><i class="fa fa-check"></i><b>6.2</b> Sample and populations</a></li>
-<li class="chapter" data-level="6.3" data-path="inference.html"><a href="inference.html#probmodels"><i class="fa fa-check"></i><b>6.3</b> Probability models</a></li>
-<li class="chapter" data-level="6.4" data-path="inference.html"><a href="inference.html#fitting-models"><i class="fa fa-check"></i><b>6.4</b> Fitting models</a></li>
-<li class="chapter" data-level="6.5" data-path="inference.html"><a href="inference.html#uncertainty-in-estimation"><i class="fa fa-check"></i><b>6.5</b> Uncertainty in estimation</a>
+<li><a href="probability.html#sids" id="toc-sids"><span class="toc-section-number">3.1</span> Misleading statistical evidence in cot death trials<span></span></a></li>
+<li><a href="probability.html#relative-frequency-definition-of-probability" id="toc-relative-frequency-definition-of-probability"><span class="toc-section-number">3.2</span> Relative frequency definition of probability<span></span></a></li>
+<li><a href="probability.html#basic-properties-of-probability" id="toc-basic-properties-of-probability"><span class="toc-section-number">3.3</span> Basic properties of probability<span></span></a></li>
+<li><a href="probability.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.4</span> Conditional probability<span></span></a></li>
+<li><a href="probability.html#addition-rule-of-probability" id="toc-addition-rule-of-probability"><span class="toc-section-number">3.5</span> Addition rule of probability<span></span></a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="inference.html"><a href="inference.html#simulation-coin-tossing-example"><i class="fa fa-check"></i><b>6.5.1</b> Simulation: coin-tossing example</a></li>
-<li class="chapter" data-level="6.5.2" data-path="inference.html"><a href="inference.html#simnorm"><i class="fa fa-check"></i><b>6.5.2</b> Simulation: estimating the parameters of a normal distribution</a></li>
-<li class="chapter" data-level="6.5.3" data-path="inference.html"><a href="inference.html#simexp"><i class="fa fa-check"></i><b>6.5.3</b> Simulation: estimating the parameters of an exponential distribution</a></li>
-<li class="chapter" data-level="6.5.4" data-path="inference.html"><a href="inference.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.5.4</b> Central Limit Theorem</a></li>
+<li><a href="probability.html#mutually-exclusive-events" id="toc-mutually-exclusive-events"><span class="toc-section-number">3.5.1</span> Mutually exclusive events<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="inference.html"><a href="inference.html#good"><i class="fa fa-check"></i><b>6.6</b> Properties of estimators</a>
+<li><a href="probability.html#multrule" id="toc-multrule"><span class="toc-section-number">3.6</span> Multiplication rule of probability<span></span></a></li>
+<li><a href="probability.html#indepevents" id="toc-indepevents"><span class="toc-section-number">3.7</span> Independence of events<span></span></a>
 <ul>
-<li class="chapter" data-level="6.6.1" data-path="inference.html"><a href="inference.html#bias"><i class="fa fa-check"></i><b>6.6.1</b> Bias</a></li>
-<li class="chapter" data-level="6.6.2" data-path="inference.html"><a href="inference.html#varianceofestimator"><i class="fa fa-check"></i><b>6.6.2</b> Variance</a></li>
-<li class="chapter" data-level="6.6.3" data-path="inference.html"><a href="inference.html#mean-squared-error-mse"><i class="fa fa-check"></i><b>6.6.3</b> Mean squared error (MSE)</a></li>
-<li class="chapter" data-level="6.6.4" data-path="inference.html"><a href="inference.html#standard-error"><i class="fa fa-check"></i><b>6.6.4</b> Standard error</a></li>
-<li class="chapter" data-level="6.6.5" data-path="inference.html"><a href="inference.html#consistency"><i class="fa fa-check"></i><b>6.6.5</b> Consistency</a></li>
-</ul></li>
-<li class="chapter" data-level="6.7" data-path="inference.html"><a href="inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>6.7</b> Assessing goodness-of-fit</a>
-<ul>
-<li class="chapter" data-level="6.7.1" data-path="inference.html"><a href="inference.html#residuals"><i class="fa fa-check"></i><b>6.7.1</b> Residuals</a></li>
-<li class="chapter" data-level="6.7.2" data-path="inference.html"><a href="inference.html#standardised-residuals"><i class="fa fa-check"></i><b>6.7.2</b> Standardised residuals</a></li>
+<li><a href="probability.html#bloodindep" id="toc-bloodindep"><span class="toc-section-number">3.7.1</span> An example of independence<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a>
+<li><a href="probability-ii.html#probability-ii" id="toc-probability-ii"><span class="toc-section-number">4</span> Probability II<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a>
+<li><a href="probability-ii.html#law-of-total-probability" id="toc-law-of-total-probability"><span class="toc-section-number">4.1</span> Law of total probability<span></span></a></li>
+<li><a href="probability-ii.html#bayes-theorem" id="toc-bayes-theorem"><span class="toc-section-number">4.2</span> Bayes’ theorem<span></span></a></li>
+<li><a href="probability-ii.html#dna-identification-evidence" id="toc-dna-identification-evidence"><span class="toc-section-number">4.3</span> DNA identification evidence<span></span></a></li>
+</ul></li>
+<li><a href="rvs.html#rvs" id="toc-rvs"><span class="toc-section-number">5</span> Random variables<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#indep"><i class="fa fa-check"></i><b>7.1.1</b> Independence</a></li>
-<li class="chapter" data-level="7.1.2" data-path="contingency.html"><a href="contingency.html#compprob"><i class="fa fa-check"></i><b>7.1.2</b> Comparing probabilities</a></li>
-<li class="chapter" data-level="7.1.3" data-path="contingency.html"><a href="contingency.html#measures"><i class="fa fa-check"></i><b>7.1.3</b> Measures of association</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a>
+<li><a href="rvs.html#discrete" id="toc-discrete"><span class="toc-section-number">5.1</span> Discrete random variables<span></span></a></li>
+<li><a href="rvs.html#continuous" id="toc-continuous"><span class="toc-section-number">5.2</span> Continuous random variables<span></span></a></li>
+<li><a href="rvs.html#expectation" id="toc-expectation"><span class="toc-section-number">5.3</span> Expectation<span></span></a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="contingency.html"><a href="contingency.html#mutual-independence"><i class="fa fa-check"></i><b>7.2.1</b> Mutual independence</a></li>
-<li class="chapter" data-level="7.2.2" data-path="contingency.html"><a href="contingency.html#marginal-independence"><i class="fa fa-check"></i><b>7.2.2</b> Marginal independence</a></li>
-<li class="chapter" data-level="7.2.3" data-path="contingency.html"><a href="contingency.html#conditional-independence"><i class="fa fa-check"></i><b>7.2.3</b> Conditional independence</a></li>
-<li class="chapter" data-level="7.2.4" data-path="contingency.html"><a href="contingency.html#confounding-variables"><i class="fa fa-check"></i><b>7.2.4</b> Confounding variables</a></li>
+<li><a href="rvs.html#expectation-of-a-discrete-random-variable" id="toc-expectation-of-a-discrete-random-variable"><span class="toc-section-number">5.3.1</span> Expectation of a discrete random variable<span></span></a></li>
+<li><a href="rvs.html#expectation-of-a-continuous-random-variable" id="toc-expectation-of-a-continuous-random-variable"><span class="toc-section-number">5.3.2</span> Expectation of a continuous random variable<span></span></a></li>
+<li><a href="rvs.html#properties-of-mathrmex" id="toc-properties-of-mathrmex"><span class="toc-section-number">5.3.3</span> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span><span></span></a></li>
+<li><a href="rvs.html#EgX" id="toc-EgX"><span class="toc-section-number">5.3.4</span> The expectation of <span class="math inline">\(g(X)\)</span><span></span></a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a>
+<li><a href="rvs.html#variance" id="toc-variance"><span class="toc-section-number">5.4</span> Variance<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a>
+<li><a href="rvs.html#variance-of-a-discrete-random-variable" id="toc-variance-of-a-discrete-random-variable"><span class="toc-section-number">5.4.1</span> Variance of a discrete random variable<span></span></a></li>
+<li><a href="rvs.html#variance-of-a-continuous-random-variable" id="toc-variance-of-a-continuous-random-variable"><span class="toc-section-number">5.4.2</span> Variance of a continuous random variable<span></span></a></li>
+<li><a href="rvs.html#variance-and-standard-deviation" id="toc-variance-and-standard-deviation"><span class="toc-section-number">5.4.3</span> Variance and standard deviation<span></span></a></li>
+<li><a href="rvs.html#properties-of-mathrmvarx" id="toc-properties-of-mathrmvarx"><span class="toc-section-number">5.4.4</span> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span><span></span></a></li>
+</ul></li>
+<li><a href="rvs.html#locations" id="toc-locations"><span class="toc-section-number">5.5</span> Other measures of location<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression-model"><i class="fa fa-check"></i><b>8.1.1</b> Simple linear regression model</a></li>
-<li class="chapter" data-level="8.1.2" data-path="linreg.html"><a href="linreg.html#least-squares-estimation-of-alpha-and-beta"><i class="fa fa-check"></i><b>8.1.2</b> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></a></li>
-<li class="chapter" data-level="8.1.3" data-path="linreg.html"><a href="linreg.html#least-squares-fitting-to-hubbles-data"><i class="fa fa-check"></i><b>8.1.3</b> Least squares fitting to Hubble’s data</a></li>
-<li class="chapter" data-level="8.1.4" data-path="linreg.html"><a href="linreg.html#normal-linear-regression-model"><i class="fa fa-check"></i><b>8.1.4</b> Normal linear regression model</a></li>
-<li class="chapter" data-level="8.1.5" data-path="linreg.html"><a href="linreg.html#lmsummary"><i class="fa fa-check"></i><b>8.1.5</b> Summary of the assumptions of a (normal) linear regression model</a></li>
+<li><a href="rvs.html#the-median-of-a-random-variable" id="toc-the-median-of-a-random-variable"><span class="toc-section-number">5.5.1</span> The median of a random variable<span></span></a></li>
+<li><a href="rvs.html#the-mode-of-a-random-variable" id="toc-the-mode-of-a-random-variable"><span class="toc-section-number">5.5.2</span> The mode of a random variable<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
-<li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a>
+<li><a href="rvs.html#quantiles" id="toc-quantiles"><span class="toc-section-number">5.6</span> Quantiles<span></span></a></li>
+<li><a href="rvs.html#measures-of-shape" id="toc-measures-of-shape"><span class="toc-section-number">5.7</span> Measures of shape<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#simple" id="toc-simple"><span class="toc-section-number">6</span> Simple distributions<span></span></a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#departures-from-assumptions"><i class="fa fa-check"></i><b>8.3.1</b> Departures from assumptions</a></li>
-<li class="chapter" data-level="8.3.2" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.2</b> Outliers and influential observations</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a>
+<li><a href="simple.html#australian-births-data" id="toc-australian-births-data"><span class="toc-section-number">6.1</span> Australian births data<span></span></a></li>
+<li><a href="simple.html#the-bernoulli-distribution" id="toc-the-bernoulli-distribution"><span class="toc-section-number">6.2</span> The Bernoulli distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="linreg.html"><a href="linreg.html#interpretation-after-transformation"><i class="fa fa-check"></i><b>8.4.1</b> Interpretation after transformation</a></li>
+<li><a href="simple.html#summary-of-the-bernoullip-distribution" id="toc-summary-of-the-bernoullip-distribution"><span class="toc-section-number">6.2.1</span> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="linreg.html"><a href="linreg.html#over-fitting"><i class="fa fa-check"></i><b>8.5</b> Over-fitting</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>9</b> Correlation</a>
+<li><a href="simple.html#binomial" id="toc-binomial"><span class="toc-section-number">6.3</span> The binomial distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-a-measure-of-linear-association"><i class="fa fa-check"></i><b>9.1</b> Correlation: a measure of linear association</a></li>
-<li class="chapter" data-level="9.2" data-path="correlationchapter.html"><a href="correlationchapter.html#covariance-and-correlation"><i class="fa fa-check"></i><b>9.2</b> Covariance and correlation</a>
+<li><a href="simple.html#binominf" id="toc-binominf"><span class="toc-section-number">6.3.1</span> A brief look at statistical inference about <span class="math inline">\(p\)</span><span></span></a></li>
+<li><a href="simple.html#summary-of-the-binomialnp-distribution" id="toc-summary-of-the-binomialnp-distribution"><span class="toc-section-number">6.3.2</span> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#the-geometric-distribution" id="toc-the-geometric-distribution"><span class="toc-section-number">6.4</span> The geometric distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="correlationchapter.html"><a href="correlationchapter.html#estimation"><i class="fa fa-check"></i><b>9.2.1</b> Estimation</a></li>
-<li class="chapter" data-level="9.2.2" data-path="correlationchapter.html"><a href="correlationchapter.html#links-between-regression-and-correlation"><i class="fa fa-check"></i><b>9.2.2</b> Links between regression and correlation</a></li>
+<li><a href="simple.html#summary-of-the-geometricp-distribution" id="toc-summary-of-the-geometricp-distribution"><span class="toc-section-number">6.4.1</span> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="correlationchapter.html"><a href="correlationchapter.html#use-and-misuse-of-correlation"><i class="fa fa-check"></i><b>9.3</b> Use and misuse of correlation</a>
+<li><a href="simple.html#Poisson" id="toc-Poisson"><span class="toc-section-number">6.5</span> The Poisson distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="correlationchapter.html"><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes"><i class="fa fa-check"></i><b>9.3.1</b> Do not use correlation for regression sampling schemes</a></li>
-<li class="chapter" data-level="9.3.2" data-path="correlationchapter.html"><a href="correlationchapter.html#correxamples"><i class="fa fa-check"></i><b>9.3.2</b> Examples of correlations of different strengths</a></li>
-<li class="chapter" data-level="9.3.3" data-path="correlationchapter.html"><a href="correlationchapter.html#beware-missing-data-codes"><i class="fa fa-check"></i><b>9.3.3</b> Beware missing data codes</a></li>
-<li class="chapter" data-level="9.3.4" data-path="correlationchapter.html"><a href="correlationchapter.html#more-guessing-sample-correlations"><i class="fa fa-check"></i><b>9.3.4</b> More guessing sample correlations</a></li>
-<li class="chapter" data-level="9.3.5" data-path="correlationchapter.html"><a href="correlationchapter.html#summary"><i class="fa fa-check"></i><b>9.3.5</b> Summary</a></li>
-<li class="chapter" data-level="9.3.6" data-path="correlationchapter.html"><a href="correlationchapter.html#anscombes-datasets"><i class="fa fa-check"></i><b>9.3.6</b> Anscombe’s datasets</a></li>
-<li class="chapter" data-level="9.3.7" data-path="correlationchapter.html"><a href="correlationchapter.html#we-must-interpret-correlation-with-care."><i class="fa fa-check"></i><b>9.3.7</b> We must interpret correlation with care.</a></li>
+<li><a href="simple.html#summary-of-the-poissonmu-distribution" id="toc-summary-of-the-poissonmu-distribution"><span class="toc-section-number">6.5.1</span> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#summary-of-these-discrete-distributions" id="toc-summary-of-these-discrete-distributions"><span class="toc-section-number">6.6</span> Summary of these discrete distributions<span></span></a></li>
+<li><a href="simple.html#uniform" id="toc-uniform"><span class="toc-section-number">6.7</span> The uniform distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-uniformab-distribution" id="toc-summary-of-the-uniformab-distribution"><span class="toc-section-number">6.7.1</span> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#exponential" id="toc-exponential"><span class="toc-section-number">6.8</span> The exponential distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-exponentiallambda-distribution" id="toc-summary-of-the-exponentiallambda-distribution"><span class="toc-section-number">6.8.1</span> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#normal" id="toc-normal"><span class="toc-section-number">6.9</span> The normal distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-mboxnmusigma2-distribution" id="toc-summary-of-the-mboxnmusigma2-distribution"><span class="toc-section-number">6.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution<span></span></a></li>
+<li><a href="simple.html#the-standard-normal-disribution" id="toc-the-standard-normal-disribution"><span class="toc-section-number">6.9.2</span> The standard normal disribution<span></span></a></li>
+<li><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles" id="toc-evaluating-the-normal-c.d.f.-and-quantiles"><span class="toc-section-number">6.9.3</span> Evaluating the normal c.d.f. and quantiles<span></span></a></li>
+<li><a href="simple.html#interpretation-of-sigma" id="toc-interpretation-of-sigma"><span class="toc-section-number">6.9.4</span> Interpretation of <span class="math inline">\(\sigma\)</span><span></span></a></li>
+</ul></li>
+<li><a href="simple.html#summary-of-these-continuous-distributions" id="toc-summary-of-these-continuous-distributions"><span class="toc-section-number">6.10</span> Summary of these continuous distributions<span></span></a></li>
+<li><a href="simple.html#qq" id="toc-qq"><span class="toc-section-number">6.11</span> QQ plots<span></span></a>
+<ul>
+<li><a href="simple.html#normal-qq-plots" id="toc-normal-qq-plots"><span class="toc-section-number">6.11.1</span> Normal QQ plots<span></span></a></li>
+<li><a href="simple.html#uniform-qq-plots" id="toc-uniform-qq-plots"><span class="toc-section-number">6.11.2</span> Uniform QQ plots<span></span></a></li>
+<li><a href="simple.html#exponential-qq-plots" id="toc-exponential-qq-plots"><span class="toc-section-number">6.11.3</span> Exponential QQ plots<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="a-general-strategy-for-statistical-modelling.html"><a href="a-general-strategy-for-statistical-modelling.html"><i class="fa fa-check"></i><b>10</b> A general strategy for statistical modelling</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li><a href="inference.html#inference" id="toc-inference"><span class="toc-section-number">7</span> Statistical Inference<span></span></a>
+<ul>
+<li><a href="inference.html#the-story-so-far" id="toc-the-story-so-far"><span class="toc-section-number">7.1</span> The story so far<span></span></a></li>
+<li><a href="inference.html#sample-and-populations" id="toc-sample-and-populations"><span class="toc-section-number">7.2</span> Sample and populations<span></span></a></li>
+<li><a href="inference.html#probmodels" id="toc-probmodels"><span class="toc-section-number">7.3</span> Probability models<span></span></a></li>
+<li><a href="inference.html#fitting-models" id="toc-fitting-models"><span class="toc-section-number">7.4</span> Fitting models<span></span></a></li>
+<li><a href="inference.html#uncertainty-in-estimation" id="toc-uncertainty-in-estimation"><span class="toc-section-number">7.5</span> Uncertainty in estimation<span></span></a>
+<ul>
+<li><a href="inference.html#simulation-coin-tossing-example" id="toc-simulation-coin-tossing-example"><span class="toc-section-number">7.5.1</span> Simulation: coin-tossing example<span></span></a></li>
+<li><a href="inference.html#simnorm" id="toc-simnorm"><span class="toc-section-number">7.5.2</span> Simulation: estimating the parameters of a normal distribution<span></span></a></li>
+<li><a href="inference.html#simexp" id="toc-simexp"><span class="toc-section-number">7.5.3</span> Simulation: estimating the parameters of an exponential distribution<span></span></a></li>
+<li><a href="inference.html#central-limit-theorem" id="toc-central-limit-theorem"><span class="toc-section-number">7.5.4</span> Central Limit Theorem<span></span></a></li>
+</ul></li>
+<li><a href="inference.html#good" id="toc-good"><span class="toc-section-number">7.6</span> Properties of estimators<span></span></a>
+<ul>
+<li><a href="inference.html#bias" id="toc-bias"><span class="toc-section-number">7.6.1</span> Bias<span></span></a></li>
+<li><a href="inference.html#varianceofestimator" id="toc-varianceofestimator"><span class="toc-section-number">7.6.2</span> Variance<span></span></a></li>
+<li><a href="inference.html#mean-squared-error-mse" id="toc-mean-squared-error-mse"><span class="toc-section-number">7.6.3</span> Mean squared error (MSE)<span></span></a></li>
+<li><a href="inference.html#standard-error" id="toc-standard-error"><span class="toc-section-number">7.6.4</span> Standard error<span></span></a></li>
+<li><a href="inference.html#consistency" id="toc-consistency"><span class="toc-section-number">7.6.5</span> Consistency<span></span></a></li>
+</ul></li>
+<li><a href="inference.html#assessing-goodness-of-fit" id="toc-assessing-goodness-of-fit"><span class="toc-section-number">7.7</span> Assessing goodness-of-fit<span></span></a>
+<ul>
+<li><a href="inference.html#residuals" id="toc-residuals"><span class="toc-section-number">7.7.1</span> Residuals<span></span></a></li>
+<li><a href="inference.html#standardised-residuals" id="toc-standardised-residuals"><span class="toc-section-number">7.7.2</span> Standardised residuals<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="contingency.html#contingency" id="toc-contingency"><span class="toc-section-number">8</span> Contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#way2" id="toc-way2"><span class="toc-section-number">8.1</span> 2-way contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#indep" id="toc-indep"><span class="toc-section-number">8.1.1</span> Independence<span></span></a></li>
+<li><a href="contingency.html#compprob" id="toc-compprob"><span class="toc-section-number">8.1.2</span> Comparing probabilities<span></span></a></li>
+<li><a href="contingency.html#measures" id="toc-measures"><span class="toc-section-number">8.1.3</span> Measures of association<span></span></a></li>
+</ul></li>
+<li><a href="contingency.html#way3" id="toc-way3"><span class="toc-section-number">8.2</span> 3-way contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#mutual-independence" id="toc-mutual-independence"><span class="toc-section-number">8.2.1</span> Mutual independence<span></span></a></li>
+<li><a href="contingency.html#marginal-independence" id="toc-marginal-independence"><span class="toc-section-number">8.2.2</span> Marginal independence<span></span></a></li>
+<li><a href="contingency.html#conditional-independence" id="toc-conditional-independence"><span class="toc-section-number">8.2.3</span> Conditional independence<span></span></a></li>
+<li><a href="contingency.html#confounding-variables" id="toc-confounding-variables"><span class="toc-section-number">8.2.4</span> Confounding variables<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="linreg.html#linreg" id="toc-linreg"><span class="toc-section-number">9</span> Linear regression<span></span></a>
+<ul>
+<li><a href="linreg.html#simple-linear-regression" id="toc-simple-linear-regression"><span class="toc-section-number">9.1</span> Simple linear regression<span></span></a>
+<ul>
+<li><a href="linreg.html#simple-linear-regression-model" id="toc-simple-linear-regression-model"><span class="toc-section-number">9.1.1</span> Simple linear regression model<span></span></a></li>
+<li><a href="linreg.html#least-squares-estimation-of-alpha-and-beta" id="toc-least-squares-estimation-of-alpha-and-beta"><span class="toc-section-number">9.1.2</span> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span><span></span></a></li>
+<li><a href="linreg.html#least-squares-fitting-to-hubbles-data" id="toc-least-squares-fitting-to-hubbles-data"><span class="toc-section-number">9.1.3</span> Least squares fitting to Hubble’s data<span></span></a></li>
+<li><a href="linreg.html#normal-linear-regression-model" id="toc-normal-linear-regression-model"><span class="toc-section-number">9.1.4</span> Normal linear regression model<span></span></a></li>
+<li><a href="linreg.html#lmsummary" id="toc-lmsummary"><span class="toc-section-number">9.1.5</span> Summary of the assumptions of a (normal) linear regression model<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#looking" id="toc-looking"><span class="toc-section-number">9.2</span> Looking at scatter plots<span></span></a></li>
+<li><a href="linreg.html#model-checking" id="toc-model-checking"><span class="toc-section-number">9.3</span> Model checking<span></span></a>
+<ul>
+<li><a href="linreg.html#departures-from-assumptions" id="toc-departures-from-assumptions"><span class="toc-section-number">9.3.1</span> Departures from assumptions<span></span></a></li>
+<li><a href="linreg.html#outliers" id="toc-outliers"><span class="toc-section-number">9.3.2</span> Outliers and influential observations<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#linregtrans" id="toc-linregtrans"><span class="toc-section-number">9.4</span> Use of transformations<span></span></a>
+<ul>
+<li><a href="linreg.html#interpretation-after-transformation" id="toc-interpretation-after-transformation"><span class="toc-section-number">9.4.1</span> Interpretation after transformation<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#over-fitting" id="toc-over-fitting"><span class="toc-section-number">9.5</span> Over-fitting<span></span></a></li>
+</ul></li>
+<li><a href="correlationchapter.html#correlationchapter" id="toc-correlationchapter"><span class="toc-section-number">10</span> Correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#correlation-a-measure-of-linear-association" id="toc-correlation-a-measure-of-linear-association"><span class="toc-section-number">10.1</span> Correlation: a measure of linear association<span></span></a></li>
+<li><a href="correlationchapter.html#covariance-and-correlation" id="toc-covariance-and-correlation"><span class="toc-section-number">10.2</span> Covariance and correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#estimation" id="toc-estimation"><span class="toc-section-number">10.2.1</span> Estimation<span></span></a></li>
+<li><a href="correlationchapter.html#links-between-regression-and-correlation" id="toc-links-between-regression-and-correlation"><span class="toc-section-number">10.2.2</span> Links between regression and correlation<span></span></a></li>
+</ul></li>
+<li><a href="correlationchapter.html#use-and-misuse-of-correlation" id="toc-use-and-misuse-of-correlation"><span class="toc-section-number">10.3</span> Use and misuse of correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes" id="toc-do-not-use-correlation-for-regression-sampling-schemes"><span class="toc-section-number">10.3.1</span> Do not use correlation for regression sampling schemes<span></span></a></li>
+<li><a href="correlationchapter.html#correxamples" id="toc-correxamples"><span class="toc-section-number">10.3.2</span> Examples of correlations of different strengths<span></span></a></li>
+<li><a href="correlationchapter.html#beware-missing-data-codes" id="toc-beware-missing-data-codes"><span class="toc-section-number">10.3.3</span> Beware missing data codes<span></span></a></li>
+<li><a href="correlationchapter.html#more-guessing-sample-correlations" id="toc-more-guessing-sample-correlations"><span class="toc-section-number">10.3.4</span> More guessing sample correlations<span></span></a></li>
+<li><a href="correlationchapter.html#summary" id="toc-summary"><span class="toc-section-number">10.3.5</span> Summary<span></span></a></li>
+<li><a href="correlationchapter.html#anscombes-datasets" id="toc-anscombes-datasets"><span class="toc-section-number">10.3.6</span> Anscombe’s datasets<span></span></a></li>
+<li><a href="correlationchapter.html#we-must-interpret-correlation-with-care." id="toc-we-must-interpret-correlation-with-care."><span class="toc-section-number">10.3.7</span> We must interpret correlation with care.<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="a-general-strategy-for-statistical-modelling.html#a-general-strategy-for-statistical-modelling" id="toc-a-general-strategy-for-statistical-modelling"><span class="toc-section-number">11</span> A general strategy for statistical modelling<span></span></a></li>
+<li><a href="references.html#references" id="toc-references">References<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -407,15 +411,15 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="simple" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Simple distributions</h1>
+<div id="simple" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Simple distributions<a href="simple.html#simple" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>We use a simple dataset to introduce some commonly-used simple distributions. We will study the <strong>discrete</strong> distributions: Bernoulli, binomial, geometric and Poisson. We will also study the <strong>continuous</strong> distributions: uniform, exponential, normal.</p>
-<div id="australian-births-data" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Australian births data</h2>
+<div id="australian-births-data" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Australian births data<a href="simple.html#australian-births-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Steele, S. (December 21, 1997), Babies by the Dozen for Christmas: 24-Hour Baby Boom, The Sunday Mail (Brisbane), page 7</p>
-<p>According to this article, a record 44 babies (18 girls and 26 boys) were born in one 24-hour period at the Mater Mothers’ Hospital, Brisbane, Australia, on 18th December 1997. The article listed the time of birth, the sex, and the weight in grams for each of the 44 babies. These data are given in Table <a href="simple.html#tab:abirths">5.1</a>.</p>
+<p>According to this article, a record 44 babies (18 girls and 26 boys) were born in one 24-hour period at the Mater Mothers’ Hospital, Brisbane, Australia, on 18th December 1997. The article listed the time of birth, the sex, and the weight in grams for each of the 44 babies. These data are given in Table <a href="simple.html#tab:abirths">6.1</a>.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 90%; margin-left: auto; margin-right: auto;  " id="tab:abirths">
-<caption style="caption-side: top; text-align: center;"><span id="tab:abirths">Table 5.1: </span> Australian births data.  Times are minutes since midnight.  Weights are in grams.</caption><col><col><col><col><col><col><col><col><col><col><col><col><tr>
+<caption style="caption-side: top; text-align: center;"><span id="tab:abirths">Table 6.1: </span> Australian births data.  Times are minutes since midnight.  Weights are in grams.</caption><col><col><col><col><col><col><col><col><col><col><col><col><tr>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">time</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">5</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">64</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">78</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">115</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">177</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">245</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">247</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">262</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">271</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">428</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: double solid solid solid; border-width: 3pt 0pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">455</td></tr>
 <tr>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">sex</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">girl</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">girl</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">girl</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">girl</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">boy</td></tr>
@@ -441,20 +445,20 @@ div.csl-indent {
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">weight</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3630</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3406</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3402</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3500</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3736</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3370</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2121</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3150</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3866</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3542</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0.1pt 0.1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">3278</td></tr>
 </table>
 
-<p>Figure <a href="simple.html#fig:babyintro">5.1</a> summarises the birth times of boy and girl babies.</p>
-<div class="figure" style="text-align: center"><span id="fig:babyintro"></span>
+<p>Figure <a href="simple.html#fig:babyintro">6.1</a> summarises the birth times of boy and girl babies.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:babyintro"></span>
 <img src="images/baby_intro.png" alt="Birth times of babies on 18th December 1997 by sex." width="75%" />
 <p class="caption">
-Figure 5.1: Birth times of babies on 18th December 1997 by sex.
+Figure 6.1: Birth times of babies on 18th December 1997 by sex.
 </p>
 </div>
 </div>
-<div id="the-bernoulli-distribution" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> The Bernoulli distribution</h2>
+<div id="the-bernoulli-distribution" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> The Bernoulli distribution<a href="simple.html#the-bernoulli-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Consider the first birth. The outcome is either a boy <span class="math inline">\(B\)</span> or a girl <span class="math inline">\(G\)</span>. We define a random variable</p>
 <p><span class="math display">\[\begin{equation}
 X_1 =
-\begin{cases} 
+\begin{cases}
 0 &amp; \text{ if the first baby is a girl} \\
 1 &amp; \text{ if the first baby is a boy}.
 \end{cases}
@@ -463,19 +467,19 @@ X_1 =
 <p>Let
 <span class="math display">\[\begin{eqnarray*}
 P(X_1=0)&amp;=&amp;1-p \\
-P(X_1=1)&amp;=&amp;p. 
+P(X_1=1)&amp;=&amp;p.
 \end{eqnarray*}\]</span>
 Therefore,</p>
 <p><span class="math display">\[\begin{equation}
 X_1 =
-\begin{cases} 
+\begin{cases}
 0 &amp; \text{ with probability (w.p.)} \,\,1-p \\
 1 &amp; \text{ with probability (w.p.)} \,\,p.
 \end{cases}
 \end{equation}\]</span></p>
 <p><span class="math inline">\(X_1\)</span> has a Bernoulli distribution with parameter <span class="math inline">\(p\)</span>, <span class="math inline">\((0 \leq p \leq 1)\)</span>, or, for short,
 <span class="math display">\[ X_1 \sim
-\,\mbox{Bernoulli}(p). 
+\,\mbox{Bernoulli}(p).
 \]</span>
 Here, “<span class="math inline">\(\sim\)</span>” means “is distributed as”.</p>
 <p>Similarly, we define the random variables
@@ -487,8 +491,8 @@ If we assume that the probability of a boy is the same for each birth then
 <span class="math display">\[ X_i \sim \mbox{Bernoulli}(p), \qquad \mbox{for}\,\,\,i=1,\ldots,44. \]</span></p>
 <p>In this example the sample values <span class="math inline">\(x_1, \ldots, x_{44}\)</span> of <span class="math inline">\(X_1,\ldots,X_{44}\)</span> are
 <span class="math display">\[ x_1=0, \quad x_2=0, \quad x_3=1, \quad \ldots \quad x_{44}=0. \]</span></p>
-<div id="summary-of-the-bernoullip-distribution" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution</h3>
+<div id="summary-of-the-bernoullip-distribution" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution<a href="simple.html#summary-of-the-bernoullip-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Situation</strong>: an experiment with exactly 2 possible outcomes (a Bernoulli trial), mapped to the values 0 and 1.</li>
 <li>If <span class="math inline">\(X\)</span> is a discrete random variable with p.m.f.</li>
@@ -501,8 +505,8 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 </ul>
 </div>
 </div>
-<div id="binomial" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> The binomial distribution</h2>
+<div id="binomial" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The binomial distribution<a href="simple.html#binomial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have seen that the 44 births are 44 Bernoulli trials. We define a random variable <span class="math inline">\(Y\)</span> equal to the total number of boys in the 44 births, that is,
 <span class="math display">\[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]</span>
 We assume that the outcome of each birth is independent of the outcomes of all the other births, that is, the random variables <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are mutually independent. Therefore, we have assumed that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are independent and identically distributed, or i.i.d. for short. `Identically distributed’ means that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> have exactly the same distribution, including the values of any unknown parameters. We may write</p>
@@ -528,9 +532,9 @@ In fact, there are 44 different ways to get <span class="math inline">\(Y=1\)</s
 Therefore,
 <span class="math display">\[ P(Y=1) = 44\,p\,(1-p)^{43}. \]</span>
 We can continue this argument to find that
-<span class="math display">\[ 
-P(Y=y)={44 \choose y} 
-p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44. 
+<span class="math display">\[
+P(Y=y)={44 \choose y}
+p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44.
 \]</span>
 The combinatorial term <span class="math inline">\({44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}\)</span>
 gives the number of ways in which <span class="math inline">\(y\)</span> boys births can be positioned among the 44 births.</p>
@@ -540,33 +544,33 @@ In this example the observed value of <span class="math inline">\(Y\)</span> is 
 <p>As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability <span class="math inline">\(p\)</span> that a trial results in a 1. Suppose that the 44 babies born on 18th December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability <span class="math inline">\(p\)</span> that a baby chosen randomly from this population is a boy, or equivalently, the proportion <span class="math inline">\(p\)</span> of babies in this population who are boys.</p>
 <p><strong>Exercise</strong>. We use <span class="math inline">\(\hat{p} = 26/44\)</span> as an estimate of <span class="math inline">\(p\)</span>. Why is this a sensible estimate?</p>
 <p>Putting a “hat” <span class="math inline">\(\hat{}\)</span> on a quantity indicates that the quantity is being estimated using data. Here, <span class="math inline">\(\hat{p}\)</span> means “an estimate of <span class="math inline">\(p\)</span>”.</p>
-<p>Figure <a href="simple.html#fig:babybinompmfs">5.2</a> shows the p.m.f.s of 4 binomial(44,<span class="math inline">\(p\)</span>) distributions, for different values of <span class="math inline">\(p\)</span>. One way to think about choosing an estimate of <span class="math inline">\(p\)</span> is to see for which value of <span class="math inline">\(p\)</span> the observed data are most likely. In this case we have only one sample value, <span class="math inline">\(y=26\)</span>. Looking at Figure <a href="simple.html#fig:babybinompmfs">5.2</a> we can see that <span class="math inline">\(y=26\)</span> is very unlikely for <span class="math inline">\(p=0.1\)</span> and <span class="math inline">\(p=0.9\)</span>, more likely for <span class="math inline">\(p=0.5\)</span> and even more likely for <span class="math inline">\(p=\hat{p}\)</span>. In addition to making sense because it is the observed proportion of boy babies, <span class="math inline">\(\hat{p}\)</span> has the property that the observed data are more likely for <span class="math inline">\(p=\hat{p}\)</span> than for any other value of <span class="math inline">\(p\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:babybinompmfs"></span>
+<p>Figure <a href="simple.html#fig:babybinompmfs">6.2</a> shows the p.m.f.s of 4 binomial(44,<span class="math inline">\(p\)</span>) distributions, for different values of <span class="math inline">\(p\)</span>. One way to think about choosing an estimate of <span class="math inline">\(p\)</span> is to see for which value of <span class="math inline">\(p\)</span> the observed data are most likely. In this case we have only one sample value, <span class="math inline">\(y=26\)</span>. Looking at Figure <a href="simple.html#fig:babybinompmfs">6.2</a> we can see that <span class="math inline">\(y=26\)</span> is very unlikely for <span class="math inline">\(p=0.1\)</span> and <span class="math inline">\(p=0.9\)</span>, more likely for <span class="math inline">\(p=0.5\)</span> and even more likely for <span class="math inline">\(p=\hat{p}\)</span>. In addition to making sense because it is the observed proportion of boy babies, <span class="math inline">\(\hat{p}\)</span> has the property that the observed data are more likely for <span class="math inline">\(p=\hat{p}\)</span> than for any other value of <span class="math inline">\(p\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:babybinompmfs"></span>
 <img src="images/binom_pmf1.png" alt="Binomial($44,p$) p.m.f.s: $p=0.1$ (top); $p=1/2$ (second from top); $p=0.591$ (second from bottom); $p=0.9$ (bottom).  The sample value $y=26$ has been shaded in black." width="75%" /><img src="images/binom_pmf2.png" alt="Binomial($44,p$) p.m.f.s: $p=0.1$ (top); $p=1/2$ (second from top); $p=0.591$ (second from bottom); $p=0.9$ (bottom).  The sample value $y=26$ has been shaded in black." width="75%" /><img src="images/binom_pmf3.png" alt="Binomial($44,p$) p.m.f.s: $p=0.1$ (top); $p=1/2$ (second from top); $p=0.591$ (second from bottom); $p=0.9$ (bottom).  The sample value $y=26$ has been shaded in black." width="75%" /><img src="images/binom_pmf4.png" alt="Binomial($44,p$) p.m.f.s: $p=0.1$ (top); $p=1/2$ (second from top); $p=0.591$ (second from bottom); $p=0.9$ (bottom).  The sample value $y=26$ has been shaded in black." width="75%" />
 <p class="caption">
-Figure 5.2: Binomial(<span class="math inline">\(44,p\)</span>) p.m.f.s: <span class="math inline">\(p=0.1\)</span> (top); <span class="math inline">\(p=1/2\)</span> (second from top); <span class="math inline">\(p=0.591\)</span> (second from bottom); <span class="math inline">\(p=0.9\)</span> (bottom). The sample value <span class="math inline">\(y=26\)</span> has been shaded in black.
+Figure 6.2: Binomial(<span class="math inline">\(44,p\)</span>) p.m.f.s: <span class="math inline">\(p=0.1\)</span> (top); <span class="math inline">\(p=1/2\)</span> (second from top); <span class="math inline">\(p=0.591\)</span> (second from bottom); <span class="math inline">\(p=0.9\)</span> (bottom). The sample value <span class="math inline">\(y=26\)</span> has been shaded in black.
 </p>
 </div>
-<div id="binominf" class="section level3" number="5.3.1">
-<h3><span class="header-section-number">5.3.1</span> A brief look at statistical inference about <span class="math inline">\(p\)</span></h3>
+<div id="binominf" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> A brief look at statistical inference about <span class="math inline">\(p\)</span><a href="simple.html#binominf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>This section of the notes is not part of STAT0002. It introduces ideas surrounding hypothesis testing and confidence intervals. If you take STAT0003 then you will cover these ideas in more detail. This section is included because you may find it interesting to think about these ideas now.</strong></p>
-<p>We have observed more boys than girls. If <span class="math inline">\(p=1/2\)</span> we would expect roughly equal numbers of boys and girls. Even if it is true that <span class="math inline">\(p=1/2\)</span>, we would only occasionally get equal numbers of boys and girls born on each day. We might like to quantify how unlikely is the event of a 26:18 split in 44 independent Bernoulli(1/2) trials. If this is very unlikely we might think that perhaps <span class="math inline">\(p \neq 1/2\)</span> after all. This is an example of <strong>statistical inference</strong>, that is, making an inference about the true value of <span class="math inline">\(p\)</span>. We will study statistical inference in Chapter <a href="inference.html#inference">6</a>.</p>
-<p>In this example we might want to infer whether or not <span class="math inline">\(p=0.5\)</span>. We wish to judge whether the estimate <span class="math inline">\(\hat{p}\)</span> is far enough from 0.5 for us to conclude that <span class="math inline">\(p \neq 0.5\)</span>. We need to take into account how reliable (a term that we will use in Chapter <a href="inference.html#inference">6</a> is how <strong>precise</strong>) the estimation of <span class="math inline">\(p\)</span> is. For a given true value of <span class="math inline">\(p\)</span> the larger the sample size <span class="math inline">\(n\)</span> (here <span class="math inline">\(n = 44\)</span>) the greater the precision. If you take STAT0003 then you will study this in some detail. Here, we introduce two main approaches to this problem. They will seem rather similar, but there is a subtle difference.</p>
-<div id="if-p0.5-then-how-surprising-is-hatp0.591" class="section level4 unnumbered">
-<h4>1. If <span class="math inline">\(p=0.5\)</span> then how surprising is <span class="math inline">\(\hat{p}=0.591\)</span>?</h4>
+<p>We have observed more boys than girls. If <span class="math inline">\(p=1/2\)</span> we would expect roughly equal numbers of boys and girls. Even if it is true that <span class="math inline">\(p=1/2\)</span>, we would only occasionally get equal numbers of boys and girls born on each day. We might like to quantify how unlikely is the event of a 26:18 split in 44 independent Bernoulli(1/2) trials. If this is very unlikely we might think that perhaps <span class="math inline">\(p \neq 1/2\)</span> after all. This is an example of <strong>statistical inference</strong>, that is, making an inference about the true value of <span class="math inline">\(p\)</span>. We will study statistical inference in Chapter <a href="inference.html#inference">7</a>.</p>
+<p>In this example we might want to infer whether or not <span class="math inline">\(p=0.5\)</span>. We wish to judge whether the estimate <span class="math inline">\(\hat{p}\)</span> is far enough from 0.5 for us to conclude that <span class="math inline">\(p \neq 0.5\)</span>. We need to take into account how reliable (a term that we will use in Chapter <a href="inference.html#inference">7</a> is how <strong>precise</strong>) the estimation of <span class="math inline">\(p\)</span> is. For a given true value of <span class="math inline">\(p\)</span> the larger the sample size <span class="math inline">\(n\)</span> (here <span class="math inline">\(n = 44\)</span>) the greater the precision. If you take STAT0003 then you will study this in some detail. Here, we introduce two main approaches to this problem. They will seem rather similar, but there is a subtle difference.</p>
+<div id="if-p0.5-then-how-surprising-is-hatp0.591" class="section level4 unnumbered hasAnchor">
+<h4>1. If <span class="math inline">\(p=0.5\)</span> then how surprising is <span class="math inline">\(\hat{p}=0.591\)</span>?<a href="simple.html#if-p0.5-then-how-surprising-is-hatp0.591" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suppose that the <strong>null hypothesis</strong> <span class="math inline">\(H_0: p=0.5\)</span> is true. How unlikely it is that a sample of size <span class="math inline">\(44\)</span> produces an estimate of <span class="math inline">\(p\)</span> as far, or further from, 0.5 than <span class="math inline">\(\hat{p}=0.591\)</span>?</p>
 <p>You could think of this as ‘standing’ on the null hypothesis <span class="math inline">\(H_0\)</span> and looking to see how far away are the data.</p>
-<p>If <span class="math inline">\(p=0.5\)</span>, <span class="math inline">\(P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30\)</span>. Figure <a href="simple.html#fig:binominf">5.3</a> illustrates the calculation of this probability. This (the value 0.30 here) is called a <strong><span class="math inline">\(p\)</span>-value</strong>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data if the null hypothesis is true. The smaller the <span class="math inline">\(p\)</span>-value the greater our surprise. We could decide to reject the null hypothesis <span class="math inline">\(H_0\)</span> that <span class="math inline">\(p=0.5\)</span> if the <span class="math inline">\(p\)</span>-value is sufficiently small. Otherwise, we do not reject <span class="math inline">\(H_0\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:binominf"></span>
+<p>If <span class="math inline">\(p=0.5\)</span>, <span class="math inline">\(P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30\)</span>. Figure <a href="simple.html#fig:binominf">6.3</a> illustrates the calculation of this probability. This (the value 0.30 here) is called a <strong><span class="math inline">\(p\)</span>-value</strong>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data if the null hypothesis is true. The smaller the <span class="math inline">\(p\)</span>-value the greater our surprise. We could decide to reject the null hypothesis <span class="math inline">\(H_0\)</span> that <span class="math inline">\(p=0.5\)</span> if the <span class="math inline">\(p\)</span>-value is sufficiently small. Otherwise, we do not reject <span class="math inline">\(H_0\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:binominf"></span>
 <img src="images/binom_inference_1b.png" alt="A binomial($44,1/2$) p.m.f. with the probabilities satisfying $Y$ less than or equal to 18 or greater than or equal to 26 shaded in black." width="75%" />
 <p class="caption">
-Figure 5.3: A binomial(<span class="math inline">\(44,1/2\)</span>) p.m.f. with the probabilities satisfying <span class="math inline">\(Y\)</span> less than or equal to 18 or greater than or equal to 26 shaded in black.
+Figure 6.3: A binomial(<span class="math inline">\(44,1/2\)</span>) p.m.f. with the probabilities satisfying <span class="math inline">\(Y\)</span> less than or equal to 18 or greater than or equal to 26 shaded in black.
 </p>
 </div>
 <p>A traditional cutoff for “sufficiently small” is 0.05, but it is not possible to argue that this is generally better than other choices of cutoff. Based on this cutoff we would not reject <span class="math inline">\(H_0\)</span>, because <span class="math inline">\(0.3 &gt; 0.05\)</span>.</p>
 </div>
-<div id="is-p0.5-plausible-based-on-inferences-made-about-p-using-the-data" class="section level4 unnumbered">
-<h4>2. Is <span class="math inline">\(p=0.5\)</span> plausible based on inferences made about <span class="math inline">\(p\)</span> using the data?</h4>
+<div id="is-p0.5-plausible-based-on-inferences-made-about-p-using-the-data" class="section level4 unnumbered hasAnchor">
+<h4>2. Is <span class="math inline">\(p=0.5\)</span> plausible based on inferences made about <span class="math inline">\(p\)</span> using the data?<a href="simple.html#is-p0.5-plausible-based-on-inferences-made-about-p-using-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We estimate <span class="math inline">\(p\)</span> and then see how close the estimate is to 0.5. In this example <span class="math inline">\(\hat{p}=26/44=0.591\)</span>. To quantify whether this is significantly different from 0.5 we can calculate an interval estimate of <span class="math inline">\(p\)</span>, called a <strong>confidence interval</strong>, and see whether or not this interval contains 0.5. If it does not contain 0.5 then we could decide to reject the null hypothesis <span class="math inline">\(H_0\)</span> that <span class="math inline">\(p=0.5\)</span>. Otherwise, we do not reject <span class="math inline">\(H_0\)</span>.</p>
 <p>You could think of this as ‘standing’ on the data and looking to see how far away is the null hypothesis <span class="math inline">\(H_0.\)</span></p>
 <p>A confidence interval is a realisation (the observed value) of a random interval that has a certain probability of covering the true value of <span class="math inline">\(p\)</span>. The interval is random because before we collect the data we do not know what the interval will be. For example, A 95% confidence interval for <span class="math inline">\(p\)</span> has a probability of 0.95 of covering the true value of <span class="math inline">\(p\)</span>.</p>
@@ -574,8 +578,8 @@ Figure 5.3: A binomial(<span class="math inline">\(44,1/2\)</span>) p.m.f. with 
 <p>In modern Statistics method 2. (<strong>interval estimation</strong>) is often preferred to 1. (<strong>hypothesis testing</strong>) because it gives an interval estimate for <span class="math inline">\(p\)</span> rather than just a decision of whether or not to reject <span class="math inline">\(H_0: p=0.5\)</span>.</p>
 </div>
 </div>
-<div id="summary-of-the-binomialnp-distribution" class="section level3" number="5.3.2">
-<h3><span class="header-section-number">5.3.2</span> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution</h3>
+<div id="summary-of-the-binomialnp-distribution" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution<a href="simple.html#summary-of-the-binomialnp-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Situation</strong>: the number of 1s in <span class="math inline">\(n\)</span> independent Bernoulli trials,
 each trial having the same probability <span class="math inline">\(p\)</span> of obtaining a 1.</li>
@@ -588,8 +592,8 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 <p>A binomial(1,<span class="math inline">\(p\)</span>) distribution is the same as a Bernoulli(<span class="math inline">\(p\)</span>) distribution.</p>
 </div>
 </div>
-<div id="the-geometric-distribution" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> The geometric distribution</h2>
+<div id="the-geometric-distribution" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> The geometric distribution<a href="simple.html#the-geometric-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The ordering of the arrivals of the boy and girl babies is
 <span class="math display">\[ G G B B B G G B B B B B G G B G G B B B B G G G G B B B G B G B B B B B G B B B B G G G \]</span></p>
 <p>Suppose that are interested in the arrival of the 1st baby boy. We define the random variable <span class="math inline">\(W_1\)</span> to be the number of births up to and including the birth of the 1st boy. In the current example, the 1st boy is born on the 3rd birth, so the sample value of <span class="math inline">\(W_1\)</span> is <span class="math inline">\(w_1=3\)</span>.</p>
@@ -597,9 +601,9 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 <p>Similarly, we define <span class="math inline">\(W_i\)</span> to be the number of births, after the birth of the <span class="math inline">\((i-1)\)</span>th boy, up to and including the birth of the <span class="math inline">\(i\)</span>th boy.</p>
 <p>This leads to values <span class="math inline">\(w_1, w_2, \ldots, w_{26}\)</span>:
 <span class="math display">\[ 3, 1, 1, 3, 1, 1, 1, 1, 3, 3, 1, 1, 1, 5, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1 \]</span>
-The last 3 observations (<span class="math inline">\(GGG\)</span>) do not contribute here because we do not know when the next boy arrived. The frequencies of these values appear in column 2 of Table <a href="simple.html#tab:geom">5.2</a>. In column 4 we have divided these <strong>observed frequencies</strong> by 26 to obtain the <strong>relative frequencies</strong>. We explain the contents of columns 3 and 5 of this table later.</p>
+The last 3 observations (<span class="math inline">\(GGG\)</span>) do not contribute here because we do not know when the next boy arrived. The frequencies of these values appear in column 2 of Table <a href="simple.html#tab:geom">6.2</a>. In column 4 we have divided these <strong>observed frequencies</strong> by 26 to obtain the <strong>relative frequencies</strong>. We explain the contents of columns 3 and 5 of this table later.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 90%; margin-left: auto; margin-right: auto;  " id="tab:geom">
-<caption style="caption-side: top; text-align: center;"><span id="tab:geom">Table 5.2: </span> Observed frequencies and relative frequencies and their fitted values under a geometric(0.591) distribution.</caption><col><col><col><col><col><tr>
+<caption style="caption-side: top; text-align: center;"><span id="tab:geom">Table 6.2: </span> Observed frequencies and relative frequencies and their fitted values under a geometric(0.591) distribution.</caption><col><col><col><col><col><tr>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">number of births</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">observed</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">estimated expected</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">relative</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">estimated</td></tr>
 <tr>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">until boy born</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">frequency</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">frequency</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">frequency</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">probability</td></tr>
@@ -619,12 +623,12 @@ The last 3 observations (<span class="math inline">\(GGG\)</span>) do not contri
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">26</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 0pt 60pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">26&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1</td></tr>
 </table>
 
-<p><strong>Question</strong>: Why have I written ‘<span class="math inline">\(\geq\)</span> 6’ in the first column of Table <a href="simple.html#tab:geom">5.2</a> rather than ‘6’?</p>
-<p>The observed frequencies are plotted in Figure <a href="simple.html#fig:geombar">5.4</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:geombar"></span>
+<p><strong>Question</strong>: Why have I written ‘<span class="math inline">\(\geq\)</span> 6’ in the first column of Table <a href="simple.html#tab:geom">6.2</a> rather than ‘6’?</p>
+<p>The observed frequencies are plotted in Figure <a href="simple.html#fig:geombar">6.4</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:geombar"></span>
 <img src="images/baby_geom_bar.png" alt="Bar plot of numbers of births between successive baby boys (including the next baby boy)." width="75%" />
 <p class="caption">
-Figure 5.4: Bar plot of numbers of births between successive baby boys (including the next baby boy).
+Figure 6.4: Bar plot of numbers of births between successive baby boys (including the next baby boy).
 </p>
 </div>
 <p>Now we find the probability distribution of <span class="math inline">\(W_1, W_2, \ldots\)</span>. First we consider <span class="math inline">\(W_1\)</span>. Recall that the outcomes <span class="math inline">\(X_1,\ldots,X_{44}\)</span> of the 44 births are assumed to be independent Bernoulli trials.</p>
@@ -635,28 +639,28 @@ Figure 5.4: Bar plot of numbers of births between successive baby boys (includin
 <p>We can continue this argument to find</p>
 <p><span class="math display" id="eq:geom">\[\begin{equation}
 P(W_1=w) = (1-p)^{w-1}\,p, \qquad w=1,2,\ldots.  
-\tag{5.1}
+\tag{6.1}
 \end{equation}\]</span></p>
 <p><span class="math inline">\(W_1\)</span> has a geometric distribution with parameter <span class="math inline">\(p\)</span>, <span class="math inline">\((0 &lt; p \leq 1)\)</span>, or, for short,
 <span class="math display">\[ W_1 \sim \mbox{geometric}(p). \]</span>
-We exclude <span class="math inline">\(p=0\)</span> because in this case we would never get a 1 and the <a href="simple.html#eq:geom">(5.1)</a> would sum to zero not one.</p>
+We exclude <span class="math inline">\(p=0\)</span> because in this case we would never get a 1 and the <a href="simple.html#eq:geom">(6.1)</a> would sum to zero not one.</p>
 <p>Since <span class="math inline">\(W_2\)</span> relates to exactly the same situation as <span class="math inline">\(W_1\)</span>, that is, the number of births until the next boy is born, <span class="math inline">\(W_2\)</span> has the same distribution as <span class="math inline">\(W_1\)</span>. (We may write <span class="math inline">\(W_1 \,\stackrel{{\rm d}}{=}\, W_2\)</span> for “<span class="math inline">\(W_1\)</span> has the same distribution as <span class="math inline">\(W_2\)</span>”.) Similarly <span class="math inline">\(W_3,W_4,\ldots\)</span> also have the same distribution as <span class="math inline">\(W_1\)</span>.</p>
 <p>The outcomes of the births are assumed to be mutually independent.<br />
 <span class="math display">\[ W_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{geometric}(p), \qquad i=1,\ldots,26. \]</span>
 <span class="math inline">\(W_1, \ldots, W_{26}\)</span> are a <strong>random sample</strong> from a geometric(<span class="math inline">\(p\)</span>) distribution.</p>
-<p>We do not know the value of <span class="math inline">\(p\)</span> but we have an estimate <span class="math inline">\(\hat{p}=26/44\)</span> of <span class="math inline">\(p\)</span>. We substitute this estimate of <span class="math inline">\(p\)</span> into equation <a href="simple.html#eq:geom">(5.1)</a> to calculate the <strong>estimated probabilities</strong> in column 5 of Table <a href="simple.html#tab:geom">5.2</a>.
+<p>We do not know the value of <span class="math inline">\(p\)</span> but we have an estimate <span class="math inline">\(\hat{p}=26/44\)</span> of <span class="math inline">\(p\)</span>. We substitute this estimate of <span class="math inline">\(p\)</span> into equation <a href="simple.html#eq:geom">(6.1)</a> to calculate the <strong>estimated probabilities</strong> in column 5 of Table <a href="simple.html#tab:geom">6.2</a>.
 Multiplying the estimated probabilities by 26 gives the <strong>expected</strong> frequencies in column 3. That is,</p>
 <p>Estimated probabilities: <span class="math inline">\((1-\hat{p})^{w-1}\,\hat{p}, \quad w=1,2,\ldots.\)</span></p>
 <p>Estimated expected frequencies: <span class="math inline">\(26 \times (1-\hat{p})^{w-1}\,\hat{p}, \quad w=1,2,\ldots.\)</span></p>
-<p>Figure <a href="simple.html#fig:geomfit">5.5</a> shows that the observed and estimated expected frequencies are in reasonably close agreement. We do not expect exact agreement. Formal methods for assessing how closely observed and estimated expected frequencies agree are not part of STAT0002. Figure <a href="simple.html#fig:geomfit">5.5</a> also shows the general shape of the geometric distribution. It is positively skewed.</p>
-<div class="figure" style="text-align: center"><span id="fig:geomfit"></span>
+<p>Figure <a href="simple.html#fig:geomfit">6.5</a> shows that the observed and estimated expected frequencies are in reasonably close agreement. We do not expect exact agreement. Formal methods for assessing how closely observed and estimated expected frequencies agree are not part of STAT0002. Figure <a href="simple.html#fig:geomfit">6.5</a> also shows the general shape of the geometric distribution. It is positively skewed.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:geomfit"></span>
 <img src="images/baby_geom_fit.png" alt="Observed frequencies and estimated expected frequencies under a geometric(0.591) distribution." width="75%" />
 <p class="caption">
-Figure 5.5: Observed frequencies and estimated expected frequencies under a geometric(0.591) distribution.
+Figure 6.5: Observed frequencies and estimated expected frequencies under a geometric(0.591) distribution.
 </p>
 </div>
-<div id="summary-of-the-geometricp-distribution" class="section level3" number="5.4.1">
-<h3><span class="header-section-number">5.4.1</span> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution</h3>
+<div id="summary-of-the-geometricp-distribution" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution<a href="simple.html#summary-of-the-geometricp-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Situation</strong>: the number of trials up to and including the first value of 1 in a sequence of independent Bernoulli trials, each trial having the same probability <span class="math inline">\(p\)</span> of obtaining a 1.</li>
 <li>If <span class="math inline">\(W\)</span> is a discrete random variable with p.m.f.
@@ -668,12 +672,12 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 &
 <p>An alternative formulation is where a random variable <span class="math inline">\(V\)</span> is defined as the number of trials performed <strong>before</strong> the first 1 occurs. Therefore, the support of <span class="math inline">\(V\)</span> is <span class="math inline">\(0, 1, 2, ...\)</span> and <span class="math inline">\(V = W - 1\)</span>. The <code>dgeom()</code> function in R relates to a random variable like <span class="math inline">\(V\)</span>, not <span class="math inline">\(W\)</span>.</p>
 </div>
 </div>
-<div id="Poisson" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> The Poisson distribution</h2>
+<div id="Poisson" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> The Poisson distribution<a href="simple.html#Poisson" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now we look at the numbers <span class="math inline">\(N_1, \ldots, N_{24}\)</span> of births that occur in each hour of the 24 hours on the day December 18, 1997. This produces a <strong>count</strong> for each hour. We have split the 24-hour period into 24 time periods of the same length. We could equally have chosen to split it into 12 time periods, each of length 2 hours.</p>
-<p>The frequencies of these counts appear in column 2 of Table <a href="simple.html#tab:pois">5.3</a>. In column 4 we have divided these <strong>observed frequencies</strong> by 24 to obtain the <strong>relative frequencies</strong>. We explain the contents of columns 3 and 5 of this table later.</p>
+<p>The frequencies of these counts appear in column 2 of Table <a href="simple.html#tab:pois">6.3</a>. In column 4 we have divided these <strong>observed frequencies</strong> by 24 to obtain the <strong>relative frequencies</strong>. We explain the contents of columns 3 and 5 of this table later.</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 90%; margin-left: auto; margin-right: auto;  " id="tab:pois">
-<caption style="caption-side: top; text-align: center;"><span id="tab:pois">Table 5.3: </span> Observed frequencies and relative frequencies and their fitted values for a Poisson(1.83) distribution.</caption><col><col><col><col><col><tr>
+<caption style="caption-side: top; text-align: center;"><span id="tab:pois">Table 6.3: </span> Observed frequencies and relative frequencies and their fitted values for a Poisson(1.83) distribution.</caption><col><col><col><col><col><tr>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">number of births</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">observed</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">estimated expected</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">observed</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(255, 255, 255);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">estimated</td></tr>
 <tr>
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">in 1 hour</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">frequency</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">frequency</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">proportion</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0.1pt 0.1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">probability</td></tr>
@@ -693,11 +697,11 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 &
 <td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">24</td><td style="vertical-align: top; text-align: right; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 0pt 60pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">24&nbsp;&nbsp;&nbsp;</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0.1pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 0pt 0.1pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 0pt 6pt 0pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1</td></tr>
 </table>
 
-<p>The observed frequencies are plotted in Figure <a href="simple.html#fig:poisbar">5.6</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:poisbar"></span>
+<p>The observed frequencies are plotted in Figure <a href="simple.html#fig:poisbar">6.6</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:poisbar"></span>
 <img src="images/baby_pois_bar.png" alt="Bar plot of numbers of births in each hour of the 24 hours of December 18, 1997." width="75%" />
 <p class="caption">
-Figure 5.6: Bar plot of numbers of births in each hour of the 24 hours of December 18, 1997.
+Figure 6.6: Bar plot of numbers of births in each hour of the 24 hours of December 18, 1997.
 </p>
 </div>
 <p>We make assumptions about the way in which the births occur over time. Suppose that births occur</p>
@@ -714,7 +718,7 @@ interval of length <span class="math inline">\(h\)</span> hours has a particular
 <span class="math display">\[N_1 \sim \mbox{Poisson}(\lambda).\]</span><br />
 The probability mass function (p.m.f.) of <span class="math inline">\(N_1\)</span> is given by
 <span class="math display" id="eq:pois">\[\begin{equation}
-P(N_1=n) = \frac{\lambda^n\,e^{-\lambda}}{n!}, \qquad n=0,1,2,\ldots. \tag{5.2}
+P(N_1=n) = \frac{\lambda^n\,e^{-\lambda}}{n!}, \qquad n=0,1,2,\ldots. \tag{6.2}
 \end{equation}\]</span></p>
 <p>These arguments also apply to <span class="math inline">\(N_2, N_3, ... , N_{24}\)</span>. Therefore,
 <span class="math display">\[ N_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Poisson}(\lambda), \qquad i=1,\ldots,24, \]</span>
@@ -723,26 +727,26 @@ that is, <span class="math inline">\(N_1,\ldots,N_{24}\)</span> are a random sam
 <span class="math display">\[ n_1=1, \quad n_2=3, \quad \ldots, \quad n_{24}=2. \]</span></p>
 <p>We do not know the value of <span class="math inline">\(\lambda\)</span>, but we can estimate it using <span class="math inline">\(\hat{\lambda} = 44 / 24 \approx 1.83\)</span> births per hour.</p>
 <p><strong>Exercise</strong>. Why is this a sensible estimate of <span class="math inline">\(\lambda\)</span>?</p>
-<p>We substitute this estimate of <span class="math inline">\(\lambda\)</span> into equation <a href="simple.html#eq:pois">(5.2)</a> to calculate the estimated probabilities in column 5 of Table Table <a href="simple.html#tab:pois">5.3</a>. Multiplying the estimated probabilities by 24 gives the estimated expected frequencies in column 3. That is,</p>
+<p>We substitute this estimate of <span class="math inline">\(\lambda\)</span> into equation <a href="simple.html#eq:pois">(6.2)</a> to calculate the estimated probabilities in column 5 of Table Table <a href="simple.html#tab:pois">6.3</a>. Multiplying the estimated probabilities by 24 gives the estimated expected frequencies in column 3. That is,</p>
 <p>Estimated probabilities: <span class="math inline">\(\displaystyle\frac{\hat{\lambda}^n\, e^{-\hat{\lambda}}}{n!}, \quad n=0,1,2,\ldots.\)</span></p>
 <p>Estimated expected frequencies: <span class="math inline">\(24 \times \displaystyle\frac{\hat{\lambda}^n\,e^{-\hat{\lambda}}}{n!}, \quad n=0,1,2,\ldots.\)</span></p>
-<p>Figure <a href="simple.html#fig:poisfit">5.7</a> shows that the observed and estimated expected frequencies
+<p>Figure <a href="simple.html#fig:poisfit">6.7</a> shows that the observed and estimated expected frequencies
 are in reasonably close agreement.</p>
-<div class="figure" style="text-align: center"><span id="fig:poisfit"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:poisfit"></span>
 <img src="images/baby_pois_fit.png" alt="Observed frequencies and the estimated expected frequencies under a Poisson(1.83) distribution." width="75%" />
 <p class="caption">
-Figure 5.7: Observed frequencies and the estimated expected frequencies under a Poisson(1.83) distribution.
+Figure 6.7: Observed frequencies and the estimated expected frequencies under a Poisson(1.83) distribution.
 </p>
 </div>
-<p>Figure <a href="simple.html#fig:poispmfs">5.8</a> shows 3 different Poisson p.m.f.s. As <span class="math inline">\(\lambda\)</span> increases the Poisson p.m.f. becomes increasingly symmetric. The middle plot shows the p.m.f. of the Poisson distribution we have fitted to the hourly baby totals. This plot has approximately the same shape as the frequency distribution of hourly baby totals in Figure <a href="simple.html#fig:poisbar">5.6</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:poispmfs"></span>
+<p>Figure <a href="simple.html#fig:poispmfs">6.8</a> shows 3 different Poisson p.m.f.s. As <span class="math inline">\(\lambda\)</span> increases the Poisson p.m.f. becomes increasingly symmetric. The middle plot shows the p.m.f. of the Poisson distribution we have fitted to the hourly baby totals. This plot has approximately the same shape as the frequency distribution of hourly baby totals in Figure <a href="simple.html#fig:poisbar">6.6</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:poispmfs"></span>
 <img src="images/poisson_pmf1.png" alt="Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom)." width="75%" /><img src="images/poisson_pmf2.png" alt="Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom)." width="75%" /><img src="images/poisson_pmf3.png" alt="Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom)." width="75%" />
 <p class="caption">
-Figure 5.8: Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom).
+Figure 6.8: Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom).
 </p>
 </div>
-<div id="summary-of-the-poissonmu-distribution" class="section level3" number="5.5.1">
-<h3><span class="header-section-number">5.5.1</span> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution</h3>
+<div id="summary-of-the-poissonmu-distribution" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution<a href="simple.html#summary-of-the-poissonmu-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Situation: the number events occurring during a time period of fixed duration.</li>
 <li>If <span class="math inline">\(N\)</span> is a discrete random variable with p.m.f.
@@ -756,8 +760,8 @@ for some <span class="math inline">\(\mu\)</span>, then <span class="math inline
 </ul>
 </div>
 </div>
-<div id="summary-of-these-discrete-distributions" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> Summary of these discrete distributions</h2>
+<div id="summary-of-these-discrete-distributions" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Summary of these discrete distributions<a href="simple.html#summary-of-these-discrete-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have studied 4 common discrete distributions:</p>
 <ul>
 <li><strong>Bernoulli</strong>. A single trial with a binary outcome (0/1 variable).</li>
@@ -767,18 +771,18 @@ for some <span class="math inline">\(\mu\)</span>, then <span class="math inline
 <li><strong>Poisson</strong>: used for counts of events that arrive in a Poisson process.</li>
 </ul>
 </div>
-<div id="uniform" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> The uniform distribution</h2>
+<div id="uniform" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> The uniform distribution<a href="simple.html#uniform" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now suppose that we are interested in the <strong>times</strong> at which the babies are born. Previously we assumed that births occur in a Poisson process: singly, independently and randomly at a constant rate.</p>
-<p>If, as we have assumed, births occur in a Poisson process, that is, singly, independently and randomly at a constant rate, we would expect the times of birth to be scattered randomly over the interval (0, 24) hours. We would not expect all the births to be between, for example, 12h and 18h. However, births should not be regularly spaced: there will be periods of time when there are large numbers of births, and other periods of time when there are only small numbers. At first glance, the times of birth in Figure <a href="simple.html#fig:babyintro">5.1</a> do appear to be approximately consistent with being randomly scattered over (0, 24) hours.</p>
+<p>If, as we have assumed, births occur in a Poisson process, that is, singly, independently and randomly at a constant rate, we would expect the times of birth to be scattered randomly over the interval (0, 24) hours. We would not expect all the births to be between, for example, 12h and 18h. However, births should not be regularly spaced: there will be periods of time when there are large numbers of births, and other periods of time when there are only small numbers. At first glance, the times of birth in Figure <a href="simple.html#fig:babyintro">6.1</a> do appear to be approximately consistent with being randomly scattered over (0, 24) hours.</p>
 <p>Consider a single birth chosen at random from the 44 births. Let <span class="math inline">\(U_1\)</span> be the time, in hours since midnight, of birth of this baby. We know that this birth occurred somewhere in the time interval (0,24). Therefore, <span class="math inline">\(0 &lt; U_1 &lt; 24\)</span>. All births are assumed to occur at a constant rate over (0,24). Therefore, this birth is no more likely to have occurred at a particular time in (0,24) than at any other time. In other words, the time of this birth is equally likely to lie anywhere in the interval (0,24). Since time is continuous <span class="math inline">\(U_1\)</span> is a continuous random variable.</p>
 <p>The discussion above should make it clear that, if births occur in a Poisson process, the p.d.f. of <span class="math inline">\(U_1\)</span> is given by
 <span class="math display">\[ f_{U_1}(u) = \frac1{24}, \qquad 0 &lt; u &lt; 24. \]</span>
-This p.d.f. is plotted in Figure <a href="simple.html#fig:unifpdf">5.9</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:unifpdf"></span>
+This p.d.f. is plotted in Figure <a href="simple.html#fig:unifpdf">6.9</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unifpdf"></span>
 <img src="images/unif_pdf.png" alt="The p.d.f. of a U(0, 24) distribution." width="75%" />
 <p class="caption">
-Figure 5.9: The p.d.f. of a U(0, 24) distribution.
+Figure 6.9: The p.d.f. of a U(0, 24) distribution.
 </p>
 </div>
 <p>This is the p.d.f. of a (continuous) uniform distribution over the interval (0,24), or, for short,
@@ -787,17 +791,17 @@ A uniform distribution is sometimes called a rectangular distribution. The unifo
 <p>Suppose that we choose another time of birth <span class="math inline">\(U_2\)</span> from the remaining 43 births. The arguments we made about <span class="math inline">\(U_1\)</span> apply equally to <span class="math inline">\(U_2\)</span>. Therefore <span class="math inline">\(U_2 \sim \mbox{U}(0,24)\)</span>. Similarly <span class="math inline">\(U_3, U_4, \ldots, U_{44} \sim \mbox{U}(0,24)\)</span>. The assumption that the births occur independently of each other means that
 <span class="math display">\[ U_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{U}(0,24), \qquad i=1,\ldots,44, \]</span>
 that is, <span class="math inline">\(U_1,\ldots,U_{44}\)</span> are a random sample from a <span class="math inline">\(\mbox{U}(0,24)\)</span> distribution.</p>
-<p>How else (in addition to looking at Figure <a href="simple.html#fig:babyintro">5.1</a>) can we examine whether the sample times of birth <span class="math inline">\(u_1, \ldots, u_{44}\)</span> look like a random sample from a <span class="math inline">\(\mbox{U}(0,24)\)</span> distribution?</p>
-<p>One way is to look at a histogram of the times of birth to see whether it is approximately flat. Figure <a href="simple.html#fig:unifhists">5.10</a> shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a <strong>uniform QQ plot</strong>. We do this in Section <a href="simple.html#qq">5.11</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:unifhists"></span>
+<p>How else (in addition to looking at Figure <a href="simple.html#fig:babyintro">6.1</a>) can we examine whether the sample times of birth <span class="math inline">\(u_1, \ldots, u_{44}\)</span> look like a random sample from a <span class="math inline">\(\mbox{U}(0,24)\)</span> distribution?</p>
+<p>One way is to look at a histogram of the times of birth to see whether it is approximately flat. Figure <a href="simple.html#fig:unifhists">6.10</a> shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a <strong>uniform QQ plot</strong>. We do this in Section <a href="simple.html#qq">6.11</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unifhists"></span>
 <img src="images/baby_unif_hist_freq.png" alt="Histograms of times of birth, with U(0,24) p.d.f. superimposed." width="75%" />
 <p class="caption">
-Figure 5.10: Histograms of times of birth, with U(0,24) p.d.f. superimposed.
+Figure 6.10: Histograms of times of birth, with U(0,24) p.d.f. superimposed.
 </p>
 </div>
 <p><strong>Exercise</strong>. Why might births not occur at the same rate throughout the day?</p>
-<div id="summary-of-the-uniformab-distribution" class="section level3" number="5.7.1">
-<h3><span class="header-section-number">5.7.1</span> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution</h3>
+<div id="summary-of-the-uniformab-distribution" class="section level3 hasAnchor" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution<a href="simple.html#summary-of-the-uniformab-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Situation</strong>: a continuous random variable for which all values between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are equally likely.</li>
 <li>If <span class="math inline">\(U\)</span> is a continuous random variable with p.d.f.
@@ -808,29 +812,29 @@ for <span class="math inline">\(b &gt; a\)</span>, then <span class="math inline
 </ul>
 </div>
 </div>
-<div id="exponential" class="section level2" number="5.8">
-<h2><span class="header-section-number">5.8</span> The exponential distribution</h2>
+<div id="exponential" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> The exponential distribution<a href="simple.html#exponential" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now suppose that we are interested in the length of time <span class="math inline">\(T_1\)</span> until the
-first birth. Look at Table <a href="simple.html#tab:abirths">5.1</a>. In this example the observed value <span class="math inline">\(t_1\)</span> of <span class="math inline">\(T_1\)</span> is 5 minutes.</p>
+first birth. Look at Table <a href="simple.html#tab:abirths">6.1</a>. In this example the observed value <span class="math inline">\(t_1\)</span> of <span class="math inline">\(T_1\)</span> is 5 minutes.</p>
 <p>It can be shown (STAT0007) that if the times of birth form a Poisson process of rate <span class="math inline">\(\lambda\)</span> per hour then the continuous random variable <span class="math inline">\(T_1\)</span> has p.d.f.
 <span class="math display">\[ f_{T_1}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0. \]</span>
 <span class="math inline">\(T_1\)</span> has exponential distribution with parameter <span class="math inline">\(\lambda\)</span>, or, for short,
 <span class="math display">\[ T_1 \sim \mbox{exp}(\lambda). \]</span>
 Let <span class="math inline">\(T_2\)</span> be the time between the 1st birth and the 2nd birth; and <span class="math inline">\(T_3\)</span> be the time between the 2nd birth and the 3rd birth; and so on. Observed values <span class="math inline">\(t_2\)</span> and <span class="math inline">\(t_3\)</span> of <span class="math inline">\(T_2\)</span> and <span class="math inline">\(T_3\)</span> are <span class="math inline">\(t_2\)</span>=59 minutes and <span class="math inline">\(t_3\)</span>=14 minutes.</p>
-<p>Figure <a href="simple.html#fig:babyexpplots">5.11</a> shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.</p>
-<div class="figure" style="text-align: center"><span id="fig:babyexpplots"></span>
+<p>Figure <a href="simple.html#fig:babyexpplots">6.11</a> shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:babyexpplots"></span>
 <img src="images/baby_exp_hist.png" alt="Histogram (left) and boxplot (right) of the sample times between births." width="45%" /><img src="images/baby_exp_box.png" alt="Histogram (left) and boxplot (right) of the sample times between births." width="45%" />
 <p class="caption">
-Figure 5.11: Histogram (left) and boxplot (right) of the sample times between births.
+Figure 6.11: Histogram (left) and boxplot (right) of the sample times between births.
 </p>
 </div>
 <p>It can be shown (STAT0007) that if the times of birth form a Poisson process
 of rate <span class="math inline">\(\lambda\)</span> per hour then
 <span class="math display">\[ T_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{exponential}(\lambda), \qquad i=1,\ldots,44, \]</span>
 that is, <span class="math inline">\(T_1,\ldots,T_{44}\)</span> are a random sample from an <span class="math inline">\(\mbox{exponential}(\lambda)\)</span> distribution.</p>
-<p>There is more than one to estimate <span class="math inline">\(\lambda\)</span>. One approach is to note that the parameter <span class="math inline">\(\lambda\)</span> here is the same as the parameter <span class="math inline">\(\lambda\)</span> in Section <a href="simple.html#Poisson">5.5</a>. Therefore, we could the estimate <span class="math inline">\(\hat{\lambda}=44/24\approx 1.83\)</span> births per hour.</p>
+<p>There is more than one to estimate <span class="math inline">\(\lambda\)</span>. One approach is to note that the parameter <span class="math inline">\(\lambda\)</span> here is the same as the parameter <span class="math inline">\(\lambda\)</span> in Section <a href="simple.html#Poisson">6.5</a>. Therefore, we could the estimate <span class="math inline">\(\hat{\lambda}=44/24\approx 1.83\)</span> births per hour.</p>
 <p>Alternatively, we could use the fact that the mean of an <span class="math inline">\(\mbox{exponential}(\lambda)\)</span> distribution is <span class="math inline">\(1/\lambda\)</span>. The sample mean of the 44 times <span class="math inline">\(t_1,\ldots,t_{44}\)</span> between births is
-<span class="math display">\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{ minutes} 
+<span class="math display">\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{ minutes}
 \approx 0.543 \mbox{ hours}. \]</span>
 Rearranging
 <span class="math display">\[ \mbox{E}(T) = \frac{1}{\lambda}, \]</span>
@@ -839,20 +843,20 @@ gives
 Therefore a sensible estimate of <span class="math inline">\(\lambda\)</span> is given by
 <span class="math display">\[ \tilde{\lambda} = \frac{1}{0.543} \approx 1.840 \mbox{ births per hour}. \]</span>
 We have used <span class="math inline">\(\tilde{\lambda}\)</span> to denote the estimate of <span class="math inline">\(\lambda\)</span> to distinguish it from <span class="math inline">\(\hat{\lambda}\)</span>.</p>
-<p>How well does the exponential distribution fit these data? We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential(<span class="math inline">\(\hat{\lambda}\)</span>) p.d.f. or look at an <strong>exponential QQ plot</strong> (see Section <a href="simple.html#qq">5.11</a>). Figure <a href="simple.html#fig:exppdf">5.12</a> enables us to do the former. This plot suggests that the exponential distribution fits the data well.</p>
-<div class="figure" style="text-align: center"><span id="fig:exppdf"></span>
+<p>How well does the exponential distribution fit these data? We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential(<span class="math inline">\(\hat{\lambda}\)</span>) p.d.f. or look at an <strong>exponential QQ plot</strong> (see Section <a href="simple.html#qq">6.11</a>). Figure <a href="simple.html#fig:exppdf">6.12</a> enables us to do the former. This plot suggests that the exponential distribution fits the data well.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:exppdf"></span>
 <img src="images/baby_exp_hist_dens.png" alt="Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution." width="75%" />
 <p class="caption">
-Figure 5.12: Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution.
+Figure 6.12: Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution.
 </p>
 </div>
-<div id="three-ways-to-check-the-poisson-process-assumption" class="section level4 unnumbered">
-<h4>Three ways to check the Poisson process assumption</h4>
+<div id="three-ways-to-check-the-poisson-process-assumption" class="section level4 unnumbered hasAnchor">
+<h4>Three ways to check the Poisson process assumption<a href="simple.html#three-ways-to-check-the-poisson-process-assumption" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We have used the data in three different ways (based on the Poisson, uniform and exponential distributions) to check same assumption: that the births occur in a Poisson process. It is possible that one check suggests that this assumption is reasonable but another suggests that it is not. For example, if the births were regularly spaced (e.g. one birth exactly every half hour) then a histogram would look flat, or very close to being flat, depending a little on the bin width. However, the times between births are equal and therefore do not look at all like a random sample from an exponential distribution. The numbers of births in each of the 24 hours will not look like a random sample from Poisson distribution: they will be much less variable than they should be. The moral of this story: the fact that the particular way you have chosen to assess the fit of your distribution looks OK does not imply that the distribution is true. Another way to assess the fit might reveal a big problem.</p>
 <p><strong>Exercise</strong>. Based on the exponential distribution that we fitted to the Australian births data, what is the probability that the time gap between 2 births is longer than 90 minutes?</p>
 </div>
-<div id="summary-of-the-exponentiallambda-distribution" class="section level3" number="5.8.1">
-<h3><span class="header-section-number">5.8.1</span> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</h3>
+<div id="summary-of-the-exponentiallambda-distribution" class="section level3 hasAnchor" number="6.8.1">
+<h3><span class="header-section-number">6.8.1</span> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution<a href="simple.html#summary-of-the-exponentiallambda-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>A situation in which this distribution arises:
 <ul>
@@ -867,16 +871,16 @@ for <span class="math inline">\(\lambda &gt; 0\)</span>, then <span class="math 
 </ul>
 </div>
 </div>
-<div id="normal" class="section level2" number="5.9">
-<h2><span class="header-section-number">5.9</span> The normal distribution</h2>
-<p>Suppose now that we are interested in the birth weights <span class="math inline">\(Z_1,\ldots,Z_{44}\)</span> of the babies. Figure <a href="simple.html#fig:babynormalplots">5.13</a> shows a histogram and a boxplot of the of the sample birth weights <span class="math inline">\(z_1,\ldots,z_n\)</span>. I have converted the weights from grams to pounds (1 pound <span class="math inline">\(\approx\)</span> 453.5g).</p>
-<div class="figure" style="text-align: center"><span id="fig:babynormalplots"></span>
+<div id="normal" class="section level2 hasAnchor" number="6.9">
+<h2><span class="header-section-number">6.9</span> The normal distribution<a href="simple.html#normal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppose now that we are interested in the birth weights <span class="math inline">\(Z_1,\ldots,Z_{44}\)</span> of the babies. Figure <a href="simple.html#fig:babynormalplots">6.13</a> shows a histogram and a boxplot of the of the sample birth weights <span class="math inline">\(z_1,\ldots,z_n\)</span>. I have converted the weights from grams to pounds (1 pound <span class="math inline">\(\approx\)</span> 453.5g).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:babynormalplots"></span>
 <img src="images/baby_normal_histnew.png" alt="Histogram (left) and boxplot (right) of the sample birth weights." width="45%" /><img src="images/baby_normal_box.png" alt="Histogram (left) and boxplot (right) of the sample birth weights." width="45%" />
 <p class="caption">
-Figure 5.13: Histogram (left) and boxplot (right) of the sample birth weights.
+Figure 6.13: Histogram (left) and boxplot (right) of the sample birth weights.
 </p>
 </div>
-<p>The most obvious feature of Figure <a href="simple.html#fig:babynormalplots">5.13</a> is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.</p>
+<p>The most obvious feature of Figure <a href="simple.html#fig:babynormalplots">6.13</a> is that the empirical distribution of birth weights is not symmetric. The data are negatively skewed. The tail of light babies on the left is longer than the tail of heavy babies on the right. This could be the result of some babies being born prematurely or with a condition that tends to lower birth weight.</p>
 <p>A distribution that is commonly used to model continuous variables such as weight is the normal distribution. This is also known as the Gaussian distribution. A continuous random variable <span class="math inline">\(Z\)</span> has a normal distribution with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> if its probability density function is given by
 <span class="math display">\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
 (z-\mu)^{2} \right],
@@ -884,7 +888,7 @@ Figure 5.13: Histogram (left) and boxplot (right) of the sample birth weights.
 We write
 <span class="math display">\[ Z \sim \mbox{N}(\mu,\sigma^{2}). \]</span></p>
 <p>The p.d.f. of a normal distribution is sometimes described as ‘bell-shaped’ as in the top left plot in Figure <a href="descriptive.html#fig:shapes">2.1</a>.</p>
-<p>One of the key properties of the normal distribution is that its p.d.f. is symmetric about its mean <span class="math inline">\(\mu\)</span>. Therefore, the plots in Figure <a href="simple.html#fig:babynormalplots">5.13</a> suggest that it may not be reasonable to suppose that the birth weights of these babies behave like a random sample from a normal distribution.</p>
+<p>One of the key properties of the normal distribution is that its p.d.f. is symmetric about its mean <span class="math inline">\(\mu\)</span>. Therefore, the plots in Figure <a href="simple.html#fig:babynormalplots">6.13</a> suggest that it may not be reasonable to suppose that the birth weights of these babies behave like a random sample from a normal distribution.</p>
 <p>Nevertheless, we consider how we could to fit a normal distribution to these data - even though it does not appear that a normal distribution is appropriate in this case.</p>
 <p>It makes sense to estimate</p>
 <ul>
@@ -893,16 +897,16 @@ We write
 </ul>
 <p>In this example we get
 <span class="math display">\[ \hat{\mu}=7.22 \mbox{ pounds} \qquad \mbox{and} \qquad \hat{\sigma}^2=1.36 \mbox{ pounds}^2. \]</span></p>
-<p>In Figure <a href="simple.html#fig:normalpdf">5.14</a> the fitted normal <span class="math inline">\(\mbox{N}(\hat{\mu},\hat{\sigma}^{2})\)</span> p.d.f. superimposed on the histogram of the sample birth weights.</p>
-<div class="figure" style="text-align: center"><span id="fig:normalpdf"></span>
+<p>In Figure <a href="simple.html#fig:normalpdf">6.14</a> the fitted normal <span class="math inline">\(\mbox{N}(\hat{\mu},\hat{\sigma}^{2})\)</span> p.d.f. superimposed on the histogram of the sample birth weights.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:normalpdf"></span>
 <img src="images/baby_normal_fitnew.png" alt="Histogram of sample birth weights, with a fitted normal p.d.f. superimposed." width="75%" />
 <p class="caption">
-Figure 5.14: Histogram of sample birth weights, with a fitted normal p.d.f. superimposed.
+Figure 6.14: Histogram of sample birth weights, with a fitted normal p.d.f. superimposed.
 </p>
 </div>
-<p>As we expect the fit if not particularly good. In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution. In Section <a href="simple.html#qq">5.11</a> we will use a <strong>normal QQ plot</strong> to assess the fit of a normal distribution to these data.</p>
-<div id="summary-of-the-mboxnmusigma2-distribution" class="section level3" number="5.9.1">
-<h3><span class="header-section-number">5.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</h3>
+<p>As we expect the fit if not particularly good. In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution. In Section <a href="simple.html#qq">6.11</a> we will use a <strong>normal QQ plot</strong> to assess the fit of a normal distribution to these data.</p>
+<div id="summary-of-the-mboxnmusigma2-distribution" class="section level3 hasAnchor" number="6.9.1">
+<h3><span class="header-section-number">6.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution<a href="simple.html#summary-of-the-mboxnmusigma2-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Situation: used widely in Statistics
 <ul>
@@ -920,22 +924,22 @@ for <span class="math inline">\(\sigma &gt;0\)</span>, then <span class="math in
 <li><span class="math inline">\(\mbox{E}(Z)=\mu\)</span>, <span class="math inline">\(\mbox{var}(Z)=\sigma^2\)</span>.</li>
 </ul>
 </div>
-<div id="the-standard-normal-disribution" class="section level3" number="5.9.2">
-<h3><span class="header-section-number">5.9.2</span> The standard normal disribution</h3>
+<div id="the-standard-normal-disribution" class="section level3 hasAnchor" number="6.9.2">
+<h3><span class="header-section-number">6.9.2</span> The standard normal disribution<a href="simple.html#the-standard-normal-disribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <span class="math inline">\(N(0,1)\)</span> distribution is called the <strong>standard normal</strong> distribution. We write <span class="math inline">\(\phi(x)\)</span> for its p.d.f. and <span class="math inline">\(\Phi(x)\)</span> for its c.d.f., so that
 <span class="math display">\[ \phi(x)=\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,x^{2}}, \quad -\infty &lt; x &lt; \infty, \]</span>
 and
 <span class="math display">\[ \Phi(x) =
-\int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad 
+\int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad
 \quad -\infty &lt; x &lt; \infty. \]</span></p>
 </div>
-<div id="evaluating-the-normal-c.d.f.-and-quantiles" class="section level3" number="5.9.3">
-<h3><span class="header-section-number">5.9.3</span> Evaluating the normal c.d.f. and quantiles</h3>
+<div id="evaluating-the-normal-c.d.f.-and-quantiles" class="section level3 hasAnchor" number="6.9.3">
+<h3><span class="header-section-number">6.9.3</span> Evaluating the normal c.d.f. and quantiles<a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose that <span class="math inline">\(W \sim N(7.22, 1.36)\)</span>, that is, <span class="math inline">\(\mbox{E}(W)=7.22\)</span> and <span class="math inline">\(\mbox{var}(W)=1.36\)</span> and we want to calculate <span class="math inline">\(P(W \leq 10)\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
-P(W \leq 10) = \int_{-\infty}^{10} \displaystyle\frac{1}{1.36\sqrt{2\pi}} 
-\,\exp\!\left[ -\,\frac{1}{2\times 1.36}(w-7.22)^2 \right] {\rm ~d}w. 
+P(W \leq 10) = \int_{-\infty}^{10} \displaystyle\frac{1}{1.36\sqrt{2\pi}}
+\,\exp\!\left[ -\,\frac{1}{2\times 1.36}(w-7.22)^2 \right] {\rm ~d}w.
 \end{aligned}
 \]</span></p>
 <p>It is not possible to express this integral in terms of simple functions. Instead, numerical algorithms are used to calculate its value. In R the function <code>pnorm()</code> does this.</p>
@@ -962,14 +966,14 @@ P(W \leq 10)
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="simple.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
 <pre><code>## [1] 9.138212</code></pre>
 </div>
-<div id="interpretation-of-sigma" class="section level3" number="5.9.4">
-<h3><span class="header-section-number">5.9.4</span> Interpretation of <span class="math inline">\(\sigma\)</span></h3>
+<div id="interpretation-of-sigma" class="section level3 hasAnchor" number="6.9.4">
+<h3><span class="header-section-number">6.9.4</span> Interpretation of <span class="math inline">\(\sigma\)</span><a href="simple.html#interpretation-of-sigma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose that <span class="math inline">\(X \sim N(\mu,\sigma^{2})\)</span>. Let <span class="math inline">\(p_k = P(|X-\mu| &lt; k\sigma)\)</span>, so that <span class="math inline">\(p_k\)</span> is the probability that <span class="math inline">\(X\)</span> lies within <span class="math inline">\(k\)</span> standard deviations of its mean. We have <span class="math inline">\(p_1 = 0.6826\)</span>, <span class="math inline">\(p_2 = 0.9545\)</span> and <span class="math inline">\(p_3 = 0.9973\)</span>. Therefore, for a large sample from a normal distribution
 approximately 68% of observations will fall within 1 standard deviation of the mean, and approximately 95% within 2 standard deviations of the mean.</p>
 </div>
 </div>
-<div id="summary-of-these-continuous-distributions" class="section level2" number="5.10">
-<h2><span class="header-section-number">5.10</span> Summary of these continuous distributions</h2>
+<div id="summary-of-these-continuous-distributions" class="section level2 hasAnchor" number="6.10">
+<h2><span class="header-section-number">6.10</span> Summary of these continuous distributions<a href="simple.html#summary-of-these-continuous-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have studied 3 common continuous distributions:</p>
 <ul>
 <li><strong>uniform</strong>: a random variable for which all values in an interval are equally likely.</li>
@@ -977,16 +981,16 @@ approximately 68% of observations will fall within 1 standard deviation of the m
 <li><strong>normal</strong>: a symmetric random variable often used as a model for measurement errors or data that arise as the sums or averages of a large number of random variables.</li>
 </ul>
 </div>
-<div id="qq" class="section level2" number="5.11">
-<h2><span class="header-section-number">5.11</span> QQ plots</h2>
+<div id="qq" class="section level2 hasAnchor" number="6.11">
+<h2><span class="header-section-number">6.11</span> QQ plots<a href="simple.html#qq" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have seen that we can use a plot, for example, a histogram to examine the shape of the frequency distribution of data. Sometimes we are interested in deciding whether the data appear to have come from a particular distribution, with a particular shape.</p>
 <p>For example, many traditional statistical methods are based on an assumption that the data come from a normal distribution. It can be fairly easy to see from a plot whether the data appear to be symmetric or skewed, but judging whether whether a plot of the data has approximately the characteristic bell-shape of a normal distribution may be more difficult.</p>
-<p>Another way to compare the distribution of a sample with a particular distribution is to use a <strong>quantile-quantile plot</strong> or <strong>QQ plot</strong> for short. This plot is based on comparing sample quantiles (Section <a href="descriptive.html#fivenumber">2.3.1</a>) and theoretical quantiles (Section <a href="rvs.html#quantiles">4.6</a>). The following example is based on a normal distribution, but a QQ plot can be based on any <strong>continuous</strong> distribution.</p>
-<div id="normal-qq-plots" class="section level3" number="5.11.1">
-<h3><span class="header-section-number">5.11.1</span> Normal QQ plots</h3>
-<p>Before we describe how to produce a QQ plot we return to the Oxford birth times example. The sample quartiles (<span class="math inline">\(q_L, m, q_U\)</span>) are 4.95, 7.50, and 9.75 hours. Also, the sample mean is 7.72 hours and the sample standard deviation is 3.57 hours. We suppose that these data have been sampled from a normal distribution with a mean of 7.72 hours and a standard deviation of 3.57 hours. We calculate the (theoretical) quartiles of this normal N(7.72,3.57<span class="math inline">\(^2\)</span>) distribution and compare them in Table <a href="simple.html#tab:compareqs">5.4</a> to the sample quartiles of Oxford births data.</p>
+<p>Another way to compare the distribution of a sample with a particular distribution is to use a <strong>quantile-quantile plot</strong> or <strong>QQ plot</strong> for short. This plot is based on comparing sample quantiles (Section <a href="descriptive.html#fivenumber">2.3.1</a>) and theoretical quantiles (Section <a href="rvs.html#quantiles">5.6</a>). The following example is based on a normal distribution, but a QQ plot can be based on any <strong>continuous</strong> distribution.</p>
+<div id="normal-qq-plots" class="section level3 hasAnchor" number="6.11.1">
+<h3><span class="header-section-number">6.11.1</span> Normal QQ plots<a href="simple.html#normal-qq-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Before we describe how to produce a QQ plot we return to the Oxford birth times example. The sample quartiles (<span class="math inline">\(q_L, m, q_U\)</span>) are 4.95, 7.50, and 9.75 hours. Also, the sample mean is 7.72 hours and the sample standard deviation is 3.57 hours. We suppose that these data have been sampled from a normal distribution with a mean of 7.72 hours and a standard deviation of 3.57 hours. We calculate the (theoretical) quartiles of this normal N(7.72,3.57<span class="math inline">\(^2\)</span>) distribution and compare them in Table <a href="simple.html#tab:compareqs">6.4</a> to the sample quartiles of Oxford births data.</p>
 <table>
-<caption><span id="tab:compareqs">Table 5.4: </span> Comparison of sample and theoretical quantiles.</caption>
+<caption><span id="tab:compareqs">Table 6.4: </span> Comparison of sample and theoretical quantiles.</caption>
 <thead>
 <tr class="header">
 <th align="center"></th>
@@ -1010,7 +1014,7 @@ approximately 68% of observations will fall within 1 standard deviation of the m
 </tr>
 </tbody>
 </table>
-<p>If the data have been sampled from <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution the values in the first row of Table <a href="simple.html#tab:compareqs">5.4</a> should be close to the corresponding values in the second row. We can see that they are not very different but that
+<p>If the data have been sampled from <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution the values in the first row of Table <a href="simple.html#tab:compareqs">6.4</a> should be close to the corresponding values in the second row. We can see that they are not very different but that
 the quartiles of the normal distribution are greater than the empirical quartiles. A QQ plot performs exactly the same kind of comparison but</p>
 <ul>
 <li>we use a plot instead of a table</li>
@@ -1024,35 +1028,35 @@ the quartiles of the normal distribution are greater than the empirical quartile
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="simple.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">/</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.72</span>, <span class="at">sd =</span> <span class="fl">3.57</span>)</span></code></pre></div>
 <pre><code>## [1]  3.144861  4.715412  5.847890  6.815551  7.720000  8.624449  9.592110
 ## [8] 10.724588 12.295139</code></pre>
-<p>In Figure <a href="simple.html#fig:qqpic">5.15</a> these quantiles are superimposed on the p.d.f. of a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.</p>
-<div class="figure" style="text-align: center"><span id="fig:qqpic"></span>
+<p>In Figure <a href="simple.html#fig:qqpic">6.15</a> these quantiles are superimposed on the p.d.f. of a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:qqpic"></span>
 <img src="images/qq_picture.png" alt="A normal p.d.f. with the 10\%, 20\%, ..., 90\% quantiles indicated with vertical lines." width="75%" />
 <p class="caption">
-Figure 5.15: A normal p.d.f. with the 10%, 20%, …, 90% quantiles indicated with vertical lines.
+Figure 6.15: A normal p.d.f. with the 10%, 20%, …, 90% quantiles indicated with vertical lines.
 </p>
 </div>
 <p>For <span class="math inline">\(n=9\)</span> the 9 quantiles <span class="math inline">\(3.14, 4.72, \ldots, 12.30\)</span> split the <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution into 10 intervals. The area under the p.d.f. on each of these intervals is equal to 1/10. For the Oxford births data <span class="math inline">\(n=95\)</span>. Therefore the 95 quantiles we will use later to produce a QQ plot split the distribution into 96 intervals. In each interval the area under the p.d.f. is 1/96.</p>
-<div id="constructing-a-qq-plot" class="section level4 unnumbered">
-<h4>Constructing a QQ plot</h4>
+<div id="constructing-a-qq-plot" class="section level4 unnumbered hasAnchor">
+<h4>Constructing a QQ plot<a href="simple.html#constructing-a-qq-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>To produce a QQ plot based on a continuous distribution (not necessarily a normal distribution) we plot, for <span class="math inline">\(i = 1, \ldots, n\)</span>
 <span class="math display">\[ x_{(i)}  \,\,\mbox{ against the }\,\, 100\frac{i}{n+1}\% \, \mbox{ theoretical quantile}, \]</span>
 that is, the order statistics against the corresponding values we might expect
 from a sample from the distribution of interest. If the points on this scatter plot are close to a line of equality then it may be reasonable to suppose that the data have been sampled from the this distribution.</p>
-<p>Figure <a href="simple.html#fig:qqschem">5.16</a> shows an example normal QQ plot based on a sample of size <span class="math inline">\(n=9\)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:qqschem"></span>
+<p>Figure <a href="simple.html#fig:qqschem">6.16</a> shows an example normal QQ plot based on a sample of size <span class="math inline">\(n=9\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:qqschem"></span>
 <img src="images/qq_schematic.png" alt="Example normal QQ plot for a sample of size $n = 9$.  The dashed line is a line of equality." width="75%" />
 <p class="caption">
-Figure 5.16: Example normal QQ plot for a sample of size <span class="math inline">\(n = 9\)</span>. The dashed line is a line of equality.
+Figure 6.16: Example normal QQ plot for a sample of size <span class="math inline">\(n = 9\)</span>. The dashed line is a line of equality.
 </p>
 </div>
 <p>We should <strong>not</strong> expect the points to lie <strong>exactly</strong> on this straight line. Even if the data are sampled from the suggested distribution, points will lie away from this line owing to random variability. The question we need to ask ourselves is</p>
 <p>“Does this plot look like the kind of plot we would get if the data really are sampled from the suggested distribution?”</p>
 <p>How can we decide this? Well, we need to know what such QQ plots would look like. If we have a sample that we <strong>know</strong> is sampled from a normal distribution then we can produce a normal QQ plot and see what it looks like. If we have many different samples of data we can see a whole range of different QQ plots.</p>
-<p>We use a computer to <strong>simulate</strong> 95 values from a <span class="math inline">\(N(7.72,3.57^2)\)</span> distribution. We do this 9 times and produce a normal QQ plot for each set of simulated data. Figure <a href="simple.html#fig:oxqqsim">5.17</a> shows these QQ plots.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxqqsim"></span>
+<p>We use a computer to <strong>simulate</strong> 95 values from a <span class="math inline">\(N(7.72,3.57^2)\)</span> distribution. We do this 9 times and produce a normal QQ plot for each set of simulated data. Figure <a href="simple.html#fig:oxqqsim">6.17</a> shows these QQ plots.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxqqsim"></span>
 <img src="images/ox_qq_sim.png" alt="Normal QQ plots of 9 samples of size 95 simulated from a $N(7.72, 3.57^2)$ distribution." width="75%" />
 <p class="caption">
-Figure 5.17: Normal QQ plots of 9 samples of size 95 simulated from a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.
+Figure 6.17: Normal QQ plots of 9 samples of size 95 simulated from a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.
 </p>
 </div>
 <p>Generally the points on these plots lie quite close to the line of equality. However,</p>
@@ -1060,11 +1064,11 @@ Figure 5.17: Normal QQ plots of 9 samples of size 95 simulated from a <span clas
 <li>some plots have points which lie further from the line than others;</li>
 <li>the extreme (small and large) points tend to lie further from the line than the points in the middle</li>
 </ul>
-<p>When judging whether a QQ plot of real data looks `OK’ or not simulated data can be helpful. Look at Figure <a href="simple.html#fig:oxqqsimenv">5.18</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxqqsimenv"></span>
+<p>When judging whether a QQ plot of real data looks `OK’ or not simulated data can be helpful. Look at Figure <a href="simple.html#fig:oxqqsimenv">6.18</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxqqsimenv"></span>
 <img src="images/ox_qq_simenv.png" alt="A simulation envelope produced using 19 datasets of size 95 from a $N(7.75,3.57^2)$ distibution." width="60%" />
 <p class="caption">
-Figure 5.18: A simulation envelope produced using 19 datasets of size 95 from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distibution.
+Figure 6.18: A simulation envelope produced using 19 datasets of size 95 from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distibution.
 </p>
 </div>
 <p>This plot shows <strong>simulation envelopes</strong>. We have simulated 19 different samples of size 95 from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distribution and produced a
@@ -1074,60 +1078,60 @@ normal QQ plot for each sample. Imagine plotting all these QQ plots on the same 
 <p>“Are the values from the real data unusual enough that we wouldn’t expect to see them appear in approximately 1 in every 20 datasets simulated from the suggested distribution?”</p>
 <p>1 in 20 is the 5% that crops up often in Statistics.</p>
 <p>We have already seen that the Oxford birth times appear to be positively skewed and, therefore, it may not be reasonable to suppose that they have been sampled from might not come from a normal distribution. However, perhaps there is a <strong>transformation</strong> of these data which look more like a sample from a normal distribution.</p>
-<p>Figure <a href="simple.html#fig:oxhisttrans">5.19</a> shows histograms of the original data and 3 different transformations of the data. Which of these histograms looks most symmetric?</p>
-<div class="figure" style="text-align: center"><span id="fig:oxhisttrans"></span>
+<p>Figure <a href="simple.html#fig:oxhisttrans">6.19</a> shows histograms of the original data and 3 different transformations of the data. Which of these histograms looks most symmetric?</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxhisttrans"></span>
 <img src="images/ox_hist_trans.png" alt="Histograms of the Oxford birth times and transformations of those data." width="75%" />
 <p class="caption">
-Figure 5.19: Histograms of the Oxford birth times and transformations of those data.
+Figure 6.19: Histograms of the Oxford birth times and transformations of those data.
 </p>
 </div>
-<p>Figure <a href="simple.html#fig:oxqqtrans">5.20</a> shows QQ plots corresponding to each of the histograms in Figure <a href="simple.html#fig:oxhisttrans">5.19</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxqqtrans"></span>
+<p>Figure <a href="simple.html#fig:oxqqtrans">6.20</a> shows QQ plots corresponding to each of the histograms in Figure <a href="simple.html#fig:oxhisttrans">6.19</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxqqtrans"></span>
 <img src="images/ox_qq_trans.png" alt="Normal QQ plots of the Oxford birth durations and transformations." width="75%" />
 <p class="caption">
-Figure 5.20: Normal QQ plots of the Oxford birth durations and transformations.
+Figure 6.20: Normal QQ plots of the Oxford birth durations and transformations.
 </p>
 </div>
-<p>Do these plots confirm your thoughts about the histograms? Can you work out what the directions of the departures of the points in the QQ plot from the straight line mean in terms of the shape of the distribution. You can use the Figure <a href="simple.html#fig:oxhisttrans">5.19</a> to help you.</p>
-<p>In Figure <a href="simple.html#fig:oxqqtimeenv">5.21</a> simulation envelopes based on 19 simulated samples have been added to the QQ plot of the Oxford birth times. Although the points mainly lie within the simulation envelopes, the plot is clearly curved. We may refer to the ends of a distribution, from where the relatively small and large values are sampled, as the <strong>tails</strong>. The relatively small values come from the lower tail, or left tail. The relatively large values come from the upper tail, or right tail. In this plot we can see that the observed birth times are larger in the <strong>tails</strong> than would be expected if they were sampled from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distribution.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxqqtimeenv"></span>
+<p>Do these plots confirm your thoughts about the histograms? Can you work out what the directions of the departures of the points in the QQ plot from the straight line mean in terms of the shape of the distribution. You can use the Figure <a href="simple.html#fig:oxhisttrans">6.19</a> to help you.</p>
+<p>In Figure <a href="simple.html#fig:oxqqtimeenv">6.21</a> simulation envelopes based on 19 simulated samples have been added to the QQ plot of the Oxford birth times. Although the points mainly lie within the simulation envelopes, the plot is clearly curved. We may refer to the ends of a distribution, from where the relatively small and large values are sampled, as the <strong>tails</strong>. The relatively small values come from the lower tail, or left tail. The relatively large values come from the upper tail, or right tail. In this plot we can see that the observed birth times are larger in the <strong>tails</strong> than would be expected if they were sampled from a <span class="math inline">\(N(7.75,3.57^2)\)</span> distribution.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxqqtimeenv"></span>
 <img src="images/ox_qq_time_env.png" alt="Normal QQ plot of the Oxford birth durations with simulation envelopes." width="60%" />
 <p class="caption">
-Figure 5.21: Normal QQ plot of the Oxford birth durations with simulation envelopes.
+Figure 6.21: Normal QQ plot of the Oxford birth durations with simulation envelopes.
 </p>
 </div>
-<p>In Figure <a href="simple.html#fig:oxqqsqrttimeenv">5.22</a> we see that after a square root transformation the normal QQ plot looks much straighter, suggesting that we might suppose that the square roots of the birth times behave approximately like
+<p>In Figure <a href="simple.html#fig:oxqqsqrttimeenv">6.22</a> we see that after a square root transformation the normal QQ plot looks much straighter, suggesting that we might suppose that the square roots of the birth times behave approximately like
 a sample from a normal distribution.</p>
-<div class="figure" style="text-align: center"><span id="fig:oxqqsqrttimeenv"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxqqsqrttimeenv"></span>
 <img src="images/ox_qq_sqrttime_env.png" alt="Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes." width="60%" />
 <p class="caption">
-Figure 5.22: Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes.
+Figure 6.22: Normal QQ plot of the square roots of the Oxford birth durations with simulation envelopes.
 </p>
 </div>
 <p>Two practical points:</p>
 <ol style="list-style-type: decimal">
 <li><p>If we use a N(0,1), a <strong>standard normal</strong> distribution when plotting the normal QQ plot, that is we plot the order statistics against quantiles from a N(0,1) distribution, the shape of the plot will not change. This is what most statistical computer packages do. The pattern of points in the plot does not depend on the mean and standard deviation of the normal distribution.</p></li>
-<li><p>In the plots above we have drawn a line of equality to illustrate the idea that we are comparing the values of sample quantiles to corresponding theoretical quantiles. For a normal QQ plot, it is more common to plot a straight line through the points <span class="math inline">\((Q_L,q_L)\)</span> and <span class="math inline">\((Q_U,q_U)\)</span>, where <span class="math inline">\(q_L\)</span> and <span class="math inline">\(q_U\)</span> are the sample lower and upper quartiles and <span class="math inline">\(Q_L\)</span> and <span class="math inline">\(Q_U\)</span> are the theoretical lower and upper quartiles. By drawing a line through the points corresponding to the central 50% of the distribution, we can more easily see any departures in the tails of the distribution, which is where we expect the larger departures in a normal QQ plot. This is illustrated in Figure <a href="simple.html#fig:oxqqlinequart">5.23</a>. In this example, the position of this line is not very different from the line of equality. However, for plots (b)-(f) in Figure <a href="simple.html#fig:QQtypes">5.24</a>, where there are clear and large departures from normality, a line drawn through the lower and upper quartiles is more helpful than a line of equality would be.</p></li>
+<li><p>In the plots above we have drawn a line of equality to illustrate the idea that we are comparing the values of sample quantiles to corresponding theoretical quantiles. For a normal QQ plot, it is more common to plot a straight line through the points <span class="math inline">\((Q_L,q_L)\)</span> and <span class="math inline">\((Q_U,q_U)\)</span>, where <span class="math inline">\(q_L\)</span> and <span class="math inline">\(q_U\)</span> are the sample lower and upper quartiles and <span class="math inline">\(Q_L\)</span> and <span class="math inline">\(Q_U\)</span> are the theoretical lower and upper quartiles. By drawing a line through the points corresponding to the central 50% of the distribution, we can more easily see any departures in the tails of the distribution, which is where we expect the larger departures in a normal QQ plot. This is illustrated in Figure <a href="simple.html#fig:oxqqlinequart">6.23</a>. In this example, the position of this line is not very different from the line of equality. However, for plots (b)-(f) in Figure <a href="simple.html#fig:QQtypes">6.24</a>, where there are clear and large departures from normality, a line drawn through the lower and upper quartiles is more helpful than a line of equality would be.</p></li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:oxqqlinequart"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxqqlinequart"></span>
 <img src="images/ox_qq_linequart.png" alt="Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles." width="60%" />
 <p class="caption">
-Figure 5.23: Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles.
+Figure 6.23: Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles.
 </p>
 </div>
 </div>
-<div id="departures-from-normality" class="section level4 unnumbered">
-<h4>Departures from normality</h4>
-<p>The normal distribution provides a useful benchmark against which to assess the shape of a distribution. Figure <a href="simple.html#fig:QQtypes">5.24</a> includes some normal QQ plots based on data simulated from distributions that are not normal. From a normal QQ plot we can assess whether</p>
+<div id="departures-from-normality" class="section level4 unnumbered hasAnchor">
+<h4>Departures from normality<a href="simple.html#departures-from-normality" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The normal distribution provides a useful benchmark against which to assess the shape of a distribution. Figure <a href="simple.html#fig:QQtypes">6.24</a> includes some normal QQ plots based on data simulated from distributions that are not normal. From a normal QQ plot we can assess whether</p>
 <ul>
 <li>the distribution of the data is approximately symmetric;</li>
 <li>the distribution of the data has tails which are heavier (more extreme observations), lighter (fewer extreme observations) or approximately the same as a normal distribution.</li>
 <li>if there are any atypical observations.</li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:QQtypes"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:QQtypes"></span>
 <img src="images/QQtypes.png" alt="Normal QQ plots of normal and non-normal data.  The dashed lines dashed lines are drawn through the sample and thereoretical lower and upper quartiles." width="75%" />
 <p class="caption">
-Figure 5.24: Normal QQ plots of normal and non-normal data. The dashed lines dashed lines are drawn through the sample and thereoretical lower and upper quartiles.
+Figure 6.24: Normal QQ plots of normal and non-normal data. The dashed lines dashed lines are drawn through the sample and thereoretical lower and upper quartiles.
 </p>
 </div>
 <p>A summary of these plots:</p>
@@ -1138,43 +1142,43 @@ Figure 5.24: Normal QQ plots of normal and non-normal data. The dashed lines das
 <p><strong>(e)</strong> A positively skewed distribution. The small values are larger than expected and the large values larger than expected than from a normal distribution, giving points above the straight line on the left of the plot and above the line on the right. (Distribution used: gamma distribution with shape parameter 2 and scale parameter 1).</p>
 <p><strong>(f)</strong> A negatively skewed distribution. The small values are smaller than expected and the large values smaller than expected than from a normal distribution, giving points below the straight line on the left of the plot and below the line on the right. (Distribution used: <span class="math inline">\(10-X\)</span>, where <span class="math inline">\(X\)</span> has the distribution used in (e) above).</p>
 </div>
-<div id="the-australian-births-data" class="section level4" number="5.11.1.1">
-<h4><span class="header-section-number">5.11.1.1</span> The Australian births data</h4>
-<p>As a further example consider the QQ plot in Figure <a href="simple.html#fig:babynormalqqenv">5.25</a>. The points clearly do not lie on a straight line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure <a href="simple.html#fig:QQtypes">5.24</a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:babynormalqqenv"></span>
+<div id="the-australian-births-data" class="section level4 hasAnchor" number="6.11.1.1">
+<h4><span class="header-section-number">6.11.1.1</span> The Australian births data<a href="simple.html#the-australian-births-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>As a further example consider the QQ plot in Figure <a href="simple.html#fig:babynormalqqenv">6.25</a>. The points clearly do not lie on a straight line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure <a href="simple.html#fig:QQtypes">6.24</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:babynormalqqenv"></span>
 <img src="images/baby_normal_qq_env.png" alt="Normal QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality." width="60%" />
 <p class="caption">
-Figure 5.25: Normal QQ plot to compare the Australian birth weights with a <span class="math inline">\(N(7.22,1.36)\)</span> distribution. The dashed line is a line of equality.
+Figure 6.25: Normal QQ plot to compare the Australian birth weights with a <span class="math inline">\(N(7.22,1.36)\)</span> distribution. The dashed line is a line of equality.
 </p>
 </div>
 </div>
 </div>
-<div id="uniform-qq-plots" class="section level3" number="5.11.2">
-<h3><span class="header-section-number">5.11.2</span> Uniform QQ plots</h3>
+<div id="uniform-qq-plots" class="section level3 hasAnchor" number="6.11.2">
+<h3><span class="header-section-number">6.11.2</span> Uniform QQ plots<a href="simple.html#uniform-qq-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Recall that in the Australian births data we wondered whether the time at which a randomly-chosen baby is born might be sampled from a uniform distribution on the interval (0, 24) hours. To examine this we could produce a uniform QQ plot, by plotting the ordered sample values
 <span class="math display">\[ u_{(1)},\,  u_{(2)},\, \ldots,\, u_{(43)},\,  u_{(44)} \]</span>
 against the uniform U(0,24) quantiles
-<span class="math display">\[  \frac{1}{45} \times 24,\,\, \frac{2}{45} \times 24,\,\, \ldots,\,\, 
+<span class="math display">\[  \frac{1}{45} \times 24,\,\, \frac{2}{45} \times 24,\,\, \ldots,\,\,
 \frac{43}{45} \times 24,\,\, \frac{44}{45} \times 24. \]</span></p>
-<p>This QQ plot is shown in Figure <a href="simple.html#fig:unifqq">5.26</a>. The dashed line is a line of equality.</p>
-<div class="figure" style="text-align: center"><span id="fig:unifqq"></span>
+<p>This QQ plot is shown in Figure <a href="simple.html#fig:unifqq">6.26</a>. The dashed line is a line of equality.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unifqq"></span>
 <img src="images/baby_unif_qq_simenv.png" alt="Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets." width="60%" />
 <p class="caption">
-Figure 5.26: Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets.
+Figure 6.26: Uniform(0,24) QQ plot with simulation envelopes based on 19 simulated datasets.
 </p>
 </div>
-<p>Like the histogram we saw in Section <a href="simple.html#uniform">5.7</a> the QQ plot also suggests that babies tend to be born later in the day than would be expected: in the middle of the horizontal axis the times of births are greater than the corresponding quantiles of the <span class="math inline">\(U(0,24)\)</span> distribution. Notice that the simulation envelopes in this QQ plot show that we expect the largest departures from the straight line in the middle of the distribution than near the ends.</p>
+<p>Like the histogram we saw in Section <a href="simple.html#uniform">6.7</a> the QQ plot also suggests that babies tend to be born later in the day than would be expected: in the middle of the horizontal axis the times of births are greater than the corresponding quantiles of the <span class="math inline">\(U(0,24)\)</span> distribution. Notice that the simulation envelopes in this QQ plot show that we expect the largest departures from the straight line in the middle of the distribution than near the ends.</p>
 </div>
-<div id="exponential-qq-plots" class="section level3" number="5.11.3">
-<h3><span class="header-section-number">5.11.3</span> Exponential QQ plots</h3>
+<div id="exponential-qq-plots" class="section level3 hasAnchor" number="6.11.3">
+<h3><span class="header-section-number">6.11.3</span> Exponential QQ plots<a href="simple.html#exponential-qq-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Recall that in the Australian births data we wondered whether the times between the birth might be sampled from an exponential(<span class="math inline">\(\lambda\)</span>) distribution. We estimated <span class="math inline">\(\lambda\)</span> using <span class="math inline">\(\hat{\lambda} = 1.84\)</span>.</p>
 <p>Here, <span class="math inline">\(n=44\)</span>. For <span class="math inline">\(i=1, \ldots, n\)</span> we plot the <span class="math inline">\(i\)</span>th smallest observation <span class="math inline">\(t_{(i)}\)</span> against the <span class="math inline">\(100\frac{i}{n+1}\%\)</span> theoretical quantile <span class="math inline">\(q_i\)</span> of an exponential(<span class="math inline">\(\hat{\lambda}\)</span>) distribution. To find the theoretical quantiles we solve <span class="math inline">\(\hat{F}_T(q_i)=1-e^{-\hat{\lambda}q_i }=i/(n+1)\)</span> for <span class="math inline">\(q_i\)</span> to give
 <span class="math display">\[ q_i = -\frac{1}{\hat{\lambda}} \ln \left( 1-\frac{i}{n+1} \right). \]</span></p>
-<p>The points in the exponential QQ plot in Figure <a href="simple.html#fig:expqq">5.27</a> are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values. This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.</p>
-<div class="figure" style="text-align: center"><span id="fig:expqq"></span>
+<p>The points in the exponential QQ plot in Figure <a href="simple.html#fig:expqq">6.27</a> are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values. This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:expqq"></span>
 <img src="images/exp_simenv.png" alt="Exponential QQ plot with simulation envelopes based on 19 simulated datasets." width="60%" />
 <p class="caption">
-Figure 5.27: Exponential QQ plot with simulation envelopes based on 19 simulated datasets.
+Figure 6.27: Exponential QQ plot with simulation envelopes based on 19 simulated datasets.
 </p>
 </div>
 
@@ -1191,7 +1195,6 @@ Figure 5.27: Exponential QQ plot with simulation envelopes based on 19 simulated
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1231,6 +1234,10 @@ gitbook.start({
 "text": null
 },
 "download": ["stat0002book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

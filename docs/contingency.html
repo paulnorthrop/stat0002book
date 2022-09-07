@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Contingency tables | STAT0002 Introduction to Probability and Statistics</title>
+  <title>Chapter 8 Contingency tables | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Contingency tables | STAT0002 Introduction to Probability and Statistics" />
+  <meta property="og:title" content="Chapter 8 Contingency tables | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Contingency tables | STAT0002 Introduction to Probability and Statistics" />
+  <meta name="twitter:title" content="Chapter 8 Contingency tables | STAT0002 Introduction to Probability and Statistics" />
   
   <meta name="twitter:description" content="Produces STAT0002 notes in an accessible format" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2021-12-03" />
+<meta name="date" content="2022-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,9 @@
   
 <link rel="prev" href="inference.html"/>
 <link rel="next" href="linreg.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +51,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -159,234 +160,237 @@ div.csl-indent {
 <li><a href="./">STAT0002 2020-21</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>The purpose of these notes</a></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<li><a href="index.html#the-purpose-of-these-notes" id="toc-the-purpose-of-these-notes">The purpose of these notes<span></span></a></li>
+<li><a href="introduction.html#introduction" id="toc-introduction"><span class="toc-section-number">1</span> Introduction<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#real"><i class="fa fa-check"></i><b>1.1</b> Real statistical investigations</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#shuttle"><i class="fa fa-check"></i><b>1.2</b> Challenger Space Shuttle Catastrophe</a>
+<li><a href="introduction.html#real" id="toc-real"><span class="toc-section-number">1.1</span> Real statistical investigations<span></span></a></li>
+<li><a href="introduction.html#shuttle" id="toc-shuttle"><span class="toc-section-number">1.2</span> Challenger Space Shuttle Catastrophe<span></span></a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#uncertainty"><i class="fa fa-check"></i><b>1.2.1</b> Uncertainty</a></li>
+<li><a href="introduction.html#uncertainty" id="toc-uncertainty"><span class="toc-section-number">1.2.1</span> Uncertainty<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation"><i class="fa fa-check"></i><b>1.3</b> A very brief introduction to stochastic simulation</a></li>
+<li><a href="introduction.html#a-very-brief-introduction-to-stochastic-simulation" id="toc-a-very-brief-introduction-to-stochastic-simulation"><span class="toc-section-number">1.3</span> A very brief introduction to stochastic simulation<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="descriptive.html"><a href="descriptive.html"><i class="fa fa-check"></i><b>2</b> Descriptive Statistics</a>
+<li><a href="descriptive.html#descriptive" id="toc-descriptive"><span class="toc-section-number">2</span> Descriptive Statistics<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="descriptive.html"><a href="descriptive.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of data</a>
+<li><a href="descriptive.html#types-of-data" id="toc-types-of-data"><span class="toc-section-number">2.1</span> Types of data<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="descriptive.html"><a href="descriptive.html#qualitative-or-categorical-data"><i class="fa fa-check"></i><b>2.1.1</b> Qualitative or categorical data</a></li>
-<li class="chapter" data-level="2.1.2" data-path="descriptive.html"><a href="descriptive.html#quantitative-or-numerical-data"><i class="fa fa-check"></i><b>2.1.2</b> Quantitative or numerical data</a></li>
+<li><a href="descriptive.html#qualitative-or-categorical-data" id="toc-qualitative-or-categorical-data"><span class="toc-section-number">2.1.1</span> Qualitative or categorical data<span></span></a></li>
+<li><a href="descriptive.html#quantitative-or-numerical-data" id="toc-quantitative-or-numerical-data"><span class="toc-section-number">2.1.2</span> Quantitative or numerical data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="descriptive.html"><a href="descriptive.html#describing-distributions"><i class="fa fa-check"></i><b>2.2</b> Describing distributions</a>
+<li><a href="descriptive.html#describing-distributions" id="toc-describing-distributions"><span class="toc-section-number">2.2</span> Describing distributions<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="descriptive.html"><a href="descriptive.html#example-oxford-births-data"><i class="fa fa-check"></i>Example: Oxford births data</a></li>
+<li><a href="descriptive.html#example-oxford-births-data" id="toc-example-oxford-births-data">Example: Oxford births data<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="descriptive.html"><a href="descriptive.html#summary-statistics"><i class="fa fa-check"></i><b>2.3</b> Summary Statistics</a>
+<li><a href="descriptive.html#summary-statistics" id="toc-summary-statistics"><span class="toc-section-number">2.3</span> Summary Statistics<span></span></a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="descriptive.html"><a href="descriptive.html#fivenumber"><i class="fa fa-check"></i><b>2.3.1</b> Five number summary</a></li>
-<li class="chapter" data-level="2.3.2" data-path="descriptive.html"><a href="descriptive.html#meanstdev"><i class="fa fa-check"></i><b>2.3.2</b> Mean and standard deviation</a></li>
-<li class="chapter" data-level="2.3.3" data-path="descriptive.html"><a href="descriptive.html#mode"><i class="fa fa-check"></i><b>2.3.3</b> Mode</a></li>
-<li class="chapter" data-level="2.3.4" data-path="descriptive.html"><a href="descriptive.html#symmetry"><i class="fa fa-check"></i><b>2.3.4</b> Symmetry</a></li>
-<li class="chapter" data-level="2.3.5" data-path="descriptive.html"><a href="descriptive.html#corr1"><i class="fa fa-check"></i><b>2.3.5</b> Correlation</a></li>
+<li><a href="descriptive.html#fivenumber" id="toc-fivenumber"><span class="toc-section-number">2.3.1</span> Five number summary<span></span></a></li>
+<li><a href="descriptive.html#meanstdev" id="toc-meanstdev"><span class="toc-section-number">2.3.2</span> Mean and standard deviation<span></span></a></li>
+<li><a href="descriptive.html#mode" id="toc-mode"><span class="toc-section-number">2.3.3</span> Mode<span></span></a></li>
+<li><a href="descriptive.html#symmetry" id="toc-symmetry"><span class="toc-section-number">2.3.4</span> Symmetry<span></span></a></li>
+<li><a href="descriptive.html#corr1" id="toc-corr1"><span class="toc-section-number">2.3.5</span> Correlation<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="descriptive.html"><a href="descriptive.html#tables"><i class="fa fa-check"></i><b>2.4</b> Tables</a>
+<li><a href="descriptive.html#tables" id="toc-tables"><span class="toc-section-number">2.4</span> Tables<span></span></a>
 <ul>
-<li class="chapter" data-level="2.4.1" data-path="descriptive.html"><a href="descriptive.html#frequency-distribution"><i class="fa fa-check"></i><b>2.4.1</b> Frequency distribution</a></li>
+<li><a href="descriptive.html#frequency-distribution" id="toc-frequency-distribution"><span class="toc-section-number">2.4.1</span> Frequency distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="descriptive.html"><a href="descriptive.html#graphs"><i class="fa fa-check"></i><b>2.5</b> Graphs (1 variable)</a>
+<li><a href="descriptive.html#graphs" id="toc-graphs"><span class="toc-section-number">2.5</span> Graphs (1 variable)<span></span></a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="descriptive.html"><a href="descriptive.html#histogram"><i class="fa fa-check"></i><b>2.5.1</b> Histograms</a></li>
-<li class="chapter" data-level="2.5.2" data-path="descriptive.html"><a href="descriptive.html#stem"><i class="fa fa-check"></i><b>2.5.2</b> Stem-and-leaf plots</a></li>
-<li class="chapter" data-level="2.5.3" data-path="descriptive.html"><a href="descriptive.html#dotplots"><i class="fa fa-check"></i><b>2.5.3</b> Dotplots</a></li>
-<li class="chapter" data-level="2.5.4" data-path="descriptive.html"><a href="descriptive.html#boxplots"><i class="fa fa-check"></i><b>2.5.4</b> Boxplots</a></li>
-<li class="chapter" data-level="2.5.5" data-path="descriptive.html"><a href="descriptive.html#barplots"><i class="fa fa-check"></i><b>2.5.5</b> Barplots</a></li>
-<li class="chapter" data-level="2.5.6" data-path="descriptive.html"><a href="descriptive.html#times-series-plots"><i class="fa fa-check"></i><b>2.5.6</b> Times series plots</a></li>
+<li><a href="descriptive.html#histogram" id="toc-histogram"><span class="toc-section-number">2.5.1</span> Histograms<span></span></a></li>
+<li><a href="descriptive.html#stem" id="toc-stem"><span class="toc-section-number">2.5.2</span> Stem-and-leaf plots<span></span></a></li>
+<li><a href="descriptive.html#dotplots" id="toc-dotplots"><span class="toc-section-number">2.5.3</span> Dotplots<span></span></a></li>
+<li><a href="descriptive.html#boxplots" id="toc-boxplots"><span class="toc-section-number">2.5.4</span> Boxplots<span></span></a></li>
+<li><a href="descriptive.html#barplots" id="toc-barplots"><span class="toc-section-number">2.5.5</span> Barplots<span></span></a></li>
+<li><a href="descriptive.html#times-series-plots" id="toc-times-series-plots"><span class="toc-section-number">2.5.6</span> Times series plots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="descriptive.html"><a href="descriptive.html#election"><i class="fa fa-check"></i><b>2.6</b> 2000 US Presidential Election</a></li>
-<li class="chapter" data-level="2.7" data-path="descriptive.html"><a href="descriptive.html#graphs2"><i class="fa fa-check"></i><b>2.7</b> Graphs (2 variables)</a>
+<li><a href="descriptive.html#election" id="toc-election"><span class="toc-section-number">2.6</span> 2000 US Presidential Election<span></span></a></li>
+<li><a href="descriptive.html#graphs2" id="toc-graphs2"><span class="toc-section-number">2.7</span> Graphs (2 variables)<span></span></a>
 <ul>
-<li class="chapter" data-level="2.7.1" data-path="descriptive.html"><a href="descriptive.html#scatter-plots"><i class="fa fa-check"></i><b>2.7.1</b> Scatter plots</a></li>
+<li><a href="descriptive.html#scatter-plots" id="toc-scatter-plots"><span class="toc-section-number">2.7.1</span> Scatter plots<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="descriptive.html"><a href="descriptive.html#transformation"><i class="fa fa-check"></i><b>2.8</b> Transformation of data</a>
+<li><a href="descriptive.html#transformation" id="toc-transformation"><span class="toc-section-number">2.8</span> Transformation of data<span></span></a>
 <ul>
-<li class="chapter" data-level="2.8.1" data-path="descriptive.html"><a href="descriptive.html#transsymmetry"><i class="fa fa-check"></i><b>2.8.1</b> Transformation to approximate symmetry</a></li>
-<li class="chapter" data-level="2.8.2" data-path="descriptive.html"><a href="descriptive.html#straighten"><i class="fa fa-check"></i><b>2.8.2</b> Straightening scatter plots</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>3</b> Probability</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="probability.html"><a href="probability.html#sids"><i class="fa fa-check"></i><b>3.1</b> Misleading statistical evidence in cot death trials</a></li>
-<li class="chapter" data-level="3.2" data-path="probability.html"><a href="probability.html#relative-frequency-definition-of-probability"><i class="fa fa-check"></i><b>3.2</b> Relative frequency definition of probability</a></li>
-<li class="chapter" data-level="3.3" data-path="probability.html"><a href="probability.html#basic-properties-of-probability"><i class="fa fa-check"></i><b>3.3</b> Basic properties of probability</a></li>
-<li class="chapter" data-level="3.4" data-path="probability.html"><a href="probability.html#conditional-probability"><i class="fa fa-check"></i><b>3.4</b> Conditional probability</a></li>
-<li class="chapter" data-level="3.5" data-path="probability.html"><a href="probability.html#addition-rule-of-probability"><i class="fa fa-check"></i><b>3.5</b> Addition rule of probability</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="probability.html"><a href="probability.html#mutually-exclusive-events"><i class="fa fa-check"></i><b>3.5.1</b> Mutually exclusive events</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="probability.html"><a href="probability.html#multrule"><i class="fa fa-check"></i><b>3.6</b> Multiplication rule of probability</a></li>
-<li class="chapter" data-level="3.7" data-path="probability.html"><a href="probability.html#indepevents"><i class="fa fa-check"></i><b>3.7</b> Independence of events</a>
-<ul>
-<li class="chapter" data-level="3.7.1" data-path="probability.html"><a href="probability.html#bloodindep"><i class="fa fa-check"></i><b>3.7.1</b> An example of independence</a></li>
-</ul></li>
-<li class="chapter" data-level="3.8" data-path="probability.html"><a href="probability.html#law-of-total-probability"><i class="fa fa-check"></i><b>3.8</b> Law of total probability</a></li>
-<li class="chapter" data-level="3.9" data-path="probability.html"><a href="probability.html#bayes-theorem"><i class="fa fa-check"></i><b>3.9</b> Bayes’ theorem</a></li>
-<li class="chapter" data-level="3.10" data-path="probability.html"><a href="probability.html#dna-identification-evidence"><i class="fa fa-check"></i><b>3.10</b> DNA identification evidence</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="rvs.html"><a href="rvs.html"><i class="fa fa-check"></i><b>4</b> Random variables</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="rvs.html"><a href="rvs.html#discrete"><i class="fa fa-check"></i><b>4.1</b> Discrete random variables</a></li>
-<li class="chapter" data-level="4.2" data-path="rvs.html"><a href="rvs.html#continuous"><i class="fa fa-check"></i><b>4.2</b> Continuous random variables</a></li>
-<li class="chapter" data-level="4.3" data-path="rvs.html"><a href="rvs.html#expectation"><i class="fa fa-check"></i><b>4.3</b> Expectation</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="rvs.html"><a href="rvs.html#expectation-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.3.1</b> Expectation of a discrete random variable</a></li>
-<li class="chapter" data-level="4.3.2" data-path="rvs.html"><a href="rvs.html#expectation-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.3.2</b> Expectation of a continuous random variable</a></li>
-<li class="chapter" data-level="4.3.3" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmex"><i class="fa fa-check"></i><b>4.3.3</b> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span></a></li>
-<li class="chapter" data-level="4.3.4" data-path="rvs.html"><a href="rvs.html#EgX"><i class="fa fa-check"></i><b>4.3.4</b> The expectation of <span class="math inline">\(g(X)\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="rvs.html"><a href="rvs.html#variance"><i class="fa fa-check"></i><b>4.4</b> Variance</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="rvs.html"><a href="rvs.html#variance-of-a-discrete-random-variable"><i class="fa fa-check"></i><b>4.4.1</b> Variance of a discrete random variable</a></li>
-<li class="chapter" data-level="4.4.2" data-path="rvs.html"><a href="rvs.html#variance-of-a-continuous-random-variable"><i class="fa fa-check"></i><b>4.4.2</b> Variance of a continuous random variable</a></li>
-<li class="chapter" data-level="4.4.3" data-path="rvs.html"><a href="rvs.html#variance-and-standard-deviation"><i class="fa fa-check"></i><b>4.4.3</b> Variance and standard deviation</a></li>
-<li class="chapter" data-level="4.4.4" data-path="rvs.html"><a href="rvs.html#properties-of-mathrmvarx"><i class="fa fa-check"></i><b>4.4.4</b> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="rvs.html"><a href="rvs.html#locations"><i class="fa fa-check"></i><b>4.5</b> Other measures of location</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="rvs.html"><a href="rvs.html#the-median-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.1</b> The median of a random variable</a></li>
-<li class="chapter" data-level="4.5.2" data-path="rvs.html"><a href="rvs.html#the-mode-of-a-random-variable"><i class="fa fa-check"></i><b>4.5.2</b> The mode of a random variable</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="rvs.html"><a href="rvs.html#quantiles"><i class="fa fa-check"></i><b>4.6</b> Quantiles</a></li>
-<li class="chapter" data-level="4.7" data-path="rvs.html"><a href="rvs.html#measures-of-shape"><i class="fa fa-check"></i><b>4.7</b> Measures of shape</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="simple.html"><a href="simple.html"><i class="fa fa-check"></i><b>5</b> Simple distributions</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="simple.html"><a href="simple.html#australian-births-data"><i class="fa fa-check"></i><b>5.1</b> Australian births data</a></li>
-<li class="chapter" data-level="5.2" data-path="simple.html"><a href="simple.html#the-bernoulli-distribution"><i class="fa fa-check"></i><b>5.2</b> The Bernoulli distribution</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="simple.html"><a href="simple.html#summary-of-the-bernoullip-distribution"><i class="fa fa-check"></i><b>5.2.1</b> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="simple.html"><a href="simple.html#binomial"><i class="fa fa-check"></i><b>5.3</b> The binomial distribution</a>
-<ul>
-<li class="chapter" data-level="5.3.1" data-path="simple.html"><a href="simple.html#binominf"><i class="fa fa-check"></i><b>5.3.1</b> A brief look at statistical inference about <span class="math inline">\(p\)</span></a></li>
-<li class="chapter" data-level="5.3.2" data-path="simple.html"><a href="simple.html#summary-of-the-binomialnp-distribution"><i class="fa fa-check"></i><b>5.3.2</b> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="simple.html"><a href="simple.html#the-geometric-distribution"><i class="fa fa-check"></i><b>5.4</b> The geometric distribution</a>
-<ul>
-<li class="chapter" data-level="5.4.1" data-path="simple.html"><a href="simple.html#summary-of-the-geometricp-distribution"><i class="fa fa-check"></i><b>5.4.1</b> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.5" data-path="simple.html"><a href="simple.html#Poisson"><i class="fa fa-check"></i><b>5.5</b> The Poisson distribution</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="simple.html"><a href="simple.html#summary-of-the-poissonmu-distribution"><i class="fa fa-check"></i><b>5.5.1</b> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="simple.html"><a href="simple.html#summary-of-these-discrete-distributions"><i class="fa fa-check"></i><b>5.6</b> Summary of these discrete distributions</a></li>
-<li class="chapter" data-level="5.7" data-path="simple.html"><a href="simple.html#uniform"><i class="fa fa-check"></i><b>5.7</b> The uniform distribution</a>
-<ul>
-<li class="chapter" data-level="5.7.1" data-path="simple.html"><a href="simple.html#summary-of-the-uniformab-distribution"><i class="fa fa-check"></i><b>5.7.1</b> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.8" data-path="simple.html"><a href="simple.html#exponential"><i class="fa fa-check"></i><b>5.8</b> The exponential distribution</a>
-<ul>
-<li class="chapter" data-level="5.8.1" data-path="simple.html"><a href="simple.html#summary-of-the-exponentiallambda-distribution"><i class="fa fa-check"></i><b>5.8.1</b> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="5.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>5.9</b> The normal distribution</a>
-<ul>
-<li class="chapter" data-level="5.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>5.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
-<li class="chapter" data-level="5.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>5.9.2</b> The standard normal disribution</a></li>
-<li class="chapter" data-level="5.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>5.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
-<li class="chapter" data-level="5.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>5.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
-</ul></li>
-<li class="chapter" data-level="5.10" data-path="simple.html"><a href="simple.html#summary-of-these-continuous-distributions"><i class="fa fa-check"></i><b>5.10</b> Summary of these continuous distributions</a></li>
-<li class="chapter" data-level="5.11" data-path="simple.html"><a href="simple.html#qq"><i class="fa fa-check"></i><b>5.11</b> QQ plots</a>
-<ul>
-<li class="chapter" data-level="5.11.1" data-path="simple.html"><a href="simple.html#normal-qq-plots"><i class="fa fa-check"></i><b>5.11.1</b> Normal QQ plots</a></li>
-<li class="chapter" data-level="5.11.2" data-path="simple.html"><a href="simple.html#uniform-qq-plots"><i class="fa fa-check"></i><b>5.11.2</b> Uniform QQ plots</a></li>
-<li class="chapter" data-level="5.11.3" data-path="simple.html"><a href="simple.html#exponential-qq-plots"><i class="fa fa-check"></i><b>5.11.3</b> Exponential QQ plots</a></li>
+<li><a href="descriptive.html#transsymmetry" id="toc-transsymmetry"><span class="toc-section-number">2.8.1</span> Transformation to approximate symmetry<span></span></a></li>
+<li><a href="descriptive.html#straighten" id="toc-straighten"><span class="toc-section-number">2.8.2</span> Straightening scatter plots<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="inference.html"><a href="inference.html"><i class="fa fa-check"></i><b>6</b> Statistical Inference</a>
+<li><a href="probability.html#probability" id="toc-probability"><span class="toc-section-number">3</span> Probability I<span></span></a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="inference.html"><a href="inference.html#the-story-so-far"><i class="fa fa-check"></i><b>6.1</b> The story so far</a></li>
-<li class="chapter" data-level="6.2" data-path="inference.html"><a href="inference.html#sample-and-populations"><i class="fa fa-check"></i><b>6.2</b> Sample and populations</a></li>
-<li class="chapter" data-level="6.3" data-path="inference.html"><a href="inference.html#probmodels"><i class="fa fa-check"></i><b>6.3</b> Probability models</a></li>
-<li class="chapter" data-level="6.4" data-path="inference.html"><a href="inference.html#fitting-models"><i class="fa fa-check"></i><b>6.4</b> Fitting models</a></li>
-<li class="chapter" data-level="6.5" data-path="inference.html"><a href="inference.html#uncertainty-in-estimation"><i class="fa fa-check"></i><b>6.5</b> Uncertainty in estimation</a>
+<li><a href="probability.html#sids" id="toc-sids"><span class="toc-section-number">3.1</span> Misleading statistical evidence in cot death trials<span></span></a></li>
+<li><a href="probability.html#relative-frequency-definition-of-probability" id="toc-relative-frequency-definition-of-probability"><span class="toc-section-number">3.2</span> Relative frequency definition of probability<span></span></a></li>
+<li><a href="probability.html#basic-properties-of-probability" id="toc-basic-properties-of-probability"><span class="toc-section-number">3.3</span> Basic properties of probability<span></span></a></li>
+<li><a href="probability.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.4</span> Conditional probability<span></span></a></li>
+<li><a href="probability.html#addition-rule-of-probability" id="toc-addition-rule-of-probability"><span class="toc-section-number">3.5</span> Addition rule of probability<span></span></a>
 <ul>
-<li class="chapter" data-level="6.5.1" data-path="inference.html"><a href="inference.html#simulation-coin-tossing-example"><i class="fa fa-check"></i><b>6.5.1</b> Simulation: coin-tossing example</a></li>
-<li class="chapter" data-level="6.5.2" data-path="inference.html"><a href="inference.html#simnorm"><i class="fa fa-check"></i><b>6.5.2</b> Simulation: estimating the parameters of a normal distribution</a></li>
-<li class="chapter" data-level="6.5.3" data-path="inference.html"><a href="inference.html#simexp"><i class="fa fa-check"></i><b>6.5.3</b> Simulation: estimating the parameters of an exponential distribution</a></li>
-<li class="chapter" data-level="6.5.4" data-path="inference.html"><a href="inference.html#central-limit-theorem"><i class="fa fa-check"></i><b>6.5.4</b> Central Limit Theorem</a></li>
+<li><a href="probability.html#mutually-exclusive-events" id="toc-mutually-exclusive-events"><span class="toc-section-number">3.5.1</span> Mutually exclusive events<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="inference.html"><a href="inference.html#good"><i class="fa fa-check"></i><b>6.6</b> Properties of estimators</a>
+<li><a href="probability.html#multrule" id="toc-multrule"><span class="toc-section-number">3.6</span> Multiplication rule of probability<span></span></a></li>
+<li><a href="probability.html#indepevents" id="toc-indepevents"><span class="toc-section-number">3.7</span> Independence of events<span></span></a>
 <ul>
-<li class="chapter" data-level="6.6.1" data-path="inference.html"><a href="inference.html#bias"><i class="fa fa-check"></i><b>6.6.1</b> Bias</a></li>
-<li class="chapter" data-level="6.6.2" data-path="inference.html"><a href="inference.html#varianceofestimator"><i class="fa fa-check"></i><b>6.6.2</b> Variance</a></li>
-<li class="chapter" data-level="6.6.3" data-path="inference.html"><a href="inference.html#mean-squared-error-mse"><i class="fa fa-check"></i><b>6.6.3</b> Mean squared error (MSE)</a></li>
-<li class="chapter" data-level="6.6.4" data-path="inference.html"><a href="inference.html#standard-error"><i class="fa fa-check"></i><b>6.6.4</b> Standard error</a></li>
-<li class="chapter" data-level="6.6.5" data-path="inference.html"><a href="inference.html#consistency"><i class="fa fa-check"></i><b>6.6.5</b> Consistency</a></li>
-</ul></li>
-<li class="chapter" data-level="6.7" data-path="inference.html"><a href="inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>6.7</b> Assessing goodness-of-fit</a>
-<ul>
-<li class="chapter" data-level="6.7.1" data-path="inference.html"><a href="inference.html#residuals"><i class="fa fa-check"></i><b>6.7.1</b> Residuals</a></li>
-<li class="chapter" data-level="6.7.2" data-path="inference.html"><a href="inference.html#standardised-residuals"><i class="fa fa-check"></i><b>6.7.2</b> Standardised residuals</a></li>
+<li><a href="probability.html#bloodindep" id="toc-bloodindep"><span class="toc-section-number">3.7.1</span> An example of independence<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="contingency.html"><a href="contingency.html"><i class="fa fa-check"></i><b>7</b> Contingency tables</a>
+<li><a href="probability-ii.html#probability-ii" id="toc-probability-ii"><span class="toc-section-number">4</span> Probability II<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="contingency.html"><a href="contingency.html#way2"><i class="fa fa-check"></i><b>7.1</b> 2-way contingency tables</a>
+<li><a href="probability-ii.html#law-of-total-probability" id="toc-law-of-total-probability"><span class="toc-section-number">4.1</span> Law of total probability<span></span></a></li>
+<li><a href="probability-ii.html#bayes-theorem" id="toc-bayes-theorem"><span class="toc-section-number">4.2</span> Bayes’ theorem<span></span></a></li>
+<li><a href="probability-ii.html#dna-identification-evidence" id="toc-dna-identification-evidence"><span class="toc-section-number">4.3</span> DNA identification evidence<span></span></a></li>
+</ul></li>
+<li><a href="rvs.html#rvs" id="toc-rvs"><span class="toc-section-number">5</span> Random variables<span></span></a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="contingency.html"><a href="contingency.html#indep"><i class="fa fa-check"></i><b>7.1.1</b> Independence</a></li>
-<li class="chapter" data-level="7.1.2" data-path="contingency.html"><a href="contingency.html#compprob"><i class="fa fa-check"></i><b>7.1.2</b> Comparing probabilities</a></li>
-<li class="chapter" data-level="7.1.3" data-path="contingency.html"><a href="contingency.html#measures"><i class="fa fa-check"></i><b>7.1.3</b> Measures of association</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="contingency.html"><a href="contingency.html#way3"><i class="fa fa-check"></i><b>7.2</b> 3-way contingency tables</a>
+<li><a href="rvs.html#discrete" id="toc-discrete"><span class="toc-section-number">5.1</span> Discrete random variables<span></span></a></li>
+<li><a href="rvs.html#continuous" id="toc-continuous"><span class="toc-section-number">5.2</span> Continuous random variables<span></span></a></li>
+<li><a href="rvs.html#expectation" id="toc-expectation"><span class="toc-section-number">5.3</span> Expectation<span></span></a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="contingency.html"><a href="contingency.html#mutual-independence"><i class="fa fa-check"></i><b>7.2.1</b> Mutual independence</a></li>
-<li class="chapter" data-level="7.2.2" data-path="contingency.html"><a href="contingency.html#marginal-independence"><i class="fa fa-check"></i><b>7.2.2</b> Marginal independence</a></li>
-<li class="chapter" data-level="7.2.3" data-path="contingency.html"><a href="contingency.html#conditional-independence"><i class="fa fa-check"></i><b>7.2.3</b> Conditional independence</a></li>
-<li class="chapter" data-level="7.2.4" data-path="contingency.html"><a href="contingency.html#confounding-variables"><i class="fa fa-check"></i><b>7.2.4</b> Confounding variables</a></li>
+<li><a href="rvs.html#expectation-of-a-discrete-random-variable" id="toc-expectation-of-a-discrete-random-variable"><span class="toc-section-number">5.3.1</span> Expectation of a discrete random variable<span></span></a></li>
+<li><a href="rvs.html#expectation-of-a-continuous-random-variable" id="toc-expectation-of-a-continuous-random-variable"><span class="toc-section-number">5.3.2</span> Expectation of a continuous random variable<span></span></a></li>
+<li><a href="rvs.html#properties-of-mathrmex" id="toc-properties-of-mathrmex"><span class="toc-section-number">5.3.3</span> Properties of <span class="math inline">\(\mathrm{E}(X)\)</span><span></span></a></li>
+<li><a href="rvs.html#EgX" id="toc-EgX"><span class="toc-section-number">5.3.4</span> The expectation of <span class="math inline">\(g(X)\)</span><span></span></a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="linreg.html"><a href="linreg.html"><i class="fa fa-check"></i><b>8</b> Linear regression</a>
+<li><a href="rvs.html#variance" id="toc-variance"><span class="toc-section-number">5.4</span> Variance<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression"><i class="fa fa-check"></i><b>8.1</b> Simple linear regression</a>
+<li><a href="rvs.html#variance-of-a-discrete-random-variable" id="toc-variance-of-a-discrete-random-variable"><span class="toc-section-number">5.4.1</span> Variance of a discrete random variable<span></span></a></li>
+<li><a href="rvs.html#variance-of-a-continuous-random-variable" id="toc-variance-of-a-continuous-random-variable"><span class="toc-section-number">5.4.2</span> Variance of a continuous random variable<span></span></a></li>
+<li><a href="rvs.html#variance-and-standard-deviation" id="toc-variance-and-standard-deviation"><span class="toc-section-number">5.4.3</span> Variance and standard deviation<span></span></a></li>
+<li><a href="rvs.html#properties-of-mathrmvarx" id="toc-properties-of-mathrmvarx"><span class="toc-section-number">5.4.4</span> Properties of <span class="math inline">\(\mathrm{var}(X)\)</span><span></span></a></li>
+</ul></li>
+<li><a href="rvs.html#locations" id="toc-locations"><span class="toc-section-number">5.5</span> Other measures of location<span></span></a>
 <ul>
-<li class="chapter" data-level="8.1.1" data-path="linreg.html"><a href="linreg.html#simple-linear-regression-model"><i class="fa fa-check"></i><b>8.1.1</b> Simple linear regression model</a></li>
-<li class="chapter" data-level="8.1.2" data-path="linreg.html"><a href="linreg.html#least-squares-estimation-of-alpha-and-beta"><i class="fa fa-check"></i><b>8.1.2</b> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></a></li>
-<li class="chapter" data-level="8.1.3" data-path="linreg.html"><a href="linreg.html#least-squares-fitting-to-hubbles-data"><i class="fa fa-check"></i><b>8.1.3</b> Least squares fitting to Hubble’s data</a></li>
-<li class="chapter" data-level="8.1.4" data-path="linreg.html"><a href="linreg.html#normal-linear-regression-model"><i class="fa fa-check"></i><b>8.1.4</b> Normal linear regression model</a></li>
-<li class="chapter" data-level="8.1.5" data-path="linreg.html"><a href="linreg.html#lmsummary"><i class="fa fa-check"></i><b>8.1.5</b> Summary of the assumptions of a (normal) linear regression model</a></li>
+<li><a href="rvs.html#the-median-of-a-random-variable" id="toc-the-median-of-a-random-variable"><span class="toc-section-number">5.5.1</span> The median of a random variable<span></span></a></li>
+<li><a href="rvs.html#the-mode-of-a-random-variable" id="toc-the-mode-of-a-random-variable"><span class="toc-section-number">5.5.2</span> The mode of a random variable<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="linreg.html"><a href="linreg.html#looking"><i class="fa fa-check"></i><b>8.2</b> Looking at scatter plots</a></li>
-<li class="chapter" data-level="8.3" data-path="linreg.html"><a href="linreg.html#model-checking"><i class="fa fa-check"></i><b>8.3</b> Model checking</a>
+<li><a href="rvs.html#quantiles" id="toc-quantiles"><span class="toc-section-number">5.6</span> Quantiles<span></span></a></li>
+<li><a href="rvs.html#measures-of-shape" id="toc-measures-of-shape"><span class="toc-section-number">5.7</span> Measures of shape<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#simple" id="toc-simple"><span class="toc-section-number">6</span> Simple distributions<span></span></a>
 <ul>
-<li class="chapter" data-level="8.3.1" data-path="linreg.html"><a href="linreg.html#departures-from-assumptions"><i class="fa fa-check"></i><b>8.3.1</b> Departures from assumptions</a></li>
-<li class="chapter" data-level="8.3.2" data-path="linreg.html"><a href="linreg.html#outliers"><i class="fa fa-check"></i><b>8.3.2</b> Outliers and influential observations</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="linreg.html"><a href="linreg.html#linregtrans"><i class="fa fa-check"></i><b>8.4</b> Use of transformations</a>
+<li><a href="simple.html#australian-births-data" id="toc-australian-births-data"><span class="toc-section-number">6.1</span> Australian births data<span></span></a></li>
+<li><a href="simple.html#the-bernoulli-distribution" id="toc-the-bernoulli-distribution"><span class="toc-section-number">6.2</span> The Bernoulli distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="8.4.1" data-path="linreg.html"><a href="linreg.html#interpretation-after-transformation"><i class="fa fa-check"></i><b>8.4.1</b> Interpretation after transformation</a></li>
+<li><a href="simple.html#summary-of-the-bernoullip-distribution" id="toc-summary-of-the-bernoullip-distribution"><span class="toc-section-number">6.2.1</span> Summary of the Bernoulli(<span class="math inline">\(p\)</span>) distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="linreg.html"><a href="linreg.html#over-fitting"><i class="fa fa-check"></i><b>8.5</b> Over-fitting</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>9</b> Correlation</a>
+<li><a href="simple.html#binomial" id="toc-binomial"><span class="toc-section-number">6.3</span> The binomial distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-a-measure-of-linear-association"><i class="fa fa-check"></i><b>9.1</b> Correlation: a measure of linear association</a></li>
-<li class="chapter" data-level="9.2" data-path="correlationchapter.html"><a href="correlationchapter.html#covariance-and-correlation"><i class="fa fa-check"></i><b>9.2</b> Covariance and correlation</a>
+<li><a href="simple.html#binominf" id="toc-binominf"><span class="toc-section-number">6.3.1</span> A brief look at statistical inference about <span class="math inline">\(p\)</span><span></span></a></li>
+<li><a href="simple.html#summary-of-the-binomialnp-distribution" id="toc-summary-of-the-binomialnp-distribution"><span class="toc-section-number">6.3.2</span> Summary of the binomial(<span class="math inline">\(n,p\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#the-geometric-distribution" id="toc-the-geometric-distribution"><span class="toc-section-number">6.4</span> The geometric distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="correlationchapter.html"><a href="correlationchapter.html#estimation"><i class="fa fa-check"></i><b>9.2.1</b> Estimation</a></li>
-<li class="chapter" data-level="9.2.2" data-path="correlationchapter.html"><a href="correlationchapter.html#links-between-regression-and-correlation"><i class="fa fa-check"></i><b>9.2.2</b> Links between regression and correlation</a></li>
+<li><a href="simple.html#summary-of-the-geometricp-distribution" id="toc-summary-of-the-geometricp-distribution"><span class="toc-section-number">6.4.1</span> Summary of the geometric(<span class="math inline">\(p\)</span>) distribution<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="correlationchapter.html"><a href="correlationchapter.html#use-and-misuse-of-correlation"><i class="fa fa-check"></i><b>9.3</b> Use and misuse of correlation</a>
+<li><a href="simple.html#Poisson" id="toc-Poisson"><span class="toc-section-number">6.5</span> The Poisson distribution<span></span></a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="correlationchapter.html"><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes"><i class="fa fa-check"></i><b>9.3.1</b> Do not use correlation for regression sampling schemes</a></li>
-<li class="chapter" data-level="9.3.2" data-path="correlationchapter.html"><a href="correlationchapter.html#correxamples"><i class="fa fa-check"></i><b>9.3.2</b> Examples of correlations of different strengths</a></li>
-<li class="chapter" data-level="9.3.3" data-path="correlationchapter.html"><a href="correlationchapter.html#beware-missing-data-codes"><i class="fa fa-check"></i><b>9.3.3</b> Beware missing data codes</a></li>
-<li class="chapter" data-level="9.3.4" data-path="correlationchapter.html"><a href="correlationchapter.html#more-guessing-sample-correlations"><i class="fa fa-check"></i><b>9.3.4</b> More guessing sample correlations</a></li>
-<li class="chapter" data-level="9.3.5" data-path="correlationchapter.html"><a href="correlationchapter.html#summary"><i class="fa fa-check"></i><b>9.3.5</b> Summary</a></li>
-<li class="chapter" data-level="9.3.6" data-path="correlationchapter.html"><a href="correlationchapter.html#anscombes-datasets"><i class="fa fa-check"></i><b>9.3.6</b> Anscombe’s datasets</a></li>
-<li class="chapter" data-level="9.3.7" data-path="correlationchapter.html"><a href="correlationchapter.html#we-must-interpret-correlation-with-care."><i class="fa fa-check"></i><b>9.3.7</b> We must interpret correlation with care.</a></li>
+<li><a href="simple.html#summary-of-the-poissonmu-distribution" id="toc-summary-of-the-poissonmu-distribution"><span class="toc-section-number">6.5.1</span> Summary of the Poisson(<span class="math inline">\(\mu\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#summary-of-these-discrete-distributions" id="toc-summary-of-these-discrete-distributions"><span class="toc-section-number">6.6</span> Summary of these discrete distributions<span></span></a></li>
+<li><a href="simple.html#uniform" id="toc-uniform"><span class="toc-section-number">6.7</span> The uniform distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-uniformab-distribution" id="toc-summary-of-the-uniformab-distribution"><span class="toc-section-number">6.7.1</span> Summary of the uniform(<span class="math inline">\(a,b\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#exponential" id="toc-exponential"><span class="toc-section-number">6.8</span> The exponential distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-exponentiallambda-distribution" id="toc-summary-of-the-exponentiallambda-distribution"><span class="toc-section-number">6.8.1</span> Summary of the exponential(<span class="math inline">\(\lambda\)</span>) distribution<span></span></a></li>
+</ul></li>
+<li><a href="simple.html#normal" id="toc-normal"><span class="toc-section-number">6.9</span> The normal distribution<span></span></a>
+<ul>
+<li><a href="simple.html#summary-of-the-mboxnmusigma2-distribution" id="toc-summary-of-the-mboxnmusigma2-distribution"><span class="toc-section-number">6.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution<span></span></a></li>
+<li><a href="simple.html#the-standard-normal-disribution" id="toc-the-standard-normal-disribution"><span class="toc-section-number">6.9.2</span> The standard normal disribution<span></span></a></li>
+<li><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles" id="toc-evaluating-the-normal-c.d.f.-and-quantiles"><span class="toc-section-number">6.9.3</span> Evaluating the normal c.d.f. and quantiles<span></span></a></li>
+<li><a href="simple.html#interpretation-of-sigma" id="toc-interpretation-of-sigma"><span class="toc-section-number">6.9.4</span> Interpretation of <span class="math inline">\(\sigma\)</span><span></span></a></li>
+</ul></li>
+<li><a href="simple.html#summary-of-these-continuous-distributions" id="toc-summary-of-these-continuous-distributions"><span class="toc-section-number">6.10</span> Summary of these continuous distributions<span></span></a></li>
+<li><a href="simple.html#qq" id="toc-qq"><span class="toc-section-number">6.11</span> QQ plots<span></span></a>
+<ul>
+<li><a href="simple.html#normal-qq-plots" id="toc-normal-qq-plots"><span class="toc-section-number">6.11.1</span> Normal QQ plots<span></span></a></li>
+<li><a href="simple.html#uniform-qq-plots" id="toc-uniform-qq-plots"><span class="toc-section-number">6.11.2</span> Uniform QQ plots<span></span></a></li>
+<li><a href="simple.html#exponential-qq-plots" id="toc-exponential-qq-plots"><span class="toc-section-number">6.11.3</span> Exponential QQ plots<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="a-general-strategy-for-statistical-modelling.html"><a href="a-general-strategy-for-statistical-modelling.html"><i class="fa fa-check"></i><b>10</b> A general strategy for statistical modelling</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li><a href="inference.html#inference" id="toc-inference"><span class="toc-section-number">7</span> Statistical Inference<span></span></a>
+<ul>
+<li><a href="inference.html#the-story-so-far" id="toc-the-story-so-far"><span class="toc-section-number">7.1</span> The story so far<span></span></a></li>
+<li><a href="inference.html#sample-and-populations" id="toc-sample-and-populations"><span class="toc-section-number">7.2</span> Sample and populations<span></span></a></li>
+<li><a href="inference.html#probmodels" id="toc-probmodels"><span class="toc-section-number">7.3</span> Probability models<span></span></a></li>
+<li><a href="inference.html#fitting-models" id="toc-fitting-models"><span class="toc-section-number">7.4</span> Fitting models<span></span></a></li>
+<li><a href="inference.html#uncertainty-in-estimation" id="toc-uncertainty-in-estimation"><span class="toc-section-number">7.5</span> Uncertainty in estimation<span></span></a>
+<ul>
+<li><a href="inference.html#simulation-coin-tossing-example" id="toc-simulation-coin-tossing-example"><span class="toc-section-number">7.5.1</span> Simulation: coin-tossing example<span></span></a></li>
+<li><a href="inference.html#simnorm" id="toc-simnorm"><span class="toc-section-number">7.5.2</span> Simulation: estimating the parameters of a normal distribution<span></span></a></li>
+<li><a href="inference.html#simexp" id="toc-simexp"><span class="toc-section-number">7.5.3</span> Simulation: estimating the parameters of an exponential distribution<span></span></a></li>
+<li><a href="inference.html#central-limit-theorem" id="toc-central-limit-theorem"><span class="toc-section-number">7.5.4</span> Central Limit Theorem<span></span></a></li>
+</ul></li>
+<li><a href="inference.html#good" id="toc-good"><span class="toc-section-number">7.6</span> Properties of estimators<span></span></a>
+<ul>
+<li><a href="inference.html#bias" id="toc-bias"><span class="toc-section-number">7.6.1</span> Bias<span></span></a></li>
+<li><a href="inference.html#varianceofestimator" id="toc-varianceofestimator"><span class="toc-section-number">7.6.2</span> Variance<span></span></a></li>
+<li><a href="inference.html#mean-squared-error-mse" id="toc-mean-squared-error-mse"><span class="toc-section-number">7.6.3</span> Mean squared error (MSE)<span></span></a></li>
+<li><a href="inference.html#standard-error" id="toc-standard-error"><span class="toc-section-number">7.6.4</span> Standard error<span></span></a></li>
+<li><a href="inference.html#consistency" id="toc-consistency"><span class="toc-section-number">7.6.5</span> Consistency<span></span></a></li>
+</ul></li>
+<li><a href="inference.html#assessing-goodness-of-fit" id="toc-assessing-goodness-of-fit"><span class="toc-section-number">7.7</span> Assessing goodness-of-fit<span></span></a>
+<ul>
+<li><a href="inference.html#residuals" id="toc-residuals"><span class="toc-section-number">7.7.1</span> Residuals<span></span></a></li>
+<li><a href="inference.html#standardised-residuals" id="toc-standardised-residuals"><span class="toc-section-number">7.7.2</span> Standardised residuals<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="contingency.html#contingency" id="toc-contingency"><span class="toc-section-number">8</span> Contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#way2" id="toc-way2"><span class="toc-section-number">8.1</span> 2-way contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#indep" id="toc-indep"><span class="toc-section-number">8.1.1</span> Independence<span></span></a></li>
+<li><a href="contingency.html#compprob" id="toc-compprob"><span class="toc-section-number">8.1.2</span> Comparing probabilities<span></span></a></li>
+<li><a href="contingency.html#measures" id="toc-measures"><span class="toc-section-number">8.1.3</span> Measures of association<span></span></a></li>
+</ul></li>
+<li><a href="contingency.html#way3" id="toc-way3"><span class="toc-section-number">8.2</span> 3-way contingency tables<span></span></a>
+<ul>
+<li><a href="contingency.html#mutual-independence" id="toc-mutual-independence"><span class="toc-section-number">8.2.1</span> Mutual independence<span></span></a></li>
+<li><a href="contingency.html#marginal-independence" id="toc-marginal-independence"><span class="toc-section-number">8.2.2</span> Marginal independence<span></span></a></li>
+<li><a href="contingency.html#conditional-independence" id="toc-conditional-independence"><span class="toc-section-number">8.2.3</span> Conditional independence<span></span></a></li>
+<li><a href="contingency.html#confounding-variables" id="toc-confounding-variables"><span class="toc-section-number">8.2.4</span> Confounding variables<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="linreg.html#linreg" id="toc-linreg"><span class="toc-section-number">9</span> Linear regression<span></span></a>
+<ul>
+<li><a href="linreg.html#simple-linear-regression" id="toc-simple-linear-regression"><span class="toc-section-number">9.1</span> Simple linear regression<span></span></a>
+<ul>
+<li><a href="linreg.html#simple-linear-regression-model" id="toc-simple-linear-regression-model"><span class="toc-section-number">9.1.1</span> Simple linear regression model<span></span></a></li>
+<li><a href="linreg.html#least-squares-estimation-of-alpha-and-beta" id="toc-least-squares-estimation-of-alpha-and-beta"><span class="toc-section-number">9.1.2</span> Least squares estimation of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span><span></span></a></li>
+<li><a href="linreg.html#least-squares-fitting-to-hubbles-data" id="toc-least-squares-fitting-to-hubbles-data"><span class="toc-section-number">9.1.3</span> Least squares fitting to Hubble’s data<span></span></a></li>
+<li><a href="linreg.html#normal-linear-regression-model" id="toc-normal-linear-regression-model"><span class="toc-section-number">9.1.4</span> Normal linear regression model<span></span></a></li>
+<li><a href="linreg.html#lmsummary" id="toc-lmsummary"><span class="toc-section-number">9.1.5</span> Summary of the assumptions of a (normal) linear regression model<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#looking" id="toc-looking"><span class="toc-section-number">9.2</span> Looking at scatter plots<span></span></a></li>
+<li><a href="linreg.html#model-checking" id="toc-model-checking"><span class="toc-section-number">9.3</span> Model checking<span></span></a>
+<ul>
+<li><a href="linreg.html#departures-from-assumptions" id="toc-departures-from-assumptions"><span class="toc-section-number">9.3.1</span> Departures from assumptions<span></span></a></li>
+<li><a href="linreg.html#outliers" id="toc-outliers"><span class="toc-section-number">9.3.2</span> Outliers and influential observations<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#linregtrans" id="toc-linregtrans"><span class="toc-section-number">9.4</span> Use of transformations<span></span></a>
+<ul>
+<li><a href="linreg.html#interpretation-after-transformation" id="toc-interpretation-after-transformation"><span class="toc-section-number">9.4.1</span> Interpretation after transformation<span></span></a></li>
+</ul></li>
+<li><a href="linreg.html#over-fitting" id="toc-over-fitting"><span class="toc-section-number">9.5</span> Over-fitting<span></span></a></li>
+</ul></li>
+<li><a href="correlationchapter.html#correlationchapter" id="toc-correlationchapter"><span class="toc-section-number">10</span> Correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#correlation-a-measure-of-linear-association" id="toc-correlation-a-measure-of-linear-association"><span class="toc-section-number">10.1</span> Correlation: a measure of linear association<span></span></a></li>
+<li><a href="correlationchapter.html#covariance-and-correlation" id="toc-covariance-and-correlation"><span class="toc-section-number">10.2</span> Covariance and correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#estimation" id="toc-estimation"><span class="toc-section-number">10.2.1</span> Estimation<span></span></a></li>
+<li><a href="correlationchapter.html#links-between-regression-and-correlation" id="toc-links-between-regression-and-correlation"><span class="toc-section-number">10.2.2</span> Links between regression and correlation<span></span></a></li>
+</ul></li>
+<li><a href="correlationchapter.html#use-and-misuse-of-correlation" id="toc-use-and-misuse-of-correlation"><span class="toc-section-number">10.3</span> Use and misuse of correlation<span></span></a>
+<ul>
+<li><a href="correlationchapter.html#do-not-use-correlation-for-regression-sampling-schemes" id="toc-do-not-use-correlation-for-regression-sampling-schemes"><span class="toc-section-number">10.3.1</span> Do not use correlation for regression sampling schemes<span></span></a></li>
+<li><a href="correlationchapter.html#correxamples" id="toc-correxamples"><span class="toc-section-number">10.3.2</span> Examples of correlations of different strengths<span></span></a></li>
+<li><a href="correlationchapter.html#beware-missing-data-codes" id="toc-beware-missing-data-codes"><span class="toc-section-number">10.3.3</span> Beware missing data codes<span></span></a></li>
+<li><a href="correlationchapter.html#more-guessing-sample-correlations" id="toc-more-guessing-sample-correlations"><span class="toc-section-number">10.3.4</span> More guessing sample correlations<span></span></a></li>
+<li><a href="correlationchapter.html#summary" id="toc-summary"><span class="toc-section-number">10.3.5</span> Summary<span></span></a></li>
+<li><a href="correlationchapter.html#anscombes-datasets" id="toc-anscombes-datasets"><span class="toc-section-number">10.3.6</span> Anscombe’s datasets<span></span></a></li>
+<li><a href="correlationchapter.html#we-must-interpret-correlation-with-care." id="toc-we-must-interpret-correlation-with-care."><span class="toc-section-number">10.3.7</span> We must interpret correlation with care.<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="a-general-strategy-for-statistical-modelling.html#a-general-strategy-for-statistical-modelling" id="toc-a-general-strategy-for-statistical-modelling"><span class="toc-section-number">11</span> A general strategy for statistical modelling<span></span></a></li>
+<li><a href="references.html#references" id="toc-references">References<span></span></a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -407,32 +411,32 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="contingency" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Contingency tables</h1>
-<p>In this chapter, and the next chapter on linear regression, we explore the relationships between two, or more, variables. In this chapter we consider the situation where all variables are categorical. In Chapter <a href="linreg.html#linreg">8</a> the main variable of interest is continuous.</p>
+<div id="contingency" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Contingency tables<a href="contingency.html#contingency" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter, and the next chapter on linear regression, we explore the relationships between two, or more, variables. In this chapter we consider the situation where all variables are categorical. In Chapter <a href="linreg.html#linreg">9</a> the main variable of interest is continuous.</p>
 <p>Suppose that for each of a number of objects/people/experimental units we record the value of 2 of more categorical variables. For each variable the categories must be mutually exclusive and exhaustive. For example, in the Berkeley admissions data for each applicant we record the sex (Male/Female) and the outcome of the application (Accept/Reject). We present these data in a <strong>contingency table</strong>, which summarises the number (<strong>frequency</strong> or <strong>count</strong>) of subjects falling into each of the possible categories defined by the categorical variables. A <strong>contingency</strong> is an event that may occur a possibility. A contingency table is a summary of the frequencies with which combinations of such events occur.</p>
 <p>The main aim of analysing data in a contingency table is to examine whether the values of the categorical variables are associated with each other, and, if they are associated, <strong>how</strong> they are associated. In other words, we ask the question: “How does the distribution of one variable depend on the value of the other variable?”.</p>
 <p>Note that association does not imply causation. Just because two variables are associated it does not mean that one variable affects (causes) the other directly. It may be that the association between the two variables is due to each of their relationships with another variable. This seems to be the case for the Berkeley admissions data. We will consider 2-way contingency tables - where subjects are classified according to 2 categorical variables - and 3-way contingency table - where they are classified according to 3 categorical variables.</p>
-<p>We return to the Berkeley admissions data. We have already seen the 2-way contingency table in Figure <a href="contingency.html#fig:berk2way">7.1</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:berk2way"></span>
+<p>We return to the Berkeley admissions data. We have already seen the 2-way contingency table in Figure <a href="contingency.html#fig:berk2way">8.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berk2way"></span>
 <img src="images/berk_2way.png" alt="2-way contingency table for the Berkeley admissions data." width="50%" />
 <p class="caption">
-Figure 7.1: 2-way contingency table for the Berkeley admissions data.
+Figure 8.1: 2-way contingency table for the Berkeley admissions data.
 </p>
 </div>
 <p>This is a 2 <span class="math inline">\(\times\)</span> 2 (or 2 by 2), contingency table: there are 2 row categories (<span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span>) and 2 column categories (<span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span>). The 4 squares in the middle of the table are called the <strong>cells</strong>. The sums of the numbers in the cells across the rows are called the <strong>row totals</strong>. For these data the row totals 2691 and 1835. Similarly, the <strong>column totals</strong> are 1755 and 2771.</p>
-<p>These Berkeley admissions data also contain the department to which the applicants applied. We include this information to extend the 2-way contingency table in Figure <a href="contingency.html#fig:berk2way">7.1</a> to produce the 3-way contingency table in Figure <a href="contingency.html#fig:berk3way">7.9</a> at the start of Section <a href="contingency.html#way3">7.2</a>.</p>
-<p>In Chapter <a href="probability.html#probability">3</a> we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley <strong>in general</strong>. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section <a href="contingency.html#way2">7.1</a>. We also wish to consider how the department to which the applicant applies affects things. We do this in Section <a href="contingency.html#way3">7.2</a>. We will see that when there are more than two variables there are several ways to study the association between them.</p>
-<div id="way2" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> 2-way contingency tables</h2>
-<p>We analyse the data in Figure <a href="contingency.html#fig:berk2way">7.1</a>. We will consider two questions.</p>
+<p>These Berkeley admissions data also contain the department to which the applicants applied. We include this information to extend the 2-way contingency table in Figure <a href="contingency.html#fig:berk2way">8.1</a> to produce the 3-way contingency table in Figure <a href="contingency.html#fig:berk3way">8.9</a> at the start of Section <a href="contingency.html#way3">8.2</a>.</p>
+<p>In Chapter <a href="probability.html#probability">3</a> we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley <strong>in general</strong>. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section <a href="contingency.html#way2">8.1</a>. We also wish to consider how the department to which the applicant applies affects things. We do this in Section <a href="contingency.html#way3">8.2</a>. We will see that when there are more than two variables there are several ways to study the association between them.</p>
+<div id="way2" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> 2-way contingency tables<a href="contingency.html#way2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We analyse the data in Figure <a href="contingency.html#fig:berk2way">8.1</a>. We will consider two questions.</p>
 <p><strong>Question 1: independence</strong>. Are the random variables outcome and sex independent?</p>
 <p><strong>Question 2: comparing probabilities</strong>. Is the probability of acceptance equal for males and females?</p>
 <p>These questions are very similar, but there is a subtle distinction between them. Question 1 treats both outcome and sex as random variables. In Question 2 we condition on the sex of the applicant and compare the probabilities of acceptance that we obtain in each case.</p>
 <p>We will see that the calculations performed to answer Question 1 are the same as those performed to answer Question 2. Therefore, you may wonder why we bother to make this distinction. The reason is that there are situations where it is not appropriate to treat both variables as random variables. There are contingency tables where some of the totals are are fixed in advance before the data are collected. For example, it may be that the row totals are known in advance. In the current context, this would mean that Berkeley decided in advance to consider exactly 2691 applications from males and 1835 applications from females. In that event we cannot treat sex as a random variable, because the numbers of males and females is not random.</p>
-<p>This is clearly not what would have happened in this example. Nevertheless, we consider both questions because there are examples where totals are fixed. An example is a case-control study, in which potential risk factors for a disease are studied by looking for differences in characteristics between people who have the disease, the cases, and those who do not, the controls. We return to this in Section <a href="contingency.html#measures">7.1.3</a>.</p>
-<div id="indep" class="section level3" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> Independence</h3>
+<p>This is clearly not what would have happened in this example. Nevertheless, we consider both questions because there are examples where totals are fixed. An example is a case-control study, in which potential risk factors for a disease are studied by looking for differences in characteristics between people who have the disease, the cases, and those who do not, the controls. We return to this in Section <a href="contingency.html#measures">8.1.3</a>.</p>
+<div id="indep" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Independence<a href="contingency.html#indep" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Question 1: independence</strong>. Are the random variables outcome and sex independent?</p>
 <p>In the Berkeley example we have two categorical random variables; sex (2 levels: <span class="math inline">\(M\)</span> and <span class="math inline">\(F\)</span>) and outcome (2 levels: <span class="math inline">\(A\)</span> and <span class="math inline">\(R\)</span>). We wish to examine whether the categorical random variables sex (rows of the table) and outcome (columns of the table) are independent. To do this we compare the observed frequencies with the frequencies we expect if the random variables sex and outcome are independent.</p>
 <p>How can we estimate the expected frequencies? If the random variables sex and outcome are independent then
@@ -443,11 +447,11 @@ Figure 7.1: 2-way contingency table for the Berkeley admissions data.
 \hat{P}(A)=\frac{1755}{4526}, \,\, \hat{P}(R)=\frac{2771}{4526}.  \]</span></p>
 <p>Therefore, the expected frequency for sex=<span class="math inline">\(M\)</span> and outcome=<span class="math inline">\(A\)</span> is estimated as
 <span class="math display">\[ \frac{2691}{4526} \times \frac{1755}{4526} \times 4526 = \frac{2691 \times 1755}{4526} = 1,043.46. \]</span></p>
-<p>The other expected frequencies are estimated similarly to give Figure <a href="contingency.html#fig:berkoe">7.2</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkoe"></span>
+<p>The other expected frequencies are estimated similarly to give Figure <a href="contingency.html#fig:berkoe">8.2</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkoe"></span>
 <img src="images/berk_2way_oe.png" alt="Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome." width="50%" />
 <p class="caption">
-Figure 7.2: Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome.
+Figure 8.2: Observed frequencies and estimated expected frequencies (in brackets) under independence of sex and outcome.
 </p>
 </div>
 <p>Note that the row totals of the estimated expected frequencies are equal to the observed row totals, and similarly for the column totals. In other words the estimated expected frequencies preserve the row and column totals.</p>
@@ -462,11 +466,11 @@ Figure 7.2: Observed frequencies and estimated expected frequencies (in brackets
 <li><span class="math inline">\(n_{+j}=\displaystyle\sum_{i=1}^I n_{ij}\)</span>, the sum of the frequencies in column <span class="math inline">\(j\)</span>.</li>
 <li><span class="math inline">\(n\)</span> be the sample size.</li>
 </ul>
-<p>Figure <a href="contingency.html#fig:notation">7.3</a> illustrates this notation.</p>
-<div class="figure" style="text-align: center"><span id="fig:notation"></span>
+<p>Figure <a href="contingency.html#fig:notation">8.3</a> illustrates this notation.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:notation"></span>
 <img src="images/ct_notation.png" alt="Notation for a 2-way contingency table." width="75%" />
 <p class="caption">
-Figure 7.3: Notation for a 2-way contingency table.
+Figure 8.3: Notation for a 2-way contingency table.
 </p>
 </div>
 <p><strong>Calculating estimated expected frequencies under independence</strong></p>
@@ -498,15 +502,15 @@ or <strong>standardised Pearson residuals</strong>
 <p><span class="math display">\[ \hat{\mu}_{11} = \frac{n_{1+}\,n_{+1}}{n} = \frac{2691 \times 1755}{4526} = 1043.46. \]</span></p>
 <p><span class="math display">\[ r_{11} = n_{11}-\hat{\mu}_{11} = 1198 - 1043.46 = 154.54. \]</span></p>
 <p><span class="math display">\[ r_{11}^P = \frac{r_{11}}{\sqrt{\hat{\mu}_{11}}} = \frac{154.54}{\sqrt{1043.46}} = 4.78. \]</span></p>
-<p><span class="math display">\[ r_{11}^S = \frac{r_{11}^P}{\sqrt{(1-\hat{p}_{1+})\,(1-\hat{p}_{+1})}} 
+<p><span class="math display">\[ r_{11}^S = \frac{r_{11}^P}{\sqrt{(1-\hat{p}_{1+})\,(1-\hat{p}_{+1})}}
 = \frac{4.78}{\sqrt{\left(1-\displaystyle\frac{2691}{4526}\right)\,\left(1-\displaystyle\frac{1755}{4526}\right)}}=9.60. \]</span></p>
 <p>We have found that the observed frequencies are different to those expected if outcome and sex are independent, producing non-zero residuals. Even if outcome and sex <strong>are</strong> independent it is very unlikely that the residuals will be exactly zero. The question is whether these residuals are so large to suggest that outcome and sex are not independent. To assess this we need to know what kind of residuals tend to occur when outcome and sex are independent. If residuals that are as large or larger then the ones that we have observed are unlikely to occur then it suggests that outcome and sex are not independent.</p>
 <p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent, and if the expected frequencies are large enough (a check is that all the estimated expected frequencies are greater than 5), each Pearson residual, and each standardised Pearson residual, has approximately a normal distribution with mean 0. In addition the standardised Pearson residuals have an approximate variance of 1. So, <strong>if these assumptions are true</strong>, the standardised Pearson residuals are approximately N(0,1). Owing to the properties of the N(0,1) distribution, most (approximately 95%) of the residuals should lie in the range <span class="math inline">\((-2, 2)\)</span>. The presence of residuals that have a large magnitude would be surprising and may suggest that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are not independent.</p>
-<p>The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure <a href="contingency.html#fig:berkres">7.4</a>. The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex. This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkres"></span>
+<p>The residuals, Pearson residuals and standarised Pearson residuals for the Berkeley admissions example are given in Figure <a href="contingency.html#fig:berkres">8.4</a>. The residuals show that approximately 155 more males, and 155 fewer females, are accepted than expected. The standardised Pearson residuals are much larger in magnitude than 2 suggesting that outcome is not independent of sex. This may seem like a very informal way to make an assessment, but we will see that in this case this is equivalent to a more formal-looking approach based on an hypothesis test.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkres"></span>
 <img src="images/berkresnew2.png" alt="Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table." width="80%" />
 <p class="caption">
-Figure 7.4: Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table.
+Figure 8.4: Residuals, Pearson residuals and standardised Pearson residuals for the 2-way Berkeley admissions contingency table.
 </p>
 </div>
 <p>Notice that the residuals are equal in magnitude - so really there is only one residual. The row sums and the column sums of the residuals are equal to zero because the estimated expected frequencies preserve the row and column totals. The residuals have this property for all <span class="math inline">\(I \times J\)</span> contingency tables. In the <span class="math inline">\(2 \times 2\)</span> case this means that only 1 of the estimated expected frequencies is free to vary, in the sense that it we calculate one of the estimated expected frequencies then the values of the other 3 estimated expected frequencies follow directly from the fact that the residuals sum to 0 across the rows and down the columns. We say that there is only 1 degree of freedom. This is why, if we perform an hypothesis like the one outlined below, the test statistic is related to the distribution of a chi-squared distribution with 1 degree of freedom.</p>
@@ -526,31 +530,31 @@ which combines the Pearson residuals into a single value.</p>
 <p>It can be shown that if the null hypothesis <span class="math inline">\(H_0\)</span> is true (and the expected
 frequencies are sufficiently large: again we check that the estimated expected frequencies are greater than 5) then, before we have observed the data, the
 random variable <span class="math inline">\(X^2\)</span> has (approximately) a chi-squared distribution with 1 degree of freedom, denoted <span class="math inline">\(\chi^2_1\)</span>.</p>
-<p>To demonstrate that this is the case we use simulation. We simulate 1000 2 <span class="math inline">\(\times\)</span> 2 tables of data, like those in Figure <a href="contingency.html#fig:berk2way">7.1</a> except that the data have been simulated assuming that outcome and sex are independent. Figure <a href="contingency.html#fig:berksim">7.5</a> is a histogram of the resulting 1000 values of the <span class="math inline">\(X^2\)</span> statistic. Also shown is the p.d.f. of a <span class="math inline">\(\chi^2_1\)</span> random variable.</p>
-<div class="figure" style="text-align: center"><span id="fig:berksim"></span>
+<p>To demonstrate that this is the case we use simulation. We simulate 1000 2 <span class="math inline">\(\times\)</span> 2 tables of data, like those in Figure <a href="contingency.html#fig:berk2way">8.1</a> except that the data have been simulated assuming that outcome and sex are independent. Figure <a href="contingency.html#fig:berksim">8.5</a> is a histogram of the resulting 1000 values of the <span class="math inline">\(X^2\)</span> statistic. Also shown is the p.d.f. of a <span class="math inline">\(\chi^2_1\)</span> random variable.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berksim"></span>
 <img src="images/berk_sim.png" alt="Histogram of the $X^2$ statistic values from 1000 simulated 2 $\times$ 2 contingency tables, where the row and column variables are independent." width="80%" />
 <p class="caption">
-Figure 7.5: Histogram of the <span class="math inline">\(X^2\)</span> statistic values from 1000 simulated 2 <span class="math inline">\(\times\)</span> 2 contingency tables, where the row and column variables are independent.
+Figure 8.5: Histogram of the <span class="math inline">\(X^2\)</span> statistic values from 1000 simulated 2 <span class="math inline">\(\times\)</span> 2 contingency tables, where the row and column variables are independent.
 </p>
 </div>
 <p>We can see that values of <span class="math inline">\(X^2\)</span> above 4 are rare. It can be shown that, under <span class="math inline">\(H_0\)</span> a value above 3.84 will only occur 5% of the time. The value of <span class="math inline">\(X^2\)</span> from the <strong>real</strong> data is 92.21. Clearly a value as large as this is very unlikely to occur if <span class="math inline">\(H_0\)</span> is true. In fact, the probability (a <span class="math inline">\(p\)</span>-value) of observing a value of <span class="math inline">\(X^2\)</span> greater than 92.21 is less than <span class="math inline">\(2.2 \times 10^{-16}\)</span>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data we observe if <span class="math inline">\(H_0\)</span> is true. This very small <span class="math inline">\(p\)</span>-value suggests that <span class="math inline">\(H_0\)</span> is not true, so we would reject <span class="math inline">\(H_0\)</span>.</p>
 <p>It is not a coincidence that the square root of the <span class="math inline">\(X^2\)</span> statistic, <span class="math inline">\(\sqrt{92.21}\)</span>, is equal to <span class="math inline">\(9.60\)</span>, the magnitude of the standardised Pearson residual. In the <span class="math inline">\(2 \times 2\)</span> case assessing the magnitude of the standard Pearson residuals is equivalent to performing the hypothesis test based on the <span class="math inline">\(X^2\)</span> statistic.</p>
 <p>Now suppose that the real data had given a value of 0.45, for example. The histogram suggests that under <span class="math inline">\(H_0\)</span> a value as large as this is quite likely to occur (in fact 0.45 is the median of the <span class="math inline">\(\chi^2_1\)</span> distribution) so we would not reject <span class="math inline">\(H_0\)</span>.</p>
 </div>
-<div id="compprob" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> Comparing probabilities</h3>
+<div id="compprob" class="section level3 hasAnchor" number="8.1.2">
+<h3><span class="header-section-number">8.1.2</span> Comparing probabilities<a href="contingency.html#compprob" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Question 2: comparing probabilities</strong>. Is the probability of acceptance equal for males and females?</p>
 <p>Now suppose that Berkeley used method 3 to collect the data. If this is the case we cannot estimate <span class="math inline">\(P(M)\)</span> (or <span class="math inline">\(P(F)\)</span>), or <strong>joint</strong> probabilities such as <span class="math inline">\(P(M, A)\)</span>. It is not meaningful to ask whether sex and outcome are independent because sex is not a random variable; the proportions of males and females have been fixed in advance by Berkeley.</p>
-<p>However, it is <strong>meaningful</strong> to look at the conditional distribution of the random variable outcome for each sex. In other words, is the probability of acceptance equal for males and females? In Section <a href="contingency.html#indep">7.1.1</a> we treated the random variables outcome and sex symmetrically, that is, on an equal basis. Now we treat outcome as a <strong>response</strong> variable and sex as an <strong>explanatory</strong> variable. We examine how the distribution of the response variable outcome depends on the value of the explanatory variable sex. In this example it makes sense to do this: we can imagine that sex could affect the outcome; not the other way round.</p>
+<p>However, it is <strong>meaningful</strong> to look at the conditional distribution of the random variable outcome for each sex. In other words, is the probability of acceptance equal for males and females? In Section <a href="contingency.html#indep">8.1.1</a> we treated the random variables outcome and sex symmetrically, that is, on an equal basis. Now we treat outcome as a <strong>response</strong> variable and sex as an <strong>explanatory</strong> variable. We examine how the distribution of the response variable outcome depends on the value of the explanatory variable sex. In this example it makes sense to do this: we can imagine that sex could affect the outcome; not the other way round.</p>
 <p>Therefore, we have to change slightly the question we ask. Instead of asking whether sex and outcome are independent, we ask whether the probability of acceptance is the same for males and for females. In other words is
 <span class="math display">\[ P(A~|~M) = P(A~|~F) = P(A)\,? \]</span></p>
 <p>We estimate these probabilities:
 <span class="math display">\[ \hat{P}(A~|~M) = \frac{1198}{2691} = 0.445, \quad \hat{P}(A~|~F) =  \frac{557}{1835} = 0.304, \quad \hat{P}(A) =  \frac{1755}{4526}= 0.388. \]</span></p>
 <p>These estimates come from the <strong>row proportions</strong> of the 2 <span class="math inline">\(\times\)</span> 2 contingency table. The row proportions give the the proportions of applicants who were accepted/rejected in a given row of the table, that is, for males and for females.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkrow"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkrow"></span>
 <img src="images/berk_row.png" alt="Row proportions for the Berkeley 2 $\times$ 2 contingency table." width="25%" />
 <p class="caption">
-Figure 7.6: Row proportions for the Berkeley 2 <span class="math inline">\(\times\)</span> 2 contingency table.
+Figure 8.6: Row proportions for the Berkeley 2 <span class="math inline">\(\times\)</span> 2 contingency table.
 </p>
 </div>
 <p>The <strong>column proportions</strong> could also be calculated, but they are not meaningful
@@ -564,8 +568,8 @@ Then, if <span class="math inline">\(P(A~|~M)=P(A~|~F)=P(A)\)</span>, the estima
 <span class="math display">\[ \hat{P}(A) \times 2691 = \frac{1755}{4526} \times 2691 = 1043.46. \]</span>
 This is exactly the same estimated expected frequency as in question 1. The estimated expected frequencies (and the residuals and standardised Pearson residuals) under the assumption that <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span> are identical to those under the assumption that sex and outcome are independent. This makes sense: if outcome (<span class="math inline">\(Y\)</span>) is independent of sex (<span class="math inline">\(X\)</span>) then the probability distribution of outcome is the same for each sex. The calculations used to answer Question 1 are the same as the calculations used to answer Question 2.</p>
 </div>
-<div id="measures" class="section level3" number="7.1.3">
-<h3><span class="header-section-number">7.1.3</span> Measures of association</h3>
+<div id="measures" class="section level3 hasAnchor" number="8.1.3">
+<h3><span class="header-section-number">8.1.3</span> Measures of association<a href="contingency.html#measures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If we decide that the probability of acceptance depends on sex then we should also indicate <strong>how</strong> it depends on sex and <strong>how much</strong>. How can we compare the values of 2 probabilities: <span class="math inline">\(P(A~|~M)\)</span> and <span class="math inline">\(P(A~|~F)\)</span>?</p>
 <p><strong>The difference in the probability of acceptance</strong></p>
 <p><span class="math display">\[P(A~|~M)-P(A~|~F),\]</span>
@@ -583,11 +587,11 @@ which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. F
 <p><strong>The odds ratio, a ratio of odds</strong></p>
 <p><span class="math display">\[\frac{P(A~|~M)}{1-P(A~|~M)}\,\,\Bigg/\,\,\frac{P(A~|~F)}{1-P(A~|~F)},\]</span>
 which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the estimate is <span class="math inline">\(\approx\)</span> 1.84.</p>
-<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\mbox{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\mbox{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\mbox{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">7.7</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:odds"></span>
+<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\mbox{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\mbox{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\mbox{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">8.7</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:odds"></span>
 <img src="images/odds.png" alt="The value of the odds of an event for different probabilities $p$ of that event." width="50%" />
 <p class="caption">
-Figure 7.7: The value of the odds of an event for different probabilities <span class="math inline">\(p\)</span> of that event.
+Figure 8.7: The value of the odds of an event for different probabilities <span class="math inline">\(p\)</span> of that event.
 </p>
 </div>
 <p>[In the book Ross, S. (2010) A First Course in Probability, the odds ratio of an event <span class="math inline">\(B\)</span> is defined (incorrectly in my view) as <span class="math inline">\(P(B) / (1 - P(B))\)</span>. This is a ratio of probabilities. The conventional use of the term odds ratio is for a ratio of odds.]</p>
@@ -601,15 +605,15 @@ Therefore, the estimated odds of <span class="math inline">\(R\)</span>, compari
 <p>There are two more reasons to <strong>prefer the odds ratio</strong>.</p>
 <ul>
 <li><p>The value of the odds ratio does not change if we treat sex as the response variable instead of outcome. This is not true of the relative risk. It can be shown, using Bayes’ theorem, that
-<span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(A~|~M)}{1-P(A~|~M)}}{\displaystyle\frac{P(A~|~F)}{1-P(A~|~F)}} 
+<span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(A~|~M)}{1-P(A~|~M)}}{\displaystyle\frac{P(A~|~F)}{1-P(A~|~F)}}
 \,\,\,=\,\,\, \frac{\displaystyle\frac{P(M~|~A)}{1-P(M~|~A)}}{\displaystyle\frac{P(M~|~R)}{1-P(M~|~R)}}, \]</span>
 that is, the odds ratio of acceptance, comparing males to females, is equal to the odds ratio of being male, comparing acceptance to rejection. With odds ratios it doesn’t matter which variable we treat as the response</p></li>
-<li><p>For some datasets it is not possible to estimate the relative risk. Consider the 2-way contingency table in Figure <a href="contingency.html#fig:casecontrol">7.8</a>.</p></li>
+<li><p>For some datasets it is not possible to estimate the relative risk. Consider the 2-way contingency table in Figure <a href="contingency.html#fig:casecontrol">8.8</a>.</p></li>
 </ul>
-<div class="figure" style="text-align: center"><span id="fig:casecontrol"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:casecontrol"></span>
 <img src="images/case_control.png" alt="Example data from a case-control study.  Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13." width="50%" />
 <p class="caption">
-Figure 7.8: Example data from a case-control study. Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.
+Figure 8.8: Example data from a case-control study. Source: Dorn, H.F. (1954) The relationship of cancer of the lung and the use of tobacco. American Statistician, 8, 7–13.
 </p>
 </div>
 <p>These data comes from a very old case-control study, designed to investigate the link between smoking and lung cancer. The idea is to compare the smoking habits of people with lung cancer (the <strong>cases</strong>) and people without lung cancer, but who are otherwise similar to the cases (the <strong>controls</strong>). The people conducting the study decided to have equal number of cases and controls: 86 of each. That is, they fixed both column totals at 86. Therefore, this is <strong>not</strong> a random sample of people from the population: if we did sample people randomly from the population then we would expect to obtain far fewer people with lung cancer than people without lung cancer. Each person was asked whether they were a smoker or non-smoker.</p>
@@ -619,27 +623,27 @@ Figure 7.8: Example data from a case-control study. Source: Dorn, H.F. (1954) Th
 = \frac{83 \times 14}{72 \times 3} = 5.38. \]</span></p>
 <p>Can we estimate the relative risk? No we cannot. In this example, the relative risk of interest is <span class="math inline">\(P(L \mid S) / P(L \mid \mbox{not}S)\)</span>: we compare the probabilities of developing lung cancer for smokers and non-smokers. However, the way that these data have been sampled means that they provide no information about <span class="math inline">\(P(L)\)</span>, that is, the proportion of people <strong>in the population</strong> who have lung cancer. The proportion of people <strong>in the sample</strong> who have lung cancer has been fixed at <span class="math inline">\(1/2\)</span> by the people who designed the study, because they fixed the column totals. Similarly, we cannot use these data to estimate <span class="math inline">\(P(L \mid S)\)</span> or <span class="math inline">\(P(L \mid \mbox{not}S)\)</span>, the proportion of people with lung cancer will also be artificially high within the smoker and for non-smoker categories.</p>
 <p>However, <strong>can</strong> estimate the odds ratio that we would like, that is, the odds ratio of lung cancer, comparing smoker to non-smokers, because this is equal to the estimate of 5.38 that we calculated above, owing to</p>
-<p><span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}} 
+<p><span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}}
 \,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \mbox{not}L)}{1-P(S \mid \mbox{not}L)}}. \]</span></p>
 <p>Finally, we note that in cases where the events of interest happen very rarely, that is, they have very small probabilities, then the relative risk and the odds ratio have similar values. This is because when a probability <span class="math inline">\(p\)</span> is close to <span class="math inline">\(0\)</span>, <span class="math inline">\(p/(1-p) \approx p\)</span>. Therefore, in studies of a rare disease an estimated odds ratio is often taken as an estimate of a relative risk.</p>
 </div>
 </div>
-<div id="way3" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> 3-way contingency tables</h2>
-<p>Figure <a href="contingency.html#fig:berk3way">7.9</a> shows the 2 <span class="math inline">\(\times\)</span> 2 <span class="math inline">\(\times\)</span> 6 contingency table that results from classifying applicants according to 3 categorical variables: sex (<span class="math inline">\(X\)</span>), outcome (<span class="math inline">\(Y\)</span>) and department (<span class="math inline">\(Z\)</span>). We now have a 2-way contingency table, like the one we analysed in Section <a href="contingency.html#way2">7.1</a>, in each of the 6 departments.</p>
-<div class="figure" style="text-align: center"><span id="fig:berk3way"></span>
+<div id="way3" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> 3-way contingency tables<a href="contingency.html#way3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Figure <a href="contingency.html#fig:berk3way">8.9</a> shows the 2 <span class="math inline">\(\times\)</span> 2 <span class="math inline">\(\times\)</span> 6 contingency table that results from classifying applicants according to 3 categorical variables: sex (<span class="math inline">\(X\)</span>), outcome (<span class="math inline">\(Y\)</span>) and department (<span class="math inline">\(Z\)</span>). We now have a 2-way contingency table, like the one we analysed in Section <a href="contingency.html#way2">8.1</a>, in each of the 6 departments.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berk3way"></span>
 <img src="images/berk_3way.png" alt="3-way contingency table for the Berkeley admissions data." width="50%" />
 <p class="caption">
-Figure 7.9: 3-way contingency table for the Berkeley admissions data.
+Figure 8.9: 3-way contingency table for the Berkeley admissions data.
 </p>
 </div>
 <p>In a 3-way contingency table there are many possible associations that we could examine. We consider the following cases.</p>
 <p><strong>Mutual independence</strong>. We consider 3 variables at once, that is, outcome, sex and department.</p>
 <p><strong>Marginal independence</strong>. We consider 2 variables, ignoring the value of the third variable, that is, outcome and sex (we have already done this), outcome and department, sex and department;</p>
 <p><strong>Conditional independence</strong>. We consider 2 variables separately for each value of the third variable, e.g. outcome and sex separately with each department.</p>
-<div id="mutual-independence" class="section level3" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Mutual independence</h3>
-<p>We examine whether the categorical random variables sex, outcome and department are mutually independent, that is, there are no relationships between these three variables. We have already seen in Section <a href="contingency.html#way2">7.1</a> that the data suggest that outcome and sex are not independent. If outcome and sex are not independent then outcome, sex and department cannot be mutually independent.</p>
+<div id="mutual-independence" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Mutual independence<a href="contingency.html#mutual-independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We examine whether the categorical random variables sex, outcome and department are mutually independent, that is, there are no relationships between these three variables. We have already seen in Section <a href="contingency.html#way2">8.1</a> that the data suggest that outcome and sex are not independent. If outcome and sex are not independent then outcome, sex and department cannot be mutually independent.</p>
 <p>We consider how to estimate expected frequencies under the assumption that outcome, sex and department are mutually independent. (We will not actually calculate them though.) The approach we use is the same one we used for the 2-way table: we estimate the expected frequencies under the assumption that these variables are mutually independent.</p>
 <p>How can we estimate these expected frequencies?</p>
 <p>We take sex=<span class="math inline">\(M\)</span>, outcome=<span class="math inline">\(A\)</span> and department=<span class="math inline">\(D_1\)</span> as an example. If sex, outcome and department are mutually independent then
@@ -647,28 +651,28 @@ Figure 7.9: 3-way contingency table for the Berkeley admissions data.
 We do not know <span class="math inline">\(P(M), P(A)\)</span> or <span class="math inline">\(P(D_1)\)</span>, so we estimate them using the proportions in the observed data:
 <span class="math display">\[ \hat{P}(M)=\frac{2691}{4526}, \quad \hat{P}(A)=\frac{1755}{4526}, \quad \hat{P}(D_1)=\frac{933}{4526}. \]</span>
 Therefore, the expected frequency for sex=<span class="math inline">\(M\)</span>, outcome=<span class="math inline">\(A\)</span> and department=<span class="math inline">\(D_1\)</span> is estimated by
-<span class="math display">\[ \frac{2691}{4526} \times \frac{1755}{4526} \times \frac{933}{4526} \times 4526 
+<span class="math display">\[ \frac{2691}{4526} \times \frac{1755}{4526} \times \frac{933}{4526} \times 4526
 = \frac{2691 \times 1755 \times 933}{4526^2} = 215.1. \]</span>
 The other expected frequencies are estimated similarly. Extending our previous notation in an obvious way we have
 <span class="math display">\[ \hat{\mu}_{ijk} = n\,\hat{p}_{i++}\,\hat{p}_{+j+}\,\hat{p}_{++k} = \frac{n_{i++}\,n_{+j+}\,n_{++k}}{n^2}, \]</span>
 where
-<span class="math display">\[ \hat{p}_{i++} = \frac{n_{i++}}{n}, \qquad \hat{p}_{+j+} = \frac{n_{+j+}}{n}, \qquad 
+<span class="math display">\[ \hat{p}_{i++} = \frac{n_{i++}}{n}, \qquad \hat{p}_{+j+} = \frac{n_{+j+}}{n}, \qquad
 \hat{p}_{++k} = \frac{n_{++k}}{n}. \]</span></p>
 </div>
-<div id="marginal-independence" class="section level3" number="7.2.2">
-<h3><span class="header-section-number">7.2.2</span> Marginal independence</h3>
+<div id="marginal-independence" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Marginal independence<a href="contingency.html#marginal-independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We produce <strong>marginal</strong> 2-way contingency tables by ignoring one of variables, and examine the association between the remaining 2 variables. We have already looked at the association between outcome and sex.</p>
-<p>Firstly we look at the association between sex and department. This gives a 2 <span class="math inline">\(\times\)</span> 6 contingency table. The observed and estimated expected frequencies and the standardised Pearson residuals are given in Figures <a href="contingency.html#fig:berkmarg1">7.10</a> and <a href="contingency.html#fig:berkmarg2">7.11</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkmarg1"></span>
+<p>Firstly we look at the association between sex and department. This gives a 2 <span class="math inline">\(\times\)</span> 6 contingency table. The observed and estimated expected frequencies and the standardised Pearson residuals are given in Figures <a href="contingency.html#fig:berkmarg1">8.10</a> and <a href="contingency.html#fig:berkmarg2">8.11</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkmarg1"></span>
 <img src="images/berkmarg1.png" alt="Observed and estimated expected values for sex and department." width="65%" />
 <p class="caption">
-Figure 7.10: Observed and estimated expected values for sex and department.
+Figure 8.10: Observed and estimated expected values for sex and department.
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:berkmarg2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkmarg2"></span>
 <img src="images/berkmarg2.png" alt="Standardised Pearson residuals for sex and department." width="50%" />
 <p class="caption">
-Figure 7.11: Standardised Pearson residuals for sex and department.
+Figure 8.11: Standardised Pearson residuals for sex and department.
 </p>
 </div>
 <p>Note: the</p>
@@ -677,51 +681,51 @@ Figure 7.11: Standardised Pearson residuals for sex and department.
 <li>residuals sum to zero across rows and down columns.</li>
 <li>standardised Pearson residuals sum to zero down columns.</li>
 </ul>
-<p>We can see that many more males apply to departments 1 and 2, and many more females apply to departments 3 and 5 than we could expect if sex and department are independent. We can also see this from the estimated conditional probabilities in Figure <a href="contingency.html#fig:berkmarg3">7.12</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkmarg3"></span>
+<p>We can see that many more males apply to departments 1 and 2, and many more females apply to departments 3 and 5 than we could expect if sex and department are independent. We can also see this from the estimated conditional probabilities in Figure <a href="contingency.html#fig:berkmarg3">8.12</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkmarg3"></span>
 <img src="images/berkmarg3.png" alt="Estimated conditional probabilities of department given sex." width="85%" />
 <p class="caption">
-Figure 7.12: Estimated conditional probabilities of department given sex.
+Figure 8.12: Estimated conditional probabilities of department given sex.
 </p>
 </div>
 <p>There does appear to be an association between sex and department. It seems that males prefer to apply to department 1 and 2 while females prefer to apply to departments 3 and 5.</p>
-<p>Is there association between department and outcome? It turns out that department and outcome do appear to be associated. In particular the probability of acceptance in departments 1 and 2 seem to be much greater than the probability of acceptance in department 3 and 5, as we can see from the estimates in Figure <a href="contingency.html#fig:berkmarg4">7.13</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkmarg4"></span>
+<p>Is there association between department and outcome? It turns out that department and outcome do appear to be associated. In particular the probability of acceptance in departments 1 and 2 seem to be much greater than the probability of acceptance in department 3 and 5, as we can see from the estimates in Figure <a href="contingency.html#fig:berkmarg4">8.13</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkmarg4"></span>
 <img src="images/berkmarg4.png" alt="Estimated conditional probabilities of acceptance given department." width="75%" />
 <p class="caption">
-Figure 7.13: Estimated conditional probabilities of acceptance given department.
+Figure 8.13: Estimated conditional probabilities of acceptance given department.
 </p>
 </div>
 </div>
-<div id="conditional-independence" class="section level3" number="7.2.3">
-<h3><span class="header-section-number">7.2.3</span> Conditional independence</h3>
-<p>Now we look at the association between sex and outcome separately within each department. We simply analyse each of the six 2 <span class="math inline">\(\times\)</span> 2 tables in Figure <a href="contingency.html#fig:berk3way">7.9</a>. In other words we <strong>condition</strong> on the value of department, for example, department=1, ignoring the data from other departments. Then we examine whether sex and outcome are conditionally independent given that department=1.
+<div id="conditional-independence" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Conditional independence<a href="contingency.html#conditional-independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now we look at the association between sex and outcome separately within each department. We simply analyse each of the six 2 <span class="math inline">\(\times\)</span> 2 tables in Figure <a href="contingency.html#fig:berk3way">8.9</a>. In other words we <strong>condition</strong> on the value of department, for example, department=1, ignoring the data from other departments. Then we examine whether sex and outcome are conditionally independent given that department=1.
 We do this for each department in turn.</p>
-<p>Since it is likely that decisions to accept or reject a candidate are taken within each department, it makes sense to ask whether there is any sexual discrimination within each department. Figure <a href="contingency.html#fig:berkcond1">7.14</a> summarises the observed frequencies and estimated expected frequencies under the assumption that outcome is independent of sex and the standardised Pearson residuals.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkcond1"></span>
+<p>Since it is likely that decisions to accept or reject a candidate are taken within each department, it makes sense to ask whether there is any sexual discrimination within each department. Figure <a href="contingency.html#fig:berkcond1">8.14</a> summarises the observed frequencies and estimated expected frequencies under the assumption that outcome is independent of sex and the standardised Pearson residuals.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkcond1"></span>
 <img src="images/berkcond1.png" alt="Left: 2 $\times$ 2 contingency table for department 1.  Right: standardised residuals." width="75%" />
 <p class="caption">
-Figure 7.14: Left: 2 <span class="math inline">\(\times\)</span> 2 contingency table for department 1. Right: standardised residuals.
+Figure 8.14: Left: 2 <span class="math inline">\(\times\)</span> 2 contingency table for department 1. Right: standardised residuals.
 </p>
 </div>
-<p>The size of the standardised Pearson residual suggests that outcome and sex are not independent. In fact more females are accepted to department 1 than would be expected if outcome and sex are independent. We can also see this from the estimated conditional probabilities in Figure <a href="contingency.html#fig:berkcond2">7.15</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkcond2"></span>
+<p>The size of the standardised Pearson residual suggests that outcome and sex are not independent. In fact more females are accepted to department 1 than would be expected if outcome and sex are independent. We can also see this from the estimated conditional probabilities in Figure <a href="contingency.html#fig:berkcond2">8.15</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkcond2"></span>
 <img src="images/berkcond2.png" alt="Estimated conditional probabilities of acceptance given sex and department." width="75%" />
 <p class="caption">
-Figure 7.15: Estimated conditional probabilities of acceptance given sex and department.
+Figure 8.15: Estimated conditional probabilities of acceptance given sex and department.
 </p>
 </div>
-<p>We leave the calculation of estimated expected frequencies and residuals for departments 2 to 6 as an exercise. The Figure <a href="contingency.html#fig:berkcond3">7.16</a> gives the standardised Pearson residuals for the <span class="math inline">\((M, A)\)</span> cell.</p>
-<div class="figure" style="text-align: center"><span id="fig:berkcond3"></span>
+<p>We leave the calculation of estimated expected frequencies and residuals for departments 2 to 6 as an exercise. The Figure <a href="contingency.html#fig:berkcond3">8.16</a> gives the standardised Pearson residuals for the <span class="math inline">\((M, A)\)</span> cell.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:berkcond3"></span>
 <img src="images/berkcond3.png" alt="Standardised Pearson residuals for the $(M, A)$ cell by department." width="75%" />
 <p class="caption">
-Figure 7.16: Standardised Pearson residuals for the <span class="math inline">\((M, A)\)</span> cell by department.
+Figure 8.16: Standardised Pearson residuals for the <span class="math inline">\((M, A)\)</span> cell by department.
 </p>
 </div>
 <p>A positive value indicates that more males were accepted than would be expected if outcome and sex are independent, whereas a negative value indicates that more females were accepted than would be expected. In only one department, department 1, do the data seem inconsistent with outcome and sex being independent. In this department females seem to have a higher probability of acceptance. Note, this may not be a result of discrimination in favour of females: there may be other data that explain why this happens.</p>
 </div>
-<div id="confounding-variables" class="section level3" number="7.2.4">
-<h3><span class="header-section-number">7.2.4</span> Confounding variables</h3>
+<div id="confounding-variables" class="section level3 hasAnchor" number="8.2.4">
+<h3><span class="header-section-number">8.2.4</span> Confounding variables<a href="contingency.html#confounding-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We have observed the following.</p>
 <ul>
 <li>Analysis of the 2-way table of outcome and sex suggests that the probability of acceptance is greater for males than for females.</li>
@@ -750,7 +754,6 @@ Figure 7.16: Standardised Pearson residuals for the <span class="math inline">\(
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -790,6 +793,10 @@ gitbook.start({
 "text": null
 },
 "download": ["stat0002book.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
