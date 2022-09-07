@@ -222,7 +222,7 @@ mutually-exclusive-events
 multrule
 indepevents
 bloodindep
-probability-ii
+more-probability
 law-of-total-probability
 bayes-theorem
 dna-identification-evidence

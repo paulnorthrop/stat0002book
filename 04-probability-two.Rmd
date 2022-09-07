@@ -33,7 +33,7 @@ include_cropped_graphics <- function(x) {
 }
 ```
 
-# Probability II
+# More Probability
 
 In this chapter, we consider two results that involve conditional probabilities, the **law of total probability** and **Bayes' theorem**.
 
@@ -80,6 +80,12 @@ Then, for any event $A$
 \begin{eqnarray}
 P(A) &=& P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
      &=& \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
+\end{eqnarray}
+
+Alternatively,
+\begin{eqnarray}
+P(A) &=& P(A, B_1) + \cdots + P(A, B_n), \\
+     &=& \displaystyle\sum_{i=1}^n P(A, B_i). \\
 \end{eqnarray}
 
 Some books refer to the law of total probability as the **partition theorem**.  This is because events $B_1, \ldots, B_n$ that are both mutually exclusive and exhaustive are said to **partition** the sample space, that is, they split the sample space into $n$ disjoint parts.

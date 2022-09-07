@@ -33,7 +33,7 @@ include_cropped_graphics <- function(x) {
 }
 ```
 
-# Probability I {#probability}
+# Probability {#probability}
 
 Most people have heard the word **probability** used in connection with a random experiment, that is, an experiment whose outcome cannot be predicted with certainty, such as tossing a coin, tossing dice, dealing cards etc. We start by considering a criminal case in which fundamental ideas surrounding the use of probability were hugely important.  Then we study the concept of probability using the traditional simple example of tossing a coin.
 
