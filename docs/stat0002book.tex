@@ -4,12 +4,7 @@
 %
 \documentclass[
   11pt,
-  british,
   openany, a4paper]{book}
-\title{STAT0002 Introduction to Probability and Statistics}
-\author{Dr Paul Northrop}
-\date{2021-12-03}
-
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -39,15 +34,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={STAT0002 Introduction to Probability and Statistics},
-  pdfauthor={Dr Paul Northrop},
-  pdflang={en-gb},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -115,6 +101,15 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{british}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 \usepackage{booktabs}
 \usepackage{placeins}
 
@@ -141,21 +136,24 @@
 \usepackage{adjustbox}
 \usepackage{hyperref}
 \usepackage{fontspec}
-\ifXeTeX
-  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
-  \usepackage{polyglossia}
-  \setmainlanguage[variant=british]{english}
-\else
-  \usepackage[main=british]{babel}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
-\fi
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={STAT0002 Introduction to Probability and Statistics},
+  pdfauthor={Dr Paul Northrop},
+  pdflang={en-gb},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{STAT0002 Introduction to Probability and Statistics}
+\author{Dr Paul Northrop}
+\date{2022-09-08}
 
 \begin{document}
 \maketitle
@@ -752,18 +750,18 @@ Which measures of location are sensible for different types of data? Consider ea
 
 \begin{longtable}[]{@{}lccc@{}}
 \caption{\label{tab:whichmeasures} Types of data and measures of location.}\tabularnewline
-\toprule
+\toprule()
 & mean & median & mode \\
-\midrule
+\midrule()
 \endfirsthead
-\toprule
+\toprule()
 & mean & median & mode \\
-\midrule
+\midrule()
 \endhead
 nominal & & & \\
 ordinal & & & \\
 numerical & & & \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \hypertarget{symmetry}{%
@@ -773,16 +771,16 @@ Many standard statistical methods work best when the data are distributed symmet
 
 \begin{longtable}[]{@{}cccc@{}}
 \caption{\label{tab:thumb} Relative values of the sample mean and median and what this \textbf{might} suggest in some cases.}\tabularnewline
-\toprule
+\toprule()
 mean \(<\) median & mean = median & mean \(>\) median & \\
-\midrule
+\midrule()
 \endfirsthead
-\toprule
+\toprule()
 mean \(<\) median & mean = median & mean \(>\) median & \\
-\midrule
+\midrule()
 \endhead
 negative skew & symmetric & positive skew & \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \hypertarget{example.-oxford-births-data}{%
@@ -793,16 +791,16 @@ Table \ref{tab:oxfivenum} gives the five-number summary of the Oxford birth time
 
 \begin{longtable}[]{@{}ccccc@{}}
 \caption{\label{tab:oxfivenum} Sample five-number summary of the Oxford birth times data.}\tabularnewline
-\toprule
+\toprule()
 \(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\) \\
-\midrule
+\midrule()
 \endfirsthead
-\toprule
+\toprule()
 \(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\) \\
-\midrule
+\midrule()
 \endhead
 1.50 & 4.90 & 7.50 & 9.75 & 19.00 \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 Half of the women took between approximately 5 and 10 hours to give birth.The quickest delivery was 90 minutes and the longest 19 hours. The mean \(\bar{x}\) is 7.72 hours and the standard deviation is 3.57 hours. The fact that sample mean \(>\) sample median suggest that the data are slightly positively skewed, but this is something that we should confirm by looking at a suitable graph (see Section \ref{graphs}).
@@ -827,18 +825,18 @@ Table \ref{tab:sumstats} summarises the summary statistics may be used as measur
 
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:sumstats} Summary of summary statistics}\tabularnewline
-\toprule
+\toprule()
 location & spread & shape \\
-\midrule
+\midrule()
 \endfirsthead
-\toprule
+\toprule()
 location & spread & shape \\
-\midrule
+\midrule()
 \endhead
 median & inter-quartile range & quartile skewness \\
 mean & standard deviation or variance & skewness \\
 mode & & \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \hypertarget{corr1}{%
@@ -872,13 +870,13 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 
 \begin{longtable}[]{@{}rrrrr@{}}
 \caption{\label{tab:smalldata} A small example dataset.}\tabularnewline
-\toprule
+\toprule()
 \(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\) \\
-\midrule
+\midrule()
 \endfirsthead
-\toprule
+\toprule()
 \(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\) \\
-\midrule
+\midrule()
 \endhead
 \(-2\) & \(6\) & \(-1.5\) & \(6\) & \(0\) \\
 \(-1\) & \(5\) & \(-1.1\) & \(5\) & \(0\) \\
@@ -886,7 +884,7 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 \(1\) & \(3\) & \(1.1\) & \(3\) & \(0\) \\
 \(2\) & \(2\) & \(1.6\) & \(1\) & \(1\) \\
 \(10\) & \(1\) & \(1.5\) & \(2\) & \(-1\) \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 \textbf{Exercise}. Show that for these data \(r=0.70\) and \(r_S=0.94\). Can you explain why \(r_S>r\)? Looking at a scatter plot of \(y\) against \(x\) will help you see why.
@@ -2235,7 +2233,7 @@ However, the study also found that the probability of cot death depended on vari
 
 The study estimated the probability of cot death for each possible combination of these characteristics. For the combination which is relevant to Sally Clark, whose family was affluent, non-smoking and she was aged over 26, the probability of cot death was estimated to be smaller: 1 in 8543.
 
-This (1 in 8543) is a \textbf{conditional} probability. We have \textbf{conditioned} on the event that the family in question is affluent, non-smoking and the mother is aged over 26. The overall probability of cot death (1 in 1303) is often called an \textbf{unconditional} probability.
+This (1 in 8543) is a \textbf{conditional} probability. We have \textbf{conditioned} on the event that the family in question is affluent, non-smoking and the mother is aged over 26. The overall probability of cot death (1 in 1303) is often called an \textbf{unconditional} probability or a \textbf{marginal probability}.
 
 In this example it is perhaps easiest to think of the conditioning as selecting a specific sub-population of families from the complete population of families. Another way to think about this is in terms of the sample space. We have reduced the original sample space - the outcomes (cot death or no cot death) of all families with children - to a subset of this sample space - the outcomes of all affluent, non-smoking families where the mother is over 26.
 
@@ -3156,6 +3154,11 @@ Assuming that ABO blood type is independent of Rhesus blood type gives the proba
 
 \textbf{Exercise}. Using equation \eqref{eq:indep}, or otherwise, calculate the values that are missing from Table \ref{tab:bloodindep}.
 
+\hypertarget{more-probability}{%
+\chapter{More Probability}\label{more-probability}}
+
+In this chapter, we consider two results that involve conditional probabilities, the \textbf{law of total probability} and \textbf{Bayes' theorem}.
+
 \hypertarget{law-of-total-probability}{%
 \section{Law of total probability}\label{law-of-total-probability}}
 
@@ -3211,6 +3214,12 @@ Then, for any event \(A\)
 \begin{eqnarray}
 P(A) &=& P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
      &=& \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
+\end{eqnarray}
+
+Alternatively,
+\begin{eqnarray}
+P(A) &=& P(A, B_1) + \cdots + P(A, B_n), \\
+     &=& \displaystyle\sum_{i=1}^n P(A, B_i). \\
 \end{eqnarray}
 
 Some books refer to the law of total probability as the \textbf{partition theorem}. This is because events \(B_1, \ldots, B_n\) that are both mutually exclusive and exhaustive are said to \textbf{partition} the sample space, that is, they split the sample space into \(n\) disjoint parts.
@@ -5099,17 +5108,17 @@ Before we describe how to produce a QQ plot we return to the Oxford birth times 
 
 \begin{longtable}[]{@{}crrr@{}}
 \caption{\label{tab:compareqs} Comparison of sample and theoretical quantiles.}\tabularnewline
-\toprule
+\toprule()
 & \(q_L\) & \(m\) & \(q_U\) \\
-\midrule
+\midrule()
 \endfirsthead
-\toprule
+\toprule()
 & \(q_L\) & \(m\) & \(q_U\) \\
-\midrule
+\midrule()
 \endhead
 sample & \(4.95\) & \(7.50\) & \(9.75\) \\
 \(N(7.72, 3.57^2)\) & \(5.32\) & \(7.72\) & \(10.13\) \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 If the data have been sampled from \(N(7.72, 3.57^2)\) distribution the values in the first row of Table \ref{tab:compareqs} should be close to the corresponding values in the second row. We can see that they are not very different but that
@@ -5726,20 +5735,60 @@ One very large residual might indicate an isolated departure from the model. The
 
 As a simple example we return Australian births data. Recall that we fitted a Poisson(\(\lambda\)) distribution to the numbers of babies born in each of the 24 hours of the day, leading to \(\hat{\lambda} = 1.84\). Table \ref{tab:poissonfit} shows the residuals for this fit.
 
-\begin{longtable}[]{@{}cccccccc@{}}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1364}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1364}}
+  >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}@{}}
 \caption{\label{tab:poissonfit} Observed values and fitted values (estimated expected frequencies) and residuals for a Poisson distribution fitted to the counts of babies born in each of the 24 hours in the Australian births data.}\tabularnewline
-\toprule
-number of births & 0 & 1 & 2 & 3 & 4 & \(\geq 5\) & total \\
-\midrule
+\toprule()
+\begin{minipage}[b]{\linewidth}\centering
+number of births
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+0
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+3
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+4
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\geq 5\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+total
+\end{minipage} \\
+\midrule()
 \endfirsthead
-\toprule
-number of births & 0 & 1 & 2 & 3 & 4 & \(\geq 5\) & total \\
-\midrule
+\toprule()
+\begin{minipage}[b]{\linewidth}\centering
+number of births
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+0
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+3
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+4
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(\geq 5\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+total
+\end{minipage} \\
+\midrule()
 \endhead
 \(y_i\) & 3 & 8 & 6 & 4 & 3 & 0 & 24 \\
 \(\hat{y}_i\) & 3.8 & 7.0 & 6.4 & 3.9 & 1.8 & 0.9 & 24 \\
 \(r_i\) & -0.8 & 1.0 & -0.4 & 0.1 & 1.2 & -0.9 & 0 \\
-\bottomrule
+\bottomrule()
 \end{longtable}
 
 There are no very large residuals and there is no obvious pattern in the signs of the residuals. Overall, the Poisson distribution seems to fit well. Of course, this is only an informal assessment.
