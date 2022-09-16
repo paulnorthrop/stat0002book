@@ -35,7 +35,7 @@ include_cropped_graphics <- function(x) {
 }
 ```
 
-# Descriptive Statistics {#descriptive}
+# Descriptive statistics {#descriptive}
 
 The first important step in any data analysis is to **describe** the 
 available data.  This is often called an **exploratory** or **initial** data analysis. It is normally not possible to just look at the dataset, especially if it is large, and just see any interesting structures. The task of a statistician is therefore to **extract** and **condense** the relevant information -- what is relevant will depend on the aim of the analysis. Some of  the standard methods to do so are addressed in the next sections. Despite all the technicalities, always remember that the numbers / figures / plots produced for data must be **interpreted with regard to the problem or question at hand**, that is, always ask yourself "what does this number / plot mean?".
@@ -149,7 +149,7 @@ Radcliffe hospital in Oxford, UK, during a particular week.',
 )
 ```
 
-## Summary Statistics
+## Summary statistics
 
 One way to summarise a dataset is to calculate numerical summaries called **summary statistics**. Summary statistics can be used as indicators of the location, spread and shape of the data (although looking at a plot can be more helpful).
 
@@ -595,7 +595,7 @@ Figure \@ref(fig:fluts) shows a time series plot of another set of data.  Can yo
 include_cropped_graphics("images/flu_tufte_no_label.png")
 ```
 
-## 2000 US Presidential Election {#election}
+## 2000 US presidential election {#election}
 
 Smith, R. L. (2002) [A Statistical Assessment of Buchanan's Vote in Palm Beach County](https://doi.org/10.1214/ss/1049993203). *Statistcal Science*, **17**(4), 441--457.
 

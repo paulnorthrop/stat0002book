@@ -33,7 +33,7 @@ include_cropped_graphics <- function(x) {
 }
 ```
 
-# More Probability
+# More probability
 
 In this chapter, we consider two results that involve conditional probabilities, the **law of total probability** and **Bayes' theorem**.
 
