@@ -289,7 +289,7 @@ The residuals $r_1,\ldots, r_n$ give measures of how closely the model agrees wi
 
 One very large residual might indicate an isolated departure from the model.  The Buchanan's vote in Palm Beach county has a very large residual under the model fitted by Smith (2002).  Looking at residuals can also reveal systematic departures from the model.  We will consider this in sections \@ref(contingency) and \@ref(linreg).
 
-As a simple example we return Australian births data.  Recall that we fitted a Poisson($\lambda$) distribution to the numbers of babies born in each of the 24 hours of the day, leading to $\hat{\lambda} = 1.84$.  Table \@ref(tab:poissonfit) shows the residuals for this fit.
+As a simple example we return Australian births data.  Recall that we fitted a Poisson($\lambda$) distribution to the numbers of babies born in each of the 24 hours of the day, leading to $\hat{\lambda} = 1.83$.  Table \@ref(tab:poissonfit) shows the residuals for this fit.
 
 | number of births | 0 | 1 | 2 | 3 | 4 | $\geq 5$ | total |
 |:------:|:------:|:-------:|:------:|:------:|:------:|:-------:|:------:|
