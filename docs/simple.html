@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2022-09-21" />
+<meta name="date" content="2022-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -843,9 +843,9 @@ Therefore a sensible estimate of <span class="math inline">\(\lambda\)</span> is
 We have used <span class="math inline">\(\tilde{\lambda}\)</span> to denote the estimate of <span class="math inline">\(\lambda\)</span> to distinguish it from <span class="math inline">\(\hat{\lambda}\)</span>.</p>
 <p>How well does the exponential distribution fit these data? We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential(<span class="math inline">\(\hat{\lambda}\)</span>) p.d.f. or look at an <strong>exponential QQ plot</strong> (see Section <a href="simple.html#qq">6.11</a>). Figure <a href="simple.html#fig:exppdf">6.12</a> enables us to do the former. This plot suggests that the exponential distribution fits the data well.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:exppdf"></span>
-<img src="images/baby_exp_hist_dens.png" alt="Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution." width="75%" />
+<img src="images/baby_exp_hist_dens.png" alt="Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution. Note that 1.840 is the estimated birth rate per hour." width="75%" />
 <p class="caption">
-Figure 6.12: Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution.
+Figure 6.12: Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution. Note that 1.840 is the estimated birth rate per hour.
 </p>
 </div>
 <div id="three-ways-to-check-the-poisson-process-assumption" class="section level4 unnumbered hasAnchor">
@@ -1174,9 +1174,9 @@ Figure 6.26: Uniform(0,24) QQ plot with simulation envelopes based on 19 simulat
 <span class="math display">\[ q_i = -\frac{1}{\hat{\lambda}} \ln \left( 1-\frac{i}{n+1} \right). \]</span></p>
 <p>The points in the exponential QQ plot in Figure <a href="simple.html#fig:expqq">6.27</a> are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values. This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:expqq"></span>
-<img src="images/exp_simenv.png" alt="Exponential QQ plot with simulation envelopes based on 19 simulated datasets." width="60%" />
+<img src="images/exp_simenv.png" alt="Exponential QQ plot with simulation envelopes based on 19 simulated datasets. Note the axis scales are in minutes but 1.840 is the estimated birth rate per hour." width="60%" />
 <p class="caption">
-Figure 6.27: Exponential QQ plot with simulation envelopes based on 19 simulated datasets.
+Figure 6.27: Exponential QQ plot with simulation envelopes based on 19 simulated datasets. Note the axis scales are in minutes but 1.840 is the estimated birth rate per hour.
 </p>
 </div>
 

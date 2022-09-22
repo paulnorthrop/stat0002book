@@ -581,7 +581,7 @@ We have used $\tilde{\lambda}$ to denote the estimate of $\lambda$ to distinguis
 
 How well does the exponential distribution fit these data?  We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential($\hat{\lambda}$) p.d.f. or look at an **exponential QQ plot** (see Section \@ref(qq)).  Figure \@ref(fig:exppdf) enables us to do the former.  This plot suggests that the exponential distribution fits the data well.
 
-```{r echo=FALSE, exppdf, fig.show='hold', fig.cap='Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution.'}
+```{r echo=FALSE, exppdf, fig.show='hold', fig.cap='Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution. Note that 1.840 is the estimated birth rate per hour.'}
 include_cropped_graphics("images/baby_exp_hist_dens.png")
 ```
 
@@ -919,6 +919,6 @@ Here, $n=44$.  For $i=1, \ldots, n$ we plot the $i$th smallest observation $t_{(
 
 The points in the exponential QQ plot in Figure \@ref(fig:expqq) are generally close to the straight line apart from the few largest sample values. In the exponential case it is common for the largest sample values in a QQ plot to be further from the straight line than the smallest sample values.  This is because the largest sample values are more free to vary that the smallest sample values, which will tend to be close to zero but cannot lie below zero. This is reflected by the simulation envelopes being further apart for the larger values on the horizontal axis.
 
-```{r echo=FALSE, expqq, fig.show='hold', fig.cap='Exponential QQ plot with simulation envelopes based on 19 simulated datasets.', out.width = '60%'}
+```{r echo=FALSE, expqq, fig.show='hold', fig.cap='Exponential QQ plot with simulation envelopes based on 19 simulated datasets. Note the axis scales are in minutes but 1.840 is the estimated birth rate per hour.', out.width = '60%'}
 include_cropped_graphics("images/exp_simenv.png")
 ```
