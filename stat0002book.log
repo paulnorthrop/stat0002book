@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  22 SEP 2022 17:20
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  5 OCT 2022 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -979,34 +979,36 @@ File: images/ox_hist_basic.png Graphic file (type bmp)
 <images/ox_hist_basic.png>
 File: images/ox_stem.png Graphic file (type bmp)
 <images/ox_stem.png>
+
+Underfull \vbox (badness 3428) has occurred while \output is active []
+
+[25]
 File: images/ox_dot_basic.png Graphic file (type bmp)
 <images/ox_dot_basic.png>
 File: images/ox_dot_adv.png Graphic file (type bmp)
 <images/ox_dot_adv.png>
-[25]
 File: images/ox_box_basic.png Graphic file (type bmp)
 <images/ox_box_basic.png>
 File: images/ox_box_adv.png Graphic file (type bmp)
 <images/ox_box_adv.png>
+[26] [27] [28]
 File: images/shuttle_barplots.png Graphic file (type bmp)
 <images/shuttle_barplots.png>
 
-Underfull \vbox (badness 2285) has occurred while \output is active []
-
-[26] [27] [28]
 Overfull \hbox (1.9928pt too wide) in alignment at lines 1436--1436
 [][][][] 
  []
 
 File: images/ABO_barplots.png Graphic file (type bmp)
 <images/ABO_barplots.png>
+[29]
 File: images/ABO_pie.png Graphic file (type bmp)
 <images/ABO_pie.png>
 File: images/ftse_weekly.png Graphic file (type bmp)
 <images/ftse_weekly.png>
 File: images/ftse_weekly_tufte.png Graphic file (type bmp)
 <images/ftse_weekly_tufte.png>
-[29] [30] [31]
+[30] [31]
 File: images/flu_tufte_no_label.png Graphic file (type bmp)
 <images/flu_tufte_no_label.png>
 File: images/butterflyballot.png Graphic file (type bmp)
