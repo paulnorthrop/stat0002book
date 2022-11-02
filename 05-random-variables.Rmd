@@ -197,7 +197,7 @@ This makes sense.  If we multiply all observations by $a$ their mean will also b
 
 ### The expectation of $g(X)$ {#EgX}
 
-Suppose that $Y=g(X)$ is a function of of $X$, such as $aX+b$, $X^2$ or $\log X$.  Then $Y$ is also a random variable.  If we find the p.m.f (if $Y$ is discrete) or p.d.f. (if $Y$ is continuous) of $Y$ then we can find the expectation of $Y$ using equation \@ref(eq:discmean) or \@ref(eq:contmean) as appropriate.
+Suppose that $Y=g(X)$ is a function of of $X$, such as $aX+b$, $X^2$ or $\log X$.  Then $Y$ is also a random variable.  If we find the p.m.f (if $Y$ is discrete) or p.d.f. (if $Y$ is continuous) of $Y$ then we can find the expectation of $Y$ using equation \@ref(eq:discmean) or \@ref(eq:contmean) as appropriate.  Alternatively, and often more easily, we can use
 
 \begin{equation}
 \mathrm{E}(Y) = \mathrm{E}[g(X)] =
