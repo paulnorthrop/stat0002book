@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  2 NOV 2022 18:55
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  4 NOV 2022 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1167,44 +1167,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 3768--3770
 [69]
 File: stat0002book_files/figure-latex/discretecdf-1.pdf Graphic file (type pdf)
 <use stat0002book_files/figure-latex/discretecdf-1.pdf>
-[70] [71]
+[70] [71] [72]
 \bbl@ensure@british {Chapter} 6.
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4114--4114
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4119--4119
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4114--4114
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4119--4119
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4114--4114
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4119--4119
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4114--4114
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4119--4119
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (1.0856pt too wide) in alignment at lines 4114--4114
+Overfull \hbox (1.0856pt too wide) in alignment at lines 4119--4119
 [][][][][][][][][][][][] 
  []
 
 File: images/baby_intro.png Graphic file (type bmp)
 <images/baby_intro.png>
-[72
+[73
 
-] [73]
+] [74]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4236.
+(amsmath)                 on input line 4241.
 
-[74]
+[75]
 File: images/binom_pmf1.png Graphic file (type bmp)
 <images/binom_pmf1.png>
 File: images/binom_pmf2.png Graphic file (type bmp)
@@ -1213,92 +1213,92 @@ File: images/binom_pmf3.png Graphic file (type bmp)
 <images/binom_pmf3.png>
 File: images/binom_pmf4.png Graphic file (type bmp)
 <images/binom_pmf4.png>
-[75] [76]
+[76] [77]
 File: images/binom_inference_1b.png Graphic file (type bmp)
 <images/binom_inference_1b.png>
-[77]
-Overfull \hbox (6.39165pt too wide) in paragraph at lines 4450--4450
+[78]
+Overfull \hbox (6.39165pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 15.36[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4450--4450
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 6.28[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4450--4450
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 2.57[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4450--4450
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 1.05[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4450--4450
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 0.43[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4450--4450
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 0.30[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4450--4450
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4455--4455
  [][]\TU/lmss/m/n/10.95 26[][][][]
  []
 
 File: images/baby_geom_bar.png Graphic file (type bmp)
 <images/baby_geom_bar.png>
-[78]
-Underfull \hbox (badness 10000) in paragraph at lines 4492--4493
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 4497--4498
 
  []
 
-[79]
+[80]
 File: images/baby_geom_fit.png Graphic file (type bmp)
 <images/baby_geom_fit.png>
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 3.84[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 7.04[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 6.45[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 3.94[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 1.81[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4647--4647
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4652--4652
  [][]\TU/lmss/m/n/10.95 24[][][][]
  []
 
 File: images/baby_pois_bar.png Graphic file (type bmp)
 <images/baby_pois_bar.png>
-[80] [81]
+[81] [82]
 File: images/baby_pois_fit.png Graphic file (type bmp)
 <images/baby_pois_fit.png>
 File: images/poisson_pmf1.png Graphic file (type bmp)
@@ -1307,34 +1307,34 @@ File: images/poisson_pmf2.png Graphic file (type bmp)
 <images/poisson_pmf2.png>
 File: images/poisson_pmf3.png Graphic file (type bmp)
 <images/poisson_pmf3.png>
-[82] [83]
-Underfull \hbox (badness 10000) in paragraph at lines 4763--4765
+[83] [84]
+Underfull \hbox (badness 10000) in paragraph at lines 4768--4770
 
  []
 
 File: images/unif_pdf.png Graphic file (type bmp)
 <images/unif_pdf.png>
-[84]
+[85]
 File: images/baby_unif_hist_freq.png Graphic file (type bmp)
 <images/baby_unif_hist_freq.png>
-[85]
+[86]
 File: images/baby_exp_hist.png Graphic file (type bmp)
 <images/baby_exp_hist.png>
 File: images/baby_exp_box.png Graphic file (type bmp)
 <images/baby_exp_box.png>
-[86]
+[87]
 File: images/baby_exp_hist_dens.png Graphic file (type bmp)
 <images/baby_exp_hist_dens.png>
-[87]
+[88]
 File: images/baby_normal_histnew.png Graphic file (type bmp)
 <images/baby_normal_histnew.png>
 File: images/baby_normal_box.png Graphic file (type bmp)
 <images/baby_normal_box.png>
-[88]
+[89]
 File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
-[89] [90] [91]
-Underfull \hbox (badness 1286) in paragraph at lines 5151--5152
+[90] [91] [92]
+Underfull \hbox (badness 1286) in paragraph at lines 5156--5157
 \TU/lmss/bx/n/10.95 values \TU/lmss/m/n/10.95 or \TU/lmss/bx/n/10.95 order statistics $[][][] [][][] [][][][] [][]$ \TU/lmss/m/n/10.95 are the $[][][][][][] [][][][][][] [][][][] [][][][][]$ sample
  []
 
@@ -1342,12 +1342,12 @@ File: images/qq_picture.png Graphic file (type bmp)
 <images/qq_picture.png>
 File: images/qq_schematic.png Graphic file (type bmp)
 <images/qq_schematic.png>
-[92]
+[93]
 File: images/ox_qq_sim.png Graphic file (type bmp)
 <images/ox_qq_sim.png>
 File: images/ox_qq_simenv.png Graphic file (type bmp)
 <images/ox_qq_simenv.png>
-[93] [94]
+[94] [95]
 File: images/ox_hist_trans.png Graphic file (type bmp)
 <images/ox_hist_trans.png>
 File: images/ox_qq_trans.png Graphic file (type bmp)
@@ -1356,33 +1356,33 @@ File: images/ox_qq_time_env.png Graphic file (type bmp)
 <images/ox_qq_time_env.png>
 File: images/ox_qq_sqrttime_env.png Graphic file (type bmp)
 <images/ox_qq_sqrttime_env.png>
-[95] [96] [97]
+[96] [97] [98]
 File: images/ox_qq_linequart.png Graphic file (type bmp)
 <images/ox_qq_linequart.png>
 File: images/QQtypes.png Graphic file (type bmp)
 <images/QQtypes.png>
-[98] [99]
+[99] [100]
 File: images/baby_normal_qq_env.png Graphic file (type bmp)
 <images/baby_normal_qq_env.png>
-[100]
+[101]
 File: images/baby_unif_qq_simenv.png Graphic file (type bmp)
 <images/baby_unif_qq_simenv.png>
-[101]
+[102]
 File: images/exp_simenv.png Graphic file (type bmp)
 <images/exp_simenv.png>
-[102]
+[103]
 \bbl@ensure@british {Chapter} 7.
-[103
+[104
 
 ]
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5485--5487
+Underfull \hbox (badness 10000) in paragraph at lines 5490--5492
 
  []
 
-[104] [105]
+[105] [106]
 File: images/coin_sim.png Graphic file (type bmp)
 <images/coin_sim.png>
 File: images/normal_sim_3_mean.png Graphic file (type bmp)
@@ -1401,7 +1401,7 @@ File: images/normal_sim_100_mean.png Graphic file (type bmp)
 <images/normal_sim_100_mean.png>
 File: images/normal_sim_100_var.png Graphic file (type bmp)
 <images/normal_sim_100_var.png>
-[106] [107]
+[107] [108]
 File: images/exponential_sim_3_mean.png Graphic file (type bmp)
 <images/exponential_sim_3_mean.png>
 File: images/exponential_sim_3_var.png Graphic file (type bmp)
@@ -1418,44 +1418,44 @@ File: images/exponential_sim_100_mean.png Graphic file (type bmp)
 <images/exponential_sim_100_mean.png>
 File: images/exponential_sim_100_var.png Graphic file (type bmp)
 <images/exponential_sim_100_var.png>
-[108] [109] [110]
+[109] [110] [111]
 File: images/normal_mean_median.png Graphic file (type bmp)
 <images/normal_mean_median.png>
-[111] [112] [113] [114]
+[112] [113] [114] [115]
 \bbl@ensure@british {Chapter} 8.
 File: images/berk_2way.png Graphic file (type bmp)
 <images/berk_2way.png>
-[115
+[116
 
-] [116]
+] [117]
 File: images/berk_2way_oe.png Graphic file (type bmp)
 <images/berk_2way_oe.png>
 File: images/ct_notation.png Graphic file (type bmp)
 <images/ct_notation.png>
-[117] [118]
+[118] [119]
 File: images/berkresnew2.png Graphic file (type bmp)
 <images/berkresnew2.png>
-[119]
+[120]
 File: images/berk_sim.png Graphic file (type bmp)
 <images/berk_sim.png>
-[120] [121]
+[121] [122]
 File: images/berk_row.png Graphic file (type bmp)
 <images/berk_row.png>
-[122]
+[123]
 File: images/odds.png Graphic file (type bmp)
 <images/odds.png>
-[123]
+[124]
 File: images/case_control.png Graphic file (type bmp)
 <images/case_control.png>
-[124]
+[125]
 File: images/berk_3way.png Graphic file (type bmp)
 <images/berk_3way.png>
-[125] [126]
+[126] [127]
 File: images/berkmarg1.png Graphic file (type bmp)
 <images/berkmarg1.png>
 File: images/berkmarg2.png Graphic file (type bmp)
 <images/berkmarg2.png>
-[127]
+[128]
 File: images/berkmarg3.png Graphic file (type bmp)
 <images/berkmarg3.png>
 File: images/berkmarg4.png Graphic file (type bmp)
@@ -1466,34 +1466,34 @@ File: images/berkcond2.png Graphic file (type bmp)
 <images/berkcond2.png>
 File: images/berkcond3.png Graphic file (type bmp)
 <images/berkcond3.png>
-[128] [129] [130]
+[129] [130] [131]
 \bbl@ensure@british {Chapter} 9.
 File: images/hubbletable.png Graphic file (type bmp)
 <images/hubbletable.png>
 File: images/hubble_scatter.png Graphic file (type bmp)
 <images/hubble_scatter.png>
-[131
+[132
 
-] [132]
+] [133]
 File: images/regschematic.png Graphic file (type bmp)
 <images/regschematic.png>
-[133] [134]
+[134] [135]
 File: images/hubble_fit_flat.png Graphic file (type bmp)
 <images/hubble_fit_flat.png>
 File: images/hubble_fit_origin.png Graphic file (type bmp)
 <images/hubble_fit_origin.png>
 File: images/hubble_fit.png Graphic file (type bmp)
 <images/hubble_fit.png>
-[135] [136]
+[136] [137]
 File: images/hubble_scatter_new.png Graphic file (type bmp)
 <images/hubble_scatter_new.png>
-[137] [138]
+[138] [139]
 File: images/lm_expl_plots.png Graphic file (type bmp)
 <images/lm_expl_plots.png>
-[139] [140]
+[140] [141]
 File: images/lm_res_plots.png Graphic file (type bmp)
 <images/lm_res_plots.png>
-[141] [142]
+[142] [143]
 File: images/uneven.png Graphic file (type bmp)
 <images/uneven.png>
 File: images/non_normal.png Graphic file (type bmp)
@@ -1504,10 +1504,10 @@ File: images/hubble_check_origin.png Graphic file (type bmp)
 <images/hubble_check_origin.png>
 File: images/hubble_check.png Graphic file (type bmp)
 <images/hubble_check.png>
-[143] [144] [145] [146]
+[144] [145] [146] [147]
 File: images/lm_influence.png Graphic file (type bmp)
 <images/lm_influence.png>
-[147] [148]
+[148] [149]
 File: images/election_LS.png Graphic file (type bmp)
 <images/election_LS.png>
 File: images/election_check1.png Graphic file (type bmp)
@@ -1516,48 +1516,48 @@ File: images/election_check2.png Graphic file (type bmp)
 <images/election_check2.png>
 File: images/election_check3.png Graphic file (type bmp)
 <images/election_check3.png>
-[149] [150] [151]
+[150] [151] [152]
 File: images/election_check4.png Graphic file (type bmp)
 <images/election_check4.png>
-[152] [153]
+[153] [154]
 File: images/hubble_curves.png Graphic file (type bmp)
 <images/hubble_curves.png>
-[154] [155]
+[155] [156]
 \bbl@ensure@british {Chapter} 10.
 File: images/exchange_raw.png Graphic file (type bmp)
 <images/exchange_raw.png>
-[156
+[157
 
 ]
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
-[157]
-Underfull \hbox (badness 10000) in paragraph at lines 7319--7321
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7321--7323
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7323--7325
-
- []
-
 [158]
+Underfull \hbox (badness 10000) in paragraph at lines 7324--7326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7326--7328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7328--7330
+
+ []
+
+[159]
 File: images/design_corr0.png Graphic file (type bmp)
 <images/design_corr0.png>
 File: images/design_corr.png Graphic file (type bmp)
 <images/design_corr.png>
-[159]
+[160]
 File: images/corr8c.png Graphic file (type bmp)
 <images/corr8c.png>
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7423.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7428.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
@@ -1567,34 +1567,34 @@ File: images/guess_corr.png Graphic file (type bmp)
 <images/guess_corr.png>
 File: images/guess_corr_new2.png Graphic file (type bmp)
 <images/guess_corr_new2.png>
-[160] [161] [162] [163]
+[161] [162] [163] [164]
 File: images/anscombetable.png Graphic file (type bmp)
 <images/anscombetable.png>
 File: images/anscombe.png Graphic file (type bmp)
 <images/anscombe.png>
-[164]
+[165]
 File: images/ftse_weekly_tufte.png Graphic file (type bmp)
 <images/ftse_weekly_tufte.png>
 File: images/flu_tufte.png Graphic file (type bmp)
 <images/flu_tufte.png>
 File: images/flu_FTSE.png Graphic file (type bmp)
 <images/flu_FTSE.png>
-[165] [166] [167]
+[166] [167] [168]
 \bbl@ensure@british {Chapter} 11.
 File: images/stat5_portrait.png Graphic file (type bmp)
 <images/stat5_portrait.png>
-[168
+[169
 
-] (./stat0002book.bbl [169]) [170
+] (./stat0002book.bbl [170]) [171
 
 ] (./stat0002book.aux) ) 
 Here is how much of TeX's memory you used:
- 28938 strings out of 477727
- 596725 string characters out of 5841013
- 1166191 words of memory out of 5000000
- 49453 multiletter control sequences out of 15000+600000
+ 28939 strings out of 477727
+ 596735 string characters out of 5841013
+ 1167070 words of memory out of 5000000
+ 49454 multiletter control sequences out of 15000+600000
  475886 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,17n,121p,1065b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on stat0002book.pdf (170 pages).
+Output written on stat0002book.pdf (171 pages).

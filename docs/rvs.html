@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2022-11-02" />
+<meta name="date" content="2022-11-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -644,7 +644,7 @@ This follows from equations <a href="rvs.html#eq:varidisc">(5.6)</a> and <a href
 <span class="math display">\[ \mathrm{var}(a\,X+b) = a^2\,\mathrm{var}(X). \]</span>
 This makes sense. If we multiply all observations by <span class="math inline">\(a\)</span> their variance, which is measured square units, will be multiplied by <span class="math inline">\(a^2\)</span>. If we add <span class="math inline">\(b\)</span> to all observations their variance will be unchanged because the distribution simply shifts up by <span class="math inline">\(b\)</span> and its spread is unaffected.</li>
 <li>If <span class="math inline">\(X\)</span> is a constant <span class="math inline">\(c\)</span>, that is, <span class="math inline">\(P(X=c)=1\)</span> then <span class="math inline">\(\mathrm{var}(X)=0\)</span>: the distribution of <span class="math inline">\(X\)</span> has zero spread.</li>
-<li>It can also be shown that <strong>if the random variables <span class="math inline">\(X_1, X_2, \ldots X_n\)</span> are independent</strong> then</li>
+<li>It can also be shown that <strong>if the random variables <span class="math inline">\(X_1, X_2, \ldots X_n\)</span> are independent</strong> (see <strong>An Aside</strong> below) then</li>
 </ul>
 <p><span class="math display" id="eq:varsum">\[\begin{equation}
 \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n).
@@ -653,9 +653,13 @@ This makes sense. If we multiply all observations by <span class="math inline">\
 <p><strong>Note</strong>. Independence is sufficient for this result to hold but it is not necessary. Taking <span class="math inline">\(n=2\)</span> as an example, in generality we have
 <span class="math display">\[ \mathrm{var}(X_1 + X_2) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + 2\,\mathrm{cov}(X_1,X_2), \]</span>
 where <span class="math inline">\(\mathrm{cov}(X_1,X_2)\)</span> is the <strong>covariance</strong> between the random variables <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span>. Covariance is a measure of the strength of <strong>linear</strong> association. If <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> are independent (have no association of any kind) then <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because they have no linear association. However, it is possible for <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> to be dependent but <span class="math inline">\(\mathrm{cov}(X_1,X_2)=0\)</span>, because, although they have some kind of association, they have no <strong>linear</strong> association. Thus, independence is a stronger requirement than zero covariance.</p>
-<p>Returing to general <span class="math inline">\(n\)</span> we have
+<p>Returning to general <span class="math inline">\(n\)</span> we have
 <span class="math display">\[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i &lt; j} \mathrm{cov}(X_i,X_j). \]</span>
 If <span class="math inline">\(\mathrm{cov}(X_i,X_j)=0\)</span> for all <span class="math inline">\(i &lt; j\)</span> then equation <a href="rvs.html#eq:varsum">(5.8)</a> holds. We will study covariance, and its standardised form <strong>correlation</strong>, in Chapter <a href="correlationchapter.html#correlationchapter">10</a>.</p>
+<div id="an-aside" class="section level4 hasAnchor" number="5.4.4.1">
+<h4><span class="header-section-number">5.4.4.1</span> An aside<a href="rvs.html#an-aside" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>(This is beyond the scope of STAT0002. It is included here for completeness and in case you are interested.) To consider more formally what it means for random variables <span class="math inline">\(X_1, ..., X_n\)</span> to be independent we define their <strong>joint c.d.f.</strong> <span class="math inline">\(F_{X_1, ..., X_n}(x_1, ..., x_n) = P(X_1 \leq x_1, ..., X_n \leq x_n)\)</span>. The random variables <span class="math inline">\(X_1, ..., X_n\)</span> are (mutually) independent if <span class="math inline">\(F_{X_1, ..., X_n}(x_1, ..., x_n) = F_{X_1}(x_1) \times \cdots \times F_{X_n}(x_n)\)</span>, that is, <span class="math inline">\(P(X_1 \leq x_1, ..., X_n \leq x_n) = P(X_1 \leq x_1) \times \cdots \times P(X_n \leq x_n)\)</span>, for any set of values <span class="math inline">\((x_1, .., x_n)\)</span>. The random variables <span class="math inline">\(X_1, ..., X_n\)</span> are pairwise independent if, <span class="math inline">\(F_{X_i, X_j}(x_i, x_j) = F_{X_i}(x_i) F_{X_j}(x_j)\)</span>, that is, <span class="math inline">\(P(X_i \leq x_i, X_j \leq x_j) = P(X_i \leq x_i) P(X_j \leq x_j)\)</span>, for every pair <span class="math inline">\((X_i, X_j)\)</span> of variables that we could select from <span class="math inline">\(X_1, ..., X_n\)</span> and for any pair of values <span class="math inline">\((x_i, x_j)\)</span>.</p>
+</div>
 </div>
 </div>
 <div id="locations" class="section level2 hasAnchor" number="5.5">

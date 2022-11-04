@@ -153,7 +153,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2022-11-02}
+\date{2022-11-04}
 
 \begin{document}
 \maketitle
@@ -3787,7 +3787,7 @@ Notes on \(\mathrm{var}(X)\) and sd(\(X\)):
 \item
   If \(X\) is a constant \(c\), that is, \(P(X=c)=1\) then \(\mathrm{var}(X)=0\): the distribution of \(X\) has zero spread.
 \item
-  It can also be shown that \textbf{if the random variables \(X_1, X_2, \ldots X_n\) are independent} then
+  It can also be shown that \textbf{if the random variables \(X_1, X_2, \ldots X_n\) are independent} (see \textbf{An Aside} below) then
 \end{itemize}
 
 \begin{equation}
@@ -3799,9 +3799,14 @@ Notes on \(\mathrm{var}(X)\) and sd(\(X\)):
 \[ \mathrm{var}(X_1 + X_2) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + 2\,\mathrm{cov}(X_1,X_2), \]
 where \(\mathrm{cov}(X_1,X_2)\) is the \textbf{covariance} between the random variables \(X_1\) and \(X_2\). Covariance is a measure of the strength of \textbf{linear} association. If \(X_1\) and \(X_2\) are independent (have no association of any kind) then \(\mathrm{cov}(X_1,X_2)=0\), because they have no linear association. However, it is possible for \(X_1\) and \(X_2\) to be dependent but \(\mathrm{cov}(X_1,X_2)=0\), because, although they have some kind of association, they have no \textbf{linear} association. Thus, independence is a stronger requirement than zero covariance.
 
-Returing to general \(n\) we have
+Returning to general \(n\) we have
 \[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i < j} \mathrm{cov}(X_i,X_j). \]
 If \(\mathrm{cov}(X_i,X_j)=0\) for all \(i < j\) then equation \eqref{eq:varsum} holds. We will study covariance, and its standardised form \textbf{correlation}, in Chapter \ref{correlationchapter}.
+
+\hypertarget{an-aside}{%
+\subsubsection{An aside}\label{an-aside}}
+
+(This is beyond the scope of STAT0002. It is included here for completeness and in case you are interested.) To consider more formally what it means for random variables \(X_1, ..., X_n\) to be independent we define their \textbf{joint c.d.f.} \(F_{X_1, ..., X_n}(x_1, ..., x_n) = P(X_1 \leq x_1, ..., X_n \leq x_n)\). The random variables \(X_1, ..., X_n\) are (mutually) independent if \(F_{X_1, ..., X_n}(x_1, ..., x_n) = F_{X_1}(x_1) \times \cdots \times F_{X_n}(x_n)\), that is, \(P(X_1 \leq x_1, ..., X_n \leq x_n) = P(X_1 \leq x_1) \times \cdots \times P(X_n \leq x_n)\), for any set of values \((x_1, .., x_n)\). The random variables \(X_1, ..., X_n\) are pairwise independent if, \(F_{X_i, X_j}(x_i, x_j) = F_{X_i}(x_i) F_{X_j}(x_j)\), that is, \(P(X_i \leq x_i, X_j \leq x_j) = P(X_i \leq x_i) P(X_j \leq x_j)\), for every pair \((X_i, X_j)\) of variables that we could select from \(X_1, ..., X_n\) and for any pair of values \((x_i, x_j)\).
 
 \hypertarget{locations}{%
 \section{Other measures of location}\label{locations}}
