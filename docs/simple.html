@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Paul Northrop" />
 
 
-<meta name="date" content="2022-11-04" />
+<meta name="date" content="2022-11-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -954,7 +954,7 @@ P(W \leq 10)
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="simple.html#cb1-1" aria-hidden="true" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
 <span id="cb1-2"><a href="simple.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(value)</span></code></pre></div>
 <pre><code>## [1] 0.9914333</code></pre>
-<p>We can get even R to do the standardisation to the N(0, 1) case for us.</p>
+<p>We can even get R to do the standardisation to the N(0, 1) case for us.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="simple.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
 <pre><code>## [1] 0.9914333</code></pre>
 <p>Suppose now that we want to find the 95% quantile of <span class="math inline">\(W\)</span>, that is, <span class="math inline">\(w\)</span> for which <span class="math inline">\(P(W \leq w) = 0.95\)</span>. If we standardise <span class="math inline">\(W\)</span> to <span class="math inline">\(Z\)</span> as above then we find that <span class="math inline">\(w = 7.22 + \sqrt{1.36}\,\Phi^{-1}(0.95)\)</span>. The <code>qnorm()</code> function calculates the inverse c.d.f. <span class="math inline">\(\Phi^{-1}\)</span> (or quantile function).</p>

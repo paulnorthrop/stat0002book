@@ -697,7 +697,7 @@ value <- (10 - 7.22) / sqrt(1.36)
 pnorm(value)
 ```
 
-We can get even R to do the standardisation to the N(0, 1) case for us.
+We can even get R to do the standardisation to the N(0, 1) case for us.
 
 ```{r}
 pnorm(10, mean = 7.22, sd = sqrt(1.36))
