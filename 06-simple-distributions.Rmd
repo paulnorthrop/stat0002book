@@ -493,12 +493,12 @@ for some $\mu$, then $N \sim \mbox{Poisson}(\mu)$.
 
 ## Summary of these discrete distributions
 
-We have studied 4 common discrete distributions:
+We have studied 4 common discrete distributions.
 
 * **Bernoulli**. A single trial with a binary outcome (0/1 variable).
-* **binomial**: The total number of 1s in a sequence of independent and Bernoulli trials, with a common probability of obtaining a 1.  
-* **geometric**: The number of independent Bernoulli trials, with a common probability of obtaining a 1, until the first 1 is obtained.
-* **Poisson**: used for counts of events that arrive in a Poisson process.
+* **Binomial**. The total number of 1s in a sequence of independent and Bernoulli trials, with a common probability of obtaining a 1.  
+* **Geometric**. The number of independent Bernoulli trials, with a common probability of obtaining a 1, until the first 1 is obtained.
+* **Poisson**. Used for counts of events that arrive in a Poisson process.
 
 ## The uniform distribution {#uniform}
 
@@ -721,11 +721,11 @@ approximately 68\% of observations will fall within 1 standard deviation of the 
 
 ## Summary of these continuous distributions
 
-We have studied 3 common continuous distributions:
+We have studied 3 common continuous distributions.
 
-* **uniform**: a random variable for which all values in an interval are equally likely.
-* **exponential**: a positive random variable, which arises as the times between events in a Poisson process. 
-* **normal**: a symmetric random variable often used as a model for measurement errors or data that arise as the sums or averages of a large number of random variables.
+* **Uniform**. A random variable for which all values in an interval are equally likely.
+* **Exponential**. A positive random variable, which arises as the times between events in a Poisson process. 
+* **Normal**. A symmetric random variable often used as a model for measurement errors or data that arise as the sums or averages of a large number of random variables.
 
 ## QQ plots {#qq}
 
