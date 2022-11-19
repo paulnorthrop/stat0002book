@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  19 NOV 2022 19:57
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  19 NOV 2022 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1590,8 +1590,8 @@ File: images/stat5_portrait.png Graphic file (type bmp)
 ] (./stat0002book.aux) ) 
 Here is how much of TeX's memory you used:
  28940 strings out of 477727
- 596751 string characters out of 5841013
- 1166120 words of memory out of 5000000
+ 596755 string characters out of 5841013
+ 1166126 words of memory out of 5000000
  49455 multiletter control sequences out of 15000+600000
  475886 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
