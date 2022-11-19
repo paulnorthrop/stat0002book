@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  12 NOV 2022 21:58
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.8)  19 NOV 2022 19:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1418,10 +1418,10 @@ File: images/exponential_sim_100_mean.png Graphic file (type bmp)
 <images/exponential_sim_100_mean.png>
 File: images/exponential_sim_100_var.png Graphic file (type bmp)
 <images/exponential_sim_100_var.png>
-[109] [110] [111]
+[109] [110] [111] [112]
 File: images/normal_mean_median.png Graphic file (type bmp)
 <images/normal_mean_median.png>
-[112] [113] [114] [115]
+[113] [114] [115]
 \bbl@ensure@british {Chapter} 8.
 File: images/berk_2way.png Graphic file (type bmp)
 <images/berk_2way.png>
@@ -1532,17 +1532,17 @@ File: images/exchange_raw.png Graphic file (type bmp)
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
 [158]
-Underfull \hbox (badness 10000) in paragraph at lines 7324--7326
+Underfull \hbox (badness 10000) in paragraph at lines 7334--7336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7326--7328
+Underfull \hbox (badness 10000) in paragraph at lines 7336--7338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7328--7330
+Underfull \hbox (badness 10000) in paragraph at lines 7338--7340
 
  []
 
@@ -1557,7 +1557,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7428.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7438.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
@@ -1589,10 +1589,10 @@ File: images/stat5_portrait.png Graphic file (type bmp)
 
 ] (./stat0002book.aux) ) 
 Here is how much of TeX's memory you used:
- 28939 strings out of 477727
- 596735 string characters out of 5841013
- 1166070 words of memory out of 5000000
- 49454 multiletter control sequences out of 15000+600000
+ 28940 strings out of 477727
+ 596751 string characters out of 5841013
+ 1166120 words of memory out of 5000000
+ 49455 multiletter control sequences out of 15000+600000
  475886 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,17n,121p,1065b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s

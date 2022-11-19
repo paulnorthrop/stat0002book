@@ -153,7 +153,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2022-11-12}
+\date{2022-11-19}
 
 \begin{document}
 \maketitle
@@ -5677,7 +5677,17 @@ For an estimator \(T\) to be consistent it is \textbf{necessary} for the conditi
 
 Note that if \(\mbox{MSE}(T)\) does not tend to zero as \(n\) tends to infinity then this does \textbf{not} mean that \(T\) is not consistent for \(\theta\). It just means that we need to use the condition in equation \eqref{eq:consistency} to establish whether or not \(T\) is consistent. It is possible for \(T\) to be consistent even thought \(\mbox{MSE}(T)\) does not tend to zero as \(n\) tends to infinity.
 
-We return to our example. We have seen that \(\mbox{E}(\overline{X})=\mu\), so that \(\mbox{bias}(\overline{X})=0\) for all \(n\). Also, \(\mbox{var}(\overline{X}) = \sigma^2 / n\), which tends to zero as \(n\) tends to infinity. Therefore, \(\mbox{var}(\overline{X}) \rightarrow 0\) as \(n \rightarrow \infty\) and \(\overline{X}\) is a consistent estimator of \(\mu\).
+\hypertarget{normal-example}{%
+\subsection{Normal example}\label{normal-example}}
+
+We return to our running example, which is based on a random sample
+
+\[X_1, \,\ldots,X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, N(\mu,\sigma^2),\]
+where \(\sigma^2\) is positive and finite. We defined the estimator \(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\) of \(\mu\).
+
+\textbf{Estimating mean of a normal distribution}
+
+We have seen that \(\mbox{E}(\overline{X})=\mu\), so that \(\mbox{bias}(\overline{X})=0\) for all \(n\). Also, \(\mbox{var}(\overline{X}) = \sigma^2 / n\), which tends to zero as \(n\) tends to infinity. Therefore, \(\mbox{var}(\overline{X}) \rightarrow 0\) as \(n \rightarrow \infty\) and \(\overline{X}\) is a consistent estimator of \(\mu\).
 
 How good is \(\overline{X}\) as an estimator of \(\mu\)? Is there an unbiased estimator of \(\mu\) that has a smaller variance than the sample mean \(\overline{X}\)? The answer is ``No''. This is covered in the second year module STAT0005.
 
