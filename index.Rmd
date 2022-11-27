@@ -15,9 +15,18 @@ fontsize: 11pt
 
 # The purpose of these notes {-}
 
-These notes supplement the teaching materials available from the [STAT0002 Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=8579).  The teaching events in STAT0002 will follow the general order of the topics covered in these notes.
+These notes functions as a textbook for the material covered in STAT0002. The teaching events in STAT0002 will follow the general order of the topics covered in these notes. Chapters 1 and 2 are covered over Weeks 1 and 2 and from then on we will cover one chapter per teaching week.  There will be a section on Moodle dedicated to each week of term.
 
-Please see the [Module overview](https://moodle.ucl.ac.uk/course/view.php?id=8579&section=1) section of the [STAT0002 Moodle page](https://moodle.ucl.ac.uk/course/view.php?id=8579) for important general information about STAT0002. 
+See the following sections STAT0002 Moodle page for important information:
+
+* **Module overview**: general information;
+* **Asking for help**: how to ask questions;
+* **Assessment and feedback**: how you will be assessed and when;
+    - the two in-course assessments: **Meet your Professor ICA** and **Exercises 7 Peer Feedback Assessment** will have their own Moodle sections.
+* **Exercises**: (feedback on) weekly exercises sheets and summaries of tutorial material;
+* **Quizzes**: Moodle quizzes to help you to check your understanding;
+* **stat0002 R package**: provides a link to the [stat0002 R package](https://moodle.ucl.ac.uk/mod/url/view.php?id=3738855), which contains R-related material to assist your learning;
+* **Past exams**: (from Week 7) past exam papers and information about exams.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
