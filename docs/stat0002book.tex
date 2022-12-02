@@ -153,7 +153,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Dr Paul Northrop}
-\date{2022-11-27}
+\date{2022-12-02}
 
 \begin{document}
 \maketitle
@@ -6191,7 +6191,7 @@ There are two more reasons to \textbf{prefer the odds ratio}.
 
 These data comes from a very old case-control study, designed to investigate the link between smoking and lung cancer. The idea is to compare the smoking habits of people with lung cancer (the \textbf{cases}) and people without lung cancer, but who are otherwise similar to the cases (the \textbf{controls}). The people conducting the study decided to have equal number of cases and controls: 86 of each. That is, they fixed both column totals at 86. Therefore, this is \textbf{not} a random sample of people from the population: if we did sample people randomly from the population then we would expect to obtain far fewer people with lung cancer than people without lung cancer. Each person was asked whether they were a smoker or non-smoker.
 
-Let \(L\) be the event that a person has lung cancer and let \(S\) the event that a person is a smoker. We can estimate \(P(S \mid L)\) and \(P(S \mid \mbox{not}L)\): \(\hat{P}(S \mid L) = 83/86 \approx 0.97\) and \(\hat{P}(S \mid \mbox{not}L) = 83/86 \approx 0.84\). If we condition on \(L\) or on \(\mbox{not}L\) then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed. Both these estimates are high, because smoking was more prevalent in the 1950s, and \(\hat{P}(S \mid L) > \hat{P}(S \mid \mbox{not}L)\), that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using
+Let \(L\) be the event that a person has lung cancer and let \(S\) the event that a person is a smoker. We can estimate \(P(S \mid L)\) and \(P(S \mid \mbox{not}L)\): \(\hat{P}(S \mid L) = 83/86 \approx 0.97\) and \(\hat{P}(S \mid \mbox{not}L) = 72/86 \approx 0.84\). If we condition on \(L\) or on \(\mbox{not}L\) then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed. Both these estimates are high, because smoking was more prevalent in the 1950s, and \(\hat{P}(S \mid L) > \hat{P}(S \mid \mbox{not}L)\), that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using
 \[ \displaystyle\frac{\displaystyle\frac{\hat{P}(S \mid L)}{1-\hat{P}(S \mid L)}}{\displaystyle\frac{\hat{P}(S \mid \mbox{not}L)}{1-\hat{P}(S \mid \mbox{not}L)}}
 = \displaystyle\frac{\displaystyle\frac{83/86}{3/86}}{\displaystyle\frac{72/86}{14/86}}
 = \frac{83 \times 14}{72 \times 3} = 5.38. \]
