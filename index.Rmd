@@ -1,6 +1,6 @@
 --- 
 title: "STAT0002 Introduction to Probability and Statistics"
-author: "Dr Paul Northrop"
+author: "Paul Northrop"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -22,10 +22,9 @@ See the following sections STAT0002 Moodle page for important information:
 * **Module overview**: general information;
 * **Asking for help**: how to ask questions;
 * **Assessment and feedback**: how you will be assessed and when;
-    - the two in-course assessments: **Meet your Professor ICA** and **Exercises 7 Peer Feedback Assessment** will have their own Moodle sections.
 * **Exercises**: (feedback on) weekly exercises sheets and summaries of tutorial material;
 * **Quizzes**: Moodle quizzes to help you to check your understanding;
-* **stat0002 R package**: provides a link to the [stat0002 R package](https://moodle.ucl.ac.uk/mod/url/view.php?id=3738855), which contains R-related material to assist your learning;
+* **stat0002 R package**: provides a link to the [stat0002 R package](https://paulnorthrop.github.io/stat0002/), which contains R-related material to assist your learning;
 * **Past exams**: (from Week 7) past exam papers and information about exams.
 
 ```{r include=FALSE}
