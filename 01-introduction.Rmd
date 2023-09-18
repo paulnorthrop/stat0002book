@@ -18,8 +18,7 @@ We will introduce core ideas in Probability and Statistics.  These ideas will be
 
 ## Real statistical investigations {#real}
 
-We will spend some lecture time looking at examples of real investigations.  The first of these is introduced in Section \@ref(shuttle) and will be used as an worked example for your Meet your Professor In-course Assessment (ICA).  Most of these are real investigations which have been described in real research papers.  We will also use some much simpler teaching examples to illustrate statistical ideas and methods.  However, teaching examples can give the impression that all statistical analyses are straightforward.
-In practice they are not.
+We will spend some lecture time looking at examples of real investigations. Most of these are real investigations that have been described in real research papers. The first of these is introduced in Section \@ref(shuttle).  We will also use some much simpler teaching examples to illustrate statistical ideas and methods.  However, teaching examples can give the impression that all statistical analyses are straightforward. In practice they are not.
 
 > "Most real-life statistical problems have one or more nonstandard features. There are no routine statistical questions; only questionable statistical routines."  David Cox
 
