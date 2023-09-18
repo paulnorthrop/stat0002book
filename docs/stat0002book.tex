@@ -34,6 +34,15 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={STAT0002 Introduction to Probability and Statistics},
+  pdfauthor={Paul Northrop},
+  pdflang={en-gb},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -141,19 +150,10 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
-\hypersetup{
-  pdftitle={STAT0002 Introduction to Probability and Statistics},
-  pdfauthor={Dr Paul Northrop},
-  pdflang={en-gb},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
 
 \title{STAT0002 Introduction to Probability and Statistics}
-\author{Dr Paul Northrop}
-\date{2022-12-02}
+\author{Paul Northrop}
+\date{2023-09-18}
 
 \begin{document}
 \maketitle
@@ -178,18 +178,12 @@ See the following sections STAT0002 Moodle page for important information:
   \textbf{Asking for help}: how to ask questions;
 \item
   \textbf{Assessment and feedback}: how you will be assessed and when;
-
-  \begin{itemize}
-  \tightlist
-  \item
-    the two in-course assessments: \textbf{Meet your Professor ICA} and \textbf{Exercises 7 Peer Feedback Assessment} will have their own Moodle sections.
-  \end{itemize}
 \item
   \textbf{Exercises}: (feedback on) weekly exercises sheets and summaries of tutorial material;
 \item
   \textbf{Quizzes}: Moodle quizzes to help you to check your understanding;
 \item
-  \textbf{stat0002 R package}: provides a link to the \href{https://moodle.ucl.ac.uk/mod/url/view.php?id=3738855}{stat0002 R package}, which contains R-related material to assist your learning;
+  \textbf{stat0002 R package}: provides a link to the \href{https://paulnorthrop.github.io/stat0002/}{stat0002 R package}, which contains R-related material to assist your learning;
 \item
   \textbf{Past exams}: (from Week 7) past exam papers and information about exams.
 \end{itemize}
@@ -202,8 +196,7 @@ We will introduce core ideas in Probability and Statistics. These ideas will be 
 \hypertarget{real}{%
 \section{Real statistical investigations}\label{real}}
 
-We will spend some lecture time looking at examples of real investigations. The first of these is introduced in Section \ref{shuttle} and will be used as an worked example for your Meet your Professor In-course Assessment (ICA). Most of these are real investigations which have been described in real research papers. We will also use some much simpler teaching examples to illustrate statistical ideas and methods. However, teaching examples can give the impression that all statistical analyses are straightforward.
-In practice they are not.
+We will spend some lecture time looking at examples of real investigations. Most of these are real investigations that have been described in real research papers. The first of these is introduced in Section \ref{shuttle}. We will also use some much simpler teaching examples to illustrate statistical ideas and methods. However, teaching examples can give the impression that all statistical analyses are straightforward. In practice they are not.
 
 \begin{quote}
 ``Most real-life statistical problems have one or more nonstandard features. There are no routine statistical questions; only questionable statistical routines.'' David Cox
@@ -773,18 +766,18 @@ Which measures of location are sensible for different types of data? Consider ea
 
 \begin{longtable}[]{@{}lccc@{}}
 \caption{\label{tab:whichmeasures} Types of data and measures of location.}\tabularnewline
-\toprule()
+\toprule
 & mean & median & mode \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 & mean & median & mode \\
-\midrule()
+\midrule
 \endhead
 nominal & & & \\
 ordinal & & & \\
 numerical & & & \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{symmetry}{%
@@ -794,16 +787,16 @@ Many standard statistical methods work best when the data are distributed symmet
 
 \begin{longtable}[]{@{}cccc@{}}
 \caption{\label{tab:thumb} Relative values of the sample mean and median and what this \textbf{might} suggest in some cases.}\tabularnewline
-\toprule()
+\toprule
 mean \(<\) median & mean = median & mean \(>\) median & \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 mean \(<\) median & mean = median & mean \(>\) median & \\
-\midrule()
+\midrule
 \endhead
 negative skew & symmetric & positive skew & \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{example.-oxford-births-data}{%
@@ -814,16 +807,16 @@ Table \ref{tab:oxfivenum} gives the five-number summary of the Oxford birth time
 
 \begin{longtable}[]{@{}ccccc@{}}
 \caption{\label{tab:oxfivenum} Sample five-number summary of the Oxford birth times data.}\tabularnewline
-\toprule()
+\toprule
 \(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\) \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \(x_{(1)}\) & \(q_L\) & \(m\) & \(q_U\) & \(x_{(n)}\) \\
-\midrule()
+\midrule
 \endhead
 1.50 & 4.90 & 7.50 & 9.75 & 19.00 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 Half of the women took between approximately 5 and 10 hours to give birth.The quickest delivery was 90 minutes and the longest 19 hours. The mean \(\bar{x}\) is 7.72 hours and the standard deviation is 3.57 hours. The fact that sample mean \(>\) sample median suggest that the data are slightly positively skewed, but this is something that we should confirm by looking at a suitable graph (see Section \ref{graphs}).
@@ -848,18 +841,18 @@ Table \ref{tab:sumstats} summarises the summary statistics may be used as measur
 
 \begin{longtable}[]{@{}ccc@{}}
 \caption{\label{tab:sumstats} Summary of summary statistics}\tabularnewline
-\toprule()
+\toprule
 location & spread & shape \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 location & spread & shape \\
-\midrule()
+\midrule
 \endhead
 median & inter-quartile range & quartile skewness \\
 mean & standard deviation or variance & skewness \\
 mode & & \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \hypertarget{corr1}{%
@@ -893,13 +886,13 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 
 \begin{longtable}[]{@{}rrrrr@{}}
 \caption{\label{tab:smalldata} A small example dataset.}\tabularnewline
-\toprule()
+\toprule
 \(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\) \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \(x_i\) & rank \(x_i\) & \(y_i\) & rank \(y_i\) & \(d_i\) \\
-\midrule()
+\midrule
 \endhead
 \(-2\) & \(6\) & \(-1.5\) & \(6\) & \(0\) \\
 \(-1\) & \(5\) & \(-1.1\) & \(5\) & \(0\) \\
@@ -907,7 +900,7 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 \(1\) & \(3\) & \(1.1\) & \(3\) & \(0\) \\
 \(2\) & \(2\) & \(1.6\) & \(1\) & \(1\) \\
 \(10\) & \(1\) & \(1.5\) & \(2\) & \(-1\) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 \textbf{Exercise}. Show that for these data \(r=0.70\) and \(r_S=0.94\). Can you explain why \(r_S>r\)? Looking at a scatter plot of \(y\) against \(x\) will help you see why.
@@ -5148,17 +5141,17 @@ Before we describe how to produce a QQ plot we return to the Oxford birth times 
 
 \begin{longtable}[]{@{}crrr@{}}
 \caption{\label{tab:compareqs} Comparison of sample and theoretical quantiles.}\tabularnewline
-\toprule()
+\toprule
 & \(q_L\) & \(m\) & \(q_U\) \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 & \(q_L\) & \(m\) & \(q_U\) \\
-\midrule()
+\midrule
 \endhead
 sample & \(4.95\) & \(7.50\) & \(9.75\) \\
 \(N(7.72, 3.57^2)\) & \(5.32\) & \(7.72\) & \(10.13\) \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 If the data have been sampled from \(N(7.72, 3.57^2)\) distribution the values in the first row of Table \ref{tab:compareqs} should be close to the corresponding values in the second row. We can see that they are not very different but that
@@ -5795,7 +5788,7 @@ As a simple example we return Australian births data. Recall that we fitted a Po
   >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1364}}
   >{\centering\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1212}}@{}}
 \caption{\label{tab:poissonfit} Observed values and fitted values (estimated expected frequencies) and residuals for a Poisson distribution fitted to the counts of babies born in each of the 24 hours in the Australian births data.}\tabularnewline
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 number of births
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -5813,9 +5806,9 @@ number of births
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 total
 \end{minipage} \\
-\midrule()
+\midrule
 \endfirsthead
-\toprule()
+\toprule
 \begin{minipage}[b]{\linewidth}\centering
 number of births
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -5833,12 +5826,12 @@ number of births
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
 total
 \end{minipage} \\
-\midrule()
+\midrule
 \endhead
 \(y_i\) & 3 & 8 & 6 & 4 & 3 & 0 & 24 \\
 \(\hat{y}_i\) & 3.8 & 7.0 & 6.4 & 3.9 & 1.8 & 0.9 & 24 \\
 \(r_i\) & -0.8 & 1.0 & -0.4 & 0.1 & 1.2 & -0.9 & 0 \\
-\bottomrule()
+\bottomrule
 \end{longtable}
 
 There are no very large residuals and there is no obvious pattern in the signs of the residuals. Overall, the Poisson distribution seems to fit well. Of course, this is only an informal assessment.
