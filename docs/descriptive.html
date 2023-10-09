@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2023-09-22" />
+<meta name="date" content="2023-10-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1064,8 +1064,7 @@ the interval <strong>per unit of measurement</strong>, commonly known as the <st
 </ul>
 <p>The total area under a histogram is equal to 1. In fact a histogram is an estimate of a probability density function (see Section <a href="rvs.html#continuous">5.2</a>). The vertical axis is commonly labelled <strong>density</strong>.</p>
 <p>It is common for people to plot frequencies (rather than relative frequencies per unit), giving what I will call a <strong>frequency plot</strong>, that is, <strong>not</strong> a true histogram.</p>
-<p>If the bin widths are equal the shape of frequency plot is the same as the corresponding histogram. However, when drawing a frequency plot using unequal bin widths it is important to take into account the differing widths of the bins. For example, in the plot on the bottom left of Figure <a href="descriptive.html#fig:oxhistbasic">2.4</a>, the frequency in the box for 12-20 hours is 4 times too high because the longer width of this interval has not been taken into account.
-One solution is to divide the frequencies by the bin width to produce frequencies <strong>per unit</strong>, but then we may as well produce a true histogram, using equation <a href="descriptive.html#eq:hist">(2.2)</a>.</p>
+<p>If the bin widths are equal the shape of frequency plot is the same as the corresponding histogram. However, when drawing a frequency plot using unequal bin widths it is important to take into account the differing widths of the bins. For example, in the plot on the bottom left of Figure <a href="descriptive.html#fig:oxhistbasic">2.4</a>, the frequencies have not been adjusted to account for the differing bin widths. The effect of this is that, for the purposes of judging the shape of the distribution of the data, the height of the rectangle for the 12-20 bin is 4 times larger than it should be relative to the heights of the other rectangles. One solution is to divide the frequencies by the bin width to produce frequencies <strong>per unit</strong>, but then we may as well produce a true histogram, using equation <a href="descriptive.html#eq:hist">(2.2)</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:oxhistbasic"></span>
 <img src="images/ox_hist_basic.png" alt="Frequency plots (left) and histograms (right) of the Oxford birth times." width="75%" />
 <p class="caption">
