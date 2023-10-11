@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2023-10-09" />
+<meta name="date" content="2023-10-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -702,7 +702,7 @@ This is not the only possibility: you may find that different methods are used i
 that is, the sample minimum, lower quartile, median, upper quartile and maximum.</p>
 <p>The <strong>range</strong> is defined as <span class="math inline">\(x_{(n)}-x_{(1)}\)</span> and the <strong>inter-quartile
 range</strong> (IQR) as <span class="math inline">\(q_U-q_L\)</span>. The range and IQR are measures of spread.</p>
-<p>More generally, we could could calculate sample <strong>quantiles</strong>, or <strong>percentiles</strong>. The 30% quantile, for example, is the value at or below which 30% of the data lie. The 100<span class="math inline">\(p\)</span>% sample quantile is <span class="math inline">\(x_{(p(n+1))}\)</span>. When <span class="math inline">\(p(n+1)\)</span> is not an integer, <span class="math inline">\(x_{(p(n+1))}\)</span> can be calculated using linear interpolation. Note: the number of quantiles which we can estimate reliably depends on the <strong>sample size</strong> <span class="math inline">\(n\)</span>. For example, if <span class="math inline">\(n=3\)</span>, it doesn’t make sense to try to estimate the 10% quantile. In this case <span class="math inline">\(q_L=x_{(1)}, m=x_{(2)}\)</span> and <span class="math inline">\(q_U=x_{(3)}\)</span>.</p>
+<p>More generally, we could could calculate sample <strong>quantiles</strong>, or <strong>percentiles</strong>. The 30% sample quantile, for example, is a value that divides the lower 30% of the data from the upper 70% of the data. The 100<span class="math inline">\(p\)</span>% sample quantile is <span class="math inline">\(x_{(p(n+1))}\)</span>. When <span class="math inline">\(p(n+1)\)</span> is not an integer, <span class="math inline">\(x_{(p(n+1))}\)</span> can be calculated using linear interpolation. Note: the number of quantiles which we can estimate reliably depends on the <strong>sample size</strong> <span class="math inline">\(n\)</span>. For example, if <span class="math inline">\(n=3\)</span>, it doesn’t make sense to try to estimate the 10% quantile. In this case <span class="math inline">\(q_L=x_{(1)}, m=x_{(2)}\)</span> and <span class="math inline">\(q_U=x_{(3)}\)</span>.</p>
 <p>Sometimes the sample size <span class="math inline">\(n\)</span> is added to the five number summary. The
 sample size can be of interest in its own right, for example when it records the
 number of times an event of interest occurs in a fixed period of time,
