@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2023-10-11" />
+<meta name="date" content="2023-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -119,10 +119,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -956,17 +952,17 @@ P(W \leq 10)
 \end{aligned}
 \]</span></p>
 <p>Then the value of <span class="math inline">\(\Phi(2.38)\)</span> was found in a book of statistical tables. Now it is easier to use R.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="simple.html#cb1-1" aria-hidden="true" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
-<span id="cb1-2"><a href="simple.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(value)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="simple.html#cb1-1" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
+<span id="cb1-2"><a href="simple.html#cb1-2" tabindex="-1"></a><span class="fu">pnorm</span>(value)</span></code></pre></div>
 <pre><code>## [1] 0.9914333</code></pre>
 <p>We can even get R to do the standardisation to the N(0, 1) case for us.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="simple.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="simple.html#cb3-1" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
 <pre><code>## [1] 0.9914333</code></pre>
 <p>Suppose now that we want to find the 95% quantile of <span class="math inline">\(W\)</span>, that is, <span class="math inline">\(w\)</span> for which <span class="math inline">\(P(W \leq w) = 0.95\)</span>. If we standardise <span class="math inline">\(W\)</span> to <span class="math inline">\(Z\)</span> as above then we find that <span class="math inline">\(w = 7.22 + \sqrt{1.36}\,\Phi^{-1}(0.95)\)</span>. The <code>qnorm()</code> function calculates the inverse c.d.f. <span class="math inline">\(\Phi^{-1}\)</span> (or quantile function).</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="simple.html#cb5-1" aria-hidden="true" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
-<span id="cb5-2"><a href="simple.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fl">7.22</span> <span class="sc">+</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>) <span class="sc">*</span> <span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="simple.html#cb5-1" tabindex="-1"></a>value <span class="ot">&lt;-</span> (<span class="dv">10</span> <span class="sc">-</span> <span class="fl">7.22</span>) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>)</span>
+<span id="cb5-2"><a href="simple.html#cb5-2" tabindex="-1"></a><span class="fl">7.22</span> <span class="sc">+</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>) <span class="sc">*</span> <span class="fu">qnorm</span>(<span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>## [1] 9.138212</code></pre>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="simple.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="simple.html#cb7-1" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.95</span>, <span class="at">mean =</span> <span class="fl">7.22</span>, <span class="at">sd =</span> <span class="fu">sqrt</span>(<span class="fl">1.36</span>))</span></code></pre></div>
 <pre><code>## [1] 9.138212</code></pre>
 </div>
 <div id="interpretation-of-sigma" class="section level3 hasAnchor" number="6.9.4">
@@ -1028,7 +1024,7 @@ the quartiles of the normal distribution are greater than the empirical quartile
 <p>In section <a href="descriptive.html#fivenumber">2.3.1</a> we said that, for <span class="math inline">\(0 &lt; p &lt; 1\)</span> the <span class="math inline">\(100p\%\)</span> sample quantile is <span class="math inline">\(x_{(p(n+1))}\)</span>. If we substitute <span class="math inline">\(p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}\)</span> in <span class="math inline">\(x_{(p(n+1))}\)</span> then we obtain <span class="math inline">\(x_{(1)}, x_{(2)}, ..., x_{(n)}\)</span>. Therefore, the <strong>ordered sampled values</strong> or <strong>order statistics</strong> <span class="math inline">\(x_{(1)}, x_{(2)}, ..., x_{(n)}\)</span> are the <span class="math inline">\(100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%\)</span> sample quantiles.</p>
 <p><strong>How do we calculate the theoretical quantiles?</strong></p>
 <p>For simplicity we suppose that the sample size <span class="math inline">\(n=9\)</span>. Therefore we want to calculate the <span class="math inline">\(10\%, 20\%, \ldots, 90\%\)</span> quantiles of a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution. In R we would do the following.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="simple.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">/</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.72</span>, <span class="at">sd =</span> <span class="fl">3.57</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="simple.html#cb9-1" tabindex="-1"></a><span class="fu">qnorm</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">/</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="fl">7.72</span>, <span class="at">sd =</span> <span class="fl">3.57</span>)</span></code></pre></div>
 <pre><code>## [1]  3.144861  4.715412  5.847890  6.815551  7.720000  8.624449  9.592110
 ## [8] 10.724588 12.295139</code></pre>
 <p>In Figure <a href="simple.html#fig:qqpic">6.15</a> these quantiles are superimposed on the p.d.f. of a <span class="math inline">\(N(7.72, 3.57^2)\)</span> distribution.</p>

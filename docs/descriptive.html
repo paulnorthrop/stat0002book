@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Descriptive statistics | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Descriptive statistics | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2023-10-11" />
+<meta name="date" content="2023-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -105,7 +105,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -119,10 +119,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -1217,7 +1213,7 @@ Figure 2.13: A time series plot of ?.
 Figure 2.14: The Butterfly Ballot used in Palm Beach county.
 </p>
 </div>
-<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> uses election results, and other data (on race, age, education and income), from Florida to answer the following questions:</p>
+<p><span class="citation">Smith (<a href="#ref-election">2002</a>)</span> uses election results, and other data (on race, age, education and income), from Florida to answer the following questions:</p>
 <ol style="list-style-type: decimal">
 <li>Is Buchanan’s vote of 3,407 very clearly out of line with the pattern of results form the rest of Florida? In Statistics we call such data values <strong>outliers</strong>.</li>
 <li>What level of vote for Buchanan would have been realistic in Palm Beach County?</li>
@@ -1239,14 +1235,14 @@ Figure 2.15:  Percentage of Buchanan votes against explanatory variables. Palm B
 <li>decrease with the percentage of Gore votes;</li>
 <li>increase with the percentage of Bush votes.</li>
 </ul>
-<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> answers questions 1. and 2. more formally by building a linear regression model. This model quantifies how the percentage of Buchanan vote <span class="math inline">\(Y\)</span>, the <strong>response variable</strong>, depends on the other variables,the <strong>explanatory variables</strong> <span class="math inline">\(x_1,\ldots,x_{12}\)</span>. The general idea is to</p>
+<p><span class="citation">Smith (<a href="#ref-election">2002</a>)</span> answers questions 1. and 2. more formally by building a linear regression model. This model quantifies how the percentage of Buchanan vote <span class="math inline">\(Y\)</span>, the <strong>response variable</strong>, depends on the other variables,the <strong>explanatory variables</strong> <span class="math inline">\(x_1,\ldots,x_{12}\)</span>. The general idea is to</p>
 <ul>
 <li>build the model using all the data for Florida, apart from the data from Palm Beach, using only the explanatory variables that have a significant effect;</li>
 <li>predict the value of the Buchanan’s vote in Palm Beach using the model.</li>
 </ul>
 <p>We will study simple linear regression models (with only one explanatory variable) towards the end of STAT0002 (Chapter <a href="linreg.html#linreg">9</a>) and in STAT0003. The basic idea is to assume that a response variable has a linear (straight line) relationship with explanatory variables. The relationship will not be exact, so the model includes a <strong>random error</strong> term.</p>
-<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> finds that transformations are required in order that the assumptions of the model are satisfied approximately. In particular he finds that using the response variable <span class="math inline">\(\sqrt{Y}\)</span> is better than using <span class="math inline">\(Y\)</span> itself (and better than other possible transformations). He also uses a <span class="math inline">\(\log_{10}\)</span> transformation on some of the explanatory variables (for example Total Population), that is, he uses <span class="math inline">\(\log_{10}(x)\)</span> rather than <span class="math inline">\(x\)</span>. Figure <a href="descriptive.html#fig:election2">2.16</a> is a new version of figure <a href="descriptive.html#fig:election1">2.15</a> in which the square root of the percentage of the vote obtained by Buchanan is plotted against the (possibly log-transformed) explanatory variables.</p>
-<p><span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> uses transformations of the original data in order to satisfy more closely the assumptions of the linear regression model:</p>
+<p><span class="citation">Smith (<a href="#ref-election">2002</a>)</span> finds that transformations are required in order that the assumptions of the model are satisfied approximately. In particular he finds that using the response variable <span class="math inline">\(\sqrt{Y}\)</span> is better than using <span class="math inline">\(Y\)</span> itself (and better than other possible transformations). He also uses a <span class="math inline">\(\log_{10}\)</span> transformation on some of the explanatory variables (for example Total Population), that is, he uses <span class="math inline">\(\log_{10}(x)\)</span> rather than <span class="math inline">\(x\)</span>. Figure <a href="descriptive.html#fig:election2">2.16</a> is a new version of figure <a href="descriptive.html#fig:election1">2.15</a> in which the square root of the percentage of the vote obtained by Buchanan is plotted against the (possibly log-transformed) explanatory variables.</p>
+<p><span class="citation">Smith (<a href="#ref-election">2002</a>)</span> uses transformations of the original data in order to satisfy more closely the assumptions of the linear regression model:</p>
 <ul>
 <li>response = <span class="math inline">\(\sqrt{Y}\)</span>, instead of <span class="math inline">\(Y\)</span>;</li>
 <li>for some explanatory variables, use <span class="math inline">\(\log_{10}(x)\)</span> instead of <span class="math inline">\(x\)</span>.</li>
@@ -1280,8 +1276,8 @@ Figure 2.17: Plots to illustrate log-transformation of axes. Top: values of <spa
 <li>logs are often helpful when the raw data are ratios (e.g. <span class="math inline">\(x/y\)</span>) or products (e.g. <span class="math inline">\(xy\)</span>). For example, exchange rates and price indices are ratios. If <span class="math inline">\(x=y\)</span> then <span class="math inline">\(\log (x/y)=0\)</span>; if <span class="math inline">\(x=k\,y\)</span> then <span class="math inline">\(\log (x/y)=\log k\)</span>; if <span class="math inline">\(y=k\,x\)</span> then <span class="math inline">\(\log (x/y)=\log(1/k)=-\log k\)</span>; which is a nice symmetry.</li>
 </ul>
 <p>Imagine that the model has only one explanatory variable, Total Population. You can imagine fitting this linear regression model as drawing a line of best fit through the points on the graph in the top left hand corner of figure <a href="descriptive.html#fig:election2">2.16</a>. With more than one explanatory variable it is more complicated than this but the basic idea is the same.</p>
-<p>After removing the Buchanan vote in Palm Beach (which we have decided is an outlier) <span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> finds that the model fits the data well.</p>
-<p>The model predicts the Buchanan vote in Palm Beach to be 371, much lower than the official result of 3,407. This number (371) represents the `best guess’ at the Buchanan vote given the other data. To show just how unlikely was the vote of 3,407, <span class="citation">Smith (<a href="#ref-election" role="doc-biblioref">2002</a>)</span> calculates a 95% prediction interval of (219,534) for the Buchanan vote at Palm Beach. If the model is true, this interval has a probability of 95% of containing the true value of the Buchanan vote.</p>
+<p>After removing the Buchanan vote in Palm Beach (which we have decided is an outlier) <span class="citation">Smith (<a href="#ref-election">2002</a>)</span> finds that the model fits the data well.</p>
+<p>The model predicts the Buchanan vote in Palm Beach to be 371, much lower than the official result of 3,407. This number (371) represents the `best guess’ at the Buchanan vote given the other data. To show just how unlikely was the vote of 3,407, <span class="citation">Smith (<a href="#ref-election">2002</a>)</span> calculates a 95% prediction interval of (219,534) for the Buchanan vote at Palm Beach. If the model is true, this interval has a probability of 95% of containing the true value of the Buchanan vote.</p>
 <p>Smith’s analysis suggests that the true Buchanan vote should be approximately 3,000 votes lower than the official result. Given the design of the Butterfly Ballot it seems likely that most of these votes were intended for Al Gore. This would have given Gore the presidency instead of Bush.</p>
 </div>
 </div>
@@ -1322,7 +1318,7 @@ population Palm Beach would not appear as an outlier.</p>
 <p>If we wish to make use of simple assumptions like symmetry of distribution and/or linearity of relationship, but it is clear that the raw data do not support these assumption, then a legitimate approach is to consider whether the assumptions are satisfied better after we transform the data. We illustrate this idea in Sections <a href="descriptive.html#transsymmetry">2.8.1</a> and <a href="descriptive.html#straighten">2.8.2</a>.</p>
 <div id="transsymmetry" class="section level3 hasAnchor" number="2.8.1">
 <h3><span class="header-section-number">2.8.1</span> Transformation to approximate symmetry<a href="descriptive.html#transsymmetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The data in Table <a href="descriptive.html#tab:clouds">2.11</a> resulted from an experiment (<span class="citation">Simpson, Olsen, and Eden (<a href="#ref-clouds" role="doc-biblioref">1975</a>)</span>) to see whether spraying silver nitrate into a cloud (known as <strong>seeding</strong> the cloud)
+<p>The data in Table <a href="descriptive.html#tab:clouds">2.11</a> resulted from an experiment (<span class="citation">Simpson, Olsen, and Eden (<a href="#ref-clouds">1975</a>)</span>) to see whether spraying silver nitrate into a cloud (known as <strong>seeding</strong> the cloud)
 could make it produce more rainfall. 52 clouds were studied. 26 of the clouds were chosen at random and seeded with silver nitrate. The amounts of rainfall, in acre-feet, produced by each cloud is recorded. (An acre-foot is a unit of volume equal to 43,560 feet<span class="math inline">\(^3\)</span> or, approximately, 1233.5m<span class="math inline">\(^3\)</span>.)</p>
 <table class="huxtable" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 75%; margin-left: auto; margin-right: auto;  " id="tab:clouds">
 <caption style="caption-side: top; text-align: center;"><span id="tab:clouds">Table 2.11: </span> The rainfall, in acre-feet, from 52 clouds, 26 of which were chosen at random to be seeded with silver nitrate.</caption><col><col><col><col><tr>
@@ -1437,7 +1433,7 @@ Figure 2.26: Scatter plot of the square root of the percentage of the vote obtai
 </div>
 <p>Figure <a href="descriptive.html#fig:tukey">2.27</a> shows how Tukey and Mosteller’s bulging rule works in the four different bulging cases, considering the possibilities of transforming <span class="math inline">\(y\)</span> only, <span class="math inline">\(x\)</span> only or both <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span>. To use this figure first pick the curve that is relevant to the scatter plot in question. The expressions given at the ends of this curve are examples of the kind of transformations that you could try. The general forms of the indicated transformations are given in the caption to the figure.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:tukey"></span>
-<img src="images/tukey.png" alt="Summary of transformations, of the form $Y^{c_y}$ and/or $X^{c_x}$, to try. Bottom left: $c_y &lt; 1, c_x &lt; 1$. Top left: $c_y &gt; 1, c_x &lt; 1$.Top right: $c_y &gt; 1, c_x &gt; 1$.Bottom right: $c_y &lt; 1, c_x &gt; 1$." width="75%" />
+<img src="images/tukey.png" alt="Summary of transformations, of the form $Y^{c_y}$ and/or $X^{c_x}$, to try. Bottom left: $c_y < 1, c_x < 1$. Top left: $c_y > 1, c_x &lt; 1$.Top right: <span class="math inline">\(c_y &gt; 1, c_x &gt; 1\)</span>.Bottom right: <span class="math inline">\(c_y &lt; 1, c_x &gt; 1\)</span>.” width=“75%” /&gt;
 <p class="caption">
 Figure 2.27: Summary of transformations, of the form <span class="math inline">\(Y^{c_y}\)</span> and/or <span class="math inline">\(X^{c_x}\)</span>, to try. Bottom left: <span class="math inline">\(c_y &lt; 1, c_x &lt; 1\)</span>. Top left: <span class="math inline">\(c_y &gt; 1, c_x &lt; 1\)</span>.Top right: <span class="math inline">\(c_y &gt; 1, c_x &gt; 1\)</span>.Bottom right: <span class="math inline">\(c_y &lt; 1, c_x &gt; 1\)</span>.
 </p>
