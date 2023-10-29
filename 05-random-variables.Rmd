@@ -119,7 +119,7 @@ Notes
 * Indeed, it is possible for a p.d.f. to be greater than 1.  Consider a continuous random variable $X$ with p.d.f.
 \[ f_X(x) = \left\{ \begin{array}{ll} 2\,(1-x) & \,0 \leq x \leq 1, \\ 0 & \,\mbox{otherwise}.\end{array}\right. \]
 For this random variable $f_X(x)>1$ for any $x \in [0, 1/2)$ .
-* Since $P(X=x)=0$ 
+* Since, for any $x \in \mathbb{R}$, $P(X=x)=0$ 
 \[ P(a < X \leq b) = P(a \leq X \leq b) = P(a \leq X < b) = P(a < X < b). \]
 * $f_X(x)$ is a probability **density**.  The probability that $X$ lies in a very small interval of length $\delta$ near $x$ is approximately $f_X(x) \delta$.  For the p.d.f. at the bottom of figure \@ref(fig:oxcontvar), $f_T(6) > f_T(12)$, indicating that a randomly chosen woman is more likely to spend approximately 6 hours giving birth than approximately 
 12 hours.
