@@ -37,7 +37,7 @@ By defining $N$ to be the total number of damaged O-rings, we have moved from co
 
 $N$ is a **random variable**.  In fact, if we assume that O-rings are damaged independently of each other and each O-ring has the same probability $p$ of being damaged, $N$ is a random variable with a special name.  It is a binomial random variable with parameters 6 and $p$.  We will consider binomial random variables in more detail in Section \@ref(binomial).
 
-**Notation**. We denote random variables by upper case letters, for example, $N, X, Y, Z$.  Once we have observed the value of a random variable it is no longer random: it is equal to a particular value.  To make this clear we denote sample values of r.v.s. by lower case letters, for example, $n, x, y, z$ and write $N=n, X=x$ and so on.  Thus, $P(X=x)$ is the probability that the random variable $X$ has the value $x$.
+**Notation**. We denote random variables by upper case letters, for example, $N, X, Y, Z$.  Once we have observed the value of a random variable it is no longer random: it is equal to a particular numeric value.  To make this clear we denote sample values of r.v.s. by lower case letters, for example, $n, x, y, z$ and write $N=n, X=x$ and so on.  Thus, $P(X=x)$ is the probability that the random variable $X$ has the value $x$.
 
 ## Discrete random variables {#discrete}
 
