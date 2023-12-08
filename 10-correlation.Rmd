@@ -74,7 +74,7 @@ R = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
 {\sqrt{\displaystyle\sum_{i=1}^n (X_i-\bar{X})^2 \displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}} 
 = \frac{C_{XY}}{\sqrt{C_{XX}\,C_{YY}}}, 
 $$
-is an estimator of the correlation coefficient $\rho$.
+is an estimator of the correlation coefficient $\rho$. We use $r$ to denote a corresponding **estimate**.
 
 For the data in Figure \@ref(fig:exchangetrans) we get $r=0.82$.  This confirms the quite strong positive linear association apparent in the plot.  Why do these data give a value of $r$ which is positive? We consider contributions of individual data points to the numerator
 \[  C_{xy}=\displaystyle\sum_{i=1}^n (x_i-\bar{x})(y_i-\bar{y}) \]
