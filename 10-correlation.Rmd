@@ -95,13 +95,13 @@ Therefore, since $\sqrt{C_{xx}\,C_{yy}}>0$, and $C_{xy}$ is a sum of contributio
 
 Regression and correlation answer different questions.  However, in the case of simple linear regression there are simple links between them.  If we regress $Y$ on $x$ then
 
-1. the sample coefficient of determination $R^2$ ($R^2$ is just a name: this is not literally the square of a quantity $R$) is equal to $r^2$, the square of the sample correlation coefficient,
+1. the sample coefficient of determination $R\text{-squared}$ ($R\text{-squared}$ is just a name: this is not literally the square of a quantity $R$) is equal to $r^2$, the square of the sample correlation coefficient,
 2. the estimate of the regression slope $\beta$ is related to the sample correlation coefficient via
 \[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]
 
 These relationships make general sense. 
 
-* If $R^2$ is large then the linear regression of $Y$ on $x$ explains a lot of variability in the $Y$ data and so the correlation between $X$ and $Y$ must be strong.
+* If $R\text{-squared}$ is large then the linear regression of $Y$ on $x$ explains a lot of variability in the $Y$ data and so the correlation between $X$ and $Y$ must be strong.
 * The value of $\hat{\beta}$ and the value of $r$ have the same sign.
 
 ## Use and misuse of correlation

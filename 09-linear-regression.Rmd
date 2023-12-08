@@ -116,11 +116,11 @@ An estimate of $\sigma^2$ is important because it quantifies how much variabilit
 \[  \mbox{E}(\hat{\alpha})=\alpha, \quad  \mbox{E}(\hat{\beta})=\beta, \quad  \mbox{E}(\hat{\sigma}^2)=\sigma^2, \]
 that is, these estimators are unbiased for the parameters they are intended to estimate. It can also be shown that the least squares estimators $\hat{\alpha}$ and $\hat{\beta}$ have the smallest possible variances of all unbiased estimators of $\alpha$ and $\beta$ which are linear combinations of the response $Y_1,\ldots,Y_n$. 
 
-**Coefficient of determination.** We may wish to quantify how much of the variability in the responses $Y_1,\ldots,Y_n$ is explained by the values $x_1,\ldots,x_n$ of the explanatory variable. To do this we can compare the variance of the residuals $\{r_i\}$ with the variance of the original observations $\{Y_i\}$, producing the **coefficient of determination**, $R^2$, given by 
-\[ R^2 = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
+**Coefficient of determination.** We may wish to quantify how much of the variability in the responses $Y_1,\ldots,Y_n$ is explained by the values $x_1,\ldots,x_n$ of the explanatory variable. To do this we can compare the variance of the residuals $\{r_i\}$ with the variance of the original observations $\{Y_i\}$, producing the **coefficient of determination**, $R$-squared, given by 
+\[ R\text{-squared} = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
 = 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
 {\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
-where $0 \leq R^2 \leq 1$: $R^2=1$ indicates a perfect fit; $R^2=0$ indicates that none of the variability in $Y_1,\ldots,Y_n$ is explained by $x_1,\ldots,x_n$, producing a horizontal regression line ($\hat{\beta}=0$). The value of $R^2$, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in $Y$ that is explained by $x$.
+where $0 \leq R\text{-squared} \leq 1$. $R\text{-squared}$ is just a name: this is not literally the square of a quantity $R$. $R\text{-squared}=1$ indicates a perfect fit; $R\text{-squared}=0$ indicates that none of the variability in $Y_1,\ldots,Y_n$ is explained by $x_1,\ldots,x_n$, producing a horizontal regression line ($\hat{\beta}=0$). The value of $R\text{-squared}$, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in $Y$ that is explained by $x$.
 
 ### Least squares fitting to Hubble's data
 
