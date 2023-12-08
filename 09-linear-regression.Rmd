@@ -120,7 +120,7 @@ that is, these estimators are unbiased for the parameters they are intended to e
 \[ R\text{-squared} = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
 = 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
 {\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
-where $0 \leq R\text{-squared} \leq 1$. $R\text{-squared}$ is just a name: this is not literally the square of a quantity $R$. $R\text{-squared}=1$ indicates a perfect fit; $R\text{-squared}=0$ indicates that none of the variability in $Y_1,\ldots,Y_n$ is explained by $x_1,\ldots,x_n$, producing a horizontal regression line ($\hat{\beta}=0$). The value of $R\text{-squared}$, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in $Y$ that is explained by $x$.
+where $0 \leq R\text{-squared} \leq 1$. Think of $R\text{-squared}$ as a name, not literally as the square of a quantity $R$. $R\text{-squared}=1$ indicates a perfect fit; $R\text{-squared}=0$ indicates that none of the variability in $Y_1,\ldots,Y_n$ is explained by $x_1,\ldots,x_n$, producing a horizontal regression line ($\hat{\beta}=0$). The value of $R\text{-squared}$, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in $Y$ that is explained by $x$.
 
 ### Least squares fitting to Hubble's data
 

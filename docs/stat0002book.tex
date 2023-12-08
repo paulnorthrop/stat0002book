@@ -6523,7 +6523,7 @@ that is, these estimators are unbiased for the parameters they are intended to e
 \[ R\text{-squared} = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
 = 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
 {\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
-where \(0 \leq R\text{-squared} \leq 1\). \(R\text{-squared}\) is just a name: this is not literally the square of a quantity \(R\). \(R\text{-squared}=1\) indicates a perfect fit; \(R\text{-squared}=0\) indicates that none of the variability in \(Y_1,\ldots,Y_n\) is explained by \(x_1,\ldots,x_n\), producing a horizontal regression line (\(\hat{\beta}=0\)). The value of \(R\text{-squared}\), perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in \(Y\) that is explained by \(x\).
+where \(0 \leq R\text{-squared} \leq 1\). Think of \(R\text{-squared}\) as a name, not literally as the square of a quantity \(R\). \(R\text{-squared}=1\) indicates a perfect fit; \(R\text{-squared}=0\) indicates that none of the variability in \(Y_1,\ldots,Y_n\) is explained by \(x_1,\ldots,x_n\), producing a horizontal regression line (\(\hat{\beta}=0\)). The value of \(R\text{-squared}\), perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in \(Y\) that is explained by \(x\).
 
 \hypertarget{least-squares-fitting-to-hubbles-data}{%
 \subsection{Least squares fitting to Hubble's data}\label{least-squares-fitting-to-hubbles-data}}
@@ -7347,7 +7347,7 @@ R = \hat{\rho} = \frac{\displaystyle\sum_{i=1}^n (X_i-\bar{X})(Y_i-\bar{Y})}
 {\sqrt{\displaystyle\sum_{i=1}^n (X_i-\bar{X})^2 \displaystyle\sum_{i=1}^n(Y_i-\bar{Y})^2}} 
 = \frac{C_{XY}}{\sqrt{C_{XX}\,C_{YY}}}, 
 \]
-is an estimator of the correlation coefficient \(\rho\). We use \(r\) to denote a corresponding \textbf{estimate}.
+is an \textbf{estimator} of the correlation coefficient \(\rho\). We use \(r\) to denote a corresponding \textbf{estimate}.
 
 For the data in Figure \ref{fig:exchangetrans} we get \(r=0.82\). This confirms the quite strong positive linear association apparent in the plot. Why do these data give a value of \(r\) which is positive? We consider contributions of individual data points to the numerator
 \[  C_{xy}=\displaystyle\sum_{i=1}^n (x_i-\bar{x})(y_i-\bar{y}) \]
@@ -7386,7 +7386,7 @@ Regression and correlation answer different questions. However, in the case of s
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  the sample coefficient of determination \(R\text{-squared}\) (\(R\text{-squared}\) is just a name: this is not literally the square of a quantity \(R\)) is equal to \(r^2\), the square of the sample correlation coefficient,
+  the sample coefficient of determination \(R\text{-squared}\) is equal to \(r^2\), the square of the sample correlation coefficient,
 \item
   the estimate of the regression slope \(\beta\) is related to the sample correlation coefficient via
   \[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]
