@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 10 Correlation | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 10 Correlation | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2023-11-06" />
+<meta name="date" content="2023-12-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 <style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
@@ -492,13 +496,13 @@ of <span class="math inline">\(r\)</span>. Points in quadrant</p>
 <h3><span class="header-section-number">10.2.2</span> Links between regression and correlation<a href="correlationchapter.html#links-between-regression-and-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Regression and correlation answer different questions. However, in the case of simple linear regression there are simple links between them. If we regress <span class="math inline">\(Y\)</span> on <span class="math inline">\(x\)</span> then</p>
 <ol style="list-style-type: decimal">
-<li>the sample coefficient of determination <span class="math inline">\(R^2\)</span> (<span class="math inline">\(R^2\)</span> is just a name: this is not literally the square of a quantity <span class="math inline">\(R\)</span>) is equal to <span class="math inline">\(r^2\)</span>, the square of the sample correlation coefficient,</li>
+<li>the sample coefficient of determination <span class="math inline">\(R\text{-squared}\)</span> (<span class="math inline">\(R\text{-squared}\)</span> is just a name: this is not literally the square of a quantity <span class="math inline">\(R\)</span>) is equal to <span class="math inline">\(r^2\)</span>, the square of the sample correlation coefficient,</li>
 <li>the estimate of the regression slope <span class="math inline">\(\beta\)</span> is related to the sample correlation coefficient via
 <span class="math display">\[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]</span></li>
 </ol>
 <p>These relationships make general sense.</p>
 <ul>
-<li>If <span class="math inline">\(R^2\)</span> is large then the linear regression of <span class="math inline">\(Y\)</span> on <span class="math inline">\(x\)</span> explains a lot of variability in the <span class="math inline">\(Y\)</span> data and so the correlation between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> must be strong.</li>
+<li>If <span class="math inline">\(R\text{-squared}\)</span> is large then the linear regression of <span class="math inline">\(Y\)</span> on <span class="math inline">\(x\)</span> explains a lot of variability in the <span class="math inline">\(Y\)</span> data and so the correlation between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> must be strong.</li>
 <li>The value of <span class="math inline">\(\hat{\beta}\)</span> and the value of <span class="math inline">\(r\)</span> have the same sign.</li>
 </ul>
 </div>
