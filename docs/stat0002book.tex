@@ -156,7 +156,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Paul Northrop}
-\date{2023-11-06}
+\date{2023-12-08}
 
 \begin{document}
 \maketitle
@@ -6519,11 +6519,11 @@ An estimate of \(\sigma^2\) is important because it quantifies how much variabil
 \[  \mbox{E}(\hat{\alpha})=\alpha, \quad  \mbox{E}(\hat{\beta})=\beta, \quad  \mbox{E}(\hat{\sigma}^2)=\sigma^2, \]
 that is, these estimators are unbiased for the parameters they are intended to estimate. It can also be shown that the least squares estimators \(\hat{\alpha}\) and \(\hat{\beta}\) have the smallest possible variances of all unbiased estimators of \(\alpha\) and \(\beta\) which are linear combinations of the response \(Y_1,\ldots,Y_n\).
 
-\textbf{Coefficient of determination.} We may wish to quantify how much of the variability in the responses \(Y_1,\ldots,Y_n\) is explained by the values \(x_1,\ldots,x_n\) of the explanatory variable. To do this we can compare the variance of the residuals \(\{r_i\}\) with the variance of the original observations \(\{Y_i\}\), producing the \textbf{coefficient of determination}, \(R^2\), given by
-\[ R^2 = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
+\textbf{Coefficient of determination.} We may wish to quantify how much of the variability in the responses \(Y_1,\ldots,Y_n\) is explained by the values \(x_1,\ldots,x_n\) of the explanatory variable. To do this we can compare the variance of the residuals \(\{r_i\}\) with the variance of the original observations \(\{Y_i\}\), producing the \textbf{coefficient of determination}, \(R\)-squared, given by
+\[ R\text{-squared} = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
 = 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
 {\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
-where \(0 \leq R^2 \leq 1\): \(R^2=1\) indicates a perfect fit; \(R^2=0\) indicates that none of the variability in \(Y_1,\ldots,Y_n\) is explained by \(x_1,\ldots,x_n\), producing a horizontal regression line (\(\hat{\beta}=0\)). The value of \(R^2\), perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in \(Y\) that is explained by \(x\).
+where \(0 \leq R\text{-squared} \leq 1\). \(R\text{-squared}\) is just a name: this is not literally the square of a quantity \(R\). \(R\text{-squared}=1\) indicates a perfect fit; \(R\text{-squared}=0\) indicates that none of the variability in \(Y_1,\ldots,Y_n\) is explained by \(x_1,\ldots,x_n\), producing a horizontal regression line (\(\hat{\beta}=0\)). The value of \(R\text{-squared}\), perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in \(Y\) that is explained by \(x\).
 
 \hypertarget{least-squares-fitting-to-hubbles-data}{%
 \subsection{Least squares fitting to Hubble's data}\label{least-squares-fitting-to-hubbles-data}}
@@ -7386,7 +7386,7 @@ Regression and correlation answer different questions. However, in the case of s
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  the sample coefficient of determination \(R^2\) (\(R^2\) is just a name: this is not literally the square of a quantity \(R\)) is equal to \(r^2\), the square of the sample correlation coefficient,
+  the sample coefficient of determination \(R\text{-squared}\) (\(R\text{-squared}\) is just a name: this is not literally the square of a quantity \(R\)) is equal to \(r^2\), the square of the sample correlation coefficient,
 \item
   the estimate of the regression slope \(\beta\) is related to the sample correlation coefficient via
   \[ \hat{\beta} = r \,\sqrt{\frac{C_{yy}}{C_{xx}}}. \]
@@ -7397,7 +7397,7 @@ These relationships make general sense.
 \begin{itemize}
 \tightlist
 \item
-  If \(R^2\) is large then the linear regression of \(Y\) on \(x\) explains a lot of variability in the \(Y\) data and so the correlation between \(X\) and \(Y\) must be strong.
+  If \(R\text{-squared}\) is large then the linear regression of \(Y\) on \(x\) explains a lot of variability in the \(Y\) data and so the correlation between \(X\) and \(Y\) must be strong.
 \item
   The value of \(\hat{\beta}\) and the value of \(r\) have the same sign.
 \end{itemize}
