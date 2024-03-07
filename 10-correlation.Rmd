@@ -124,7 +124,7 @@ In Figure \@ref(fig:xdesigncorr) regression samples of size 10 have been taken f
 * on the right the values of $x$ are **chosen** to be $-0.1$ and $+0.1$. We get $r=-0.46$.
 
 ```{r echo=FALSE, xdesigncorr, fig.show='hold', fig.cap='Left: $x$-values chosen to be only -2 or 2.  Right: $x$-values chosen to be only -0.1 or 0.1.', out.width = '100%'}
-include_cropped_graphics("images/design_corr.png")
+include_cropped_graphics("images/design_corr2.PNG")
 ```
 
 The values chosen for $x$ have a huge effect on $r$. By choosing the values of $x$ to be spread far apart we can make $r$ as close to $+1$ as we wish. If the values of $x$ are chosen to be close together, $r$ will be quite variable, but close to zero on average.
