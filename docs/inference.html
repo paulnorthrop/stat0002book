@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2024-03-08" />
+<meta name="date" content="2024-04-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -327,7 +327,7 @@ div.csl-indent {
 <li class="chapter" data-level="7.6.3" data-path="inference.html"><a href="inference.html#mean-squared-error-mse"><i class="fa fa-check"></i><b>7.6.3</b> Mean squared error (MSE)</a></li>
 <li class="chapter" data-level="7.6.4" data-path="inference.html"><a href="inference.html#standard-error"><i class="fa fa-check"></i><b>7.6.4</b> Standard error</a></li>
 <li class="chapter" data-level="7.6.5" data-path="inference.html"><a href="inference.html#consistency"><i class="fa fa-check"></i><b>7.6.5</b> Consistency</a></li>
-<li class="chapter" data-level="7.6.6" data-path="inference.html"><a href="inference.html#normal-example"><i class="fa fa-check"></i><b>7.6.6</b> Normal example</a></li>
+<li class="chapter" data-level="7.6.6" data-path="inference.html"><a href="inference.html#normalexample"><i class="fa fa-check"></i><b>7.6.6</b> Normal example</a></li>
 </ul></li>
 <li class="chapter" data-level="7.7" data-path="inference.html"><a href="inference.html#assessing-goodness-of-fit"><i class="fa fa-check"></i><b>7.7</b> Assessing goodness-of-fit</a>
 <ul>
@@ -517,7 +517,7 @@ Figure 7.3: The sampling distribution of <span class="math inline">\(\hat{\mu}\)
 <li>the sampling distributions of <span class="math inline">\(\hat{\mu}\)</span> appear to be normal (in fact it can be shown that <span class="math inline">\(\hat{\mu}\)</span> is normally distributed with a mean of <span class="math inline">\(\mu\)</span> and a variance of <span class="math inline">\(\sigma^2/n\)</span>) with means close to 7.22 pounds;</li>
 <li>the sampling distribution of <span class="math inline">\(\hat{\sigma}^2\)</span> is positively skewed for small sample sizes but becomes more symmetric as the sample sizes increases.</li>
 </ul>
-<p>In practice we only have <strong>one</strong> dataset, providing <strong>one</strong> estimate. Recall (from the space shuttle example) that variability (variance) and uncertainty are closely related. Small variance results in small uncertainty: the estimate should not be far from the truth, whereas large variance results in large uncertainty: the estimate could be far from the truth.</p>
+<p>In practice we only have <strong>one</strong> dataset, providing <strong>one</strong> estimate. Recall (from the space shuttle example) that variability (variance) and uncertainty are closely related. Small variance results in small uncertainty, whereas large variance results in large uncertainty. As we will note in Section <a href="inference.html#normalexample">7.6.6</a>, the sampling distribution of each of these estimators, <span class="math inline">\(\hat{\mu}\)</span> and <span class="math inline">\(\hat{\sigma}^2\)</span>, is centred on their respective true value <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^2\)</span>, in the sense that <span class="math inline">\(\text{E}(\hat{\mu}) = \mu\)</span> and <span class="math inline">\(\text{E}(\hat{\sigma}^2) = \sigma^2\)</span>. If one of these estimators has a small variance then the estimate from a single dataset will tend not to be be far from the truth, but if it has a large variance then the estimate could be far from the truth.</p>
 </div>
 <div id="simexp" class="section level3 hasAnchor" number="7.5.3">
 <h3><span class="header-section-number">7.5.3</span> Simulation: estimating the parameters of an exponential distribution<a href="inference.html#simexp" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -592,8 +592,8 @@ for any <span class="math inline">\(\epsilon&gt;0\)</span> and for any possible 
 <p>For an estimator <span class="math inline">\(T\)</span> to be consistent it is <strong>necessary</strong> for the condition in equation <a href="inference.html#eq:consistency">(7.2)</a> to hold. However, in many cases it is easier to prove that <span class="math inline">\(T\)</span> is consistent for <span class="math inline">\(\theta\)</span> in a different way. If <span class="math inline">\(\mbox{MSE}(T) \rightarrow 0\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span> then it can be shown that the condition in equation <a href="inference.html#eq:consistency">(7.2)</a> holds, which provides a <strong>sufficient</strong> condition for <span class="math inline">\(T\)</span> to be consistent for <span class="math inline">\(\theta\)</span>. If we can find <span class="math inline">\(\mbox{MSE}(T)\)</span> and show that it tends to zero as <span class="math inline">\(n\)</span> tends to infinity then we have shown that <span class="math inline">\(T\)</span> is consistent for <span class="math inline">\(\theta\)</span>. Owing to equation <a href="inference.html#eq:mse">(7.1)</a>, we could, equivalently, show that <span class="math inline">\(\mbox{E}(T) \rightarrow \theta\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span> and <span class="math inline">\(\mbox{var}(T) \rightarrow 0\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span>. If <span class="math inline">\(\mbox{bias}(T) \rightarrow 0\)</span> as <span class="math inline">\(n \rightarrow \infty\)</span> then we say that <span class="math inline">\(T\)</span> is asymptotically unbiased for <span class="math inline">\(\theta\)</span>.</p>
 <p>Note that if <span class="math inline">\(\mbox{MSE}(T)\)</span> does not tend to zero as <span class="math inline">\(n\)</span> tends to infinity then this does <strong>not</strong> mean that <span class="math inline">\(T\)</span> is not consistent for <span class="math inline">\(\theta\)</span>. It just means that we need to use the condition in equation <a href="inference.html#eq:consistency">(7.2)</a> to establish whether or not <span class="math inline">\(T\)</span> is consistent. It is possible for <span class="math inline">\(T\)</span> to be consistent even thought <span class="math inline">\(\mbox{MSE}(T)\)</span> does not tend to zero as <span class="math inline">\(n\)</span> tends to infinity.</p>
 </div>
-<div id="normal-example" class="section level3 hasAnchor" number="7.6.6">
-<h3><span class="header-section-number">7.6.6</span> Normal example<a href="inference.html#normal-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="normalexample" class="section level3 hasAnchor" number="7.6.6">
+<h3><span class="header-section-number">7.6.6</span> Normal example<a href="inference.html#normalexample" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We return to our running example, which is based on a random sample</p>
 <p><span class="math display">\[X_1, \,\ldots,X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, N(\mu,\sigma^2),\]</span>
 where <span class="math inline">\(\sigma^2\)</span> is positive and finite. We defined the estimator <span class="math inline">\(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\)</span> of <span class="math inline">\(\mu\)</span>.</p>

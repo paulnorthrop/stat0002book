@@ -289,7 +289,7 @@ varianceofestimator
 mean-squared-error-mse
 standard-error
 consistency
-normal-example
+normalexample
 assessing-goodness-of-fit
 residuals
 standardised-residuals
