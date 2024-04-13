@@ -156,7 +156,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Paul Northrop}
-\date{2024-03-08}
+\date{2024-04-13}
 
 \begin{document}
 \maketitle
@@ -5600,7 +5600,7 @@ We can see that
   the sampling distribution of \(\hat{\sigma}^2\) is positively skewed for small sample sizes but becomes more symmetric as the sample sizes increases.
 \end{itemize}
 
-In practice we only have \textbf{one} dataset, providing \textbf{one} estimate. Recall (from the space shuttle example) that variability (variance) and uncertainty are closely related. Small variance results in small uncertainty: the estimate should not be far from the truth, whereas large variance results in large uncertainty: the estimate could be far from the truth.
+In practice we only have \textbf{one} dataset, providing \textbf{one} estimate. Recall (from the space shuttle example) that variability (variance) and uncertainty are closely related. Small variance results in small uncertainty, whereas large variance results in large uncertainty. As we will note in Section \ref{normalexample}, the sampling distribution of each of these estimators, \(\hat{\mu}\) and \(\hat{\sigma}^2\), is centred on their respective true value, \(\mu\) and \(\sigma^2\), in the sense that \(\text{E}(\hat{\mu}) = \mu\) and \(\text{E}(\hat{\sigma}^2) = \sigma^2\). If one of these estimators has a small variance then the estimate from a single dataset will tend not to be be far from the truth, but if it has a large variance then the estimate could be far from the truth.
 
 \hypertarget{simexp}{%
 \subsection{Simulation: estimating the parameters of an exponential distribution}\label{simexp}}
@@ -5701,8 +5701,8 @@ For an estimator \(T\) to be consistent it is \textbf{necessary} for the conditi
 
 Note that if \(\mbox{MSE}(T)\) does not tend to zero as \(n\) tends to infinity then this does \textbf{not} mean that \(T\) is not consistent for \(\theta\). It just means that we need to use the condition in equation \eqref{eq:consistency} to establish whether or not \(T\) is consistent. It is possible for \(T\) to be consistent even thought \(\mbox{MSE}(T)\) does not tend to zero as \(n\) tends to infinity.
 
-\hypertarget{normal-example}{%
-\subsection{Normal example}\label{normal-example}}
+\hypertarget{normalexample}{%
+\subsection{Normal example}\label{normalexample}}
 
 We return to our running example, which is based on a random sample
 
