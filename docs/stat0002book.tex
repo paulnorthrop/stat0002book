@@ -156,7 +156,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Paul Northrop}
-\date{2024-04-13}
+\date{2024-04-16}
 
 \begin{document}
 \maketitle
@@ -6484,8 +6484,8 @@ of \(Y\) is assumed to vary with the value of \(x\).
   Error variance: \(\sigma^2\). The variability of the response about the linear regression line (in the vertical direction).
 \end{itemize}
 
-\hypertarget{least-squares-estimation-of-alpha-and-beta}{%
-\subsection{\texorpdfstring{Least squares estimation of \(\alpha\) and \(\beta\)}{Least squares estimation of \textbackslash alpha and \textbackslash beta}}\label{least-squares-estimation-of-alpha-and-beta}}
+\hypertarget{olsestimators}{%
+\subsection{\texorpdfstring{Least squares estimation of \(\alpha\) and \(\beta\)}{Least squares estimation of \textbackslash alpha and \textbackslash beta}}\label{olsestimators}}
 
 Suppose that we have paired data \((x_1,y_1), \ldots, (x_n,y_n)\). How can we fit a simple linear regression model to these data? Initially, our aim is to use estimators \(\hat{\alpha}\) and \(\hat{\beta}\) of \(\alpha\) and \(\beta\) to produce an estimated regression line
 \[ y= \hat{\alpha}+\hat{\beta}\,x. \]
@@ -6743,7 +6743,7 @@ This is beyond the scope of STAT0002. You will study this in STAT0006.
 \def\labelenumi{\alph{enumi}.}
 \setcounter{enumi}{4}
 \item
-  The assumption of linearity is reasonable but the variability in \(Y\) increases as \(x\) increases. A transformation of \(Y\) may be able to make the variability of \(Y\) approximately constant, but it would produce a non-linear relationship. (Transforming both \(Y\) and \(x\) might work.) However, even though the assumption of constant error variance is not reasonable, the least squares estimates of a simple linear regression are sensible (unbiased). However, it is better to use something called \textbf{weighted least squares} estimation (this is beyond the scope
+  The assumption of linearity is reasonable but the variability in \(Y\) increases as \(x\) increases. A transformation of \(Y\) may be able to make the variability of \(Y\) approximately constant, but it would produce a non-linear relationship. (Transforming both \(Y\) and \(x\) might work.) Even though the assumption of constant error variance is not reasonable, the least squares estimators in Section \ref{olsestimators} are sensible (unbiased). However, it is better to use something called \textbf{weighted least squares} estimation (this is beyond the scope
   of STAT0002).
 \item
   The assumption of linearity is reasonable but the variability in \(Y\) is small for extreme (small or large) values of \(x\) and large for middling values of \(x\). The comments made in (e) also apply here.
