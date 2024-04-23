@@ -754,7 +754,7 @@ Figure \@ref(fig:cloudboxlog) shows separate boxplots of the rainfall amounts fr
 include_cropped_graphics("images/cloud_box.png")
 ```
 
-It is clear from the shape of these plots that the data are positively skewed. Also, the sample means are much greater than their corresponding sample medians. Measurements of (positive) environmental quantities are often positive skew.  In addition, the rainfall values from the seeded clouds have a both higher location and a higher spread than the values from the unseeded clouds. After a log transformation (see \@ref(fig:cloudboxlog)), the data are closer to being approximately symmetric. The sample means are closer to their corresponding sample medians. In addition the log transformation makes the variances of the rainfall values in the two groups more nearly equal.
+It is clear from the shape of these plots that the data are positively skewed. Also, the sample means are much greater than their corresponding sample medians. Measurements of (positive) environmental quantities are often positive skew.  In addition, the rainfall values from the seeded clouds have a both higher location and a higher spread than the values from the unseeded clouds. After a log transformation (see Figure \@ref(fig:cloudboxlog)), the data are closer to being approximately symmetric. The sample means are closer to their corresponding sample medians. In addition the log transformation makes the variances of the rainfall values in the two groups more nearly equal.
 
 ```{r echo=FALSE, cloudboxlog, fig.show='hold', fig.cap='Boxplots of rainfall in acre-feet for seeded and unseeded clouds after a $\\log_{10}$ transformation has been applied.  Sample means are mared with a cross.'}
 include_cropped_graphics("images/cloud_box_log.png")
