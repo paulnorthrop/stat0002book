@@ -1,12 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2023)
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: stat0002book.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: book.bib
 Database file #2: packages.bib
 You've used 7 entries,
             1935 wiz_defined-function locations,
-            529 strings with 5238 characters,
+            528 strings with 5226 characters,
 and the built_in function-call counts, 3140 in all, are:
 = -- 297
 > -- 153

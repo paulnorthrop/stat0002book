@@ -144,7 +144,7 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -156,7 +156,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Paul Northrop}
-\date{2024-04-23}
+\date{2024-09-22}
 
 \begin{document}
 \maketitle
@@ -165,8 +165,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{the-purpose-of-these-notes}{%
-\chapter*{The purpose of these notes}\label{the-purpose-of-these-notes}}
+\chapter*{The purpose of these notes}\label{the-purpose-of-these-notes}
 \addcontentsline{toc}{chapter}{The purpose of these notes}
 
 These notes functions as a textbook for the material covered in STAT0002. The teaching events in STAT0002 will follow the general order of the topics covered in these notes. Chapters 1 and 2 are covered over Weeks 1 and 2 and from then on we will cover one chapter per teaching week. There will be a section on Moodle dedicated to each week of term.
@@ -191,13 +190,11 @@ See the following sections STAT0002 Moodle page for important information:
   \textbf{Past exams}: (from Week 7) past exam papers and information about exams.
 \end{itemize}
 
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\chapter{Introduction}\label{introduction}
 
 We will introduce core ideas in Probability and Statistics. These ideas will be introduced informally and the mathematical level will be kept as elementary as possible. Examples of real investigations will be used to motivate discussion of the ideas and to illustrate simple statistical methods. In the course STAT0003 the material in STAT0002 will be revisited in a more formal way and more advanced concepts and methods will be introduced.
 
-\hypertarget{real}{%
-\section{Real statistical investigations}\label{real}}
+\section{Real statistical investigations}\label{real}
 
 We will spend some lecture time looking at examples of real investigations. Most of these are real investigations that have been described in real research papers. The first of these is introduced in Section \ref{shuttle}. We will also use some much simpler teaching examples to illustrate statistical ideas and methods. However, teaching examples can give the impression that all statistical analyses are straightforward. In practice they are not.
 
@@ -215,8 +212,7 @@ dire consequences.
 
 Many of the real-life problems we will consider required quite complicated data analyses reported in long research papers. I have summarised and simplified the details where necessary so that they are easier to understand. However, the main ideas and findings are unchanged. Some examples contain concepts and words which we will not define until later in STAT0002 or STAT0003. However, their meaning should be clear from the context of the problem. I hope that these investigations will convince you of the importance of the subject of Statistics.
 
-\hypertarget{shuttle}{%
-\section{Challenger Space Shuttle Catastrophe}\label{shuttle}}
+\section{Challenger Space Shuttle Catastrophe}\label{shuttle}
 
 Dalal, S. R., Fowlkes, E. B. and Hoadley, B. (1989) Risk analysis of the space shuttle: Pre-Challenger prediction of failure. \emph{J. Amer. Statist. Assoc.} \textbf{84}(408), 945--957.
 
@@ -345,8 +341,7 @@ of O-rings showing thermal distress (number of O-rings showing distress divided 
 \caption{Proportion of O-rings showing some thermal distress plotted against temperature, with fitted logistic curve.  The fitted curve reflects the apparent negative association between this proportion and temperature.}\label{fig:shuttle3}
 \end{figure}
 
-\hypertarget{uncertainty}{%
-\subsection{Uncertainty}\label{uncertainty}}
+\subsection{Uncertainty}\label{uncertainty}
 
 Suppose there is a true curve, of the same general type as the one in Figure \ref{fig:shuttle3}, which describes how the probability that an O-ring is damaged depends on temperature. We use the NASA test flight data to guess, or \textbf{estimate} the exact shape of this true curve. The curve in figure \ref{fig:shuttle3} is \textbf{not} the true curve, it is an \textbf{estimate} of the true curve based on these data.
 
@@ -425,8 +420,7 @@ To show the effect of sample size (the size of the dataset) we simulate datasets
 \caption{50 curves fitted to simulated shuttle test flight datasets that are each 100 times the size of the real dataset. In comparision to the curves based on the real dataset these curves vary much less, but are still most variable for low temperatures.}\label{fig:shuttlesimcurves100}
 \end{figure}
 
-\hypertarget{a-very-brief-introduction-to-stochastic-simulation}{%
-\section{A very brief introduction to stochastic simulation}\label{a-very-brief-introduction-to-stochastic-simulation}}
+\section{A very brief introduction to stochastic simulation}\label{a-very-brief-introduction-to-stochastic-simulation}
 
 This section contains words that we will not define until later in the course. Further information about stochastic simulation is available from the Stochastic Simulation section of the STAT0002 Moodle page.
 
@@ -464,8 +458,7 @@ To simulate a fake space shuttle dataset we do the following for each of the 23 
 
 We have assumed that the 6 O-rings have the same probability of becoming distressed and are distressed independently of each other. In Chapter \ref{rvs} we will see that \(y\) is a value simulated from a binomial(6, \(p\)) distribution. We will use simulation several times in STAT0002 to study properties of statistical methods. All you need to know is that we can use a computer to produce fake data that look like they come from a certain probability distribution.
 
-\hypertarget{descriptive}{%
-\chapter{Descriptive statistics}\label{descriptive}}
+\chapter{Descriptive statistics}\label{descriptive}
 
 The first important step in any data analysis is to \textbf{describe} the
 available data. This is often called an \textbf{exploratory} or \textbf{initial} data analysis. It is normally not possible to just look at the dataset, especially if it is large, and just see any interesting structures. The task of a statistician is therefore to \textbf{extract} and \textbf{condense} the relevant information -- what is relevant will depend on the aim of the analysis. Some of the standard methods to do so are addressed in the next sections. Despite all the technicalities, always remember that the numbers / figures / plots produced for data must be \textbf{interpreted with regard to the problem or question at hand}, that is, always ask yourself ``what does this number / plot mean?''.
@@ -491,13 +484,11 @@ Before embarking on a formal statistical analysis of the data we should look at 
 In some cases the data summaries make it very clear what is going on and may
 make more formal methods of statistical analysis unnecessary.
 
-\hypertarget{types-of-data}{%
-\section{Types of data}\label{types-of-data}}
+\section{Types of data}\label{types-of-data}
 
 Before analysing data it is important to consider what \textbf{type} they are. This will affect which statistics it is sensible to calculate, which graphs it is sensible to plot and which of the simple distributions we will study in Chapter \ref{simple} might be used for these data.
 
-\hypertarget{qualitative-or-categorical-data}{%
-\subsection{Qualitative or categorical data}\label{qualitative-or-categorical-data}}
+\subsection{Qualitative or categorical data}\label{qualitative-or-categorical-data}
 
 Items are assigned to \textbf{groups} or \textbf{categories} based on some \textbf{qualitative} property. Examples:
 
@@ -532,8 +523,7 @@ Nominal data: describe by (relative) frequencies. It is sensible to quote the mo
 
 Ordinal data: It is sensible to quote the mode or median, but not the mean.
 
-\hypertarget{quantitative-or-numerical-data}{%
-\subsection{Quantitative or numerical data}\label{quantitative-or-numerical-data}}
+\subsection{Quantitative or numerical data}\label{quantitative-or-numerical-data}
 
 Items are measured in some way based on some \textbf{quantitative} property. This produces a one, or more, \textbf{numbers}. Examples:
 
@@ -566,8 +556,7 @@ Numerical data can be classified as either
 
 Often discrete data are \textbf{counts}. Continuous data usually come from measurement. In practice continuous data are recorded discretely, e.g.~to two decimal places.
 
-\hypertarget{interval-data-and-ratio-data}{%
-\subsubsection*{Interval data and ratio data}\label{interval-data-and-ratio-data}}
+\subsubsection*{Interval data and ratio data}\label{interval-data-and-ratio-data}
 \addcontentsline{toc}{subsubsection}{Interval data and ratio data}
 
 Quantitative data can be further classified as \textbf{interval} or \textbf{ratio}. Both interval data and ratio data have the property that an increase of 1 unit means the same whether it is from, say, 1 to 2 or from 10 to 11. However,
@@ -591,8 +580,7 @@ Ratios are only meaningful on a ratio scale. For example,
   Income: A zero income does exist. A person whose take-home income is \pounds 20,000 does earn twice as much as some whose take-home income is \pounds 10,000.Therefore, incomes are ratio data.
 \end{itemize}
 
-\hypertarget{describing-distributions}{%
-\section{Describing distributions}\label{describing-distributions}}
+\section{Describing distributions}\label{describing-distributions}
 
 In describing the distribution of one variable the following it is important to
 examine the following.
@@ -624,8 +612,7 @@ examine the following.
 
 We will look at 3 ways basic tools which are used to describe and summarise data: summary statistics, tables and graphs. We can use a combination of these. For example summary statistics may be presented in a table or a graph. Carefully produced graphs are often the best way to describe, explore and summarise a set of data. Summary statistics reduce the data to a small set of numbers. Tables can retain more information but do not work well for datasets which are large or have many variables. In contrast graphs can show most, if not all, the information in the data and reveal complex relationships.
 
-\hypertarget{example-oxford-births-data}{%
-\subsection*{Example: Oxford births data}\label{example-oxford-births-data}}
+\subsection*{Example: Oxford births data}\label{example-oxford-births-data}
 \addcontentsline{toc}{subsection}{Example: Oxford births data}
 
 Table \ref{tab:taboxbirths} shows the times (in hours) spent by 95 women giving birth in the delivery suite of the John Radcliffe Hospital in Oxford during 1 week. These are ratio data. At first we ignore the fact that the data are recorded on different days.
@@ -662,13 +649,11 @@ day1 & day2 & day3 & day4 & day5 & day6 & day7\\
 \end{tabular}
 \end{table}
 
-\hypertarget{summary-statistics}{%
-\section{Summary statistics}\label{summary-statistics}}
+\section{Summary statistics}\label{summary-statistics}
 
 One way to summarise a dataset is to calculate numerical summaries called \textbf{summary statistics}. Summary statistics can be used as indicators of the location, spread and shape of the data (although looking at a plot can be more helpful).
 
-\hypertarget{fivenumber}{%
-\subsection{Five number summary}\label{fivenumber}}
+\subsection{Five number summary}\label{fivenumber}
 
 A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary. As we will see later, the five number summary involves quantities called \textbf{sample quantiles}. These are estimates of theoretical quantities that we will study in Chapter \ref{rvs}. There is more than one way to calculate sample quantiles. For example, the R statistical package has 9 options in its \texttt{quantile()} function. The particular method given below is just one of these options.
 
@@ -709,8 +694,7 @@ number of times an event of interest occurs in a fixed period of time,
 for example, the number of births in the delivery suite of the John Radcliffe
 hospital in Oxford during one week.
 
-\hypertarget{meanstdev}{%
-\subsection{Mean and standard deviation}\label{meanstdev}}
+\subsection{Mean and standard deviation}\label{meanstdev}
 
 The most well known descriptive measures of \textbf{numerical} data are the (arithmetic) mean and the standard deviation.
 
@@ -738,13 +722,11 @@ For data that are very skewed, or contain outliers, the sample median may be a m
 
 We will examine this in more detail in Section \ref{good}. Similarly, for a measure of spread, the sample standard deviation may be preferred for approximately symmetric data with no outliers, otherwise the IQR is preferable.
 
-\hypertarget{mode}{%
-\subsection{Mode}\label{mode}}
+\subsection{Mode}\label{mode}
 
 For categorical data or discrete data the mode is the value (or values) which occurs most often. The concept of a mode is relevant to continuous data, but it is less obvious how we might estimate this using data. We return to this in Section \ref{locations}. The mode is a measure of location.
 
-\hypertarget{examples}{%
-\subsubsection*{Examples}\label{examples}}
+\subsubsection*{Examples}\label{examples}
 \addcontentsline{toc}{subsubsection}{Examples}
 
 What are the sample mean, median and mode of the following data?
@@ -784,8 +766,7 @@ ordinal & & & \\
 numerical & & & \\
 \end{longtable}
 
-\hypertarget{symmetry}{%
-\subsection{Symmetry}\label{symmetry}}
+\subsection{Symmetry}\label{symmetry}
 
 Many standard statistical methods work best when the data are distributed symmetrically. Looking at a graph is the best way to examine whether this is true. Some books/websites suggest comparing the values of the sample mean and sample median as a way to judge whether the data are approximately symmetric, as summarised in Table \ref{tab:thumb}. However, we will see that this rule-of-thumb can be \textbf{very misleading}.
 
@@ -804,8 +785,7 @@ mean \(<\) median & mean = median & mean \(>\) median & \\
 negative skew & symmetric & positive skew & \\
 \end{longtable}
 
-\hypertarget{example.-oxford-births-data}{%
-\subsubsection*{Example. Oxford births data}\label{example.-oxford-births-data}}
+\subsubsection*{Example. Oxford births data}\label{example.-oxford-births-data}
 \addcontentsline{toc}{subsubsection}{Example. Oxford births data}
 
 Table \ref{tab:oxfivenum} gives the five-number summary of the Oxford birth times data.
@@ -827,8 +807,7 @@ Table \ref{tab:oxfivenum} gives the five-number summary of the Oxford birth time
 
 Half of the women took between approximately 5 and 10 hours to give birth.The quickest delivery was 90 minutes and the longest 19 hours. The mean \(\bar{x}\) is 7.72 hours and the standard deviation is 3.57 hours. The fact that sample mean \(>\) sample median suggest that the data are slightly positively skewed, but this is something that we should confirm by looking at a suitable graph (see Section \ref{graphs}).
 
-\hypertarget{measures-of-skewness}{%
-\subsubsection*{Measures of skewness}\label{measures-of-skewness}}
+\subsubsection*{Measures of skewness}\label{measures-of-skewness}
 \addcontentsline{toc}{subsubsection}{Measures of skewness}
 
 Usually the best way to examine the shape of a distribution is to look at a graph see section \ref{graphs}. In addition we could calculate summary measures of skewness, such as: the \textbf{standardized sample skewness}
@@ -862,8 +841,7 @@ mean & standard deviation or variance & skewness \\
 mode & & \\
 \end{longtable}
 
-\hypertarget{corr1}{%
-\subsection{Correlation}\label{corr1}}
+\subsection{Correlation}\label{corr1}
 
 Measures of correlation aim to summarise the strength of the relationship between two variables. Suppose that we have two samples \(x_1,\ldots,x_n\) and \(y_1,\ldots,y_n\) of \textbf{paired} data. For example, \(x_1\) and \(y_1\) could be the height and weight of person 1, \(x_2\) and \(y_2\) the height and weight of person 2, etc.
 
@@ -885,8 +863,7 @@ where \(d_i=r^x_i-r^y_i\) is the difference in the ranks of \(x_i\) and \(y_i\).
 The choice between using \(r\) or \(r_S\) as a measure of correlation is similar to the choice between using the sample mean or the sample median as a measure of location. In particular, \(r_S\) is less sensitive to outliers than \(r\).\\
 We have noted that \(r\) measures the strength of \textbf{linear} association between two variables. In contrast \(r_S\) is a measure of how close the relationship between the variables is to being \textbf{monotone}, i.e.~either increasing or decreasing but not necessarily linear. If \(r_S=1\) then the data have a perfect monotone increasing relationship. If \(r_S=-1\) then the data have a perfect monotone decreasing relationship.
 
-\hypertarget{a-simple-example}{%
-\subsubsection*{A simple example}\label{a-simple-example}}
+\subsubsection*{A simple example}\label{a-simple-example}
 \addcontentsline{toc}{subsubsection}{A simple example}
 
 Consider the small dataset in Table \ref{tab:smalldata}.
@@ -913,13 +890,11 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 
 \textbf{Exercise}. Show that for these data \(r=0.70\) and \(r_S=0.94\). Can you explain why \(r_S>r\)? Looking at a scatter plot of \(y\) against \(x\) will help you see why.
 
-\hypertarget{tables}{%
-\section{Tables}\label{tables}}
+\section{Tables}\label{tables}
 
 We saw in the Space shuttle investigation (Section \ref{shuttle}) that data can be presented in a table. We also saw that a graph can be a better way to see relationships and patterns in the data. In this section we look at a table which summarises the distribution of a set of data on one variable. We also look at a graph based on this table.
 
-\hypertarget{frequency-distribution}{%
-\subsection{Frequency distribution}\label{frequency-distribution}}
+\subsection{Frequency distribution}\label{frequency-distribution}
 
 A \textbf{frequency distribution} is a tabular summary of a set of data that shows the number of items in each of several non-overlapping classes. To construct a frequency distribution for a sample we need to choose:
 
@@ -1081,14 +1056,12 @@ The first and second columns of Table \ref{tab:oxfreq} show the frequency distri
 \end{table}
  
 
-\hypertarget{relative-frequency-distribution}{%
-\subsubsection*{Relative frequency distribution}\label{relative-frequency-distribution}}
+\subsubsection*{Relative frequency distribution}\label{relative-frequency-distribution}
 \addcontentsline{toc}{subsubsection}{Relative frequency distribution}
 
 Column 3 of Table \ref{tab:oxfreq} contains the \textbf{proportion} or \textbf{relative frequency} of observations in each class. Column 3 is calculated by dividing column 2 (the frequencies) by the total frequency (95 in this example). This produces the \textbf{relative frequency distribution} of the data. Column 3 shows that, for example, 15\% of the women took between 2 and 4 hours to give birth. A graphical display of the relative frequency distribution of a set of data is provided by a \textbf{histogram} (see Section \ref{histogram}).
 
-\hypertarget{cumulative-distribution}{%
-\subsubsection*{Cumulative distribution}\label{cumulative-distribution}}
+\subsubsection*{Cumulative distribution}\label{cumulative-distribution}
 \addcontentsline{toc}{subsubsection}{Cumulative distribution}
 
 Column 4 of Table \ref{tab:oxfreq} contains the total number of observations with values less than or equal to the upper limit of each class. This is the \textbf{cumulative frequency}. We can see that 73 of the women took no longer than 10 hours to give birth. Column 5 contains the proportion of observations with values less than the upper limit of each class. This is the \textbf{cumulative relative frequency}. It is calculated by dividing column 4 by 95. We can see that approximately 77\% of the women took no longer than 10 hours to give birth. It can be helpful to display the cumulative relative frequencies in a graph as in Figure \ref{fig:oxcumfreq}.
@@ -1232,8 +1205,7 @@ Figure \ref{fig:oxcumfreq2} shows the resulting graph. Notice that the shape is 
 
 Sometimes data are given to us in the form of Table \ref{tab:oxfreq} and the individual data values are not available. For example, some birth data published by the Office of National Statistics data give mother's age in 5 year age bands. Data provided in this form are called \textbf{grouped data}. We will analyse data from tables in Chapter \ref{contingency}.
 
-\hypertarget{graphs}{%
-\section{Graphs (1 variable)}\label{graphs}}
+\section{Graphs (1 variable)}\label{graphs}
 
 These days it is very easy to plot a graph using a computer. However, \textbf{you} need to decide which type of graph is appropriate and the default graph produced by the computer may not be very good. Some general rules:
 
@@ -1250,8 +1222,7 @@ These days it is very easy to plot a graph using a computer. However, \textbf{yo
   Axis labels (remember the units!), the legend and caption should enable the viewer of the graph to understand the content of the graph.
 \end{itemize}
 
-\hypertarget{histogram}{%
-\subsection{Histograms}\label{histogram}}
+\subsection{Histograms}\label{histogram}
 
 A \textbf{histogram} is a graphical display based on the relative frequency distribution of a set of data on a \textbf{continuous} variable. The variable of interest is plotted on the \(x\)-axis, which is divided into \textbf{bins} based on the classes of the frequency distribution. A rectangle is plotted for each bin. The height of a rectangle is calculated as
 \begin{equation}
@@ -1288,8 +1259,7 @@ If the bin widths are equal the shape of frequency plot is the same as the corre
 A histogram can be useful to look at the shape of a distribution. However,
 especially for a small dataset, the shape of the histogram can depend greatly on the classes chosen to define the bins. Figure \ref{fig:oxhistbasic} contains histograms and frequency histograms of the all the times in Table \ref{tab:taboxbirths}. From the histograms we can easily see that the birth times data are slightly positively skewed.
 
-\hypertarget{stem}{%
-\subsection{Stem-and-leaf plots}\label{stem}}
+\subsection{Stem-and-leaf plots}\label{stem}
 
 A \textbf{stem-and-leaf plot} (or stem plot) is like an enhanced histogram. The \textbf{stem}, on the left, contain the times in whole hours. The \textbf{leaves},
 on the right, contain the first digit after the decimal point. An advantage of a stem-and-leaf plot is that it gives the entire dataset (perhaps rounded) in sorted order. It is easy to calculate the five number summary of the data from a stem-and-leaf plot. Figure \ref{fig:oxstem} shows a stem-and-leaf plot of the Oxford births data.
@@ -1303,8 +1273,7 @@ on the right, contain the first digit after the decimal point. An advantage of a
 \caption{Stem-and-leaf plot of the Oxford birth times. The decimal point is at the vertical line |. The data are rounded to the nearest 0.1 before plotting.}\label{fig:oxstem}
 \end{figure}
 
-\hypertarget{dotplots}{%
-\subsection{Dotplots}\label{dotplots}}
+\subsection{Dotplots}\label{dotplots}
 
 Dotplots are simple plots in which each observation is represented by a dot. If there are repeated observations, that is, observations with the same value (perhaps after rounding), then their dots are stacked on top of each other. Figure \ref{fig:oxdotbasic} shows two dotplots. In the right hand plot the data were rounded to the nearest hour, producing a plot that looks a bit like a histogram with a bin width of 1 hour, with rectangles replaced by vertical lines of dots.
 
@@ -1317,8 +1286,7 @@ Dotplots are simple plots in which each observation is represented by a dot. If 
 \caption{Dotplots of the Oxford birth times. Top: raw data (and lots of wasted white space).  Bottom: data rounded to the nearest hour.}\label{fig:oxdotbasic}
 \end{figure}
 
-\hypertarget{boxplots}{%
-\subsection{Boxplots}\label{boxplots}}
+\subsection{Boxplots}\label{boxplots}
 
 A \textbf{boxplot} (or box-and-whisker plot) is a graphical display containing the five-number summary. It also provides ways to assess the overall shape of the data. Figure \ref{fig:oxdotbasic} explains how a standard boxplot is constructed.
 
@@ -1347,13 +1315,11 @@ Some alternatives are given in Figure \ref{fig:oxboxadv}. Which do you prefer?
 \caption{Alternative plots of the Oxford birth times based on the five-figure summary.}\label{fig:oxboxadv}
 \end{figure}
 
-\hypertarget{barplots}{%
-\subsection{Barplots}\label{barplots}}
+\subsection{Barplots}\label{barplots}
 
 A \textbf{barplot} (or bar chart) has a similar appearance to a histogram but is used for numerical discrete data or categorical data. Therefore there are gaps between the bars in a barplot.
 
-\hypertarget{example-numerical-discrete-data}{%
-\subsubsection*{Example: numerical discrete data}\label{example-numerical-discrete-data}}
+\subsubsection*{Example: numerical discrete data}\label{example-numerical-discrete-data}
 \addcontentsline{toc}{subsubsection}{Example: numerical discrete data}
 
 Table \ref{tab:shuttlenew} shows the frequencies of the number of damaged O-rings in the space shuttle example. Figure \ref{fig:shuttlebarplots} shows barplots (or equivalent) of these data. Which do you prefer?
@@ -1379,8 +1345,7 @@ frequency & 16 & 5 & 1 & 1\\
 \caption{Barplots of numbers of damaged O-rings on space shuttle flights.}\label{fig:shuttlebarplots}
 \end{figure}
 
-\hypertarget{example-categorical-data}{%
-\subsubsection*{Example: categorical data}\label{example-categorical-data}}
+\subsubsection*{Example: categorical data}\label{example-categorical-data}
 \addcontentsline{toc}{subsubsection}{Example: categorical data}
 
 Table \ref{tab:ABOnew} shows the percentages of people in the UK with the 8 main blood groups O\(+\), A\(+\), B\(+\), AB\(+\), O\(-\), A\(-\), B\(-\) and AB\(-\). See section \ref{bloodindep} for more details about blood groups. These data are nominal.
@@ -1482,8 +1447,7 @@ Figure \ref{fig:ABObar} displays these percentages in the form of a barplot. \re
 \caption{Pie chart (right) of the UK ABO blood group percentages.}\label{fig:ABOpie}
 \end{figure}
 
-\hypertarget{times-series-plots}{%
-\subsection{Times series plots}\label{times-series-plots}}
+\subsection{Times series plots}\label{times-series-plots}
 
 The top plot of Figure \ref{fig:ftsenew} shows a \textbf{time series plot} (or time plot) of the weekly closing prices of the FTSE 100 share index from 2nd April 1984 to 13th August 2007. The bottom plot in this figure shows a different version of the same plot.
 
@@ -1520,8 +1484,7 @@ Figure \ref{fig:fluts} shows a time series plot of another set of data. Can you 
 \caption{A time series plot of ?.}\label{fig:fluts}
 \end{figure}
 
-\hypertarget{election}{%
-\section{2000 US presidential election}\label{election}}
+\section{2000 US presidential election}\label{election}
 
 Smith, R. L. (2002) \href{https://doi.org/10.1214/ss/1049993203}{A Statistical Assessment of Buchanan's Vote in Palm Beach County}. \emph{Statistcal Science}, \textbf{17}(4), 441--457.
 
@@ -1615,8 +1578,7 @@ We will study simple linear regression models (with only one explanatory variabl
 \caption{The square root of the percentage of Buchanan votes against explanatory variables.  Palm Beach County is marked with a cross.  Note the log scale on the $x$-axis of some plots.}\label{fig:election2}
 \end{figure}
 
-\hypertarget{log-scales-on-axes}{%
-\subsubsection*{Log scales on axes}\label{log-scales-on-axes}}
+\subsubsection*{Log scales on axes}\label{log-scales-on-axes}
 \addcontentsline{toc}{subsubsection}{Log scales on axes}
 
 Suppose that we produce a scatter plot where the data on the \(x\)-axis are 0.1, 1, 10, 100 and 1000. If we wish to plot \(\log_{10}(x)\) on the axis instead of \(x\) we have two choices:
@@ -1662,13 +1624,11 @@ The model predicts the Buchanan vote in Palm Beach to be 371, much lower than th
 
 Smith's analysis suggests that the true Buchanan vote should be approximately 3,000 votes lower than the official result. Given the design of the Butterfly Ballot it seems likely that most of these votes were intended for Al Gore. This would have given Gore the presidency instead of Bush.
 
-\hypertarget{graphs2}{%
-\section{Graphs (2 variables)}\label{graphs2}}
+\section{Graphs (2 variables)}\label{graphs2}
 
 When we have 2 continuous variables it is common to examine the relationship between them using a \textbf{scatter plot}.
 
-\hypertarget{scatter-plots}{%
-\subsection{Scatter plots}\label{scatter-plots}}
+\subsection{Scatter plots}\label{scatter-plots}
 
 We have already seen some scatter plots in the 2000 US Presidential Election example. We reproduce two of these plots in Figures \ref{fig:scatter1a} and \ref{fig:scatter1b}. A scatter plot is used to examine the relationship between two variables. We need the data to occur in pairs. In Figures \ref{fig:scatter1a} and \ref{fig:scatter1b} each county has a pair of observations: the percentage of votes for Buchanan and the value of the explanatory variable.
 
@@ -1709,15 +1669,13 @@ It is clear in both these plots that the vote in Palm Beach is an outlier.
 However, if we had produced separate plots of \% Buchanan vote and total
 population Palm Beach would not appear as an outlier.
 
-\hypertarget{transformation}{%
-\section{Transformation of data}\label{transformation}}
+\section{Transformation of data}\label{transformation}
 
 Some simple statistical methods are based on assumptions about the statistical properties of the data to which they are applied. For example, there are methods that work well provided that a variable of interest is approximately symmetrically distributed. If a variable has a distribution that is strongly skewed then the method will not have the properties that are expected and the results may be misleading. In linear regression (see Chapter \ref{linreg}) the mean of one variable is represented as being related linearly to the value of another variable. If the reality is that this relationship is far from being linear then results may be very misleading.
 
 If we wish to make use of simple assumptions like symmetry of distribution and/or linearity of relationship, but it is clear that the raw data do not support these assumption, then a legitimate approach is to consider whether the assumptions are satisfied better after we transform the data. We illustrate this idea in Sections \ref{transsymmetry} and \ref{straighten}.
 
-\hypertarget{transsymmetry}{%
-\subsection{Transformation to approximate symmetry}\label{transsymmetry}}
+\subsection{Transformation to approximate symmetry}\label{transsymmetry}
 
 The data in Table \ref{tab:clouds} resulted from an experiment (\citet{clouds}) to see whether spraying silver nitrate into a cloud (known as \textbf{seeding} the cloud)
 could make it produce more rainfall. 52 clouds were studied. 26 of the clouds were chosen at random and seeded with silver nitrate. The amounts of rainfall, in acre-feet, produced by each cloud is recorded. (An acre-foot is a unit of volume equal to 43,560 feet\(^3\) or, approximately, 1233.5m\(^3\).)
@@ -1910,8 +1868,7 @@ The rainfall data range over several orders of magnitude, that is, from one to w
 \caption{Back to back stem-and-leaf plot of $\log_{10}$(rainfall) for the cloud seeding data. The decimal point is at the vertical line |. Leaf unit = 0.1 log(acre feet)}\label{fig:cloudstem}
 \end{figure}
 
-\hypertarget{straighten}{%
-\subsection{Straightening scatter plots}\label{straighten}}
+\subsection{Straightening scatter plots}\label{straighten}
 
 Suppose we have drawn a scatter plot and the general form of the relationship between the variables \(y\) and \(x\) appears to be monotonic, \(y\) tends either to increase or decrease with the value of \(x\), subject to some random scatter about this relationships. However, the relationship between the variables \(y\) and \(x\) is not even approximately a straight line, that is, it is non-linear, rather than linear.
 
@@ -1925,8 +1882,7 @@ There are two main reasons why we may want to \textbf{straighten out} a scatter 
   we may be hoping to be able to use a simple method of analysis that requires approximate linearity, for example, linear regression (see Chapter \ref{linreg}).
 \end{itemize}
 
-\hypertarget{how-can-we-straighten-a-scatter-plot}{%
-\subsubsection*{How can we straighten a scatter plot?}\label{how-can-we-straighten-a-scatter-plot}}
+\subsubsection*{How can we straighten a scatter plot?}\label{how-can-we-straighten-a-scatter-plot}
 \addcontentsline{toc}{subsubsection}{How can we straighten a scatter plot?}
 
 We could transform the \(y\) variable, that is, plot a function of \(y\) on the \(y\)-axis. As in Section \ref{transsymmetry}, commonly-used transformations are
@@ -2006,8 +1962,7 @@ Figure \ref{fig:tukey} shows how Tukey and Mosteller's bulging rule works in the
 \caption{Summary of transformations, of the form $Y^{c_y}$ and/or $X^{c_x}$, to try. Bottom left: $c_y < 1, c_x < 1$. Top left: $c_y > 1, c_x < 1$.Top right: $c_y > 1, c_x > 1$.Bottom right: $c_y < 1, c_x > 1$.}\label{fig:tukey}
 \end{figure}
 
-\hypertarget{linearity-is-not-the-only-consideration}{%
-\subsubsection*{Linearity is not the only consideration}\label{linearity-is-not-the-only-consideration}}
+\subsubsection*{Linearity is not the only consideration}\label{linearity-is-not-the-only-consideration}
 \addcontentsline{toc}{subsubsection}{Linearity is not the only consideration}
 
 Although linearity can be important other things can be important too. Suppose that we draw a `line-of-best-fit' on a scatter plot which looks approximately linear. Figure \ref{fig:electionHS3} is a copy of Figure \ref{fig:electionHS2} with such a line superimposed. In Chapter \ref{linreg} we will see that in a simple linear regression model it is assumed that the amount of (vertical) scatter in the \(y\) direction of points about a line of best fit is the same for all values of the explanatory variable \(x\).
@@ -2025,13 +1980,11 @@ In Figure \ref{fig:electionHS3} there is perhaps a greater spread of points abou
 
 In Section \ref{linregtrans} we consider how to use transformation of \(y\) and/or \(x\) to satisfy better the assumptions of a linear regression model.
 
-\hypertarget{probability}{%
-\chapter{Probability}\label{probability}}
+\chapter{Probability}\label{probability}
 
 Most people have heard the word \textbf{probability} used in connection with a random experiment, that is, an experiment whose outcome cannot be predicted with certainty, such as tossing a coin, tossing dice, dealing cards etc. We start by considering a criminal case in which fundamental ideas surrounding the use of probability were hugely important. Then we study the concept of probability using the traditional simple example of tossing a coin.
 
-\hypertarget{sids}{%
-\section{Misleading statistical evidence in cot death trials}\label{sids}}
+\section{Misleading statistical evidence in cot death trials}\label{sids}
 
 In recent years there have been three high-profile criminal cases in which a mother has been put on trial for the murder of a her babies. In each case the medical evidence against the woman was weak and the prosecution relied heavily on statistical arguments to make their case. However, these arguments were not made by a statistician, but by a medical expert witness: Professor Sir Roy Meadows. However, there were two problems with Professor Meadows' evidence: firstly, it contained serious statistical errors; and secondly, it was presented in a way which is likely to be misinterpreted by a jury. To illustrate the error we consider the case of Sally Clark.
 
@@ -2039,8 +1992,7 @@ Sally Clark's first child died unexpectedly in 1996 at the age of 3 months. Sall
 
 It appeared that the decision to charge Sally was based partly on the reasoning that cot death is quite rare so having two cot deaths in the same family must be very unlikely indeed. This is the basis of Professor Meadows' assertion that: ``One cot death is a tragedy, two cot deaths is suspicious and, until the contrary is proved, three cot deaths is murder.''. At her trial in 1999 Sally Clark was found guilty of murder and sentenced to life imprisonment.
 
-\hypertarget{professor-meadows-statistical-evidence}{%
-\subsubsection*{Professor Meadows' statistical evidence}\label{professor-meadows-statistical-evidence}}
+\subsubsection*{Professor Meadows' statistical evidence}\label{professor-meadows-statistical-evidence}
 \addcontentsline{toc}{subsubsection}{Professor Meadows' statistical evidence}
 
 At Sally Clark's trial in 1999 Professor Meadows claimed that, in a family like Sally's (affluent, non-smoking with a mother aged over 26), the chance of two cot deaths is 1 in 73 million, that is, a probability of 1/73,000,000 \(\approx\) 0.000000014. Professor Meadows had calculated this value based on a study which had estimated the probability of one cot death in a family like Sally's to be 1 in 8543, that is, 1 cot death occurs for every 8543 of such families.
@@ -2052,11 +2004,9 @@ There are problems with this evidence, both with this calculation and with the i
 
 Can you identify these problems?
 
-\hypertarget{relative-frequency-definition-of-probability}{%
-\section{Relative frequency definition of probability}\label{relative-frequency-definition-of-probability}}
+\section{Relative frequency definition of probability}\label{relative-frequency-definition-of-probability}
 
-\hypertarget{example-tossing-a-coin}{%
-\subsubsection*{Example: tossing a coin}\label{example-tossing-a-coin}}
+\subsubsection*{Example: tossing a coin}\label{example-tossing-a-coin}
 \addcontentsline{toc}{subsubsection}{Example: tossing a coin}
 
 If you toss a coin, the outcome (the side on top when the coin falls to the ground) is either a Head (\(H\)) or a Tail (\(T\)). Suppose that you toss the coin a large number of times. Unless you are very skillful the outcome of each toss depends on chance. Therefore, if you toss the coin repeatedly, the exact sequence of \(H\)s and \(T\)s is not predictable with certainty in advance. This is usually the case with any experiment. Even if we try very hard to repeat an experiment under exactly the same conditions, there is a certain amount of variability in the results which we cannot explain, but we must accept. The experiment is a
@@ -2080,8 +2030,7 @@ how the proportion of heads Kerrich threw changed as the number of tosses increa
 
 Initially the proportion of heads fluctuates greatly but begins to settle down as the number of tosses increases. After 10,000 tosses the relative frequency of Head is 5067/10,000=0.5067. We might suppose that if Kerrich were able to continue his experiment forever, the proportion of heads would tend to a limiting value which would be very near, if not exactly, 1/2. This hypothetical limiting value is the probability of heads and is denoted by \(P(H)\).
 
-\hypertarget{looking-at-this-slightly-more-formally}{%
-\subsubsection*{Looking at this slightly more formally}\label{looking-at-this-slightly-more-formally}}
+\subsubsection*{Looking at this slightly more formally}\label{looking-at-this-slightly-more-formally}
 \addcontentsline{toc}{subsubsection}{Looking at this slightly more formally}
 
 The coin-tossing example motivates the \textbf{relative frequency} or \textbf{frequentist} definition of the probability of an event; namely
@@ -2119,14 +2068,12 @@ An alternative approach, considered in STAT0003, makes a simple set of basic ass
 
 \textbf{An aside}. There is another definition of probability, the \textbf{subjective} definition, which is the degree of belief someone has in the occurrence of an event, based on their knowledge and any evidence they have already seen. For example, you might reasonably believe that the probability that a coin comes up Heads when it is tossed is 1/2 because the coin looks symmetrical. If you are \textbf{certain} that \(P(H)=1/2\) then no amount of evidence from actually tossing the coin will change your mind. However, if you just think that \(P(H)=1/2\) is more likely that other values of \(P(H)\) then observing many more \(H\)s than \(T\)s in a long sequence of tosses may lead you to believe that \(P(H)>1/2\). We will not consider this definition of probability again in this course. However, it forms the basis of the \textbf{Bayesian} approach to Statistics. You may study this in a more advanced courses, for example, STAT0008 Statistical Inference.
 
-\hypertarget{example-tossing-a-coin-continued}{%
-\subsubsection*{Example: tossing a coin (continued)}\label{example-tossing-a-coin-continued}}
+\subsubsection*{Example: tossing a coin (continued)}\label{example-tossing-a-coin-continued}
 \addcontentsline{toc}{subsubsection}{Example: tossing a coin (continued)}
 
 We now look at the coin-tossing example in a slightly different way. If we toss a coin forever we generate an infinite \textbf{population} of \textbf{outcomes}: \{ \(H,H,T,H,\ldots\) \}, say. Think about choosing, or \textbf{sampling}, one of these outcomes at random from this population. The probability that this outcome is \(H\) is the proportion of \(H\)s in the population. If we \textbf{assume} that the coin is fair then the infinite population contains 50\% \(H\)s and 50\% \(T\)s. In that case \(P(H)=1/2\), and \(P(T)=1/2\).
 
-\hypertarget{example-graduate-admissions-at-berkeley}{%
-\subsubsection*{Example: Graduate Admissions at Berkeley}\label{example-graduate-admissions-at-berkeley}}
+\subsubsection*{Example: Graduate Admissions at Berkeley}\label{example-graduate-admissions-at-berkeley}
 \addcontentsline{toc}{subsubsection}{Example: Graduate Admissions at Berkeley}
 
 Table \ref{tab:berk0} contains data relating to graduate admissions in 1973 at the University of California, Berkeley, USA in the six largest (in terms of numbers of admissions) departments of the university. These data are discussed in \citet{berkeley}. We use the following notation: \(A\) for an accepted applicant, \(R\) for a rejected applicant. Table \ref{tab:berk0n} summarises the notation used for the frequencies in Table \ref{tab:berk0}. For example, \(n(A)\) denotes the number of applicants who were accepted. We will look at this example in more detail later.
@@ -2220,16 +2167,14 @@ In both the coin-tossing and Berkeley admissions examples we have imagined choos
 
 In the coin-tossing example the population is hypothetical, generated by thinking about repeating an experiment an infinite number of times. In the Berkeley admissions example the population is an actual population of people.
 
-\hypertarget{notation-sample-space-outcomes-and-events}{%
-\subsubsection*{Notation: sample space, outcomes and events}\label{notation-sample-space-outcomes-and-events}}
+\subsubsection*{Notation: sample space, outcomes and events}\label{notation-sample-space-outcomes-and-events}
 \addcontentsline{toc}{subsubsection}{Notation: sample space, outcomes and events}
 
 The set of all possible outcomes of a random experiment is called the \textbf{sample space} \(S\) of the experiment. We may denote a single \textbf{outcome} of an experiment by \(s\). An \textbf{event} \(E\) is a collection of outcomes, possibly just one outcome.
 
 It is very important to define the sample space \(S\) carefully. In the coin-tossing example we have \(S=\{H,T\}\). If the coin is unbiased then the probabilities of the outcomes in \(S\) are given by \(P(H)=1/2\) and \(P(T)=1/2\).
 
-\hypertarget{basic-properties-of-probability}{%
-\section{Basic properties of probability}\label{basic-properties-of-probability}}
+\section{Basic properties of probability}\label{basic-properties-of-probability}
 
 Since we have defined probability as a proportion, basic properties of proportions must also hold for a probability. Consider an event \(E\). Then the following must hold
 
@@ -2245,8 +2190,7 @@ Since we have defined probability as a proportion, basic properties of proportio
   \(P(S)=1\). This is true because the outcome must, by definition, be in the sample space.
 \end{itemize}
 
-\hypertarget{conditional-probability}{%
-\section{Conditional probability}\label{conditional-probability}}
+\section{Conditional probability}\label{conditional-probability}
 
 In Section \ref{sids} the statistical evidence presented to the court was based on the estimate that ``the probability of one cot death \textbf{in a family like Sally Clark's} is 1 in 8543''. What does this mean?
 
@@ -2260,8 +2204,7 @@ This (1 in 8543) is a \textbf{conditional} probability. We have \textbf{conditio
 
 In this example it is perhaps easiest to think of the conditioning as selecting a specific sub-population of families from the complete population of families. Another way to think about this is in terms of the sample space. We have reduced the original sample space - the outcomes (cot death or no cot death) of all families with children - to a subset of this sample space - the outcomes of all affluent, non-smoking families where the mother is over 26.
 
-\hypertarget{notation}{%
-\subsubsection*{Notation}\label{notation}}
+\subsubsection*{Notation}\label{notation}
 \addcontentsline{toc}{subsubsection}{Notation}
 
 When we are working with conditional probabilities we need to use a neat notation rather than write out long sentences like the ones above.
@@ -2279,8 +2222,7 @@ In fact \textbf{all} probabilities are conditional probabilities, because a prob
 
 We return to the Berkeley admissions example to illustrate conditional probability, independence and the rules of probability.
 
-\hypertarget{example-graduate-admissions-at-berkeley-continued}{%
-\subsubsection*{Example: Graduate Admissions at Berkeley (continued)}\label{example-graduate-admissions-at-berkeley-continued}}
+\subsubsection*{Example: Graduate Admissions at Berkeley (continued)}\label{example-graduate-admissions-at-berkeley-continued}
 \addcontentsline{toc}{subsubsection}{Example: Graduate Admissions at Berkeley (continued)}
 
 Table \ref{tab:berk1} contains more information on data relating to graduate admissions in 1973 at Berkeley in the six largest (in terms of numbers of admissions) departments of the university.
@@ -2729,8 +2671,7 @@ Remarks:
   For any event \(A\), \(P(A \mid B)\) is a probability in which the sample space has been reduced to outcomes containing the event \(B\). Therefore, \textbf{all} properties of probabilities also hold for conditional probabilities, e.g.~\(0 \leq P(A~|~B) \leq 1\).
 \end{itemize}
 
-\hypertarget{dependence-and-independence}{%
-\subsubsection*{Dependence and Independence}\label{dependence-and-independence}}
+\subsubsection*{Dependence and Independence}\label{dependence-and-independence}
 \addcontentsline{toc}{subsubsection}{Dependence and Independence}
 
 We return to the Berkeley example. We have found that
@@ -2747,8 +2688,7 @@ The fact that \(P(A~|~M) > P(A~|~F)\) might suggest to us that there is gender b
 
 \textbf{Exercise}. Can you think what this innocent explanation it might be?
 
-\hypertarget{addition-rule-of-probability}{%
-\section{Addition rule of probability}\label{addition-rule-of-probability}}
+\section{Addition rule of probability}\label{addition-rule-of-probability}
 
 We continue with the Berkeley admissions data. Suppose that we wish to calculate the probability that an applicant chosen at random from the 4526 applicants is either male (event \(M\)) or accepted (event \(A\)), or both male and accepted. We denote this probability \(P(M \mbox{ or } A)\) or \(P(M \cup A)\).
 
@@ -2905,8 +2845,7 @@ P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B).
 \label{eq:ordef}
 \end{equation}
 
-\hypertarget{mutually-exclusive-events}{%
-\subsection{Mutually exclusive events}\label{mutually-exclusive-events}}
+\subsection{Mutually exclusive events}\label{mutually-exclusive-events}
 
 Two events \(A\) and \(B\) are \textbf{mutually exclusive} (or \textbf{disjoint}) if they cannot occur together. For example, in the Berkeley example the events \(A\) and \(R\) are mutually exclusive: it is not possible for an applicant to be both accepted and rejected.
 
@@ -2917,8 +2856,7 @@ P(A \mbox{ or } B) = P(A) + P(B).
 \end{equation}
 You can only use this equation in the \textbf{special case} where events \(A\) and \(B\) are mutually exclusive. Otherwise, you must use the general rule in equation \eqref{eq:ordef}.
 
-\hypertarget{the-complement-of-an-event-a}{%
-\subsubsection*{\texorpdfstring{The complement of an event \(A\)}{The complement of an event A}}\label{the-complement-of-an-event-a}}
+\subsubsection*{\texorpdfstring{The complement of an event \(A\)}{The complement of an event A}}\label{the-complement-of-an-event-a}
 \addcontentsline{toc}{subsubsection}{The complement of an event \(A\)}
 
 The \textbf{complement} of an event \(A\) is the event that \(A\) does not occur. This can be denoted \(\mbox{not}A\) or \(\bar{A}\) or \(A^c\). The events \(A\) and \(\mbox{not}A\) are mutually exclusive and \(S=\{A, \mbox{not}A\}\). We have already seen that \(P(S) = 1\). Therefore,
@@ -2926,8 +2864,7 @@ The \textbf{complement} of an event \(A\) is the event that \(A\) does not occur
 and therefore
 \[ P(\mbox{not}A) = 1 - P(A). \]
 
-\hypertarget{multrule}{%
-\section{Multiplication rule of probability}\label{multrule}}
+\section{Multiplication rule of probability}\label{multrule}
 
 We continue with the Berkeley admissions data. We have already calculated that \(P(M , A)=0.265\). Now we calculate this in a different way.
 
@@ -2957,8 +2894,7 @@ P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
 \end{eqnarray}
 provided that all the conditional probabilities are defined. A sufficient (but not necessary) condition for this is \(P(A_1, A_2, \ldots, A_{n-1}, A_n)>0\). For example, \(P(A_1, A_2, A_3)\) is the probability that events \(A_1\), \(A_2\) and \(A_3\) all occur.
 
-\hypertarget{indepevents}{%
-\section{Independence of events}\label{indepevents}}
+\section{Independence of events}\label{indepevents}
 
 \textbf{Definition}. Two events \(A\) and \(B\) are \textbf{independent} if
 \begin{equation}
@@ -2993,8 +2929,7 @@ Remarks:
   \[ P(A_{1} , A_{2} , A_{3}) = P(A_{1}) P(A_{2}) P(A_{3}). \]
 \end{enumerate}
 
-\hypertarget{bloodindep}{%
-\subsection{An example of independence}\label{bloodindep}}
+\subsection{An example of independence}\label{bloodindep}
 
 The 2 most important systems for classifying human blood are the ABO system, with blood types A, B, AB and O, and the Rhesus system, with blood types Rh+ and Rh-. In the ABO system an A (and/or B) indicates the presence of antigen A (and/or B) molecules on the red blood cells. These two systems are often combined to form 8 blood types A+, B+, AB+, O+, A--, B--, AB-- and O--. Knowledge of blood type is important when a patient needs a blood transfusion.Giving blood of the wrong type can cause harm: giving Rh+ blood to someone who is Rh-- will make that person ill, as will giving blood with a A or B antigens to someone without those antigens. An AB+ person can receive blood from anyone, but an O-- person can only receive O- blood.
 
@@ -3177,13 +3112,11 @@ Assuming that ABO blood type is independent of Rhesus blood type gives the proba
 
 \textbf{Exercise}. Using equation \eqref{eq:indep}, or otherwise, calculate the values that are missing from Table \ref{tab:bloodindep}.
 
-\hypertarget{more-probability}{%
-\chapter{More probability}\label{more-probability}}
+\chapter{More probability}\label{more-probability}
 
 In this chapter, we consider two results that involve conditional probabilities, the \textbf{law of total probability} and \textbf{Bayes' theorem}.
 
-\hypertarget{law-of-total-probability}{%
-\section{Law of total probability}\label{law-of-total-probability}}
+\section{Law of total probability}\label{law-of-total-probability}
 
 We continue with the Berkeley admissions data. We have already calculated that \(P(A)=0.388\). Now we calculate this in a different way.
 
@@ -3247,8 +3180,7 @@ P(A) &=& P(A, B_1) + \cdots + P(A, B_n), \\
 
 Some books refer to the law of total probability as the \textbf{partition theorem}. This is because events \(B_1, \ldots, B_n\) that are both mutually exclusive and exhaustive are said to \textbf{partition} the sample space, that is, they split the sample space into \(n\) disjoint parts.
 
-\hypertarget{bayes-theorem}{%
-\section{Bayes' theorem}\label{bayes-theorem}}
+\section{Bayes' theorem}\label{bayes-theorem}
 
 We continue with the Berkeley admissions data. We have already calculated that \(P(A \mid M) = 0.445\). Now we calculate \(P(M \mid A)\). It is important that you understand the difference between these two probabilities.
 
@@ -3405,8 +3337,7 @@ P(B_i \mid A) &=& \frac{P(A \mid B_i)\,P(B_i)}{P(A)}, \\
 \end{eqnarray}
 The proof of Bayes' theorem is a straightforward extension of the case with \(n=2\) considered in the Berkeley admissions example above.
 
-\hypertarget{conditioning-on-more-than-one-event}{%
-\subsubsection*{Conditioning on more than one event}\label{conditioning-on-more-than-one-event}}
+\subsubsection*{Conditioning on more than one event}\label{conditioning-on-more-than-one-event}
 \addcontentsline{toc}{subsubsection}{Conditioning on more than one event}
 
 \(P(A \mid B)\) is the conditional probability that event \(A\) occurs given that event \(B\) has occurred. We can extend this idea to condition on more than one event.
@@ -3428,14 +3359,12 @@ These four expressions give different ways to express the probability \(P(A \mid
 \[ P(A \mid B,C) = \frac{P(A, B, C)}{P(B, C)}. \]
 \textbf{Exercise}. Why this true?
 
-\hypertarget{misleading-statistical-evidence-in-cot-death-trials-continued}{%
-\subsubsection*{Misleading statistical evidence in cot death trials (continued)}\label{misleading-statistical-evidence-in-cot-death-trials-continued}}
+\subsubsection*{Misleading statistical evidence in cot death trials (continued)}\label{misleading-statistical-evidence-in-cot-death-trials-continued}
 \addcontentsline{toc}{subsubsection}{Misleading statistical evidence in cot death trials (continued)}
 
 We will return to this example and use Bayes' theorem to calculate the probability that Sally Clark was innocent given (only) the statistical evidence presented at her trial. We will make some assumptions that we know are unrealistic, but the general approach that we take will illustrate the importance of using sound probabilistic reasoning.
 
-\hypertarget{dna-identification-evidence}{%
-\section{DNA identification evidence}\label{dna-identification-evidence}}
+\section{DNA identification evidence}\label{dna-identification-evidence}
 
 DNA evidence is increasingly being used to catch and prosecute suspects of crimes. The following example is based on a real criminal case.
 
@@ -3458,8 +3387,7 @@ At the trial it was stated that there were approximately 150,000 males in the lo
   Would you want to do any calculations first? If so, what would you calculate?
 \end{itemize}
 
-\hypertarget{rvs}{%
-\chapter{Random variables}\label{rvs}}
+\chapter{Random variables}\label{rvs}
 
 \textbf{Example}. We return to the space shuttle example.
 
@@ -3486,8 +3414,7 @@ By defining \(N\) to be the total number of damaged O-rings, we have moved from 
 
 \textbf{Notation}. We denote random variables by upper case letters, for example, \(N, X, Y, Z\). Once we have observed the value of a random variable it is no longer random: it is equal to a particular numeric value. To make this clear we denote sample values of r.v.s. by lower case letters, for example, \(n, x, y, z\) and write \(N=n, X=x\) and so on. Thus, \(P(X=x)\) is the probability that the random variable \(X\) has the value \(x\).
 
-\hypertarget{discrete}{%
-\section{Discrete random variables}\label{discrete}}
+\section{Discrete random variables}\label{discrete}
 
 \textbf{Definition}. A discrete random variable is a random variable that can take only a finite, or countably infinite, number of values.
 
@@ -3522,8 +3449,7 @@ Therefore, assuming for the moment that the random variable takes only integer v
 \[ P(X=x) = P(X \leq x) - P(X \leq x-1) = F_X(x) - F_X(x-1) \]
 for any integer \(x\)
 
-\hypertarget{continuous}{%
-\section{Continuous random variables}\label{continuous}}
+\section{Continuous random variables}\label{continuous}
 
 \textbf{Example}. We return to the Oxford birth times example.
 
@@ -3612,13 +3538,11 @@ Notes
 Therefore,
 \[ f_X(x) = \frac{\mathrm{d}}{\mathrm{d}x} F_X(x). \]
 
-\hypertarget{expectation}{%
-\section{Expectation}\label{expectation}}
+\section{Expectation}\label{expectation}
 
 The expectation of a random variable is a measure of the location of its distribution.
 
-\hypertarget{expectation-of-a-discrete-random-variable}{%
-\subsection{Expectation of a discrete random variable}\label{expectation-of-a-discrete-random-variable}}
+\subsection{Expectation of a discrete random variable}\label{expectation-of-a-discrete-random-variable}
 
 \textbf{Example}. We return to the space shuttle example.
 
@@ -3657,8 +3581,7 @@ Note:
   \(\mathrm{E}(X)\) exists only if \(\sum_x |x|\,P(X=x) < \infty\). If the number of values \(X\) can take is finite then \(\mathrm{E}(X)\) will always exist.
 \end{itemize}
 
-\hypertarget{expectation-of-a-continuous-random-variable}{%
-\subsection{Expectation of a continuous random variable}\label{expectation-of-a-continuous-random-variable}}
+\subsection{Expectation of a continuous random variable}\label{expectation-of-a-continuous-random-variable}
 
 We can define the expectation of a continuous random variable in a similar way to a discrete random variable, replacing summation with integration.
 
@@ -3681,8 +3604,7 @@ Note:
   \(\mathrm{E}(X)\) exists only if \(\int_{-\infty}^{\infty} |x|\,f_X(x) \,\mathrm{d}x < \infty\).
 \end{itemize}
 
-\hypertarget{properties-of-mathrmex}{%
-\subsection{\texorpdfstring{Properties of \(\mathrm{E}(X)\)}{Properties of \textbackslash mathrm\{E\}(X)}}\label{properties-of-mathrmex}}
+\subsection{\texorpdfstring{Properties of \(\mathrm{E}(X)\)}{Properties of \textbackslash mathrm\{E\}(X)}}\label{properties-of-mathrmex}
 
 If \(a\) and \(b\) are constants then
 \[ \mathrm{E}(a\,X+b) = a\,\mathrm{E}(X)+b. \]
@@ -3699,8 +3621,7 @@ This makes sense. If we multiply all observations by \(a\) their mean will also 
   \[ \mathrm{E}(X_1 + X_2 + \cdots + X_n) = \mathrm{E}(X_1) + \mathrm{E}(X_2) + \cdots + \mathrm{E}(X_n). \]
 \end{itemize}
 
-\hypertarget{EgX}{%
-\subsection{\texorpdfstring{The expectation of \(g(X)\)}{The expectation of g(X)}}\label{EgX}}
+\subsection{\texorpdfstring{The expectation of \(g(X)\)}{The expectation of g(X)}}\label{EgX}
 
 Suppose that \(Y=g(X)\) is a function of of \(X\), such as \(aX+b\), \(X^2\) or \(\log X\). Then \(Y\) is also a random variable. If we find the p.m.f (if \(Y\) is discrete) or p.d.f. (if \(Y\) is continuous) of \(Y\) then we can find the expectation of \(Y\) using equation \eqref{eq:discmean} or \eqref{eq:contmean} as appropriate. Alternatively, and often more easily, we can use
 
@@ -3717,13 +3638,11 @@ Note: for a non-linear function \(g(X)\), it is usually the case that
 \[ \mathrm{E}[g(X)] \neq g[\mathrm{E}(X)] \]
 although there are exceptions.
 
-\hypertarget{variance}{%
-\section{Variance}\label{variance}}
+\section{Variance}\label{variance}
 
 The variance of a random variable is a measure of the spread of its distribution.
 
-\hypertarget{variance-of-a-discrete-random-variable}{%
-\subsection{Variance of a discrete random variable}\label{variance-of-a-discrete-random-variable}}
+\subsection{Variance of a discrete random variable}\label{variance-of-a-discrete-random-variable}
 
 \textbf{Example}. We return the space shuttle example.
 
@@ -3757,8 +3676,7 @@ This is a weighted average of the squared differences between the values that \(
 
 A variance can be infinite. If the number of values that \(X\) can take is finite then \(\mathrm{var}(X)\) will always be finite.
 
-\hypertarget{variance-of-a-continuous-random-variable}{%
-\subsection{Variance of a continuous random variable}\label{variance-of-a-continuous-random-variable}}
+\subsection{Variance of a continuous random variable}\label{variance-of-a-continuous-random-variable}
 
 We can define the variance of a continuous random variable in a similar way to a discrete random variable, replacing summation with integration.
 
@@ -3769,8 +3687,7 @@ We can define the variance of a continuous random variable in a similar way to a
 \label{eq:varicont}
 \end{equation}
 
-\hypertarget{variance-and-standard-deviation}{%
-\subsection{Variance and standard deviation}\label{variance-and-standard-deviation}}
+\subsection{Variance and standard deviation}\label{variance-and-standard-deviation}
 
 \textbf{Definition}. Let \(X\) be a random variable with \(\mathrm{E}(X)=\mu\). The variance \(\mathrm{var}(X)\) is given by
 \[ \mathrm{var}(X) = \mathrm{E}\left[(X-\mu)^2\right]. \]
@@ -3798,8 +3715,7 @@ Notes on \(\mathrm{var}(X)\) and sd(\(X\)):
   \(\mathrm{var}(X)\) exists only if \(\mu\) exists.
 \end{itemize}
 
-\hypertarget{properties-of-mathrmvarx}{%
-\subsection{\texorpdfstring{Properties of \(\mathrm{var}(X)\)}{Properties of \textbackslash mathrm\{var\}(X)}}\label{properties-of-mathrmvarx}}
+\subsection{\texorpdfstring{Properties of \(\mathrm{var}(X)\)}{Properties of \textbackslash mathrm\{var\}(X)}}\label{properties-of-mathrmvarx}
 
 \begin{itemize}
 \tightlist
@@ -3826,16 +3742,13 @@ Returning to general \(n\) we have
 \[ \mathrm{var}(X_1 + X_2 + \cdots + X_n) = \mathrm{var}(X_1) + \mathrm{var}(X_2) + \cdots + \mathrm{var}(X_n) + 2 \mathop{\sum\sum}_{i < j} \mathrm{cov}(X_i,X_j). \]
 If \(\mathrm{cov}(X_i,X_j)=0\) for all \(i < j\) then equation \eqref{eq:varsum} holds. We will study covariance, and its standardised form \textbf{correlation}, in Chapter \ref{correlationchapter}.
 
-\hypertarget{an-aside}{%
-\subsubsection{An aside}\label{an-aside}}
+\subsubsection{An aside}\label{an-aside}
 
 (This is beyond the scope of STAT0002. It is included here for completeness and in case you are interested.) To consider more formally what it means for random variables \(X_1, ..., X_n\) to be independent we define their \textbf{joint c.d.f.} \(F_{X_1, ..., X_n}(x_1, ..., x_n) = P(X_1 \leq x_1, ..., X_n \leq x_n)\). The random variables \(X_1, ..., X_n\) are (mutually) independent if \(F_{X_1, ..., X_n}(x_1, ..., x_n) = F_{X_1}(x_1) \times \cdots \times F_{X_n}(x_n)\), that is, \(P(X_1 \leq x_1, ..., X_n \leq x_n) = P(X_1 \leq x_1) \times \cdots \times P(X_n \leq x_n)\), for any set of values \((x_1, .., x_n)\). The random variables \(X_1, ..., X_n\) are pairwise independent if, \(F_{X_i, X_j}(x_i, x_j) = F_{X_i}(x_i) F_{X_j}(x_j)\), that is, \(P(X_i \leq x_i, X_j \leq x_j) = P(X_i \leq x_i) P(X_j \leq x_j)\), for every pair \((X_i, X_j)\) of variables that we could select from \(X_1, ..., X_n\) and for any pair of values \((x_i, x_j)\).
 
-\hypertarget{locations}{%
-\section{Other measures of location}\label{locations}}
+\section{Other measures of location}\label{locations}
 
-\hypertarget{the-median-of-a-random-variable}{%
-\subsection{The median of a random variable}\label{the-median-of-a-random-variable}}
+\subsection{The median of a random variable}\label{the-median-of-a-random-variable}
 
 Recall that the sample median of a set of observations is the middle observation when the observations are arranged in order of size. We define the median of a random variable \(X\) as a value, median(\(X\)), such that
 
@@ -3874,8 +3787,7 @@ Figure \ref{fig:discretecdf} is a plot of the c.d.f. of this discrete random var
 
 Therefore, \(\mathrm{median}(X) = 1\). However, \(P(X<1)=\frac16\) and \(P(X>1)=\frac13\).
 
-\hypertarget{the-mode-of-a-random-variable}{%
-\subsection{The mode of a random variable}\label{the-mode-of-a-random-variable}}
+\subsection{The mode of a random variable}\label{the-mode-of-a-random-variable}
 
 Recall that the sample mode of categorical or discrete data is the value (or values) which occurs most often. We define the mode, mode(\(X\)), of a random variable as follows.
 
@@ -3885,8 +3797,7 @@ For a continuous random variable \(X\), the mode is the value at which the p.d.f
 \[ \frac{\mathrm{d}}{\mathrm{d}x} f_X(x)  = 0, \]
 and checking that you have indeed found a maximum.
 
-\hypertarget{quantiles}{%
-\section{Quantiles}\label{quantiles}}
+\section{Quantiles}\label{quantiles}
 
 To keep things simple we consider a \textbf{continuous} random variable \(X\). For \(0 < p < 1\), a \(100p\%\) quantile of \(X\) is defined to be a value \(x_p\) such that
 \[ F_X(x_p)=P(X \leq x_p) = p. \]
@@ -3896,8 +3807,7 @@ Thus, \(x_{1/4}=F_X^{-1}(1/4)\) is the lower quartile of \(X\), \(x_{1/2}=F_X^{-
 
 The inter-quartile range is \(x_{3/4}-x_{1/4}=F_X^{-1}(3/4)-F_X^{-1}(1/4)\), which is a measure of spread.
 
-\hypertarget{measures-of-shape}{%
-\section{Measures of shape}\label{measures-of-shape}}
+\section{Measures of shape}\label{measures-of-shape}
 
 The \textbf{moment coefficient of skewness} of a random variable \(X\) with mean \(\mu\) and standard deviation \(\sigma\) is given by
 \[ \mathrm{E}\left[\left(\frac{X - \mu}{\sigma}\right)^3\right] = \displaystyle\frac{\mathrm{E}\left[\left(X- \mu\right)^3\right]}{\sigma^3}, \]
@@ -3906,13 +3816,11 @@ provided that \(\mathrm{E}[\left(X- \mu\right)^3]\) exists.
 The \textbf{quartile skewness} of a random variable \(X\) with c.d.f \(F_X(x)\) is given by
 \[ \frac{(x_{3/4}-x_{1/2}) - (x_{1/2}-x_{1/4})}{x_{3/4}-x_{1/4}} = \frac{[F^{-1}_X(3/4) - F^{-1}_X(1/2)] - [F^{-1}_X(1/2) - F^{-1}_X(1/4)]}{F^{-1}_X(3/4) - F^{-1}_X(1/4)}. \]
 
-\hypertarget{simple}{%
-\chapter{Simple distributions}\label{simple}}
+\chapter{Simple distributions}\label{simple}
 
 We use a simple dataset to introduce some commonly-used simple distributions. We will study the \textbf{discrete} distributions: Bernoulli, binomial, geometric and Poisson. We will also study the \textbf{continuous} distributions: uniform, exponential, normal.
 
-\hypertarget{australian-births-data}{%
-\section{Australian births data}\label{australian-births-data}}
+\section{Australian births data}\label{australian-births-data}
 
 Steele, S. (December 21, 1997), Babies by the Dozen for Christmas: 24-Hour Baby Boom, The Sunday Mail (Brisbane), page 7
 
@@ -4156,8 +4064,7 @@ Figure \ref{fig:babyintro} summarises the birth times of boy and girl babies.
 \caption{Birth times of babies on 18th December 1997 by sex.}\label{fig:babyintro}
 \end{figure}
 
-\hypertarget{the-bernoulli-distribution}{%
-\section{The Bernoulli distribution}\label{the-bernoulli-distribution}}
+\section{The Bernoulli distribution}\label{the-bernoulli-distribution}
 
 Consider the first birth. The outcome is either a boy \(B\) or a girl \(G\). We define a random variable
 
@@ -4203,8 +4110,7 @@ If we assume that the probability of a boy is the same for each birth then
 In this example the sample values \(x_1, \ldots, x_{44}\) of \(X_1,\ldots,X_{44}\) are
 \[ x_1=0, \quad x_2=0, \quad x_3=1, \quad \ldots \quad x_{44}=0. \]
 
-\hypertarget{summary-of-the-bernoullip-distribution}{%
-\subsection{\texorpdfstring{Summary of the Bernoulli(\(p\)) distribution}{Summary of the Bernoulli(p) distribution}}\label{summary-of-the-bernoullip-distribution}}
+\subsection{\texorpdfstring{Summary of the Bernoulli(\(p\)) distribution}{Summary of the Bernoulli(p) distribution}}\label{summary-of-the-bernoullip-distribution}
 
 \begin{itemize}
 \tightlist
@@ -4225,8 +4131,7 @@ for some \(p\), \(0 \leq p \leq 1\), then \(X \sim \mbox{Bernoulli}(p)\).
   \(\mbox{E}(X)=p\), \(\mbox{var}(X)=p\,(1-p)\). (\textbf{Exercise})
 \end{itemize}
 
-\hypertarget{binomial}{%
-\section{The binomial distribution}\label{binomial}}
+\section{The binomial distribution}\label{binomial}
 
 We have seen that the 44 births are 44 Bernoulli trials. We define a random variable \(Y\) equal to the total number of boys in the 44 births, that is,
 \[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]
@@ -4288,8 +4193,7 @@ Figure \ref{fig:babybinompmfs} shows the p.m.f.s of 4 binomial(44,\(p\)) distrib
 \caption{Binomial($44,p$) p.m.f.s: $p=0.1$ (top); $p=1/2$ (second from top); $p=0.591$ (second from bottom); $p=0.9$ (bottom).  The sample value $y=26$ has been shaded in black.}\label{fig:babybinompmfs}
 \end{figure}
 
-\hypertarget{binominf}{%
-\subsection{\texorpdfstring{A brief look at statistical inference about \(p\)}{A brief look at statistical inference about p}}\label{binominf}}
+\subsection{\texorpdfstring{A brief look at statistical inference about \(p\)}{A brief look at statistical inference about p}}\label{binominf}
 
 \textbf{This section of the notes is not part of STAT0002. It introduces ideas surrounding hypothesis testing and confidence intervals. If you take STAT0003 then you will cover these ideas in more detail. This section is included because you may find it interesting to think about these ideas now.}
 
@@ -4297,8 +4201,7 @@ We have observed more boys than girls. If \(p=1/2\) we would expect roughly equa
 
 In this example we might want to infer whether or not \(p=0.5\). We wish to judge whether the estimate \(\hat{p}\) is far enough from 0.5 for us to conclude that \(p \neq 0.5\). We need to take into account how reliable (a term that we will use in Chapter \ref{inference} is how \textbf{precise}) the estimation of \(p\) is. For a given true value of \(p\) the larger the sample size \(n\) (here \(n = 44\)) the greater the precision. If you take STAT0003 then you will study this in some detail. Here, we introduce two main approaches to this problem. They will seem rather similar, but there is a subtle difference.
 
-\hypertarget{if-p0.5-then-how-surprising-is-hatp0.591}{%
-\subsubsection*{\texorpdfstring{1. If \(p=0.5\) then how surprising is \(\hat{p}=0.591\)?}{1. If p=0.5 then how surprising is \textbackslash hat\{p\}=0.591?}}\label{if-p0.5-then-how-surprising-is-hatp0.591}}
+\subsubsection*{\texorpdfstring{1. If \(p=0.5\) then how surprising is \(\hat{p}=0.591\)?}{1. If p=0.5 then how surprising is \textbackslash hat\{p\}=0.591?}}\label{if-p0.5-then-how-surprising-is-hatp0.591}
 \addcontentsline{toc}{subsubsection}{1. If \(p=0.5\) then how surprising is \(\hat{p}=0.591\)?}
 
 Suppose that the \textbf{null hypothesis} \(H_0: p=0.5\) is true. How unlikely it is that a sample of size \(44\) produces an estimate of \(p\) as far, or further from, 0.5 than \(\hat{p}=0.591\)?
@@ -4318,8 +4221,7 @@ If \(p=0.5\), \(P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30\). Figure \ref
 
 A traditional cutoff for ``sufficiently small'' is 0.05, but it is not possible to argue that this is generally better than other choices of cutoff. Based on this cutoff we would not reject \(H_0\), because \(0.3 > 0.05\).
 
-\hypertarget{is-p0.5-plausible-based-on-inferences-made-about-p-using-the-data}{%
-\subsubsection*{\texorpdfstring{2. Is \(p=0.5\) plausible based on inferences made about \(p\) using the data?}{2. Is p=0.5 plausible based on inferences made about p using the data?}}\label{is-p0.5-plausible-based-on-inferences-made-about-p-using-the-data}}
+\subsubsection*{\texorpdfstring{2. Is \(p=0.5\) plausible based on inferences made about \(p\) using the data?}{2. Is p=0.5 plausible based on inferences made about p using the data?}}\label{is-p0.5-plausible-based-on-inferences-made-about-p-using-the-data}
 \addcontentsline{toc}{subsubsection}{2. Is \(p=0.5\) plausible based on inferences made about \(p\) using the data?}
 
 We estimate \(p\) and then see how close the estimate is to 0.5. In this example \(\hat{p}=26/44=0.591\). To quantify whether this is significantly different from 0.5 we can calculate an interval estimate of \(p\), called a \textbf{confidence interval}, and see whether or not this interval contains 0.5. If it does not contain 0.5 then we could decide to reject the null hypothesis \(H_0\) that \(p=0.5\). Otherwise, we do not reject \(H_0\).
@@ -4332,8 +4234,7 @@ An approximate 95\% confidence interval for \(p\) based on these data is \((0.45
 
 In modern Statistics method 2. (\textbf{interval estimation}) is often preferred to 1. (\textbf{hypothesis testing}) because it gives an interval estimate for \(p\) rather than just a decision of whether or not to reject \(H_0: p=0.5\).
 
-\hypertarget{summary-of-the-binomialnp-distribution}{%
-\subsection{\texorpdfstring{Summary of the binomial(\(n,p\)) distribution}{Summary of the binomial(n,p) distribution}}\label{summary-of-the-binomialnp-distribution}}
+\subsection{\texorpdfstring{Summary of the binomial(\(n,p\)) distribution}{Summary of the binomial(n,p) distribution}}\label{summary-of-the-binomialnp-distribution}
 
 \begin{itemize}
 \tightlist
@@ -4352,8 +4253,7 @@ In modern Statistics method 2. (\textbf{interval estimation}) is often preferred
 
 A binomial(1,\(p\)) distribution is the same as a Bernoulli(\(p\)) distribution.
 
-\hypertarget{the-geometric-distribution}{%
-\section{The geometric distribution}\label{the-geometric-distribution}}
+\section{The geometric distribution}\label{the-geometric-distribution}
 
 The ordering of the arrivals of the boy and girl babies is
 \[ G G B B B G G B B B B B G G B G G B B B B G G G G B B B G B G B B B B B G B B B B G G G \]
@@ -4539,8 +4439,7 @@ Figure \ref{fig:geomfit} shows that the observed and estimated expected frequenc
 \caption{Observed frequencies and estimated expected frequencies under a geometric(0.591) distribution.}\label{fig:geomfit}
 \end{figure}
 
-\hypertarget{summary-of-the-geometricp-distribution}{%
-\subsection{\texorpdfstring{Summary of the geometric(\(p\)) distribution}{Summary of the geometric(p) distribution}}\label{summary-of-the-geometricp-distribution}}
+\subsection{\texorpdfstring{Summary of the geometric(\(p\)) distribution}{Summary of the geometric(p) distribution}}\label{summary-of-the-geometricp-distribution}
 
 \begin{itemize}
 \tightlist
@@ -4558,8 +4457,7 @@ Figure \ref{fig:geomfit} shows that the observed and estimated expected frequenc
 
 An alternative formulation is where a random variable \(V\) is defined as the number of trials performed \textbf{before} the first 1 occurs. Therefore, the support of \(V\) is \(0, 1, 2, ...\) and \(V = W - 1\). The \texttt{dgeom()} function in R relates to a random variable like \(V\), not \(W\).
 
-\hypertarget{Poisson}{%
-\section{The Poisson distribution}\label{Poisson}}
+\section{The Poisson distribution}\label{Poisson}
 
 Now we look at the numbers \(N_1, \ldots, N_{24}\) of births that occur in each hour of the 24 hours on the day December 18, 1997. This produces a \textbf{count} for each hour. We have split the 24-hour period into 24 time periods of the same length. We could equally have chosen to split it into 12 time periods, each of length 2 hours.
 
@@ -4755,8 +4653,7 @@ Figure \ref{fig:poispmfs} shows 3 different Poisson p.m.f.s. As \(\lambda\) incr
 \caption{Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (bottom).}\label{fig:poispmfs}
 \end{figure}
 
-\hypertarget{summary-of-the-poissonmu-distribution}{%
-\subsection{\texorpdfstring{Summary of the Poisson(\(\mu\)) distribution}{Summary of the Poisson(\textbackslash mu) distribution}}\label{summary-of-the-poissonmu-distribution}}
+\subsection{\texorpdfstring{Summary of the Poisson(\(\mu\)) distribution}{Summary of the Poisson(\textbackslash mu) distribution}}\label{summary-of-the-poissonmu-distribution}
 
 \begin{itemize}
 \tightlist
@@ -4778,8 +4675,7 @@ Figure \ref{fig:poispmfs} shows 3 different Poisson p.m.f.s. As \(\lambda\) incr
   \(\mbox{E}(N)=\mu\), \(\mbox{var}(N)=\mu\).
 \end{itemize}
 
-\hypertarget{summary-of-these-discrete-distributions}{%
-\section{Summary of these discrete distributions}\label{summary-of-these-discrete-distributions}}
+\section{Summary of these discrete distributions}\label{summary-of-these-discrete-distributions}
 
 We have studied 4 common discrete distributions.
 
@@ -4795,8 +4691,7 @@ We have studied 4 common discrete distributions.
   \textbf{Poisson}. Used for counts of events that arrive in a Poisson process.
 \end{itemize}
 
-\hypertarget{uniform}{%
-\section{The uniform distribution}\label{uniform}}
+\section{The uniform distribution}\label{uniform}
 
 Now suppose that we are interested in the \textbf{times} at which the babies are born. Previously we assumed that births occur in a Poisson process: singly, independently and randomly at a constant rate.
 
@@ -4840,8 +4735,7 @@ One way is to look at a histogram of the times of birth to see whether it is app
 
 \textbf{Exercise}. Why might births not occur at the same rate throughout the day?
 
-\hypertarget{summary-of-the-uniformab-distribution}{%
-\subsection{\texorpdfstring{Summary of the uniform(\(a,b\)) distribution}{Summary of the uniform(a,b) distribution}}\label{summary-of-the-uniformab-distribution}}
+\subsection{\texorpdfstring{Summary of the uniform(\(a,b\)) distribution}{Summary of the uniform(a,b) distribution}}\label{summary-of-the-uniformab-distribution}
 
 \begin{itemize}
 \tightlist
@@ -4857,8 +4751,7 @@ One way is to look at a histogram of the times of birth to see whether it is app
   \(\mbox{E}(U)=\displaystyle\frac{a+b}{2}\), \(\mbox{var}(U)=\displaystyle\frac{(b-a)^2}{12}\).
 \end{itemize}
 
-\hypertarget{exponential}{%
-\section{The exponential distribution}\label{exponential}}
+\section{The exponential distribution}\label{exponential}
 
 Now suppose that we are interested in the length of time \(T_1\) until the
 first birth. Look at Table \ref{tab:abirths}. In this example the observed value \(t_1\) of \(T_1\) is 5 minutes.
@@ -4909,16 +4802,14 @@ How well does the exponential distribution fit these data? We could compare an e
 \caption{Histogram of sample inter-birth times with superimposed p.d.f. of an exponential(1.840) distribution. Note that 1.840 is the estimated birth rate per hour.}\label{fig:exppdf}
 \end{figure}
 
-\hypertarget{three-ways-to-check-the-poisson-process-assumption}{%
-\subsubsection*{Three ways to check the Poisson process assumption}\label{three-ways-to-check-the-poisson-process-assumption}}
+\subsubsection*{Three ways to check the Poisson process assumption}\label{three-ways-to-check-the-poisson-process-assumption}
 \addcontentsline{toc}{subsubsection}{Three ways to check the Poisson process assumption}
 
 We have used the data in three different ways (based on the Poisson, uniform and exponential distributions) to check same assumption: that the births occur in a Poisson process. It is possible that one check suggests that this assumption is reasonable but another suggests that it is not. For example, if the births were regularly spaced (e.g.~one birth exactly every half hour) then a histogram would look flat, or very close to being flat, depending a little on the bin width. However, the times between births are equal and therefore do not look at all like a random sample from an exponential distribution. The numbers of births in each of the 24 hours will not look like a random sample from Poisson distribution: they will be much less variable than they should be. The moral of this story: the fact that the particular way you have chosen to assess the fit of your distribution looks OK does not imply that the distribution is true. Another way to assess the fit might reveal a big problem.
 
 \textbf{Exercise}. Based on the exponential distribution that we fitted to the Australian births data, what is the probability that the time gap between 2 births is longer than 90 minutes?
 
-\hypertarget{summary-of-the-exponentiallambda-distribution}{%
-\subsection{\texorpdfstring{Summary of the exponential(\(\lambda\)) distribution}{Summary of the exponential(\textbackslash lambda) distribution}}\label{summary-of-the-exponentiallambda-distribution}}
+\subsection{\texorpdfstring{Summary of the exponential(\(\lambda\)) distribution}{Summary of the exponential(\textbackslash lambda) distribution}}\label{summary-of-the-exponentiallambda-distribution}
 
 \begin{itemize}
 \tightlist
@@ -4942,8 +4833,7 @@ We have used the data in three different ways (based on the Poisson, uniform and
   \(\mbox{E}(T)=\displaystyle\frac{1}{\lambda}\), \(\mbox{var}(T)=\displaystyle\frac{1}{\lambda^2}\).
 \end{itemize}
 
-\hypertarget{normal}{%
-\section{The normal distribution}\label{normal}}
+\section{The normal distribution}\label{normal}
 
 Suppose now that we are interested in the birth weights \(Z_1,\ldots,Z_{44}\) of the babies. Figure \ref{fig:babynormalplots} shows a histogram and a boxplot of the of the sample birth weights \(z_1,\ldots,z_n\). I have converted the weights from grams to pounds (1 pound \(\approx\) 453.5g).
 
@@ -4997,8 +4887,7 @@ In Figure \ref{fig:normalpdf} the fitted normal \(\mbox{N}(\hat{\mu},\hat{\sigma
 
 As we expect the fit if not particularly good. In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution. In Section \ref{qq} we will use a \textbf{normal QQ plot} to assess the fit of a normal distribution to these data.
 
-\hypertarget{summary-of-the-mboxnmusigma2-distribution}{%
-\subsection{\texorpdfstring{Summary of the \(\mbox{N}(\mu,\sigma^2)\) distribution}{Summary of the \textbackslash mbox\{N\}(\textbackslash mu,\textbackslash sigma\^{}2) distribution}}\label{summary-of-the-mboxnmusigma2-distribution}}
+\subsection{\texorpdfstring{Summary of the \(\mbox{N}(\mu,\sigma^2)\) distribution}{Summary of the \textbackslash mbox\{N\}(\textbackslash mu,\textbackslash sigma\^{}2) distribution}}\label{summary-of-the-mboxnmusigma2-distribution}
 
 \begin{itemize}
 \tightlist
@@ -5028,8 +4917,7 @@ As we expect the fit if not particularly good. In particular, there are more low
   \(\mbox{E}(Z)=\mu\), \(\mbox{var}(Z)=\sigma^2\).
 \end{itemize}
 
-\hypertarget{the-standard-normal-disribution}{%
-\subsection{The standard normal disribution}\label{the-standard-normal-disribution}}
+\subsection{The standard normal disribution}\label{the-standard-normal-disribution}
 
 The \(N(0,1)\) distribution is called the \textbf{standard normal} distribution. We write \(\phi(x)\) for its p.d.f. and \(\Phi(x)\) for its c.d.f., so that
 \[ \phi(x)=\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,x^{2}}, \quad -\infty < x < \infty, \]
@@ -5038,8 +4926,7 @@ and
 \int_{-\infty}^{x} \displaystyle\frac{1}{\sqrt{2\pi}} \,{\rm e}^{-\frac{1}{2}\,t^{2}} {\rm ~d}t, \quad 
 \quad -\infty < x < \infty. \]
 
-\hypertarget{evaluating-the-normal-c.d.f.-and-quantiles}{%
-\subsection{Evaluating the normal c.d.f. and quantiles}\label{evaluating-the-normal-c.d.f.-and-quantiles}}
+\subsection{Evaluating the normal c.d.f. and quantiles}\label{evaluating-the-normal-c.d.f.-and-quantiles}
 
 Suppose that \(W \sim N(7.22, 1.36)\), that is, \(\mbox{E}(W)=7.22\) and \(\mbox{var}(W)=1.36\) and we want to calculate \(P(W \leq 10)\). Then
 
@@ -5111,14 +4998,12 @@ Suppose now that we want to find the 95\% quantile of \(W\), that is, \(w\) for 
 ## [1] 9.138212
 \end{verbatim}
 
-\hypertarget{interpretation-of-sigma}{%
-\subsection{\texorpdfstring{Interpretation of \(\sigma\)}{Interpretation of \textbackslash sigma}}\label{interpretation-of-sigma}}
+\subsection{\texorpdfstring{Interpretation of \(\sigma\)}{Interpretation of \textbackslash sigma}}\label{interpretation-of-sigma}
 
 Suppose that \(X \sim N(\mu,\sigma^{2})\). Let \(p_k = P(|X-\mu| < k\sigma)\), so that \(p_k\) is the probability that \(X\) lies within \(k\) standard deviations of its mean. We have \(p_1 = 0.6826\), \(p_2 = 0.9545\) and \(p_3 = 0.9973\). Therefore, for a large sample from a normal distribution
 approximately 68\% of observations will fall within 1 standard deviation of the mean, and approximately 95\% within 2 standard deviations of the mean.
 
-\hypertarget{summary-of-these-continuous-distributions}{%
-\section{Summary of these continuous distributions}\label{summary-of-these-continuous-distributions}}
+\section{Summary of these continuous distributions}\label{summary-of-these-continuous-distributions}
 
 We have studied 3 common continuous distributions.
 
@@ -5132,8 +5017,7 @@ We have studied 3 common continuous distributions.
   \textbf{Normal}. A symmetric random variable often used as a model for measurement errors or data that arise as the sums or averages of a large number of random variables.
 \end{itemize}
 
-\hypertarget{qq}{%
-\section{QQ plots}\label{qq}}
+\section{QQ plots}\label{qq}
 
 We have seen that we can use a plot, for example, a histogram to examine the shape of the frequency distribution of data. Sometimes we are interested in deciding whether the data appear to have come from a particular distribution, with a particular shape.
 
@@ -5141,8 +5025,7 @@ For example, many traditional statistical methods are based on an assumption tha
 
 Another way to compare the distribution of a sample with a particular distribution is to use a \textbf{quantile-quantile plot} or \textbf{QQ plot} for short. This plot is based on comparing sample quantiles (Section \ref{fivenumber}) and theoretical quantiles (Section \ref{quantiles}). The following example is based on a normal distribution, but a QQ plot can be based on any \textbf{continuous} distribution.
 
-\hypertarget{normal-qq-plots}{%
-\subsection{Normal QQ plots}\label{normal-qq-plots}}
+\subsection{Normal QQ plots}\label{normal-qq-plots}
 
 Before we describe how to produce a QQ plot we return to the Oxford birth times example. The sample quartiles (\(q_L, m, q_U\)) are 4.95, 7.50, and 9.75 hours. Also, the sample mean is 7.72 hours and the sample standard deviation is 3.57 hours. We suppose that these data have been sampled from a normal distribution with a mean of 7.72 hours and a standard deviation of 3.57 hours. We calculate the (theoretical) quartiles of this normal N(7.72,3.57\(^2\)) distribution and compare them in Table \ref{tab:compareqs} to the sample quartiles of Oxford births data.
 
@@ -5207,8 +5090,7 @@ In Figure \ref{fig:qqpic} these quantiles are superimposed on the p.d.f. of a \(
 
 For \(n=9\) the 9 quantiles \(3.14, 4.72, \ldots, 12.30\) split the \(N(7.72, 3.57^2)\) distribution into 10 intervals. The area under the p.d.f. on each of these intervals is equal to 1/10. For the Oxford births data \(n=95\). Therefore the 95 quantiles we will use later to produce a QQ plot split the distribution into 96 intervals. In each interval the area under the p.d.f. is 1/96.
 
-\hypertarget{constructing-a-qq-plot}{%
-\subsubsection*{Constructing a QQ plot}\label{constructing-a-qq-plot}}
+\subsubsection*{Constructing a QQ plot}\label{constructing-a-qq-plot}
 \addcontentsline{toc}{subsubsection}{Constructing a QQ plot}
 
 To produce a QQ plot based on a continuous distribution (not necessarily a normal distribution) we plot, for \(i = 1, \ldots, n\)
@@ -5344,8 +5226,7 @@ Two practical points:
 \caption{Normal QQ plot of the Oxford birth durations with a dashed line drawn through the sample and theoretical lower and upper quartiles.}\label{fig:oxqqlinequart}
 \end{figure}
 
-\hypertarget{departures-from-normality}{%
-\subsubsection*{Departures from normality}\label{departures-from-normality}}
+\subsubsection*{Departures from normality}\label{departures-from-normality}
 \addcontentsline{toc}{subsubsection}{Departures from normality}
 
 The normal distribution provides a useful benchmark against which to assess the shape of a distribution. Figure \ref{fig:QQtypes} includes some normal QQ plots based on data simulated from distributions that are not normal. From a normal QQ plot we can assess whether
@@ -5383,8 +5264,7 @@ A summary of these plots:
 
 \textbf{(f)} A negatively skewed distribution. The small values are smaller than expected and the large values smaller than expected than from a normal distribution, giving points below the straight line on the left of the plot and below the line on the right. (Distribution used: \(10-X\), where \(X\) has the distribution used in (e) above).
 
-\hypertarget{the-australian-births-data}{%
-\subsubsection{The Australian births data}\label{the-australian-births-data}}
+\subsubsection{The Australian births data}\label{the-australian-births-data}
 
 As a further example consider the QQ plot in Figure \ref{fig:babynormalqqenv}. The points clearly do not lie on a straight line. The small birth weights in the sample are smaller than expected under the normal distribution fitted to the data, suggesting that the distribution of the data is negatively skewed (see plot (f) in Figure \ref{fig:QQtypes}).
 
@@ -5397,8 +5277,7 @@ As a further example consider the QQ plot in Figure \ref{fig:babynormalqqenv}. T
 \caption{Normal QQ plot to compare the Australian birth weights with a $N(7.22,1.36)$ distribution.  The dashed line is a line of equality.}\label{fig:babynormalqqenv}
 \end{figure}
 
-\hypertarget{uniform-qq-plots}{%
-\subsection{Uniform QQ plots}\label{uniform-qq-plots}}
+\subsection{Uniform QQ plots}\label{uniform-qq-plots}
 
 Recall that in the Australian births data we wondered whether the time at which a randomly-chosen baby is born might be sampled from a uniform distribution on the interval (0, 24) hours. To examine this we could produce a uniform QQ plot, by plotting the ordered sample values
 \[ u_{(1)},\,  u_{(2)},\, \ldots,\, u_{(43)},\,  u_{(44)} \]
@@ -5419,8 +5298,7 @@ This QQ plot is shown in Figure \ref{fig:unifqq}. The dashed line is a line of e
 
 Like the histogram we saw in Section \ref{uniform} the QQ plot also suggests that babies tend to be born later in the day than would be expected: in the middle of the horizontal axis the times of births are greater than the corresponding quantiles of the \(U(0,24)\) distribution. Notice that the simulation envelopes in this QQ plot show that we expect the largest departures from the straight line in the middle of the distribution than near the ends.
 
-\hypertarget{exponential-qq-plots}{%
-\subsection{Exponential QQ plots}\label{exponential-qq-plots}}
+\subsection{Exponential QQ plots}\label{exponential-qq-plots}
 
 Recall that in the Australian births data we wondered whether the times between the birth might be sampled from an exponential(\(\lambda\)) distribution. We estimated \(\lambda\) using \(\hat{\lambda} = 1.84\).
 
@@ -5438,25 +5316,21 @@ The points in the exponential QQ plot in Figure \ref{fig:expqq} are generally cl
 \caption{Exponential QQ plot with simulation envelopes based on 19 simulated datasets. Note the axis scales are in minutes but 1.840 is the estimated birth rate per hour.}\label{fig:expqq}
 \end{figure}
 
-\hypertarget{inference}{%
-\chapter{Statistical Inference}\label{inference}}
+\chapter{Statistical Inference}\label{inference}
 
 Statistics is the science of collecting, analysing and interpreting data.
 Statistical inference makes use of information from a sample to draw conclusions
 (inferences) about the population from which the sample was taken.
 
-\hypertarget{the-story-so-far}{%
-\section{The story so far}\label{the-story-so-far}}
+\section{The story so far}\label{the-story-so-far}
 
 In Chapter \ref{descriptive} we considered ways to describe and summarise \textbf{sample data}. In Chapter \ref{probability} we introduced the concept of the \textbf{probability} of an event and in Chapter \ref{rvs} we defined a \textbf{random variable} to be a mapping of each value in the sample space to a real number. In Chapter \ref{simple} we considered some examples of some simple \textbf{probability distributions} for random variables that may describe the behaviour of a random quantity under certain special situations. When we use a probability distribution in this way we may refer to it as a \textbf{probability model}. In this chapter we consider how to use a probability model to make inferences about quantities of interest using sample data.
 
-\hypertarget{sample-and-populations}{%
-\section{Sample and populations}\label{sample-and-populations}}
+\section{Sample and populations}\label{sample-and-populations}
 
 Suppose that we are interested in the distribution of some aspect of a population, for example, the outcomes of successive tosses of a coin. In many cases it is not possible to collect information on the entire population. Therefore, a subset of the population, a \textbf{sample}, is selected. The aim is to generalise from the particular sample collected to the population from which it came. The sample should be representative of the population. This is often achieved most straightforwardly by random sampling, where each member of the population has an equal chance of being chosen and different selections from the population are independent.
 
-\hypertarget{probmodels}{%
-\section{Probability models}\label{probmodels}}
+\section{Probability models}\label{probmodels}
 
 Often we makes inferences about a population using probability models. We view the data \(X_1, X_2,...,X_n\) as random variables sampled randomly from a probability distribution. The probability distribution often involves unknown constants, or \textbf{parameters}. We use the data to estimate the values of these parameters. We should also quantify how uncertain we are about the values of the parameters. Generally speaking, the more data we have the more certain we can be about the approximate value of the parameters. This process of is called \textbf{statistical inference}, because we are trying to infer the unknown population distribution and its parameters based on sample statistics.
 
@@ -5501,8 +5375,7 @@ A less well-known, but no less true, quote is:
 
 We have seen (at least) one example of data which are wrong: we have good reason to believe that the vote for Buchanan in Palm Beach County is much larger than it should be. An important part of a statistical analysis is to check for errors or problems in the data. Some errors will be obvious (e.g.~resulting from a decimal point being in the wrong place); others will be more difficult to spot. Simple graphical checks are often very effective for this purpose. Preliminary graphical descriptions of the can also indicate how best to analyse the data more formally.
 
-\hypertarget{fitting-models}{%
-\section{Fitting models}\label{fitting-models}}
+\section{Fitting models}\label{fitting-models}
 
 Usually a probability model involves unknown parameters, that is, constants whose values we do not know. We use data to estimate the values of unknown parameters. We have already seen several examples of this.
 
@@ -5541,15 +5414,13 @@ A single value given as an estimate of a parameter is a \textbf{point estimate}.
 
 There are many ways to create estimators of a parameter. We will not study them here. However, one general principle is often applied: we estimate the parameter by the value for which the data we observed are most likely. This is the idea behind a method of estimation called maximum likelihood estimation.
 
-\hypertarget{uncertainty-in-estimation}{%
-\section{Uncertainty in estimation}\label{uncertainty-in-estimation}}
+\section{Uncertainty in estimation}\label{uncertainty-in-estimation}
 
 We have already considered uncertainty in estimation in the space shuttle example. Here we recap the main ideas using the coin-tossing example. In his coin-tossing experiment Jon Kerrich produced 5067 heads in 10,000 coin tosses. This produced an estimate \(\hat{p}=0.5067\) of the probability of heads. We are not certain that this is the true value of \(p\): we are \textbf{uncertain} about the true value.
 
 Suppose that Kerrich repeated his experiment a second time. It is very unlikely that he would obtain exactly 5067 heads in the second experiment. This makes it clear that the outcome of Kerrich's experiment is a random variable: before he tossed the coin no one knew what the outcome would be. Therefore the estimator, \(\hat{p}\), of \(p\) resulting from the experiment is a random variable and has a distribution. The distribution of an estimator is called its \textbf{sampling distribution} and its variability is called \textbf{sampling variability}.
 
-\hypertarget{simulation-coin-tossing-example}{%
-\subsection{Simulation: coin-tossing example}\label{simulation-coin-tossing-example}}
+\subsection{Simulation: coin-tossing example}\label{simulation-coin-tossing-example}
 
 To study the sampling distribution of the estimator \(\hat{p}\) we imagine Kerrich repeating his experiment a large number of times. Each time the experiment is carried out the proportion of heads is calculated. These values are a random sample from the sampling distribution of \(\hat{p}\). We cannot actually get Kerrich to repeat his experiment a large number of times. However, we can use a computer to simulate his experiment. We do this 100,000 times,
 assuming that the coin is fair, that is, \(p=P(H)=1/2\). Figure \ref{fig:coinsim} shows a histogram of the 100,000 estimates of \(p\). This histogram illustrates the sampling distribution of \(\hat{p}\) if \(p=1/2\).
@@ -5565,8 +5436,7 @@ assuming that the coin is fair, that is, \(p=P(H)=1/2\). Figure \ref{fig:coinsim
 
 We can see that the estimates of \(p\) vary approximately symmetrically about \(p=1/2\). We also see that estimates that are larger than Kerrich's are only obtained quite rarely, in fact, only approximately 8.7\% of the time. So, if \(p=1/2\), Kerrich's estimate of \(p\) was quite unusual, but is it so unusual that we might doubt that \(p=1/2\)? This kind of question will be answered in STAT0003 using hypothesis testing.
 
-\hypertarget{simnorm}{%
-\subsection{Simulation: estimating the parameters of a normal distribution}\label{simnorm}}
+\subsection{Simulation: estimating the parameters of a normal distribution}\label{simnorm}
 
 Suppose that we have a random sample of size \(n\) from a normal distribution with unknown mean \(\mu\) and variance \(\sigma^2\). That is,
 \[ X_1, \ldots, X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, N(\mu,\sigma^2). \]
@@ -5602,8 +5472,7 @@ We can see that
 
 In practice we only have \textbf{one} dataset, providing \textbf{one} estimate. Recall (from the space shuttle example) that variability (variance) and uncertainty are closely related. Small variance results in small uncertainty, whereas large variance results in large uncertainty. As we will note in Section \ref{normalexample}, the sampling distribution of each of these estimators, \(\hat{\mu}\) and \(\hat{\sigma}^2\), is centred on their respective true value, \(\mu\) and \(\sigma^2\), in the sense that \(\text{E}(\hat{\mu}) = \mu\) and \(\text{E}(\hat{\sigma}^2) = \sigma^2\). If one of these estimators has a small variance then the estimate from a single dataset will tend not to be be far from the truth, but if it has a large variance then the estimate could be far from the truth.
 
-\hypertarget{simexp}{%
-\subsection{Simulation: estimating the parameters of an exponential distribution}\label{simexp}}
+\subsection{Simulation: estimating the parameters of an exponential distribution}\label{simexp}
 
 Now we carry out exactly the same exercise for a random sample of size \(n\) from an exponential distribution with unknown mean \(\mu=1/\lambda\) and variance \(\sigma^2=1/\lambda^2\). That is,
 \[ X_1,\ldots , X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{exponential}(\lambda). \]
@@ -5626,13 +5495,11 @@ We see the same general behaviour as in the normal example (estimators become mo
 
 \textbf{(ii)} the sampling distribution of the sample variance is very positively skewed for small sample sizes but becomes more symmetric as the sample size increases.
 
-\hypertarget{central-limit-theorem-clt}{%
-\subsection{Central Limit Theorem (CLT)}\label{central-limit-theorem-clt}}
+\subsection{Central Limit Theorem (CLT)}\label{central-limit-theorem-clt}
 
 Point (i) illustrates an important result called the (classical) \textbf{Central Limit Theorem}, whose consequence is that the sample mean of a \textbf{very large} random sample from a distribution with a finite mean and a finite positive variance is approximately normally distributed, regardless of the shape of the population distribution. In short, sample means (or indeed sample sums) may have approximately a normal distribution provided that the sample size is large enough. The sample size required depends on the shape of the population distribution: the closer the population distribution is to being normal the smaller is the sample size needed for the sample mean to be approximately normal. (There are versions of the CLT in which some of the strong classical assumptions stated above can be replaced with weaker assumptions.)
 
-\hypertarget{good}{%
-\section{Properties of estimators}\label{good}}
+\section{Properties of estimators}\label{good}
 
 In Sections \ref{simnorm} and \ref{simexp} we saw that increasing the sample size \(n\) reduced the variances of the estimators and made them more precise. In practice, we may not be able to increase the sample size because we are given a dataset of a certain size. However, we can choose which estimator we use. How can we choose a `good' one, or even the `best', according to some measure of quality? A general idea is that a good estimator \(T\) of a parameter \(\theta\) has a sampling distribution that is as concentrated as closely as possible about \(\theta\). We consider some properties of an estimator using the following running example.
 
@@ -5642,8 +5509,7 @@ Suppose that
 \[X_1, \,\ldots,X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, N(\mu,\sigma^2),\]
 where \(\sigma^2\) is positive and finite. We define the estimator \(\hat{\mu}=\overline{X}=\displaystyle\frac{1}{n}\sum_{i=1}^n\,X_i\) of \(\mu\).
 
-\hypertarget{bias}{%
-\subsection{Bias}\label{bias}}
+\subsection{Bias}\label{bias}
 
 An estimator \(T\) is \textbf{unbiased} for a parameter \(\theta\) if \(\mbox{E}(T)=\theta\) for all possible values of \(\theta\). The \textbf{bias} of \(T\) is \(\mbox{bias}(T)=\mbox{E}(T)-\theta\). If \(T\) is unbiased then \(\mbox{bias}(T)=0\).
 
@@ -5651,8 +5517,7 @@ We have seen that
 \[\hat{\mu} =\overline{X} \sim N\left(\mu,\frac{\sigma^2}{n}\right).\]
 Therefore, \(\mbox{E}(\overline{X}) = \mu\) and \(\overline{X}\) is unbiased for \(\mu\).
 
-\hypertarget{varianceofestimator}{%
-\subsection{Variance}\label{varianceofestimator}}
+\subsection{Variance}\label{varianceofestimator}
 
 Suppose that \(T\) is unbiased for \(\theta\). If \(\mbox{var}(T)\) is small then the sampling distribution of \(T\) is concentrated closely about \(\theta\).
 
@@ -5660,8 +5525,7 @@ Suppose that we compare 2 unbiased estimators \(T_1\) and \(T_2\). If \(\mbox{va
 
 Suppose now that we compare two estimators, \(T_u\) and \(T_b\), where \(T_u\) is unbiased and \(T_b\) is biased. Based on this information alone, we might choose \(T_u\). However, if we find that \(\mbox{var}(T_b) < \mbox{var}(T_u)\) then which estimator should we choose? One estimator wins on one property and the other estimator wins on the other property. One solution is to combine these two properties into one property.
 
-\hypertarget{mean-squared-error-mse}{%
-\subsection{Mean squared error (MSE)}\label{mean-squared-error-mse}}
+\subsection{Mean squared error (MSE)}\label{mean-squared-error-mse}
 
 The mean squared error \(\mbox{MSE}(T)\)) of an estimator \(T\) is defined as
 \[ \mbox{MSE}(T) = \mbox{E}[(T - \theta)^2]. \]
@@ -5672,15 +5536,13 @@ We can show that
 \end{equation}
 This is one way that we could combine bias and variance into one quantity. If, for example, \(\mbox{MSE}(T_b) < \mbox{MSE}(T_u)\) then, based on the \(\mbox{MSE}\) criterion, we prefer \(T_b\) to \(T_u\).
 
-\hypertarget{standard-error}{%
-\subsection{Standard error}\label{standard-error}}
+\subsection{Standard error}\label{standard-error}
 
 We have seen that the variance, or standard deviation, of an estimator is of interest. Often, \(\mbox{var}(T)\) depends on unknown parameters that need to be estimated from the data. In cases like this we need to estimate the standard deviation of \(T\) by substituting estimates for the unknown parameters in \(\sqrt{\mbox{var}(T)}\). This is then called the estimated \textbf{standard error} of \(T\), or \(\mbox{SE}(T)\).
 
 For example, we found that \(\mbox{var}(\hat{\mu})=\sigma^2/n\). We estimate \(\sigma\) using the sample standard deviation \(\hat{\sigma} = \sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i-\overline{x})^2}\). Therefore, \(\mbox{SE}(\hat{\mu})=\hat{\sigma}/\sqrt{n}\).
 
-\hypertarget{consistency}{%
-\subsection{Consistency}\label{consistency}}
+\subsection{Consistency}\label{consistency}
 
 \textbf{Definition}. An estimator \(T\) is (weakly) consistent for \(\theta\) if
 \begin{equation}
@@ -5701,8 +5563,7 @@ For an estimator \(T\) to be consistent it is \textbf{necessary} for the conditi
 
 Note that if \(\mbox{MSE}(T)\) does not tend to zero as \(n\) tends to infinity then this does \textbf{not} mean that \(T\) is not consistent for \(\theta\). It just means that we need to use the condition in equation \eqref{eq:consistency} to establish whether or not \(T\) is consistent. It is possible for \(T\) to be consistent even thought \(\mbox{MSE}(T)\) does not tend to zero as \(n\) tends to infinity.
 
-\hypertarget{normalexample}{%
-\subsection{Normal example}\label{normalexample}}
+\subsection{Normal example}\label{normalexample}
 
 We return to our running example, which is based on a random sample
 
@@ -5763,8 +5624,7 @@ We remove the assumption of normality, so that we have \(X_1, \ldots, X_n\) are 
 
 Under these weaker assumptions it is still true that \(\mbox{E}(\overline{X})=\mu\), \(\mbox{var}(\overline{X})=\sigma^2/n\) and \(\mbox{E}(S^2)=\sigma^2\). However, the expression that we gave for \(\mbox{var}(S^2)\) \textbf{does} rely on the assumption of normality.
 
-\hypertarget{assessing-goodness-of-fit}{%
-\section{Assessing goodness-of-fit}\label{assessing-goodness-of-fit}}
+\section{Assessing goodness-of-fit}\label{assessing-goodness-of-fit}
 
 Once we have fitted a model to data a natural question to ask is: ``How well does the model fit these data?''
 
@@ -5774,8 +5634,7 @@ Statistical modelling is an iterative process. We fit a model and examine how we
 
 \textbf{Systematic lack-of-fit}. The \textbf{overall} behaviour of the data is different from that of the model. For example, in section \ref{normal} our probability model for birth weights was a normal distribution with unknown mean and variance. However, the histogram and normal QQ plot of birth weights we plotted suggest that this model does not fit the data well. The lack-of-fit is not due to any particular set of observations - it is because the distribution of the data is fairly obviously skewed.
 
-\hypertarget{residuals}{%
-\subsection{Residuals}\label{residuals}}
+\subsection{Residuals}\label{residuals}
 
 Residuals are measures of how closely a model agrees with the observed data.
 The simplest kind of residuals are the differences between observations the \(y_1, \ldots, y_n\) and the fitted values \(\hat{y}_1,\ldots,\hat{y}_n\) under a model, that is,
@@ -5845,15 +5704,13 @@ total
 
 There are no very large residuals and there is no obvious pattern in the signs of the residuals. Overall, the Poisson distribution seems to fit well. Of course, this is only an informal assessment.
 
-\hypertarget{standardised-residuals}{%
-\subsection{Standardised residuals}\label{standardised-residuals}}
+\subsection{Standardised residuals}\label{standardised-residuals}
 
 It is common to \textbf{standardise} residuals so that they each have approximately the same variance: usually a variance of 1. Note: before we observe the data the residuals are random variables. In some cases, for example for a linear regression model, standardised residuals should look like they have been sampled from a normal distribution, if the model is true. If they do not, this suggests that the model is not true.
 
 In this course we assess goodness-of-fit informally, using graphs and tables. We have already seen examples of this. For discrete data we compared observed proportions with theoretical probabilities and observed frequencies with estimated expected frequencies. For continuous data we compared a histogram of the data with fitted p.d.f.s and looked at QQ plots. Looking at graphs and tables can be useful, because if the fit is not good then they can help us to judge how we might need to improve the model.
 
-\hypertarget{contingency}{%
-\chapter{Contingency tables}\label{contingency}}
+\chapter{Contingency tables}\label{contingency}
 
 In this chapter, and the next chapter on linear regression, we explore the relationships between two, or more, variables. In this chapter we consider the situation where all variables are categorical. In Chapter \ref{linreg} the main variable of interest is continuous.
 
@@ -5880,8 +5737,7 @@ These Berkeley admissions data also contain the department to which the applican
 
 In Chapter \ref{probability} we defined the population of interest to be graduate applications to Berkeley in 1973. We calculated, for example, the probability that an applicant chosen at random from this population is accepted. Now we will be more adventurous. We are interested in graduate applications to Berkeley \textbf{in general}. We wish to make inferences about the probabilities of acceptance for males and females, generally, not just those who happened to apply in 1973. The applications from 1973 are merely a (hopefully representative) sample of data which we use to make inferences about these probabilities. We wish to examine whether sex and the outcome of the application are associated. We do this in Section \ref{way2}. We also wish to consider how the department to which the applicant applies affects things. We do this in Section \ref{way3}. We will see that when there are more than two variables there are several ways to study the association between them.
 
-\hypertarget{way2}{%
-\section{2-way contingency tables}\label{way2}}
+\section{2-way contingency tables}\label{way2}
 
 We analyse the data in Figure \ref{fig:berk2way}. We will consider two questions.
 
@@ -5895,8 +5751,7 @@ We will see that the calculations performed to answer Question 1 are the same as
 
 This is clearly not what would have happened in this example. Nevertheless, we consider both questions because there are examples where totals are fixed. An example is a case-control study, in which potential risk factors for a disease are studied by looking for differences in characteristics between people who have the disease, the cases, and those who do not, the controls. We return to this in Section \ref{measures}.
 
-\hypertarget{indep}{%
-\subsection{Independence}\label{indep}}
+\subsection{Independence}\label{indep}
 
 \textbf{Question 1: independence}. Are the random variables outcome and sex independent?
 
@@ -6073,8 +5928,7 @@ It is not a coincidence that the square root of the \(X^2\) statistic, \(\sqrt{9
 
 Now suppose that the real data had given a value of 0.45, for example. The histogram suggests that under \(H_0\) a value as large as this is quite likely to occur (in fact 0.45 is the median of the \(\chi^2_1\) distribution) so we would not reject \(H_0\).
 
-\hypertarget{compprob}{%
-\subsection{Comparing probabilities}\label{compprob}}
+\subsection{Comparing probabilities}\label{compprob}
 
 \textbf{Question 2: comparing probabilities}. Is the probability of acceptance equal for males and females?
 
@@ -6112,8 +5966,7 @@ Then, if \(P(A~|~M)=P(A~|~F)=P(A)\), the estimated expected frequency for sex=\(
 \[ \hat{P}(A) \times 2691 = \frac{1755}{4526} \times 2691 = 1043.46. \]
 This is exactly the same estimated expected frequency as in question 1. The estimated expected frequencies (and the residuals and standardised Pearson residuals) under the assumption that \(P(A~|~M)=P(A~|~F)\) are identical to those under the assumption that sex and outcome are independent. This makes sense: if outcome (\(Y\)) is independent of sex (\(X\)) then the probability distribution of outcome is the same for each sex. The calculations used to answer Question 1 are the same as the calculations used to answer Question 2.
 
-\hypertarget{measures}{%
-\subsection{Measures of association}\label{measures}}
+\subsection{Measures of association}\label{measures}
 
 If we decide that the probability of acceptance depends on sex then we should also indicate \textbf{how} it depends on sex and \textbf{how much}. How can we compare the values of 2 probabilities: \(P(A~|~M)\) and \(P(A~|~F)\)?
 
@@ -6207,8 +6060,7 @@ However, \textbf{can} estimate the odds ratio that we would like, that is, the o
 
 Finally, we note that in cases where the events of interest happen very rarely, that is, they have very small probabilities, then the relative risk and the odds ratio have similar values. This is because when a probability \(p\) is close to \(0\), \(p/(1-p) \approx p\). Therefore, in studies of a rare disease an estimated odds ratio is often taken as an estimate of a relative risk.
 
-\hypertarget{way3}{%
-\section{3-way contingency tables}\label{way3}}
+\section{3-way contingency tables}\label{way3}
 
 Figure \ref{fig:berk3way} shows the 2 \(\times\) 2 \(\times\) 6 contingency table that results from classifying applicants according to 3 categorical variables: sex (\(X\)), outcome (\(Y\)) and department (\(Z\)). We now have a 2-way contingency table, like the one we analysed in Section \ref{way2}, in each of the 6 departments.
 
@@ -6229,8 +6081,7 @@ In a 3-way contingency table there are many possible associations that we could 
 
 \textbf{Conditional independence}. We consider 2 variables separately for each value of the third variable, e.g.~outcome and sex separately with each department.
 
-\hypertarget{mutual-independence}{%
-\subsection{Mutual independence}\label{mutual-independence}}
+\subsection{Mutual independence}\label{mutual-independence}
 
 We examine whether the categorical random variables sex, outcome and department are mutually independent, that is, there are no relationships between these three variables. We have already seen in Section \ref{way2} that the data suggest that outcome and sex are not independent. If outcome and sex are not independent then outcome, sex and department cannot be mutually independent.
 
@@ -6251,8 +6102,7 @@ where
 \[ \hat{p}_{i++} = \frac{n_{i++}}{n}, \qquad \hat{p}_{+j+} = \frac{n_{+j+}}{n}, \qquad 
 \hat{p}_{++k} = \frac{n_{++k}}{n}. \]
 
-\hypertarget{marginal-independence}{%
-\subsection{Marginal independence}\label{marginal-independence}}
+\subsection{Marginal independence}\label{marginal-independence}
 
 We produce \textbf{marginal} 2-way contingency tables by ignoring one of the variables, and examine the association between the remaining 2 variables. We have already looked at the association between outcome and sex.
 
@@ -6312,8 +6162,7 @@ Is there association between department and outcome? It turns out that departmen
 \caption{Estimated conditional probabilities of acceptance given department.}\label{fig:berkmarg4}
 \end{figure}
 
-\hypertarget{conditional-independence}{%
-\subsection{Conditional independence}\label{conditional-independence}}
+\subsection{Conditional independence}\label{conditional-independence}
 
 Now we look at the association between sex and outcome separately within each department. We simply analyse each of the six 2 \(\times\) 2 tables in Figure \ref{fig:berk3way}. In other words we \textbf{condition} on the value of department, for example, department=1, ignoring the data from other departments. Then we examine whether sex and outcome are conditionally independent given that department=1.
 We do this for each department in turn.
@@ -6353,8 +6202,7 @@ We leave the calculation of estimated expected frequencies and residuals for dep
 
 A positive value indicates that more males were accepted than would be expected if outcome and sex are independent, whereas a negative value indicates that more females were accepted than would be expected. In only one department, department 1, do the data seem inconsistent with outcome and sex being independent. In this department females seem to have a higher probability of acceptance. Note, this may not be a result of discrimination in favour of females: there may be other data that explain why this happens.
 
-\hypertarget{confounding-variables}{%
-\subsection{Confounding variables}\label{confounding-variables}}
+\subsection{Confounding variables}\label{confounding-variables}
 
 We have observed the following.
 
@@ -6384,8 +6232,7 @@ The estimated association between sex and outcome depends on the value of the va
 
 The moral is that it can be dangerous to `collapse' a 3-way contingency table down to a 2-way contingency table, by ignoring a variable. If we move from a 3-way table to a 2-way table without analysing the 3-way table we may be throwing away important data.
 
-\hypertarget{linreg}{%
-\chapter{Linear regression}\label{linreg}}
+\chapter{Linear regression}\label{linreg}
 
 In this chapter, and Chapter \ref{correlationchapter}, we examine the relationship between 2 continuous variables. First we consider \textbf{regression} problems, where the distribution of a \textbf{response variable} \(Y\) is thought to be dependent on the value of an \textbf{explanatory variable} \(X\). Possible aims are (a) to understand the relationship between \(Y\) and \(X\), or (b) to predict \(Y\) from the value of \(X\). We examine the conditional distribution of the random variable \(Y\) given that \(X=x\), that is, \(Y \mid X=x\). In particular, we study a \textbf{simple linear regression model} in which the conditional mean \(\mbox{E}(Y \mid X=x)\) of \(Y\) given that \(X=x\) is assumed to be a linear function of \(x\) and the conditional variance \(\mbox{var}(Y \mid X=x)\) of \(Y\) is assumed to be constant. That is,
 \[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \mbox{and} \qquad \mbox{var}(Y \mid X=x)=\sigma^2, \]
@@ -6407,8 +6254,7 @@ In a related, but different, problem the 2 random variables \(Y\) and \(X\) are 
 
 Regression answers the question ``How does the conditional distribution of the random variable \(Y\) depend on the value \(x\) of \(X\)?''. Correlation answers the question ``How strong is any \textbf{linear} association between the random variables \(Y\) and \(X\)?''. In a regression problem we assume that the \(Y\) values are random variables (that is, subject to random variability) but the \(x\) values are not. When using a correlation coefficient we assume that both \(X\) and \(Y\) are random variables.
 
-\hypertarget{simple-linear-regression}{%
-\section{Simple linear regression}\label{simple-linear-regression}}
+\section{Simple linear regression}\label{simple-linear-regression}
 
 We use a small set of data, and some physical theory, to estimate the age of the Universe! In 1929 the famous astronomer Edwin Hubble published a paper (\citet{Hubble1929}) reporting a relationship he had observed (using a telescope) between the distance of a nebula (a star) from the Earth and the velocity (the \textbf{recession velocity}) with which it was moving away from the Earth. Hubble's data are given in Table \ref{fig:tablehubble}. A scatter plot of distance against velocity is given in Figure \ref{fig:hubblescatter}.
 
@@ -6440,8 +6286,7 @@ The points in Figure \ref{fig:hubblescatter} do not lie exactly on a straight li
 
 In Figure \ref{fig:hubblescatter} it looks possible that there is a straight line relationship between \(\mbox{E}(Y \mid X=x)\) and \(x\). Therefore we consider fitting a simple linear regression model of \(Y\) on \(x\). You could think of this as a way to draw a `line of best fit' through the points in Figure \ref{fig:hubblescatter}.
 
-\hypertarget{simple-linear-regression-model}{%
-\subsection{Simple linear regression model}\label{simple-linear-regression-model}}
+\subsection{Simple linear regression model}\label{simple-linear-regression-model}
 
 We assume that
 \begin{equation}
@@ -6450,7 +6295,7 @@ Y_i = \alpha + \beta\,x_i +  \epsilon_i, \qquad i=1,\ldots,n,
 \end{equation}
 where \(\epsilon_i, i=1, \ldots, n\) are error terms, representing random `noise'. The \(\alpha + \beta\,x_i\) part of the model is the \textbf{systematic} part. The \(\epsilon_i\) is the \textbf{random} part of the model. It is assumed that, for \(i = 1, ..., n\),
 \[  \mbox{E}( \epsilon_i)=0, \qquad \mbox{and} \qquad  \mbox{var}( \epsilon_i)=\sigma^2, \]
-and that \(\epsilon_1, \ldots, \epsilon_n\) are \textbf{uncorrelated}. We will study \textbf{correlation} in the next section. It is a measure of the degree of \textbf{linear} association between two random variables. Uncorrelated random variables have no linear association. \(\epsilon_1, \ldots, \epsilon_n\) are \textbf{uncorrelated} if each pair of these variables is uncorrelated.
+and that \(\epsilon_1, \ldots,  \epsilon_n\) are \textbf{uncorrelated}. We will study \textbf{correlation} in the next section. It is a measure of the degree of \textbf{linear} association between two random variables. Uncorrelated random variables have no linear association. \(\epsilon_1, \ldots,  \epsilon_n\) are \textbf{uncorrelated} if each pair of these variables is uncorrelated.
 
 Another way to write down this model is, for \(i=1,\ldots,n\),
 \[  \mbox{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\mbox{straight line relationship}), \]
@@ -6484,8 +6329,7 @@ of \(Y\) is assumed to vary with the value of \(x\).
   Error variance: \(\sigma^2\). The variability of the response about the linear regression line (in the vertical direction).
 \end{itemize}
 
-\hypertarget{olsestimators}{%
-\subsection{\texorpdfstring{Least squares estimation of \(\alpha\) and \(\beta\)}{Least squares estimation of \textbackslash alpha and \textbackslash beta}}\label{olsestimators}}
+\subsection{\texorpdfstring{Least squares estimation of \(\alpha\) and \(\beta\)}{Least squares estimation of \textbackslash alpha and \textbackslash beta}}\label{olsestimators}
 
 Suppose that we have paired data \((x_1,y_1), \ldots, (x_n,y_n)\). How can we fit a simple linear regression model to these data? Initially, our aim is to use estimators \(\hat{\alpha}\) and \(\hat{\beta}\) of \(\alpha\) and \(\beta\) to produce an estimated regression line
 \[ y= \hat{\alpha}+\hat{\beta}\,x. \]
@@ -6525,8 +6369,7 @@ that is, these estimators are unbiased for the parameters they are intended to e
 {\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
 where \(0 \leq R\text{-squared} \leq 1\). Think of \(R\text{-squared}\) as a name, not literally as the square of a quantity \(R\). \(R\text{-squared}=1\) indicates a perfect fit; \(R\text{-squared}=0\) indicates that none of the variability in \(Y_1,\ldots,Y_n\) is explained by \(x_1,\ldots,x_n\), producing a horizontal regression line (\(\hat{\beta}=0\)). The value of \(R\text{-squared}\), perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in \(Y\) that is explained by \(x\).
 
-\hypertarget{least-squares-fitting-to-hubbles-data}{%
-\subsection{Least squares fitting to Hubble's data}\label{least-squares-fitting-to-hubbles-data}}
+\subsection{Least squares fitting to Hubble's data}\label{least-squares-fitting-to-hubbles-data}
 
 Figures \ref{fig:hubblefitflat}, \ref{fig:hubblefitorigin} and \ref{fig:hubblefit} show least squares regression lines under 3 different models:
 
@@ -6613,8 +6456,7 @@ Using these data we obtain \(\hat{T}=0.0123\) which gives
 0.0123 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} \approx 12 \mbox{ billion years}. \]
 This estimate agrees more closely with current scientific understanding of the age of the Universe than Hubble original estimate.
 
-\hypertarget{normal-linear-regression-model}{%
-\subsection{Normal linear regression model}\label{normal-linear-regression-model}}
+\subsection{Normal linear regression model}\label{normal-linear-regression-model}
 
 It is common to make the extra assumption that the errors are normally distributed:
 \[ \epsilon_i \sim N(0,\sigma^2), \qquad i=1,\ldots,n. \]
@@ -6622,8 +6464,7 @@ In other words
 \[ Y_i \mid X=x_i \sim N(\alpha+\beta\,x_i,\sigma^2), \qquad i=1,\ldots,n. \]
 This assumption can be used to (a) decide whether the explanatory variable \(x\) is needed in the model, and (b) produce interval estimates of \(\alpha, \beta, \sigma^2\) and for predictions made from the model. These tasks are beyond the scope of STAT0002, but are covered in STAT0003.
 
-\hypertarget{lmsummary}{%
-\subsection{Summary of the assumptions of a (normal) linear regression model}\label{lmsummary}}
+\subsection{Summary of the assumptions of a (normal) linear regression model}\label{lmsummary}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6651,8 +6492,7 @@ If two random variables are independent then they are uncorrelated, that is, ind
 
 Notice that, even in the normal linear regression model, we have not made any assumption about the distribution of the \(x\)s. In some studies the values of \(x\) are chosen by an experimenter, that is, they are not random at all.
 
-\hypertarget{looking}{%
-\section{Looking at scatter plots}\label{looking}}
+\section{Looking at scatter plots}\label{looking}
 
 Before fitting a linear regression model we should look at a scatter plot of \(Y\) against \(x\) to see whether the assumptions of the linear regression model appear to be reasonable. Some questions:
 
@@ -6751,8 +6591,7 @@ This is beyond the scope of STAT0002. You will study this in STAT0006.
 
 If we use transformation to make the assumptions of the simple linear regression model reasonable then, ideally, the transformation should make sense in terms of the subject matter of the data, and be easy to interpret. When interpreting the results of the modelling we need to take into account any transformation used. We will consider some examples where transformation is needed in Section \ref{linregtrans}. In the next section we consider how to check the assumptions of a model \textbf{after} it has been fitted.
 
-\hypertarget{model-checking}{%
-\section{Model checking}\label{model-checking}}
+\section{Model checking}\label{model-checking}
 
 We consider how to use residuals to check the various assumptions of a simple linear regression model. The residual \(r_i\) is a measure of how closely a model agrees with the observation \(y_i\). Recall that we are checking for both isolated lack-of-fit (a few unusual observations) and systematic lack-of-fit (where some more general behaviour of the data is different from the model).
 
@@ -6888,8 +6727,7 @@ the fact that the error distribution is skewed.
 
 There is no obvious lack-of-fit for Model 3. For Model 2 the main effect of forcing the regression line through the origin is to produce weak linear patterns in the plots of residuals against fitted values and against velocity.
 
-\hypertarget{departures-from-assumptions}{%
-\subsection{Departures from assumptions}\label{departures-from-assumptions}}
+\subsection{Departures from assumptions}\label{departures-from-assumptions}
 
 As we have seen in Section \ref{lmsummary} the main assumptions underlying a (normal) linear regression model are linearity, constant error variance, independence of errors and normality of errors. Since all models are wrong (see Section \ref{probmodels} these assumptions cannot be exactly true. However, we hope that they are approximately true, or at least close enough to being true that the results from the model are useful.
 
@@ -7002,8 +6840,7 @@ Action:
 
 The order of importance of the assumptions for a linear model (most important first) is: linearity and independence, constant error variance, normality of errors. We may find that there are clear departures from more than one assumption, for example, the relationship between \(Y\) and \(x\) is non-linear and the error variance is not constant. If we are lucky we might find a transformation to improve both of these departures.
 
-\hypertarget{outliers}{%
-\subsection{Outliers and influential observations}\label{outliers}}
+\subsection{Outliers and influential observations}\label{outliers}
 
 We have already considered the possibility of outliers. We shouldn't remove an observation just because it appears to be an outlier. However, we should consider whether the conclusions of our analysis are not influenced strongly by outliers. An observation which influences strongly the conclusions of a statistical analysis is called an \textbf{influential observation}. We can assess whether an observation (or group of observations) is influential is to carry out the analysis with and without the observation, and see whether the conclusions change by a practically relevant amount. We will see that in a linear regression analysis some types of outlier are influential, whereas others are not.
 
@@ -7078,8 +6915,7 @@ Before carrying out a statistical analysis the data should be checked for unusua
 
 There must be a good reason for deleting an observation.
 
-\hypertarget{linregtrans}{%
-\section{Use of transformations}\label{linregtrans}}
+\section{Use of transformations}\label{linregtrans}
 
 In Section \ref{transformation} we found that taking a log transformation of rainfall amounts in the cloud-seeding dataset had two effects: (a) it made the values in the two groups more symmetrically distributed, and (b) made the respective sample variances more similar. In Section \ref{looking} we saw examples where there were clear departures from the assumptions of a linear regression model (see Section \ref{lmsummary}), but where a transformation of \(Y\) and/or \(x\) might be able to improve this.
 
@@ -7179,8 +7015,7 @@ However, it may not be possible for a single transformation to achieve all the p
 
 If we wish to fit a linear regression model, after transforming \(Y\), a compromise is necessary.
 
-\hypertarget{interpretation-after-transformation}{%
-\subsection{Interpretation after transformation}\label{interpretation-after-transformation}}
+\subsection{Interpretation after transformation}\label{interpretation-after-transformation}
 
 If we use a transformation we should be careful to interpret the results carefully in light of the transformation used. Often we will want to report the results on the original scale of the data, rather than the transformed scale. We illustrate this using the 2000 US Presidential Election example, using Model 3:
 \[ \mbox{E}(\log Y \mid X=x) = \alpha+\beta\,\log x, \]
@@ -7231,8 +7066,7 @@ Therefore,
 
 Therefore, if the error variance \(\sigma^2\) is small then \(\mbox{E}(Y \mid X = x) \approx \mbox{median}(Y \mid X = x).\)
 
-\hypertarget{over-fitting}{%
-\section{Over-fitting}\label{over-fitting}}
+\section{Over-fitting}\label{over-fitting}
 
 We fitted a straight line model,
 \[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x, \]
@@ -7262,15 +7096,13 @@ As the degree of the polynomial increases the \(RSS\) decreases. Fitting a polyn
   \textbf{Poor prediction}. A fitted curve that is too complicated will tend to predict new values poorly, because the curve adapts too closely to the random wiggles of the data, rather than getting the general relationship between \(Y\) and \(x\) approximately correct. A model that fits existing data well doesn't necessarily predict new observations well.
 \end{itemize}
 
-\hypertarget{correlationchapter}{%
-\chapter{Correlation}\label{correlationchapter}}
+\chapter{Correlation}\label{correlationchapter}
 
 Now we consider the situation where objects are sampled randomly from a population, and, for each object, we observe the values of random variables \(X\) and \(Y\). Therefore, unlike regression sampling, where the values of \(X\) are chosen by an experimenter, both \(X\) and \(Y\) are random variables. Unlike a regression problem, we treat \(X\) and \(Y\) symmetrically, that is, we do not identify one variable as a response and one as explanatory. We are interested in the relationship between \(X\) and \(Y\). How are they associated, and how strongly?
 
 When estimating correlation from data we will concentrate on the sample correlation coefficient \(r\) defined in equation \eqref{eq:corr} of Section \ref{corr1}, which is a measure of the strength of \textbf{linear} association. However, the general comments that we make will also apply to Spearman's rank correlation coefficient \(r_S\) (also defined in section \ref{corr1}.
 
-\hypertarget{correlation-a-measure-of-linear-association}{%
-\section{Correlation: a measure of linear association}\label{correlation-a-measure-of-linear-association}}
+\section{Correlation: a measure of linear association}\label{correlation-a-measure-of-linear-association}
 
 \textbf{UK/USA/Canadian exchange rates}
 
@@ -7300,8 +7132,7 @@ This plot has a much clearer pattern. There is positive, approximately linear, a
 
 Figure \ref{fig:exchangetrans} suggests that \(X\) and \(Y\) are approximately positively, linearly associated. Correlation measures the strength of this linear association.
 
-\hypertarget{covariance-and-correlation}{%
-\section{Covariance and correlation}\label{covariance-and-correlation}}
+\section{Covariance and correlation}\label{covariance-and-correlation}
 
 \textbf{Definition}. Let \(\mu_X=\mbox{E}(X)\) and \(\mu_Y=\mbox{E}(Y)\). The \textbf{covariance} \(\mbox{cov}(X,Y)\) between two random variables \(X\) and \(Y\) is given by
 \[
@@ -7338,8 +7169,7 @@ Interpretation of \(\rho\):
   If \(\rho=0\) we say that \(X\) and \(Y\) are \textbf{uncorrelated}.
 \end{itemize}
 
-\hypertarget{estimation}{%
-\subsection{Estimation}\label{estimation}}
+\subsection{Estimation}\label{estimation}
 
 Suppose that we have a random sample \((X_1,Y_1), ..., (X_n,Y_n)\) from the joint distribution of \(X\) and \(Y\). The \textbf{sample correlation coefficient}
 \[
@@ -7377,8 +7207,7 @@ Therefore, since \(\sqrt{C_{xx}\,C_{yy}}>0\), and \(C_{xy}\) is a sum of contrib
   If the numbers of points in each quadrant are approximately equal then \(r\) is close to 0.
 \end{itemize}
 
-\hypertarget{links-between-regression-and-correlation}{%
-\subsection{Links between regression and correlation}\label{links-between-regression-and-correlation}}
+\subsection{Links between regression and correlation}\label{links-between-regression-and-correlation}
 
 Regression and correlation answer different questions. However, in the case of simple linear regression there are simple links between them. If we regress \(Y\) on \(x\) then
 
@@ -7402,15 +7231,13 @@ These relationships make general sense.
   The value of \(\hat{\beta}\) and the value of \(r\) have the same sign.
 \end{itemize}
 
-\hypertarget{use-and-misuse-of-correlation}{%
-\section{Use and misuse of correlation}\label{use-and-misuse-of-correlation}}
+\section{Use and misuse of correlation}\label{use-and-misuse-of-correlation}
 
 We must be careful to use correlation only when it is appropriate. When it is used we must be careful to interpret its value carefully. In this section we give at some examples to show why we must use correlation with care.
 
 One golden rule is that we should \textbf{always plots the data}.
 
-\hypertarget{do-not-use-correlation-for-regression-sampling-schemes}{%
-\subsection{Do not use correlation for regression sampling schemes}\label{do-not-use-correlation-for-regression-sampling-schemes}}
+\subsection{Do not use correlation for regression sampling schemes}\label{do-not-use-correlation-for-regression-sampling-schemes}
 
 We should \textbf{not} to use correlation to summarise association between \(Y\) and \(X\) when regression sampling has been used, that is, where the values of \(X\) are \textbf{chosen} and then the values of \(Y\) are observed. We use simulation to show us why this is. Figure \ref{fig:xdesigncorr0} shows a random sample of size 100 from a joint distribution of \(X\) and \(Y\) for which \(\rho=0.5\). The sample correlation coefficient is 0.51.
 
@@ -7448,8 +7275,7 @@ The values chosen for \(x\) have a huge effect on \(r\). By choosing the values 
 
 If regression sampling is used the value of \(r\) depends on the values of \(x\) chosen.
 
-\hypertarget{correxamples}{%
-\subsection{Examples of correlations of different strengths}\label{correxamples}}
+\subsection{Examples of correlations of different strengths}\label{correxamples}
 
 Figure \ref{fig:corr8} gives random samples from distributions with correlations \(\rho=0\) (2 of them), \(\rho=\pm 0.3, \rho=\pm 0.7\) and \(\rho=\pm 1\). The data in the bottom plots in Figure \ref{fig:corr8} are both sampled from distributions with \(\rho=0\). However, the associations between the variables are very different. On the left there is no association. On the right there is quite strong non-linear association.
 
@@ -7462,8 +7288,7 @@ Figure \ref{fig:corr8} gives random samples from distributions with correlations
 \caption{Samples from distributions with correlations $\rho=0$ (2 of them), $\rho=\pm 0.3, \rho=\pm 0.7$ and $\rho=\pm 1$.}\label{fig:corr8}
 \end{figure}
 
-\hypertarget{beware-missing-data-codes}{%
-\subsection{Beware missing data codes}\label{beware-missing-data-codes}}
+\subsection{Beware missing data codes}\label{beware-missing-data-codes}
 
 Most real datasets have \textbf{missing observations}. For example, people may decide not to answer some of the questions on a questionnaire. It is quite common to use a missing value code (such as -9) to identify a missing value. We need to be careful not to confuse a numerical missing value code with actual data.
 
@@ -7480,8 +7305,7 @@ Consider the following situation, which is based on a real example.Someone is gi
 
 It is then clear that the large positive value of \(r=0.95\) is due the missing value (-9,-9) being included in the plot. Once this point is removed the sample correlation is negative, \(r=-0.75\), as expected. A plot of the data with the missing value removed in shown on the right side of Figure \ref{fig:corrmissing}.
 
-\hypertarget{more-guessing-sample-correlations}{%
-\subsection{More guessing sample correlations}\label{more-guessing-sample-correlations}}
+\subsection{More guessing sample correlations}\label{more-guessing-sample-correlations}
 
 Figure \ref{fig:guesscorr} gives some scatter plots with their sample correlation coefficients.
 
@@ -7505,8 +7329,7 @@ Based on these plots, you will probably be surprised by the fact that for the da
 \caption{Can you guess the value of the sample correlation coefficient?}\label{fig:guesscorrnew2}
 \end{figure}
 
-\hypertarget{summary}{%
-\subsection{Summary}\label{summary}}
+\subsection{Summary}\label{summary}
 
 Correlation can be used when
 
@@ -7528,8 +7351,7 @@ Correlation should \textbf{not} be used, that is, it can be misleading, if
   \(X\) and \(Y\) are associated non-linearly.
 \end{itemize}
 
-\hypertarget{anscombes-datasets}{%
-\subsection{Anscombe's datasets}\label{anscombes-datasets}}
+\subsection{Anscombe's datasets}\label{anscombes-datasets}
 
 It is very important to plot data before fitting a linear regression model or estimating a correlation coefficient. In 1973 F.J. Anscombe (\citet{Anscombe1973}) created 4 datasets to illustrate the need for this. His data are given in Table \ref{fig:anscombetable}. You discussed these data, and some other examples, in Tutorial 1.
 
@@ -7570,8 +7392,7 @@ Based on these sample statistics we might be tempted to conclude that the associ
 \caption{Scatter plots of Anscombe's datasets. Top left: approximately linear association.  Top right: perfect non-linear association. Bottom left: Perfect linear association apart from 1 outlier.  Bottom right: the increase of 0.5 units in $y$ for each unit increase in $x$ suggested by the regression equation is due to a single observation.}\label{fig:anscombeplot}
 \end{figure}
 
-\hypertarget{we-must-interpret-correlation-with-care.}{%
-\subsection{We must interpret correlation with care.}\label{we-must-interpret-correlation-with-care.}}
+\subsection{We must interpret correlation with care.}\label{we-must-interpret-correlation-with-care.}
 
 Suppose that we find that two variables \(X\) and \(Y\) have a sample correlation which is not close to 0 and that a plot of the sample data suggests that \(X\) and \(Y\) may be linearly related. There are several ways that an apparent linear association can arise.
 
@@ -7614,8 +7435,7 @@ For the period of time over which these series overlap, we extract from the FTSE
 
 We see that there is weak negative association (\(r=-0.32\)) between the FTSE 100 and flu values. Does this suggest that flu causes the FTSE 100 share index to drop, or vice versa? This is not a ridiculous suggestion, but the time series plots suggest that the negative association is due to the fact that the FTSE 100 index has \textbf{increased} over time, whereas the number of people seeing their doctor about flu has \textbf{decreased} over time. There is a third variable, time, which causes changes in both the FTSE 100 and the incidence of flu.
 
-\hypertarget{a-general-strategy-for-statistical-modelling}{%
-\chapter{A general strategy for statistical modelling}\label{a-general-strategy-for-statistical-modelling}}
+\chapter{A general strategy for statistical modelling}\label{a-general-strategy-for-statistical-modelling}
 
 It is important to realise that fitting a probability model to data is just one part of the modelling process. Figure \ref{fig:strategy} gives an outline of a general strategy for statistical modelling of data. The process is iterative, since it is rare that the first model is fitted is adequate. It may be necessary to modify the model several times before it can be used to answer the questions of interest. You should always remember the context behind the data and provide an interpretation of the results in non-statistical terms, particularly if your audience contains people who are not statisticians.
 
