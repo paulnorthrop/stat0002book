@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2024-04-23" />
+<meta name="date" content="2024-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -128,6 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -457,7 +458,7 @@ Y_i = \alpha + \beta\,x_i +  \epsilon_i, \qquad i=1,\ldots,n,
 \end{equation}\]</span>
 where <span class="math inline">\(\epsilon_i, i=1, \ldots, n\)</span> are error terms, representing random ‘noise’. The <span class="math inline">\(\alpha + \beta\,x_i\)</span> part of the model is the <strong>systematic</strong> part. The <span class="math inline">\(\epsilon_i\)</span> is the <strong>random</strong> part of the model. It is assumed that, for <span class="math inline">\(i = 1, ..., n\)</span>,
 <span class="math display">\[  \mbox{E}( \epsilon_i)=0, \qquad \mbox{and} \qquad  \mbox{var}( \epsilon_i)=\sigma^2, \]</span>
-and that <span class="math inline">\(\epsilon_1, \ldots, \epsilon_n\)</span> are <strong>uncorrelated</strong>. We will study <strong>correlation</strong> in the next section. It is a measure of the degree of <strong>linear</strong> association between two random variables. Uncorrelated random variables have no linear association. <span class="math inline">\(\epsilon_1, \ldots, \epsilon_n\)</span> are <strong>uncorrelated</strong> if each pair of these variables is uncorrelated.</p>
+and that <span class="math inline">\(\epsilon_1, \ldots,  \epsilon_n\)</span> are <strong>uncorrelated</strong>. We will study <strong>correlation</strong> in the next section. It is a measure of the degree of <strong>linear</strong> association between two random variables. Uncorrelated random variables have no linear association. <span class="math inline">\(\epsilon_1, \ldots,  \epsilon_n\)</span> are <strong>uncorrelated</strong> if each pair of these variables is uncorrelated.</p>
 <p>Another way to write down this model is, for <span class="math inline">\(i=1,\ldots,n\)</span>,
 <span class="math display">\[  \mbox{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\mbox{straight line relationship}), \]</span>
 and
@@ -948,7 +949,7 @@ Figure 9.21: Fits of polynomial of degrees 2, 3, 4 and 8 to Hubble’s data.
 </div>
 </div>
 <h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
 <div id="ref-Freedman2001" class="csl-entry">
 Freedman, Wendy L., Barry F. Madore, Brad K. Gibson, Laura Ferrarese, Daniel D. Kelson, Shoko Sakai, Jeremy R. Mould, et al. 2001. <span>‘Final Results from the <span>H</span>ubble <span>S</span>pace <span>T</span>elescope Key Project to Measure the <span>H</span>ubble Constant’</span>. <em>The Astrophysical Journal</em> 553 (1): 47–72. <a href="https://doi.org/10.1086/320638">https://doi.org/10.1086/320638</a>.
 </div>
