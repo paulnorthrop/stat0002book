@@ -54,7 +54,7 @@ make more formal methods of statistical analysis unnecessary.
 
 ## Types of data
 
-Before analysing data it is important to consider what **type** they are. This will affect which statistics it is sensible to calculate, which graphs it is sensible to plot and which of the simple distributions we will study in Chapter \@ref(simple) might be used for these data.
+Before analysing data it is important to consider what **type** they are, that is, which scale of measurement is appropriate for comparing values. This will affect which statistics it is sensible to calculate, which graphs it is sensible to plot and which of the simple distributions we will study in Chapter \@ref(simple) might be used for these data.
 
 ### Qualitative or categorical data
 
@@ -102,9 +102,8 @@ Often discrete data are **counts**.  Continuous data usually come from measureme
 
 Quantitative data can be further classified as **interval** or **ratio**. Both interval data and ratio data have the property that an increase of 1 unit means the same whether it is from, say, 1 to 2 or from 10 to 11. However,
 
-* a ratio scale has a natural zero, for example, temperature measured in degrees Kelvin;
-* an interval scale does not have a natural zero, for example temperature 
-measured in Fahrenheit.
+* a ratio scale has a natural zero, for example, temperature measured in degrees Kelvin, that corresponds to an absence of the quantity being measured;
+* an interval scale does not have a natural zero, for example temperature measured in Fahrenheit.
 
 Ratios are only meaningful on a ratio scale.  For example,
 
