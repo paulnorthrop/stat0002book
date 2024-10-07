@@ -812,7 +812,7 @@ include_cropped_graphics("images/hollow_up.png")
 
 Similarly, in Figure \@ref(fig:hollowdown) $x$ is bulging down but now $y$ is bulging up.
 
-```{r echo=FALSE, hollowdown,  fig.show='hold', fig.cap='A curve in which both $y$ and $x$ are bulging down compared to an imaginary straight line drawn between the ends of the curve.'}
+```{r echo=FALSE, hollowdown,  fig.show='hold', fig.cap='A curve in which $x$ is bulging down and $y$ is bulging up compared to an imaginary straight line drawn between the ends of the curve.'}
 include_cropped_graphics("images/hollow_down.png")
 ```
 
