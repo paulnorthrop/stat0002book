@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  7 OCT 2024 11:30
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  8 OCT 2024 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1109,9 +1109,9 @@ File: images/ox_dot_adv.png Graphic file (type bmp)
 <images/ox_dot_adv.png>
 File: images/ox_box_basic.png Graphic file (type bmp)
 <images/ox_box_basic.png>
+[26] [27]
 File: images/ox_box_adv.png Graphic file (type bmp)
 <images/ox_box_adv.png>
-[26] [27]
 File: images/shuttle_barplots.png Graphic file (type bmp)
 <images/shuttle_barplots.png>
 
@@ -1121,15 +1121,16 @@ Overfull \hbox (1.9928pt too wide) in alignment at lines 1423--1423
 
 File: images/ABO_barplots.png Graphic file (type bmp)
 <images/ABO_barplots.png>
+[28] [29]
 File: images/ABO_pie.png Graphic file (type bmp)
 <images/ABO_pie.png>
-[28] [29] [30]
 File: images/ftse_weekly.png Graphic file (type bmp)
 <images/ftse_weekly.png>
 File: images/ftse_weekly_tufte.png Graphic file (type bmp)
 <images/ftse_weekly_tufte.png>
 File: images/flu_tufte_no_label.png Graphic file (type bmp)
 <images/flu_tufte_no_label.png>
+[30]
 File: images/butterflyballot.png Graphic file (type bmp)
 <images/butterflyballot.png>
 File: images/election1.png Graphic file (type bmp)
@@ -1139,10 +1140,10 @@ File: images/election1.png Graphic file (type bmp)
 Roman.cfg
 File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
 ern Roman (RS)
-) [33] [34]
+)
 File: images/election2.png Graphic file (type bmp)
 <images/election2.png>
-[35]
+[33] [34] [35]
 File: images/log_axes.png Graphic file (type bmp)
 <images/log_axes.png>
 [36]
@@ -1157,28 +1158,30 @@ Overfull \hbox (13.99998pt too wide) in alignment at lines 1823--1823
 
 File: images/cloud_box.png Graphic file (type bmp)
 <images/cloud_box.png>
-[38]
 File: images/cloud_box_log.png Graphic file (type bmp)
 <images/cloud_box_log.png>
-[39] [40]
+[38]
 File: images/cloud_stem.png Graphic file (type bmp)
 <images/cloud_stem.png>
-[41]
+
+Underfull \vbox (badness 1783) has occurred while \output is active []
+
+[39]
 File: images/hollow_up.png Graphic file (type bmp)
 <images/hollow_up.png>
 File: images/hollow_down.png Graphic file (type bmp)
 <images/hollow_down.png>
+[40] [41] [42]
 File: images/election_HS1.png Graphic file (type bmp)
 <images/election_HS1.png>
 File: images/election_HS2.png Graphic file (type bmp)
 <images/election_HS2.png>
-[42]
 File: images/tukey.png Graphic file (type bmp)
 <images/tukey.png>
-[43] [44]
+[43]
 File: images/election_HS3.png Graphic file (type bmp)
 <images/election_HS3.png>
-[45]
+[44] [45]
 \bbl@ensure@british {Chapter} 3.
 [46
 
