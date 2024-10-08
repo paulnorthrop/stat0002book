@@ -494,7 +494,7 @@ include_cropped_graphics("images/ox_dot_adv.png")
 
 ### Boxplots
 
-A **boxplot** (or box-and-whisker plot) is a graphical display containing the five-number summary. It also provides ways to assess the overall shape of the data.  Figure \@ref(fig:oxdotbasic)  explains how a standard boxplot is constructed.
+A **boxplot** (or box-and-whisker plot) is a graphical display that was originally devised to depict the five-number summary. It is common to add to this the "whiskers" described below, but even then the five-number summary can be read from the graph. A boxplot also provides ways to assess the overall shape of the data.  Figure \@ref(fig:oxdotbasic)  explains how a boxplot (with whiskers) is constructed.
 
 ```{r echo=FALSE, oxboxbasic, fig.show='hold', fig.cap='Boxplot of the Oxford birth times. The upper end (\\#) of the upper whisker is drawn at the largest observation within a distance $1.5 (q_U-q_L)$ of $q_U$. The lower end (\\$) of the lower whisker is drawn at the smallest observation within a distance $1.5 (q_U-q_L)$ of $q_L$.'}
 include_cropped_graphics("images/ox_box_basic.png")
