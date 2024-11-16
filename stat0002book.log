@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  17 OCT 2024 14:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  16 NOV 2024 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1297,27 +1297,27 @@ File: stat0002book_files/figure-latex/discretecdf-1.pdf Graphic file (type pdf)
 [70] [71] [72]
 \bbl@ensure@british {Chapter} 6.
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4049--4049
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4049--4049
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4049--4049
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4049--4049
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (1.0856pt too wide) in alignment at lines 4049--4049
+Overfull \hbox (1.0856pt too wide) in alignment at lines 4048--4048
 [][][][][][][][][][][][] 
  []
 
@@ -1329,7 +1329,7 @@ File: images/baby_intro.png Graphic file (type bmp)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4168.
+(amsmath)                 on input line 4167.
 
 [75]
 File: images/binom_pmf1.png Graphic file (type bmp)
@@ -1344,44 +1344,44 @@ File: images/binom_pmf4.png Graphic file (type bmp)
 File: images/binom_inference_1b.png Graphic file (type bmp)
 <images/binom_inference_1b.png>
 [78]
-Overfull \hbox (6.39165pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (6.39165pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 15.36[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 6.28[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 2.57[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 1.05[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 0.43[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 0.30[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4377--4377
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 26[][][][]
  []
 
 File: images/baby_geom_bar.png Graphic file (type bmp)
 <images/baby_geom_bar.png>
 [79]
-Underfull \hbox (badness 10000) in paragraph at lines 4419--4420
+Underfull \hbox (badness 10000) in paragraph at lines 4418--4419
 
  []
 
@@ -1389,37 +1389,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 4419--4420
 File: images/baby_geom_fit.png Graphic file (type bmp)
 <images/baby_geom_fit.png>
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 3.84[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 7.04[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 6.45[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 3.94[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 1.81[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4572--4572
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 24[][][][]
  []
 
@@ -1435,7 +1435,7 @@ File: images/poisson_pmf2.png Graphic file (type bmp)
 File: images/poisson_pmf3.png Graphic file (type bmp)
 <images/poisson_pmf3.png>
 [83] [84]
-Underfull \hbox (badness 10000) in paragraph at lines 4686--4688
+Underfull \hbox (badness 10000) in paragraph at lines 4685--4687
 
  []
 
@@ -1462,7 +1462,7 @@ File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
 [90]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4956.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4955.
 [91] [92]
 File: images/qq_picture.png Graphic file (type bmp)
 <images/qq_picture.png>
@@ -1504,7 +1504,7 @@ File: images/exp_simenv.png Graphic file (type bmp)
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5386--5388
+Underfull \hbox (badness 10000) in paragraph at lines 5385--5387
 
  []
 
@@ -1658,17 +1658,17 @@ File: images/exchange_raw.png Graphic file (type bmp)
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
 [158]
-Underfull \hbox (badness 10000) in paragraph at lines 7188--7190
+Underfull \hbox (badness 10000) in paragraph at lines 7187--7189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7190--7192
+Underfull \hbox (badness 10000) in paragraph at lines 7189--7191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7192--7194
+Underfull \hbox (badness 10000) in paragraph at lines 7191--7193
 
  []
 
@@ -1683,7 +1683,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7288.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7287.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
