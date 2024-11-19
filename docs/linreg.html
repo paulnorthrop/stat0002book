@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2024-11-16" />
+<meta name="date" content="2024-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -432,7 +432,7 @@ for some constants <span class="math inline">\(\alpha, \beta\)</span> and <span 
 <h2><span class="header-section-number">9.1</span> Simple linear regression<a href="linreg.html#simple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We use a small set of data, and some physical theory, to estimate the age of the Universe! In 1929 the famous astronomer Edwin Hubble published a paper (<span class="citation">Hubble (<a href="#ref-Hubble1929">1929</a>)</span>) reporting a relationship he had observed (using a telescope) between the distance of a nebula (a star) from the Earth and the velocity (the <strong>recession velocity</strong>) with which it was moving away from the Earth. Hubble’s data are given in Table <a href="linreg.html#fig:tablehubble">9.1</a>. A scatter plot of distance against velocity is given in Figure <a href="linreg.html#fig:hubblescatter">9.2</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:tablehubble"></span>
-<img src="images/hubbletable.png" alt="Hubble's data. 1 MPc = 1 megaparsec = $3.086 \times 10^{19}$ km. A megaparsec is a long distance: the distance from the Earth to the Sun is 'only' $1.5 \times 10^8$ km." width="75%" />
+<img src="images/hubbletable.PNG" alt="Hubble's data. 1 MPc = 1 megaparsec = $3.086 \times 10^{19}$ km. A megaparsec is a long distance: the distance from the Earth to the Sun is 'only' $1.5 \times 10^8$ km." width="75%" />
 <p class="caption">
 Figure 9.1: Hubble’s data. 1 MPc = 1 megaparsec = <span class="math inline">\(3.086 \times 10^{19}\)</span> km. A megaparsec is a long distance: the distance from the Earth to the Sun is ‘only’ <span class="math inline">\(1.5 \times 10^8\)</span> km.
 </p>
@@ -475,8 +475,7 @@ Figure 9.3: Conditional distribution of <span class="math inline">\(Y\)</span> g
 <p><strong>Interpretation of parameters</strong></p>
 <ul>
 <li>Intercept: <span class="math inline">\(\alpha\)</span>. The expected value (mean) of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X=0\)</span>, that is, <span class="math inline">\(\mbox{E}(Y~|~X=0)\)</span>.</li>
-<li>Gradient or slope: <span class="math inline">\(\beta\)</span>. The amount by which the mean of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=x\)</span>, <span class="math inline">\(\mbox{E}(Y~|~X=x)\)</span>,
-increases when <span class="math inline">\(x\)</span> is increased by 1 unit. That is,
+<li>Gradient or slope: <span class="math inline">\(\beta\)</span>. An increase of 1 unit in <span class="math inline">\(x\)</span> corresponds to a change of <span class="math inline">\(\beta\)</span> in the conditional mean of <span class="math inline">\(Y\)</span>, that is,
 <span class="math display">\[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]</span></li>
 <li>Error variance: <span class="math inline">\(\sigma^2\)</span>. The variability of the response about the linear regression line (in the vertical direction).</li>
 </ul>

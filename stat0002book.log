@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  16 NOV 2024 18:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  19 NOV 2024 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1658,17 +1658,17 @@ File: images/exchange_raw.png Graphic file (type bmp)
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
 [158]
-Underfull \hbox (badness 10000) in paragraph at lines 7187--7189
+Underfull \hbox (badness 10000) in paragraph at lines 7186--7188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7189--7191
+Underfull \hbox (badness 10000) in paragraph at lines 7188--7190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7191--7193
+Underfull \hbox (badness 10000) in paragraph at lines 7190--7192
 
  []
 
@@ -1683,7 +1683,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7287.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7286.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>

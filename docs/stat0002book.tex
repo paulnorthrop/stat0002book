@@ -156,7 +156,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Paul Northrop}
-\date{2024-11-16}
+\date{2024-11-19}
 
 \begin{document}
 \maketitle
@@ -6224,7 +6224,7 @@ Is there an explanation for this? The data suggest that
   outcome is dependent on department: some departments have lower acceptances rates than others.
 \end{itemize}
 
-The apparent association between sex and outcome seems actually to be a combined effect of (a) sex affecting department, and (b) department affecting outcome. Sex does not seem to affect outcome directly. Females are more likely than males to apply to the departments into which it is more difficult to be accepted.
+The association between sex and outcome seems to be a combination (a) sex affecting department, and (b) department affecting outcome. Sex does not seem to affect outcome directly. Females are more likely than males to apply to the departments into which it is more difficult to be accepted.
 
 The estimated association between sex and outcome depends on the value of the variable department. It is not uncommon for the estimated association between two variables to change depending on the value of a third variable, a so-called \textbf{confounding} or \textbf{lurking} variable. To confound means to confuse, surprise or mix up. To lurk means to hide in the background, perhaps with sinister intent! In this example, department is the confounding variable. \textbf{Simpson's paradox} describes extreme cases of this, where the direction or nature of the estimated association changes or perhaps disappears. Misleading inferences could be produced if we are not aware of the effects of the confounding variable.
 
@@ -6320,8 +6320,7 @@ of \(Y\) is assumed to vary with the value of \(x\).
 \item
   Intercept: \(\alpha\). The expected value (mean) of \(Y\) when \(X=0\), that is, \(\mbox{E}(Y~|~X=0)\).
 \item
-  Gradient or slope: \(\beta\). The amount by which the mean of \(Y\) given \(X=x\), \(\mbox{E}(Y~|~X=x)\),
-  increases when \(x\) is increased by 1 unit. That is,
+  Gradient or slope: \(\beta\). An increase of 1 unit in \(x\) corresponds to a change of \(\beta\) in the conditional mean of \(Y\), that is,
   \[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]
 \item
   Error variance: \(\sigma^2\). The variability of the response about the linear regression line (in the vertical direction).
