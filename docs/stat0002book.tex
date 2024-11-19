@@ -6232,7 +6232,7 @@ The moral is that it can be dangerous to `collapse' a 3-way contingency table do
 
 \chapter{Linear regression}\label{linreg}
 
-In this chapter, and Chapter \ref{correlationchapter}, we examine the relationship between 2 continuous variables. First we consider \textbf{regression} problems, where the distribution of a \textbf{response variable} \(Y\) is thought to be dependent on the value of an \textbf{explanatory variable} \(X\). Possible aims are (a) to understand the relationship between \(Y\) and \(X\), or (b) to predict \(Y\) from the value of \(X\). We examine the conditional distribution of the random variable \(Y\) given that \(X=x\), that is, \(Y \mid X=x\). In particular, we study a \textbf{simple linear regression model} in which the conditional mean \(\mbox{E}(Y \mid X=x)\) of \(Y\) given that \(X=x\) is assumed to be a linear function of \(x\) and the conditional variance \(\mbox{var}(Y \mid X=x)\) of \(Y\) is assumed to be constant. That is,
+In this chapter, and Chapter \ref{correlationchapter}, we examine the relationship between 2 continuous variables. First we consider \textbf{regression} problems, where the distribution of a \textbf{response variable} \(Y\) may depend on the value of an \textbf{explanatory variable} \(X\). Possible aims of a regression analysis are (a) to understand the relationship between \(Y\) and \(X\), or (b) to predict \(Y\) from the value of \(X\). We examine the conditional distribution of the random variable \(Y\) given that \(X=x\), that is, \(Y \mid X=x\). In particular, we study a \textbf{simple linear regression model} in which the conditional mean \(\mbox{E}(Y \mid X=x)\) of \(Y\) given that \(X=x\) is assumed to be a linear function of \(x\) and the conditional variance \(\mbox{var}(Y \mid X=x)\) of \(Y\) is assumed to be constant. That is,
 \[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \mbox{and} \qquad \mbox{var}(Y \mid X=x)=\sigma^2, \]
 for some constants \(\alpha, \beta\) and \(\sigma^2\).
 
@@ -6251,6 +6251,8 @@ In many cases it is clear which variable should be the response variable \(Y\) a
 In a related, but different, problem the 2 random variables \(Y\) and \(X\) are treated symmetrically. The question is how these random variables are associated. A measure of strength of \textbf{linear} association between 2 variables is given by a \textbf{correlation coefficient} (see Chapter \ref{correlationchapter}).
 
 Regression answers the question ``How does the conditional distribution of the random variable \(Y\) depend on the value \(x\) of \(X\)?''. Correlation answers the question ``How strong is any \textbf{linear} association between the random variables \(Y\) and \(X\)?''. In a regression problem we assume that the \(Y\) values are random variables (that is, subject to random variability) but the \(x\) values are not. When using a correlation coefficient we assume that both \(X\) and \(Y\) are random variables.
+
+Whether using regression or correlation, we must be careful \textbf{not} to suppose that we have discovered in data a \textbf{causal effect} of one variable on another variable, unless we have a justification for doing this. One possible justification is that the data result from a randomised controlled experiment that has been designed carefully to exclude the possibility that an observed dependence/association arises because of \textbf{confounding} variable or variables, as discussed in Section \ref{way3}.
 
 \section{Simple linear regression}\label{simple-linear-regression}
 
@@ -6319,7 +6321,7 @@ of \(Y\) is assumed to vary with the value of \(x\).
 \tightlist
 \item
   Intercept: \(\alpha\). The expected value (mean) of \(Y\) when \(X=0\), that is,
-  \[\alpha = \mbox{E}(Y~|~X=0)\].
+  \[\alpha = \mbox{E}(Y~|~X=0).\]
 \item
   Gradient or slope: \(\beta\). An increase of 1 unit in \(x\) corresponds to a change of \(\beta\) in the conditional mean of \(Y\), that is,
   \[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]

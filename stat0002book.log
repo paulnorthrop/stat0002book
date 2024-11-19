@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  19 NOV 2024 21:51
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  19 NOV 2024 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1594,13 +1594,17 @@ File: images/berkcond3.png Graphic file (type bmp)
 <images/berkcond3.png>
 [129] [130] [131]
 \bbl@ensure@british {Chapter} 9.
+
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+[132
+
+]
 File: images/hubbletable.png Graphic file (type bmp)
 <images/hubbletable.png>
 File: images/hubble_scatter.png Graphic file (type bmp)
 <images/hubble_scatter.png>
-[132
-
-] [133]
+[133]
 File: images/regschematic.png Graphic file (type bmp)
 <images/regschematic.png>
 [134] [135]
@@ -1616,29 +1620,29 @@ File: images/hubble_scatter_new.png Graphic file (type bmp)
 [138] [139]
 File: images/lm_expl_plots.png Graphic file (type bmp)
 <images/lm_expl_plots.png>
-[140] [141] [142]
+[140] [141]
 File: images/lm_res_plots.png Graphic file (type bmp)
 <images/lm_res_plots.png>
+[142] [143]
 File: images/uneven.png Graphic file (type bmp)
 <images/uneven.png>
-[143]
 File: images/non_normal.png Graphic file (type bmp)
 <images/non_normal.png>
 File: images/non_normal_res.png Graphic file (type bmp)
 <images/non_normal_res.png>
+[144]
 File: images/hubble_check_origin.png Graphic file (type bmp)
 <images/hubble_check_origin.png>
 File: images/hubble_check.png Graphic file (type bmp)
 <images/hubble_check.png>
-[144] [145] [146] [147]
+[145] [146] [147]
 File: images/lm_influence.png Graphic file (type bmp)
 <images/lm_influence.png>
-[148]
+[148] [149]
 File: images/election_LS.png Graphic file (type bmp)
 <images/election_LS.png>
 File: images/election_check1.png Graphic file (type bmp)
 <images/election_check1.png>
-[149]
 File: images/election_check2.png Graphic file (type bmp)
 <images/election_check2.png>
 File: images/election_check3.png Graphic file (type bmp)
@@ -1658,17 +1662,17 @@ File: images/exchange_raw.png Graphic file (type bmp)
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
 [157]
-Underfull \hbox (badness 10000) in paragraph at lines 7187--7189
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 7189--7191
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 7191--7193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7193--7195
 
  []
 
@@ -1683,7 +1687,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7287.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7289.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
