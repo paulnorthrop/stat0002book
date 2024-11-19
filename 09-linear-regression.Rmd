@@ -30,10 +30,10 @@ Regression answers the question "How does the conditional distribution of the ra
 
 ## Simple linear regression
 
-We use a small set of data, and some physical theory, to estimate the age of the Universe!  In 1929 the famous astronomer Edwin Hubble published a paper (@Hubble1929) reporting a relationship he had observed (using a telescope) between the distance of a nebula (a star) from the Earth and the velocity (the **recession velocity**) with which it was moving away from the Earth. Hubble's data are given in Table \@ref(fig:tablehubble). A scatter plot of distance against velocity is given in Figure \@ref(fig:hubblescatter).
+We use a small set of data, and some physical theory, to estimate the age of the Universe!  In 1929 the famous astronomer Edwin Hubble published a paper (@Hubble1929) reporting a relationship he had observed (using a telescope) between the distance of a nebula (a star) from the Earth and the velocity (the **recession velocity**) with which it was moving away from the Earth. Hubble's data are given in Table \@ref(fig:tablehubble). A scatter plot of distance against velocity is given in Figure \@ref(fig:hubblescatter). 
 
 ```{r echo=FALSE, tablehubble, fig.show='hold', fig.cap='Hubble\'s data. 1 MPc = 1 megaparsec = $3.086 \\times 10^{19}$ km. A megaparsec is a long distance: the distance from the Earth to the Sun is \'only\' $1.5 \\times 10^8$ km.'}
-include_cropped_graphics("images/hubbletable.png")
+include_cropped_graphics("images/hubbletable.PNG")
 ```
 
 ```{r echo=FALSE, hubblescatter, fig.show='hold', fig.cap='Scatter plot of distance against recession velocity.'}
@@ -77,8 +77,7 @@ include_cropped_graphics("images/regschematic.png")
 **Interpretation of parameters**
 
 * Intercept: $\alpha$.  The expected value (mean) of $Y$ when $X=0$, that is, $\mbox{E}(Y~|~X=0)$.
-* Gradient or slope: $\beta$.  The amount by which the mean of $Y$ given $X=x$, $\mbox{E}(Y~|~X=x)$, 
-increases when $x$ is increased by 1 unit.  That is,
+* Gradient or slope: $\beta$.  An increase of 1 unit in $x$ corresponds to a change of $\beta$ in the conditional mean of $Y$, that is,
 \[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]
 * Error variance: $\sigma^2$.  The variability of the response about the linear regression line (in the vertical direction).
 

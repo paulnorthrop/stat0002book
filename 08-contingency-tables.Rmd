@@ -429,7 +429,7 @@ Is there an explanation for this?  The data suggest that
 * department is dependent on sex: females tend to apply to different departments to males;
 * outcome is dependent on department: some departments have lower acceptances rates than others.
 
-The apparent association between sex and outcome seems actually to be a combined effect of (a) sex affecting department, and (b) department affecting outcome.  Sex does not seem to affect outcome directly. Females are more likely than males to apply to the departments into which it is more difficult to be accepted.
+The association between sex and outcome seems to be a combination (a) sex affecting department, and (b) department affecting outcome.  Sex does not seem to affect outcome directly. Females are more likely than males to apply to the departments into which it is more difficult to be accepted.
 
 The estimated association between sex and outcome depends on the value of the variable department.  It is not uncommon for the estimated association between two variables to change depending on the value of a third variable, a so-called **confounding** or **lurking** variable.  To confound means to confuse, surprise or mix up.  To lurk means to hide in the background, perhaps with sinister intent! In this example, department is the confounding variable. **Simpson's paradox** describes extreme cases of this, where the direction or nature of the estimated association changes or perhaps disappears. Misleading inferences could be produced if we are not aware of the effects of the confounding variable.
 
