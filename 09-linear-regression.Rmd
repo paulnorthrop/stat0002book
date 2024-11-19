@@ -76,7 +76,8 @@ include_cropped_graphics("images/regschematic.png")
 
 **Interpretation of parameters**
 
-* Intercept: $\alpha$.  The expected value (mean) of $Y$ when $X=0$, that is, $\mbox{E}(Y~|~X=0)$.
+* Intercept: $\alpha$.  The expected value (mean) of $Y$ when $X=0$, that is, 
+$$\alpha = \mbox{E}(Y~|~X=0)$$.
 * Gradient or slope: $\beta$.  An increase of 1 unit in $x$ corresponds to a change of $\beta$ in the conditional mean of $Y$, that is,
 \[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]
 * Error variance: $\sigma^2$.  The variability of the response about the linear regression line (in the vertical direction).

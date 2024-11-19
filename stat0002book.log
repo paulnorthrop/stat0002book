@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  19 NOV 2024 21:45
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  19 NOV 2024 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1616,12 +1616,12 @@ File: images/hubble_scatter_new.png Graphic file (type bmp)
 [138] [139]
 File: images/lm_expl_plots.png Graphic file (type bmp)
 <images/lm_expl_plots.png>
-[140] [141]
+[140] [141] [142]
 File: images/lm_res_plots.png Graphic file (type bmp)
 <images/lm_res_plots.png>
-[142] [143]
 File: images/uneven.png Graphic file (type bmp)
 <images/uneven.png>
+[143]
 File: images/non_normal.png Graphic file (type bmp)
 <images/non_normal.png>
 File: images/non_normal_res.png Graphic file (type bmp)
@@ -1633,57 +1633,57 @@ File: images/hubble_check.png Graphic file (type bmp)
 [144] [145] [146] [147]
 File: images/lm_influence.png Graphic file (type bmp)
 <images/lm_influence.png>
-[148] [149]
+[148]
 File: images/election_LS.png Graphic file (type bmp)
 <images/election_LS.png>
 File: images/election_check1.png Graphic file (type bmp)
 <images/election_check1.png>
+[149]
 File: images/election_check2.png Graphic file (type bmp)
 <images/election_check2.png>
 File: images/election_check3.png Graphic file (type bmp)
 <images/election_check3.png>
-[150] [151] [152]
 File: images/election_check4.png Graphic file (type bmp)
 <images/election_check4.png>
-[153] [154]
+[150] [151] [152] [153]
 File: images/hubble_curves.png Graphic file (type bmp)
 <images/hubble_curves.png>
-[155] [156]
+[154] [155]
 \bbl@ensure@british {Chapter} 10.
 File: images/exchange_raw.png Graphic file (type bmp)
 <images/exchange_raw.png>
-[157
+[156
 
 ]
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
+[157]
+Underfull \hbox (badness 10000) in paragraph at lines 7187--7189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7189--7191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7191--7193
+
+ []
+
 [158]
-Underfull \hbox (badness 10000) in paragraph at lines 7186--7188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7188--7190
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7190--7192
-
- []
-
-[159]
 File: images/design_corr0.png Graphic file (type bmp)
 <images/design_corr0.png>
 File: images/design_corr2.png Graphic file (type bmp)
 <images/design_corr2.png>
-[160]
+[159]
 File: images/corr8c.png Graphic file (type bmp)
 <images/corr8c.png>
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7286.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7287.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
@@ -1693,25 +1693,25 @@ File: images/guess_corr.png Graphic file (type bmp)
 <images/guess_corr.png>
 File: images/guess_corr_new2.png Graphic file (type bmp)
 <images/guess_corr_new2.png>
-[161] [162] [163] [164]
+[160] [161] [162] [163]
 File: images/anscombetable.png Graphic file (type bmp)
 <images/anscombetable.png>
 File: images/anscombe.png Graphic file (type bmp)
 <images/anscombe.png>
-[165]
+[164]
 File: images/ftse_weekly_tufte.png Graphic file (type bmp)
 <images/ftse_weekly_tufte.png>
 File: images/flu_tufte.png Graphic file (type bmp)
 <images/flu_tufte.png>
 File: images/flu_FTSE.png Graphic file (type bmp)
 <images/flu_FTSE.png>
-[166] [167] [168]
+[165] [166] [167]
 \bbl@ensure@british {Chapter} 11.
 File: images/stat5_portrait.png Graphic file (type bmp)
 <images/stat5_portrait.png>
-[169
+[168
 
-] (stat0002book.bbl [170]) [171
+] (stat0002book.bbl [169]) [170
 
 ] (stat0002book.aux)
  ***********
@@ -1726,6 +1726,6 @@ Here is how much of TeX's memory you used:
  51823 multiletter control sequences out of 15000+600000
  564704 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,17n,121p,1079b,1074s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,121p,1079b,1005s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on stat0002book.pdf (171 pages).
+Output written on stat0002book.pdf (170 pages).
