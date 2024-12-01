@@ -366,8 +366,8 @@ Firstly we look at the association between sex and department. This gives a 2 $\
 include_cropped_graphics("images/berkmarg1.png")
 ```
 
-```{r echo=FALSE, berkmarg2, fig.show='hold', fig.cap='Standardised Pearson residuals for sex and department.', out.width='50%'}
-include_cropped_graphics("images/berkmarg2.png")
+```{r echo=FALSE, berkmarg2, fig.show='hold', fig.cap='Standardised Pearson residuals for sex and department.', out.width='70%'}
+include_cropped_graphics("images/berkmarg2_2DecimalPlaces.png")
 ```
 
 Note: the
