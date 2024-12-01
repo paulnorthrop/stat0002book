@@ -835,7 +835,7 @@ Figure \@ref(fig:oxqqtrans) shows QQ plots corresponding to each of the histogra
 include_cropped_graphics("images/ox_qq_trans.png")
 ```
 
-Do these plots confirm your thoughts about the histograms? Can you work out what the directions of the departures of the points in the QQ plot from the straight line mean in terms of the shape of the distribution.  You can use the Figure \@ref(fig:oxhisttrans) to help you.
+Do these plots confirm your thoughts about the histograms? Can you work out what the directions of the departures of the points in the QQ plot from the straight line mean in terms of the shape of the distribution.  You can use Figure \@ref(fig:oxhisttrans) to help you.
 
 In Figure \@ref(fig:oxqqtimeenv) simulation envelopes based on 19 simulated samples have been added to the QQ plot of the Oxford birth times.  Although the points mainly lie within the simulation envelopes, the plot is clearly curved.  We may refer to the ends of a distribution, from where the relatively small and large values are sampled, as the **tails**.  The relatively small values come from the lower tail, or left tail.  The relatively large values come from the upper tail, or right tail.  In this plot we can see that the observed birth times are larger in the **tails** than would be expected if they were sampled from a $N(7.75,3.57^2)$ distribution.
 
