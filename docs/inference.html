@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2024-12-01" />
+<meta name="date" content="2025-01-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -620,14 +620,15 @@ Figure 7.5: The sampling distribution of the sample mean and the approximate lar
 <p><span class="math display">\[
 S^2 = \frac{1}{n-1} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2
 \quad \mbox{and} \quad
-S_n^2 = \frac{1}{n} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2.
-\]</span></p>
+S_n^2 = \frac{1}{n} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2,
+\]</span>
+where <span class="math inline">\(n &gt; 1\)</span>.</p>
 <p>It can be shown that
 <span class="math display">\[ \mbox{E}(S^2) = \sigma^2 \qquad \mbox{and} \qquad \mbox{var}(S^2)=\frac{2}{n-1}\,\sigma^4. \]</span></p>
 <p>Noting that <span class="math inline">\(S_n^2 = \displaystyle\frac{n-1}{n}\,S^2\)</span> we can infer that</p>
 <p><span class="math display">\[ \mbox{E}(S_n^2) = \frac{n-1}{n}\,\sigma^2 \,\,&lt; \sigma^2 \qquad \mbox{and} \qquad
 \mbox{var}(S_n^2)=\left( \frac{n-1}{n} \right)^2 \frac{2}{n-1}\,\sigma^4 \,\,&lt; \mbox{var}(S^2). \]</span></p>
-<p>Therefore, <span class="math inline">\(S^2\)</span> is unbiased for <span class="math inline">\(\sigma^2\)</span>, whereas <span class="math inline">\(S_n^2\)</span> is biased, but <span class="math inline">\(\mbox{var}(S_n^2) &lt; \mbox{var}(S^2)\)</span>.</p>
+<p>Therefore, <span class="math inline">\(S^2\)</span> is unbiased for <span class="math inline">\(\sigma^2\)</span>, whereas <span class="math inline">\(S_n^2\)</span> is biased, but <span class="math inline">\(\mbox{var}(S_n^2) &lt; \mbox{var}(S^2)\)</span> for all values of <span class="math inline">\(n &gt; 1\)</span>.</p>
 <p><strong>Exercise</strong>. Which of <span class="math inline">\(S^2\)</span> and <span class="math inline">\(S_n^2\)</span> has the smaller MSE?</p>
 <p>How crucial is the assumption of normality in our current example?</p>
 <p>We remove the assumption of normality, so that we have <span class="math inline">\(X_1, \ldots, X_n\)</span> are i.i.d. and sampled from an (unspecified) distribution with an unknown mean <span class="math inline">\(\mu\)</span> and unknown variance <span class="math inline">\(\sigma^2\)</span>.</p>

@@ -156,7 +156,7 @@
 
 \title{STAT0002 Introduction to Probability and Statistics}
 \author{Paul Northrop}
-\date{2024-12-01}
+\date{2025-01-04}
 
 \begin{document}
 \maketitle
@@ -5601,8 +5601,9 @@ Consider the following two estimators of \(\sigma^2\).
 \[ 
 S^2 = \frac{1}{n-1} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2 
 \quad \mbox{and} \quad
-S_n^2 = \frac{1}{n} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2. 
+S_n^2 = \frac{1}{n} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2, 
 \]
+where \(n > 1\).
 
 It can be shown that
 \[ \mbox{E}(S^2) = \sigma^2 \qquad \mbox{and} \qquad \mbox{var}(S^2)=\frac{2}{n-1}\,\sigma^4. \]
@@ -5612,7 +5613,7 @@ Noting that \(S_n^2 = \displaystyle\frac{n-1}{n}\,S^2\) we can infer that
 \[ \mbox{E}(S_n^2) = \frac{n-1}{n}\,\sigma^2 \,\,< \sigma^2 \qquad \mbox{and} \qquad 
 \mbox{var}(S_n^2)=\left( \frac{n-1}{n} \right)^2 \frac{2}{n-1}\,\sigma^4 \,\,< \mbox{var}(S^2). \]
 
-Therefore, \(S^2\) is unbiased for \(\sigma^2\), whereas \(S_n^2\) is biased, but \(\mbox{var}(S_n^2) < \mbox{var}(S^2)\).
+Therefore, \(S^2\) is unbiased for \(\sigma^2\), whereas \(S_n^2\) is biased, but \(\mbox{var}(S_n^2) < \mbox{var}(S^2)\) for all values of \(n > 1\).
 
 \textbf{Exercise}. Which of \(S^2\) and \(S_n^2\) has the smaller MSE?
 
