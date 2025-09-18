@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  17 SEP 2025 16:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  18 SEP 2025 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,14 +1067,15 @@ File: images/shuttle_sim.png Graphic file (type bmp)
 <images/shuttle_sim.png>
 File: images/shuttle_simcurves10.png Graphic file (type bmp)
 <images/shuttle_simcurves10.png>
+[10] [11]
 File: images/shuttle_simcurves100.png Graphic file (type bmp)
 <images/shuttle_simcurves100.png>
-[10] [11] [12] [13]
+[12] [13]
 \bbl@ensure@british {Chapter} 2.
 [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 591--593
+Underfull \hbox (badness 10000) in paragraph at lines 590--592
 
  []
 
@@ -1093,7 +1094,7 @@ File: images/ox_cum_freq2new.png Graphic file (type bmp)
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1220
 
  []
 
@@ -1115,7 +1116,7 @@ File: images/ox_box_adv.png Graphic file (type bmp)
 File: images/shuttle_barplots.png Graphic file (type bmp)
 <images/shuttle_barplots.png>
 
-Overfull \hbox (1.9928pt too wide) in alignment at lines 1423--1423
+Overfull \hbox (1.9928pt too wide) in alignment at lines 1422--1422
 [][][][] 
  []
 
@@ -1152,7 +1153,7 @@ File: images/election_scatter1a.png Graphic file (type bmp)
 File: images/election_scatter1b.png Graphic file (type bmp)
 <images/election_scatter1b.png>
 [37]
-Overfull \hbox (13.99998pt too wide) in alignment at lines 1823--1823
+Overfull \hbox (13.99998pt too wide) in alignment at lines 1822--1822
 [][][][] 
  []
 
@@ -1189,67 +1190,67 @@ File: images/election_HS3.png Graphic file (type bmp)
 File: images/coin.png Graphic file (type bmp)
 <images/coin.png>
 [47] [48]
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2113--2113
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2112--2112
 [][][] 
  []
 
 
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2154--2154
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2153--2153
 [][][] 
  []
 
 [49] [50]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2284--2284
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2283--2283
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2347--2347
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2346--2346
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2410--2410
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2409--2409
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2473--2473
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2472--2472
 [][][][] 
  []
 
 [51]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2564--2564
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2563--2563
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2637--2637
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2636--2636
 [][][][] 
  []
 
 [52] [53]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2755--2755
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2754--2754
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2821--2821
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2820--2820
 [][][][] 
  []
 
 [54] [55] [56]
-Overfull \hbox (1.00714pt too wide) in alignment at lines 2989--2989
+Overfull \hbox (1.00714pt too wide) in alignment at lines 2988--2988
 [][] 
  []
 
 
-Overfull \hbox (1.00714pt too wide) in alignment at lines 3033--3033
+Overfull \hbox (1.00714pt too wide) in alignment at lines 3032--3032
 [][] 
  []
 
 
-Overfull \hbox (2.00711pt too wide) in alignment at lines 3106--3106
+Overfull \hbox (2.00711pt too wide) in alignment at lines 3105--3105
 [][][][][][] 
  []
 
@@ -1258,17 +1259,17 @@ Overfull \hbox (2.00711pt too wide) in alignment at lines 3106--3106
 [58
 
 ]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3245--3245
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3244--3244
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3304--3304
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3303--3303
 [][][][] 
  []
 
 [59] [60]
-Underfull \hbox (badness 10000) in paragraph at lines 3356--3358
+Underfull \hbox (badness 10000) in paragraph at lines 3355--3357
 
  []
 
@@ -1286,7 +1287,7 @@ File: images/ox_shady.png Graphic file (type bmp)
 File: images/pdf_shady.png Graphic file (type bmp)
 <images/pdf_shady.png>
 [65] [66] [67] [68]
-Underfull \hbox (badness 10000) in paragraph at lines 3707--3709
+Underfull \hbox (badness 10000) in paragraph at lines 3706--3708
 
  []
 
@@ -1297,27 +1298,27 @@ File: stat0002book_files/figure-latex/discretecdf-1.pdf Graphic file (type pdf)
 [70] [71] [72]
 \bbl@ensure@british {Chapter} 6.
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (1.0856pt too wide) in alignment at lines 4048--4048
+Overfull \hbox (1.0856pt too wide) in alignment at lines 4047--4047
 [][][][][][][][][][][][] 
  []
 
@@ -1329,7 +1330,7 @@ File: images/baby_intro.png Graphic file (type bmp)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4167.
+(amsmath)                 on input line 4166.
 
 [75]
 File: images/binom_pmf1.png Graphic file (type bmp)
@@ -1344,44 +1345,44 @@ File: images/binom_pmf4.png Graphic file (type bmp)
 File: images/binom_inference_1b.png Graphic file (type bmp)
 <images/binom_inference_1b.png>
 [78]
-Overfull \hbox (6.39165pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (6.39165pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 15.36[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 6.28[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 2.57[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 1.05[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 0.43[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 0.30[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4376--4376
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4375--4375
  [][]\TU/lmss/m/n/10.95 26[][][][]
  []
 
 File: images/baby_geom_bar.png Graphic file (type bmp)
 <images/baby_geom_bar.png>
 [79]
-Underfull \hbox (badness 10000) in paragraph at lines 4418--4419
+Underfull \hbox (badness 10000) in paragraph at lines 4417--4418
 
  []
 
@@ -1389,37 +1390,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 4418--4419
 File: images/baby_geom_fit.png Graphic file (type bmp)
 <images/baby_geom_fit.png>
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 3.84[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 7.04[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 6.45[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 3.94[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 1.81[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4571--4571
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4570--4570
  [][]\TU/lmss/m/n/10.95 24[][][][]
  []
 
@@ -1435,7 +1436,7 @@ File: images/poisson_pmf2.png Graphic file (type bmp)
 File: images/poisson_pmf3.png Graphic file (type bmp)
 <images/poisson_pmf3.png>
 [83] [84]
-Underfull \hbox (badness 10000) in paragraph at lines 4685--4687
+Underfull \hbox (badness 10000) in paragraph at lines 4684--4686
 
  []
 
@@ -1462,7 +1463,7 @@ File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
 [90]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4955.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4954.
 [91] [92]
 File: images/qq_picture.png Graphic file (type bmp)
 <images/qq_picture.png>
@@ -1504,7 +1505,7 @@ File: images/exp_simenv.png Graphic file (type bmp)
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5385--5387
+Underfull \hbox (badness 10000) in paragraph at lines 5384--5386
 
  []
 
@@ -1662,17 +1663,17 @@ File: images/exchange_raw.png Graphic file (type bmp)
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
 [157]
-Underfull \hbox (badness 10000) in paragraph at lines 7190--7192
+Underfull \hbox (badness 10000) in paragraph at lines 7189--7191
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7192--7194
+Underfull \hbox (badness 10000) in paragraph at lines 7191--7193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7194--7196
+Underfull \hbox (badness 10000) in paragraph at lines 7193--7195
 
  []
 
@@ -1687,7 +1688,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7290.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7289.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
@@ -1726,7 +1727,7 @@ L3 programming layer <2024-02-13>
 Here is how much of TeX's memory you used:
  30187 strings out of 409592
  615938 string characters out of 5773324
- 2008650 words of memory out of 5000000
+ 2007650 words of memory out of 5000000
  51823 multiletter control sequences out of 15000+600000
  564704 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
