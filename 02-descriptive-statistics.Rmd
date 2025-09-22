@@ -154,7 +154,7 @@ One way to summarise a dataset is to calculate numerical summaries called **summ
 
 ### Five number summary {#fivenumber}
 
-A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary.  As we will see later, the five number summary involves quantities called **sample quantiles**. These are estimates of theoretical quantities that we will study in Chapter \@ref(rvs). There is more than one way to calculate sample quantiles.  For example, the R statistical package has 9 options in its `quantile()` function. The particular method given below is just one of these options.
+A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary.  As we will see later, the five number summary involves quantities called **sample quantiles**. These are estimates of theoretical quantities that we will study in Chapter \@ref(rvs). There is more than one way to calculate sample quantiles.  For example, the R statistical package has 9 options in its `quantile()` function. The particular method given below is just one of these options, obtained by passing the argument `type = 6` in a call to `quantile()`.
 
 If a dataset of observations, $x_1,x_2,\ldots,x_n$, is arranged in order of size as $$ x_{(1)} \leq x_{(2)} \leq \cdots \leq x_{(n)}$$ then the **sample median** is the `middle' value (halfway between $x_{(1)}$ and $x_{(n)}$), that is,
 $$ m=x_{(\frac{1}{2}(n+1))}\,.$$

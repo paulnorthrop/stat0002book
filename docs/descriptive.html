@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2025-09-18" />
+<meta name="date" content="2025-09-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -677,7 +677,7 @@ Radcliffe hospital in Oxford, UK, during a particular week.</caption>
 <p>One way to summarise a dataset is to calculate numerical summaries called <strong>summary statistics</strong>. Summary statistics can be used as indicators of the location, spread and shape of the data (although looking at a plot can be more helpful).</p>
 <div id="fivenumber" class="section level3 hasAnchor" number="2.3.1">
 <h3><span class="header-section-number">2.3.1</span> Five number summary<a href="descriptive.html#fivenumber" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary. As we will see later, the five number summary involves quantities called <strong>sample quantiles</strong>. These are estimates of theoretical quantities that we will study in Chapter <a href="rvs.html#rvs">5</a>. There is more than one way to calculate sample quantiles. For example, the R statistical package has 9 options in its <code>quantile()</code> function. The particular method given below is just one of these options.</p>
+<p>A useful first impression of the distribution of quantitative or ordinal data is given by the a five number summary. As we will see later, the five number summary involves quantities called <strong>sample quantiles</strong>. These are estimates of theoretical quantities that we will study in Chapter <a href="rvs.html#rvs">5</a>. There is more than one way to calculate sample quantiles. For example, the R statistical package has 9 options in its <code>quantile()</code> function. The particular method given below is just one of these options, obtained by passing the argument <code>type = 6</code> in a call to <code>quantile()</code>.</p>
 <p>If a dataset of observations, <span class="math inline">\(x_1,x_2,\ldots,x_n\)</span>, is arranged in order of size as <span class="math display">\[ x_{(1)} \leq x_{(2)} \leq \cdots \leq x_{(n)}\]</span> then the <strong>sample median</strong> is the `middle’ value (halfway between <span class="math inline">\(x_{(1)}\)</span> and <span class="math inline">\(x_{(n)}\)</span>), that is,
 <span class="math display">\[ m=x_{(\frac{1}{2}(n+1))}\,.\]</span>
 The median is a measure of location.</p>
