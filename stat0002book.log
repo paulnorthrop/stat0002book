@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  22 SEP 2025 12:26
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  1 OCT 2025 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,6 +23,24 @@ File: bk11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
+) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
@@ -240,25 +258,8 @@ Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
 y
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
-(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: xetex.def on input line 274.
-(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
-File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
-) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
-)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+))) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.st
+y
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
 \FV@CodeLineNo=\count292
 \FV@InFile=\read2
@@ -353,7 +354,9 @@ Package graphics Info: Driver file: xetex.def on input line 107.
 )
 \Gin@req@height=\dimen177
 \Gin@req@width=\dimen178
-) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+)
+\pandoc@box=\box64
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2024/02/07 v24.2 The Babel package
 \babel@savecnt=\count307
 \U@D=\dimen179
@@ -368,19 +371,33 @@ Package: babel 2024/02/07 v24.2 The Babel package
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-Package babel Info: You haven't specified a language as a class or package
-(babel)             option. I'll load 'nil'. Reported on input line 4258.
-(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/generic/babel\nil.ldf
-Language: nil 2024/02/07 v24.2 Nil language
-\l@nil=\language80
-))
-\everypar=\toks28
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\british.ld
+f
+Language: british 2017/06/06 v3.3r English support from the babel system
 
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ld
+f
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+)))
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-
-british.tex)
-Package babel Info: Importing data for british
-(babel)             from babel-en-GB.ini. Reported on input line 112.
-(placeins.sty
+british.tex
+Package babel Info: Importing font and identification data for british
+(babel)             from babel-en-GB.ini. Reported on input line 11.
+)
+\everypar=\toks28
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip63
+\bibsep=\skip64
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count309
+) (placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -396,27 +413,27 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen187
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count309
-\c@continuedfloat=\count310
+\c@caption@flags=\count310
+\c@continuedfloat=\count311
 Package caption Info: longtable package is loaded.
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2024-02-15 v3.3.12 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count311
-\l__siunitx_number_exponent_fixed_int=\count312
-\l__siunitx_number_min_decimal_int=\count313
-\l__siunitx_number_min_integer_int=\count314
-\l__siunitx_number_round_precision_int=\count315
-\l__siunitx_number_lower_threshold_int=\count316
-\l__siunitx_number_upper_threshold_int=\count317
-\l__siunitx_number_group_first_int=\count318
-\l__siunitx_number_group_size_int=\count319
-\l__siunitx_number_group_minimum_int=\count320
+\l__siunitx_number_uncert_offset_int=\count312
+\l__siunitx_number_exponent_fixed_int=\count313
+\l__siunitx_number_min_decimal_int=\count314
+\l__siunitx_number_min_integer_int=\count315
+\l__siunitx_number_round_precision_int=\count316
+\l__siunitx_number_lower_threshold_int=\count317
+\l__siunitx_number_upper_threshold_int=\count318
+\l__siunitx_number_group_first_int=\count319
+\l__siunitx_number_group_size_int=\count320
+\l__siunitx_number_group_minimum_int=\count321
 \l__siunitx_angle_tmp_dim=\dimen188
-\l__siunitx_angle_marker_box=\box64
-\l__siunitx_angle_unit_box=\box65
-\l__siunitx_compound_count_int=\count321
+\l__siunitx_angle_marker_box=\box65
+\l__siunitx_angle_unit_box=\box66
+\l__siunitx_compound_count_int=\count322
 
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/translations\translation
 s.sty
@@ -436,40 +453,40 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
 ))
-\l__siunitx_table_tmp_box=\box66
+\l__siunitx_table_tmp_box=\box67
 \l__siunitx_table_tmp_dim=\dimen189
 \l__siunitx_table_column_width_dim=\dimen190
-\l__siunitx_table_integer_box=\box67
-\l__siunitx_table_decimal_box=\box68
-\l__siunitx_table_uncert_box=\box69
-\l__siunitx_table_before_box=\box70
-\l__siunitx_table_after_box=\box71
+\l__siunitx_table_integer_box=\box68
+\l__siunitx_table_decimal_box=\box69
+\l__siunitx_table_uncert_box=\box70
+\l__siunitx_table_before_box=\box71
+\l__siunitx_table_after_box=\box72
 \l__siunitx_table_before_dim=\dimen191
 \l__siunitx_table_carry_dim=\dimen192
-\l__siunitx_unit_tmp_int=\count322
-\l__siunitx_unit_position_int=\count323
-\l__siunitx_unit_total_int=\count324
+\l__siunitx_unit_tmp_int=\count323
+\l__siunitx_unit_position_int=\count324
+\l__siunitx_unit_total_int=\count325
 ) (ulem.sty
-\UL@box=\box72
-\UL@hyphenbox=\box73
-\UL@skip=\skip63
+\UL@box=\box73
+\UL@hyphenbox=\box74
+\UL@skip=\skip65
 \UL@hook=\toks29
 \UL@height=\dimen193
-\UL@pe=\count325
+\UL@pe=\count326
 \UL@pixel=\dimen194
-\ULC@box=\box74
+\ULC@box=\box75
 Package: ulem 2019/11/18
 \ULdepth=\dimen195
 ) (colortbl.sty
 Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
 \everycr=\toks30
-\minrowclearance=\skip64
-\rownum=\count326
+\minrowclearance=\skip66
+\rownum=\count327
 ) (multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip65
-\multirow@cntb=\count327
-\multirow@dima=\skip66
+\multirow@colwidth=\skip67
+\multirow@cntb=\count328
+\multirow@dima=\skip68
 \bigstrutjot=\dimen196
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/tools\hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
@@ -480,16 +497,16 @@ Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen199
 \TX@target=\dimen256
 \TX@delta=\dimen257
-\TX@cols=\count328
+\TX@cols=\count329
 \TX@ftn=\toks31
 ) (threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box75
+\@tempboxb=\box76
 ) (wrapfig.sty
 \wrapoverhang=\dimen258
 \WF@size=\dimen259
-\c@WF@wrappedlines=\count329
-\WF@box=\box76
+\c@WF@wrappedlines=\count330
+\WF@box=\box77
 \WF@everypar=\toks32
 Package: wrapfig 2003/01/31  v 3.6
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.st
@@ -502,7 +519,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count330
+\XKV@depth=\count331
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
@@ -513,7 +530,7 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.st
 y
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box77
+\collectedbox=\box78
 )
 \tc@llx=\dimen260
 \tc@lly=\dimen261
@@ -533,11 +550,11 @@ File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 \adjbox@ptotalheight=\dimen271
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count331
+\c@checkoddpage=\count332
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box78
-\sift@deathcycles=\count332
+\@vwid@box=\box79
+\sift@deathcycles=\count333
 \@vwid@loff=\dimen272
 \@vwid@roff=\dimen273
 )) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
@@ -563,17 +580,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count333
+\c@section@level=\count334
 )
 \@linkdim=\dimen274
-\Hy@linkcounter=\count334
-\Hy@pagecounter=\count335
+\Hy@linkcounter=\count335
+\Hy@pagecounter=\count336
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count336
+\Hy@SavedSpaceFactor=\count337
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 )
@@ -585,7 +602,7 @@ Package hyperref Info: Plain pages OFF on input line 4194.
 Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
-\c@Hy@tempcnt=\count337
+\c@Hy@tempcnt=\count338
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -600,7 +617,7 @@ sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count338
+\Fld@menulength=\count339
 \Field@Width=\dimen276
 \Fld@charsize=\dimen277
 Package hyperref Info: Hyper figures OFF on input line 6063.
@@ -614,9 +631,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6093.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count339
-\c@Item=\count340
-\c@Hfootnote=\count341
+\Hy@abspage=\count340
+\c@Item=\count341
+\c@Hfootnote=\count342
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
@@ -627,11 +644,11 @@ y
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box79
-\c@Hy@AnnotLevel=\count342
-\HyField@AnnotCount=\count343
-\Fld@listcount=\count344
-\c@bookmark@seq@number=\count345
+\pdfm@box=\box80
+\c@Hy@AnnotLevel=\count343
+\HyField@AnnotCount=\count344
+\Fld@listcount=\count345
+\c@bookmark@seq@number=\count346
 
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
 check.sty
@@ -648,13 +665,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip67
-) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip68
-\bibsep=\skip69
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count346
+\Hy@SectionHShift=\skip69
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
@@ -666,40 +677,40 @@ Package: xurl 2022/01/09 v 0.10 modify URL breaks
 ) (stat0002book.aux)
 \openout1 = `stat0002book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
-LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 162.
+LaTeX Font Info:    ... okay on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 161.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 161.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 161.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 161.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 161.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 161.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 162.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 161.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 162.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -728,7 +739,7 @@ allCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 11.28015pt on input line 161.
+(Font)              scaled to size 11.28015pt on input line 162.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -767,18 +778,18 @@ dern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 11.28015pt on input line 161.
+(Font)              scaled to size 11.28015pt on input line 162.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 161.
+(Font)              `operators' in the math version `normal' on input line 162.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 161.
+ line 162.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 161.
+(Font)              `operators' in the math version `bold' on input line 162.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 161.
+t line 162.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -865,15 +876,15 @@ t=math;language=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 161.
+(Font)              `symbols' in the math version `normal' on input line 162.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 161.
+t line 162.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 161.
+(Font)              `symbols' in the math version `bold' on input line 162.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 161.
+t line 162.
 
 Package fontspec Info: latinmodern-math scale = 1.03015890977869.
 
@@ -943,22 +954,22 @@ t=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-61.
+62.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 161.
+t line 162.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 161
+(Font)              `largesymbols' in the math version `bold' on input line 162
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 161.
-LaTeX Info: Redefining \microtypecontext on input line 161.
-Package microtype Info: Applying patch `item' on input line 161.
-Package microtype Info: Applying patch `toc' on input line 161.
-Package microtype Info: Applying patch `eqnum' on input line 161.
-Package microtype Info: Applying patch `footnote' on input line 161.
-Package microtype Info: Applying patch `verbatim' on input line 161.
+t line 162.
+LaTeX Info: Redefining \microtypecontext on input line 162.
+Package microtype Info: Applying patch `item' on input line 162.
+Package microtype Info: Applying patch `toc' on input line 162.
+Package microtype Info: Applying patch `eqnum' on input line 162.
+Package microtype Info: Applying patch `footnote' on input line 162.
+Package microtype Info: Applying patch `verbatim' on input line 162.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -973,38 +984,44 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 161.
+
+(C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\trans
+lations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package hyperref Info: Link coloring OFF on input line 162.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.36182pt on input line 163.
+(Font)              scaled to size 12.36182pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.24121pt on input line 163.
+(Font)              scaled to size 8.24121pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.18091pt on input line 163.
+(Font)              scaled to size 6.18091pt on input line 164.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-63.
+64.
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.3631pt on input line 163.
+(Font)              scaled to size 12.3631pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.24207pt on input line 163.
+(Font)              scaled to size 8.24207pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.18155pt on input line 163.
+(Font)              scaled to size 6.18155pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.36072pt on input line 163.
+(Font)              scaled to size 12.36072pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.24048pt on input line 163.
+(Font)              scaled to size 8.24048pt on input line 164.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.18036pt on input line 163.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 163
+(Font)              scaled to size 6.18036pt on input line 164.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 164
 .
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 163
+LaTeX Font Info:    Trying to load font information for U+msb on input line 164
 .
 (C:\Users\Paul\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1039,18 +1056,18 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 [3] [4
 
 ]
-\bbl@ensure@british {Chapter} 1.
+Chapter 1.
 [5
 
 ]
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 217.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 218.
 File: images/shuttle1.png Graphic file (type bmp)
 <images/shuttle1.png>
 File: images/shuttle2.png Graphic file (type bmp)
 <images/shuttle2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
@@ -1071,11 +1088,11 @@ File: images/shuttle_simcurves10.png Graphic file (type bmp)
 File: images/shuttle_simcurves100.png Graphic file (type bmp)
 <images/shuttle_simcurves100.png>
 [12] [13]
-\bbl@ensure@british {Chapter} 2.
+Chapter 2.
 [14
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 590--592
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
 
  []
 
@@ -1094,7 +1111,7 @@ File: images/ox_cum_freq2new.png Graphic file (type bmp)
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1218--1220
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
 
  []
 
@@ -1116,7 +1133,7 @@ File: images/ox_box_adv.png Graphic file (type bmp)
 File: images/shuttle_barplots.png Graphic file (type bmp)
 <images/shuttle_barplots.png>
 
-Overfull \hbox (1.9928pt too wide) in alignment at lines 1422--1422
+Overfull \hbox (1.9928pt too wide) in alignment at lines 1423--1423
 [][][][] 
  []
 
@@ -1153,7 +1170,7 @@ File: images/election_scatter1a.png Graphic file (type bmp)
 File: images/election_scatter1b.png Graphic file (type bmp)
 <images/election_scatter1b.png>
 [37]
-Overfull \hbox (13.99998pt too wide) in alignment at lines 1822--1822
+Overfull \hbox (13.99998pt too wide) in alignment at lines 1823--1823
 [][][][] 
  []
 
@@ -1183,98 +1200,98 @@ File: images/tukey.png Graphic file (type bmp)
 File: images/election_HS3.png Graphic file (type bmp)
 <images/election_HS3.png>
 [44] [45]
-\bbl@ensure@british {Chapter} 3.
+Chapter 3.
 [46
 
 ]
 File: images/coin.png Graphic file (type bmp)
 <images/coin.png>
 [47] [48]
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2112--2112
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2113--2113
 [][][] 
  []
 
 
-Overfull \hbox (1.99281pt too wide) in alignment at lines 2153--2153
+Overfull \hbox (1.99281pt too wide) in alignment at lines 2154--2154
 [][][] 
  []
 
 [49] [50]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2283--2283
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2284--2284
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2346--2346
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2347--2347
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2409--2409
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2410--2410
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2472--2472
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2473--2473
 [][][][] 
  []
 
 [51]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2563--2563
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2564--2564
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2636--2636
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2637--2637
 [][][][] 
  []
 
 [52] [53]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2754--2754
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2755--2755
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 2820--2820
+Overfull \hbox (3.00711pt too wide) in alignment at lines 2821--2821
 [][][][] 
  []
 
 [54] [55] [56]
-Overfull \hbox (1.00714pt too wide) in alignment at lines 2988--2988
+Overfull \hbox (1.00714pt too wide) in alignment at lines 2989--2989
 [][] 
  []
 
 
-Overfull \hbox (1.00714pt too wide) in alignment at lines 3032--3032
+Overfull \hbox (1.00714pt too wide) in alignment at lines 3033--3033
 [][] 
  []
 
 
-Overfull \hbox (2.00711pt too wide) in alignment at lines 3105--3105
+Overfull \hbox (2.00711pt too wide) in alignment at lines 3106--3106
 [][][][][][] 
  []
 
 [57]
-\bbl@ensure@british {Chapter} 4.
+Chapter 4.
 [58
 
 ]
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3244--3244
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3245--3245
 [][][][] 
  []
 
 
-Overfull \hbox (3.00711pt too wide) in alignment at lines 3303--3303
+Overfull \hbox (3.00711pt too wide) in alignment at lines 3304--3304
 [][][][] 
  []
 
 [59] [60]
-Underfull \hbox (badness 10000) in paragraph at lines 3355--3357
+Underfull \hbox (badness 10000) in paragraph at lines 3356--3358
 
  []
 
 [61]
-\bbl@ensure@british {Chapter} 5.
+Chapter 5.
 [62
 
 ]
@@ -1287,7 +1304,7 @@ File: images/ox_shady.png Graphic file (type bmp)
 File: images/pdf_shady.png Graphic file (type bmp)
 <images/pdf_shady.png>
 [65] [66] [67] [68]
-Underfull \hbox (badness 10000) in paragraph at lines 3706--3708
+Underfull \hbox (badness 10000) in paragraph at lines 3707--3709
 
  []
 
@@ -1296,29 +1313,29 @@ File: stat0002book_files/figure-latex/discretecdf-1.pdf Graphic file (type pdf)
 
 <use stat0002book_files/figure-latex/discretecdf-1.pdf>
 [70] [71] [72]
-\bbl@ensure@british {Chapter} 6.
+Chapter 6.
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (6.51001pt too wide) in paragraph at lines 4047--4047
+Overfull \hbox (6.51001pt too wide) in paragraph at lines 4048--4048
  [][]\TU/lmss/m/n/10.95 weight[] 
  []
 
 
-Overfull \hbox (1.0856pt too wide) in alignment at lines 4047--4047
+Overfull \hbox (1.0856pt too wide) in alignment at lines 4048--4048
 [][][][][][][][][][][][] 
  []
 
@@ -1330,7 +1347,7 @@ File: images/baby_intro.png Graphic file (type bmp)
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 4166.
+(amsmath)                 on input line 4167.
 
 [75]
 File: images/binom_pmf1.png Graphic file (type bmp)
@@ -1345,44 +1362,44 @@ File: images/binom_pmf4.png Graphic file (type bmp)
 File: images/binom_inference_1b.png Graphic file (type bmp)
 <images/binom_inference_1b.png>
 [78]
-Overfull \hbox (6.39165pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (6.39165pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 15.36[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 6.28[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 2.57[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 1.05[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 0.43[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 0.30[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4375--4375
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4376--4376
  [][]\TU/lmss/m/n/10.95 26[][][][]
  []
 
 File: images/baby_geom_bar.png Graphic file (type bmp)
 <images/baby_geom_bar.png>
 [79]
-Underfull \hbox (badness 10000) in paragraph at lines 4417--4418
+Underfull \hbox (badness 10000) in paragraph at lines 4418--4419
 
  []
 
@@ -1390,37 +1407,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 4417--4418
 File: images/baby_geom_fit.png Graphic file (type bmp)
 <images/baby_geom_fit.png>
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 3.84[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 7.04[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 6.45[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 3.94[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 1.81[]
  []
 
 
-Overfull \hbox (0.91666pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (0.91666pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 0.93[]
  []
 
 
-Overfull \hbox (8.82257pt too wide) in paragraph at lines 4570--4570
+Overfull \hbox (8.82257pt too wide) in paragraph at lines 4571--4571
  [][]\TU/lmss/m/n/10.95 24[][][][]
  []
 
@@ -1436,7 +1453,7 @@ File: images/poisson_pmf2.png Graphic file (type bmp)
 File: images/poisson_pmf3.png Graphic file (type bmp)
 <images/poisson_pmf3.png>
 [83] [84]
-Underfull \hbox (badness 10000) in paragraph at lines 4684--4686
+Underfull \hbox (badness 10000) in paragraph at lines 4685--4687
 
  []
 
@@ -1463,7 +1480,7 @@ File: images/baby_normal_fitnew.png Graphic file (type bmp)
 <images/baby_normal_fitnew.png>
 [90]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4954.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 4955.
 [91] [92]
 File: images/qq_picture.png Graphic file (type bmp)
 <images/qq_picture.png>
@@ -1498,14 +1515,14 @@ File: images/baby_unif_qq_simenv.png Graphic file (type bmp)
 File: images/exp_simenv.png Graphic file (type bmp)
 <images/exp_simenv.png>
 [103]
-\bbl@ensure@british {Chapter} 7.
+Chapter 7.
 [104
 
 ]
 File: images/inference.png Graphic file (type bmp)
 <images/inference.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 5384--5386
+Underfull \hbox (badness 10000) in paragraph at lines 5385--5387
 
  []
 
@@ -1549,7 +1566,7 @@ File: images/exponential_sim_100_var.png Graphic file (type bmp)
 File: images/normal_mean_median.png Graphic file (type bmp)
 <images/normal_mean_median.png>
 [113] [114] [115]
-\bbl@ensure@british {Chapter} 8.
+Chapter 8.
 File: images/berk_2way.png Graphic file (type bmp)
 <images/berk_2way.png>
 [116
@@ -1594,7 +1611,7 @@ File: images/berkcond2.png Graphic file (type bmp)
 File: images/berkcond3.png Graphic file (type bmp)
 <images/berkcond3.png>
 [129] [130] [131]
-\bbl@ensure@british {Chapter} 9.
+Chapter 9.
 
 Underfull \vbox (badness 1082) has occurred while \output is active []
 
@@ -1654,7 +1671,7 @@ File: images/election_check4.png Graphic file (type bmp)
 File: images/hubble_curves.png Graphic file (type bmp)
 <images/hubble_curves.png>
 [154] [155]
-\bbl@ensure@british {Chapter} 10.
+Chapter 10.
 File: images/exchange_raw.png Graphic file (type bmp)
 <images/exchange_raw.png>
 [156
@@ -1663,17 +1680,17 @@ File: images/exchange_raw.png Graphic file (type bmp)
 File: images/exchange.png Graphic file (type bmp)
 <images/exchange.png>
 [157]
-Underfull \hbox (badness 10000) in paragraph at lines 7189--7191
+Underfull \hbox (badness 10000) in paragraph at lines 7190--7192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7191--7193
+Underfull \hbox (badness 10000) in paragraph at lines 7192--7194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7193--7195
+Underfull \hbox (badness 10000) in paragraph at lines 7194--7196
 
  []
 
@@ -1688,7 +1705,7 @@ File: images/corr8c.png Graphic file (type bmp)
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
 
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7289.
+LaTeX Warning: Float too large for page by 83.72256pt on input line 7290.
 
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
@@ -1711,7 +1728,7 @@ File: images/flu_tufte.png Graphic file (type bmp)
 File: images/flu_FTSE.png Graphic file (type bmp)
 <images/flu_FTSE.png>
 [165] [166] [167]
-\bbl@ensure@british {Chapter} 11.
+Chapter 11.
 File: images/stat5_portrait.png Graphic file (type bmp)
 <images/stat5_portrait.png>
 [168
@@ -1725,12 +1742,12 @@ L3 programming layer <2024-02-13>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30187 strings out of 409592
- 615938 string characters out of 5773324
+ 30298 strings out of 409592
+ 625775 string characters out of 5773324
  2007650 words of memory out of 5000000
- 51823 multiletter control sequences out of 15000+600000
+ 51927 multiletter control sequences out of 15000+600000
  564704 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,17n,121p,1079b,1005s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,17n,121p,1079b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on stat0002book.pdf (170 pages).
