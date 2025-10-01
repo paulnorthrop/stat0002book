@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 More probability | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.42.1 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 More probability | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2025-09-22" />
+<meta name="date" content="2025-10-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,8 +55,9 @@
 
 
 <style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -471,26 +472,30 @@ P(A) &amp;=&amp; P(A, B_1) + \cdots + P(A, B_n), \\
 <p><span class="math inline">\(P(A \mid M)\)</span> is the probability of acceptance given that the applicant is male; in other words, the probability that a male applicant is accepted. We calculated that <span class="math inline">\(P(A \mid M)=0.445\)</span> using the <span class="math inline">\(M\)</span> row of Table <a href="probability.html#tab:berk3n">3.7</a> (or Table <a href="probability.html#tab:berk3p">3.8</a>), that is, by conditioning on the event <span class="math inline">\(M\)</span>.</p>
 <p><span class="math inline">\(P(M \ldots A)\)</span> is the probability that the applicant is male given that they are accepted; in other words, the probability that an accepted applicant is male.</p>
 <p><strong>Exercise</strong>. Use Table <a href="more-probability.html#tab:berk5n">4.1</a> or Table <a href="more-probability.html#tab:berk5p">4.2</a> to show that <span class="math inline">\(P(M \mid A) = 0.683\)</span>.</p>
-<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk5n">
-<caption style="caption-side: top; text-align: center;"><span id="tab:berk5n">Table 4.1: </span> Conditioning on applicant being accepted (frequencies).</caption><col><col><col><col><tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 1pt 1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
+<table class="huxtable" data-quarto-disable-processing="true"  style="width: 70%; margin-left: auto; margin-right: auto;" id="tab:berk5n">
+<caption style="caption-side: top; text-align: center;"><span id="tab:berk5n">Table 4.1: </span> Conditioning on applicant being accepted (frequencies).</caption><col><col><col><col><tbody>
 <tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">M</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">1198</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1493</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2691</td></tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);   background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);  font-style: italic;">A</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);  font-style: italic;">R</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 0pt 1pt 1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">total</td></tr>
 <tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">F</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">557</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1278</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1835</td></tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);   background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">M</th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);">1198</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">1493</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">2691</td></tr>
 <tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">1755</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">2771</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 1pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">4526</td></tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);   background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">F</th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);">557</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">1278</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">1835</td></tr>
+<tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);    background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);">1755</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">2771</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 1pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">4526</td></tr>
+</tbody>
 </table>
 
-<table class="huxtable" data-quarto-disable-processing="true" style="border-collapse: collapse; border: 0px; margin-bottom: 2em; margin-top: 2em; width: 70%; margin-left: auto; margin-right: auto;  " id="tab:berk5p">
-<caption style="caption-side: top; text-align: center;"><span id="tab:berk5p">Table 4.2: </span> Conditioning on applicant being accepted (probabilites).</caption><col><col><col><col><tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal; font-style: italic;">A</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">R</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 0.1pt 0pt 1pt 1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</td></tr>
+<table class="huxtable" data-quarto-disable-processing="true"  style="width: 70%; margin-left: auto; margin-right: auto;" id="tab:berk5p">
+<caption style="caption-side: top; text-align: center;"><span id="tab:berk5p">Table 4.2: </span> Conditioning on applicant being accepted (probabilites).</caption><col><col><col><col><tbody>
 <tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">M</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">0.265</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.330</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.595</td></tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 0pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);   background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;"></th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);  font-style: italic;">A</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 1pt 1pt 1pt; border-top-color: rgb(255, 255, 255);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);  font-style: italic;">R</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 0.1pt 0pt 1pt 1pt; border-top-color: rgb(255, 255, 255);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">total</td></tr>
 <tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">F</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">0.123</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.282</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.405</td></tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);   background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">M</th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);">0.265</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">0.330</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">0.595</td></tr>
 <tr>
-<th style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(217, 217, 217); font-weight: normal;">0.388</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">0.612</td><td style="vertical-align: top; text-align: center; white-space: normal; border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 1pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0); padding: 6pt 6pt 6pt 6pt; background-color: rgb(255, 255, 255); font-weight: normal;">1.000</td></tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);   background-color: rgb(255, 255, 255); font-weight: normal; font-style: italic;">F</th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);">0.123</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 1pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);  border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">0.282</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 0pt 1pt 1pt; border-top-color: rgb(0, 0, 0);   border-bottom-color: rgb(0, 0, 0);  border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">0.405</td></tr>
+<tr>
+<th class="huxtable-cell huxtable-header" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 0pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);    background-color: rgb(255, 255, 255); font-weight: normal;">total</th><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0);  background-color: rgb(217, 217, 217);">0.388</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 1pt 0pt 1pt; border-top-color: rgb(0, 0, 0);  border-right-color: rgb(0, 0, 0);   border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">0.612</td><td class="huxtable-cell" style="text-align: center;  border-style: solid solid solid solid; border-width: 1pt 0pt 0pt 1pt; border-top-color: rgb(0, 0, 0);    border-left-color: rgb(0, 0, 0);  background-color: rgb(255, 255, 255);">1.000</td></tr>
+</tbody>
 </table>
 
 <p>Now we calculate <span class="math inline">\(P(M \mid A)\)</span> in a different way. If you used table <a href="more-probability.html#tab:berk5p">4.2</a> to calculate <span class="math inline">\(P(M \mid A)\)</span> you used the equation
@@ -576,42 +581,42 @@ In fact, all other evidence was in favour of Adams. The victim did not pick him 
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["stat0002book.pdf"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["stat0002book.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
