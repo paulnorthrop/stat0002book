@@ -343,7 +343,7 @@ The plot in Figure \ref{fig:shuttle3} gives you an idea of one of the analyses t
 
 \subsection{Uncertainty}\label{uncertainty}
 
-Suppose there is a true curve, of the same general type as the one in Figure \ref{fig:shuttle3}, which describes how the probability that an O-ring is damaged depends on temperature. We use the NASA test flight data to guess, or \textbf{estimate} the exact shape of this true curve. The curve in figure \ref{fig:shuttle3} is \textbf{not} the true curve, it is an \textbf{estimate} of the true curve based on these data.
+Suppose there is a true curve, of the same general type as the one in Figure \ref{fig:shuttle3}, which describes how the probability that an O-ring is damaged depends on temperature. We use the NASA test flight data to guess, or \textbf{estimate} the exact shape of this true curve. The curve in Figure \ref{fig:shuttle3} is \textbf{not} the true curve, it is an \textbf{estimate} of the true curve based on these data.
 
 If NASA repeated their launches, at exactly the same temperatures, these new data on the number of damaged O-rings would not be the same as the old data and the shape of the new estimated curve would be different from the shape of the old estimated curve. It may be that these 2 curves are quite similar or it could be that they are very different. We could ask them, very politely, repeat this process many times to get a large number of different sets of data. Each set of data produces an estimated curve.
 
@@ -387,7 +387,7 @@ Figure \ref{fig:shuttlesimcurves} shows 50 simulated curves and the curve estima
 \caption{50 curves fitted to simulated shuttle test flight data. The curves are similar over the range of temperatures observed in the data (53 to 81 degrees F), but vary greatly for lower temperatures, such as 31 degrees F.}\label{fig:shuttlesimcurves}
 \end{figure}
 
-There is a lot of variability in these curves. Notice that the curves are quite close to each other for high temperatures - where we have some data - but that they are very spread out for low temperatures - where we have no data. This is confirmed by figure \ref{fig:shuttlesim} which shows how the estimated probability of O-ring damage depends on temperature.
+There is a lot of variability in these curves. Notice that the curves are quite close to each other for high temperatures - where we have some data - but that they are very spread out for low temperatures - where we have no data. This is also illustrated in Figure \ref{fig:shuttlesim}, where, for each of four example temperatures we have plotted a histogram of the estimated probabilities from each simulated dataset, effectively taking vertical cross-sections through the curves in Figure \ref{fig:shuttlesimcurves}.
 
 \begin{figure}
 
@@ -398,7 +398,7 @@ There is a lot of variability in these curves. Notice that the curves are quite 
 \caption{Histograms of estimated probabilities of O-ring damage at different temperatures.}\label{fig:shuttlesim}
 \end{figure}
 
-There is a large amount of uncertainty about the esimatated probabilities, particularly at 31\(^\circ\)F, where it really mattered.
+In the histograms for 65\(^\circ\)F and 80\(^\circ\)F we see that the variability in the estimated probabilities is relatively small because the rectangles of the histograms are concentrated on a relatively small range of values. In contrast, the rectangles of histograms for 31\(^\circ\)F and 50\(^\circ\)F are spread over a much wider range of values, reflecting a larger amount of uncertainty. Even though 50\(^\circ\)F is not much smaller than the smallest temperature in the dataset (53\(^\circ\)F), the estimated probabilities at this temperature are spread from close to 0 to close to 1, approximately symmetrically distributed around a value that is close to 1/2. The estimated probabilities for 31\(^\circ\)F are also spread widely, but the shape of the histogram for 31\(^\circ\)F is asymmetric, with many estimated probabilities that are close to 1.
 
 To show the effect of sample size (the size of the dataset) we simulate datasets which are larger than the real dataset and see how much the curves fitted to these data vary between the datasets. Figure \ref{fig:shuttlesimcurves10} shows the estimated curves from 50 datasets, each of which is 10 times the size of the real dataset. Figure \ref{fig:shuttlesimcurves100} shows curves for datasets which are 100 times the size of the original dataset. As the sample size increases the variability decreases and so the uncertainty decreases.
 

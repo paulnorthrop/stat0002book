@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  1 OCT 2025 11:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2024.3.8)  1 OCT 2025 23:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1082,9 +1082,9 @@ File: images/shuttle_simcurves.png Graphic file (type bmp)
 <images/shuttle_simcurves.png>
 File: images/shuttle_sim.png Graphic file (type bmp)
 <images/shuttle_sim.png>
+[10] [11]
 File: images/shuttle_simcurves10.png Graphic file (type bmp)
 <images/shuttle_simcurves10.png>
-[10] [11]
 File: images/shuttle_simcurves100.png Graphic file (type bmp)
 <images/shuttle_simcurves100.png>
 [12] [13]
@@ -1744,7 +1744,7 @@ L3 programming layer <2024-02-13>
 Here is how much of TeX's memory you used:
  30298 strings out of 409592
  625775 string characters out of 5773324
- 2007650 words of memory out of 5000000
+ 2008650 words of memory out of 5000000
  51927 multiletter control sequences out of 15000+600000
  564704 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
