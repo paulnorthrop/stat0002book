@@ -41,9 +41,9 @@ In this chapter, we consider two results that involve conditional probabilities,
 
 We continue with the Berkeley admissions data.  We have already calculated that $P(A)=0.388$. Now we calculate this in a different way.
 
-From table \@ref(tab:berk0n) we can see that 
+From Table \@ref(tab:berk0n) we can see that 
 \[ n(A) = n(A , M) + n(A , F). \]
-From table \@ref(tab:berk2pn) we can see that 
+From Table \@ref(tab:berk2pn) we can see that 
 \begin{equation}
 P(A) = P(A , M) + P(A , F). 
 (\#eq:pa)
@@ -142,7 +142,7 @@ p_sex_outcome_hux <- p_sex_outcome %>%
 p_sex_outcome_hux    
 ```
 
-Now we calculate $P(M \mid A)$ in a different way. If you used table \@ref(tab:berk5p) to calculate $P(M \mid A)$ you used the equation
+Now we calculate $P(M \mid A)$ in a different way. If you used Table \@ref(tab:berk5p) to calculate $P(M \mid A)$ you used the equation
 \begin{equation}
 P(M \mid A) = \frac{P(M , A)}{P(A)}. 
 (\#eq:bayes1)
