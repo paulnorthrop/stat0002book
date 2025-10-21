@@ -25,7 +25,7 @@ See the following sections STAT0002 Moodle page for important information:
 * **Exercises**: (feedback on) weekly exercises sheets and summaries of tutorial material;
 * **Quizzes**: Moodle quizzes to help you to check your understanding;
 * **stat0002 R package**: provides a link to the [stat0002 R package](https://paulnorthrop.github.io/stat0002/), which contains R-related material to assist your learning;
-* **Past exams**: (from Week 7) past exam papers and information about exams.
+* **Past exams**: (towards the end of the module) past exam papers and information about exams.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
