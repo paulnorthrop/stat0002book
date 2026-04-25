@@ -430,18 +430,18 @@ P(A) = P(A , M) + P(A , F).
 \tag{4.1}
 \end{equation}\]</span></p>
 <p>This also follows from equation <a href="probability.html#eq:mut">(3.6)</a> since the events <span class="math inline">\((A , M)\)</span> and <span class="math inline">\((A , F)\)</span> are mutually exclusive. That is,
-<span class="math display">\[\begin{eqnarray}
+<span class="math display">\[\begin{eqnarray*}
 P(A) &amp;=&amp; P((A , M) \text{ or } (A , F) ), \\
 &amp;=&amp; P(A , M) + P(A , F) - P((A , M) , (A , F)), \\
 &amp;=&amp; P(A , M) + P(A , F).
-\end{eqnarray}\]</span></p>
+\end{eqnarray*}\]</span></p>
 <p>Applying the multiplication rule <a href="probability.html#eq:mult">(3.7)</a> to <a href="more-probability.html#eq:pa">(4.1)</a> gives
-<span class="math display">\[\begin{eqnarray}
+<span class="math display">\[\begin{eqnarray*}
 P(A) &amp;=&amp; P(A , M) + P(A \, F), \\
      &amp;=&amp; P(A \mid M)\,P(M) + P(A \mid F)\,P(F)\ \\
      &amp;=&amp; 0.445 \times 0.595 + 0.304 \times 0.405, \\
      &amp;=&amp; 0.388.
-\end{eqnarray}\]</span>
+\end{eqnarray*}\]</span>
 This is an example of the <strong>law of total probability</strong>. The probability of event <span class="math inline">\(A\)</span> is expressed as a weighted average of the conditional probability of event <span class="math inline">\(A\)</span> given that <span class="math inline">\(M\)</span> has occurred, and the conditional probability of event <span class="math inline">\(A\)</span> given that <span class="math inline">\(F\)</span> has occurred. Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.</p>
 <p>Note that</p>
 <ul>
@@ -455,15 +455,15 @@ This is an example of the <strong>law of total probability</strong>. The probabi
 <li>exhaustive, that is, <span class="math inline">\(P(B_1 \text{ or } B_2 \text{ or } \cdots \text{ or } B_n) = 1\)</span>.</li>
 </ul>
 <p>Then, for any event <span class="math inline">\(A\)</span>
-<span class="math display">\[\begin{eqnarray}
+<span class="math display">\[\begin{eqnarray*}
 P(A) &amp;=&amp; P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
      &amp;=&amp; \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
-\end{eqnarray}\]</span></p>
+\end{eqnarray*}\]</span></p>
 <p>Alternatively,
-<span class="math display">\[\begin{eqnarray}
+<span class="math display">\[\begin{eqnarray*}
 P(A) &amp;=&amp; P(A, B_1) + \cdots + P(A, B_n), \\
      &amp;=&amp; \displaystyle\sum_{i=1}^n P(A, B_i). \\
-\end{eqnarray}\]</span></p>
+\end{eqnarray*}\]</span></p>
 <p>Some books refer to the law of total probability as the <strong>partition theorem</strong>. This is because events <span class="math inline">\(B_1, \ldots, B_n\)</span> that are both mutually exclusive and exhaustive are said to <strong>partition</strong> the sample space, that is, they split the sample space into <span class="math inline">\(n\)</span> disjoint parts.</p>
 </div>
 <div id="bayes-theorem" class="section level2 hasAnchor" number="4.2">
@@ -518,11 +518,11 @@ Equation <a href="more-probability.html#eq:bayes3">(4.4)</a> is an example of Ba
 <span class="math display">\[ P(A) = P(A \mid M)\,P(M) + P(A \mid F)\,P(F), \]</span>
 or calculate <span class="math inline">\(P(A)\)</span> directly from the table.</p>
 <p><strong>Bayes’ theorem</strong>. Let <span class="math inline">\(B_1, \ldots, B_n\)</span> be mutually exclusive, exhaustive events, with <span class="math inline">\(P(B_i) &gt; 0\)</span> for all <span class="math inline">\(i\)</span>. Let <span class="math inline">\(A\)</span> be an event with <span class="math inline">\(P(A) &gt; 0\)</span>. Then
-<span class="math display">\[\begin{eqnarray}
+<span class="math display">\[\begin{eqnarray*}
 P(B_i \mid A) &amp;=&amp; \frac{P(A \mid B_i)\,P(B_i)}{P(A)}, \\
 &amp;=&amp; \frac{P(A \mid B_i)\,P(B_i)}{P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n)}, \\
           &amp;=&amp; \frac{P(A \mid B_i)\,P(B_i)}{\displaystyle\sum_{j=1}^n P(A \mid B_j)\,P(B_j)}.
-\end{eqnarray}\]</span>
+\end{eqnarray*}\]</span>
 The proof of Bayes’ theorem is a straightforward extension of the case with <span class="math inline">\(n=2\)</span> considered in the Berkeley admissions example above.</p>
 <div id="conditioning-on-more-than-one-event" class="section level4 unnumbered hasAnchor">
 <h4>Conditioning on more than one event<a href="more-probability.html#conditioning-on-more-than-one-event" class="anchor-section" aria-label="Anchor link to header"></a></h4>

@@ -50,19 +50,19 @@ P(A) = P(A , M) + P(A , F).
 \end{equation}
 
 This also follows from equation \@ref(eq:mut) since the events $(A , M)$ and $(A , F)$ are mutually exclusive.  That is,
-\begin{eqnarray}
+\begin{eqnarray*}
  P(A) &=& P((A , M) \text{ or } (A , F) ), \\
  &=& P(A , M) + P(A , F) - P((A , M) , (A , F)), \\
  &=& P(A , M) + P(A , F). 
-\end{eqnarray}
+\end{eqnarray*}
 
 Applying the multiplication rule \@ref(eq:mult) to \@ref(eq:pa) gives
-\begin{eqnarray}
+\begin{eqnarray*}
 P(A) &=& P(A , M) + P(A \, F), \\
      &=& P(A \mid M)\,P(M) + P(A \mid F)\,P(F)\ \\
      &=& 0.445 \times 0.595 + 0.304 \times 0.405, \\
      &=& 0.388.
-\end{eqnarray}
+\end{eqnarray*}
 This is an example of the **law of total probability**.  The probability of event $A$ is expressed as a weighted average of the conditional probability of event $A$ given that $M$ has occurred, and the conditional probability of event $A$ given that $F$ has occurred.  Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.
 
 Note that 
@@ -77,16 +77,16 @@ Note that
 * exhaustive, that is, $P(B_1 \text{ or } B_2 \text{ or } \cdots \text{ or } B_n) = 1$.  
 
 Then, for any event $A$
-\begin{eqnarray}
+\begin{eqnarray*}
 P(A) &=& P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
      &=& \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
-\end{eqnarray}
+\end{eqnarray*}
 
 Alternatively,
-\begin{eqnarray}
+\begin{eqnarray*}
 P(A) &=& P(A, B_1) + \cdots + P(A, B_n), \\
      &=& \displaystyle\sum_{i=1}^n P(A, B_i). \\
-\end{eqnarray}
+\end{eqnarray*}
 
 Some books refer to the law of total probability as the **partition theorem**.  This is because events $B_1, \ldots, B_n$ that are both mutually exclusive and exhaustive are said to **partition** the sample space, that is, they split the sample space into $n$ disjoint parts.
 
@@ -164,11 +164,11 @@ In this example we can either calculate $P(A)$ using the law of total probabilit
 or calculate $P(A)$ directly from the table.
 
 **Bayes' theorem**.  Let $B_1, \ldots, B_n$ be mutually exclusive, exhaustive events, with $P(B_i) > 0$ for all $i$.  Let $A$ be an event with $P(A) > 0$.  Then
-\begin{eqnarray}
+\begin{eqnarray*}
 P(B_i \mid A) &=& \frac{P(A \mid B_i)\,P(B_i)}{P(A)}, \\ 
 &=& \frac{P(A \mid B_i)\,P(B_i)}{P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n)}, \\
           &=& \frac{P(A \mid B_i)\,P(B_i)}{\displaystyle\sum_{j=1}^n P(A \mid B_j)\,P(B_j)}.
-\end{eqnarray}
+\end{eqnarray*}
 The proof of Bayes' theorem is a straightforward extension of the case with $n=2$ considered in the Berkeley admissions example above.
 
 #### Conditioning on more than one event {-}
