@@ -171,7 +171,7 @@
 
 These notes functions as a textbook for the material covered in STAT0002. The teaching events in STAT0002 will follow the general order of the topics covered in these notes. Chapters 1 and 2 are covered over Weeks 1 and 2 and from then on we will cover one chapter per teaching week. There will be a section on Moodle dedicated to each week of term.
 
-See the following sections STAT0002 Moodle page for important information:
+See the following sections of the STAT0002 Moodle page for important information:
 
 \begin{itemize}
 \tightlist
@@ -809,7 +809,7 @@ Half of the women took between approximately 5 and 10 hours to give birth.The qu
 \subsubsection*{Measures of skewness}\label{measures-of-skewness}
 \addcontentsline{toc}{subsubsection}{Measures of skewness}
 
-Usually the best way to examine the shape of a distribution is to look at a graph see section \ref{graphs}. In addition we could calculate summary measures of skewness, such as: the \textbf{standardized sample skewness}
+Usually the best way to examine the shape of a distribution is to look at a graph see Section \ref{graphs}. In addition we could calculate summary measures of skewness, such as: the \textbf{standardized sample skewness}
 \[\text{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
 \overline{x})^3}{s^3}, \]
 where \(s\) is the sample standard deviation, and the \textbf{sample quartile
@@ -891,7 +891,7 @@ Consider the small dataset in Table \ref{tab:smalldata}.
 
 \section{Tables}\label{tables}
 
-We saw in the Space shuttle investigation (Section \ref{shuttle}) that data can be presented in a table. We also saw that a graph can be a better way to see relationships and patterns in the data. In this section we look at a table which summarises the distribution of a set of data on one variable. We also look at a graph based on this table.
+We saw in the space shuttle investigation (Section \ref{shuttle}) that data can be presented in a table. We also saw that a graph can be a better way to see relationships and patterns in the data. In this section we look at a table which summarises the distribution of a set of data on one variable. We also look at a graph based on this table.
 
 \subsection{Frequency distribution}\label{frequency-distribution}
 
@@ -1347,7 +1347,7 @@ frequency & 16 & 5 & 1 & 1\\
 \subsubsection*{Example: categorical data}\label{example-categorical-data}
 \addcontentsline{toc}{subsubsection}{Example: categorical data}
 
-Table \ref{tab:ABOnew} shows the percentages of people in the UK with the 8 main blood groups O\(+\), A\(+\), B\(+\), AB\(+\), O\(-\), A\(-\), B\(-\) and AB\(-\). See section \ref{bloodindep} for more details about blood groups. These data are nominal.
+Table \ref{tab:ABOnew} shows the percentages of people in the UK with the 8 main blood groups O\(+\), A\(+\), B\(+\), AB\(+\), O\(-\), A\(-\), B\(-\) and AB\(-\). See Section \ref{bloodindep} for more details about blood groups. These data are nominal.
 
  
   \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
@@ -2760,10 +2760,10 @@ P(M \text{ or } A) &=& \frac{n(M \text{ or } A)}{n} \\
 
 An equivalent way to calculate \(P(M \text{ or } A)\) is to sum probabilities in Table \ref{tab:berk4p}, that is,
 
-\begin{eqnarray}
+\begin{eqnarray*}
 P(M \text{ or } A) &=& P(M \text{ and } A) + P(M \text{ and }R) + P(F \text{ and } A) \\
 &=& 0.265+0.330+0.123 = 0.718. 
-\end{eqnarray}
+\end{eqnarray*}
 
  
   \providecommand{\huxb}[2]{\arrayrulecolor[RGB]{#1}\global\arrayrulewidth=#2pt}
@@ -2887,10 +2887,10 @@ P(A , B) = P(B)\,P(A \mid B).
 \end{equation}
 
 This can be generalised to the case of \(n\) events to give
-\begin{eqnarray}
-P(A_1, A_2,\ldots, A_{n-1}, A_n) &=&
+\begin{eqnarray*}
+P(A_1, A_2,\ldots, A_{n-1}, A_n) =
 P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
-\end{eqnarray}
+\end{eqnarray*}
 provided that all the conditional probabilities are defined. A sufficient (but not necessary) condition for this is \(P(A_1, A_2, \ldots, A_{n-1}, A_n)>0\). For example, \(P(A_1, A_2, A_3)\) is the probability that events \(A_1\), \(A_2\) and \(A_3\) all occur.
 
 \section{Independence of events}\label{indepevents}
@@ -3128,19 +3128,19 @@ P(A) = P(A , M) + P(A , F).
 \end{equation}
 
 This also follows from equation \eqref{eq:mut} since the events \((A , M)\) and \((A , F)\) are mutually exclusive. That is,
-\begin{eqnarray}
+\begin{eqnarray*}
  P(A) &=& P((A , M) \text{ or } (A , F) ), \\
  &=& P(A , M) + P(A , F) - P((A , M) , (A , F)), \\
  &=& P(A , M) + P(A , F). 
-\end{eqnarray}
+\end{eqnarray*}
 
 Applying the multiplication rule \eqref{eq:mult} to \eqref{eq:pa} gives
-\begin{eqnarray}
+\begin{eqnarray*}
 P(A) &=& P(A , M) + P(A \, F), \\
      &=& P(A \mid M)\,P(M) + P(A \mid F)\,P(F)\ \\
      &=& 0.445 \times 0.595 + 0.304 \times 0.405, \\
      &=& 0.388.
-\end{eqnarray}
+\end{eqnarray*}
 This is an example of the \textbf{law of total probability}. The probability of event \(A\) is expressed as a weighted average of the conditional probability of event \(A\) given that \(M\) has occurred, and the conditional probability of event \(A\) given that \(F\) has occurred. Each conditional probability is given a weight equal to the probability of the event on which it is conditioned.
 
 Note that
@@ -3166,16 +3166,16 @@ Note that
 \end{itemize}
 
 Then, for any event \(A\)
-\begin{eqnarray}
+\begin{eqnarray*}
 P(A) &=& P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n), \\
      &=& \displaystyle\sum_{i=1}^n P(A \mid B_i)\,P(B_i). \\
-\end{eqnarray}
+\end{eqnarray*}
 
 Alternatively,
-\begin{eqnarray}
+\begin{eqnarray*}
 P(A) &=& P(A, B_1) + \cdots + P(A, B_n), \\
      &=& \displaystyle\sum_{i=1}^n P(A, B_i). \\
-\end{eqnarray}
+\end{eqnarray*}
 
 Some books refer to the law of total probability as the \textbf{partition theorem}. This is because events \(B_1, \ldots, B_n\) that are both mutually exclusive and exhaustive are said to \textbf{partition} the sample space, that is, they split the sample space into \(n\) disjoint parts.
 
@@ -3329,11 +3329,11 @@ In this example we can either calculate \(P(A)\) using the law of total probabil
 or calculate \(P(A)\) directly from the table.
 
 \textbf{Bayes' theorem}. Let \(B_1, \ldots, B_n\) be mutually exclusive, exhaustive events, with \(P(B_i) > 0\) for all \(i\). Let \(A\) be an event with \(P(A) > 0\). Then
-\begin{eqnarray}
+\begin{eqnarray*}
 P(B_i \mid A) &=& \frac{P(A \mid B_i)\,P(B_i)}{P(A)}, \\ 
 &=& \frac{P(A \mid B_i)\,P(B_i)}{P(A \mid B_1)\,P(B_1) + \cdots + P(A \mid B_n)\,P(B_n)}, \\
           &=& \frac{P(A \mid B_i)\,P(B_i)}{\displaystyle\sum_{j=1}^n P(A \mid B_j)\,P(B_j)}.
-\end{eqnarray}
+\end{eqnarray*}
 The proof of Bayes' theorem is a straightforward extension of the case with \(n=2\) considered in the Berkeley admissions example above.
 
 \subsubsection*{Conditioning on more than one event}\label{conditioning-on-more-than-one-event}
@@ -3432,7 +3432,7 @@ Let \(X\) take values \(x_1, x_2,\ldots.\) Then
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \(p_X(x_i) \geq 0\), for all \(i\),
+  \(p_X(x_i) \geq 0\), for all \(i\), \(\phantom{\displaystyle\sum_i}\)
 \item
   \(\displaystyle\sum_i p_X(x_i) = 1\).
 \end{enumerate}
@@ -5058,7 +5058,7 @@ The general idea is to plot \textbf{sample} quantiles against the \textbf{theore
 
 \textbf{Which empirical quantiles should we use?}
 
-In section \ref{fivenumber} we said that, for \(0 < p < 1\) the \(100p\%\) sample quantile is \(x_{(p(n+1))}\). If we substitute \(p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}\) in \(x_{(p(n+1))}\) then we obtain \(x_{(1)}, x_{(2)}, ..., x_{(n)}\). Therefore, the \textbf{ordered sampled values} or \textbf{order statistics} \(x_{(1)}, x_{(2)}, ..., x_{(n)}\) are the \(100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%\) sample quantiles.
+In Section \ref{fivenumber} we said that, for \(0 < p < 1\) the \(100p\%\) sample quantile is \(x_{(p(n+1))}\). If we substitute \(p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}\) in \(x_{(p(n+1))}\) then we obtain \(x_{(1)}, x_{(2)}, ..., x_{(n)}\). Therefore, the \textbf{ordered sampled values} or \textbf{order statistics} \(x_{(1)}, x_{(2)}, ..., x_{(n)}\) are the \(100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%\) sample quantiles.
 
 \textbf{How do we calculate the theoretical quantiles?}
 
@@ -5384,7 +5384,7 @@ Often there is an obvious estimate. For example,
 \item
   in Section \ref{binomial} we estimated the probability \(p\) that a birth produces a baby boy by the sample proportion, 26/44, of babies who are boys.\\
 \item
-  in section \ref{normal} we estimated the population mean birth weight \(\mu\) of babies by the sample mean birth weight \(\bar{z}\) and the population standard deviation birth weight \(\sigma\) by the sample standard deviation \(s_z\).
+  in Section \ref{normal} we estimated the population mean birth weight \(\mu\) of babies by the sample mean birth weight \(\bar{z}\) and the population standard deviation birth weight \(\sigma\) by the sample standard deviation \(s_z\).
 \end{itemize}
 
 In both these examples the parameter is clearly interpretable as a theoretical
@@ -5631,7 +5631,7 @@ Statistical modelling is an iterative process. We fit a model and examine how we
 
 \textbf{Isolated lack-of-fit}. Individual data points fall outside the general pattern of the data. For example, in the 2000 US Presidential election example it was clear that Buchanan's vote in Palm Beach county did not fit in the with the pattern of the rest of the data.
 
-\textbf{Systematic lack-of-fit}. The \textbf{overall} behaviour of the data is different from that of the model. For example, in section \ref{normal} our probability model for birth weights was a normal distribution with unknown mean and variance. However, the histogram and normal QQ plot of birth weights we plotted suggest that this model does not fit the data well. The lack-of-fit is not due to any particular set of observations - it is because the distribution of the data is fairly obviously skewed.
+\textbf{Systematic lack-of-fit}. The \textbf{overall} behaviour of the data is different from that of the model. For example, in Section \ref{normal} our probability model for birth weights was a normal distribution with unknown mean and variance. However, the histogram and normal QQ plot of birth weights we plotted suggest that this model does not fit the data well. The lack-of-fit is not due to any particular set of observations - it is because the distribution of the data is fairly obviously skewed.
 
 \subsection{Residuals}\label{residuals}
 
@@ -5640,7 +5640,7 @@ The simplest kind of residuals are the differences between observations the \(y_
 \[ r_i = y_i-\hat{y}_i, \qquad i=1,\ldots,n. \]
 The residuals \(r_1,\ldots, r_n\) give measures of how closely the model agrees with each of the observations. A small residual indicates that the observed data value is close the fitted value under the model. A large residual indicates that the observed data value is not close the fitted value under the model.
 
-One very large residual might indicate an isolated departure from the model. The Buchanan's vote in Palm Beach county has a very large residual under the model fitted by Smith (2002). Looking at residuals can also reveal systematic departures from the model. We will consider this in sections \ref{contingency} and \ref{linreg}.
+One very large residual might indicate an isolated departure from the model. The Buchanan's vote in Palm Beach county has a very large residual under the model fitted by Smith (2002). Looking at residuals can also reveal systematic departures from the model. We will consider this in Sections \ref{contingency} and \ref{linreg}.
 
 As a simple example we return Australian births data. Recall that we fitted a Poisson(\(\lambda\)) distribution to the numbers of babies born in each of the 24 hours of the day, leading to \(\hat{\lambda} = 1.83\). Table \ref{tab:poissonfit} shows the residuals for this fit.
 
@@ -7101,7 +7101,7 @@ As the degree of the polynomial increases the \(RSS\) decreases. Fitting a polyn
 
 Now we consider the situation where objects are sampled randomly from a population, and, for each object, we observe the values of random variables \(X\) and \(Y\). Therefore, unlike regression sampling, where the values of \(X\) are chosen by an experimenter, both \(X\) and \(Y\) are random variables. Unlike a regression problem, we treat \(X\) and \(Y\) symmetrically, that is, we do not identify one variable as a response and one as explanatory. We are interested in the relationship between \(X\) and \(Y\). How are they associated, and how strongly?
 
-When estimating correlation from data we will concentrate on the sample correlation coefficient \(r\) defined in equation \eqref{eq:corr} of Section \ref{corr1}, which is a measure of the strength of \textbf{linear} association. However, the general comments that we make will also apply to Spearman's rank correlation coefficient \(r_S\) (also defined in section \ref{corr1}.
+When estimating correlation from data we will concentrate on the sample correlation coefficient \(r\) defined in equation \eqref{eq:corr} of Section \ref{corr1}, which is a measure of the strength of \textbf{linear} association. However, the general comments that we make will also apply to Spearman's rank correlation coefficient \(r_S\) (also defined in Section \ref{corr1}.
 
 \section{Correlation: a measure of linear association}\label{correlation-a-measure-of-linear-association}
 
