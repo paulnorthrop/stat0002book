@@ -46,7 +46,7 @@ $N$ is a **random variable**.  In fact, if we assume that O-rings are damaged in
 An example of a countably infinite set of values is \{0,1,2,3, ...\}. The random variable $N$ in the space shuttle example takes a finite number of values: 0,1,2,3,4,5,6. Therefore $N$ is a discrete random variable.
 
 **Definition**. Let $X$ be a discrete random variable.  The **probability mass function (p.m.f.)** $p_X(x)$, or simply $p(x)$, of $X$ is
-\[ p_X(x) = P(X=x), \qquad \mbox{for $x$ in the support of $X$}.  \]
+$$p_X(x) = P(X=x), \qquad \text{for } x \text{ in the support of } X.$$
 
 The p.m.f. of $X$ tells us the probability with which $X$ takes any particular value $x$.  The **support** of $X$ is the set of values that it is possible for $X$ to take.  It is very important to write this down every time you write down a p.m.f.. A discrete random variable is completely specified by its probability mass function.
 
@@ -54,13 +54,13 @@ The p.m.f. of $X$ tells us the probability with which $X$ takes any particular v
 
 Let $X$ take values $x_1, x_2,\ldots.$  Then
 
-1. $p_X(x_i) \geq 0$, for all $i$,
+1. $p_X(x_i) \geq 0$, for all $i$, $\phantom{\displaystyle\sum_i}$
 2. $\displaystyle\sum_i p_X(x_i) = 1$.
 
 Note: 1. is true because the $p_X(x_i)$s are probabilities; 2. is true because summing over the $x_i$s is equivalent to summing over the sample space of outcomes.
 
 **Definition**. The cumulative distribution function (c.d.f.) of a random variable $X$ is
-\[ F_X(x) = P(X \leq x), \qquad \mbox{for} -\infty < x < \infty. \]
+\[ F_X(x) = P(X \leq x), \qquad \text{for} -\infty < x < \infty. \]
 
 **Relationship between the c.d.f. and p.m.f. of a discrete random variable**. For a discrete random variable:
 \[ F_X(x) = P(X \leq x) = \sum_{x_i \leq x} P(X = x_i). \]
@@ -117,7 +117,7 @@ Notes
 
 * It is very important to appreciate that $f_X(x)$ is **not** a probability: it does **not** give $P(X=x)$.  In fact $P(X=x)=0$: the probability that a continuous random variable $X$ takes the value $x$ is zero.
 * Indeed, it is possible for a p.d.f. to be greater than 1.  Consider a continuous random variable $X$ with p.d.f.
-\[ f_X(x) = \left\{ \begin{array}{ll} 2\,(1-x) & \,0 \leq x \leq 1, \\ 0 & \,\mbox{otherwise}.\end{array}\right. \]
+$$f_X(x) = \left\{ \begin{array}{ll} 2\,(1-x) & \,0 \leq x \leq 1, \\ 0 & \,\text{otherwise}.\end{array}\right.$$
 For this random variable $f_X(x)>1$ for any $x \in [0, 1/2)$ .
 * Since, for any $x \in \mathbb{R}$, $P(X=x)=0$ 
 \[ P(a < X \leq b) = P(a \leq X \leq b) = P(a \leq X < b) = P(a < X < b). \]
@@ -328,10 +328,10 @@ This will not necessarily hold for a discrete distribution.  For example, suppos
 Then
 \begin{eqnarray*}
 F_X(x) = P(X \leq x) = \left\{\begin{array}{ll}
-0 & \mbox{for } x <0, \\
-\frac16 & \mbox{for } 0 \leq x < 1, \\
-\frac23 & \mbox{for } 1 \leq x < 2, \\
-1 & \mbox{for } x \geq 2, 
+0 & \text{for } x <0, \\
+\frac16 & \text{for } 0 \leq x < 1, \\
+\frac23 & \text{for } 1 \leq x < 2, \\
+1 & \text{for } x \geq 2, 
 \end{array}\right.
 \end{eqnarray*}
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 6 Simple distributions | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2025-10-21" />
+<meta name="date" content="2026-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,7 +296,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>6.9</b> The normal distribution</a>
 <ul>
-<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
+<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-textnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\text{N}(\mu,\sigma^2)\)</span> distribution</a></li>
 <li class="chapter" data-level="6.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>6.9.2</b> The standard normal disribution</a></li>
 <li class="chapter" data-level="6.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>6.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
 <li class="chapter" data-level="6.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>6.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
@@ -486,16 +486,16 @@ X_1 =
 \end{equation}\]</span></p>
 <p><span class="math inline">\(X_1\)</span> has a Bernoulli distribution with parameter <span class="math inline">\(p\)</span>, <span class="math inline">\((0 \leq p \leq 1)\)</span>, or, for short,
 <span class="math display">\[ X_1 \sim
-\,\mbox{Bernoulli}(p).
+\,\text{Bernoulli}(p).
 \]</span>
 Here, “<span class="math inline">\(\sim\)</span>” means “is distributed as”.</p>
 <p>Similarly, we define the random variables
 <span class="math display">\[\begin{eqnarray*}
-X_i &amp;=&amp; \left\{ \begin{array}{ll}0&amp;\mbox{  if the $i$th baby is a girl}; \\
-                                 1&amp;\mbox{  if the $i$th baby is a boy,} \quad\mbox{for}\,\,\,i=1,\ldots,44.\end{array}\right.
+X_i &amp;=&amp; \left\{ \begin{array}{ll}0&amp;\text{  if the }i\text{th baby is a girl}; \\
+                                 1&amp;\text{  if the }i\text{th baby is a boy,} \quad\text{for}\,\,\,i=1,\ldots,44.\end{array}\right.
 \end{eqnarray*}\]</span>
 If we assume that the probability of a boy is the same for each birth then
-<span class="math display">\[ X_i \sim \mbox{Bernoulli}(p), \qquad \mbox{for}\,\,\,i=1,\ldots,44. \]</span></p>
+<span class="math display">\[ X_i \sim \text{Bernoulli}(p), \qquad \text{for}\,\,\,i=1,\ldots,44. \]</span></p>
 <p>In this example the sample values <span class="math inline">\(x_1, \ldots, x_{44}\)</span> of <span class="math inline">\(X_1,\ldots,X_{44}\)</span> are
 <span class="math display">\[ x_1=0, \quad x_2=0, \quad x_3=1, \quad \ldots \quad x_{44}=0. \]</span></p>
 <div id="summary-of-the-bernoullip-distribution" class="section level3 hasAnchor" number="6.2.1">
@@ -505,10 +505,10 @@ If we assume that the probability of a boy is the same for each birth then
 <li>If <span class="math inline">\(X\)</span> is a discrete random variable with p.m.f.</li>
 </ul>
 <p><span class="math display">\[ P(X=x) \,=\, p^x\,(1-p)^{1-x}, \qquad x=0,1, \]</span>
-for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \leq p \leq 1\)</span>, then <span class="math inline">\(X \sim \mbox{Bernoulli}(p)\)</span>.</p>
+for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \leq p \leq 1\)</span>, then <span class="math inline">\(X \sim \text{Bernoulli}(p)\)</span>.</p>
 <ul>
 <li>Parameter: <span class="math inline">\(p \in [0,1]\)</span>.</li>
-<li><span class="math inline">\(\mbox{E}(X)=p\)</span>, <span class="math inline">\(\mbox{var}(X)=p\,(1-p)\)</span>. (<strong>Exercise</strong>)</li>
+<li><span class="math inline">\(\text{E}(X)=p\)</span>, <span class="math inline">\(\text{var}(X)=p\,(1-p)\)</span>. (<strong>Exercise</strong>)</li>
 </ul>
 </div>
 </div>
@@ -517,9 +517,9 @@ for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \
 <p>We have seen that the 44 births are 44 Bernoulli trials. We define a random variable <span class="math inline">\(Y\)</span> equal to the total number of boys in the 44 births, that is,
 <span class="math display">\[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]</span>
 We assume that the outcome of each birth is independent of the outcomes of all the other births, that is, the random variables <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are mutually independent. Therefore, we have assumed that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> are independent and identically distributed, or i.i.d. for short. `Identically distributed’ means that <span class="math inline">\(X_1, \ldots, X_{44}\)</span> have exactly the same distribution, including the values of any unknown parameters. We may write</p>
-<p><span class="math display">\[ X_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]</span>
+<p><span class="math display">\[ X_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{Bernoulli}(p), \qquad i=1, ... , 44. \]</span>
 or
-<span class="math display">\[ X_i \,\stackrel{{\rm indep}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]</span></p>
+<span class="math display">\[ X_i \,\stackrel{{\rm indep}}{\sim}\, \text{Bernoulli}(p), \qquad i=1, ... , 44. \]</span></p>
 <p><span class="math inline">\(X_1, ... , X_{44}\)</span> are a <strong>random sample</strong> from a Bernoulli(<span class="math inline">\(p\)</span>) distribution.</p>
 <p>What is <span class="math inline">\(P(Y=0)\)</span>?</p>
 <p>For <span class="math inline">\(Y=0\)</span> to occur we need all of the 44 births to be girls, that is,
@@ -546,7 +546,7 @@ p^y\,(1-p)^{44-y}, \qquad y=0,1,\ldots,44.
 The combinatorial term <span class="math inline">\({44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}\)</span>
 gives the number of ways in which <span class="math inline">\(y\)</span> boys births can be positioned among the 44 births.</p>
 <p><span class="math inline">\(Y\)</span> has a binomial distribution with parameters <span class="math inline">\(44\)</span> and <span class="math inline">\(p\)</span>, <span class="math inline">\((0 \leq p \leq 1)\)</span>, or, for short,
-<span class="math display">\[ Y \sim \,\mbox{binomial}(44,p). \]</span>
+<span class="math display">\[ Y \sim \,\text{binomial}(44,p). \]</span>
 In this example the observed value of <span class="math inline">\(Y\)</span> is <span class="math inline">\(y=26\)</span>.</p>
 <p>As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability <span class="math inline">\(p\)</span> that a trial results in a 1. Suppose that the 44 babies born on 18th December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability <span class="math inline">\(p\)</span> that a baby chosen randomly from this population is a boy, or equivalently, the proportion <span class="math inline">\(p\)</span> of babies in this population who are boys.</p>
 <p><strong>Exercise</strong>. We use <span class="math inline">\(\hat{p} = 26/44\)</span> as an estimate of <span class="math inline">\(p\)</span>. Why is this a sensible estimate?</p>
@@ -567,7 +567,7 @@ Figure 6.2: Binomial(<span class="math inline">\(44,p\)</span>) p.m.f.s: <span c
 <h4>1. If <span class="math inline">\(p=0.5\)</span> then how surprising is <span class="math inline">\(\hat{p}=0.591\)</span>?<a href="simple.html#if-p0.5-then-how-surprising-is-hatp0.591" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suppose that the <strong>null hypothesis</strong> <span class="math inline">\(H_0: p=0.5\)</span> is true. How unlikely it is that a sample of size <span class="math inline">\(44\)</span> produces an estimate of <span class="math inline">\(p\)</span> as far, or further from, 0.5 than <span class="math inline">\(\hat{p}=0.591\)</span>?</p>
 <p>You could think of this as ‘standing’ on the null hypothesis <span class="math inline">\(H_0\)</span> and looking to see how far away are the data.</p>
-<p>If <span class="math inline">\(p=0.5\)</span>, <span class="math inline">\(P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30\)</span>. Figure <a href="simple.html#fig:binominf">6.3</a> illustrates the calculation of this probability. This (the value 0.30 here) is called a <strong><span class="math inline">\(p\)</span>-value</strong>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data if the null hypothesis is true. The smaller the <span class="math inline">\(p\)</span>-value the greater our surprise. We could decide to reject the null hypothesis <span class="math inline">\(H_0\)</span> that <span class="math inline">\(p=0.5\)</span> if the <span class="math inline">\(p\)</span>-value is sufficiently small. Otherwise, we do not reject <span class="math inline">\(H_0\)</span>.</p>
+<p>If <span class="math inline">\(p=0.5\)</span>, <span class="math inline">\(P(Y \geq 26\text{ or }Y \leq 18) = 0.15+0.15=0.30\)</span>. Figure <a href="simple.html#fig:binominf">6.3</a> illustrates the calculation of this probability. This (the value 0.30 here) is called a <strong><span class="math inline">\(p\)</span>-value</strong>. A <span class="math inline">\(p\)</span>-value is a measure of our surprise at seeing the data if the null hypothesis is true. The smaller the <span class="math inline">\(p\)</span>-value the greater our surprise. We could decide to reject the null hypothesis <span class="math inline">\(H_0\)</span> that <span class="math inline">\(p=0.5\)</span> if the <span class="math inline">\(p\)</span>-value is sufficiently small. Otherwise, we do not reject <span class="math inline">\(H_0\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:binominf"></span>
 <img src="images/binom_inference_1b.png" alt="A binomial($44,1/2$) p.m.f. with the probabilities satisfying $Y$ less than or equal to 18 or greater than or equal to 26 shaded in black." width="75%" />
 <p class="caption">
@@ -592,9 +592,9 @@ Figure 6.3: A binomial(<span class="math inline">\(44,1/2\)</span>) p.m.f. with 
 each trial having the same probability <span class="math inline">\(p\)</span> of obtaining a 1.</li>
 <li>If <span class="math inline">\(Y\)</span> is a discrete random variable with p.m.f.
 <span class="math display">\[ P(Y=y) \,=\, {n \choose y} p^y\,(1-p)^{n-y}, \qquad y=0,1,\ldots,n, \]</span>
-for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \leq p \leq 1\)</span>, then <span class="math inline">\(Y \sim \mbox{binomial}(n,p)\)</span>.</li>
+for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 \leq p \leq 1\)</span>, then <span class="math inline">\(Y \sim \text{binomial}(n,p)\)</span>.</li>
 <li>Parameters: <span class="math inline">\(n\)</span> (usually known) and <span class="math inline">\(p \in [0,1]\)</span>.</li>
-<li><span class="math inline">\(\mbox{E}(Y)=n\,p\)</span>, <span class="math inline">\(\mbox{var}(Y)=n\,p\,(1-p)\)</span>. (<strong>Exercise</strong>. Note that <span class="math inline">\(Y=X_1 + \cdots + X_n\)</span>, where <span class="math inline">\(X_i, i=1, \ldots, n\)</span> are independent Bernoulli(<span class="math inline">\(p\)</span>) random variables.)</li>
+<li><span class="math inline">\(\text{E}(Y)=n\,p\)</span>, <span class="math inline">\(\text{var}(Y)=n\,p\,(1-p)\)</span>. (<strong>Exercise</strong>. Note that <span class="math inline">\(Y=X_1 + \cdots + X_n\)</span>, where <span class="math inline">\(X_i, i=1, \ldots, n\)</span> are independent Bernoulli(<span class="math inline">\(p\)</span>) random variables.)</li>
 </ul>
 <p>A binomial(1,<span class="math inline">\(p\)</span>) distribution is the same as a Bernoulli(<span class="math inline">\(p\)</span>) distribution.</p>
 </div>
@@ -651,11 +651,11 @@ P(W_1=w) = (1-p)^{w-1}\,p, \qquad w=1,2,\ldots.
 \tag{6.1}
 \end{equation}\]</span></p>
 <p><span class="math inline">\(W_1\)</span> has a geometric distribution with parameter <span class="math inline">\(p\)</span>, <span class="math inline">\((0 &lt; p \leq 1)\)</span>, or, for short,
-<span class="math display">\[ W_1 \sim \mbox{geometric}(p). \]</span>
+<span class="math display">\[ W_1 \sim \text{geometric}(p). \]</span>
 We exclude <span class="math inline">\(p=0\)</span> because in this case we would never get a 1 and the <a href="simple.html#eq:geom">(6.1)</a> would sum to zero not one.</p>
 <p>Since <span class="math inline">\(W_2\)</span> relates to exactly the same situation as <span class="math inline">\(W_1\)</span>, that is, the number of births until the next boy is born, <span class="math inline">\(W_2\)</span> has the same distribution as <span class="math inline">\(W_1\)</span>. (We may write <span class="math inline">\(W_1 \,\stackrel{{\rm d}}{=}\, W_2\)</span> for “<span class="math inline">\(W_1\)</span> has the same distribution as <span class="math inline">\(W_2\)</span>”.) Similarly <span class="math inline">\(W_3,W_4,\ldots\)</span> also have the same distribution as <span class="math inline">\(W_1\)</span>.</p>
 <p>The outcomes of the births are assumed to be mutually independent.<br />
-<span class="math display">\[ W_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{geometric}(p), \qquad i=1,\ldots,26. \]</span>
+<span class="math display">\[ W_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{geometric}(p), \qquad i=1,\ldots,26. \]</span>
 <span class="math inline">\(W_1, \ldots, W_{26}\)</span> are a <strong>random sample</strong> from a geometric(<span class="math inline">\(p\)</span>) distribution.</p>
 <p>We do not know the value of <span class="math inline">\(p\)</span> but we have an estimate <span class="math inline">\(\hat{p}=26/44\)</span> of <span class="math inline">\(p\)</span>. We substitute this estimate of <span class="math inline">\(p\)</span> into equation <a href="simple.html#eq:geom">(6.1)</a> to calculate the <strong>estimated probabilities</strong> in column 5 of Table <a href="simple.html#tab:geom">6.2</a>.
 Multiplying the estimated probabilities by 26 gives the <strong>expected</strong> frequencies in column 3. That is,</p>
@@ -674,9 +674,9 @@ Figure 6.5: Observed frequencies and estimated expected frequencies under a geom
 <li><strong>Situation</strong>: the number of trials up to and including the first value of 1 in a sequence of independent Bernoulli trials, each trial having the same probability <span class="math inline">\(p\)</span> of obtaining a 1.</li>
 <li>If <span class="math inline">\(W\)</span> is a discrete random variable with p.m.f.
 <span class="math display">\[ P(W=w) \,=\, (1-p)^{w-1}\,p, \qquad w=1,2,\ldots \]</span>
-for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 &lt; p \leq 1\)</span>, then <span class="math inline">\(W \sim \mbox{geometric}(p)\)</span>.</li>
+for some <span class="math inline">\(p\)</span>, <span class="math inline">\(0 &lt; p \leq 1\)</span>, then <span class="math inline">\(W \sim \text{geometric}(p)\)</span>.</li>
 <li>Parameter: <span class="math inline">\(p \in (0,1]\)</span>.</li>
-<li><span class="math inline">\(\mbox{E}(W)=\displaystyle\frac1p\)</span>, <span class="math inline">\(\mbox{var}(W)=\displaystyle\frac{1-p}{p^2}\)</span>. (<strong>Exercise</strong>)</li>
+<li><span class="math inline">\(\text{E}(W)=\displaystyle\frac1p\)</span>, <span class="math inline">\(\text{var}(W)=\displaystyle\frac{1-p}{p^2}\)</span>. (<strong>Exercise</strong>)</li>
 </ul>
 <p>An alternative formulation is where a random variable <span class="math inline">\(V\)</span> is defined as the number of trials performed <strong>before</strong> the first 1 occurs. Therefore, the support of <span class="math inline">\(V\)</span> is <span class="math inline">\(0, 1, 2, ...\)</span> and <span class="math inline">\(V = W - 1\)</span>. The <code>dgeom()</code> function in R relates to a random variable like <span class="math inline">\(V\)</span>, not <span class="math inline">\(W\)</span>.</p>
 </div>
@@ -726,13 +726,13 @@ Figure 6.6: Bar plot of numbers of births in each hour of the 24 hours of Decemb
 <p>It can be shown (STAT0007) that if births arrive in a Poisson process of rate <span class="math inline">\(\lambda\)</span> per hour then the number of births that occur in a time
 interval of length <span class="math inline">\(h\)</span> hours has a particular kind of distribution called a Poisson distribution with mean <span class="math inline">\(\mu=\lambda h\)</span>. In our example, we have <span class="math inline">\(h=1\)</span>, because we have counted the number of births that occur in time periods of length 1 hour.</p>
 <p>Consider <span class="math inline">\(N_1\)</span>, the number of births in the first hour. Under the assumptions of the Poisson process, <span class="math inline">\(N_1\)</span> has a Poisson distribution with mean parameter <span class="math inline">\(\lambda\)</span>, (<span class="math inline">\(\lambda &gt;0\)</span>), or, for short,
-<span class="math display">\[N_1 \sim \mbox{Poisson}(\lambda).\]</span><br />
+<span class="math display">\[N_1 \sim \text{Poisson}(\lambda).\]</span><br />
 The probability mass function (p.m.f.) of <span class="math inline">\(N_1\)</span> is given by
 <span class="math display" id="eq:pois">\[\begin{equation}
 P(N_1=n) = \frac{\lambda^n\,e^{-\lambda}}{n!}, \qquad n=0,1,2,\ldots. \tag{6.2}
 \end{equation}\]</span></p>
 <p>These arguments also apply to <span class="math inline">\(N_2, N_3, ... , N_{24}\)</span>. Therefore,
-<span class="math display">\[ N_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Poisson}(\lambda), \qquad i=1,\ldots,24, \]</span>
+<span class="math display">\[ N_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{Poisson}(\lambda), \qquad i=1,\ldots,24, \]</span>
 that is, <span class="math inline">\(N_1,\ldots,N_{24}\)</span> are a random sample from a Poisson (<span class="math inline">\(\lambda\)</span>) distribution.</p>
 <p>The sample values <span class="math inline">\(n_1, n_2, \ldots, n_{24}\)</span> of <span class="math inline">\(N_1, N_2, \ldots, N_{24}\)</span> are
 <span class="math display">\[ n_1=1, \quad n_2=3, \quad \ldots, \quad n_{24}=2. \]</span></p>
@@ -762,12 +762,12 @@ Figure 6.8: Poisson p.m.f.s: mean = 0.5 (top); mean = 1.83 (middle); mean = 5 (b
 <li>Situation: the number events occurring during a time period of fixed duration.</li>
 <li>If <span class="math inline">\(N\)</span> is a discrete random variable with p.m.f.
 <span class="math display">\[ P(N=n) = \frac{\mu^n\, e^{-\mu}}{n!}, \qquad n=0,1,2,\ldots, \]</span>
-for some <span class="math inline">\(\mu\)</span>, then <span class="math inline">\(N \sim \mbox{Poisson}(\mu)\)</span>.</li>
+for some <span class="math inline">\(\mu\)</span>, then <span class="math inline">\(N \sim \text{Poisson}(\mu)\)</span>.</li>
 <li>Parameter: <span class="math inline">\(\mu &gt; 0\)</span>.</li>
 </ul>
 <p>[<span class="math inline">\(\mu = 0\)</span> is valid but not interesting: <span class="math inline">\(P(N = 0) = 1\)</span>.]</p>
 <ul>
-<li><span class="math inline">\(\mbox{E}(N)=\mu\)</span>, <span class="math inline">\(\mbox{var}(N)=\mu\)</span>.</li>
+<li><span class="math inline">\(\text{E}(N)=\mu\)</span>, <span class="math inline">\(\text{var}(N)=\mu\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -797,12 +797,12 @@ Figure 6.9: The p.d.f. of a U(0, 24) distribution.
 </p>
 </div>
 <p>This is the p.d.f. of a (continuous) uniform distribution over the interval (0,24), or, for short,
-<span class="math display">\[ U_1 \sim \mbox{U}(0,24). \]</span><br />
+<span class="math display">\[ U_1 \sim \text{U}(0,24). \]</span><br />
 A uniform distribution is sometimes called a rectangular distribution. The uniform distribution has 2 parameters: the lower and upper end points of the interval over which it is defined. In this example the values of both the parameters are known.</p>
-<p>Suppose that we choose another time of birth <span class="math inline">\(U_2\)</span> from the remaining 43 births. The arguments we made about <span class="math inline">\(U_1\)</span> apply equally to <span class="math inline">\(U_2\)</span>. Therefore <span class="math inline">\(U_2 \sim \mbox{U}(0,24)\)</span>. Similarly <span class="math inline">\(U_3, U_4, \ldots, U_{44} \sim \mbox{U}(0,24)\)</span>. The assumption that the births occur independently of each other means that
-<span class="math display">\[ U_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{U}(0,24), \qquad i=1,\ldots,44, \]</span>
-that is, <span class="math inline">\(U_1,\ldots,U_{44}\)</span> are a random sample from a <span class="math inline">\(\mbox{U}(0,24)\)</span> distribution.</p>
-<p>How else (in addition to looking at Figure <a href="simple.html#fig:babyintro">6.1</a>) can we examine whether the sample times of birth <span class="math inline">\(u_1, \ldots, u_{44}\)</span> look like a random sample from a <span class="math inline">\(\mbox{U}(0,24)\)</span> distribution?</p>
+<p>Suppose that we choose another time of birth <span class="math inline">\(U_2\)</span> from the remaining 43 births. The arguments we made about <span class="math inline">\(U_1\)</span> apply equally to <span class="math inline">\(U_2\)</span>. Therefore <span class="math inline">\(U_2 \sim \text{U}(0,24)\)</span>. Similarly <span class="math inline">\(U_3, U_4, \ldots, U_{44} \sim \text{U}(0,24)\)</span>. The assumption that the births occur independently of each other means that
+<span class="math display">\[ U_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{U}(0,24), \qquad i=1,\ldots,44, \]</span>
+that is, <span class="math inline">\(U_1,\ldots,U_{44}\)</span> are a random sample from a <span class="math inline">\(\text{U}(0,24)\)</span> distribution.</p>
+<p>How else (in addition to looking at Figure <a href="simple.html#fig:babyintro">6.1</a>) can we examine whether the sample times of birth <span class="math inline">\(u_1, \ldots, u_{44}\)</span> look like a random sample from a <span class="math inline">\(\text{U}(0,24)\)</span> distribution?</p>
 <p>One way is to look at a histogram of the times of birth to see whether it is approximately flat. Figure <a href="simple.html#fig:unifhists">6.10</a> shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a <strong>uniform QQ plot</strong>. We do this in Section <a href="simple.html#qq">6.11</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unifhists"></span>
 <img src="images/baby_unif_hist_freq.png" alt="Histograms of times of birth, with U(0,24) p.d.f. superimposed." width="75%" />
@@ -817,9 +817,9 @@ Figure 6.10: Histograms of times of birth, with U(0,24) p.d.f. superimposed.
 <li><strong>Situation</strong>: a continuous random variable for which all values between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are equally likely.</li>
 <li>If <span class="math inline">\(U\)</span> is a continuous random variable with p.d.f.
 <span class="math display">\[ f_{U}(u) \,=\, \frac{1}{b-a}, \qquad a &lt; u &lt; b, \]</span>
-for <span class="math inline">\(b &gt; a\)</span>, then <span class="math inline">\(U \sim \mbox{U}(a,b)\)</span>.</li>
+for <span class="math inline">\(b &gt; a\)</span>, then <span class="math inline">\(U \sim \text{U}(a,b)\)</span>.</li>
 <li>Parameters: <span class="math inline">\(-\infty &lt; a &lt; b &lt; \infty\)</span>.</li>
-<li><span class="math inline">\(\mbox{E}(U)=\displaystyle\frac{a+b}{2}\)</span>, <span class="math inline">\(\mbox{var}(U)=\displaystyle\frac{(b-a)^2}{12}\)</span>.</li>
+<li><span class="math inline">\(\text{E}(U)=\displaystyle\frac{a+b}{2}\)</span>, <span class="math inline">\(\text{var}(U)=\displaystyle\frac{(b-a)^2}{12}\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -830,7 +830,7 @@ first birth. Look at Table <a href="simple.html#tab:abirths">6.1</a>. In this ex
 <p>It can be shown (STAT0007) that if the times of birth form a Poisson process of rate <span class="math inline">\(\lambda\)</span> per hour then the continuous random variable <span class="math inline">\(T_1\)</span> has p.d.f.
 <span class="math display">\[ f_{T_1}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0. \]</span>
 <span class="math inline">\(T_1\)</span> has exponential distribution with parameter <span class="math inline">\(\lambda\)</span>, or, for short,
-<span class="math display">\[ T_1 \sim \mbox{exp}(\lambda). \]</span>
+<span class="math display">\[ T_1 \sim \text{exp}(\lambda). \]</span>
 Let <span class="math inline">\(T_2\)</span> be the time between the 1st birth and the 2nd birth; and <span class="math inline">\(T_3\)</span> be the time between the 2nd birth and the 3rd birth; and so on. Observed values <span class="math inline">\(t_2\)</span> and <span class="math inline">\(t_3\)</span> of <span class="math inline">\(T_2\)</span> and <span class="math inline">\(T_3\)</span> are <span class="math inline">\(t_2\)</span>=59 minutes and <span class="math inline">\(t_3\)</span>=14 minutes.</p>
 <p>Figure <a href="simple.html#fig:babyexpplots">6.11</a> shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:babyexpplots"></span>
@@ -841,18 +841,18 @@ Figure 6.11: Histogram (left) and boxplot (right) of the sample times between bi
 </div>
 <p>It can be shown (STAT0007) that if the times of birth form a Poisson process
 of rate <span class="math inline">\(\lambda\)</span> per hour then
-<span class="math display">\[ T_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{exponential}(\lambda), \qquad i=1,\ldots,44, \]</span>
-that is, <span class="math inline">\(T_1,\ldots,T_{44}\)</span> are a random sample from an <span class="math inline">\(\mbox{exponential}(\lambda)\)</span> distribution.</p>
+<span class="math display">\[ T_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{exponential}(\lambda), \qquad i=1,\ldots,44, \]</span>
+that is, <span class="math inline">\(T_1,\ldots,T_{44}\)</span> are a random sample from an <span class="math inline">\(\text{exponential}(\lambda)\)</span> distribution.</p>
 <p>There is more than one to estimate <span class="math inline">\(\lambda\)</span>. One approach is to note that the parameter <span class="math inline">\(\lambda\)</span> here is the same as the parameter <span class="math inline">\(\lambda\)</span> in Section <a href="simple.html#Poisson">6.5</a>. Therefore, we could the estimate <span class="math inline">\(\hat{\lambda}=44/24\approx 1.83\)</span> births per hour.</p>
-<p>Alternatively, we could use the fact that the mean of an <span class="math inline">\(\mbox{exponential}(\lambda)\)</span> distribution is <span class="math inline">\(1/\lambda\)</span>. The sample mean of the 44 times <span class="math inline">\(t_1,\ldots,t_{44}\)</span> between births is
-<span class="math display">\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{ minutes}
-\approx 0.543 \mbox{ hours}. \]</span>
+<p>Alternatively, we could use the fact that the mean of an <span class="math inline">\(\text{exponential}(\lambda)\)</span> distribution is <span class="math inline">\(1/\lambda\)</span>. The sample mean of the 44 times <span class="math inline">\(t_1,\ldots,t_{44}\)</span> between births is
+<span class="math display">\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\text{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \text{ minutes}
+\approx 0.543 \text{ hours}. \]</span>
 Rearranging
-<span class="math display">\[ \mbox{E}(T) = \frac{1}{\lambda}, \]</span>
+<span class="math display">\[ \text{E}(T) = \frac{1}{\lambda}, \]</span>
 gives
 <span class="math display">\[ \lambda = \frac{1}{{\rm E}(T)}. \]</span>
 Therefore a sensible estimate of <span class="math inline">\(\lambda\)</span> is given by
-<span class="math display">\[ \tilde{\lambda} = \frac{1}{0.543} \approx 1.840 \mbox{ births per hour}. \]</span>
+<span class="math display">\[ \tilde{\lambda} = \frac{1}{0.543} \approx 1.840 \text{ births per hour}. \]</span>
 We have used <span class="math inline">\(\tilde{\lambda}\)</span> to denote the estimate of <span class="math inline">\(\lambda\)</span> to distinguish it from <span class="math inline">\(\hat{\lambda}\)</span>.</p>
 <p>How well does the exponential distribution fit these data? We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential(<span class="math inline">\(\hat{\lambda}\)</span>) p.d.f. or look at an <strong>exponential QQ plot</strong> (see Section <a href="simple.html#qq">6.11</a>). Figure <a href="simple.html#fig:exppdf">6.12</a> enables us to do the former. This plot suggests that the exponential distribution fits the data well.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:exppdf"></span>
@@ -876,9 +876,9 @@ Figure 6.12: Histogram of sample inter-birth times with superimposed p.d.f. of a
 </ul></li>
 <li>If <span class="math inline">\(T\)</span> is a continuous random variable with p.d.f.
 <span class="math display">\[ f_{T}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0, \]</span>
-for <span class="math inline">\(\lambda &gt; 0\)</span>, then <span class="math inline">\(T \sim \mbox{exponential}(\lambda)\)</span>.</li>
+for <span class="math inline">\(\lambda &gt; 0\)</span>, then <span class="math inline">\(T \sim \text{exponential}(\lambda)\)</span>.</li>
 <li>Parameters: <span class="math inline">\(\lambda &gt; 0\)</span>.</li>
-<li><span class="math inline">\(\mbox{E}(T)=\displaystyle\frac{1}{\lambda}\)</span>, <span class="math inline">\(\mbox{var}(T)=\displaystyle\frac{1}{\lambda^2}\)</span>.</li>
+<li><span class="math inline">\(\text{E}(T)=\displaystyle\frac{1}{\lambda}\)</span>, <span class="math inline">\(\text{var}(T)=\displaystyle\frac{1}{\lambda^2}\)</span>.</li>
 </ul>
 </div>
 </div>
@@ -895,9 +895,9 @@ Figure 6.13: Histogram (left) and boxplot (right) of the sample birth weights.
 <p>A distribution that is commonly used to model continuous variables such as weight is the normal distribution. This is also known as the Gaussian distribution. A continuous random variable <span class="math inline">\(Z\)</span> has a normal distribution with parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> if its probability density function is given by
 <span class="math display">\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
 (z-\mu)^{2} \right],
-\qquad \mbox{for}\,\,\,-\infty &lt; z &lt; \infty. \]</span>
+\qquad \text{for}\,\,\,-\infty &lt; z &lt; \infty. \]</span>
 We write
-<span class="math display">\[ Z \sim \mbox{N}(\mu,\sigma^{2}). \]</span></p>
+<span class="math display">\[ Z \sim \text{N}(\mu,\sigma^{2}). \]</span></p>
 <p>The p.d.f. of a normal distribution is sometimes described as ‘bell-shaped’ as in the top left plot in Figure <a href="descriptive.html#fig:shapes">2.1</a>.</p>
 <p>One of the key properties of the normal distribution is that its p.d.f. is symmetric about its mean <span class="math inline">\(\mu\)</span>. Therefore, the plots in Figure <a href="simple.html#fig:babynormalplots">6.13</a> suggest that it may not be reasonable to suppose that the birth weights of these babies behave like a random sample from a normal distribution.</p>
 <p>Nevertheless, we consider how we could to fit a normal distribution to these data - even though it does not appear that a normal distribution is appropriate in this case.</p>
@@ -907,8 +907,8 @@ We write
 <li>the variance of a distribution by the sample variance.</li>
 </ul>
 <p>In this example we get
-<span class="math display">\[ \hat{\mu}=7.22 \mbox{ pounds} \qquad \mbox{and} \qquad \hat{\sigma}^2=1.36 \mbox{ pounds}^2. \]</span></p>
-<p>In Figure <a href="simple.html#fig:normalpdf">6.14</a> the fitted normal <span class="math inline">\(\mbox{N}(\hat{\mu},\hat{\sigma}^{2})\)</span> p.d.f. superimposed on the histogram of the sample birth weights.</p>
+<span class="math display">\[ \hat{\mu}=7.22 \text{ pounds} \qquad \text{and} \qquad \hat{\sigma}^2=1.36 \text{ pounds}^2. \]</span></p>
+<p>In Figure <a href="simple.html#fig:normalpdf">6.14</a> the fitted normal <span class="math inline">\(\text{N}(\hat{\mu},\hat{\sigma}^{2})\)</span> p.d.f. superimposed on the histogram of the sample birth weights.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:normalpdf"></span>
 <img src="images/baby_normal_fitnew.png" alt="Histogram of sample birth weights, with a fitted normal p.d.f. superimposed." width="75%" />
 <p class="caption">
@@ -916,8 +916,8 @@ Figure 6.14: Histogram of sample birth weights, with a fitted normal p.d.f. supe
 </p>
 </div>
 <p>As we expect the fit if not particularly good. In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution. In Section <a href="simple.html#qq">6.11</a> we will use a <strong>normal QQ plot</strong> to assess the fit of a normal distribution to these data.</p>
-<div id="summary-of-the-mboxnmusigma2-distribution" class="section level3 hasAnchor" number="6.9.1">
-<h3><span class="header-section-number">6.9.1</span> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution<a href="simple.html#summary-of-the-mboxnmusigma2-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="summary-of-the-textnmusigma2-distribution" class="section level3 hasAnchor" number="6.9.1">
+<h3><span class="header-section-number">6.9.1</span> Summary of the <span class="math inline">\(\text{N}(\mu,\sigma^2)\)</span> distribution<a href="simple.html#summary-of-the-textnmusigma2-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li>Situation: used widely in Statistics
 <ul>
@@ -929,10 +929,10 @@ Figure 6.14: Histogram of sample birth weights, with a fitted normal p.d.f. supe
 <li>If <span class="math inline">\(Z\)</span> is a continuous random variable with p.d.f.
 <span class="math display">\[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
 (z-\mu)^2 \right],
-\,\, \mbox{for}\,-\infty &lt; z &lt; \infty, \]</span>
-for <span class="math inline">\(\sigma &gt;0\)</span>, then <span class="math inline">\(Z \sim \mbox{N}(\mu,\sigma^{2})\)</span>.</li>
+\,\, \text{for}\,-\infty &lt; z &lt; \infty, \]</span>
+for <span class="math inline">\(\sigma &gt;0\)</span>, then <span class="math inline">\(Z \sim \text{N}(\mu,\sigma^{2})\)</span>.</li>
 <li>Parameters: <span class="math inline">\(-\infty &lt; \mu &lt; \infty\)</span>, <span class="math inline">\(\sigma^2 &gt; 0\)</span>.</li>
-<li><span class="math inline">\(\mbox{E}(Z)=\mu\)</span>, <span class="math inline">\(\mbox{var}(Z)=\sigma^2\)</span>.</li>
+<li><span class="math inline">\(\text{E}(Z)=\mu\)</span>, <span class="math inline">\(\text{var}(Z)=\sigma^2\)</span>.</li>
 </ul>
 </div>
 <div id="the-standard-normal-disribution" class="section level3 hasAnchor" number="6.9.2">
@@ -946,7 +946,7 @@ and
 </div>
 <div id="evaluating-the-normal-c.d.f.-and-quantiles" class="section level3 hasAnchor" number="6.9.3">
 <h3><span class="header-section-number">6.9.3</span> Evaluating the normal c.d.f. and quantiles<a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Suppose that <span class="math inline">\(W \sim N(7.22, 1.36)\)</span>, that is, <span class="math inline">\(\mbox{E}(W)=7.22\)</span> and <span class="math inline">\(\mbox{var}(W)=1.36\)</span> and we want to calculate <span class="math inline">\(P(W \leq 10)\)</span>. Then</p>
+<p>Suppose that <span class="math inline">\(W \sim N(7.22, 1.36)\)</span>, that is, <span class="math inline">\(\text{E}(W)=7.22\)</span> and <span class="math inline">\(\text{var}(W)=1.36\)</span> and we want to calculate <span class="math inline">\(P(W \leq 10)\)</span>. Then</p>
 <p><span class="math display">\[
 \begin{aligned}
 P(W \leq 10) = \int_{-\infty}^{10} \displaystyle\frac{1}{1.36\sqrt{2\pi}}
@@ -959,7 +959,7 @@ P(W \leq 10) = \int_{-\infty}^{10} \displaystyle\frac{1}{1.36\sqrt{2\pi}}
 \begin{aligned}
 P(W \leq 10)
 &amp;= P\left(\frac{W-7.22}{\sqrt{1.36}} \leq \frac{10-7.22}{\sqrt{1.36}} \right) \\
-&amp;\approx P\left(Z \leq 2.38 \right) \qquad\qquad \mbox{where } Z \sim N(0, 1) \\
+&amp;\approx P\left(Z \leq 2.38 \right) \qquad\qquad \text{where } Z \sim N(0, 1) \\
 &amp;= \Phi(2.38)
 \end{aligned}
 \]</span></p>
@@ -1050,7 +1050,7 @@ Figure 6.15: A normal p.d.f. with the 10%, 20%, …, 90% quantiles indicated wit
 <div id="constructing-a-qq-plot" class="section level4 unnumbered hasAnchor">
 <h4>Constructing a QQ plot<a href="simple.html#constructing-a-qq-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>To produce a QQ plot based on a continuous distribution (not necessarily a normal distribution) we plot, for <span class="math inline">\(i = 1, \ldots, n\)</span>
-<span class="math display">\[ x_{(i)}  \,\,\mbox{ against the }\,\, 100\frac{i}{n+1}\% \, \mbox{ theoretical quantile}, \]</span>
+<span class="math display">\[ x_{(i)}  \,\,\text{ against the }\,\, 100\frac{i}{n+1}\% \, \text{ theoretical quantile}, \]</span>
 that is, the order statistics against the corresponding values we might expect
 from a sample from the distribution of interest. If the points on this scatter plot are close to a line of equality then it may be reasonable to suppose that the data have been sampled from the this distribution.</p>
 <p>Figure <a href="simple.html#fig:qqschem">6.16</a> shows an example normal QQ plot based on a sample of size <span class="math inline">\(n=9\)</span>.</p>

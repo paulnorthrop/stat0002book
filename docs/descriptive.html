@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Descriptive statistics | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Descriptive statistics | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2025-10-21" />
+<meta name="date" content="2026-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,7 +296,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>6.9</b> The normal distribution</a>
 <ul>
-<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
+<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-textnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\text{N}(\mu,\sigma^2)\)</span> distribution</a></li>
 <li class="chapter" data-level="6.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>6.9.2</b> The standard normal disribution</a></li>
 <li class="chapter" data-level="6.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>6.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
 <li class="chapter" data-level="6.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>6.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
@@ -832,11 +832,11 @@ which is used by some calculators is equal to <span class="math inline">\(s^2 (1
 <div id="measures-of-skewness" class="section level4 unnumbered hasAnchor">
 <h4>Measures of skewness<a href="descriptive.html#measures-of-skewness" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Usually the best way to examine the shape of a distribution is to look at a graph see section <a href="descriptive.html#graphs">2.5</a>. In addition we could calculate summary measures of skewness, such as: the <strong>standardized sample skewness</strong>
-<span class="math display">\[\mbox{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
+<span class="math display">\[\text{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
 \overline{x})^3}{s^3}, \]</span>
 where <span class="math inline">\(s\)</span> is the sample standard deviation, and the <strong>sample quartile
 skewness</strong>
-<span class="math display">\[\mbox{quartile skewness} = \frac{(q_U-m)-(m-q_L)}{q_U-q_L}, \]</span>
+<span class="math display">\[\text{quartile skewness} = \frac{(q_U-m)-(m-q_L)}{q_U-q_L}, \]</span>
 where <span class="math inline">\(q_L, m\)</span> and <span class="math inline">\(q_U\)</span> are the sample quartiles.</p>
 <p>These measures are each 0 for perfectly symmetric data, negative for negative skew data and positive for positive skew data. The standardized sample skewness can take any value on the real line. The quartile skewness must lie in <span class="math inline">\([-1, 1]\)</span>. The quartile skewness has the advantage that it is less sensitive to outliers than the standardized sample skewness.</p>
 <p>For the Oxford births data the standardized sample skewness is 0.63 and the sample quartile skewness is -0.072. In this example, the standardized sample skewness suggests that the data are positively skewed, whereas the quartile skewness suggests that the data are (slightly) negatively skewed.</p>
@@ -1061,10 +1061,10 @@ each other. There may be observations which are not unusual when variables are c
 <h3><span class="header-section-number">2.5.1</span> Histograms<a href="descriptive.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>histogram</strong> is a graphical display based on the relative frequency distribution of a set of data on a <strong>continuous</strong> variable. The variable of interest is plotted on the <span class="math inline">\(x\)</span>-axis, which is divided into <strong>bins</strong> based on the classes of the frequency distribution. A rectangle is plotted for each bin. The height of a rectangle is calculated as
 <span class="math display" id="eq:hist">\[\begin{equation}
-\mbox{height} = \frac{\mbox{relative frequency}}{\mbox{bin width}} = \frac{\mbox{frequency}}{n \times \mbox{bin width}}.
+\text{height} = \frac{\text{relative frequency}}{\text{bin width}} = \frac{\text{frequency}}{n \times \text{bin width}}.
 \tag{2.2}
 \end{equation}\]</span>
-Therefore, for a given box in the histogram:</p>
+Therefore, for a given rectangle in the histogram:</p>
 <ul>
 <li>the <strong>area</strong> represents the relative frequency of the observations in
 the interval;</li>

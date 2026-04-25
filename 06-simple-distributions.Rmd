@@ -116,17 +116,17 @@ X_1 =
 
 $X_1$ has a Bernoulli distribution with parameter $p$, $(0 \leq p \leq 1)$, or, for short,
 \[ X_1 \sim
-\,\mbox{Bernoulli}(p). 
+\,\text{Bernoulli}(p). 
 \]
 Here, "$\sim$" means "is distributed as".
 
 Similarly, we define the random variables
 \begin{eqnarray*}
-X_i &=& \left\{ \begin{array}{ll}0&\mbox{  if the $i$th baby is a girl}; \\
-                                 1&\mbox{  if the $i$th baby is a boy,} \quad\mbox{for}\,\,\,i=1,\ldots,44.\end{array}\right.
+X_i &=& \left\{ \begin{array}{ll}0&\text{  if the }i\text{th baby is a girl}; \\
+                                 1&\text{  if the }i\text{th baby is a boy,} \quad\text{for}\,\,\,i=1,\ldots,44.\end{array}\right.
 \end{eqnarray*}
 If we assume that the probability of a boy is the same for each birth then
-\[ X_i \sim \mbox{Bernoulli}(p), \qquad \mbox{for}\,\,\,i=1,\ldots,44. \]
+\[ X_i \sim \text{Bernoulli}(p), \qquad \text{for}\,\,\,i=1,\ldots,44. \]
 
 In this example the sample values $x_1, \ldots, x_{44}$ of $X_1,\ldots,X_{44}$ are
 \[ x_1=0, \quad x_2=0, \quad x_3=1, \quad \ldots \quad x_{44}=0. \]
@@ -137,10 +137,10 @@ In this example the sample values $x_1, \ldots, x_{44}$ of $X_1,\ldots,X_{44}$ a
 *  If $X$ is a discrete random variable with p.m.f.
 
 \[ P(X=x) \,=\, p^x\,(1-p)^{1-x}, \qquad x=0,1, \]
-for some $p$, $0 \leq p \leq 1$, then $X \sim \mbox{Bernoulli}(p)$.
+for some $p$, $0 \leq p \leq 1$, then $X \sim \text{Bernoulli}(p)$.
 
 *  Parameter: $p \in [0,1]$.
-*  $\mbox{E}(X)=p$, $\mbox{var}(X)=p\,(1-p)$. (**Exercise**)
+*  $\text{E}(X)=p$, $\text{var}(X)=p\,(1-p)$. (**Exercise**)
 
 ## The binomial distribution {#binomial}
 
@@ -148,9 +148,9 @@ We have seen that the 44 births are 44 Bernoulli trials.  We define a random var
 \[ Y = X_1 + X_2 + \cdots + X_{44} = \sum_{i=1}^{44} X_i. \]
 We assume that the outcome of each birth is independent of the outcomes of all the other births, that is, the random variables $X_1, \ldots, X_{44}$ are mutually independent. Therefore, we have assumed that $X_1, \ldots, X_{44}$ are independent and identically distributed, or i.i.d. for short.  `Identically distributed' means that $X_1, \ldots, X_{44}$ have exactly the same distribution, including the values of any unknown parameters.  We may write
 
-\[ X_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]
+\[ X_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{Bernoulli}(p), \qquad i=1, ... , 44. \]
 or
-\[ X_i \,\stackrel{{\rm indep}}{\sim}\, \mbox{Bernoulli}(p), \qquad i=1, ... , 44. \]
+\[ X_i \,\stackrel{{\rm indep}}{\sim}\, \text{Bernoulli}(p), \qquad i=1, ... , 44. \]
 
 $X_1, ... , X_{44}$ are a **random sample** from a Bernoulli($p$) distribution.
 
@@ -184,7 +184,7 @@ The combinatorial term ${44 \choose y}={}^{44}C_y=\frac{44!}{(44-y)!y!}$
 gives the number of ways in which $y$ boys births can be positioned among the 44 births.
 
 $Y$ has a binomial distribution with parameters $44$ and $p$, $(0 \leq p \leq 1)$, or, for short,
-\[ Y \sim \,\mbox{binomial}(44,p). \]
+\[ Y \sim \,\text{binomial}(44,p). \]
 In this example the observed value of $Y$ is $y=26$.
 
 As is usually the case, in this example we know the value of the first parameter, the number of trials, but we do not know the value of the second parameter, the probability $p$ that a trial results in a 1. Suppose that the 44 babies born on 18th December 2007 at this hospital in Brisbane are representative of babies from some wider population, perhaps the population of babies born (or to be born) in a December in Australia in the 21st century. We want to use these data to estimate the probability $p$ that a baby chosen randomly from this population is a boy, or equivalently, the proportion $p$ of babies in this population who are boys.
@@ -216,7 +216,7 @@ Suppose that the **null hypothesis** $H_0: p=0.5$ is true.  How unlikely it is t
 
 You could think of this as 'standing' on the null hypothesis $H_0$ and looking to see how far away are the data.
 
-If $p=0.5$, $P(Y \geq 26\mbox{ or }Y \leq 18) = 0.15+0.15=0.30$.  Figure \@ref(fig:binominf) illustrates the calculation of this probability. This (the value 0.30 here) is called a **$p$-value**. A $p$-value is a measure of our surprise at seeing the data if the null hypothesis is true.  The smaller the $p$-value the greater our surprise.  We could decide to reject the null hypothesis $H_0$ that $p=0.5$ if the $p$-value is sufficiently small.  Otherwise, we do not reject $H_0$. 
+If $p=0.5$, $P(Y \geq 26\text{ or }Y \leq 18) = 0.15+0.15=0.30$.  Figure \@ref(fig:binominf) illustrates the calculation of this probability. This (the value 0.30 here) is called a **$p$-value**. A $p$-value is a measure of our surprise at seeing the data if the null hypothesis is true.  The smaller the $p$-value the greater our surprise.  We could decide to reject the null hypothesis $H_0$ that $p=0.5$ if the $p$-value is sufficiently small.  Otherwise, we do not reject $H_0$. 
 
 ```{r echo=FALSE, binominf, fig.show='hold', fig.cap='A binomial($44,1/2$) p.m.f. with the probabilities satisfying $Y$ less than or equal to 18 or greater than or equal to 26 shaded in black.'}
 include_cropped_graphics("images/binom_inference_1b.png")
@@ -242,9 +242,9 @@ In modern Statistics method 2. (**interval estimation**) is often preferred to 1
 each trial having the same probability $p$ of obtaining a 1.
 *  If $Y$ is a discrete random variable with p.m.f.
 \[ P(Y=y) \,=\, {n \choose y} p^y\,(1-p)^{n-y}, \qquad y=0,1,\ldots,n, \]
-for some $p$, $0 \leq p \leq 1$, then $Y \sim \mbox{binomial}(n,p)$.
+for some $p$, $0 \leq p \leq 1$, then $Y \sim \text{binomial}(n,p)$.
 *  Parameters: $n$ (usually known) and $p \in [0,1]$.
-*  $\mbox{E}(Y)=n\,p$, $\mbox{var}(Y)=n\,p\,(1-p)$. (**Exercise**. Note that $Y=X_1 + \cdots + X_n$, where $X_i, i=1, \ldots, n$ are independent Bernoulli($p$) random variables.)
+*  $\text{E}(Y)=n\,p$, $\text{var}(Y)=n\,p\,(1-p)$. (**Exercise**. Note that $Y=X_1 + \cdots + X_n$, where $X_i, i=1, \ldots, n$ are independent Bernoulli($p$) random variables.)
 
 A binomial(1,$p$) distribution is the same as a Bernoulli($p$) distribution.
 
@@ -341,13 +341,13 @@ P(W_1=w) = (1-p)^{w-1}\,p, \qquad w=1,2,\ldots.
 \end{equation}
 
 $W_1$ has a geometric distribution with parameter $p$, $(0 < p \leq 1)$, or, for short,
-\[ W_1 \sim \mbox{geometric}(p). \]
+\[ W_1 \sim \text{geometric}(p). \]
 We exclude $p=0$ because in this case we would never get a 1 and the \@ref(eq:geom) would sum to zero not one.
 
 Since $W_2$ relates to exactly the same situation as $W_1$, that is, the number of births until the next boy is born, $W_2$ has the same distribution as $W_1$. (We may write $W_1 \,\stackrel{{\rm d}}{=}\, W_2$ for "$W_1$ has the same distribution as $W_2$".) Similarly $W_3,W_4,\ldots$ also have the same distribution as $W_1$.
 
 The outcomes of the births are assumed to be mutually independent.  
-\[ W_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{geometric}(p), \qquad i=1,\ldots,26. \]
+\[ W_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{geometric}(p), \qquad i=1,\ldots,26. \]
 $W_1, \ldots, W_{26}$ are a **random sample** from a geometric($p$) distribution.
 
 We do not know the value of $p$ but we have an estimate $\hat{p}=26/44$ of $p$.  We substitute this estimate of $p$ into equation \@ref(eq:geom) to calculate the **estimated probabilities** in column 5 of Table \@ref(tab:geom).
@@ -368,9 +368,9 @@ include_cropped_graphics("images/baby_geom_fit.png")
 * **Situation**: the number of trials up to and including the first value of 1 in a sequence of independent Bernoulli trials, each trial having the same probability $p$ of obtaining a 1.
 *  If $W$ is a discrete random variable with p.m.f.
 \[ P(W=w) \,=\, (1-p)^{w-1}\,p, \qquad w=1,2,\ldots \]
-for some $p$, $0 < p \leq 1$, then $W \sim \mbox{geometric}(p)$.
+for some $p$, $0 < p \leq 1$, then $W \sim \text{geometric}(p)$.
 *  Parameter: $p \in (0,1]$.
-*  $\mbox{E}(W)=\displaystyle\frac1p$, $\mbox{var}(W)=\displaystyle\frac{1-p}{p^2}$. (**Exercise**)
+*  $\text{E}(W)=\displaystyle\frac1p$, $\text{var}(W)=\displaystyle\frac{1-p}{p^2}$. (**Exercise**)
 
 An alternative formulation is where a random variable $V$ is defined as the number of trials performed **before** the first 1 occurs.  Therefore, the support of $V$ is $0, 1, 2, ...$ and $V = W - 1$. The `dgeom()` function in R relates to a random variable like $V$, not $W$. 
 
@@ -441,14 +441,14 @@ It can be shown (STAT0007) that if births arrive in a Poisson process of rate $\
 interval of length $h$ hours has a particular kind of distribution called a Poisson distribution with mean $\mu=\lambda h$.  In our example, we have $h=1$, because we have counted the number of births that occur in time periods of length 1 hour.
 
 Consider $N_1$, the number of births in the first hour.  Under the assumptions of the Poisson process, $N_1$ has a Poisson distribution with mean parameter $\lambda$, ($\lambda >0$), or, for short,
-$$N_1 \sim \mbox{Poisson}(\lambda).$$  
+$$N_1 \sim \text{Poisson}(\lambda).$$  
 The probability mass function (p.m.f.) of $N_1$ is given by
 \begin{equation}
 P(N_1=n) = \frac{\lambda^n\,e^{-\lambda}}{n!}, \qquad n=0,1,2,\ldots. (\#eq:pois)
 \end{equation}
 
 These arguments also apply to $N_2, N_3, ... , N_{24}$.  Therefore,
-\[ N_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{Poisson}(\lambda), \qquad i=1,\ldots,24, \]
+\[ N_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{Poisson}(\lambda), \qquad i=1,\ldots,24, \]
 that is, $N_1,\ldots,N_{24}$ are a random sample from a Poisson ($\lambda$) distribution.
 
 The sample values $n_1, n_2, \ldots, n_{24}$ of $N_1, N_2, \ldots, N_{24}$ are
@@ -484,12 +484,12 @@ include_cropped_graphics("images/poisson_pmf3.png")
 *  Situation: the number events occurring during a time period of fixed duration.
 *  If $N$ is a discrete random variable with p.m.f.
 \[ P(N=n) = \frac{\mu^n\, e^{-\mu}}{n!}, \qquad n=0,1,2,\ldots, \]
-for some $\mu$, then $N \sim \mbox{Poisson}(\mu)$.
+for some $\mu$, then $N \sim \text{Poisson}(\mu)$.
 *  Parameter: $\mu > 0$. 
 
 [$\mu = 0$ is valid but  not interesting: $P(N = 0) = 1$.]
 
-*  $\mbox{E}(N)=\mu$, $\mbox{var}(N)=\mu$.
+*  $\text{E}(N)=\mu$, $\text{var}(N)=\mu$.
 
 ## Summary of these discrete distributions
 
@@ -517,14 +517,14 @@ include_cropped_graphics("images/unif_pdf.png")
 ```
 
 This is the p.d.f. of a (continuous) uniform distribution over the interval (0,24), or, for short,
-\[ U_1 \sim \mbox{U}(0,24). \]  
+\[ U_1 \sim \text{U}(0,24). \]  
 A uniform  distribution is sometimes called a rectangular distribution.  The uniform distribution has 2 parameters: the lower and upper end points of the interval over which it is defined.  In this example the values of both the parameters are known.
 
-Suppose that we choose another time of birth $U_2$ from the remaining 43 births. The arguments we made about $U_1$ apply equally to $U_2$.  Therefore $U_2 \sim \mbox{U}(0,24)$.  Similarly $U_3, U_4, \ldots, U_{44} \sim \mbox{U}(0,24)$.  The assumption that the births occur independently of each other means that 
-\[ U_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{U}(0,24), \qquad i=1,\ldots,44, \]
-that is, $U_1,\ldots,U_{44}$ are a random sample from a $\mbox{U}(0,24)$ distribution.
+Suppose that we choose another time of birth $U_2$ from the remaining 43 births. The arguments we made about $U_1$ apply equally to $U_2$.  Therefore $U_2 \sim \text{U}(0,24)$.  Similarly $U_3, U_4, \ldots, U_{44} \sim \text{U}(0,24)$.  The assumption that the births occur independently of each other means that 
+\[ U_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{U}(0,24), \qquad i=1,\ldots,44, \]
+that is, $U_1,\ldots,U_{44}$ are a random sample from a $\text{U}(0,24)$ distribution.
 
-How else (in addition to looking at Figure \@ref(fig:babyintro)) can we examine whether the sample times of birth $u_1, \ldots, u_{44}$ look like a random sample from a $\mbox{U}(0,24)$ distribution?  
+How else (in addition to looking at Figure \@ref(fig:babyintro)) can we examine whether the sample times of birth $u_1, \ldots, u_{44}$ look like a random sample from a $\text{U}(0,24)$ distribution?  
 
 One way is to look at a histogram of the times of birth to see whether it is approximately flat.  Figure \@ref(fig:unifhists) shows 4 histograms, with different bin widths. Although the shape of the histogram changes slightly depending on the choice of bin width, all the plots suggest that there are are greater numbers of births in the afternoon and early evening periods than at other times. Another way is to look at a **uniform QQ plot**. We do this in Section \@ref(qq).
 
@@ -539,9 +539,9 @@ include_cropped_graphics("images/baby_unif_hist_freq.png")
 *  **Situation**: a continuous random variable for which all values between $a$ and $b$ are equally likely.
 *  If $U$ is a continuous random variable with p.d.f.
 \[ f_{U}(u) \,=\, \frac{1}{b-a}, \qquad a < u < b, \]
-for $b > a$, then $U \sim \mbox{U}(a,b)$.
+for $b > a$, then $U \sim \text{U}(a,b)$.
 *  Parameters: $-\infty < a < b < \infty$.
-*  $\mbox{E}(U)=\displaystyle\frac{a+b}{2}$, $\mbox{var}(U)=\displaystyle\frac{(b-a)^2}{12}$.
+*  $\text{E}(U)=\displaystyle\frac{a+b}{2}$, $\text{var}(U)=\displaystyle\frac{(b-a)^2}{12}$.
 
 ## The exponential distribution {#exponential}
 
@@ -551,7 +551,7 @@ first birth.  Look at Table \@ref(tab:abirths).  In this example the observed va
 It can be shown (STAT0007) that if the times of birth form a Poisson process of rate $\lambda$ per hour then the continuous random variable $T_1$ has p.d.f.
 \[ f_{T_1}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0. \]
 $T_1$ has exponential distribution with parameter $\lambda$, or, for short,
-\[ T_1 \sim \mbox{exp}(\lambda). \]
+\[ T_1 \sim \text{exp}(\lambda). \]
 Let $T_2$ be the time between the 1st birth and the 2nd birth; and $T_3$ be the time between the 2nd birth and the 3rd birth; and so on.  Observed values $t_2$ and $t_3$ of $T_2$ and $T_3$ are $t_2$=59 minutes and $t_3$=14 minutes.
 
 Figure \@ref(fig:babyexpplots) shows a histogram and boxplot of these sample values. The distribution of the times between the events is clearly positively skewed.
@@ -563,20 +563,20 @@ knitr::include_graphics("images/baby_exp_box.png")
 
 It can be shown (STAT0007) that if the times of birth form a Poisson process
 of rate $\lambda$ per hour then 
-\[ T_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{exponential}(\lambda), \qquad i=1,\ldots,44, \]
-that is, $T_1,\ldots,T_{44}$ are a random sample from an $\mbox{exponential}(\lambda)$ distribution.  
+\[ T_i \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{exponential}(\lambda), \qquad i=1,\ldots,44, \]
+that is, $T_1,\ldots,T_{44}$ are a random sample from an $\text{exponential}(\lambda)$ distribution.  
 
 There is more than one to estimate $\lambda$.  One approach is to note that the parameter $\lambda$ here is the same as the parameter $\lambda$ in Section \@ref(Poisson).  Therefore, we could the estimate $\hat{\lambda}=44/24\approx 1.83$ births per hour.  
 
-Alternatively, we could use the fact that the mean of an $\mbox{exponential}(\lambda)$ distribution is $1/\lambda$.  The sample mean of the 44 times $t_1,\ldots,t_{44}$ between births is 
-\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\mbox{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \mbox{ minutes} 
-\approx 0.543 \mbox{ hours}. \]
+Alternatively, we could use the fact that the mean of an $\text{exponential}(\lambda)$ distribution is $1/\lambda$.  The sample mean of the 44 times $t_1,\ldots,t_{44}$ between births is 
+\[ \frac{\displaystyle\sum_{i=1}^{44}t_i}{44}=\frac{\text{time of last birth}}{44}=\frac{1435}{44}\approx 32.61 \text{ minutes} 
+\approx 0.543 \text{ hours}. \]
 Rearranging
-\[ \mbox{E}(T) = \frac{1}{\lambda}, \]
+\[ \text{E}(T) = \frac{1}{\lambda}, \]
 gives
 \[ \lambda = \frac{1}{{\rm E}(T)}. \]
 Therefore a sensible estimate of $\lambda$ is given by
-\[ \tilde{\lambda} = \frac{1}{0.543} \approx 1.840 \mbox{ births per hour}. \]
+\[ \tilde{\lambda} = \frac{1}{0.543} \approx 1.840 \text{ births per hour}. \]
 We have used $\tilde{\lambda}$ to denote the estimate of $\lambda$ to distinguish it from $\hat{\lambda}$.
 
 How well does the exponential distribution fit these data?  We could compare an estimate of the p.d.f. from a histogram of the data with the fitted exponential($\hat{\lambda}$) p.d.f. or look at an **exponential QQ plot** (see Section \@ref(qq)).  Figure \@ref(fig:exppdf) enables us to do the former.  This plot suggests that the exponential distribution fits the data well.
@@ -598,9 +598,9 @@ We have used the data in three different ways (based on the Poisson, uniform and
     - and the times between events in a Poisson process of rate $\lambda$
 *  If $T$ is a continuous random variable with p.d.f.
 \[ f_{T}(t) = \lambda\,e^{-\lambda t}, \qquad t \geq 0, \]
-for $\lambda > 0$, then $T \sim \mbox{exponential}(\lambda)$.
+for $\lambda > 0$, then $T \sim \text{exponential}(\lambda)$.
 *  Parameters: $\lambda > 0$.
-*  $\mbox{E}(T)=\displaystyle\frac{1}{\lambda}$, $\mbox{var}(T)=\displaystyle\frac{1}{\lambda^2}$.
+*  $\text{E}(T)=\displaystyle\frac{1}{\lambda}$, $\text{var}(T)=\displaystyle\frac{1}{\lambda^2}$.
 
 ## The normal distribution {#normal}
 
@@ -616,9 +616,9 @@ The most obvious feature of Figure \@ref(fig:babynormalplots) is that the empiri
 A distribution that is commonly used to model continuous variables such as weight is the normal distribution.  This is also known as the Gaussian distribution.  A continuous random variable $Z$ has a normal distribution with parameters $\mu$ and $\sigma^{2}$ if its probability density function is given by
 \[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
 (z-\mu)^{2} \right],
-\qquad \mbox{for}\,\,\,-\infty < z < \infty. \]
+\qquad \text{for}\,\,\,-\infty < z < \infty. \]
 We write 
-\[ Z \sim \mbox{N}(\mu,\sigma^{2}). \]
+\[ Z \sim \text{N}(\mu,\sigma^{2}). \]
 
 The p.d.f. of a normal distribution is sometimes described as 'bell-shaped' as in the top left plot in Figure \@ref(fig:shapes).
 
@@ -632,9 +632,9 @@ It makes sense to estimate
 * the variance of a distribution by the sample variance. 
 
 In this example we get 
-\[ \hat{\mu}=7.22 \mbox{ pounds} \qquad \mbox{and} \qquad \hat{\sigma}^2=1.36 \mbox{ pounds}^2. \]
+\[ \hat{\mu}=7.22 \text{ pounds} \qquad \text{and} \qquad \hat{\sigma}^2=1.36 \text{ pounds}^2. \]
 
-In Figure \@ref(fig:normalpdf) the fitted normal $\mbox{N}(\hat{\mu},\hat{\sigma}^{2})$ p.d.f. superimposed on the histogram of the sample birth weights. 
+In Figure \@ref(fig:normalpdf) the fitted normal $\text{N}(\hat{\mu},\hat{\sigma}^{2})$ p.d.f. superimposed on the histogram of the sample birth weights. 
 
 ```{r echo=FALSE, normalpdf, fig.show='hold', fig.cap='Histogram of sample birth weights, with a fitted normal p.d.f. superimposed.'}
 include_cropped_graphics("images/baby_normal_fitnew.png")
@@ -642,7 +642,7 @@ include_cropped_graphics("images/baby_normal_fitnew.png")
 
 As we expect the fit if not particularly good.  In particular, there are more low birth weight babies than we would expect based on the fitted normal distribution.  In Section \@ref(qq) we will use a **normal QQ plot** to assess the fit of a normal distribution to these data.
 
-### Summary of the $\mbox{N}(\mu,\sigma^2)$ distribution
+### Summary of the $\text{N}(\mu,\sigma^2)$ distribution
 
 * Situation: used widely in Statistics 
     - to model continuous variables, perhaps after transformation;
@@ -652,10 +652,10 @@ As we expect the fit if not particularly good.  In particular, there are more lo
 * If $Z$ is a continuous random variable with p.d.f.
 \[ f_Z(z) = \displaystyle\frac{1}{\sigma\sqrt{2\pi}} \,\exp\!\left[ -\,\frac{1}{2\sigma^2}
 (z-\mu)^2 \right],
-\,\, \mbox{for}\,-\infty < z < \infty, \]
-for $\sigma >0$, then $Z \sim \mbox{N}(\mu,\sigma^{2})$.
+\,\, \text{for}\,-\infty < z < \infty, \]
+for $\sigma >0$, then $Z \sim \text{N}(\mu,\sigma^{2})$.
 * Parameters: $-\infty < \mu < \infty$, $\sigma^2 > 0$.
-* $\mbox{E}(Z)=\mu$, $\mbox{var}(Z)=\sigma^2$.
+* $\text{E}(Z)=\mu$, $\text{var}(Z)=\sigma^2$.
 
 ### The standard normal disribution
 
@@ -668,7 +668,7 @@ and
 
 ### Evaluating the normal c.d.f. and quantiles
 
-Suppose that $W \sim N(7.22, 1.36)$, that is, $\mbox{E}(W)=7.22$ and $\mbox{var}(W)=1.36$ and we want to calculate $P(W \leq 10)$.  Then
+Suppose that $W \sim N(7.22, 1.36)$, that is, $\text{E}(W)=7.22$ and $\text{var}(W)=1.36$ and we want to calculate $P(W \leq 10)$.  Then
 
 $$
 \begin{aligned}
@@ -685,7 +685,7 @@ $$
 \begin{aligned}
 P(W \leq 10)
 &= P\left(\frac{W-7.22}{\sqrt{1.36}} \leq \frac{10-7.22}{\sqrt{1.36}} \right) \\
-&\approx P\left(Z \leq 2.38 \right) \qquad\qquad \mbox{where } Z \sim N(0, 1) \\
+&\approx P\left(Z \leq 2.38 \right) \qquad\qquad \text{where } Z \sim N(0, 1) \\
 &= \Phi(2.38)
 \end{aligned}
 $$
@@ -777,7 +777,7 @@ For $n=9$ the 9 quantiles $3.14, 4.72, \ldots, 12.30$ split the $N(7.72, 3.57^2)
 #### Constructing a QQ plot {-}
 
 To produce a QQ plot based on a continuous distribution (not necessarily a normal distribution) we plot, for $i = 1, \ldots, n$
-\[ x_{(i)}  \,\,\mbox{ against the }\,\, 100\frac{i}{n+1}\% \, \mbox{ theoretical quantile}, \]
+\[ x_{(i)}  \,\,\text{ against the }\,\, 100\frac{i}{n+1}\% \, \text{ theoretical quantile}, \]
 that is, the order statistics against the corresponding values we might expect
 from a sample from the distribution of interest.  If the points on this scatter plot are close to a line of equality then it may be reasonable to suppose that the data have been sampled from the this distribution.
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 8 Contingency tables | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 8 Contingency tables | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2025-10-21" />
+<meta name="date" content="2026-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,7 +296,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>6.9</b> The normal distribution</a>
 <ul>
-<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
+<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-textnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\text{N}(\mu,\sigma^2)\)</span> distribution</a></li>
 <li class="chapter" data-level="6.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>6.9.2</b> The standard normal disribution</a></li>
 <li class="chapter" data-level="6.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>6.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
 <li class="chapter" data-level="6.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>6.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
@@ -483,15 +483,15 @@ Figure 8.3: Notation for a 2-way contingency table.
 <p>Let
 <span class="math display">\[ p_{ij} = P(X=i,  Y=j) \]</span>
 and
-<span class="math display">\[ p_{i+}=\displaystyle\sum_{j=1}^J p_{ij}=P(X=i) \quad \mbox{and} \quad p_{+j}=\displaystyle\sum_{i=1}^I p_{ij}=P(Y=j). \]</span></p>
-<p><span class="math display">\[ p_{i+} \mbox{ is the probability of being in row }i \]</span></p>
-<p><span class="math display">\[ p_{+j} \mbox{ is the probability of being in column }j \]</span></p>
+<span class="math display">\[ p_{i+}=\displaystyle\sum_{j=1}^J p_{ij}=P(X=i) \quad \text{and} \quad p_{+j}=\displaystyle\sum_{i=1}^I p_{ij}=P(Y=j). \]</span></p>
+<p><span class="math display">\[ p_{i+} \text{ is the probability of being in row }i \]</span></p>
+<p><span class="math display">\[ p_{+j} \text{ is the probability of being in column }j \]</span></p>
 <p>If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are independent then</p>
 <p><span class="math display">\[ p_{ij} = P(X=i,  Y=j) = P(X=i)\,P(Y=j) = p_{i+}\,p_{+j}. \]</span></p>
 <p>Therefore the expected frequency for the <span class="math inline">\((i,j)\)</span>th cell in the table is given by</p>
 <p><span class="math display">\[ \mu_{ij} = n\,p_{ij} = n\,p_{i+}\,p_{+j}. \]</span></p>
 <p>We estimate <span class="math inline">\(p_{i+}\)</span> and <span class="math inline">\(p_{+j}\)</span> using</p>
-<p><span class="math display">\[ \hat{p}_{i+} = \frac{n_{i+}}{n}, \quad \mbox{and} \quad \hat{p}_{+j} = \frac{n_{+j}}{n}, \]</span></p>
+<p><span class="math display">\[ \hat{p}_{i+} = \frac{n_{i+}}{n}, \quad \text{and} \quad \hat{p}_{+j} = \frac{n_{+j}}{n}, \]</span></p>
 <p>to give the estimated expected frequency</p>
 <p><span class="math display">\[ \hat{\mu}_{ij} = n\,\hat{p}_{i+}\,\hat{p}_{+j} = n\,\frac{n_{i+}}{n}\,\frac{n_{+j}}{n} = \frac{n_{i+}\,n_{+j}}{n}. \]</span></p>
 <p><strong>Residuals</strong></p>
@@ -586,13 +586,13 @@ which is equal to 0 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. F
 </ul>
 <p>Although the differences are the same, the former difference seems more important since <span class="math inline">\(P(A~|~M)\)</span> is 10 times greater than <span class="math inline">\(P(A~|F)\)</span>. The following alternatives, <strong>relative risk</strong> and <strong>odds ratio</strong>, do not have this problem.</p>
 <p><strong>The relative risk, a ratio of probabilities</strong></p>
-<p><span class="math display">\[\frac{P(A~|~M)}{P(A~|~F)} \qquad \left( \,\mbox{or} \qquad \frac{P(R~|~M)}{P(R~|~F)} \,\right)\]</span>
+<p><span class="math display">\[\frac{P(A~|~M)}{P(A~|~F)} \qquad \left( \,\text{or} \qquad \frac{P(R~|~M)}{P(R~|~F)} \,\right)\]</span>
 which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the relative risk of acceptance is <span class="math inline">\(\hat{P}(A~|~M)/\hat{P}(A~|~F) \approx 1.47\)</span>. The relative risk of rejection is <span class="math inline">\(\hat{P}(R~|~M)/\hat{P}(R~|~F) \approx 0.79\)</span>.</p>
 <p>Note: we cannot infer <span class="math inline">\(\hat{P}(R~|~M)/\hat{P}(R~|~F)\)</span> from (only) the value of <span class="math inline">\(\hat{P}(A~|~M)/\hat{P}(A~|~F)\)</span>. Therefore, it matters whether we choose to work with conditional probabilities of <span class="math inline">\(A\)</span> or of <span class="math inline">\(R\)</span>.</p>
 <p><strong>The odds ratio, a ratio of odds</strong></p>
 <p><span class="math display">\[\frac{P(A~|~M)}{1-P(A~|~M)}\,\,\Bigg/\,\,\frac{P(A~|~F)}{1-P(A~|~F)},\]</span>
 which is equal to 1 if <span class="math inline">\(P(A~|~M)=P(A~|~F)\)</span>. For the Berkeley data the estimate is <span class="math inline">\(\approx\)</span> 1.84.</p>
-<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\mbox{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\mbox{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\mbox{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">8.7</a>.</p>
+<p>The <strong>odds</strong> of an event <span class="math inline">\(B\)</span> is the ratio of the probability <span class="math inline">\(P(B)\)</span> that the event occurs to the probability <span class="math inline">\(P(\text{not}B) = 1 - P(B)\)</span> that it does not occur. If <span class="math inline">\(P(B) = \frac12\)</span> then <span class="math inline">\(B\)</span> and <span class="math inline">\(\text{not}B\)</span> are are equally likely and so the odds of event <span class="math inline">\(B\)</span> equals 1. If <span class="math inline">\(P(B) = \frac23\)</span> then <span class="math inline">\(B\)</span> has double the probability of <span class="math inline">\(\text{not}B\)</span> and so the odds of event <span class="math inline">\(B\)</span> equals 2. Some other simple cases are summarised in Figure <a href="contingency.html#fig:odds">8.7</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:odds"></span>
 <img src="images/odds.png" alt="The value of the odds of an event for different probabilities $p$ of that event." width="50%" />
 <p class="caption">
@@ -603,7 +603,7 @@ Figure 8.7: The value of the odds of an event for different probabilities <span 
 <p>An odds ratio tells us how much greater the odds of an event are in one group compared to another group. The estimated odds of <span class="math inline">\(A\)</span> for <span class="math inline">\(M\)</span> are
 <span class="math inline">\(\hat{P}(A~|~M)/[1-\hat{P}(A~|~M)] \approx 0.802.\)</span> The estimated odds of <span class="math inline">\(A\)</span> for <span class="math inline">\(F\)</span> are <span class="math inline">\(\hat{P}(A~|F)/[1-\hat{P}(A~|~F)] \approx 0.436.\)</span> Therefore, the odds ratio of acceptance, comparing <span class="math inline">\(M\)</span> to <span class="math inline">\(F\)</span>, is <span class="math inline">\(1.84 (\approx 0.802/0.436)\)</span>. The estimated odds of acceptance for males are approximately 2 times those for females.
 We could instead work with the conditional probabilities of the event <span class="math inline">\(R\)</span>, instead of the event <span class="math inline">\(A\)</span>. The estimated odds of <span class="math inline">\(R\)</span> for <span class="math inline">\(M\)</span> are <span class="math inline">\(\hat{P}(R~|~M)/[1-\hat{P}(R~|~M)] \approx 1.25 \,\,\,(=1/0.802).\)</span> The estimated odds of <span class="math inline">\(R\)</span> for <span class="math inline">\(F\)</span> are <span class="math inline">\(\hat{P}(R~|F)/[1-\hat{P}(R~|~F)] \approx 2.29 \,\,\,(=1/0.436).\)</span> When we change from considering <span class="math inline">\(A\)</span> to <span class="math inline">\(R\)</span>, the effect is to take the reciprocal of the odds. That is,</p>
-<p><span class="math display">\[ \frac{P(R \mid M)}{1 - P(R \mid M)} = \left[\frac{P(A \mid M)}{1 - P(A \mid M)}\right]^{-1} \quad \mbox{and} \quad \frac{P(R \mid F)}{1 - P(R \mid F)} = \left[\frac{P(A \mid F)}{1 - P(A \mid F)}\right]^{-1}. \]</span>
+<p><span class="math display">\[ \frac{P(R \mid M)}{1 - P(R \mid M)} = \left[\frac{P(A \mid M)}{1 - P(A \mid M)}\right]^{-1} \quad \text{and} \quad \frac{P(R \mid F)}{1 - P(R \mid F)} = \left[\frac{P(A \mid F)}{1 - P(A \mid F)}\right]^{-1}. \]</span>
 Therefore, the estimated odds of <span class="math inline">\(R\)</span>, comparing males to females, is the reciprocal of the odds of <span class="math inline">\(A\)</span> comparing males to females. Since <span class="math inline">\(1/1.84 \approx 1/2\)</span>, we could say that the estimated odds of rejection for males are approximately a half of those for females.</p>
 <p>The main point is that, when estimating the odds ratio, it doesn’t matter whether we work with <span class="math inline">\(P(A~|~M)\)</span> and <span class="math inline">\(P(A~|~F)\)</span> or <span class="math inline">\(P(R~|~M)\)</span> and <span class="math inline">\(P(R~|~F)\)</span>, provided that we remember when we interpret the estimate of the odds.</p>
 <p><strong>Odds ratio and relative risk</strong></p>
@@ -622,14 +622,14 @@ Figure 8.8: Example data from a case-control study. Source: Dorn, H.F. (1954) Th
 </p>
 </div>
 <p>These data comes from a very old case-control study, designed to investigate the link between smoking and lung cancer. The idea is to compare the smoking habits of people with lung cancer (the <strong>cases</strong>) and people without lung cancer, but who are otherwise similar to the cases (the <strong>controls</strong>). The people conducting the study decided to have equal number of cases and controls: 86 of each. That is, they fixed both column totals at 86. Therefore, this is <strong>not</strong> a random sample of people from the population: if we did sample people randomly from the population then we would expect to obtain far fewer people with lung cancer than people without lung cancer. Each person was asked whether they were a smoker or non-smoker.</p>
-<p>Let <span class="math inline">\(L\)</span> be the event that a person has lung cancer and let <span class="math inline">\(S\)</span> the event that a person is a smoker. We can estimate <span class="math inline">\(P(S \mid L)\)</span> and <span class="math inline">\(P(S \mid \mbox{not}L)\)</span>: <span class="math inline">\(\hat{P}(S \mid L) = 83/86 \approx 0.97\)</span> and <span class="math inline">\(\hat{P}(S \mid \mbox{not}L) = 72/86 \approx 0.84\)</span>. If we condition on <span class="math inline">\(L\)</span> or on <span class="math inline">\(\mbox{not}L\)</span> then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed. Both these estimates are high, because smoking was more prevalent in the 1950s, and <span class="math inline">\(\hat{P}(S \mid L) &gt; \hat{P}(S \mid \mbox{not}L)\)</span>, that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using
-<span class="math display">\[ \displaystyle\frac{\displaystyle\frac{\hat{P}(S \mid L)}{1-\hat{P}(S \mid L)}}{\displaystyle\frac{\hat{P}(S \mid \mbox{not}L)}{1-\hat{P}(S \mid \mbox{not}L)}}
+<p>Let <span class="math inline">\(L\)</span> be the event that a person has lung cancer and let <span class="math inline">\(S\)</span> the event that a person is a smoker. We can estimate <span class="math inline">\(P(S \mid L)\)</span> and <span class="math inline">\(P(S \mid \text{not}L)\)</span>: <span class="math inline">\(\hat{P}(S \mid L) = 83/86 \approx 0.97\)</span> and <span class="math inline">\(\hat{P}(S \mid \text{not}L) = 72/86 \approx 0.84\)</span>. If we condition on <span class="math inline">\(L\)</span> or on <span class="math inline">\(\text{not}L\)</span> then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed. Both these estimates are high, because smoking was more prevalent in the 1950s, and <span class="math inline">\(\hat{P}(S \mid L) &gt; \hat{P}(S \mid \text{not}L)\)</span>, that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using
+<span class="math display">\[ \displaystyle\frac{\displaystyle\frac{\hat{P}(S \mid L)}{1-\hat{P}(S \mid L)}}{\displaystyle\frac{\hat{P}(S \mid \text{not}L)}{1-\hat{P}(S \mid \text{not}L)}}
 = \displaystyle\frac{\displaystyle\frac{83/86}{3/86}}{\displaystyle\frac{72/86}{14/86}}
 = \frac{83 \times 14}{72 \times 3} = 5.38. \]</span></p>
-<p>Can we estimate the relative risk? No we cannot. In this example, the relative risk of interest is <span class="math inline">\(P(L \mid S) / P(L \mid \mbox{not}S)\)</span>: we compare the probabilities of developing lung cancer for smokers and non-smokers. However, the way that these data have been sampled means that they provide no information about <span class="math inline">\(P(L)\)</span>, that is, the proportion of people <strong>in the population</strong> who have lung cancer. The proportion of people <strong>in the sample</strong> who have lung cancer has been fixed at <span class="math inline">\(1/2\)</span> by the people who designed the study, because they fixed the column totals. Similarly, we cannot use these data to estimate <span class="math inline">\(P(L \mid S)\)</span> or <span class="math inline">\(P(L \mid \mbox{not}S)\)</span>, the proportion of people with lung cancer will also be artificially high within the smoker and for non-smoker categories.</p>
+<p>Can we estimate the relative risk? No we cannot. In this example, the relative risk of interest is <span class="math inline">\(P(L \mid S) / P(L \mid \text{not}S)\)</span>: we compare the probabilities of developing lung cancer for smokers and non-smokers. However, the way that these data have been sampled means that they provide no information about <span class="math inline">\(P(L)\)</span>, that is, the proportion of people <strong>in the population</strong> who have lung cancer. The proportion of people <strong>in the sample</strong> who have lung cancer has been fixed at <span class="math inline">\(1/2\)</span> by the people who designed the study, because they fixed the column totals. Similarly, we cannot use these data to estimate <span class="math inline">\(P(L \mid S)\)</span> or <span class="math inline">\(P(L \mid \text{not}S)\)</span>, the proportion of people with lung cancer will also be artificially high within the smoker and for non-smoker categories.</p>
 <p>However, <strong>can</strong> estimate the odds ratio that we would like, that is, the odds ratio of lung cancer, comparing smoker to non-smokers, because this is equal to the estimate of 5.38 that we calculated above, owing to</p>
-<p><span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}}
-\,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \mbox{not}L)}{1-P(S \mid \mbox{not}L)}}. \]</span></p>
+<p><span class="math display">\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \text{not}S)}{1-P(L \mid \text{not}S)}}
+\,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \text{not}L)}{1-P(S \mid \text{not}L)}}. \]</span></p>
 <p>Finally, we note that in cases where the events of interest happen very rarely, that is, they have very small probabilities, then the relative risk and the odds ratio have similar values. This is because when a probability <span class="math inline">\(p\)</span> is close to <span class="math inline">\(0\)</span>, <span class="math inline">\(p/(1-p) \approx p\)</span>. Therefore, in studies of a rare disease an estimated odds ratio is often taken as an estimate of a relative risk.</p>
 </div>
 </div>

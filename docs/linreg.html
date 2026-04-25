@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 9 Linear regression | STAT0002 Introduction to Probability and Statistics</title>
   <meta name="description" content="Produces STAT0002 notes in an accessible format" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 9 Linear regression | STAT0002 Introduction to Probability and Statistics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Paul Northrop" />
 
 
-<meta name="date" content="2025-10-21" />
+<meta name="date" content="2026-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,7 +296,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6.9" data-path="simple.html"><a href="simple.html#normal"><i class="fa fa-check"></i><b>6.9</b> The normal distribution</a>
 <ul>
-<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-mboxnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\mbox{N}(\mu,\sigma^2)\)</span> distribution</a></li>
+<li class="chapter" data-level="6.9.1" data-path="simple.html"><a href="simple.html#summary-of-the-textnmusigma2-distribution"><i class="fa fa-check"></i><b>6.9.1</b> Summary of the <span class="math inline">\(\text{N}(\mu,\sigma^2)\)</span> distribution</a></li>
 <li class="chapter" data-level="6.9.2" data-path="simple.html"><a href="simple.html#the-standard-normal-disribution"><i class="fa fa-check"></i><b>6.9.2</b> The standard normal disribution</a></li>
 <li class="chapter" data-level="6.9.3" data-path="simple.html"><a href="simple.html#evaluating-the-normal-c.d.f.-and-quantiles"><i class="fa fa-check"></i><b>6.9.3</b> Evaluating the normal c.d.f. and quantiles</a></li>
 <li class="chapter" data-level="6.9.4" data-path="simple.html"><a href="simple.html#interpretation-of-sigma"><i class="fa fa-check"></i><b>6.9.4</b> Interpretation of <span class="math inline">\(\sigma\)</span></a></li>
@@ -418,8 +418,8 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="linreg" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Chapter 9</span> Linear regression<a href="linreg.html#linreg" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this chapter, and Chapter <a href="correlationchapter.html#correlationchapter">10</a>, we examine the relationship between 2 continuous variables. First we consider <strong>regression</strong> problems, where the distribution of a <strong>response variable</strong> <span class="math inline">\(Y\)</span> may depend on the value of an <strong>explanatory variable</strong> <span class="math inline">\(X\)</span>. Possible aims of a regression analysis are (a) to understand the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, or (b) to predict <span class="math inline">\(Y\)</span> from the value of <span class="math inline">\(X\)</span>. We examine the conditional distribution of the random variable <span class="math inline">\(Y\)</span> given that <span class="math inline">\(X=x\)</span>, that is, <span class="math inline">\(Y \mid X=x\)</span>. In particular, we study a <strong>simple linear regression model</strong> in which the conditional mean <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span> of <span class="math inline">\(Y\)</span> given that <span class="math inline">\(X=x\)</span> is assumed to be a linear function of <span class="math inline">\(x\)</span> and the conditional variance <span class="math inline">\(\mbox{var}(Y \mid X=x)\)</span> of <span class="math inline">\(Y\)</span> is assumed to be constant. That is,
-<span class="math display">\[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \mbox{and} \qquad \mbox{var}(Y \mid X=x)=\sigma^2, \]</span>
+<p>In this chapter, and Chapter <a href="correlationchapter.html#correlationchapter">10</a>, we examine the relationship between 2 continuous variables. First we consider <strong>regression</strong> problems, where the distribution of a <strong>response variable</strong> <span class="math inline">\(Y\)</span> may depend on the value of an <strong>explanatory variable</strong> <span class="math inline">\(X\)</span>. Possible aims of a regression analysis are (a) to understand the relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>, or (b) to predict <span class="math inline">\(Y\)</span> from the value of <span class="math inline">\(X\)</span>. We examine the conditional distribution of the random variable <span class="math inline">\(Y\)</span> given that <span class="math inline">\(X=x\)</span>, that is, <span class="math inline">\(Y \mid X=x\)</span>. In particular, we study a <strong>simple linear regression model</strong> in which the conditional mean <span class="math inline">\(\text{E}(Y \mid X=x)\)</span> of <span class="math inline">\(Y\)</span> given that <span class="math inline">\(X=x\)</span> is assumed to be a linear function of <span class="math inline">\(x\)</span> and the conditional variance <span class="math inline">\(\text{var}(Y \mid X=x)\)</span> of <span class="math inline">\(Y\)</span> is assumed to be constant. That is,
+<span class="math display">\[ \text{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \text{and} \qquad \text{var}(Y \mid X=x)=\sigma^2, \]</span>
 for some constants <span class="math inline">\(\alpha, \beta\)</span> and <span class="math inline">\(\sigma^2\)</span>.</p>
 <p>In many cases it is clear which variable should be the response variable <span class="math inline">\(Y\)</span> and which should be the explanatory variable <span class="math inline">\(X\)</span>. For example,</p>
 <ul>
@@ -449,8 +449,8 @@ Figure 9.2: Scatter plot of distance against recession velocity.
 <p>Scientists then wondered how the positive linear association between distance and velocity could have arisen. The result was ‘Big Bang’ theory. This theory proposes that the Universe started with a Big Bang at a single point in space a very long time ago, scattering material around the surface of an ever-expanding sphere. If Big Bang theory is correct then the relationship between distance (<span class="math inline">\(Y\)</span>) and recession velocity (<span class="math inline">\(X\)</span>) should be of the form
 <span class="math display">\[ Y = T X, \]</span>
 where <span class="math inline">\(T\)</span> is the age of the Universe when the observations were made. This is called Hubble’s Law. In other words, distance, <span class="math inline">\(Y\)</span>, should depend linearly on velocity, <span class="math inline">\(X\)</span>. <span class="math inline">\(H=1/T\)</span> is called <strong>Hubble’s constant</strong>.</p>
-<p>The points in Figure <a href="linreg.html#fig:hubblescatter">9.2</a> do not lie exactly on a straight line, partly because the values of distance are not exact: they include measurement error. Also, there may have been astronomical events since the Big Bang which have weakened further the supposed linear relationships between distance and velocity. If we look at nebulae with the same value, <span class="math inline">\(x\)</span>, of velocity the measured value of distance, <span class="math inline">\(Y\)</span>, varies from one nebulae to another. For example, the 4 nebulae with velocities of 500 km/sec have have distances 0.9, 1.1, 1.4 and 2.0 MPc. So, for a given value of velocity there is variability in their distances from the Earth. Therefore, <span class="math inline">\(Y \mid X=x\)</span> is a random variable, with conditional mean <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span> and conditional variance <span class="math inline">\(\mbox{var}(Y \mid X=x)\)</span>.</p>
-<p>In Figure <a href="linreg.html#fig:hubblescatter">9.2</a> it looks possible that there is a straight line relationship between <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span> and <span class="math inline">\(x\)</span>. Therefore we consider fitting a simple linear regression model of <span class="math inline">\(Y\)</span> on <span class="math inline">\(x\)</span>. You could think of this as a way to draw a ‘line of best fit’ through the points in Figure <a href="linreg.html#fig:hubblescatter">9.2</a>.</p>
+<p>The points in Figure <a href="linreg.html#fig:hubblescatter">9.2</a> do not lie exactly on a straight line, partly because the values of distance are not exact: they include measurement error. Also, there may have been astronomical events since the Big Bang which have weakened further the supposed linear relationships between distance and velocity. If we look at nebulae with the same value, <span class="math inline">\(x\)</span>, of velocity the measured value of distance, <span class="math inline">\(Y\)</span>, varies from one nebulae to another. For example, the 4 nebulae with velocities of 500 km/sec have have distances 0.9, 1.1, 1.4 and 2.0 MPc. So, for a given value of velocity there is variability in their distances from the Earth. Therefore, <span class="math inline">\(Y \mid X=x\)</span> is a random variable, with conditional mean <span class="math inline">\(\text{E}(Y \mid X=x)\)</span> and conditional variance <span class="math inline">\(\text{var}(Y \mid X=x)\)</span>.</p>
+<p>In Figure <a href="linreg.html#fig:hubblescatter">9.2</a> it looks possible that there is a straight line relationship between <span class="math inline">\(\text{E}(Y \mid X=x)\)</span> and <span class="math inline">\(x\)</span>. Therefore we consider fitting a simple linear regression model of <span class="math inline">\(Y\)</span> on <span class="math inline">\(x\)</span>. You could think of this as a way to draw a ‘line of best fit’ through the points in Figure <a href="linreg.html#fig:hubblescatter">9.2</a>.</p>
 <div id="simple-linear-regression-model" class="section level3 hasAnchor" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> Simple linear regression model<a href="linreg.html#simple-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We assume that
@@ -459,12 +459,12 @@ Y_i = \alpha + \beta\,x_i +  \epsilon_i, \qquad i=1,\ldots,n,
 \tag{9.1}
 \end{equation}\]</span>
 where <span class="math inline">\(\epsilon_i, i=1, \ldots, n\)</span> are error terms, representing random ‘noise’. The <span class="math inline">\(\alpha + \beta\,x_i\)</span> part of the model is the <strong>systematic</strong> part. The <span class="math inline">\(\epsilon_i\)</span> is the <strong>random</strong> part of the model. It is assumed that, for <span class="math inline">\(i = 1, ..., n\)</span>,
-<span class="math display">\[  \mbox{E}( \epsilon_i)=0, \qquad \mbox{and} \qquad  \mbox{var}( \epsilon_i)=\sigma^2, \]</span>
+<span class="math display">\[  \text{E}( \epsilon_i)=0, \qquad \text{and} \qquad  \text{var}( \epsilon_i)=\sigma^2, \]</span>
 and that <span class="math inline">\(\epsilon_1, \ldots,  \epsilon_n\)</span> are <strong>uncorrelated</strong>. We will study <strong>correlation</strong> in the next section. It is a measure of the degree of <strong>linear</strong> association between two random variables. Uncorrelated random variables have no linear association. <span class="math inline">\(\epsilon_1, \ldots,  \epsilon_n\)</span> are <strong>uncorrelated</strong> if each pair of these variables is uncorrelated.</p>
 <p>Another way to write down this model is, for <span class="math inline">\(i=1,\ldots,n\)</span>,
-<span class="math display">\[  \mbox{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\mbox{straight line relationship}), \]</span>
+<span class="math display">\[  \text{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\text{straight line relationship}), \]</span>
 and
-<span class="math display">\[ \qquad  \mbox{var}(Y_i \mid X=x_i)=\sigma^2, \qquad\quad (\mbox{constant variance}), \]</span>
+<span class="math display">\[ \qquad  \text{var}(Y_i \mid X=x_i)=\sigma^2, \qquad\quad (\text{constant variance}), \]</span>
 where, given the values <span class="math inline">\(x_1,\ldots,x_n\)</span>, the random variables <span class="math inline">\(Y_1, \ldots, Y_n\)</span> are uncorrelated.</p>
 <p>Figure <a href="linreg.html#fig:regschematic">9.3</a> shows how the conditional distribution
 of <span class="math inline">\(Y\)</span> is assumed to vary with the value of <span class="math inline">\(x\)</span>.</p>
@@ -477,9 +477,9 @@ Figure 9.3: Conditional distribution of <span class="math inline">\(Y\)</span> g
 <p><strong>Interpretation of parameters</strong></p>
 <ul>
 <li>Intercept: <span class="math inline">\(\alpha\)</span>. The expected value (mean) of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X=0\)</span>, that is,
-<span class="math display">\[\alpha = \mbox{E}(Y~|~X=0).\]</span></li>
+<span class="math display">\[\alpha = \text{E}(Y~|~X=0).\]</span></li>
 <li>Gradient or slope: <span class="math inline">\(\beta\)</span>. An increase of 1 unit in <span class="math inline">\(x\)</span> corresponds to a change of <span class="math inline">\(\beta\)</span> in the conditional mean of <span class="math inline">\(Y\)</span>, that is,
-<span class="math display">\[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]</span></li>
+<span class="math display">\[ \beta =  \text{E}(Y~|~X=x+1)- \text{E}(Y~|~X=x). \]</span></li>
 <li>Error variance: <span class="math inline">\(\sigma^2\)</span>. The variability of the response about the linear regression line (in the vertical direction).</li>
 </ul>
 </div>
@@ -496,7 +496,7 @@ the differences between the observed values <span class="math inline">\(Y_i, i =
 <span class="math display">\[\begin{equation}
 \hat{\beta}=\frac{\displaystyle\sum_{i=1}^n \left(x_i- \overline{x}\right)\,\left(Y_i- \overline{Y}\right)}
 {\displaystyle\sum_{i=1}^n \left(x_i- \overline{x}\right)^2} = \frac{C_{xY}}{C_{xx}} \qquad
-\mbox{and} \qquad  
+\text{and} \qquad  
 \hat{\alpha}=  \overline{Y} - \hat{\beta}\, \overline{x},
 \end{equation}\]</span>
 where <span class="math inline">\(\overline{Y} = (1/n)\sum_{i=1}^n Y_i\)</span> and <span class="math inline">\(\overline{x} = (1/n)\sum_{i=1}^n x_i\)</span>. Note: <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> are each linear combinations of<span class="math inline">\(Y_1,\ldots,Y_n\)</span>.</p>
@@ -509,12 +509,12 @@ where <span class="math inline">\(\overline{Y} = (1/n)\sum_{i=1}^n Y_i\)</span> 
 \end{equation}\]</span>
 An estimate of <span class="math inline">\(\sigma^2\)</span> is important because it quantifies how much variability there is about the assumed straight line relationship between <span class="math inline">\(Y\)</span> and <span class="math inline">\(x\)</span>.</p>
 <p><strong>Properties of estimators.</strong> It can be shown that
-<span class="math display">\[  \mbox{E}(\hat{\alpha})=\alpha, \quad  \mbox{E}(\hat{\beta})=\beta, \quad  \mbox{E}(\hat{\sigma}^2)=\sigma^2, \]</span>
+<span class="math display">\[  \text{E}(\hat{\alpha})=\alpha, \quad  \text{E}(\hat{\beta})=\beta, \quad  \text{E}(\hat{\sigma}^2)=\sigma^2, \]</span>
 that is, these estimators are unbiased for the parameters they are intended to estimate. It can also be shown that the least squares estimators <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> have the smallest possible variances of all unbiased estimators of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> which are linear combinations of the response <span class="math inline">\(Y_1,\ldots,Y_n\)</span>.</p>
 <p><strong>Coefficient of determination.</strong> We may wish to quantify how much of the variability in the responses <span class="math inline">\(Y_1,\ldots,Y_n\)</span> is explained by the values <span class="math inline">\(x_1,\ldots,x_n\)</span> of the explanatory variable. To do this we can compare the variance of the residuals <span class="math inline">\(\{r_i\}\)</span> with the variance of the original observations <span class="math inline">\(\{Y_i\}\)</span>, producing the <strong>coefficient of determination</strong>, <span class="math inline">\(R\)</span>-squared, given by
 <span class="math display">\[ R\text{-squared} = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2}
-= 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
-{\mbox{total variability of $Y$ about $\bar{Y}$}}, \]</span>
+= 1-\frac{\text{variability in $Y$ not explained by $x$}}
+{\text{total variability of $Y$ about $\bar{Y}$}}, \]</span>
 where <span class="math inline">\(0 \leq R\text{-squared} \leq 1\)</span>. Think of <span class="math inline">\(R\text{-squared}\)</span> as a name, not literally as the square of a quantity <span class="math inline">\(R\)</span>. <span class="math inline">\(R\text{-squared}=1\)</span> indicates a perfect fit; <span class="math inline">\(R\text{-squared}=0\)</span> indicates that none of the variability in <span class="math inline">\(Y_1,\ldots,Y_n\)</span> is explained by <span class="math inline">\(x_1,\ldots,x_n\)</span>, producing a horizontal regression line (<span class="math inline">\(\hat{\beta}=0\)</span>). The value of <span class="math inline">\(R\text{-squared}\)</span>, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in <span class="math inline">\(Y\)</span> that is explained by <span class="math inline">\(x\)</span>.</p>
 </div>
 <div id="least-squares-fitting-to-hubbles-data" class="section level3 hasAnchor" number="9.1.3">
@@ -556,11 +556,11 @@ Figure 9.6: Scatter plot of distance against recession velocity, with least squa
 <p>Since we want to estimate the age of the Universe, we use the estimated regression line for Model 2:
 <span class="math display">\[ y = 0.00192\,x.  \]</span>
 Therefore, the estimated age of the Universe is given by
-<span class="math display">\[ \hat{T}=0.00192 \mbox{ Mpc/km/sec}. \]</span>
+<span class="math display">\[ \hat{T}=0.00192 \text{ Mpc/km/sec}. \]</span>
 To clarify the units of <span class="math inline">\(\hat{T}\)</span> we need to convert MPcs to kms by multiplying by <span class="math inline">\(3.086 \times 10^{19}\)</span>. This gives <span class="math inline">\(\hat{T}\)</span> in seconds. We convert to years by dividing by <span class="math inline">\(60 \times 60 \times 24 \times 365.25\)</span>:
 <span class="math display">\[ \hat{T}
 = 0.00192 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25}
-\approx 2 \mbox{ billion years}. \]</span></p>
+\approx 2 \text{ billion years}. \]</span></p>
 <p><strong>Update</strong></p>
 <p>Since Hubble’s work, physicists have obtained more data in order to obtain better estimates of distances of nebulae from the Earth and hence the age of the Universe. Figure <a href="linreg.html#fig:hubblescatternew">9.7</a> shows an example of these data (<span class="citation">Freedman et al. (<a href="#ref-Freedman2001">2001</a>)</span>). Using more powerful telescopes, it has been possible to estimate the distances of nebulae which are further from the Earth. Having a wider range of distances gives a better (smaller variance) estimator of the age of the Universe.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:hubblescatternew"></span>
@@ -572,7 +572,7 @@ Figure 9.7: Scatter plots of new ‘Hubble’ data with fitted regression throug
 <p>Using these data we obtain <span class="math inline">\(\hat{T}=0.0123\)</span> which gives
 <span class="math display">\[
 \hat{T} =
-0.0123 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} \approx 12 \mbox{ billion years}. \]</span>
+0.0123 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} \approx 12 \text{ billion years}. \]</span>
 This estimate agrees more closely with current scientific understanding of the age of the Universe than Hubble original estimate.</p>
 </div>
 <div id="normal-linear-regression-model" class="section level3 hasAnchor" number="9.1.4">
@@ -661,7 +661,7 @@ However, different <span class="math inline">\(r_i\)</span>s usually have slight
 where <span class="math inline">\(h_{ii}\)</span> is a number between 0 and 1 whose calculation is something that you do not need to know for STAT0002.</p>
 <p>We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.</p>
 <ul>
-<li><strong>Linearity</strong>. The relationship between <span class="math inline">\(\mbox{E}(Y~|~X=x)\)</span> is linear in <span class="math inline">\(x\)</span>.</li>
+<li><strong>Linearity</strong>. The relationship between <span class="math inline">\(\text{E}(Y~|~X=x)\)</span> is linear in <span class="math inline">\(x\)</span>.</li>
 </ul>
 <p>The initial plot of <span class="math inline">\(Y\)</span> against <span class="math inline">\(x\)</span> gives us a good idea about this. We also plot (standardised) residuals against <span class="math inline">\(x\)</span> (or the fitted values). If the assumption of linearity is valid then we expect a random scatter of points with no obvious
 pattern. Patterns in the residuals may indicate a non-linear relationship between
@@ -703,7 +703,7 @@ Figure 9.9: Patterns to look out for in residual plots: (a) random scatter (sati
 Figure 9.10: Left: scatter plot of <span class="math inline">\(y\)</span> against <span class="math inline">\(x\)</span>. The true relationship is linear with constant error variance. Right: a triangular residual plot results from uneven distribution of <span class="math inline">\(x\)</span> values.
 </p>
 </div>
-<p>Figure <a href="linreg.html#fig:nonnormal">9.11</a> shows a scatter plot where the relationship between <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span> and <span class="math inline">\(x\)</span> is linear and the variability in <span class="math inline">\(Y\)</span> about this line is approximately constant. However, the distribution of <span class="math inline">\(Y\)</span> about the line is skewed. We can see this from the scatter plot and, more clearly, in the residual plots in Figure <a href="linreg.html#fig:nonnormalres">9.12</a>. Although transformation of <span class="math inline">\(Y\)</span> could make the error distribution more symmetric, it will mess up the linearity. Therefore, the action to take is to fit the linear regression model, and report the fact that the error distribution is skewed.</p>
+<p>Figure <a href="linreg.html#fig:nonnormal">9.11</a> shows a scatter plot where the relationship between <span class="math inline">\(\text{E}(Y \mid X=x)\)</span> and <span class="math inline">\(x\)</span> is linear and the variability in <span class="math inline">\(Y\)</span> about this line is approximately constant. However, the distribution of <span class="math inline">\(Y\)</span> about the line is skewed. We can see this from the scatter plot and, more clearly, in the residual plots in Figure <a href="linreg.html#fig:nonnormalres">9.12</a>. Although transformation of <span class="math inline">\(Y\)</span> could make the error distribution more symmetric, it will mess up the linearity. Therefore, the action to take is to fit the linear regression model, and report the fact that the error distribution is skewed.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:nonnormal"></span>
 <img src="images/non_normal.png" alt="Scatter plot of $y$ against $x$.  The true relationship is linear but the error distribution skewed (with constant variance)." width="75%" />
 <p class="caption">
@@ -749,7 +749,7 @@ For the moment we assume that there is a departure from only one of the assumpti
 </ol>
 <p>Consequences.</p>
 <ul>
-<li>Bias: systematic over/under estimation and prediction of <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span>.}</li>
+<li>Bias: systematic over/under estimation and prediction of <span class="math inline">\(\text{E}(Y \mid X=x)\)</span>.}</li>
 <li>Misleading inferences: confidence intervals and standard errors (see STAT0003)
 do not reflect the true uncertainty, hypothesis tests of regression parameters
 (see STAT0003) do not have the correct properties.</li>
@@ -839,10 +839,10 @@ Figure 9.15: Outliers and their influence on the fitted linear regression line. 
 <p>To illustrate this we return to the 2000 US Presidential Election example. We saw that some of the relationships between Pat Buchanan’s vote <span class="math inline">\(Y\)</span> and the explanatory variables were distinctly non-linear. We also concluded that the vote Buchanan received in Palm Beach County was an outlier, explainable by the format of the ‘Butterfly’ ballot paper used in Palm Beach. Therefore, we build a linear regression model for Buchanan’s vote based on the election data in Florida, excluding Palm Beach County. We use only one explanatory variable: Total Population, denoted by <span class="math inline">\(x\)</span>.</p>
 <p>We consider 4 different models:</p>
 <p><span class="math display">\[\begin{eqnarray*}
-\mbox{E}(Y~|~X=x) &amp;=&amp; \alpha_1+\beta_1\,x, \qquad \quad \,\,\,\,\mbox{(model 1)}, \\
-\mbox{E}(Y~|~X=x) &amp;=&amp; \alpha_2+\beta_2\,\log x, \qquad \mbox{(model 2)}, \\
-\mbox{E}(\log Y~|~X=x) &amp;=&amp; \alpha_3+\beta_3\,\log x, \qquad \mbox{(model 3)}, \\
-\mbox{E}(\sqrt{Y}~|~X=x) &amp;=&amp; \alpha_4+\beta_4\,\log x, \qquad \mbox{(model 4)}.
+\text{E}(Y~|~X=x) &amp;=&amp; \alpha_1+\beta_1\,x, \qquad \quad \,\,\,\,\text{(model 1)}, \\
+\text{E}(Y~|~X=x) &amp;=&amp; \alpha_2+\beta_2\,\log x, \qquad \text{(model 2)}, \\
+\text{E}(\log Y~|~X=x) &amp;=&amp; \alpha_3+\beta_3\,\log x, \qquad \text{(model 3)}, \\
+\text{E}(\sqrt{Y}~|~X=x) &amp;=&amp; \alpha_4+\beta_4\,\log x, \qquad \text{(model 4)}.
 \end{eqnarray*}\]</span></p>
 <p>Figure <a href="linreg.html#fig:electionLS">9.16</a> shows scatter plots of the variables involved for each of these models, with least squares regression lines.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:electionLS"></span>
@@ -896,44 +896,44 @@ Figure 9.20: Model checking for model 4.
 <div id="interpretation-after-transformation" class="section level3 hasAnchor" number="9.4.1">
 <h3><span class="header-section-number">9.4.1</span> Interpretation after transformation<a href="linreg.html#interpretation-after-transformation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If we use a transformation we should be careful to interpret the results carefully in light of the transformation used. Often we will want to report the results on the original scale of the data, rather than the transformed scale. We illustrate this using the 2000 US Presidential Election example, using Model 3:
-<span class="math display">\[ \mbox{E}(\log Y \mid X=x) = \alpha+\beta\,\log x, \]</span>
+<span class="math display">\[ \text{E}(\log Y \mid X=x) = \alpha+\beta\,\log x, \]</span>
 where <span class="math inline">\(Y\)</span> is the percentage of the vote obtained by Pat Buchanan and <span class="math inline">\(\log\)</span> denotes the natural log, that is, log to the base <span class="math inline">\(e\)</span>. Again, we fit the model after excluding the observation from Palm Beach County. The least squares regression line is shown in the bottom left of Figure <a href="linreg.html#fig:electionLS">9.16</a>. The equation of this line is</p>
-<p><span class="math display">\[ \widehat{\mbox{E}}(\log Y \mid X=x) = 0.4 - 0.3\,\log x, \]</span></p>
+<p><span class="math display">\[ \widehat{\text{E}}(\log Y \mid X=x) = 0.4 - 0.3\,\log x, \]</span></p>
 <p>that is, <span class="math inline">\(\hat{\alpha} = 0.4\)</span> and <span class="math inline">\(\hat{\beta} = -0.3\)</span>.</p>
-<p>This provides an estimate for the way that the mean of <span class="math inline">\(\log Y\)</span> depends on <span class="math inline">\(x\)</span>. However, we may well be interested in <span class="math inline">\(Y\)</span>, not <span class="math inline">\(\log Y\)</span>. Recall from Section <a href="rvs.html#EgX">5.3.4</a> that, some special cases aside, <span class="math inline">\(g[\mbox{E}(Y)] \neq \mbox{E}[g(Y)].\)</span> In the current context,</p>
-<p><span class="math display">\[ \log \mbox{E}(Y \mid X=x) \neq \mbox{E}(\log Y \mid X=x) \]</span>
+<p>This provides an estimate for the way that the mean of <span class="math inline">\(\log Y\)</span> depends on <span class="math inline">\(x\)</span>. However, we may well be interested in <span class="math inline">\(Y\)</span>, not <span class="math inline">\(\log Y\)</span>. Recall from Section <a href="rvs.html#EgX">5.3.4</a> that, some special cases aside, <span class="math inline">\(g[\text{E}(Y)] \neq \text{E}[g(Y)].\)</span> In the current context,</p>
+<p><span class="math display">\[ \log \text{E}(Y \mid X=x) \neq \text{E}(\log Y \mid X=x) \]</span>
 or
-<span class="math display">\[ \mbox{E}(Y \mid X=x) \neq \exp \left\{ \mbox{E}(\log Y \mid X=x) \right\}. \]</span>
-Therefore, if we exponentiate the regression line then we do not obtain <span class="math inline">\(\mbox{E}(Y \mid X=x)\)</span>, at least not exactly.</p>
+<span class="math display">\[ \text{E}(Y \mid X=x) \neq \exp \left\{ \text{E}(\log Y \mid X=x) \right\}. \]</span>
+Therefore, if we exponentiate the regression line then we do not obtain <span class="math inline">\(\text{E}(Y \mid X=x)\)</span>, at least not exactly.</p>
 <p>We will consider two ways to tackle this problem.</p>
-<p><strong>Inferring <span class="math inline">\(\mbox{median}(Y \mid X = x).\)</span></strong> We assume that the error distribution is symmetric about 0, which implies that</p>
-<p><span class="math display">\[ \mbox{E}(\log Y \mid X=x) = \mbox{median}(\log Y \mid X=x). \]</span></p>
+<p><strong>Inferring <span class="math inline">\(\text{median}(Y \mid X = x).\)</span></strong> We assume that the error distribution is symmetric about 0, which implies that</p>
+<p><span class="math display">\[ \text{E}(\log Y \mid X=x) = \text{median}(\log Y \mid X=x). \]</span></p>
 <p>Consider a continuous random variable <span class="math inline">\(W\)</span>. If <span class="math inline">\(P(\log W \leq m) = 1/2\)</span> then <span class="math inline">\(P(W \leq e^m) = 1/2\)</span>. If <span class="math inline">\(m\)</span> is the median of <span class="math inline">\(\log W\)</span> then <span class="math inline">\(e^m\)</span> is the median of <span class="math inline">\(W\)</span>. Therefore,</p>
-<p><span class="math display">\[ \mbox{median}(Y \mid X=x) = \exp \left\{ \mbox{median}(\log Y \mid X=x) \right\} = \exp \{ \alpha + \beta \, \log x\} = e^\alpha x^\beta. \]</span></p>
+<p><span class="math display">\[ \text{median}(Y \mid X=x) = \exp \left\{ \text{median}(\log Y \mid X=x) \right\} = \exp \{ \alpha + \beta \, \log x\} = e^\alpha x^\beta. \]</span></p>
 <p>This leads to the following estimate for the conditional median of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X = x\)</span>:</p>
-<p><span class="math display">\[ \widehat{\mbox{median}}(Y \mid X=x) = e^{0.4 - 0.3\,\log x} = e^{0.4}\,x^{-0.3} = 1.5\,x^{-0.3}. \]</span></p>
+<p><span class="math display">\[ \widehat{\text{median}}(Y \mid X=x) = e^{0.4 - 0.3\,\log x} = e^{0.4}\,x^{-0.3} = 1.5\,x^{-0.3}. \]</span></p>
 <p>Based on this equation we estimate that if the population <span class="math inline">\(x\)</span> doubles then the median of the percentage of the vote that Buchanan obtains is multiplied by <span class="math inline">\(2^{-0.3}=0.8\)</span>. Doubling the population is estimated to reduce the median of Buchanan’s vote by 20%, for example 5% would reduce to 4%. This provides an interpretation for the estimate <span class="math inline">\(\hat{\beta} = -0.3\)</span>. What about <span class="math inline">\(\hat{\alpha}=0.4\)</span>, or rather <span class="math inline">\(e^{0.4}=1.5\)</span>? When <span class="math inline">\(x=1\)</span>,
-<span class="math display">\[ \widehat{\mbox{median}}(Y \mid X=x) = 1.5. \]</span>
+<span class="math display">\[ \widehat{\text{median}}(Y \mid X=x) = 1.5. \]</span>
 We estimate that in populations of size 1000 the median of Buchanan’s vote is 1.5% of the vote. However, The smallest population in the data is 6289 people, so we are extrapolating when we make this interpretation. It would be better to work with population recorded in units of 100,000. Then the intercept relates to a realistic population.</p>
-<p><strong>Inferring <span class="math inline">\(\mbox{E}(Y \mid X = x).\)</span></strong> We assume that the error distribution is normal. Suppose that <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> are Buchanan’s percentage of the vote and the population size in an arbitrarily-chosen county. Given that <span class="math inline">\(X=x\)</span> we have
+<p><strong>Inferring <span class="math inline">\(\text{E}(Y \mid X = x).\)</span></strong> We assume that the error distribution is normal. Suppose that <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span> are Buchanan’s percentage of the vote and the population size in an arbitrarily-chosen county. Given that <span class="math inline">\(X=x\)</span> we have
 <span class="math display">\[ \log Y = \alpha + \beta \log x + \epsilon, \]</span>
 where <span class="math inline">\(\epsilon \sim N(0,\sigma^2)\)</span>. Therefore,
 <span class="math display">\[ Y = e^\alpha x^\beta e^\epsilon. \]</span>
-It can be shown that <span class="math inline">\(\mbox{E}\left(e^\epsilon\right)=e^{\sigma^2/2}\)</span>. Taking expectations gives</p>
-<p><span class="math display">\[ \mbox{E}(Y \mid X=x) = \mbox{E}( e^\alpha x^\beta e^\epsilon)
-= e^\alpha x^\beta \mbox{E}\left( e^\epsilon \right)
+It can be shown that <span class="math inline">\(\text{E}\left(e^\epsilon\right)=e^{\sigma^2/2}\)</span>. Taking expectations gives</p>
+<p><span class="math display">\[ \text{E}(Y \mid X=x) = \text{E}( e^\alpha x^\beta e^\epsilon)
+= e^\alpha x^\beta \text{E}\left( e^\epsilon \right)
 = e^\alpha \, x^\beta \, e^{\sigma^2/2}. \]</span></p>
 <p>Therefore,</p>
-<p><span class="math display">\[ \mbox{E}(Y \mid X = x) = e^{\sigma^2/2} \, \mbox{median}(Y \mid X = x). \]</span></p>
-<p>Therefore, if the error variance <span class="math inline">\(\sigma^2\)</span> is small then <span class="math inline">\(\mbox{E}(Y \mid X = x) \approx \mbox{median}(Y \mid X = x).\)</span></p>
+<p><span class="math display">\[ \text{E}(Y \mid X = x) = e^{\sigma^2/2} \, \text{median}(Y \mid X = x). \]</span></p>
+<p>Therefore, if the error variance <span class="math inline">\(\sigma^2\)</span> is small then <span class="math inline">\(\text{E}(Y \mid X = x) \approx \text{median}(Y \mid X = x).\)</span></p>
 </div>
 </div>
 <div id="over-fitting" class="section level2 hasAnchor" number="9.5">
 <h2><span class="header-section-number">9.5</span> Over-fitting<a href="linreg.html#over-fitting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We fitted a straight line model,
-<span class="math display">\[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x, \]</span>
+<span class="math display">\[ \text{E}(Y \mid X=x) = \alpha+\beta\,x, \]</span>
 to Hubble’s data. Even if this model is true, we can (usually) obtain a better fit (smaller RSS) by fitting a quadratic model,
-<span class="math display">\[\mbox{E}(Y \mid X=x) = \alpha+\beta\,x+\gamma\,x^2.\]</span></p>
+<span class="math display">\[\text{E}(Y \mid X=x) = \alpha+\beta\,x+\gamma\,x^2.\]</span></p>
 <p>Extending this idea means that we can usually get closer and closer fits to the data by adding to the model a term in <span class="math inline">\(x^3\)</span>, a term in <span class="math inline">\(x^4\)</span>, and so on. Fitting a model with more than one explanatory variable is beyond the scope of STAT0002. However, in Figure <a href="linreg.html#fig:hubblecurves">9.21</a> we show fits to Hubble’s data of polynomials of degree 2, 3, 4 and 8.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:hubblecurves"></span>
 <img src="images/hubble_curves.png" alt="Fits of polynomial of degrees 2, 3, 4 and 8 to Hubble's data." width="95%" />

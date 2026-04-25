@@ -120,11 +120,11 @@ For $i=1,\ldots,I$ and $j=1,\ldots,J$ the observed frequency $n_{ij}$ is the sam
 Let 
 \[ p_{ij} = P(X=i,  Y=j) \]
 and 
-\[ p_{i+}=\displaystyle\sum_{j=1}^J p_{ij}=P(X=i) \quad \mbox{and} \quad p_{+j}=\displaystyle\sum_{i=1}^I p_{ij}=P(Y=j). \]
+\[ p_{i+}=\displaystyle\sum_{j=1}^J p_{ij}=P(X=i) \quad \text{and} \quad p_{+j}=\displaystyle\sum_{i=1}^I p_{ij}=P(Y=j). \]
 
-\[ p_{i+} \mbox{ is the probability of being in row }i \]
+\[ p_{i+} \text{ is the probability of being in row }i \]
 
-\[ p_{+j} \mbox{ is the probability of being in column }j \]
+\[ p_{+j} \text{ is the probability of being in column }j \]
 
 If $X$ and $Y$ are independent then 
 
@@ -136,7 +136,7 @@ Therefore the expected frequency for the $(i,j)$th cell in the table is given by
 
 We estimate $p_{i+}$ and $p_{+j}$ using
 
-\[ \hat{p}_{i+} = \frac{n_{i+}}{n}, \quad \mbox{and} \quad \hat{p}_{+j} = \frac{n_{+j}}{n}, \]
+\[ \hat{p}_{i+} = \frac{n_{i+}}{n}, \quad \text{and} \quad \hat{p}_{+j} = \frac{n_{+j}}{n}, \]
 
 to give the estimated expected frequency
 
@@ -261,7 +261,7 @@ Although the differences are the same, the former difference seems more importan
 
 **The relative risk, a ratio of probabilities** 
 
-$$\frac{P(A~|~M)}{P(A~|~F)} \qquad \left( \,\mbox{or} \qquad \frac{P(R~|~M)}{P(R~|~F)} \,\right)$$
+$$\frac{P(A~|~M)}{P(A~|~F)} \qquad \left( \,\text{or} \qquad \frac{P(R~|~M)}{P(R~|~F)} \,\right)$$
 which is equal to 1 if $P(A~|~M)=P(A~|~F)$.  For the Berkeley data the relative risk of acceptance is $\hat{P}(A~|~M)/\hat{P}(A~|~F) \approx 1.47$.  The relative risk of rejection is $\hat{P}(R~|~M)/\hat{P}(R~|~F) \approx 0.79$.
 
 Note: we cannot infer $\hat{P}(R~|~M)/\hat{P}(R~|~F)$ from (only) the value of $\hat{P}(A~|~M)/\hat{P}(A~|~F)$.  Therefore, it matters whether we choose to work with conditional probabilities of $A$ or of $R$.
@@ -271,7 +271,7 @@ Note: we cannot infer $\hat{P}(R~|~M)/\hat{P}(R~|~F)$ from (only) the value of $
 $$\frac{P(A~|~M)}{1-P(A~|~M)}\,\,\Bigg/\,\,\frac{P(A~|~F)}{1-P(A~|~F)},$$
 which is equal to 1 if $P(A~|~M)=P(A~|~F)$. For the Berkeley data the estimate is $\approx$ 1.84.
 
-The **odds** of an event $B$ is the ratio of the probability $P(B)$ that the event occurs to the probability $P(\mbox{not}B) = 1 - P(B)$ that it does not occur.  If  $P(B) = \frac12$ then $B$ and $\mbox{not}B$ are are equally likely and so the odds of event $B$ equals 1.  If  $P(B) = \frac23$ then $B$ has double the probability of $\mbox{not}B$ and so the odds of event $B$ equals 2.  Some other simple cases are summarised in Figure \@ref(fig:odds).  
+The **odds** of an event $B$ is the ratio of the probability $P(B)$ that the event occurs to the probability $P(\text{not}B) = 1 - P(B)$ that it does not occur.  If  $P(B) = \frac12$ then $B$ and $\text{not}B$ are are equally likely and so the odds of event $B$ equals 1.  If  $P(B) = \frac23$ then $B$ has double the probability of $\text{not}B$ and so the odds of event $B$ equals 2.  Some other simple cases are summarised in Figure \@ref(fig:odds).  
 
 ```{r echo=FALSE, odds, fig.show='hold', fig.cap='The value of the odds of an event for different probabilities $p$ of that event.', out.width='50%'}
 include_cropped_graphics("images/odds.png")
@@ -283,7 +283,7 @@ An odds ratio tells us how much greater the odds of an event are in one group co
 $\hat{P}(A~|~M)/[1-\hat{P}(A~|~M)] \approx 0.802.$ The estimated odds of $A$ for $F$ are $\hat{P}(A~|F)/[1-\hat{P}(A~|~F)] \approx 0.436.$ Therefore, the odds ratio of acceptance, comparing $M$ to $F$, is $1.84 (\approx 0.802/0.436)$. The estimated odds of acceptance for males are approximately 2 times those for females. 
 We could instead work with the conditional probabilities of the event $R$, instead of the event $A$. The estimated odds of $R$ for $M$ are $\hat{P}(R~|~M)/[1-\hat{P}(R~|~M)] \approx 1.25 \,\,\,(=1/0.802).$ The estimated odds of $R$ for $F$ are $\hat{P}(R~|F)/[1-\hat{P}(R~|~F)] \approx 2.29 \,\,\,(=1/0.436).$  When we change from considering $A$ to $R$, the effect is to take the reciprocal of the odds.  That is,
 
-$$ \frac{P(R \mid M)}{1 - P(R \mid M)} = \left[\frac{P(A \mid M)}{1 - P(A \mid M)}\right]^{-1} \quad \mbox{and} \quad \frac{P(R \mid F)}{1 - P(R \mid F)} = \left[\frac{P(A \mid F)}{1 - P(A \mid F)}\right]^{-1}. $$
+$$ \frac{P(R \mid M)}{1 - P(R \mid M)} = \left[\frac{P(A \mid M)}{1 - P(A \mid M)}\right]^{-1} \quad \text{and} \quad \frac{P(R \mid F)}{1 - P(R \mid F)} = \left[\frac{P(A \mid F)}{1 - P(A \mid F)}\right]^{-1}. $$
 Therefore, the estimated odds of $R$, comparing males to females, is the reciprocal of the odds of $A$ comparing males to females.  Since $1/1.84 \approx 1/2$, we could say that the estimated odds of rejection for males are approximately a half of those for females.
 
 The main point is that, when estimating the odds ratio, it doesn't matter whether we work with $P(A~|~M)$ and $P(A~|~F)$ or $P(R~|~M)$ and $P(R~|~F)$, provided that we remember when we interpret the estimate of the odds.
@@ -305,17 +305,17 @@ include_cropped_graphics("images/case_control.png")
 
 These data comes from a very old case-control study, designed to investigate the link between smoking and lung cancer.  The idea is to compare the smoking habits of people with lung cancer (the **cases**) and people without lung cancer, but who are otherwise similar to the cases (the **controls**).  The people conducting the study decided to have equal number of cases and controls: 86 of each.  That is, they fixed both column totals at 86. Therefore, this is **not** a random sample of people from the population: if we did sample people randomly from the population then we would expect to obtain far fewer people with lung cancer than people without lung cancer.  Each person was asked whether they were a smoker or non-smoker.  
 
-Let $L$ be the event that a person has lung cancer and let $S$ the event that a person is a smoker.  We can estimate $P(S \mid L)$ and $P(S \mid \mbox{not}L)$: $\hat{P}(S \mid L) = 83/86 \approx 0.97$ and $\hat{P}(S \mid \mbox{not}L) = 72/86 \approx 0.84$.  If we condition on $L$ or on $\mbox{not}L$ then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed.  Both these estimates are high, because smoking was more prevalent in the 1950s, and $\hat{P}(S \mid L) > \hat{P}(S \mid \mbox{not}L)$, that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using 
-\[ \displaystyle\frac{\displaystyle\frac{\hat{P}(S \mid L)}{1-\hat{P}(S \mid L)}}{\displaystyle\frac{\hat{P}(S \mid \mbox{not}L)}{1-\hat{P}(S \mid \mbox{not}L)}}
+Let $L$ be the event that a person has lung cancer and let $S$ the event that a person is a smoker.  We can estimate $P(S \mid L)$ and $P(S \mid \text{not}L)$: $\hat{P}(S \mid L) = 83/86 \approx 0.97$ and $\hat{P}(S \mid \text{not}L) = 72/86 \approx 0.84$.  If we condition on $L$ or on $\text{not}L$ then we can treat smoking status as being randomly-sampled from the populations of people with and without lung cancer, because the row totals were not fixed.  Both these estimates are high, because smoking was more prevalent in the 1950s, and $\hat{P}(S \mid L) > \hat{P}(S \mid \text{not}L)$, that is, smoking is more prevalent among people with lung cancer than those who do not have lung cancer. We can estimate the odds ratio of smoking, comparing smokers to non-smokers, using 
+\[ \displaystyle\frac{\displaystyle\frac{\hat{P}(S \mid L)}{1-\hat{P}(S \mid L)}}{\displaystyle\frac{\hat{P}(S \mid \text{not}L)}{1-\hat{P}(S \mid \text{not}L)}}
 = \displaystyle\frac{\displaystyle\frac{83/86}{3/86}}{\displaystyle\frac{72/86}{14/86}}
 = \frac{83 \times 14}{72 \times 3} = 5.38. \]
  
-Can we estimate the relative risk? No we cannot.  In this example, the relative risk of interest is $P(L \mid S) / P(L \mid \mbox{not}S)$: we compare the probabilities of developing lung cancer for smokers and non-smokers.  However, the way that these data have been sampled means that they provide no information about $P(L)$, that is, the proportion of people **in the population** who have lung cancer.  The proportion of people **in the sample** who have lung cancer has been fixed at $1/2$ by the people who designed the study, because they fixed the column totals.  Similarly, we cannot use these data to estimate $P(L \mid S)$ or $P(L \mid \mbox{not}S)$, the proportion of people with lung cancer will also be artificially high within the smoker and for non-smoker categories.    
+Can we estimate the relative risk? No we cannot.  In this example, the relative risk of interest is $P(L \mid S) / P(L \mid \text{not}S)$: we compare the probabilities of developing lung cancer for smokers and non-smokers.  However, the way that these data have been sampled means that they provide no information about $P(L)$, that is, the proportion of people **in the population** who have lung cancer.  The proportion of people **in the sample** who have lung cancer has been fixed at $1/2$ by the people who designed the study, because they fixed the column totals.  Similarly, we cannot use these data to estimate $P(L \mid S)$ or $P(L \mid \text{not}S)$, the proportion of people with lung cancer will also be artificially high within the smoker and for non-smoker categories.    
 
 However, **can** estimate the odds ratio that we would like, that is, the odds ratio of lung cancer, comparing smoker to non-smokers, because this is equal to the estimate of 5.38 that we calculated above, owing to
 
-\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \mbox{not}S)}{1-P(L \mid \mbox{not}S)}} 
-\,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \mbox{not}L)}{1-P(S \mid \mbox{not}L)}}. \]
+\[ \displaystyle\frac{\displaystyle\frac{P(L \mid S)}{1-P(L \mid S)}}{\displaystyle\frac{P(L \mid \text{not}S)}{1-P(L \mid \text{not}S)}} 
+\,\,\,=\,\,\, \frac{\displaystyle\frac{P(S \mid L)}{1-P(S \mid L)}}{\displaystyle\frac{P(S \mid \text{not}L)}{1-P(S \mid \text{not}L)}}. \]
 
 Finally, we note that in cases where the events of interest happen very rarely, that is, they have very small probabilities, then the relative risk and the odds ratio have similar values.  This is because when a probability $p$ is close to $0$, $p/(1-p) \approx p$.  Therefore, in studies of a rare disease an estimated odds ratio is often taken as an estimate of a relative risk.
 

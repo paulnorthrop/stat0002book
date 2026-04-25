@@ -12,37 +12,27 @@ Bickel, P.~J., Hammel, E.~A., and O{\textquoteright}Connell, J.~W. (1975).
 
 \bibitem[Dalal et~al., 1989]{shuttle}
 Dalal, S.~R., Fowlkes, E.~B., and Hoadley, B. (1989).
-\newblock Risk analysis of the space shuttle: Pre-challenger prediction of
-  failure.
-\newblock {\em Journal of the American Statistical Association},
-  84(408):945--957.
+\newblock Risk analysis of the space shuttle: Pre-challenger prediction of failure.
+\newblock {\em Journal of the American Statistical Association}, 84(408):945--957.
 
 \bibitem[Freedman et~al., 2001]{Freedman2001}
-Freedman, W.~L., Madore, B.~F., Gibson, B.~K., Ferrarese, L., Kelson, D.~D.,
-  Sakai, S., Mould, J.~R., Robert C.~Kennicutt, J., Ford, H.~C., Graham, J.~A.,
-  Huchra, J.~P., Hughes, S. M.~G., Illingworth, G.~D., Macri, L.~M., and
-  Stetson, P.~B. (2001).
-\newblock Final results from the {H}ubble {S}pace {T}elescope key project to
-  measure the {H}ubble constant.
+Freedman, W.~L., Madore, B.~F., Gibson, B.~K., Ferrarese, L., Kelson, D.~D., Sakai, S., Mould, J.~R., Robert C.~Kennicutt, J., Ford, H.~C., Graham, J.~A., Huchra, J.~P., Hughes, S. M.~G., Illingworth, G.~D., Macri, L.~M., and Stetson, P.~B. (2001).
+\newblock Final results from the {H}ubble {S}pace {T}elescope key project to measure the {H}ubble constant.
 \newblock {\em The Astrophysical Journal}, 553(1):47--72.
 
 \bibitem[Hubble, 1929]{Hubble1929}
 Hubble, E. (1929).
-\newblock A relation between distance and radial velocity among extra-galactic
-  nebulae.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  15(3):168--173.
+\newblock A relation between distance and radial velocity among extra-galactic nebulae.
+\newblock {\em Proceedings of the National Academy of Sciences}, 15(3):168--173.
 
 \bibitem[Simpson et~al., 1975]{clouds}
 Simpson, J., Olsen, A., and Eden, J.~C. (1975).
-\newblock A {B}ayesian analysis of a multiplicative treatment effect in weather
-  modification.
+\newblock A {B}ayesian analysis of a multiplicative treatment effect in weather modification.
 \newblock {\em Technometrics}, 17(2):161--166.
 
 \bibitem[Smith, 2002]{election}
 Smith, R.~L. (2002).
-\newblock A statistical assessment of {B}uchanan's vote in {P}alm {B}each
-  {C}ounty.
+\newblock A statistical assessment of {B}uchanan's vote in {P}alm {B}each {C}ounty.
 \newblock {\em Statist. Sci.}, 17(4):441--457.
 
 \end{thebibliography}

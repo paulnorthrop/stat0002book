@@ -105,7 +105,7 @@ Suppose that we have a random sample of size $n$ from a normal distribution with
 We take the Australian birth weights data as an example, where we had $n=44$. For these data the sample mean is 7.22 pounds and the sample variance is 1.36 pounds$^2$.  We use $\mu = 7.22$ and $\sigma^2 = 1.36$ when we simulate data, but we would obtain the same general findings for other values of $\mu$ and $\sigma^2$. 
 
 To study the sampling distribution of the estimators 
-\[ \hat{\mu} = \frac1n \displaystyle\sum_{i=1}^n X_i = \overline{X} \qquad \mbox{and} \qquad 
+\[ \hat{\mu} = \frac1n \displaystyle\sum_{i=1}^n X_i = \overline{X} \qquad \text{and} \qquad 
 \hat{\sigma}^2 = \frac{1}{n-1} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2, \]
 we simulate samples of size 44 from a $N(7.22,1.36)$ distribution.  We do this 100,000 times and plot a histogram of the estimates of $\mu$ and $\sigma^2$.
 
@@ -133,9 +133,9 @@ In practice we only have **one** dataset, providing **one** estimate. Recall (fr
 ### Simulation: estimating the parameters of an exponential distribution {#simexp}
 
 Now we carry out exactly the same exercise for a random sample of size $n$ from an exponential distribution with unknown mean $\mu=1/\lambda$ and variance $\sigma^2=1/\lambda^2$.  That is,
-\[ X_1,\ldots , X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, \mbox{exponential}(\lambda). \]
+\[ X_1,\ldots , X_n \,\stackrel{{\rm i.i.d.}}{\sim}\, \text{exponential}(\lambda). \]
 We take times between births in the Australian births dataset as an example, where we had $n=44$.  We estimate $\mu$ using the sample mean, giving
-\[ \hat{\mu} = 0.543 \mbox{ hours}, \quad \mbox{that is,  } \hat{\lambda}=1/0.543=1.84. \]
+\[ \hat{\mu} = 0.543 \text{ hours}, \quad \text{that is,  } \hat{\lambda}=1/0.543=1.84. \]
 Although we know that for the exponential distribution the variance is the square of the mean, we estimate separately the variance of this distribution using the sample variance. The results are given in Figure \@ref(fig:expsim).
 
 ```{r echo=FALSE, expsim, fig.show='hold', fig.cap='The sampling distribution of $\\hat{\\mu}$ and $\\hat{\\sigma}^2$ based on 100,000 independent simulations from an exponential(1.84) distribution.  Left: mean.  Right: variance.  The dotted line in the top left plot is the p.d.f. of the exponential(1.84) distribution. The sample size is given in the titles of the plots.', out.width = '45%'}
@@ -171,42 +171,42 @@ where $\sigma^2$ is positive and finite.  We define the estimator $\hat{\mu}=\ov
 
 ### Bias 
 
-An estimator $T$ is **unbiased** for a parameter $\theta$ if $\mbox{E}(T)=\theta$ for all possible values of $\theta$.  The **bias** of $T$ is $\mbox{bias}(T)=\mbox{E}(T)-\theta$. If $T$ is unbiased then $\mbox{bias}(T)=0$.
+An estimator $T$ is **unbiased** for a parameter $\theta$ if $\text{E}(T)=\theta$ for all possible values of $\theta$.  The **bias** of $T$ is $\text{bias}(T)=\text{E}(T)-\theta$. If $T$ is unbiased then $\text{bias}(T)=0$.
 
 We have seen that 
 $$\hat{\mu} =\overline{X} \sim N\left(\mu,\frac{\sigma^2}{n}\right).$$
-Therefore, $\mbox{E}(\overline{X}) = \mu$ and $\overline{X}$ is unbiased for $\mu$.
+Therefore, $\text{E}(\overline{X}) = \mu$ and $\overline{X}$ is unbiased for $\mu$.
 
 ### Variance {#varianceofestimator}
 
-Suppose that $T$ is unbiased for $\theta$.  If $\mbox{var}(T)$ is small then the sampling distribution of $T$ is concentrated closely about $\theta$.
+Suppose that $T$ is unbiased for $\theta$.  If $\text{var}(T)$ is small then the sampling distribution of $T$ is concentrated closely about $\theta$.
 
-Suppose that we compare 2 unbiased estimators $T_1$ and $T_2$.  If $\mbox{var}(T_1) < \mbox{var}(T_2)$ then we may prefer $T_1$ to $T_2$.  Both estimators have the property that the mean of sampling distribution is located at $\theta$ but $T_1$ varies less about this mean than $T_2$, as judged the sampling variance of the estimators.
+Suppose that we compare 2 unbiased estimators $T_1$ and $T_2$.  If $\text{var}(T_1) < \text{var}(T_2)$ then we may prefer $T_1$ to $T_2$.  Both estimators have the property that the mean of sampling distribution is located at $\theta$ but $T_1$ varies less about this mean than $T_2$, as judged the sampling variance of the estimators.
 
-Suppose now that we compare two estimators, $T_u$ and $T_b$, where $T_u$ is unbiased and $T_b$ is biased.  Based on this information alone, we might choose $T_u$.  However, if we find that $\mbox{var}(T_b) < \mbox{var}(T_u)$ then which estimator should we choose? One estimator wins on one property and the other estimator wins on the other property. One solution is to combine these two properties into one property. 
+Suppose now that we compare two estimators, $T_u$ and $T_b$, where $T_u$ is unbiased and $T_b$ is biased.  Based on this information alone, we might choose $T_u$.  However, if we find that $\text{var}(T_b) < \text{var}(T_u)$ then which estimator should we choose? One estimator wins on one property and the other estimator wins on the other property. One solution is to combine these two properties into one property. 
 
 ### Mean squared error (MSE)
 
-The mean squared error $\mbox{MSE}(T)$) of an estimator $T$ is defined as
-\[ \mbox{MSE}(T) = \mbox{E}[(T - \theta)^2]. \] 
+The mean squared error $\text{MSE}(T)$) of an estimator $T$ is defined as
+\[ \text{MSE}(T) = \text{E}[(T - \theta)^2]. \] 
 We can show that
 \begin{equation}
-\mbox{MSE}(T) = \mbox{var}(T) + [\mbox{bias}(T)] ^ 2. 
+\text{MSE}(T) = \text{var}(T) + [\text{bias}(T)] ^ 2. 
 (\#eq:mse)
 \end{equation}
-This is one way that we could combine bias and variance into one quantity.  If, for example, $\mbox{MSE}(T_b) < \mbox{MSE}(T_u)$ then, based on the $\mbox{MSE}$ criterion, we prefer $T_b$ to $T_u$.
+This is one way that we could combine bias and variance into one quantity.  If, for example, $\text{MSE}(T_b) < \text{MSE}(T_u)$ then, based on the $\text{MSE}$ criterion, we prefer $T_b$ to $T_u$.
 
 ### Standard error 
 
-We have seen that the variance, or standard deviation, of an estimator is of interest.  Often, $\mbox{var}(T)$ depends on unknown parameters that need to be estimated from the data.  In cases like this we need to estimate the standard deviation of $T$ by substituting estimates for the unknown parameters in $\sqrt{\mbox{var}(T)}$.  This is then called the estimated **standard error** of $T$, or $\mbox{SE}(T)$.
+We have seen that the variance, or standard deviation, of an estimator is of interest.  Often, $\text{var}(T)$ depends on unknown parameters that need to be estimated from the data.  In cases like this we need to estimate the standard deviation of $T$ by substituting estimates for the unknown parameters in $\sqrt{\text{var}(T)}$.  This is then called the estimated **standard error** of $T$, or $\text{SE}(T)$.
 
-For example, we found that $\mbox{var}(\hat{\mu})=\sigma^2/n$.  We estimate $\sigma$ using the sample standard deviation $\hat{\sigma} = \sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i-\overline{x})^2}$.  Therefore, $\mbox{SE}(\hat{\mu})=\hat{\sigma}/\sqrt{n}$.
+For example, we found that $\text{var}(\hat{\mu})=\sigma^2/n$.  We estimate $\sigma$ using the sample standard deviation $\hat{\sigma} = \sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i-\overline{x})^2}$.  Therefore, $\text{SE}(\hat{\mu})=\hat{\sigma}/\sqrt{n}$.
 
 ### Consistency
 
 **Definition**. An estimator $T$ is (weakly) consistent for $\theta$ if
 \begin{equation}
-P(| T-\theta |>\epsilon) \rightarrow 0 \quad \mbox{  as  } n \rightarrow \infty,
+P(| T-\theta |>\epsilon) \rightarrow 0 \quad \text{  as  } n \rightarrow \infty,
 (\#eq:consistency)
 \end{equation}
 for any $\epsilon>0$ and for any possible value of $\theta$.  We refer to the property of weak consistency as simply **consistency**.
@@ -217,11 +217,11 @@ As the sample size $n$ increases to infinity we require that the probability tha
 
 The normality assumption is not necessary here, owing to the weak law of large numbers.
 
-**The weak law of large numbers (WLLN)**.  If $X_1, ..., X_n$ are i.i.d. with $\mbox{E}(X_i)=\mu$, for $i=1, ..., n$ then $\overline{X} \overset{p}{\to} \mu,$ that is, $\overline{X}$ is a consistent estimator of $\mu$. (The strong assumptions in the classical statement of the WLLN can be replaced with weaker ones.)
+**The weak law of large numbers (WLLN)**.  If $X_1, ..., X_n$ are i.i.d. with $\text{E}(X_i)=\mu$, for $i=1, ..., n$ then $\overline{X} \overset{p}{\to} \mu,$ that is, $\overline{X}$ is a consistent estimator of $\mu$. (The strong assumptions in the classical statement of the WLLN can be replaced with weaker ones.)
 
-For an estimator $T$ to be consistent it is **necessary** for the condition in equation \@ref(eq:consistency) to hold.  However, in many cases it is easier to prove that $T$ is consistent for $\theta$ in a different way.  If $\mbox{MSE}(T) \rightarrow 0$ as $n \rightarrow \infty$ then it can be shown that the condition in equation \@ref(eq:consistency) holds, which provides a **sufficient** condition for $T$ to be consistent for $\theta$.  If we can find $\mbox{MSE}(T)$ and show that it tends to zero as $n$ tends to infinity then we have shown that $T$ is consistent for $\theta$. Owing to equation \@ref(eq:mse), we could, equivalently, show that $\mbox{E}(T) \rightarrow \theta$ as $n \rightarrow \infty$ and $\mbox{var}(T) \rightarrow 0$ as $n \rightarrow \infty$.  If $\mbox{bias}(T) \rightarrow 0$ as $n \rightarrow \infty$ then we say that $T$ is asymptotically unbiased for $\theta$.
+For an estimator $T$ to be consistent it is **necessary** for the condition in equation \@ref(eq:consistency) to hold.  However, in many cases it is easier to prove that $T$ is consistent for $\theta$ in a different way.  If $\text{MSE}(T) \rightarrow 0$ as $n \rightarrow \infty$ then it can be shown that the condition in equation \@ref(eq:consistency) holds, which provides a **sufficient** condition for $T$ to be consistent for $\theta$.  If we can find $\text{MSE}(T)$ and show that it tends to zero as $n$ tends to infinity then we have shown that $T$ is consistent for $\theta$. Owing to equation \@ref(eq:mse), we could, equivalently, show that $\text{E}(T) \rightarrow \theta$ as $n \rightarrow \infty$ and $\text{var}(T) \rightarrow 0$ as $n \rightarrow \infty$.  If $\text{bias}(T) \rightarrow 0$ as $n \rightarrow \infty$ then we say that $T$ is asymptotically unbiased for $\theta$.
 
-Note that if $\mbox{MSE}(T)$ does not tend to zero as $n$ tends to infinity then this does **not** mean that $T$ is not consistent for $\theta$.  It just means that we need to use the condition in equation \@ref(eq:consistency) to establish whether or not $T$ is consistent.  It is possible for $T$ to be consistent even thought $\mbox{MSE}(T)$ does not tend to zero as $n$ tends to infinity.
+Note that if $\text{MSE}(T)$ does not tend to zero as $n$ tends to infinity then this does **not** mean that $T$ is not consistent for $\theta$.  It just means that we need to use the condition in equation \@ref(eq:consistency) to establish whether or not $T$ is consistent.  It is possible for $T$ to be consistent even thought $\text{MSE}(T)$ does not tend to zero as $n$ tends to infinity.
 
 ### Normal example {#normalexample}
 
@@ -232,18 +232,18 @@ where $\sigma^2$ is positive and finite.  We defined the estimator $\hat{\mu}=\o
 
 **Estimating mean of a normal distribution**
 
-We have seen that $\mbox{E}(\overline{X})=\mu$, so that $\mbox{bias}(\overline{X})=0$ for all $n$.  Also, $\mbox{var}(\overline{X}) = \sigma^2 / n$, which tends to zero as $n$ tends to infinity.  Therefore, $\mbox{var}(\overline{X}) \rightarrow 0$ as $n \rightarrow \infty$ and $\overline{X}$ is a consistent estimator of $\mu$.  
+We have seen that $\text{E}(\overline{X})=\mu$, so that $\text{bias}(\overline{X})=0$ for all $n$.  Also, $\text{var}(\overline{X}) = \sigma^2 / n$, which tends to zero as $n$ tends to infinity.  Therefore, $\text{var}(\overline{X}) \rightarrow 0$ as $n \rightarrow \infty$ and $\overline{X}$ is a consistent estimator of $\mu$.  
 
 How good is $\overline{X}$ as an estimator of $\mu$?  Is there an unbiased estimator of $\mu$ that has a smaller variance than the sample mean $\overline{X}$?  The answer is "No".  This is covered in the second year module STAT0005.
 
-Which other estimator of $\mu$ could we use? The $N(\mu,\sigma^2)$ distribution is symmetric about $\mu$, so \[ \mbox{median}(X)=\mbox{E}(X)=\mu.\]
+Which other estimator of $\mu$ could we use? The $N(\mu,\sigma^2)$ distribution is symmetric about $\mu$, so \[ \text{median}(X)=\text{E}(X)=\mu.\]
 Therefore, we could use the sample median $\widetilde{\mu}$ to estimate $\mu$.
 
 How much better an estimator of $\mu$ is the sample mean than the sample median?
 It can be shown that $\widetilde{\mu}$ is unbiased and, for large $n$,
-\[ \mbox{var}(\widetilde{\mu}) \approx 1.57\,\frac{\sigma^2}{n}, \]
+\[ \text{var}(\widetilde{\mu}) \approx 1.57\,\frac{\sigma^2}{n}, \]
 compared to 
-\[ \mbox{var}(\overline{X}) = \frac{\sigma^2}{n}. \]
+\[ \text{var}(\overline{X}) = \frac{\sigma^2}{n}. \]
 
 This is illustrated in Figure \@ref(fig:meanmedian).  Note that this result relies on the assumption that the random sample is from a normal distribution.  If the data are sampled from another distribution then the sample mean may not have a smaller variance that the sample median.
 
@@ -257,20 +257,20 @@ Consider the following two estimators of $\sigma^2$.
 
 \[ 
 S^2 = \frac{1}{n-1} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2 
-\quad \mbox{and} \quad
+\quad \text{and} \quad
 S_n^2 = \frac{1}{n} \displaystyle\sum_{i=1}^n \left(X_i-\overline{X}\right)^2, 
 \]
 where $n > 1$.
 
 It can be shown that
-\[ \mbox{E}(S^2) = \sigma^2 \qquad \mbox{and} \qquad \mbox{var}(S^2)=\frac{2}{n-1}\,\sigma^4. \]
+\[ \text{E}(S^2) = \sigma^2 \qquad \text{and} \qquad \text{var}(S^2)=\frac{2}{n-1}\,\sigma^4. \]
 
 Noting that $S_n^2 = \displaystyle\frac{n-1}{n}\,S^2$ we can infer that
 
-\[ \mbox{E}(S_n^2) = \frac{n-1}{n}\,\sigma^2 \,\,< \sigma^2 \qquad \mbox{and} \qquad 
-\mbox{var}(S_n^2)=\left( \frac{n-1}{n} \right)^2 \frac{2}{n-1}\,\sigma^4 \,\,< \mbox{var}(S^2). \]
+\[ \text{E}(S_n^2) = \frac{n-1}{n}\,\sigma^2 \,\,< \sigma^2 \qquad \text{and} \qquad 
+\text{var}(S_n^2)=\left( \frac{n-1}{n} \right)^2 \frac{2}{n-1}\,\sigma^4 \,\,< \text{var}(S^2). \]
 
-Therefore, $S^2$ is unbiased for $\sigma^2$, whereas $S_n^2$ is biased, but $\mbox{var}(S_n^2) < \mbox{var}(S^2)$ for all values of $n > 1$.
+Therefore, $S^2$ is unbiased for $\sigma^2$, whereas $S_n^2$ is biased, but $\text{var}(S_n^2) < \text{var}(S^2)$ for all values of $n > 1$.
 
 **Exercise**. Which of $S^2$ and $S_n^2$ has the smaller MSE?  
 
@@ -278,7 +278,7 @@ How crucial is the assumption of normality in our current example?
 
 We remove the assumption of normality, so that we have $X_1, \ldots, X_n$ are i.i.d. and sampled from an (unspecified) distribution with an unknown mean $\mu$ and unknown variance $\sigma^2$.
 
-Under these weaker assumptions it is still true that $\mbox{E}(\overline{X})=\mu$, $\mbox{var}(\overline{X})=\sigma^2/n$ and $\mbox{E}(S^2)=\sigma^2$. However, the expression that we gave for $\mbox{var}(S^2)$ **does** rely on the assumption of normality.
+Under these weaker assumptions it is still true that $\text{E}(\overline{X})=\mu$, $\text{var}(\overline{X})=\sigma^2/n$ and $\text{E}(S^2)=\sigma^2$. However, the expression that we gave for $\text{var}(S^2)$ **does** rely on the assumption of normality.
 
 ## Assessing goodness-of-fit
 

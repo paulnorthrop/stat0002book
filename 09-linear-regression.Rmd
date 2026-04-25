@@ -14,8 +14,8 @@ include_cropped_graphics <- function(x) {
 
 # Linear regression {#linreg}
 
-In this chapter, and Chapter \@ref(correlationchapter), we examine the relationship between 2 continuous variables.  First we consider **regression** problems, where the distribution of a **response variable** $Y$ may depend on the value of an **explanatory variable** $X$. Possible aims of a regression analysis are (a) to understand the relationship between $Y$ and $X$, or (b) to predict $Y$ from the value of $X$. We examine the conditional distribution of the random variable $Y$ given that $X=x$, that is, $Y \mid X=x$.  In particular, we study a **simple linear regression model** in which the conditional mean $\mbox{E}(Y \mid X=x)$ of $Y$ given that $X=x$ is assumed to be a linear function of $x$ and the conditional variance $\mbox{var}(Y \mid X=x)$ of $Y$ is assumed to be constant.  That is, 
-\[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \mbox{and} \qquad \mbox{var}(Y \mid X=x)=\sigma^2, \]
+In this chapter, and Chapter \@ref(correlationchapter), we examine the relationship between 2 continuous variables.  First we consider **regression** problems, where the distribution of a **response variable** $Y$ may depend on the value of an **explanatory variable** $X$. Possible aims of a regression analysis are (a) to understand the relationship between $Y$ and $X$, or (b) to predict $Y$ from the value of $X$. We examine the conditional distribution of the random variable $Y$ given that $X=x$, that is, $Y \mid X=x$.  In particular, we study a **simple linear regression model** in which the conditional mean $\text{E}(Y \mid X=x)$ of $Y$ given that $X=x$ is assumed to be a linear function of $x$ and the conditional variance $\text{var}(Y \mid X=x)$ of $Y$ is assumed to be constant.  That is, 
+\[ \text{E}(Y \mid X=x) = \alpha+\beta\,x \qquad \text{and} \qquad \text{var}(Y \mid X=x)=\sigma^2, \]
 for some constants $\alpha, \beta$ and $\sigma^2$.
 
 In many cases it is clear which variable should be the response variable $Y$ and which should be the explanatory variable $X$.  For example,
@@ -48,9 +48,9 @@ Scientists then wondered how the positive linear association between distance an
 \[ Y = T X, \]
 where $T$ is the age of the Universe when the observations were made. This is called Hubble's Law. In other words, distance, $Y$, should depend linearly on velocity, $X$. $H=1/T$ is called **Hubble's constant**.
 
-The points in Figure \@ref(fig:hubblescatter) do not lie exactly on a straight line, partly because the values of distance are not exact: they include measurement error. Also, there may have been astronomical events since the Big Bang which have weakened further the supposed linear relationships between distance and velocity.  If we look at nebulae with the same value, $x$,  of velocity the measured value of distance, $Y$, varies from one nebulae to another. For example, the 4 nebulae with velocities of 500 km/sec have have distances 0.9, 1.1, 1.4 and 2.0 MPc.  So, for a given value of velocity there is variability in their distances from the Earth. Therefore, $Y \mid X=x$ is a random variable, with conditional mean $\mbox{E}(Y \mid X=x)$ and conditional variance $\mbox{var}(Y \mid X=x)$.
+The points in Figure \@ref(fig:hubblescatter) do not lie exactly on a straight line, partly because the values of distance are not exact: they include measurement error. Also, there may have been astronomical events since the Big Bang which have weakened further the supposed linear relationships between distance and velocity.  If we look at nebulae with the same value, $x$,  of velocity the measured value of distance, $Y$, varies from one nebulae to another. For example, the 4 nebulae with velocities of 500 km/sec have have distances 0.9, 1.1, 1.4 and 2.0 MPc.  So, for a given value of velocity there is variability in their distances from the Earth. Therefore, $Y \mid X=x$ is a random variable, with conditional mean $\text{E}(Y \mid X=x)$ and conditional variance $\text{var}(Y \mid X=x)$.
 
-In Figure \@ref(fig:hubblescatter) it looks possible that there is a straight line relationship between $\mbox{E}(Y \mid X=x)$ and $x$.  Therefore we consider fitting a simple linear regression model of $Y$ on $x$. You could think of this as a way to draw a 'line of best fit' through the points in Figure \@ref(fig:hubblescatter).
+In Figure \@ref(fig:hubblescatter) it looks possible that there is a straight line relationship between $\text{E}(Y \mid X=x)$ and $x$.  Therefore we consider fitting a simple linear regression model of $Y$ on $x$. You could think of this as a way to draw a 'line of best fit' through the points in Figure \@ref(fig:hubblescatter).
 
 ### Simple linear regression model
 
@@ -60,13 +60,13 @@ Y_i = \alpha + \beta\,x_i +  \epsilon_i, \qquad i=1,\ldots,n,
 (\#eq:regeqn)
 \end{equation}
 where $\epsilon_i, i=1, \ldots, n$ are error terms, representing random 'noise'. The $\alpha + \beta\,x_i$ part of the model is the **systematic** part. The $\epsilon_i$ is the **random** part of the model.  It is assumed that, for $i = 1, ..., n$,
-\[  \mbox{E}( \epsilon_i)=0, \qquad \mbox{and} \qquad  \mbox{var}( \epsilon_i)=\sigma^2, \]
+\[  \text{E}( \epsilon_i)=0, \qquad \text{and} \qquad  \text{var}( \epsilon_i)=\sigma^2, \]
 and that $\epsilon_1, \ldots,  \epsilon_n$ are **uncorrelated**. We will study **correlation** in the next section.  It is a measure of the degree of **linear** association between two random variables.  Uncorrelated random variables have no linear association.  $\epsilon_1, \ldots,  \epsilon_n$ are **uncorrelated** if each pair of these variables is uncorrelated.
 
 Another way to write down this model is, for $i=1,\ldots,n$, 
-\[  \mbox{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\mbox{straight line relationship}), \]
+\[  \text{E}(Y_i \mid X=x_i) = \alpha+\beta\,x_i, \qquad\quad  (\text{straight line relationship}), \]
 and 
-\[ \qquad  \mbox{var}(Y_i \mid X=x_i)=\sigma^2, \qquad\quad (\mbox{constant variance}), \]
+\[ \qquad  \text{var}(Y_i \mid X=x_i)=\sigma^2, \qquad\quad (\text{constant variance}), \]
 where, given the values $x_1,\ldots,x_n$, the random variables $Y_1, \ldots, Y_n$ are uncorrelated.
 
 Figure \@ref(fig:regschematic) shows how the conditional distribution
@@ -79,9 +79,9 @@ include_cropped_graphics("images/regschematic.png")
 **Interpretation of parameters**
 
 * Intercept: $\alpha$.  The expected value (mean) of $Y$ when $X=0$, that is, 
-$$\alpha = \mbox{E}(Y~|~X=0).$$
+$$\alpha = \text{E}(Y~|~X=0).$$
 * Gradient or slope: $\beta$.  An increase of 1 unit in $x$ corresponds to a change of $\beta$ in the conditional mean of $Y$, that is,
-\[ \beta =  \mbox{E}(Y~|~X=x+1)- \mbox{E}(Y~|~X=x). \]
+\[ \beta =  \text{E}(Y~|~X=x+1)- \text{E}(Y~|~X=x). \]
 * Error variance: $\sigma^2$.  The variability of the response about the linear regression line (in the vertical direction).
 
 ### Least squares estimation of $\alpha$ and $\beta$ {#olsestimators}
@@ -99,7 +99,7 @@ It is possible to do this by hand to give
 \begin{equation}
 \hat{\beta}=\frac{\displaystyle\sum_{i=1}^n \left(x_i- \overline{x}\right)\,\left(Y_i- \overline{Y}\right)}
 {\displaystyle\sum_{i=1}^n \left(x_i- \overline{x}\right)^2} = \frac{C_{xY}}{C_{xx}} \qquad
-\mbox{and} \qquad  
+\text{and} \qquad  
 \hat{\alpha}=  \overline{Y} - \hat{\beta}\, \overline{x}, 
 \end{equation}
 where $\overline{Y} = (1/n)\sum_{i=1}^n Y_i$ and $\overline{x} = (1/n)\sum_{i=1}^n x_i$.  Note: $\hat{\alpha}$ and $\hat{\beta}$ are each linear combinations of$Y_1,\ldots,Y_n$.
@@ -115,13 +115,13 @@ For a given set of data the minimised sum of squared residuals is called the **r
 An estimate of $\sigma^2$ is important because it quantifies how much variability there is about the assumed straight line relationship between $Y$ and $x$.
 
 **Properties of estimators.** It can be shown that 
-\[  \mbox{E}(\hat{\alpha})=\alpha, \quad  \mbox{E}(\hat{\beta})=\beta, \quad  \mbox{E}(\hat{\sigma}^2)=\sigma^2, \]
+\[  \text{E}(\hat{\alpha})=\alpha, \quad  \text{E}(\hat{\beta})=\beta, \quad  \text{E}(\hat{\sigma}^2)=\sigma^2, \]
 that is, these estimators are unbiased for the parameters they are intended to estimate. It can also be shown that the least squares estimators $\hat{\alpha}$ and $\hat{\beta}$ have the smallest possible variances of all unbiased estimators of $\alpha$ and $\beta$ which are linear combinations of the response $Y_1,\ldots,Y_n$. 
 
 **Coefficient of determination.** We may wish to quantify how much of the variability in the responses $Y_1,\ldots,Y_n$ is explained by the values $x_1,\ldots,x_n$ of the explanatory variable. To do this we can compare the variance of the residuals $\{r_i\}$ with the variance of the original observations $\{Y_i\}$, producing the **coefficient of determination**, $R$-squared, given by 
 \[ R\text{-squared} = 1- \frac{RSS}{\displaystyle\sum_{i=1}^n \left(Y_i-\bar{Y}\right)^2} 
-= 1-\frac{\mbox{variability in $Y$ not explained by $x$}}
-{\mbox{total variability of $Y$ about $\bar{Y}$}}, \]
+= 1-\frac{\text{variability in $Y$ not explained by $x$}}
+{\text{total variability of $Y$ about $\bar{Y}$}}, \]
 where $0 \leq R\text{-squared} \leq 1$. Think of $R\text{-squared}$ as a name, not literally as the square of a quantity $R$. $R\text{-squared}=1$ indicates a perfect fit; $R\text{-squared}=0$ indicates that none of the variability in $Y_1,\ldots,Y_n$ is explained by $x_1,\ldots,x_n$, producing a horizontal regression line ($\hat{\beta}=0$). The value of $R\text{-squared}$, perhaps expressed as a percentage, is often quoted when a simple linear regression model is fitted. This gives an estimate of the percentage of variability in $Y$ that is explained by $x$.
 
 ### Least squares fitting to Hubble's data
@@ -159,11 +159,11 @@ A key question is whether $RSS_3$ is so much smaller than $RSS_2$ that we would 
 Since we want to estimate the age of the Universe, we use the estimated regression line for Model 2:
 \[ y = 0.00192\,x.  \]
 Therefore, the estimated age of the Universe is given by 
-\[ \hat{T}=0.00192 \mbox{ Mpc/km/sec}. \]
+\[ \hat{T}=0.00192 \text{ Mpc/km/sec}. \]
 To clarify the units of $\hat{T}$ we need to convert MPcs to kms by multiplying by $3.086 \times 10^{19}$. This gives $\hat{T}$ in seconds.  We convert to years by dividing by $60 \times 60 \times 24 \times 365.25$:
 \[ \hat{T}
 = 0.00192 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} 
-\approx 2 \mbox{ billion years}. \]
+\approx 2 \text{ billion years}. \]
 
 **Update**
 
@@ -176,7 +176,7 @@ include_cropped_graphics("images/hubble_scatter_new.png")
 Using these data we obtain $\hat{T}=0.0123$ which gives
 \[ 
 \hat{T} = 
-0.0123 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} \approx 12 \mbox{ billion years}. \]
+0.0123 \times \frac{3.086 \times 10^{19}}{60 \times 60 \times 24 \times 365.25} \approx 12 \text{ billion years}. \]
 This estimate agrees more closely with current scientific understanding of the age of the Universe than Hubble original estimate.
 
 ### Normal linear regression model
@@ -261,7 +261,7 @@ where $h_{ii}$ is a number between 0 and 1 whose calculation is something that y
 
 We consider each assumption of the model and the plot(s) which can be used to check for systematic departures from the assumption.
 
-* **Linearity**.  The relationship between $\mbox{E}(Y~|~X=x)$ is linear in $x$.
+* **Linearity**.  The relationship between $\text{E}(Y~|~X=x)$ is linear in $x$.
 
 The initial plot of $Y$ against $x$ gives us a good idea about this. We also plot (standardised) residuals against $x$ (or the fitted values).  If the assumption of linearity is valid then we expect a random scatter of points with no obvious 
 pattern.  Patterns in the residuals may indicate a non-linear relationship between 
@@ -304,7 +304,7 @@ Note that:
 include_cropped_graphics("images/uneven.png")
 ```
 
-Figure \@ref(fig:nonnormal) shows a scatter plot where the relationship between $\mbox{E}(Y \mid X=x)$ and $x$ is linear and the variability in $Y$ about this line is approximately constant. However, the distribution of $Y$ about the line is skewed.  We can see this from the scatter plot and, more clearly, in the residual plots in Figure \@ref(fig:nonnormalres).  Although transformation of $Y$ could make the error distribution more symmetric, it will mess up the linearity.  Therefore, the action to take is to fit the linear regression model, and report the fact that the error distribution is skewed.
+Figure \@ref(fig:nonnormal) shows a scatter plot where the relationship between $\text{E}(Y \mid X=x)$ and $x$ is linear and the variability in $Y$ about this line is approximately constant. However, the distribution of $Y$ about the line is skewed.  We can see this from the scatter plot and, more clearly, in the residual plots in Figure \@ref(fig:nonnormalres).  Although transformation of $Y$ could make the error distribution more symmetric, it will mess up the linearity.  Therefore, the action to take is to fit the linear regression model, and report the fact that the error distribution is skewed.
 
 ```{r echo=FALSE, nonnormal, fig.show='hold', fig.cap='Scatter plot of $y$ against $x$.  The true relationship is linear but the error distribution skewed (with constant variance).'}
 include_cropped_graphics("images/non_normal.png")
@@ -348,7 +348,7 @@ b. Isolated departure. A straight line is appropriate for most of the data but t
 
 Consequences.  
 
-* Bias: systematic over/under estimation and prediction of $\mbox{E}(Y \mid X=x)$.}
+* Bias: systematic over/under estimation and prediction of $\text{E}(Y \mid X=x)$.}
 * Misleading inferences: confidence intervals and standard errors (see STAT0003)
 do not reflect the true uncertainty, hypothesis tests of regression parameters
 (see STAT0003) do not have the correct properties.
@@ -449,10 +449,10 @@ To illustrate this we return to the 2000 US Presidential Election example. We sa
 We consider 4 different models:
 
 \begin{eqnarray*}
-\mbox{E}(Y~|~X=x) &=& \alpha_1+\beta_1\,x, \qquad \quad \,\,\,\,\mbox{(model 1)}, \\
-\mbox{E}(Y~|~X=x) &=& \alpha_2+\beta_2\,\log x, \qquad \mbox{(model 2)}, \\
-\mbox{E}(\log Y~|~X=x) &=& \alpha_3+\beta_3\,\log x, \qquad \mbox{(model 3)}, \\
-\mbox{E}(\sqrt{Y}~|~X=x) &=& \alpha_4+\beta_4\,\log x, \qquad \mbox{(model 4)}.
+\text{E}(Y~|~X=x) &=& \alpha_1+\beta_1\,x, \qquad \quad \,\,\,\,\text{(model 1)}, \\
+\text{E}(Y~|~X=x) &=& \alpha_2+\beta_2\,\log x, \qquad \text{(model 2)}, \\
+\text{E}(\log Y~|~X=x) &=& \alpha_3+\beta_3\,\log x, \qquad \text{(model 3)}, \\
+\text{E}(\sqrt{Y}~|~X=x) &=& \alpha_4+\beta_4\,\log x, \qquad \text{(model 4)}.
 \end{eqnarray*}
 
 Figure \@ref(fig:electionLS) shows scatter plots of the variables involved for each of these models, with least squares regression lines.
@@ -504,60 +504,60 @@ If we wish to fit a linear regression model, after transforming $Y$, a compromis
 ### Interpretation after transformation
 
 If we use a transformation we should be careful to interpret the results carefully in light of the  transformation used.  Often we will want to report the results on the original scale of the data, rather than the transformed scale.  We illustrate this using the 2000 US Presidential Election example, using Model 3:
-$$ \mbox{E}(\log Y \mid X=x) = \alpha+\beta\,\log x, $$
+$$ \text{E}(\log Y \mid X=x) = \alpha+\beta\,\log x, $$
 where $Y$ is the percentage of the vote obtained by Pat Buchanan and $\log$ denotes the natural log, that is, log to the base $e$.  Again, we fit the model after excluding the observation from Palm Beach County.  The least squares regression line is shown in the bottom left of Figure \@ref(fig:electionLS).  The equation of this line is 
 
-\[ \widehat{\mbox{E}}(\log Y \mid X=x) = 0.4 - 0.3\,\log x, \] 
+\[ \widehat{\text{E}}(\log Y \mid X=x) = 0.4 - 0.3\,\log x, \] 
 
 that is, $\hat{\alpha} = 0.4$ and $\hat{\beta} = -0.3$.  
 
-This provides an estimate for the way that the mean of $\log Y$ depends on $x$.  However, we may well be interested in $Y$, not $\log Y$.  Recall from Section \@ref(EgX) that, some special cases aside, $g[\mbox{E}(Y)] \neq \mbox{E}[g(Y)].$  In the current context,     
+This provides an estimate for the way that the mean of $\log Y$ depends on $x$.  However, we may well be interested in $Y$, not $\log Y$.  Recall from Section \@ref(EgX) that, some special cases aside, $g[\text{E}(Y)] \neq \text{E}[g(Y)].$  In the current context,     
 
-\[ \log \mbox{E}(Y \mid X=x) \neq \mbox{E}(\log Y \mid X=x) \]
+\[ \log \text{E}(Y \mid X=x) \neq \text{E}(\log Y \mid X=x) \]
 or
-\[ \mbox{E}(Y \mid X=x) \neq \exp \left\{ \mbox{E}(\log Y \mid X=x) \right\}. \]
-Therefore, if we exponentiate the regression line then we do not obtain $\mbox{E}(Y \mid X=x)$, at least not exactly.  
+\[ \text{E}(Y \mid X=x) \neq \exp \left\{ \text{E}(\log Y \mid X=x) \right\}. \]
+Therefore, if we exponentiate the regression line then we do not obtain $\text{E}(Y \mid X=x)$, at least not exactly.  
 
 We will consider two ways to tackle this problem.  
 
-**Inferring $\mbox{median}(Y \mid X = x).$** We assume that the error distribution is symmetric about 0, which implies that
+**Inferring $\text{median}(Y \mid X = x).$** We assume that the error distribution is symmetric about 0, which implies that
 
-\[ \mbox{E}(\log Y \mid X=x) = \mbox{median}(\log Y \mid X=x). \]
+\[ \text{E}(\log Y \mid X=x) = \text{median}(\log Y \mid X=x). \]
 
 Consider a continuous random variable $W$.  If $P(\log W \leq m) = 1/2$ then $P(W \leq e^m) = 1/2$.  If $m$ is the median of $\log W$ then $e^m$ is the median of $W$.  Therefore,
 
-\[ \mbox{median}(Y \mid X=x) = \exp \left\{ \mbox{median}(\log Y \mid X=x) \right\} = \exp \{ \alpha + \beta \, \log x\} = e^\alpha x^\beta. \]
+\[ \text{median}(Y \mid X=x) = \exp \left\{ \text{median}(\log Y \mid X=x) \right\} = \exp \{ \alpha + \beta \, \log x\} = e^\alpha x^\beta. \]
 
 This leads to the following estimate for the conditional median of $Y$ given $X = x$:
 
-\[ \widehat{\mbox{median}}(Y \mid X=x) = e^{0.4 - 0.3\,\log x} = e^{0.4}\,x^{-0.3} = 1.5\,x^{-0.3}. \]
+\[ \widehat{\text{median}}(Y \mid X=x) = e^{0.4 - 0.3\,\log x} = e^{0.4}\,x^{-0.3} = 1.5\,x^{-0.3}. \]
 
 Based on this equation we estimate that if the population $x$ doubles then the median of the percentage of the vote that Buchanan obtains is multiplied by $2^{-0.3}=0.8$. Doubling the population is estimated to reduce the median of Buchanan's vote by 20\%, for example 5\% would reduce to 4\%.  This provides an interpretation for the estimate $\hat{\beta} = -0.3$.  What about $\hat{\alpha}=0.4$, or rather $e^{0.4}=1.5$?  When $x=1$, 
-\[ \widehat{\mbox{median}}(Y \mid X=x) = 1.5. \]
+\[ \widehat{\text{median}}(Y \mid X=x) = 1.5. \]
 We estimate that in populations of size 1000 the median of Buchanan's vote is 1.5\% of the vote. However, The smallest population in the data is 6289 people, so we are extrapolating when we make this interpretation.  It would be better to work with population recorded in units of 100,000.  Then the intercept relates to a realistic population.
 
-**Inferring $\mbox{E}(Y \mid X = x).$** We assume that the error distribution is normal. Suppose that $Y$ and $X$ are Buchanan's percentage of the vote and the population size in an arbitrarily-chosen county. Given that $X=x$ we have 
+**Inferring $\text{E}(Y \mid X = x).$** We assume that the error distribution is normal. Suppose that $Y$ and $X$ are Buchanan's percentage of the vote and the population size in an arbitrarily-chosen county. Given that $X=x$ we have 
 \[ \log Y = \alpha + \beta \log x + \epsilon, \]
 where $\epsilon \sim N(0,\sigma^2)$. Therefore,
 \[ Y = e^\alpha x^\beta e^\epsilon. \]
-It can be shown that $\mbox{E}\left(e^\epsilon\right)=e^{\sigma^2/2}$. Taking expectations gives
+It can be shown that $\text{E}\left(e^\epsilon\right)=e^{\sigma^2/2}$. Taking expectations gives
 
-\[ \mbox{E}(Y \mid X=x) = \mbox{E}( e^\alpha x^\beta e^\epsilon)
-= e^\alpha x^\beta \mbox{E}\left( e^\epsilon \right)
+\[ \text{E}(Y \mid X=x) = \text{E}( e^\alpha x^\beta e^\epsilon)
+= e^\alpha x^\beta \text{E}\left( e^\epsilon \right)
 = e^\alpha \, x^\beta \, e^{\sigma^2/2}. \]
 
 Therefore,
 
-\[ \mbox{E}(Y \mid X = x) = e^{\sigma^2/2} \, \mbox{median}(Y \mid X = x). \]
+\[ \text{E}(Y \mid X = x) = e^{\sigma^2/2} \, \text{median}(Y \mid X = x). \]
 
-Therefore, if the error variance $\sigma^2$ is small then $\mbox{E}(Y \mid X = x) \approx \mbox{median}(Y \mid X = x).$
+Therefore, if the error variance $\sigma^2$ is small then $\text{E}(Y \mid X = x) \approx \text{median}(Y \mid X = x).$
 
 ## Over-fitting
 
 We fitted a straight line model, 
-\[ \mbox{E}(Y \mid X=x) = \alpha+\beta\,x, \]
+\[ \text{E}(Y \mid X=x) = \alpha+\beta\,x, \]
 to Hubble's data.  Even if this model is true, we can (usually) obtain a better fit (smaller RSS) by fitting a quadratic model,
-$$\mbox{E}(Y \mid X=x) = \alpha+\beta\,x+\gamma\,x^2.$$
+$$\text{E}(Y \mid X=x) = \alpha+\beta\,x+\gamma\,x^2.$$
 
 Extending this idea means that we can usually get closer and closer fits to the data by adding to the model a term in $x^3$, a term in $x^4$, and so on. Fitting a model with more than one explanatory variable is beyond the scope of STAT0002. However, in Figure \@ref(fig:hubblecurves) we show fits to Hubble's data of polynomials of degree 2, 3, 4 and 8.
 

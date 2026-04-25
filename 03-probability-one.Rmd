@@ -87,15 +87,15 @@ or, in other words,
 >the proportion of times that the event would occur in an infinite number of identical repeated experiments.
 
 Suppose that we toss a coin $n$ times. If the coin is fair, and is tossed fairly, then it is reasonable to suppose that 
-$$\mbox{the relative frequency of $H$} \,\,=\,\, 
-\frac{\mbox{number of times $H$ occurs}}{n},$$
+$$\text{the relative frequency of } H \,\,=\,\, 
+\frac{\text{number of times } H \text{ occurs}}{n},$$
 tends to 1/2 as $n$ gets larger.  We say that the event $H$ has probability 1/2, or $P(H)=1/2$.
 
 More generally, consider some event $E$ based on the outcomes of an experiment. Suppose that the experiment can, in principle, be repeated, under exactly the same conditions, forever. Let $n(E)$ denote the number of times that the event $E$ would occur in $n$ experiments.
 
 We suppose that 
-$$\mbox{the relative frequency of $E$} \,=\,
-\frac{n(E)}{n} \,\longrightarrow\, P(E)\,, \,\, \mbox{as }n \longrightarrow \infty.$$
+$$\text{the relative frequency of $E$} \,=\,
+\frac{n(E)}{n} \,\longrightarrow\, P(E)\,, \,\, \text{as }n \longrightarrow \infty.$$
 So, the probability $P(E)$ of the event $E$ is defined as the limiting value of $n(E)/n$ as $n \rightarrow \infty$.  That is,
 \begin{equation}
 P(E) \,\,=\,\, \mathop {\mathrm{limit}}\limits_{n \rightarrow \infty}\,\frac{n(E)}{n},
@@ -226,7 +226,7 @@ The `$\mid$' sign means **"conditional on"**' or, more simply, **"given"**.  The
 The (unconditional) probability of one cot death is given by 
 $$P(C) = \frac{1}{1303}.$$
 
-In section \@ref(sids) I did not use the $~\mid~$ sign in my notation (because we hadn't seen it then), but I did make the conditioning clear by saying **for a family like Sally Clark's**. ]
+In Section \@ref(sids) I did not use the $~\mid~$ sign in my notation (because we hadn't seen it then), but I did make the conditioning clear by saying **for a family like Sally Clark's**.
 
 In fact **all** probabilities are conditional probabilities, because a probability is conditioned on the sample space $S$.  When we define $S$ we rule out anything that is not in $S$.  So instead of $P(C)$ we could write $P(C \mid S)$.  We do not tend to do this because it takes more time and it tends to make things more difficult to read.  However, we should always try to bear in mind the sample space when we think about a probability.
 
@@ -350,7 +350,7 @@ pn_sex_outcome_hux
 For example, the
 
 * probability $P(M)$ that a randomly chosen applicant is male is 0.595; and 
-* probability $P(M, A)$, or $P(M \mbox{ and } A)$, or $P(M \cap A)$, or even $P(MA)$, that a randomly chosen applicant is both male and accepted is 0.265.
+* probability $P(M, A)$, or $P(M \text{ and } A)$, or $P(M \cap A)$, or even $P(MA)$, that a randomly chosen applicant is both male and accepted is 0.265.
 
 In the second bullet point four different forms of notation are used to denote the same probability.  In these notes I may (deliberately, of course) use more than one form of notation, to get you used to the fact that different texts may use different notation.  Of course, $P(M, A) = P(A, M)$ and so on.
 
@@ -452,11 +452,11 @@ Remarks:
 #### Dependence and Independence {-}
 
 We return to the Berkeley example.  We have found that
-\[ P(A \mid M) = 0.445 \qquad \mbox{and} \qquad P(A~|~F) = 0.304. \]
+\[ P(A \mid M) = 0.445 \qquad \text{and} \qquad P(A~|~F) = 0.304. \]
 From Table \@ref(tab:berk2p) we find that
 \[ P(A) = 0.388. \]
 Therefore, the probability of acceptance depends on the sex of the applicant:
-\[ P(A \mid M) > P(A) \qquad \mbox{and} \qquad P(A \mid F) < P(A). \]
+\[ P(A \mid M) > P(A) \qquad \text{and} \qquad P(A \mid F) < P(A). \]
 The probability $P(A \mid M)$ of being accepted for a randomly selected male is greater than the unconditional probability $P(A)$.  Therefore, the occurrence of event $M$ has affected the probability that event $A$ occurs. This means that the events $A$ and $M$ are **dependent**.  Similarly, $P(A \mid F) < P(A)$ means that the events $A$ and $F$ are **dependent**.
 
 We consider independent and dependent events in more detail in Section \@ref(indepevents).
@@ -467,12 +467,12 @@ The fact that $P(A~|~M) > P(A~|~F)$ might suggest to us that there is gender bia
 
 ## Addition rule of probability
 
-We continue with the Berkeley admissions data. Suppose that we wish to calculate the probability that an applicant chosen at random from the 4526 applicants is either male (event $M$) or accepted (event $A$), or both male and accepted.  We denote this probability $P(M \mbox{ or } A)$ or $P(M \cup A)$. 
+We continue with the Berkeley admissions data. Suppose that we wish to calculate the probability that an applicant chosen at random from the 4526 applicants is either male (event $M$) or accepted (event $A$), or both male and accepted.  We denote this probability $P(M \text{ or } A)$ or $P(M \cup A)$. 
 
-Look at Table \@ref(tab:berk4n).  The cells that satisfy either $M$ or $A$, or both, have been shaded grey.  To calculate $P(M \mbox{ or } A)$ we simply sum the numbers of applicants for which either $M$ or $A$, or both, is satisfied and then divide by $n=4526$, that is,
+Look at Table \@ref(tab:berk4n).  The cells that satisfy either $M$ or $A$, or both, have been shaded grey.  To calculate $P(M \text{ or } A)$ we simply sum the numbers of applicants for which either $M$ or $A$, or both, is satisfied and then divide by $n=4526$, that is,
 
 \begin{eqnarray*}
-P(M \mbox{ or } A) &=& \frac{n(M \mbox{ or } A)}{n} \\
+P(M \text{ or } A) &=& \frac{n(M \text{ or } A)}{n} \\
           &=& \frac{n(M , A)+n(M , R)+n(F , A)}{n} \\
           &=& \frac{1198+1493+557}{4526} = \frac{3248}{4526} = 0.718. 
 \end{eqnarray*}
@@ -499,10 +499,10 @@ sex_outcome_hux <- sex_outcome %>%
 sex_outcome_hux    
 ```
 
-An equivalent way to calculate $P(M \mbox{ or } A)$ is to sum probabilities in Table \@ref(tab:berk4p), that is,
+An equivalent way to calculate $P(M \text{ or } A)$ is to sum probabilities in Table \@ref(tab:berk4p), that is,
 
 \begin{eqnarray}
-P(M \mbox{ or } A) &=& P(M \mbox{ and } A) + P(M \mbox{ and }R) + P(F \mbox{ and } A) \\
+P(M \text{ or } A) &=& P(M \text{ and } A) + P(M \text{ and }R) + P(F \text{ and } A) \\
 &=& 0.265+0.330+0.123 = 0.718. 
 \end{eqnarray}
 
@@ -530,21 +530,21 @@ p_sex_outcome_hux
 
 **Exercise**. Can you see why these two calculations are equivalent?
 
-**Exercise**. Can you see a (slightly) quicker way to calculate $P(M \mbox{ or } A)$?
+**Exercise**. Can you see a (slightly) quicker way to calculate $P(M \text{ or } A)$?
 
-Now consider a slightly different way to show that $n(M \mbox{ or } A)=3248$: 
-\[ n(M \mbox{ or } A) = n(M) + n(A) - n(M, A) = 2691 + 1755 - 1198 = 3248. \]
+Now consider a slightly different way to show that $n(M \text{ or } A)=3248$: 
+\[ n(M \text{ or } A) = n(M) + n(A) - n(M, A) = 2691 + 1755 - 1198 = 3248. \]
 
 Can you see from Table \@ref(tab:berk4n) why this works?
 
 Similarly,
-\[ P(M \mbox{ or } A) = P(M) + P(A) - P(M \mbox{ and } A) = 0.595 + 0.388 - 0.265 = 0.718. \]
+\[ P(M \text{ or } A) = P(M) + P(A) - P(M \text{ and } A) = 0.595 + 0.388 - 0.265 = 0.718. \]
 
 From this example we can see that following rule makes sense.
 
 **Definition**. For any two events $A$ and $B$ 
 \begin{equation}
-P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B). 
+P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B). 
 (\#eq:ordef)
 \end{equation}
 
@@ -552,19 +552,19 @@ P(A \mbox{ or } B) = P(A) + P(B) - P(A \mbox{ and } B).
 
 Two events $A$ and $B$ are **mutually exclusive** (or **disjoint**) if they cannot occur together. For example, in the Berkeley example the events $A$ and $R$ are mutually exclusive: it is not possible for an applicant to be both accepted and rejected.
 
-If two events $A$ and $B$ are mutually exclusive then $P(A \mbox{ and } B)=0$. Substituting this into equation \@ref(eq:ordef) we find that, **if events $A$ and $B$ are mutually exclusive**
+If two events $A$ and $B$ are mutually exclusive then $P(A \text{ and } B)=0$. Substituting this into equation \@ref(eq:ordef) we find that, **if events $A$ and $B$ are mutually exclusive**
 \begin{equation}
-P(A \mbox{ or } B) = P(A) + P(B). 
+P(A \text{ or } B) = P(A) + P(B). 
 (\#eq:mut)
 \end{equation}
 You can only use this equation in the **special case** where events $A$ and $B$ are mutually exclusive.  Otherwise, you must use the general rule in equation \@ref(eq:ordef).
 
 #### The complement of an event $A$ {-}
 
-The **complement** of an event $A$ is the event that $A$ does not occur.  This can be denoted $\mbox{not}A$ or $\bar{A}$ or $A^c$. We say that the events $A$ and $\mbox{not}A$ are **complementary**. The events $A$ and $\mbox{not}A$ are mutually exclusive and $S=\{A, \mbox{not}A\}$.  We have already seen that $P(S) = 1$. Therefore,
-\[ P(S)=P(A \mbox{ or } \mbox{not}A) = P(A) + P(\mbox{not}A) = 1. \]
+The **complement** of an event $A$ is the event that $A$ does not occur.  This can be denoted $\text{not}A$ or $\bar{A}$ or $A^c$. We say that the events $A$ and $\text{not}A$ are **complementary**. The events $A$ and $\text{not}A$ are mutually exclusive and $S=\{A, \text{not}A\}$.  We have already seen that $P(S) = 1$. Therefore,
+\[ P(S)=P(A \text{ or } \text{not}A) = P(A) + P(\text{not}A) = 1. \]
 and therefore
-\[ P(\mbox{not}A) = 1 - P(A). \]
+\[ P(\text{not}A) = 1 - P(A). \]
 
 ## Multiplication rule of probability {#multrule}
 
@@ -673,7 +673,7 @@ blood_rhesus_hux <- blood_rhesus %>%
 blood_rhesus_hux    
 ```
 
-These tables tell us that, for the UK, $P(\mbox{O})=0.44, P(\mbox{A})=0.42, P(\mbox{B})=0.1, P(\mbox{AB})=0.04$, $P(\mbox{Rh}+)=0.83$ and $P(\mbox{Rh}-)=0.17$.
+These tables tell us that, for the UK, $P(\text{O})=0.44, P(\text{A})=0.42, P(\text{B})=0.1, P(\text{AB})=0.04$, $P(\text{Rh}+)=0.83$ and $P(\text{Rh}-)=0.17$.
 
 Your blood type is genetically inherited from your parents. Since the genetic code responsible for inheritance of ABO blood group and Rhesus blood group are on different chromosomes, ABO and Rhesus blood types are inherited independently of each other. That is, for any person, the blood type in the ABO system is independent of their blood type in the Rhesus system.
 

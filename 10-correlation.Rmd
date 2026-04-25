@@ -40,18 +40,18 @@ Figure \@ref(fig:exchangetrans) suggests that $X$ and $Y$ are approximately posi
 
 ## Covariance and correlation
 
-**Definition**. Let $\mu_X=\mbox{E}(X)$ and $\mu_Y=\mbox{E}(Y)$. The **covariance** $\mbox{cov}(X,Y)$ between two random variables $X$ and $Y$ is given by
+**Definition**. Let $\mu_X=\text{E}(X)$ and $\mu_Y=\text{E}(Y)$. The **covariance** $\text{cov}(X,Y)$ between two random variables $X$ and $Y$ is given by
 $$
-\mbox{cov}(X,Y)=\mbox{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]=\mbox{E}(XY)-\mbox{E}(X)\mbox{E}(Y). 
+\text{cov}(X,Y)=\text{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]=\text{E}(XY)-\text{E}(X)\text{E}(Y). 
 $$
-The value of $\mbox{cov}(X,Y)$ depends on the scale of measurement of $X$ and $Y$.  For example, if we were to multiply all the values of $X$ by 2 then $\mbox{cov}(X,Y)$ is also multiplied by 2. Therefore we define a standardised version of covariance: correlation.
+The value of $\text{cov}(X,Y)$ depends on the scale of measurement of $X$ and $Y$.  For example, if we were to multiply all the values of $X$ by 2 then $\text{cov}(X,Y)$ is also multiplied by 2. Therefore we define a standardised version of covariance: correlation.
 
 **Definition**.  The **correlation (coefficient)** between two random variables $X$ and $Y$ is given by
 $$
-\rho = \mbox{corr}(X,Y) = \frac{\mbox{cov}(X,Y)}{\mbox{sd}(X)\mbox{sd}(Y)} 
-= \frac{\mbox{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\mbox{sd}(X)\mbox{sd}(Y)}, 
+\rho = \text{corr}(X,Y) = \frac{\text{cov}(X,Y)}{\text{sd}(X)\text{sd}(Y)} 
+= \frac{\text{E}\left[\left(X-\mu_X\right)\left(Y-\mu_Y\right)\right]}{\text{sd}(X)\text{sd}(Y)}, 
 $$
-provided that both $\mbox{sd}(X)$ and $\mbox{sd}(Y)$ are positive. Correlation is dimensionless (it has no units) and its value does not change if we scale $X$ and/or $Y$.  Correlation (and covariance) are measures of **linear** association between random variables.  They are a sensible measure of the strength of association between two random variables only if there is a linear relationship between them.
+provided that both $\text{sd}(X)$ and $\text{sd}(Y)$ are positive. Correlation is dimensionless (it has no units) and its value does not change if we scale $X$ and/or $Y$.  Correlation (and covariance) are measures of **linear** association between random variables.  They are a sensible measure of the strength of association between two random variables only if there is a linear relationship between them.
 
 Interpretation of $\rho$:
 

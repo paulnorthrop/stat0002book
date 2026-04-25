@@ -269,11 +269,11 @@ Half of the women took between approximately 5 and 10 hours to give birth.The qu
 #### Measures of skewness {-}
 
 Usually the best way to examine the shape of a distribution is to look at a graph see section \@ref(graphs). In addition we could calculate summary measures of skewness, such as: the **standardized sample skewness**
-$$\mbox{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
+$$\text{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
 \overline{x})^3}{s^3}, $$
 where $s$ is the sample standard deviation, and the **sample quartile 
 skewness**
-$$\mbox{quartile skewness} = \frac{(q_U-m)-(m-q_L)}{q_U-q_L}, $$
+$$\text{quartile skewness} = \frac{(q_U-m)-(m-q_L)}{q_U-q_L}, $$
 where $q_L, m$ and $q_U$ are the sample quartiles.
 
 These measures are each 0 for perfectly symmetric data, negative for negative skew data and positive for positive skew data.  The standardized sample skewness can take any value on the real line. The quartile skewness must lie in $[-1, 1]$. The quartile skewness has the advantage that it is less sensitive to outliers than the standardized sample skewness.
@@ -451,10 +451,10 @@ each other. There may be observations which are not unusual when variables are c
 
 A **histogram** is a graphical display based on the relative frequency distribution of a set of data on a **continuous** variable.  The variable of interest is plotted on the $x$-axis, which is divided into **bins** based on  the classes of the frequency distribution.  A rectangle is plotted for each bin.  The height of a rectangle is calculated as 
 \begin{equation}
-\mbox{height} = \frac{\mbox{relative frequency}}{\mbox{bin width}} = \frac{\mbox{frequency}}{n \times \mbox{bin width}}.
+\text{height} = \frac{\text{relative frequency}}{\text{bin width}} = \frac{\text{frequency}}{n \times \text{bin width}}.
 (\#eq:hist)
 \end{equation}
-Therefore, for a given box in the histogram:
+Therefore, for a given rectangle in the histogram:
 
 * the **area** represents the relative frequency of the observations in 
 the interval;

@@ -51,7 +51,7 @@ P(A) = P(A , M) + P(A , F).
 
 This also follows from equation \@ref(eq:mut) since the events $(A , M)$ and $(A , F)$ are mutually exclusive.  That is,
 \begin{eqnarray}
- P(A) &=& P((A , M) \mbox{ or } (A , F) ), \\
+ P(A) &=& P((A , M) \text{ or } (A , F) ), \\
  &=& P(A , M) + P(A , F) - P((A , M) , (A , F)), \\
  &=& P(A , M) + P(A , F). 
 \end{eqnarray}
@@ -68,13 +68,13 @@ This is an example of the **law of total probability**.  The probability of even
 Note that 
 
 * $M$ and $F$ are mutually exclusive events.
-* $P(M \mbox{ or } F) = 1$, that is, together $M$ and $F$ cover the entire sample space of the possible values of sex.  This means that $M$ and $F$ are **exhaustive** events.  More generally, a set of exhaustive events has the property that at least one of these events must occur.
+* $P(M \text{ or } F) = 1$, that is, together $M$ and $F$ cover the entire sample space of the possible values of sex.  This means that $M$ and $F$ are **exhaustive** events.  More generally, a set of exhaustive events has the property that at least one of these events must occur.
 
 **Definition**. **The law of total probability**. Let events $B_1, \ldots, B_n$ be
 
 * possible, i.e. $P(B_i) > 0$, for $i = 1, \ldots, n$,
 * (pairwise) mutually exclusive, i.e. $P(B_i , B_j)=0$ for all $i \neq j$, and 
-* exhaustive, that is, $P(B_1 \mbox{ or } B_2 \mbox{ or } \cdots \mbox{ or } B_n) = 1$.  
+* exhaustive, that is, $P(B_1 \text{ or } B_2 \text{ or } \cdots \text{ or } B_n) = 1$.  
 
 Then, for any event $A$
 \begin{eqnarray}
@@ -175,19 +175,19 @@ The proof of Bayes' theorem is a straightforward extension of the case with $n=2
 
 $P(A \mid B)$ is the conditional probability that event $A$ occurs given that event $B$ has occurred. We can extend this idea to condition on more than one event.
 
-For example, $P(A \mid B , C)$, or $P(A \mid B \mbox{ and } C)$, or $P(A \mid B \cap C)$ is the conditional probability that event $A$ occurs given that **both** events $B$ and $C$ have occurred.  The general principle is that we have conditioned on all events that are placed on the right hand side of the conditional $\mid$ symbol. All the results that we have seen can be extended to probabilities conditioned on more than one event.  
+For example, $P(A \mid B , C)$, or $P(A \mid B \text{ and } C)$, or $P(A \mid B \cap C)$ is the conditional probability that event $A$ occurs given that **both** events $B$ and $C$ have occurred.  The general principle is that we have conditioned on all events that are placed on the right hand side of the conditional $\mid$ symbol. All the results that we have seen can be extended to probabilities conditioned on more than one event.  
 
 For example, for $P(B, C)>0$,
-\[ P(A \mid B, C) = \frac{P(A , B~|~C)}{P(B~|~C)} \qquad \mbox{(definition of conditional probability)}, \]
+\[ P(A \mid B, C) = \frac{P(A , B~|~C)}{P(B~|~C)} \qquad \text{(definition of conditional probability)}, \]
 
 and if, in addition, $P(A, C)>0$
-\[ P(A \mid B, C) = \frac{P(B \mid A, C)\,P(A \mid C)}{P(B \mid C)} \qquad \mbox{(Bayes' theorem)}. \]
+\[ P(A \mid B, C) = \frac{P(B \mid A, C)\,P(A \mid C)}{P(B \mid C)} \qquad \text{(Bayes' theorem)}. \]
 
 In each of these equations, if you ignore the event $C$ then you will see familiar equations.  The general idea is that definition of conditional probability and Bayes' theorem continue to hold if we condition all probabilities on the event $C$, provided that all the conditional probabilities involved are valid.
 
 Alternatively, noting that we could reverse the roles of $B$ and $C$, if in addition $P(A, B)>0$, then
-\[ P(A \mid C, B) = \frac{P(A , C \mid B)}{P(C \mid B)} \qquad \mbox{(definition of conditional probability)}, \]
-\[ P(A \mid C, B) = \frac{P(C \mid A, B)\,P(A \mid B)}{P(C \mid B)} \qquad \mbox{(Bayes' theorem)}. \]
+\[ P(A \mid C, B) = \frac{P(A , C \mid B)}{P(C \mid B)} \qquad \text{(definition of conditional probability)}, \]
+\[ P(A \mid C, B) = \frac{P(C \mid A, B)\,P(A \mid B)}{P(C \mid B)} \qquad \text{(Bayes' theorem)}. \]
 These four expressions give different ways to express the probability $P(A \mid C, B)$.  You will be able to find other ways to express this probability.  For example,  
 \[ P(A \mid B,C) = \frac{P(A, B, C)}{P(B, C)}. \] 
 **Exercise**.  Why this true?
