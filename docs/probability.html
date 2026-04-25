@@ -725,10 +725,10 @@ P(M \text{ or } A) &amp;=&amp; \frac{n(M \text{ or } A)}{n} \\
 </table>
 
 <p>An equivalent way to calculate <span class="math inline">\(P(M \text{ or } A)\)</span> is to sum probabilities in Table <a href="probability.html#tab:berk4p">3.10</a>, that is,</p>
-<p><span class="math display">\[\begin{eqnarray}
+<p><span class="math display">\[\begin{eqnarray*}
 P(M \text{ or } A) &amp;=&amp; P(M \text{ and } A) + P(M \text{ and }R) + P(F \text{ and } A) \\
 &amp;=&amp; 0.265+0.330+0.123 = 0.718.
-\end{eqnarray}\]</span></p>
+\end{eqnarray*}\]</span></p>
 <table class="huxtable" data-quarto-disable-processing="true"  style="width: 70%; margin-left: auto; margin-right: auto;" id="tab:berk4p">
 <caption style="caption-side: top; text-align: center;"><span id="tab:berk4p">Table 3.10: </span> Cells with M or A are shaded (probabilities).</caption><col><col><col><col><tbody>
 <tr>
@@ -793,7 +793,7 @@ P(A , B) = P(B)\,P(A \mid B).
 \end{equation}\]</span></p>
 <p>This can be generalised to the case of <span class="math inline">\(n\)</span> events to give
 <span class="math display">\[\begin{eqnarray}
-P(A_1, A_2,\ldots, A_{n-1}, A_n) &amp;=&amp;
+P(A_1, A_2,\ldots, A_{n-1}, A_n) \!=\!
 P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
 \end{eqnarray}\]</span>
 provided that all the conditional probabilities are defined. A sufficient (but not necessary) condition for this is <span class="math inline">\(P(A_1, A_2, \ldots, A_{n-1}, A_n)&gt;0\)</span>. For example, <span class="math inline">\(P(A_1, A_2, A_3)\)</span> is the probability that events <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span> and <span class="math inline">\(A_3\)</span> all occur.</p>

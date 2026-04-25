@@ -756,7 +756,7 @@ The general idea is to plot **sample** quantiles against the **theoretical** qua
 
 **Which empirical quantiles should we use?**
 
-In section \@ref(fivenumber) we said that, for $0 < p < 1$ the $100p\%$ sample quantile is $x_{(p(n+1))}$.  If we substitute $p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}$ in $x_{(p(n+1))}$ then we obtain $x_{(1)}, x_{(2)}, ..., x_{(n)}$.  Therefore, the **ordered sampled values** or **order statistics** $x_{(1)}, x_{(2)}, ..., x_{(n)}$ are the $100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%$ sample quantiles. 
+In Section \@ref(fivenumber) we said that, for $0 < p < 1$ the $100p\%$ sample quantile is $x_{(p(n+1))}$.  If we substitute $p = \frac{1}{n+1}, \frac{2}{n+1}, ..., \frac{n}{n+1}$ in $x_{(p(n+1))}$ then we obtain $x_{(1)}, x_{(2)}, ..., x_{(n)}$.  Therefore, the **ordered sampled values** or **order statistics** $x_{(1)}, x_{(2)}, ..., x_{(n)}$ are the $100\frac{1}{n+1}\%, 100\frac{2}{n+1}\%, ..., 100\frac{n}{n+1}\%$ sample quantiles. 
 
 **How do we calculate the theoretical quantiles?**
 

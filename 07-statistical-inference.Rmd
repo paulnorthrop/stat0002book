@@ -59,7 +59,7 @@ Usually a probability model involves unknown parameters, that is,  constants who
 Often there is an obvious estimate.  For example, 
 
 * in Section \@ref(binomial) we estimated the probability $p$ that a birth produces a baby boy by the sample proportion, 26/44, of babies who are boys.  
-* in section \@ref(normal) we estimated the population  mean birth weight $\mu$ of babies by the sample mean birth weight $\bar{z}$ and the population standard deviation birth weight $\sigma$ by the sample standard deviation $s_z$.
+* in Section \@ref(normal) we estimated the population  mean birth weight $\mu$ of babies by the sample mean birth weight $\bar{z}$ and the population standard deviation birth weight $\sigma$ by the sample standard deviation $s_z$.
 
 In both these examples the parameter is clearly interpretable as a theoretical
 property of a population: we estimate this property using the equivalent property of the observations.
@@ -288,7 +288,7 @@ Statistical modelling is an iterative process.  We fit a model and examine how w
 
 **Isolated lack-of-fit**.  Individual data points fall outside the general pattern of the data. For example, in the 2000 US Presidential election example it was clear that Buchanan's vote in Palm Beach county did not fit in the with the pattern of the rest of the data.
 
-**Systematic lack-of-fit**.  The **overall** behaviour of the data is different from that of the model.  For example, in section \@ref(normal) our probability model for birth weights was a normal distribution with unknown mean and variance.  However, the histogram and normal QQ plot of birth weights we plotted suggest that this model does not fit the data well.  The lack-of-fit is not due to any particular set of observations - it is because the distribution of the data is fairly obviously skewed.
+**Systematic lack-of-fit**.  The **overall** behaviour of the data is different from that of the model.  For example, in Section \@ref(normal) our probability model for birth weights was a normal distribution with unknown mean and variance.  However, the histogram and normal QQ plot of birth weights we plotted suggest that this model does not fit the data well.  The lack-of-fit is not due to any particular set of observations - it is because the distribution of the data is fairly obviously skewed.
 
 ### Residuals
 
@@ -297,7 +297,7 @@ The simplest kind of residuals are the differences between observations the $y_1
 \[ r_i = y_i-\hat{y}_i, \qquad i=1,\ldots,n. \]
 The residuals $r_1,\ldots, r_n$ give measures of how closely the model agrees with each of the observations. A small residual indicates that the observed data value is close the fitted value under the model. A large residual indicates that the observed data value is not close the fitted value under the model.
 
-One very large residual might indicate an isolated departure from the model.  The Buchanan's vote in Palm Beach county has a very large residual under the model fitted by Smith (2002).  Looking at residuals can also reveal systematic departures from the model.  We will consider this in sections \@ref(contingency) and \@ref(linreg).
+One very large residual might indicate an isolated departure from the model.  The Buchanan's vote in Palm Beach county has a very large residual under the model fitted by Smith (2002).  Looking at residuals can also reveal systematic departures from the model.  We will consider this in Sections \@ref(contingency) and \@ref(linreg).
 
 As a simple example we return Australian births data.  Recall that we fitted a Poisson($\lambda$) distribution to the numbers of babies born in each of the 24 hours of the day, leading to $\hat{\lambda} = 1.83$.  Table \@ref(tab:poissonfit) shows the residuals for this fit.
 

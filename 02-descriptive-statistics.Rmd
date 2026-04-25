@@ -268,7 +268,7 @@ Half of the women took between approximately 5 and 10 hours to give birth.The qu
 
 #### Measures of skewness {-}
 
-Usually the best way to examine the shape of a distribution is to look at a graph see section \@ref(graphs). In addition we could calculate summary measures of skewness, such as: the **standardized sample skewness**
+Usually the best way to examine the shape of a distribution is to look at a graph see Section \@ref(graphs). In addition we could calculate summary measures of skewness, such as: the **standardized sample skewness**
 $$\text{skewness} = \frac{\displaystyle\frac1n \sum_{i=1}^n (x_i-
 \overline{x})^3}{s^3}, $$
 where $s$ is the sample standard deviation, and the **sample quartile 
@@ -331,7 +331,7 @@ Table: (\#tab:smalldata) A small example dataset.
 
 ## Tables 
 
-We saw in the Space shuttle investigation (Section \@ref(shuttle)) that data can be presented in a table. We also saw that a graph can be a better way to see relationships and patterns in the data. In this section we look at a table which summarises the distribution of a set of data on one variable.  We also look at a graph based on this table.
+We saw in the space shuttle investigation (Section \@ref(shuttle)) that data can be presented in a table. We also saw that a graph can be a better way to see relationships and patterns in the data. In this section we look at a table which summarises the distribution of a set of data on one variable.  We also look at a graph based on this table.
 
 ### Frequency distribution
 
@@ -535,7 +535,7 @@ include_cropped_graphics("images/shuttle_barplots.png")
 
 #### Example: categorical data {-}
 
-Table \@ref(tab:ABOnew) shows the percentages of people in the UK with the 8 main blood groups O$+$, A$+$, B$+$, AB$+$, O$-$, A$-$, B$-$ and AB$-$.  See section \@ref(bloodindep) for more details about blood groups. These data are nominal.
+Table \@ref(tab:ABOnew) shows the percentages of people in the UK with the 8 main blood groups O$+$, A$+$, B$+$, AB$+$, O$-$, A$-$, B$-$ and AB$-$.  See Section \@ref(bloodindep) for more details about blood groups. These data are nominal.
 
 ```{r, echo=FALSE}
 temp <- stat0002::blood_types

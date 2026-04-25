@@ -17,7 +17,7 @@ fontsize: 11pt
 
 These notes functions as a textbook for the material covered in STAT0002. The teaching events in STAT0002 will follow the general order of the topics covered in these notes. Chapters 1 and 2 are covered over Weeks 1 and 2 and from then on we will cover one chapter per teaching week.  There will be a section on Moodle dedicated to each week of term.
 
-See the following sections STAT0002 Moodle page for important information:
+See the following sections of the STAT0002 Moodle page for important information:
 
 * **Module overview**: general information;
 * **Asking for help**: how to ask questions;

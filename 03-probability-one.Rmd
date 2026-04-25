@@ -501,10 +501,10 @@ sex_outcome_hux
 
 An equivalent way to calculate $P(M \text{ or } A)$ is to sum probabilities in Table \@ref(tab:berk4p), that is,
 
-\begin{eqnarray}
+\begin{eqnarray*}
 P(M \text{ or } A) &=& P(M \text{ and } A) + P(M \text{ and }R) + P(F \text{ and } A) \\
 &=& 0.265+0.330+0.123 = 0.718. 
-\end{eqnarray}
+\end{eqnarray*}
 
 ```{r, echo=FALSE}
 # Shade all but (R, F)
@@ -591,7 +591,7 @@ P(A , B) = P(B)\,P(A \mid B).
 
 This can be generalised to the case of $n$ events to give
 \begin{eqnarray}
-P(A_1, A_2,\ldots, A_{n-1}, A_n) &=&
+P(A_1, A_2,\ldots, A_{n-1}, A_n) \!=\!
 P(A_1)\,P(A_2~|~A_1)\,P(A_3~|~A_1,A_2)\,\cdots\,P(A_n~|~A_{n-1},\ldots,A_1),
 \end{eqnarray}
 provided that all the conditional probabilities are defined.  A sufficient (but not necessary) condition for this is $P(A_1, A_2, \ldots, A_{n-1}, A_n)>0$.  For example, $P(A_1, A_2, A_3)$ is the probability that events $A_1$, $A_2$ and $A_3$ all occur. 
