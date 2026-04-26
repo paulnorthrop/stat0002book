@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.25)  26 APR 2026 12:41
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.25)  26 APR 2026 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1628,9 +1628,6 @@ File: images/corr8c.png Graphic file (type bmp)
 <images/corr8c.png>
 File: images/corr8d.png Graphic file (type bmp)
 <images/corr8d.png>
-
-LaTeX Warning: Float too large for page by 83.72256pt on input line 7290.
-
 File: images/corr_missing1.png Graphic file (type bmp)
 <images/corr_missing1.png>
 File: images/corr_missing2.png Graphic file (type bmp)
