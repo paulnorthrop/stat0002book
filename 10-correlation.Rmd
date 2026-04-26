@@ -186,7 +186,7 @@ Correlation should **not** be used, that is, it can be misleading, if
 It is very important to plot data before fitting a linear regression model or estimating a correlation coefficient. In 1973 F.J. Anscombe (@Anscombe1973) created 4 datasets to illustrate the need for this.  His data are given in Table \@ref(fig:anscombetable).  You discussed these data, and some other examples, in Tutorial 1.
 
 ```{r echo=FALSE, anscombetable, fig.show='hold', fig.cap='Anscombe\'s datasets.', out.width = '60%'}
-include_cropped_graphics("images/anscombetable.png")
+include_cropped_graphics("images/anscombetable.PNG")
 ```
 
 The datasets have many things in common.  For each of the 4 datasets:
